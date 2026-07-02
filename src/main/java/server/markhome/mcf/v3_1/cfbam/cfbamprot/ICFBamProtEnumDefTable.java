@@ -78,7 +78,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtEnumDef createEnumDef( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protcreateEnumDef( ICFSecProtAuthorization Authorization,
 		ICFBamProtEnumDef rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtEnumDef updateEnumDef( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protupdateEnumDef( ICFSecProtAuthorization Authorization,
 		ICFBamProtEnumDef rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteEnumDef( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDef( ICFSecProtAuthorization Authorization,
 		ICFBamProtEnumDef rec );
 	/**
 	 *	Delete the EnumDef instance identified by the primary key.
@@ -110,7 +110,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteEnumDefByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the EnumDef instances identified by the key UNameIdx.
@@ -121,7 +121,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	Name	The EnumDef key attribute of the instance generating the id.
 	 */
-	void deleteEnumDefByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -132,7 +132,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteEnumDefByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the EnumDef instances identified by the key ScopeIdx.
@@ -141,7 +141,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	ScopeId	The EnumDef key attribute of the instance generating the id.
 	 */
-	void deleteEnumDefByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -151,7 +151,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteEnumDefByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the EnumDef instances identified by the key DefSchemaIdx.
@@ -160,7 +160,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	DefSchemaId	The EnumDef key attribute of the instance generating the id.
 	 */
-	void deleteEnumDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteEnumDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the EnumDef instances identified by the key PrevIdx.
@@ -179,7 +179,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	PrevId	The EnumDef key attribute of the instance generating the id.
 	 */
-	void deleteEnumDefByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteEnumDefByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the EnumDef instances identified by the key NextIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	NextId	The EnumDef key attribute of the instance generating the id.
 	 */
-	void deleteEnumDefByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteEnumDefByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the EnumDef instances identified by the key ContPrevIdx.
@@ -219,7 +219,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	PrevId	The EnumDef key attribute of the instance generating the id.
 	 */
-	void deleteEnumDefByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -230,7 +230,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteEnumDefByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the EnumDef instances identified by the key ContNextIdx.
@@ -241,7 +241,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	NextId	The EnumDef key attribute of the instance generating the id.
 	 */
-	void deleteEnumDefByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -252,7 +252,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteEnumDefByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumDefByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 
 
@@ -266,7 +266,7 @@ public interface ICFBamProtEnumDefTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtEnumDef readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -279,7 +279,7 @@ public interface ICFBamProtEnumDefTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtEnumDef lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -289,7 +289,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtEnumDef[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtEnumDef[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived EnumDef record instance identified by the unique key IdIdx.
@@ -301,7 +301,7 @@ public interface ICFBamProtEnumDefTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtEnumDef readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -316,7 +316,7 @@ public interface ICFBamProtEnumDefTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtEnumDef readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -329,7 +329,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtEnumDef[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -341,7 +341,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtEnumDef[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -353,7 +353,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtEnumDef[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -365,7 +365,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtEnumDef[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -379,7 +379,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtEnumDef[] readDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -394,7 +394,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtEnumDef[] readDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -410,7 +410,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -425,7 +425,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -435,7 +435,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return All the specific EnumDef instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtEnumDef[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtEnumDef[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific EnumDef record instance identified by the unique key IdIdx.
@@ -449,7 +449,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -466,7 +466,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -481,7 +481,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -495,7 +495,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -509,7 +509,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -523,7 +523,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -539,7 +539,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef[] readRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -556,7 +556,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtEnumDef[] readRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -565,7 +565,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtEnumDef moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumDef protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -574,7 +574,7 @@ public interface ICFBamProtEnumDefTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamEnumDef moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamEnumDef protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

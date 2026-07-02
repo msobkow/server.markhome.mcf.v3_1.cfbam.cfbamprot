@@ -78,7 +78,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtServerProc createServerProc( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protcreateServerProc( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerProc rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtServerProc updateServerProc( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protupdateServerProc( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerProc rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteServerProc( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProc( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerProc rec );
 	/**
 	 *	Delete the ServerProc instances identified by the key UNameIdx.
@@ -112,7 +112,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	Name	The ServerProc key attribute of the instance generating the id.
 	 */
-	void deleteServerProcByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
 		String argName );
 
@@ -123,7 +123,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteServerProcByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByUNameIdxKey argKey );
 	/**
 	 *	Delete the ServerProc instances identified by the key MethTableIdx.
@@ -132,7 +132,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	TableId	The ServerProc key attribute of the instance generating the id.
 	 */
-	void deleteServerProcByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByMethTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -142,7 +142,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteServerProcByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByMethTableIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByMethTableIdxKey argKey );
 	/**
 	 *	Delete the ServerProc instances identified by the key MethCodeVisIdx.
@@ -151,7 +151,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	CodeVis	The ServerProc key attribute of the instance generating the id.
 	 */
-	void deleteServerProcByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchema.CodeVisibilityEnum argCodeVis );
 
 	/**
@@ -161,7 +161,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteServerProcByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByMethCodeVisIdxKey argKey );
 	/**
 	 *	Delete the ServerProc instances identified by the key MethTableVisIdx.
@@ -172,7 +172,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	CodeVis	The ServerProc key attribute of the instance generating the id.
 	 */
-	void deleteServerProcByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByMethTableVisIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
 		ICFBamProtSchema.CodeVisibilityEnum argCodeVis );
 
@@ -183,7 +183,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteServerProcByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByMethTableVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByMethTableVisIdxKey argKey );
 	/**
 	 *	Delete the ServerProc instances identified by the key DefSchemaIdx.
@@ -192,7 +192,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	DefSchemaId	The ServerProc key attribute of the instance generating the id.
 	 */
-	void deleteServerProcByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -202,7 +202,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteServerProcByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ServerProc instance identified by the primary key.
@@ -211,7 +211,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteServerProcByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the ServerProc instances identified by the key TenantIdx.
@@ -220,7 +220,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	TenantId	The ServerProc key attribute of the instance generating the id.
 	 */
-	void deleteServerProcByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -230,7 +230,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteServerProcByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerProcByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 
 
@@ -244,7 +244,7 @@ public interface ICFBamProtServerProcTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtServerProc readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -257,7 +257,7 @@ public interface ICFBamProtServerProcTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtServerProc lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -267,7 +267,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtServerProc[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtServerProc[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived ServerProc record instance identified by the unique key IdIdx.
@@ -279,7 +279,7 @@ public interface ICFBamProtServerProcTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtServerProc readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -291,7 +291,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtServerProc[] readDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -306,7 +306,7 @@ public interface ICFBamProtServerProcTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtServerProc readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -319,7 +319,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtServerProc[] readDerivedByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadDerivedByMethTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -331,7 +331,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtServerProc[] readDerivedByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadDerivedByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
 
 	/**
@@ -345,7 +345,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtServerProc[] readDerivedByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadDerivedByMethTableVisIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
 
@@ -358,7 +358,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtServerProc[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -373,7 +373,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtServerProc readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -388,7 +388,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtServerProc lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -398,7 +398,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@return All the specific ServerProc instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtServerProc[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtServerProc[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific ServerProc record instance identified by the unique key IdIdx.
@@ -412,7 +412,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtServerProc readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -426,7 +426,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtServerProc[] readRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -443,7 +443,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtServerProc readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -458,7 +458,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtServerProc[] readRecByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadRecByMethTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -472,7 +472,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtServerProc[] readRecByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadRecByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
 
 	/**
@@ -488,7 +488,7 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtServerProc[] readRecByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadRecByMethTableVisIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
 
@@ -503,6 +503,6 @@ public interface ICFBamProtServerProcTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtServerProc[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerProc[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 }

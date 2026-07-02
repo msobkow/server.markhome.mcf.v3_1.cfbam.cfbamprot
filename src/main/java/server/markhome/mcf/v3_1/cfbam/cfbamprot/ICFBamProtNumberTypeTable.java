@@ -78,7 +78,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtNumberType createNumberType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protcreateNumberType( ICFSecProtAuthorization Authorization,
 		ICFBamProtNumberType rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtNumberType updateNumberType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protupdateNumberType( ICFSecProtAuthorization Authorization,
 		ICFBamProtNumberType rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteNumberType( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberType( ICFSecProtAuthorization Authorization,
 		ICFBamProtNumberType rec );
 	/**
 	 *	Delete the NumberType instances identified by the key SchemaIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	SchemaDefId	The NumberType key attribute of the instance generating the id.
 	 */
-	void deleteNumberTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteNumberTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtNumberTypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the NumberType instance identified by the primary key.
@@ -129,7 +129,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteNumberTypeByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the NumberType instances identified by the key UNameIdx.
@@ -140,7 +140,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	Name	The NumberType key attribute of the instance generating the id.
 	 */
-	void deleteNumberTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -151,7 +151,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteNumberTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the NumberType instances identified by the key ScopeIdx.
@@ -160,7 +160,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	ScopeId	The NumberType key attribute of the instance generating the id.
 	 */
-	void deleteNumberTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteNumberTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the NumberType instances identified by the key DefSchemaIdx.
@@ -179,7 +179,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	DefSchemaId	The NumberType key attribute of the instance generating the id.
 	 */
-	void deleteNumberTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteNumberTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the NumberType instances identified by the key PrevIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	PrevId	The NumberType key attribute of the instance generating the id.
 	 */
-	void deleteNumberTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteNumberTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the NumberType instances identified by the key NextIdx.
@@ -217,7 +217,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	NextId	The NumberType key attribute of the instance generating the id.
 	 */
-	void deleteNumberTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -227,7 +227,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteNumberTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the NumberType instances identified by the key ContPrevIdx.
@@ -238,7 +238,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	PrevId	The NumberType key attribute of the instance generating the id.
 	 */
-	void deleteNumberTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -249,7 +249,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteNumberTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the NumberType instances identified by the key ContNextIdx.
@@ -260,7 +260,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	NextId	The NumberType key attribute of the instance generating the id.
 	 */
-	void deleteNumberTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -271,7 +271,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteNumberTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNumberTypeByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 
 
@@ -285,7 +285,7 @@ public interface ICFBamProtNumberTypeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtNumberType readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -298,7 +298,7 @@ public interface ICFBamProtNumberTypeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtNumberType lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -308,7 +308,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtNumberType[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtNumberType[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived NumberType record instance identified by the unique key IdIdx.
@@ -320,7 +320,7 @@ public interface ICFBamProtNumberTypeTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtNumberType readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -335,7 +335,7 @@ public interface ICFBamProtNumberTypeTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtNumberType readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -348,7 +348,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtNumberType[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -360,7 +360,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtNumberType[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -372,7 +372,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtNumberType[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -384,7 +384,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtNumberType[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -398,7 +398,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtNumberType[] readDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -413,7 +413,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtNumberType[] readDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -426,7 +426,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtNumberType[] readDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -441,7 +441,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -456,7 +456,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -466,7 +466,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return All the specific NumberType instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtNumberType[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtNumberType[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific NumberType record instance identified by the unique key IdIdx.
@@ -480,7 +480,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -497,7 +497,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -512,7 +512,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -526,7 +526,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -540,7 +540,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -554,7 +554,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -570,7 +570,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType[] readRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -587,7 +587,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType[] readRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -602,7 +602,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtNumberType[] readRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -610,7 +610,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtNumberType moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNumberType protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -619,7 +619,7 @@ public interface ICFBamProtNumberTypeTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamNumberType moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamNumberType protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

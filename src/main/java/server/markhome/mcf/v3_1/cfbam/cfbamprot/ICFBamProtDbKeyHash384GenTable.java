@@ -78,7 +78,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtDbKeyHash384Gen createDbKeyHash384Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protcreateDbKeyHash384Gen( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash384Gen rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtDbKeyHash384Gen updateDbKeyHash384Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protupdateDbKeyHash384Gen( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash384Gen rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteDbKeyHash384Gen( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384Gen( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash384Gen rec );
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key SchemaIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	SchemaDefId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384GenBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384GenBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenBySchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash384TypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Gen instance identified by the primary key.
@@ -129,7 +129,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteDbKeyHash384GenByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key UNameIdx.
@@ -140,7 +140,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	Name	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384GenByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -151,7 +151,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384GenByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key ScopeIdx.
@@ -160,7 +160,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	ScopeId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384GenByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384GenByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key DefSchemaIdx.
@@ -179,7 +179,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	DefSchemaId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key PrevIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	PrevId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384GenByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384GenByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key NextIdx.
@@ -217,7 +217,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	NextId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384GenByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -227,7 +227,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384GenByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key ContPrevIdx.
@@ -238,7 +238,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	PrevId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384GenByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -249,7 +249,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384GenByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key ContNextIdx.
@@ -260,7 +260,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	NextId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384GenByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -271,7 +271,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384GenByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384GenByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 
 
@@ -285,7 +285,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash384Gen readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -298,7 +298,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash384Gen lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -308,7 +308,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash384Gen[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived DbKeyHash384Gen record instance identified by the unique key IdIdx.
@@ -320,7 +320,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash384Gen readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -335,7 +335,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash384Gen readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -348,7 +348,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -360,7 +360,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -372,7 +372,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -384,7 +384,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -398,7 +398,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -413,7 +413,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -426,7 +426,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -441,7 +441,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -456,7 +456,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -466,7 +466,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return All the specific DbKeyHash384Gen instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash384Gen[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific DbKeyHash384Gen record instance identified by the unique key IdIdx.
@@ -480,7 +480,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -497,7 +497,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -512,7 +512,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -526,7 +526,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -540,7 +540,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -554,7 +554,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -570,7 +570,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -587,7 +587,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -602,7 +602,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Gen[] readRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -610,7 +610,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtDbKeyHash384Gen moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Gen protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -619,7 +619,7 @@ public interface ICFBamProtDbKeyHash384GenTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamDbKeyHash384Gen moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamDbKeyHash384Gen protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

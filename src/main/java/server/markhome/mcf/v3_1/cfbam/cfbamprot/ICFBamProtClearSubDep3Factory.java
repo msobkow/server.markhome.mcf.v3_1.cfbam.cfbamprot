@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtClearSubDep3Factory protected interface for ClearSubDep3
  */
 public interface ICFBamProtClearSubDep3Factory
+extends ICFBamPubClearSubDep3Factory
 {
 
 	/**
@@ -84,13 +88,13 @@ public interface ICFBamProtClearSubDep3Factory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtClearSubDep3 newRec();
+	public ICFBamProtClearSubDep3 newProtRec();
 
 	/**
 	 *	Allocate a protected ClearSubDep3 history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtClearSubDep3H newHRec();
+	public ICFBamProtClearSubDep3H newProtHRec();
 
 }

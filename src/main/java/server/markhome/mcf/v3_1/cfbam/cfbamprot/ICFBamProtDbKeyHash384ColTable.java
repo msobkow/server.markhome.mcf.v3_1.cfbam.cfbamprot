@@ -78,7 +78,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtDbKeyHash384Col createDbKeyHash384Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protcreateDbKeyHash384Col( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash384Col rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtDbKeyHash384Col updateDbKeyHash384Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protupdateDbKeyHash384Col( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash384Col rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteDbKeyHash384Col( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384Col( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash384Col rec );
 	/**
 	 *	Delete the DbKeyHash384Col instances identified by the key TableIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	TableId	The DbKeyHash384Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByTableIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash384ColByTableIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Col instance identified by the primary key.
@@ -129,7 +129,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteDbKeyHash384ColByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the DbKeyHash384Col instances identified by the key UNameIdx.
@@ -140,7 +140,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	Name	The DbKeyHash384Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -151,7 +151,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Col instances identified by the key ScopeIdx.
@@ -160,7 +160,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	ScopeId	The DbKeyHash384Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Col instances identified by the key DefSchemaIdx.
@@ -179,7 +179,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	DefSchemaId	The DbKeyHash384Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Col instances identified by the key PrevIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	PrevId	The DbKeyHash384Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Col instances identified by the key NextIdx.
@@ -217,7 +217,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	NextId	The DbKeyHash384Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -227,7 +227,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Col instances identified by the key ContPrevIdx.
@@ -238,7 +238,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	PrevId	The DbKeyHash384Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -249,7 +249,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash384Col instances identified by the key ContNextIdx.
@@ -260,7 +260,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	NextId	The DbKeyHash384Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash384ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -271,7 +271,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash384ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash384ColByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 
 
@@ -285,7 +285,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash384Col readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -298,7 +298,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash384Col lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -308,7 +308,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Col[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash384Col[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived DbKeyHash384Col record instance identified by the unique key IdIdx.
@@ -320,7 +320,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash384Col readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -335,7 +335,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash384Col readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -348,7 +348,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Col[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -360,7 +360,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Col[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -372,7 +372,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Col[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -384,7 +384,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Col[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -398,7 +398,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Col[] readDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -413,7 +413,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Col[] readDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -426,7 +426,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash384Col[] readDerivedByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadDerivedByTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -441,7 +441,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -456,7 +456,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -466,7 +466,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return All the specific DbKeyHash384Col instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtDbKeyHash384Col[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash384Col[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific DbKeyHash384Col record instance identified by the unique key IdIdx.
@@ -480,7 +480,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -497,7 +497,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -512,7 +512,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -526,7 +526,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -540,7 +540,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -554,7 +554,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -570,7 +570,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col[] readRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -587,7 +587,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col[] readRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -602,7 +602,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash384Col[] readRecByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col[] protreadRecByTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -610,7 +610,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtDbKeyHash384Col moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash384Col protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -619,7 +619,7 @@ public interface ICFBamProtDbKeyHash384ColTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamDbKeyHash384Col moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamDbKeyHash384Col protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

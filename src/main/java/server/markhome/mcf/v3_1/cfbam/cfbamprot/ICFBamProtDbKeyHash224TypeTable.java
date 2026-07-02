@@ -78,7 +78,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtDbKeyHash224Type createDbKeyHash224Type( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protcreateDbKeyHash224Type( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash224Type rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtDbKeyHash224Type updateDbKeyHash224Type( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protupdateDbKeyHash224Type( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash224Type rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteDbKeyHash224Type( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224Type( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash224Type rec );
 	/**
 	 *	Delete the DbKeyHash224Type instances identified by the key SchemaIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	SchemaDefId	The DbKeyHash224Type key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224TypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash224TypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeBySchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash224TypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Type instance identified by the primary key.
@@ -129,7 +129,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteDbKeyHash224TypeByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the DbKeyHash224Type instances identified by the key UNameIdx.
@@ -140,7 +140,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	Name	The DbKeyHash224Type key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224TypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -151,7 +151,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash224TypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Type instances identified by the key ScopeIdx.
@@ -160,7 +160,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	ScopeId	The DbKeyHash224Type key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224TypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash224TypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Type instances identified by the key DefSchemaIdx.
@@ -179,7 +179,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	DefSchemaId	The DbKeyHash224Type key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224TypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash224TypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Type instances identified by the key PrevIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	PrevId	The DbKeyHash224Type key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224TypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash224TypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Type instances identified by the key NextIdx.
@@ -217,7 +217,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	NextId	The DbKeyHash224Type key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224TypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -227,7 +227,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash224TypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Type instances identified by the key ContPrevIdx.
@@ -238,7 +238,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	PrevId	The DbKeyHash224Type key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224TypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -249,7 +249,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash224TypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Type instances identified by the key ContNextIdx.
@@ -260,7 +260,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	NextId	The DbKeyHash224Type key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224TypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -271,7 +271,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDbKeyHash224TypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224TypeByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 
 
@@ -285,7 +285,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash224Type readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -298,7 +298,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash224Type lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -308,7 +308,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash224Type[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash224Type[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived DbKeyHash224Type record instance identified by the unique key IdIdx.
@@ -320,7 +320,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash224Type readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -335,7 +335,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDbKeyHash224Type readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -348,7 +348,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash224Type[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -360,7 +360,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash224Type[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -372,7 +372,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash224Type[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -384,7 +384,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash224Type[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -398,7 +398,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash224Type[] readDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -413,7 +413,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash224Type[] readDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -426,7 +426,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDbKeyHash224Type[] readDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -441,7 +441,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -456,7 +456,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -466,7 +466,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return All the specific DbKeyHash224Type instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtDbKeyHash224Type[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash224Type[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific DbKeyHash224Type record instance identified by the unique key IdIdx.
@@ -480,7 +480,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -497,7 +497,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -512,7 +512,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -526,7 +526,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -540,7 +540,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -554,7 +554,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -570,7 +570,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type[] readRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -587,7 +587,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type[] readRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -602,7 +602,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDbKeyHash224Type[] readRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -610,7 +610,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtDbKeyHash224Type moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Type protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -619,7 +619,7 @@ public interface ICFBamProtDbKeyHash224TypeTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamDbKeyHash224Type moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamDbKeyHash224Type protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

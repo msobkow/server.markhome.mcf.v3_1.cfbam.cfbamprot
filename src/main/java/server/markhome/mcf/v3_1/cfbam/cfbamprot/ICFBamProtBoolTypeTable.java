@@ -78,7 +78,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtBoolType createBoolType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protcreateBoolType( ICFSecProtAuthorization Authorization,
 		ICFBamProtBoolType rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtBoolType updateBoolType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protupdateBoolType( ICFSecProtAuthorization Authorization,
 		ICFBamProtBoolType rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteBoolType( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolType( ICFSecProtAuthorization Authorization,
 		ICFBamProtBoolType rec );
 	/**
 	 *	Delete the BoolType instances identified by the key SchemaIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	SchemaDefId	The BoolType key attribute of the instance generating the id.
 	 */
-	void deleteBoolTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteBoolTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtBoolTypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the BoolType instance identified by the primary key.
@@ -129,7 +129,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteBoolTypeByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the BoolType instances identified by the key UNameIdx.
@@ -140,7 +140,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	Name	The BoolType key attribute of the instance generating the id.
 	 */
-	void deleteBoolTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -151,7 +151,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteBoolTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the BoolType instances identified by the key ScopeIdx.
@@ -160,7 +160,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	ScopeId	The BoolType key attribute of the instance generating the id.
 	 */
-	void deleteBoolTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteBoolTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the BoolType instances identified by the key DefSchemaIdx.
@@ -179,7 +179,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	DefSchemaId	The BoolType key attribute of the instance generating the id.
 	 */
-	void deleteBoolTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteBoolTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the BoolType instances identified by the key PrevIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	PrevId	The BoolType key attribute of the instance generating the id.
 	 */
-	void deleteBoolTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteBoolTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the BoolType instances identified by the key NextIdx.
@@ -217,7 +217,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	NextId	The BoolType key attribute of the instance generating the id.
 	 */
-	void deleteBoolTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -227,7 +227,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteBoolTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the BoolType instances identified by the key ContPrevIdx.
@@ -238,7 +238,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	PrevId	The BoolType key attribute of the instance generating the id.
 	 */
-	void deleteBoolTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -249,7 +249,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteBoolTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the BoolType instances identified by the key ContNextIdx.
@@ -260,7 +260,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	NextId	The BoolType key attribute of the instance generating the id.
 	 */
-	void deleteBoolTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -271,7 +271,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteBoolTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteBoolTypeByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 
 
@@ -285,7 +285,7 @@ public interface ICFBamProtBoolTypeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtBoolType readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -298,7 +298,7 @@ public interface ICFBamProtBoolTypeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtBoolType lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -308,7 +308,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtBoolType[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtBoolType[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived BoolType record instance identified by the unique key IdIdx.
@@ -320,7 +320,7 @@ public interface ICFBamProtBoolTypeTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtBoolType readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -335,7 +335,7 @@ public interface ICFBamProtBoolTypeTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtBoolType readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -348,7 +348,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtBoolType[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -360,7 +360,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtBoolType[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -372,7 +372,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtBoolType[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -384,7 +384,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtBoolType[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -398,7 +398,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtBoolType[] readDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -413,7 +413,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtBoolType[] readDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -426,7 +426,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtBoolType[] readDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -441,7 +441,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -456,7 +456,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -466,7 +466,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return All the specific BoolType instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtBoolType[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtBoolType[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific BoolType record instance identified by the unique key IdIdx.
@@ -480,7 +480,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -497,7 +497,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -512,7 +512,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -526,7 +526,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -540,7 +540,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -554,7 +554,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -570,7 +570,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType[] readRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -587,7 +587,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType[] readRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -602,7 +602,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtBoolType[] readRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -610,7 +610,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtBoolType moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBoolType protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -619,7 +619,7 @@ public interface ICFBamProtBoolTypeTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamBoolType moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamBoolType protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

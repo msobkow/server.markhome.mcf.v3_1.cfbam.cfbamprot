@@ -78,7 +78,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtUInt16Col createUInt16Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protcreateUInt16Col( ICFSecProtAuthorization Authorization,
 		ICFBamProtUInt16Col rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtUInt16Col updateUInt16Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protupdateUInt16Col( ICFSecProtAuthorization Authorization,
 		ICFBamProtUInt16Col rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteUInt16Col( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16Col( ICFSecProtAuthorization Authorization,
 		ICFBamProtUInt16Col rec );
 	/**
 	 *	Delete the UInt16Col instances identified by the key TableIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	TableId	The UInt16Col key attribute of the instance generating the id.
 	 */
-	void deleteUInt16ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt16ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByTableIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtUInt16ColByTableIdxKey argKey );
 	/**
 	 *	Delete the UInt16Col instance identified by the primary key.
@@ -129,7 +129,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteUInt16ColByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the UInt16Col instances identified by the key UNameIdx.
@@ -140,7 +140,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	Name	The UInt16Col key attribute of the instance generating the id.
 	 */
-	void deleteUInt16ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -151,7 +151,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt16ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the UInt16Col instances identified by the key ScopeIdx.
@@ -160,7 +160,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	ScopeId	The UInt16Col key attribute of the instance generating the id.
 	 */
-	void deleteUInt16ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt16ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the UInt16Col instances identified by the key DefSchemaIdx.
@@ -179,7 +179,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	DefSchemaId	The UInt16Col key attribute of the instance generating the id.
 	 */
-	void deleteUInt16ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt16ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the UInt16Col instances identified by the key PrevIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	PrevId	The UInt16Col key attribute of the instance generating the id.
 	 */
-	void deleteUInt16ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt16ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the UInt16Col instances identified by the key NextIdx.
@@ -217,7 +217,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	NextId	The UInt16Col key attribute of the instance generating the id.
 	 */
-	void deleteUInt16ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -227,7 +227,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt16ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the UInt16Col instances identified by the key ContPrevIdx.
@@ -238,7 +238,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	PrevId	The UInt16Col key attribute of the instance generating the id.
 	 */
-	void deleteUInt16ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -249,7 +249,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt16ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the UInt16Col instances identified by the key ContNextIdx.
@@ -260,7 +260,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	NextId	The UInt16Col key attribute of the instance generating the id.
 	 */
-	void deleteUInt16ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -271,7 +271,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt16ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt16ColByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 
 
@@ -285,7 +285,7 @@ public interface ICFBamProtUInt16ColTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtUInt16Col readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -298,7 +298,7 @@ public interface ICFBamProtUInt16ColTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtUInt16Col lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -308,7 +308,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt16Col[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtUInt16Col[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived UInt16Col record instance identified by the unique key IdIdx.
@@ -320,7 +320,7 @@ public interface ICFBamProtUInt16ColTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtUInt16Col readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -335,7 +335,7 @@ public interface ICFBamProtUInt16ColTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtUInt16Col readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -348,7 +348,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt16Col[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -360,7 +360,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt16Col[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -372,7 +372,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt16Col[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -384,7 +384,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt16Col[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -398,7 +398,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt16Col[] readDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -413,7 +413,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt16Col[] readDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -426,7 +426,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt16Col[] readDerivedByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadDerivedByTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -441,7 +441,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -456,7 +456,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -466,7 +466,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return All the specific UInt16Col instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtUInt16Col[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtUInt16Col[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific UInt16Col record instance identified by the unique key IdIdx.
@@ -480,7 +480,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -497,7 +497,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -512,7 +512,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -526,7 +526,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -540,7 +540,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -554,7 +554,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -570,7 +570,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col[] readRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -587,7 +587,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col[] readRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -602,7 +602,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt16Col[] readRecByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col[] protreadRecByTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -610,7 +610,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtUInt16Col moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt16Col protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -619,7 +619,7 @@ public interface ICFBamProtUInt16ColTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamUInt16Col moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamUInt16Col protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

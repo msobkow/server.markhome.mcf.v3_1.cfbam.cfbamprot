@@ -78,7 +78,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtRelation createRelation( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protcreateRelation( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelation rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtRelation updateRelation( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protupdateRelation( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelation rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteRelation( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelation( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelation rec );
 	/**
 	 *	Delete the Relation instances identified by the key UNameIdx.
@@ -112,7 +112,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	Name	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
 		String argName );
 
@@ -123,7 +123,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByUNameIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key RelTableIdx.
@@ -132,7 +132,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	TableId	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByRelTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByRelTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -142,7 +142,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByRelTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByRelTableIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByRelTableIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key RelCodeVisIdx.
@@ -151,7 +151,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	CodeVis	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchema.CodeVisibilityEnum argCodeVis );
 
 	/**
@@ -161,7 +161,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByRelCodeVisIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key RelTableCodeVisX.
@@ -172,7 +172,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	CodeVis	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
 		ICFBamProtSchema.CodeVisibilityEnum argCodeVis );
 
@@ -183,7 +183,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByRelTableCodeVisXKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key DefSchemaIdx.
@@ -192,7 +192,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	DefSchemaId	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -202,7 +202,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key FromKeyIdx.
@@ -211,7 +211,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	FromIndexId	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByFromKeyIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByFromKeyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argFromIndexId );
 
 	/**
@@ -221,7 +221,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByFromKeyIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByFromKeyIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByFromKeyIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key ToTblIdx.
@@ -230,7 +230,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	ToTableId	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByToTblIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByToTblIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argToTableId );
 
 	/**
@@ -240,7 +240,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByToTblIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByToTblIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByToTblIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key ToKeyIdx.
@@ -249,7 +249,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	ToIndexId	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByToKeyIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByToKeyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argToIndexId );
 
 	/**
@@ -259,7 +259,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByToKeyIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByToKeyIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByToKeyIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key NarrowedIdx.
@@ -268,7 +268,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	NarrowedId	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByNarrowedIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByNarrowedIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNarrowedId );
 
 	/**
@@ -278,7 +278,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByNarrowedIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByNarrowedIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByNarrowedIdxKey argKey );
 	/**
 	 *	Delete the Relation instance identified by the primary key.
@@ -287,7 +287,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteRelationByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Relation instances identified by the key TenantIdx.
@@ -296,7 +296,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	TenantId	The Relation key attribute of the instance generating the id.
 	 */
-	void deleteRelationByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -306,7 +306,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteRelationByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteRelationByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 
 
@@ -320,7 +320,7 @@ public interface ICFBamProtRelationTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtRelation readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -333,7 +333,7 @@ public interface ICFBamProtRelationTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtRelation lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -343,7 +343,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtRelation[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived Relation record instance identified by the unique key IdIdx.
@@ -355,7 +355,7 @@ public interface ICFBamProtRelationTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtRelation readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -367,7 +367,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -382,7 +382,7 @@ public interface ICFBamProtRelationTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtRelation readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -395,7 +395,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readDerivedByRelTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadDerivedByRelTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -407,7 +407,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readDerivedByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadDerivedByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
 
 	/**
@@ -421,7 +421,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readDerivedByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadDerivedByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
 
@@ -434,7 +434,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -446,7 +446,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readDerivedByFromKeyIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadDerivedByFromKeyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 FromIndexId );
 
 	/**
@@ -458,7 +458,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readDerivedByToTblIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadDerivedByToTblIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ToTableId );
 
 	/**
@@ -470,7 +470,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readDerivedByToKeyIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadDerivedByToKeyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ToIndexId );
 
 	/**
@@ -482,7 +482,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtRelation[] readDerivedByNarrowedIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadDerivedByNarrowedIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NarrowedId );
 
 	/**
@@ -497,7 +497,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -512,7 +512,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -522,7 +522,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@return All the specific Relation instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtRelation[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtRelation[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific Relation record instance identified by the unique key IdIdx.
@@ -536,7 +536,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -550,7 +550,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation[] readRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -567,7 +567,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -582,7 +582,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation[] readRecByRelTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadRecByRelTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -596,7 +596,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation[] readRecByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadRecByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
 
 	/**
@@ -612,7 +612,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation[] readRecByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadRecByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
 
@@ -627,7 +627,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -641,7 +641,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation[] readRecByFromKeyIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadRecByFromKeyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 FromIndexId );
 
 	/**
@@ -655,7 +655,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation[] readRecByToTblIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadRecByToTblIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ToTableId );
 
 	/**
@@ -669,7 +669,7 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation[] readRecByToKeyIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadRecByToKeyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ToIndexId );
 
 	/**
@@ -683,6 +683,6 @@ public interface ICFBamProtRelationTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtRelation[] readRecByNarrowedIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtRelation[] protreadRecByNarrowedIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NarrowedId );
 }

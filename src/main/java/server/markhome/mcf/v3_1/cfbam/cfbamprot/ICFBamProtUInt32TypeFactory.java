@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtUInt32TypeFactory protected interface for UInt32Type
  */
 public interface ICFBamProtUInt32TypeFactory
+extends ICFBamPubUInt32TypeFactory
 {
 
 	/**
@@ -77,13 +81,13 @@ public interface ICFBamProtUInt32TypeFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtUInt32Type newRec();
+	public ICFBamProtUInt32Type newProtRec();
 
 	/**
 	 *	Allocate a protected UInt32Type history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtUInt32TypeH newHRec();
+	public ICFBamProtUInt32TypeH newProtHRec();
 
 }

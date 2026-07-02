@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtDbKeyHash160TypeFactory protected interface for DbKeyHash160Type
  */
 public interface ICFBamProtDbKeyHash160TypeFactory
+extends ICFBamPubDbKeyHash160TypeFactory
 {
 
 	/**
@@ -77,13 +81,13 @@ public interface ICFBamProtDbKeyHash160TypeFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtDbKeyHash160Type newRec();
+	public ICFBamProtDbKeyHash160Type newProtRec();
 
 	/**
 	 *	Allocate a protected DbKeyHash160Type history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtDbKeyHash160TypeH newHRec();
+	public ICFBamProtDbKeyHash160TypeH newProtHRec();
 
 }

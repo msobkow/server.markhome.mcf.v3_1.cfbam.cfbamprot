@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtId32GenFactory protected interface for Id32Gen
  */
 public interface ICFBamProtId32GenFactory
+extends ICFBamPubId32GenFactory
 {
 
 	/**
@@ -70,13 +74,13 @@ public interface ICFBamProtId32GenFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtId32Gen newRec();
+	public ICFBamProtId32Gen newProtRec();
 
 	/**
 	 *	Allocate a protected Id32Gen history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtId32GenH newHRec();
+	public ICFBamProtId32GenH newProtHRec();
 
 }

@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtStringColFactory protected interface for StringCol
  */
 public interface ICFBamProtStringColFactory
+extends ICFBamPubStringColFactory
 {
 
 	/**
@@ -77,13 +81,13 @@ public interface ICFBamProtStringColFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtStringCol newRec();
+	public ICFBamProtStringCol newProtRec();
 
 	/**
 	 *	Allocate a protected StringCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtStringColH newHRec();
+	public ICFBamProtStringColH newProtHRec();
 
 }

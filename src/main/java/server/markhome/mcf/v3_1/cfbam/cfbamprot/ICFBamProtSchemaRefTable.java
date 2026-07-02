@@ -78,7 +78,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtSchemaRef createSchemaRef( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protcreateSchemaRef( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRef rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtSchemaRef updateSchemaRef( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protupdateSchemaRef( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRef rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteSchemaRef( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRef( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRef rec );
 	/**
 	 *	Delete the SchemaRef instances identified by the key SchemaIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	SchemaId	The SchemaRef key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRefBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRefBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefBySchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRefBySchemaIdxKey argKey );
 	/**
 	 *	Delete the SchemaRef instances identified by the key UNameIdx.
@@ -131,7 +131,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	Name	The SchemaRef key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRefByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaId,
 		String argName );
 
@@ -142,7 +142,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRefByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRefByUNameIdxKey argKey );
 	/**
 	 *	Delete the SchemaRef instances identified by the key RefSchemaIdx.
@@ -151,7 +151,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	RefSchemaId	The SchemaRef key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRefByRefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByRefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argRefSchemaId );
 
 	/**
@@ -161,7 +161,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRefByRefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByRefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRefByRefSchemaIdxKey argKey );
 	/**
 	 *	Delete the SchemaRef instances identified by the key PrevIdx.
@@ -170,7 +170,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	PrevId	The SchemaRef key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRefByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -180,7 +180,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRefByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRefByPrevIdxKey argKey );
 	/**
 	 *	Delete the SchemaRef instances identified by the key NextIdx.
@@ -189,7 +189,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	NextId	The SchemaRef key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRefByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -199,7 +199,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRefByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRefByNextIdxKey argKey );
 	/**
 	 *	Delete the SchemaRef instance identified by the primary key.
@@ -208,7 +208,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteSchemaRefByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SchemaRef instances identified by the key TenantIdx.
@@ -217,7 +217,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	TenantId	The SchemaRef key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRefByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -227,7 +227,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRefByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRefByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 
 
@@ -241,7 +241,7 @@ public interface ICFBamProtSchemaRefTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtSchemaRef readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -254,7 +254,7 @@ public interface ICFBamProtSchemaRefTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtSchemaRef lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -264,7 +264,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRef[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtSchemaRef[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived SchemaRef record instance identified by the unique key IdIdx.
@@ -276,7 +276,7 @@ public interface ICFBamProtSchemaRefTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtSchemaRef readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -288,7 +288,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRef[] readDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -300,7 +300,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRef[] readDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaId );
 
 	/**
@@ -315,7 +315,7 @@ public interface ICFBamProtSchemaRefTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtSchemaRef readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaId,
 		String Name );
 
@@ -328,7 +328,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRef[] readDerivedByRefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadDerivedByRefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 RefSchemaId );
 
 	/**
@@ -340,7 +340,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRef[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -352,7 +352,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRef[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -367,7 +367,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRef readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -382,7 +382,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRef lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -392,7 +392,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@return All the specific SchemaRef instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtSchemaRef[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtSchemaRef[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific SchemaRef record instance identified by the unique key IdIdx.
@@ -406,7 +406,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRef readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -420,7 +420,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRef[] readRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -434,7 +434,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRef[] readRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaId );
 
 	/**
@@ -451,7 +451,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRef readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaId,
 		String Name );
 
@@ -466,7 +466,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRef[] readRecByRefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadRecByRefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 RefSchemaId );
 
 	/**
@@ -480,7 +480,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRef[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -494,7 +494,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRef[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -502,7 +502,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtSchemaRef moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRef protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -511,7 +511,7 @@ public interface ICFBamProtSchemaRefTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamSchemaRef moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamSchemaRef protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

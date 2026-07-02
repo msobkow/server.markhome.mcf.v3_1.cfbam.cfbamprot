@@ -78,7 +78,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtClearSubDep2 createClearSubDep2( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protcreateClearSubDep2( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearSubDep2 rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtClearSubDep2 updateClearSubDep2( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protupdateClearSubDep2( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearSubDep2 rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteClearSubDep2( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearSubDep2 rec );
 	/**
 	 *	Delete the ClearSubDep2 instances identified by the key ClearSubDep1Idx.
@@ -110,7 +110,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	ClearSubDep1Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByClearSubDep1Idx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByClearSubDep1Idx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argClearSubDep1Id );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClearSubDep2ByClearSubDep1Idx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByClearSubDep1Idx( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearSubDep2ByClearSubDep1IdxKey argKey );
 	/**
 	 *	Delete the ClearSubDep2 instances identified by the key UNameIdx.
@@ -131,7 +131,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	Name	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argClearSubDep1Id,
 		String argName );
 
@@ -142,7 +142,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClearSubDep2ByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearSubDep2ByUNameIdxKey argKey );
 	/**
 	 *	Delete the ClearSubDep2 instances identified by the key ClearDepIdx.
@@ -151,7 +151,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	RelationId	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByClearDepIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argRelationId );
 
 	/**
@@ -161,7 +161,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClearSubDep2ByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByClearDepIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearDepByClearDepIdxKey argKey );
 	/**
 	 *	Delete the ClearSubDep2 instances identified by the key DefSchemaIdx.
@@ -170,7 +170,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	DefSchemaId	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -180,7 +180,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClearSubDep2ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearDepByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ClearSubDep2 instance identified by the primary key.
@@ -189,7 +189,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteClearSubDep2ByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the ClearSubDep2 instances identified by the key TenantIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	TenantId	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClearSubDep2ByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearSubDep2ByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 
 
@@ -222,7 +222,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtClearSubDep2 readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -235,7 +235,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtClearSubDep2 lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -245,7 +245,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtClearSubDep2[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtClearSubDep2[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived ClearSubDep2 record instance identified by the unique key IdIdx.
@@ -257,7 +257,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtClearSubDep2 readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -269,7 +269,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtClearSubDep2[] readDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -281,7 +281,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtClearSubDep2[] readDerivedByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2[] protreadDerivedByClearDepIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -293,7 +293,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtClearSubDep2[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -305,7 +305,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtClearSubDep2[] readDerivedByClearSubDep1Idx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2[] protreadDerivedByClearSubDep1Idx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ClearSubDep1Id );
 
 	/**
@@ -320,7 +320,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtClearSubDep2 readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ClearSubDep1Id,
 		String Name );
 
@@ -336,7 +336,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearSubDep2 readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -351,7 +351,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearSubDep2 lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -361,7 +361,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@return All the specific ClearSubDep2 instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtClearSubDep2[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtClearSubDep2[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific ClearSubDep2 record instance identified by the unique key IdIdx.
@@ -375,7 +375,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearSubDep2 readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -389,7 +389,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearSubDep2[] readRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -403,7 +403,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearSubDep2[] readRecByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2[] protreadRecByClearDepIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -417,7 +417,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearSubDep2[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -431,7 +431,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearSubDep2[] readRecByClearSubDep1Idx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2[] protreadRecByClearSubDep1Idx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ClearSubDep1Id );
 
 	/**
@@ -448,7 +448,7 @@ public interface ICFBamProtClearSubDep2Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearSubDep2 readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearSubDep2 protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ClearSubDep1Id,
 		String Name );
 }

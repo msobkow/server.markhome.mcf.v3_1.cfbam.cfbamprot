@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtRoleDefFactory protected interface for RoleDef
  */
 public interface ICFBamProtRoleDefFactory
+extends ICFBamPubRoleDefFactory
 {
 
 	/**
@@ -105,13 +109,13 @@ public interface ICFBamProtRoleDefFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtRoleDef newRec();
+	public ICFBamProtRoleDef newProtRec();
 
 	/**
 	 *	Allocate a protected RoleDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtRoleDefH newHRec();
+	public ICFBamProtRoleDefH newProtHRec();
 
 }

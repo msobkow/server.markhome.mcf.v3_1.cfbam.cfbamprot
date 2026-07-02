@@ -78,7 +78,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtUInt32Def createUInt32Def( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protcreateUInt32Def( ICFSecProtAuthorization Authorization,
 		ICFBamProtUInt32Def rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtUInt32Def updateUInt32Def( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protupdateUInt32Def( ICFSecProtAuthorization Authorization,
 		ICFBamProtUInt32Def rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteUInt32Def( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32Def( ICFSecProtAuthorization Authorization,
 		ICFBamProtUInt32Def rec );
 	/**
 	 *	Delete the UInt32Def instance identified by the primary key.
@@ -110,7 +110,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteUInt32DefByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the UInt32Def instances identified by the key UNameIdx.
@@ -121,7 +121,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	Name	The UInt32Def key attribute of the instance generating the id.
 	 */
-	void deleteUInt32DefByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -132,7 +132,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt32DefByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the UInt32Def instances identified by the key ScopeIdx.
@@ -141,7 +141,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	ScopeId	The UInt32Def key attribute of the instance generating the id.
 	 */
-	void deleteUInt32DefByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -151,7 +151,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt32DefByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the UInt32Def instances identified by the key DefSchemaIdx.
@@ -160,7 +160,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	DefSchemaId	The UInt32Def key attribute of the instance generating the id.
 	 */
-	void deleteUInt32DefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt32DefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the UInt32Def instances identified by the key PrevIdx.
@@ -179,7 +179,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	PrevId	The UInt32Def key attribute of the instance generating the id.
 	 */
-	void deleteUInt32DefByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt32DefByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the UInt32Def instances identified by the key NextIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	NextId	The UInt32Def key attribute of the instance generating the id.
 	 */
-	void deleteUInt32DefByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt32DefByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the UInt32Def instances identified by the key ContPrevIdx.
@@ -219,7 +219,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	PrevId	The UInt32Def key attribute of the instance generating the id.
 	 */
-	void deleteUInt32DefByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -230,7 +230,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt32DefByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the UInt32Def instances identified by the key ContNextIdx.
@@ -241,7 +241,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	NextId	The UInt32Def key attribute of the instance generating the id.
 	 */
-	void deleteUInt32DefByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -252,7 +252,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteUInt32DefByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUInt32DefByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 
 
@@ -266,7 +266,7 @@ public interface ICFBamProtUInt32DefTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtUInt32Def readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -279,7 +279,7 @@ public interface ICFBamProtUInt32DefTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtUInt32Def lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -289,7 +289,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt32Def[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtUInt32Def[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived UInt32Def record instance identified by the unique key IdIdx.
@@ -301,7 +301,7 @@ public interface ICFBamProtUInt32DefTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtUInt32Def readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -316,7 +316,7 @@ public interface ICFBamProtUInt32DefTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtUInt32Def readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -329,7 +329,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt32Def[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -341,7 +341,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt32Def[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -353,7 +353,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt32Def[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -365,7 +365,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt32Def[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -379,7 +379,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt32Def[] readDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -394,7 +394,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtUInt32Def[] readDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -410,7 +410,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -425,7 +425,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -435,7 +435,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return All the specific UInt32Def instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtUInt32Def[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtUInt32Def[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific UInt32Def record instance identified by the unique key IdIdx.
@@ -449,7 +449,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -466,7 +466,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -481,7 +481,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -495,7 +495,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -509,7 +509,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -523,7 +523,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -539,7 +539,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def[] readRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -556,7 +556,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtUInt32Def[] readRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -565,7 +565,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtUInt32Def moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUInt32Def protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -574,7 +574,7 @@ public interface ICFBamProtUInt32DefTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamUInt32Def moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamUInt32Def protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

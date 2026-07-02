@@ -78,7 +78,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtClearDep createClearDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protcreateClearDep( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearDep rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtClearDep updateClearDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protupdateClearDep( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearDep rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteClearDep( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDep( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearDep rec );
 	/**
 	 *	Delete the ClearDep instances identified by the key ClearDepIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	RelationId	The ClearDep key attribute of the instance generating the id.
 	 */
-	void deleteClearDepByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByClearDepIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argRelationId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClearDepByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByClearDepIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearDepByClearDepIdxKey argKey );
 	/**
 	 *	Delete the ClearDep instances identified by the key DefSchemaIdx.
@@ -129,7 +129,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	DefSchemaId	The ClearDep key attribute of the instance generating the id.
 	 */
-	void deleteClearDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -139,7 +139,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClearDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtClearDepByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ClearDep instance identified by the primary key.
@@ -148,7 +148,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteClearDepByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the ClearDep instances identified by the key TenantIdx.
@@ -157,7 +157,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	TenantId	The ClearDep key attribute of the instance generating the id.
 	 */
-	void deleteClearDepByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -167,7 +167,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClearDepByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 
 
@@ -181,7 +181,7 @@ public interface ICFBamProtClearDepTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtClearDep readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -194,7 +194,7 @@ public interface ICFBamProtClearDepTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtClearDep lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -204,7 +204,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtClearDep[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtClearDep[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived ClearDep record instance identified by the unique key IdIdx.
@@ -216,7 +216,7 @@ public interface ICFBamProtClearDepTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtClearDep readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -228,7 +228,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtClearDep[] readDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -240,7 +240,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtClearDep[] readDerivedByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadDerivedByClearDepIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -252,7 +252,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtClearDep[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -267,7 +267,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearDep readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -282,7 +282,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearDep lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -292,7 +292,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@return All the specific ClearDep instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtClearDep[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtClearDep[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific ClearDep record instance identified by the unique key IdIdx.
@@ -306,7 +306,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearDep readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -320,7 +320,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearDep[] readRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -334,7 +334,7 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearDep[] readRecByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadRecByClearDepIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -348,6 +348,6 @@ public interface ICFBamProtClearDepTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtClearDep[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 }

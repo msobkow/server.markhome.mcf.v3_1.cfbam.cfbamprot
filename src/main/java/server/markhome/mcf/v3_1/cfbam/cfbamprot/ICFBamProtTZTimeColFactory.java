@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtTZTimeColFactory protected interface for TZTimeCol
  */
 public interface ICFBamProtTZTimeColFactory
+extends ICFBamPubTZTimeColFactory
 {
 
 	/**
@@ -77,13 +81,13 @@ public interface ICFBamProtTZTimeColFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtTZTimeCol newRec();
+	public ICFBamProtTZTimeCol newProtRec();
 
 	/**
 	 *	Allocate a protected TZTimeCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtTZTimeColH newHRec();
+	public ICFBamProtTZTimeColH newProtHRec();
 
 }

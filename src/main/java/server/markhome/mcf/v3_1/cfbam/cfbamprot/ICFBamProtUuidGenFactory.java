@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtUuidGenFactory protected interface for UuidGen
  */
 public interface ICFBamProtUuidGenFactory
+extends ICFBamPubUuidGenFactory
 {
 
 	/**
@@ -70,13 +74,13 @@ public interface ICFBamProtUuidGenFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtUuidGen newRec();
+	public ICFBamProtUuidGen newProtRec();
 
 	/**
 	 *	Allocate a protected UuidGen history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtUuidGenH newHRec();
+	public ICFBamProtUuidGenH newProtHRec();
 
 }

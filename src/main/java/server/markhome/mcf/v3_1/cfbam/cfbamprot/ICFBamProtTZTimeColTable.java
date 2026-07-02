@@ -78,7 +78,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtTZTimeCol createTZTimeCol( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protcreateTZTimeCol( ICFSecProtAuthorization Authorization,
 		ICFBamProtTZTimeCol rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtTZTimeCol updateTZTimeCol( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protupdateTZTimeCol( ICFSecProtAuthorization Authorization,
 		ICFBamProtTZTimeCol rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteTZTimeCol( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeCol( ICFSecProtAuthorization Authorization,
 		ICFBamProtTZTimeCol rec );
 	/**
 	 *	Delete the TZTimeCol instances identified by the key TableIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	TableId	The TZTimeCol key attribute of the instance generating the id.
 	 */
-	void deleteTZTimeColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTZTimeColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByTableIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTZTimeColByTableIdxKey argKey );
 	/**
 	 *	Delete the TZTimeCol instance identified by the primary key.
@@ -129,7 +129,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteTZTimeColByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the TZTimeCol instances identified by the key UNameIdx.
@@ -140,7 +140,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	Name	The TZTimeCol key attribute of the instance generating the id.
 	 */
-	void deleteTZTimeColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -151,7 +151,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTZTimeColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the TZTimeCol instances identified by the key ScopeIdx.
@@ -160,7 +160,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	ScopeId	The TZTimeCol key attribute of the instance generating the id.
 	 */
-	void deleteTZTimeColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTZTimeColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the TZTimeCol instances identified by the key DefSchemaIdx.
@@ -179,7 +179,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	DefSchemaId	The TZTimeCol key attribute of the instance generating the id.
 	 */
-	void deleteTZTimeColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTZTimeColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the TZTimeCol instances identified by the key PrevIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	PrevId	The TZTimeCol key attribute of the instance generating the id.
 	 */
-	void deleteTZTimeColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTZTimeColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the TZTimeCol instances identified by the key NextIdx.
@@ -217,7 +217,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	NextId	The TZTimeCol key attribute of the instance generating the id.
 	 */
-	void deleteTZTimeColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -227,7 +227,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTZTimeColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the TZTimeCol instances identified by the key ContPrevIdx.
@@ -238,7 +238,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	PrevId	The TZTimeCol key attribute of the instance generating the id.
 	 */
-	void deleteTZTimeColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -249,7 +249,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTZTimeColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the TZTimeCol instances identified by the key ContNextIdx.
@@ -260,7 +260,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	NextId	The TZTimeCol key attribute of the instance generating the id.
 	 */
-	void deleteTZTimeColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -271,7 +271,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTZTimeColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZTimeColByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 
 
@@ -285,7 +285,7 @@ public interface ICFBamProtTZTimeColTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtTZTimeCol readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -298,7 +298,7 @@ public interface ICFBamProtTZTimeColTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtTZTimeCol lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -308,7 +308,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtTZTimeCol[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtTZTimeCol[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived TZTimeCol record instance identified by the unique key IdIdx.
@@ -320,7 +320,7 @@ public interface ICFBamProtTZTimeColTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtTZTimeCol readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -335,7 +335,7 @@ public interface ICFBamProtTZTimeColTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtTZTimeCol readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -348,7 +348,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtTZTimeCol[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -360,7 +360,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtTZTimeCol[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -372,7 +372,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtTZTimeCol[] readDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -384,7 +384,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtTZTimeCol[] readDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -398,7 +398,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtTZTimeCol[] readDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -413,7 +413,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtTZTimeCol[] readDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -426,7 +426,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtTZTimeCol[] readDerivedByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadDerivedByTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -441,7 +441,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -456,7 +456,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -466,7 +466,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return All the specific TZTimeCol instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtTZTimeCol[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtTZTimeCol[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific TZTimeCol record instance identified by the unique key IdIdx.
@@ -480,7 +480,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -497,7 +497,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -512,7 +512,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -526,7 +526,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -540,7 +540,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol[] readRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -554,7 +554,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol[] readRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -570,7 +570,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol[] readRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -587,7 +587,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol[] readRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -602,7 +602,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtTZTimeCol[] readRecByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol[] protreadRecByTableIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -610,7 +610,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamProtTZTimeCol moveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZTimeCol protmoveRecUp( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -619,7 +619,7 @@ public interface ICFBamProtTZTimeColTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	ICFBamTZTimeCol moveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamTZTimeCol protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

@@ -61,14 +61,20 @@ import java.util.concurrent.atomic.*;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-$importJavaProtPackageSchemaNameBuffDotFactoryService$$importJavaProtPackageSchemaNameBuffDotFactoryService$
+
+		import server.markhome.mcf.v3_1.cfsec.cfsecprot.buff.CFSecProtBuffFactoryService;
+		import server.markhome.mcf.v3_1.cfint.cfintprot.buff.CFIntProtBuffFactoryService;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.buff.CFBamProtBuffSchema;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.buff.CFBamProtBuffFactoryService;
 
 public interface ICFBamProtSchema
-extends ICFSecProtSchema$commaProtNewlineProtPackageSchemaName$
+extends ICFSecProtSchema,
+	ICFIntProtSchema
 {
 
 	public static final String SCHEMA_NAME = "CFBam";

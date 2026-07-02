@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtDbKeyHash512DefFactory protected interface for DbKeyHash512Def
  */
 public interface ICFBamProtDbKeyHash512DefFactory
+extends ICFBamPubDbKeyHash512DefFactory
 {
 
 	/**
@@ -70,13 +74,13 @@ public interface ICFBamProtDbKeyHash512DefFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtDbKeyHash512Def newRec();
+	public ICFBamProtDbKeyHash512Def newProtRec();
 
 	/**
 	 *	Allocate a protected DbKeyHash512Def history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtDbKeyHash512DefH newHRec();
+	public ICFBamProtDbKeyHash512DefH newProtHRec();
 
 }

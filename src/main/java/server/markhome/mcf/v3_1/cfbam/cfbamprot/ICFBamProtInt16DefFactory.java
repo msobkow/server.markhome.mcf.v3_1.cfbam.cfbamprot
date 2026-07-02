@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtInt16DefFactory protected interface for Int16Def
  */
 public interface ICFBamProtInt16DefFactory
+extends ICFBamPubInt16DefFactory
 {
 
 	/**
@@ -70,13 +74,13 @@ public interface ICFBamProtInt16DefFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtInt16Def newRec();
+	public ICFBamProtInt16Def newProtRec();
 
 	/**
 	 *	Allocate a protected Int16Def history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtInt16DefH newHRec();
+	public ICFBamProtInt16DefH newProtHRec();
 
 }

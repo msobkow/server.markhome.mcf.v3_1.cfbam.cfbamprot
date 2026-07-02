@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtPopSubDep3Factory protected interface for PopSubDep3
  */
 public interface ICFBamProtPopSubDep3Factory
+extends ICFBamPubPopSubDep3Factory
 {
 
 	/**
@@ -84,13 +88,13 @@ public interface ICFBamProtPopSubDep3Factory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtPopSubDep3 newRec();
+	public ICFBamProtPopSubDep3 newProtRec();
 
 	/**
 	 *	Allocate a protected PopSubDep3 history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtPopSubDep3H newHRec();
+	public ICFBamProtPopSubDep3H newProtHRec();
 
 }

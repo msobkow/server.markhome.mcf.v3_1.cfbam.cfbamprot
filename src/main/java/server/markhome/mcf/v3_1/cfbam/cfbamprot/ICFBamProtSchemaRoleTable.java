@@ -78,7 +78,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtSchemaRole createSchemaRole( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protcreateSchemaRole( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRole rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtSchemaRole updateSchemaRole( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protupdateSchemaRole( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRole rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteSchemaRole( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRole( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRole rec );
 	/**
 	 *	Delete the SchemaRole instances identified by the key SchemaIdx.
@@ -110,7 +110,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	SchemaDefId	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRoleBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleBySchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRoleBySchemaIdxKey argKey );
 	/**
 	 *	Delete the SchemaRole instances identified by the key RoleScopeIdx.
@@ -129,7 +129,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	RoleScope	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleByRoleScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByRoleScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchema.RoleScopeEnum argRoleScope );
 
 	/**
@@ -139,7 +139,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRoleByRoleScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByRoleScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRoleByRoleScopeIdxKey argKey );
 	/**
 	 *	Delete the SchemaRole instances identified by the key SchRoleScpIdx.
@@ -150,7 +150,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	RoleScope	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId,
 		ICFBamProtSchema.RoleScopeEnum argRoleScope );
 
@@ -161,7 +161,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRoleBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRoleBySchRoleScpIdxKey argKey );
 	/**
 	 *	Delete the SchemaRole instance identified by the primary key.
@@ -170,7 +170,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteSchemaRoleByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SchemaRole instances identified by the key UNameIdx.
@@ -181,7 +181,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	Name	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -192,7 +192,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRoleByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRoleDefByUNameIdxKey argKey );
 	/**
 	 *	Delete the SchemaRole instances identified by the key ScopeIdx.
@@ -201,7 +201,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	ScopeId	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -211,7 +211,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRoleByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRoleDefByScopeIdxKey argKey );
 	/**
 	 *	Delete the SchemaRole instances identified by the key DefSchemaIdx.
@@ -220,7 +220,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	DefSchemaId	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -230,7 +230,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRoleByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRoleDefByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the SchemaRole instances identified by the key UDefIdx.
@@ -243,7 +243,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	Name	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleByUDefIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByUDefIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argDefSchemaId,
 		String argName );
@@ -255,7 +255,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSchemaRoleByUDefIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaRoleByUDefIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRoleDefByUDefIdxKey argKey );
 
 
@@ -269,7 +269,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtSchemaRole readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -282,7 +282,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtSchemaRole lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -292,7 +292,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRole[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtSchemaRole[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived SchemaRole record instance identified by the unique key IdIdx.
@@ -304,7 +304,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtSchemaRole readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -319,7 +319,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtSchemaRole readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -332,7 +332,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRole[] readDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -344,7 +344,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRole[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -361,7 +361,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtSchemaRole readDerivedByUDefIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protreadDerivedByUDefIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
@@ -375,7 +375,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRole[] readDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -387,7 +387,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRole[] readDerivedByRoleScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadDerivedByRoleScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchema.RoleScopeEnum RoleScope );
 
 	/**
@@ -401,7 +401,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtSchemaRole[] readDerivedBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadDerivedBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId,
 		ICFBamProtSchema.RoleScopeEnum RoleScope );
 
@@ -417,7 +417,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -432,7 +432,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -442,7 +442,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@return All the specific SchemaRole instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtSchemaRole[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtSchemaRole[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific SchemaRole record instance identified by the unique key IdIdx.
@@ -456,7 +456,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -473,7 +473,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -488,7 +488,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole[] readRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -502,7 +502,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -521,7 +521,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole readRecByUDefIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole protreadRecByUDefIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
@@ -537,7 +537,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole[] readRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -551,7 +551,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole[] readRecByRoleScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadRecByRoleScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchema.RoleScopeEnum RoleScope );
 
 	/**
@@ -567,7 +567,7 @@ public interface ICFBamProtSchemaRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtSchemaRole[] readRecBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaRole[] protreadRecBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId,
 		ICFBamProtSchema.RoleScopeEnum RoleScope );
 }

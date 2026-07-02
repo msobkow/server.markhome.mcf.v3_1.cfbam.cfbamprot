@@ -78,7 +78,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtScope createScope( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protcreateScope( ICFSecProtAuthorization Authorization,
 		ICFBamProtScope rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtScope updateScope( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protupdateScope( ICFSecProtAuthorization Authorization,
 		ICFBamProtScope rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteScope( ICFSecProtAuthorization Authorization,
+	public void protdeleteScope( ICFSecProtAuthorization Authorization,
 		ICFBamProtScope rec );
 	/**
 	 *	Delete the Scope instance identified by the primary key.
@@ -110,7 +110,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteScopeByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteScopeByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Scope instances identified by the key TenantIdx.
@@ -119,7 +119,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@param	TenantId	The Scope key attribute of the instance generating the id.
 	 */
-	void deleteScopeByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteScopeByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -129,7 +129,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteScopeByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteScopeByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 
 
@@ -143,7 +143,7 @@ public interface ICFBamProtScopeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtScope readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -156,7 +156,7 @@ public interface ICFBamProtScopeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtScope lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -166,7 +166,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtScope[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtScope[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived Scope record instance identified by the unique key IdIdx.
@@ -178,7 +178,7 @@ public interface ICFBamProtScopeTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtScope readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -190,7 +190,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtScope[] readDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -205,7 +205,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtScope readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -220,7 +220,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtScope lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -230,7 +230,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@return All the specific Scope instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtScope[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtScope[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific Scope record instance identified by the unique key IdIdx.
@@ -244,7 +244,7 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtScope readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -258,6 +258,6 @@ public interface ICFBamProtScopeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtScope[] readRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 }

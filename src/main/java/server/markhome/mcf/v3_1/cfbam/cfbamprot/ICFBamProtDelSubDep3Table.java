@@ -78,7 +78,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFBamProtDelSubDep3 createDelSubDep3( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protcreateDelSubDep3( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelSubDep3 rec );
 
 
@@ -90,7 +90,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFBamProtDelSubDep3 updateDelSubDep3( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protupdateDelSubDep3( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelSubDep3 rec );
 
 
@@ -101,7 +101,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteDelSubDep3( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelSubDep3 rec );
 	/**
 	 *	Delete the DelSubDep3 instances identified by the key DelSubDep2Idx.
@@ -110,7 +110,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	DelSubDep2Id	The DelSubDep3 key attribute of the instance generating the id.
 	 */
-	void deleteDelSubDep3ByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDelSubDep2Id );
 
 	/**
@@ -120,7 +120,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDelSubDep3ByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelSubDep3ByDelSubDep2IdxKey argKey );
 	/**
 	 *	Delete the DelSubDep3 instances identified by the key UNameIdx.
@@ -131,7 +131,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	Name	The DelSubDep3 key attribute of the instance generating the id.
 	 */
-	void deleteDelSubDep3ByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDelSubDep2Id,
 		String argName );
 
@@ -142,7 +142,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDelSubDep3ByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelSubDep3ByUNameIdxKey argKey );
 	/**
 	 *	Delete the DelSubDep3 instances identified by the key DefSchemaIdx.
@@ -151,7 +151,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	DefSchemaId	The DelSubDep3 key attribute of the instance generating the id.
 	 */
-	void deleteDelSubDep3ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -161,7 +161,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDelSubDep3ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelDepByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DelSubDep3 instances identified by the key DelDepIdx.
@@ -170,7 +170,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	RelationId	The DelSubDep3 key attribute of the instance generating the id.
 	 */
-	void deleteDelSubDep3ByDelDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByDelDepIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argRelationId );
 
 	/**
@@ -180,7 +180,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDelSubDep3ByDelDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByDelDepIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelDepByDelDepIdxKey argKey );
 	/**
 	 *	Delete the DelSubDep3 instance identified by the primary key.
@@ -189,7 +189,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteDelSubDep3ByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the DelSubDep3 instances identified by the key TenantIdx.
@@ -198,7 +198,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	TenantId	The DelSubDep3 key attribute of the instance generating the id.
 	 */
-	void deleteDelSubDep3ByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteDelSubDep3ByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelSubDep3ByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 
 
@@ -222,7 +222,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDelSubDep3 readDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -235,7 +235,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDelSubDep3 lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -245,7 +245,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDelSubDep3[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDelSubDep3[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived DelSubDep3 record instance identified by the unique key IdIdx.
@@ -257,7 +257,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDelSubDep3 readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -269,7 +269,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDelSubDep3[] readDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -281,7 +281,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDelSubDep3[] readDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -293,7 +293,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDelSubDep3[] readDerivedByDelDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3[] protreadDerivedByDelDepIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -305,7 +305,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFBamProtDelSubDep3[] readDerivedByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3[] protreadDerivedByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DelSubDep2Id );
 
 	/**
@@ -320,7 +320,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFBamProtDelSubDep3 readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DelSubDep2Id,
 		String Name );
 
@@ -336,7 +336,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDelSubDep3 readRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -351,7 +351,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDelSubDep3 lockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -361,7 +361,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@return All the specific DelSubDep3 instances in the database accessible for the Authorization.
 	 */
-	ICFBamProtDelSubDep3[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDelSubDep3[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific DelSubDep3 record instance identified by the unique key IdIdx.
@@ -375,7 +375,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDelSubDep3 readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -389,7 +389,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDelSubDep3[] readRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -403,7 +403,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDelSubDep3[] readRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -417,7 +417,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDelSubDep3[] readRecByDelDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3[] protreadRecByDelDepIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -431,7 +431,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDelSubDep3[] readRecByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3[] protreadRecByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DelSubDep2Id );
 
 	/**
@@ -448,7 +448,7 @@ public interface ICFBamProtDelSubDep3Table
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFBamProtDelSubDep3 readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelSubDep3 protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 DelSubDep2Id,
 		String Name );
 }

@@ -56,6 +56,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 
@@ -63,6 +66,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
  *	ICFBamProtTextDefFactory protected interface for TextDef
  */
 public interface ICFBamProtTextDefFactory
+extends ICFBamPubTextDefFactory
 {
 
 	/**
@@ -70,13 +74,13 @@ public interface ICFBamProtTextDefFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtTextDef newRec();
+	public ICFBamProtTextDef newProtRec();
 
 	/**
 	 *	Allocate a protected TextDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFBamProtTextDefH newHRec();
+	public ICFBamProtTextDefH newProtHRec();
 
 }
