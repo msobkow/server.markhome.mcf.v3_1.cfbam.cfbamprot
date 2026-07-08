@@ -81,7 +81,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtEnumTag protcreateEnumTag( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protcreateEnumTag( ICFSecPubAuthorization Authorization,
 		ICFBamProtEnumTag rec );
 
 	/**
@@ -92,7 +92,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtEnumTag protcreateEnumTag( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protcreateEnumTag( ICFSecPubAuthorization Authorization,
 		ICFBamPubEnumTag rec );
 
 
@@ -104,7 +104,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtEnumTag protupdateEnumTag( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protupdateEnumTag( ICFSecPubAuthorization Authorization,
 		ICFBamProtEnumTag rec );
 
 	/**
@@ -115,7 +115,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtEnumTag protupdateEnumTag( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protupdateEnumTag( ICFSecPubAuthorization Authorization,
 		ICFBamPubEnumTag rec );
 
 
@@ -126,7 +126,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteEnumTag( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTag( ICFSecPubAuthorization Authorization,
 		ICFBamProtEnumTag rec );
 	/**
 	 *	Delete the EnumTag instance identified by the primary key.
@@ -135,7 +135,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteEnumTagByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key EnumIdx.
@@ -144,7 +144,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	EnumId	The EnumTag key attribute of the instance generating the id.
 	 */
-	public void protdeleteEnumTagByEnumIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByEnumIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argEnumId );
 
 	/**
@@ -154,7 +154,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByEnumIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByEnumIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtEnumTagByEnumIdxKey argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key EnumIdx.
@@ -163,7 +163,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByEnumIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByEnumIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubEnumTagByEnumIdxKey argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key DefSchemaIdx.
@@ -172,7 +172,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	DefSchemaId	The EnumTag key attribute of the instance generating the id.
 	 */
-	public void protdeleteEnumTagByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -182,7 +182,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtEnumTagByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key DefSchemaIdx.
@@ -191,7 +191,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubEnumTagByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key EnumNameIdx.
@@ -202,7 +202,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	Name	The EnumTag key attribute of the instance generating the id.
 	 */
-	public void protdeleteEnumTagByEnumNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByEnumNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argEnumId,
 		String argName );
 
@@ -213,7 +213,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByEnumNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByEnumNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtEnumTagByEnumNameIdxKey argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key EnumNameIdx.
@@ -222,7 +222,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByEnumNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByEnumNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubEnumTagByEnumNameIdxKey argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key PrevIdx.
@@ -231,7 +231,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	PrevId	The EnumTag key attribute of the instance generating the id.
 	 */
-	public void protdeleteEnumTagByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -241,7 +241,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtEnumTagByPrevIdxKey argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key PrevIdx.
@@ -250,7 +250,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubEnumTagByPrevIdxKey argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key NextIdx.
@@ -259,7 +259,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	NextId	The EnumTag key attribute of the instance generating the id.
 	 */
-	public void protdeleteEnumTagByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -269,7 +269,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtEnumTagByNextIdxKey argKey );
 	/**
 	 *	Delete the EnumTag instances identified by the key NextIdx.
@@ -278,7 +278,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteEnumTagByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTagByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubEnumTagByNextIdxKey argKey );
 
 	/**
@@ -288,62 +288,8 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteEnumTag( ICFSecProtAuthorization Authorization,
+	public void protdeleteEnumTag( ICFSecPubAuthorization Authorization,
 		ICFBamPubEnumTag rec );
-	/**
-	 *	Delete the EnumTag instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteEnumTagByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the EnumTag instances identified by the key EnumIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteEnumTagByEnumIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubEnumTagByEnumIdxKey argKey );
-	/**
-	 *	Delete the EnumTag instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteEnumTagByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubEnumTagByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the EnumTag instances identified by the key EnumNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteEnumTagByEnumNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubEnumTagByEnumNameIdxKey argKey );
-	/**
-	 *	Delete the EnumTag instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteEnumTagByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubEnumTagByPrevIdxKey argKey );
-	/**
-	 *	Delete the EnumTag instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteEnumTagByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubEnumTagByNextIdxKey argKey );
 
 
 	/**
@@ -356,34 +302,8 @@ extends ICFBamPubEnumTagTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtEnumTag protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived EnumTag record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the EnumTag instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubEnumTag pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived EnumTag record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the EnumTag instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtEnumTag protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived EnumTag record instance by protected primary key.
@@ -395,34 +315,8 @@ extends ICFBamPubEnumTagTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtEnumTag protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived EnumTag record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the EnumTag instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubEnumTag publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived EnumTag record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the EnumTag instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtEnumTag protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all EnumTag instances.
@@ -431,7 +325,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtEnumTag[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtEnumTag[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived EnumTag record instance identified by the unique key IdIdx.
@@ -443,7 +337,7 @@ extends ICFBamPubEnumTagTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtEnumTag protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -455,7 +349,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtEnumTag[] protreadDerivedByEnumIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag[] protreadDerivedByEnumIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 EnumId );
 
 	/**
@@ -467,7 +361,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtEnumTag[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -482,7 +376,7 @@ extends ICFBamPubEnumTagTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtEnumTag protreadDerivedByEnumNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protreadDerivedByEnumNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 EnumId,
 		String Name );
 
@@ -495,7 +389,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtEnumTag[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -507,7 +401,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtEnumTag[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -522,37 +416,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtEnumTag protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific EnumTag record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the EnumTag instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtEnumTag protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific EnumTag record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the EnumTag instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubEnumTag pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -567,37 +431,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtEnumTag protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific EnumTag record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the EnumTag instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubEnumTag publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific EnumTag record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the EnumTag instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtEnumTag protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -607,7 +441,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@return All the specific EnumTag instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtEnumTag[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtEnumTag[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific EnumTag record instance identified by the unique key IdIdx.
@@ -621,7 +455,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtEnumTag protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -635,7 +469,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtEnumTag[] protreadRecByEnumIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag[] protreadRecByEnumIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 EnumId );
 
 	/**
@@ -649,7 +483,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtEnumTag[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -666,7 +500,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtEnumTag protreadRecByEnumNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protreadRecByEnumNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 EnumId,
 		String Name );
 
@@ -681,7 +515,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtEnumTag[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -695,7 +529,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtEnumTag[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -703,7 +537,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtEnumTag protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -712,7 +546,7 @@ extends ICFBamPubEnumTagTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtEnumTag protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtEnumTag protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

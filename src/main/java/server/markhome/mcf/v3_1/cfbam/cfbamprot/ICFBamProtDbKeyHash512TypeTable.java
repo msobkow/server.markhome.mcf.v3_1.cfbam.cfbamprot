@@ -82,7 +82,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtDbKeyHash512Type protcreateDbKeyHash512Type( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protcreateDbKeyHash512Type( ICFSecPubAuthorization Authorization,
 		ICFBamProtDbKeyHash512Type rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtDbKeyHash512Type protcreateDbKeyHash512Type( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protcreateDbKeyHash512Type( ICFSecPubAuthorization Authorization,
 		ICFBamPubDbKeyHash512Type rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtDbKeyHash512Type protupdateDbKeyHash512Type( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protupdateDbKeyHash512Type( ICFSecPubAuthorization Authorization,
 		ICFBamProtDbKeyHash512Type rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtDbKeyHash512Type protupdateDbKeyHash512Type( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protupdateDbKeyHash512Type( ICFSecPubAuthorization Authorization,
 		ICFBamPubDbKeyHash512Type rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteDbKeyHash512Type( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512Type( ICFSecPubAuthorization Authorization,
 		ICFBamProtDbKeyHash512Type rec );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key SchemaIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	SchemaDefId	The DbKeyHash512Type key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash512TypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtDbKeyHash512TypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key SchemaIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubDbKeyHash512TypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	Name	The DbKeyHash512Type key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash512TypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key ScopeIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	ScopeId	The DbKeyHash512Type key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash512TypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key ScopeIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key DefSchemaIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	DefSchemaId	The DbKeyHash512Type key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash512TypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key PrevIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	PrevId	The DbKeyHash512Type key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash512TypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key PrevIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key NextIdx.
@@ -288,7 +288,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	NextId	The DbKeyHash512Type key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash512TypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -298,7 +298,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key NextIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key ContPrevIdx.
@@ -318,7 +318,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	PrevId	The DbKeyHash512Type key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash512TypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -329,7 +329,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key ContPrevIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key ContNextIdx.
@@ -349,7 +349,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	NextId	The DbKeyHash512Type key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash512TypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -360,7 +360,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash512Type instances identified by the key ContNextIdx.
@@ -369,7 +369,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash512TypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512TypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContNextIdxKey argKey );
 
 	/**
@@ -379,89 +379,8 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteDbKeyHash512Type( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash512Type( ICFSecPubAuthorization Authorization,
 		ICFBamPubDbKeyHash512Type rec );
-	/**
-	 *	Delete the DbKeyHash512Type instances identified by the key SchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash512TypeBySchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubDbKeyHash512TypeBySchemaIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash512Type instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteDbKeyHash512TypeByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the DbKeyHash512Type instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash512TypeByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByUNameIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash512Type instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash512TypeByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByScopeIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash512Type instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash512TypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash512Type instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash512TypeByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByPrevIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash512Type instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash512TypeByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByNextIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash512Type instances identified by the key ContPrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash512TypeByContPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContPrevIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash512Type instances identified by the key ContNextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash512TypeByContNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
@@ -474,34 +393,8 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDbKeyHash512Type protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived DbKeyHash512Type record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash512Type instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubDbKeyHash512Type pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived DbKeyHash512Type record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash512Type instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtDbKeyHash512Type protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived DbKeyHash512Type record instance by protected primary key.
@@ -513,34 +406,8 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDbKeyHash512Type protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived DbKeyHash512Type record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash512Type instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubDbKeyHash512Type publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived DbKeyHash512Type record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash512Type instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtDbKeyHash512Type protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all DbKeyHash512Type instances.
@@ -549,7 +416,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash512Type[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived DbKeyHash512Type record instance identified by the unique key IdIdx.
@@ -561,7 +428,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDbKeyHash512Type protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -576,7 +443,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDbKeyHash512Type protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -589,7 +456,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -601,7 +468,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -613,7 +480,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -625,7 +492,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -639,7 +506,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -654,7 +521,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -667,7 +534,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -682,37 +549,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific DbKeyHash512Type record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash512Type instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtDbKeyHash512Type protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific DbKeyHash512Type record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash512Type instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubDbKeyHash512Type pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -727,37 +564,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific DbKeyHash512Type record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash512Type instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubDbKeyHash512Type publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific DbKeyHash512Type record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash512Type instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtDbKeyHash512Type protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -767,7 +574,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return All the specific DbKeyHash512Type instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash512Type[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific DbKeyHash512Type record instance identified by the unique key IdIdx.
@@ -781,7 +588,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -798,7 +605,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -813,7 +620,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -827,7 +634,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -841,7 +648,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -855,7 +662,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -871,7 +678,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -888,7 +695,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -903,7 +710,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash512Type[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -911,7 +718,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtDbKeyHash512Type protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -920,7 +727,7 @@ extends ICFBamProtDbKeyHash512DefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtDbKeyHash512Type protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash512Type protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

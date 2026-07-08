@@ -53,12 +53,14 @@ import java.util.*;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
-import server.markhome.mcf.v3_1.cflib.dbutil.*;import org.apache.commons.text.StringEscapeUtils;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 
 public interface ICFBamProtSchemaDefEditObj
 	extends ICFBamProtSchemaDefObj, ICFBamProtScopeEditObj
@@ -71,25 +73,25 @@ public interface ICFBamProtSchemaDefEditObj
 	ICFBamProtSchemaDefObj getOrigAsSchemaDef();
 
 	/**
-	 *	Get the ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
+	 *	Get the ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
 	 *
-	 *	@return	The ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
+	 *	@return	The ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
 	 */
-	ICFIntProtMinorVersionObj getRequiredContainerMinorVersion();
+	ICFIntPubMinorVersionObj getRequiredContainerMinorVersion();
 
 	/**
-	 *	Get the required ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
+	 *	Get the required ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
 	 *
-	 *	@return	The required ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
+	 *	@return	The required ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
 	 */
-	ICFIntProtMinorVersionObj getRequiredContainerMinorVersion( boolean forceRead );
+	ICFIntPubMinorVersionObj getRequiredContainerMinorVersion( boolean forceRead );
 
 	/**
-	 *	Set the ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
+	 *	Set the ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
 	 *
-	 *	@param	value	the ICFIntProtMinorVersionObj instance to be referenced by the MinorVersion key.
+	 *	@param	value	the ICFIntPubMinorVersionObj instance to be referenced by the MinorVersion key.
 	 */
-	void setRequiredContainerMinorVersion( ICFIntProtMinorVersionObj value );
+	void setRequiredContainerMinorVersion( ICFIntPubMinorVersionObj value );
 
 	/**
 	 *	Get a list ICFBamProtTableObj instances referenced by the Tables key.
@@ -127,25 +129,25 @@ public interface ICFBamProtSchemaDefEditObj
 	List<ICFBamProtSchemaRoleObj> getOptionalComponentsRoles();
 
 	/**
-	 *	Get the ICFSecProtTenantObj instance referenced by the CTenant key.
+	 *	Get the ICFSecPubTenantObj instance referenced by the CTenant key.
 	 *
-	 *	@return	The ICFSecProtTenantObj instance referenced by the CTenant key.
+	 *	@return	The ICFSecPubTenantObj instance referenced by the CTenant key.
 	 */
-	ICFSecProtTenantObj getRequiredOwnerCTenant();
+	ICFSecPubTenantObj getRequiredOwnerCTenant();
 
 	/**
-	 *	Get the required ICFSecProtTenantObj instance referenced by the CTenant key.
+	 *	Get the required ICFSecPubTenantObj instance referenced by the CTenant key.
 	 *
-	 *	@return	The required ICFSecProtTenantObj instance referenced by the CTenant key.
+	 *	@return	The required ICFSecPubTenantObj instance referenced by the CTenant key.
 	 */
-	ICFSecProtTenantObj getRequiredOwnerCTenant( boolean forceRead );
+	ICFSecPubTenantObj getRequiredOwnerCTenant( boolean forceRead );
 
 	/**
-	 *	Set the ICFSecProtTenantObj instance referenced by the CTenant key.
+	 *	Set the ICFSecPubTenantObj instance referenced by the CTenant key.
 	 *
-	 *	@param	value	the ICFSecProtTenantObj instance to be referenced by the CTenant key.
+	 *	@param	value	the ICFSecPubTenantObj instance to be referenced by the CTenant key.
 	 */
-	void setRequiredOwnerCTenant( ICFSecProtTenantObj value );
+	void setRequiredOwnerCTenant( ICFSecPubTenantObj value );
 
 	/**
 	 *	Get the required CFLibDbKeyHash256 attribute CTenantId.

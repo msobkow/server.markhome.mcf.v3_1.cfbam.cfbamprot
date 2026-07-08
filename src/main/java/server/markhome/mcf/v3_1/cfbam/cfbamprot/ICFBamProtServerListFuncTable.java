@@ -82,7 +82,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtServerListFunc protcreateServerListFunc( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protcreateServerListFunc( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerListFunc rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtServerListFunc protcreateServerListFunc( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protcreateServerListFunc( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerListFunc rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtServerListFunc protupdateServerListFunc( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protupdateServerListFunc( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerListFunc rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtServerListFunc protupdateServerListFunc( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protupdateServerListFunc( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerListFunc rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteServerListFunc( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFunc( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerListFunc rec );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key RetTblIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	RetTableId	The ServerListFunc key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerListFuncByRetTblIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByRetTblIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argRetTableId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByRetTblIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByRetTblIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerListFuncByRetTblIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key RetTblIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByRetTblIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByRetTblIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerListFuncByRetTblIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key UNameIdx.
@@ -166,7 +166,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	Name	The ServerListFunc key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerListFuncByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
 		String argName );
 
@@ -177,7 +177,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByUNameIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key UNameIdx.
@@ -186,7 +186,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByUNameIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key MethTableIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	TableId	The ServerListFunc key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerListFuncByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByMethTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -205,7 +205,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByMethTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByMethTableIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key MethTableIdx.
@@ -214,7 +214,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByMethTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByMethTableIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key MethCodeVisIdx.
@@ -223,8 +223,8 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	CodeVis	The ServerListFunc key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerListFuncByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamProtSchema.CodeVisibilityEnum argCodeVis );
+	public void protdeleteServerListFuncByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
+		ICFBamPubSchema.CodeVisibilityEnum argCodeVis );
 
 	/**
 	 *	Delete the ServerListFunc instances identified by the key MethCodeVisIdx.
@@ -233,7 +233,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByMethCodeVisIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key MethCodeVisIdx.
@@ -242,7 +242,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByMethCodeVisIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key MethTableVisIdx.
@@ -253,9 +253,9 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	CodeVis	The ServerListFunc key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerListFuncByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
-		ICFBamProtSchema.CodeVisibilityEnum argCodeVis );
+		ICFBamPubSchema.CodeVisibilityEnum argCodeVis );
 
 	/**
 	 *	Delete the ServerListFunc instances identified by the key MethTableVisIdx.
@@ -264,7 +264,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByMethTableVisIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key MethTableVisIdx.
@@ -273,7 +273,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByMethTableVisIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key DefSchemaIdx.
@@ -282,7 +282,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	DefSchemaId	The ServerListFunc key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerListFuncByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -292,7 +292,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key DefSchemaIdx.
@@ -301,7 +301,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instance identified by the primary key.
@@ -310,7 +310,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteServerListFuncByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key TenantIdx.
@@ -319,7 +319,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	TenantId	The ServerListFunc key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerListFuncByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -329,7 +329,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 	/**
 	 *	Delete the ServerListFunc instances identified by the key TenantIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerListFuncByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFuncByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubScopeByTenantIdxKey argKey );
 
 	/**
@@ -348,80 +348,8 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteServerListFunc( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerListFunc( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerListFunc rec );
-	/**
-	 *	Delete the ServerListFunc instances identified by the key RetTblIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerListFuncByRetTblIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerListFuncByRetTblIdxKey argKey );
-	/**
-	 *	Delete the ServerListFunc instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerListFuncByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByUNameIdxKey argKey );
-	/**
-	 *	Delete the ServerListFunc instances identified by the key MethTableIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerListFuncByMethTableIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByMethTableIdxKey argKey );
-	/**
-	 *	Delete the ServerListFunc instances identified by the key MethCodeVisIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerListFuncByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByMethCodeVisIdxKey argKey );
-	/**
-	 *	Delete the ServerListFunc instances identified by the key MethTableVisIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerListFuncByMethTableVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByMethTableVisIdxKey argKey );
-	/**
-	 *	Delete the ServerListFunc instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerListFuncByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the ServerListFunc instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteServerListFuncByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the ServerListFunc instances identified by the key TenantIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerListFuncByTenantIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
@@ -434,34 +362,8 @@ extends ICFBamProtServerMethodTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtServerListFunc protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived ServerListFunc record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerListFunc instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubServerListFunc pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived ServerListFunc record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerListFunc instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtServerListFunc protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived ServerListFunc record instance by protected primary key.
@@ -473,34 +375,8 @@ extends ICFBamProtServerMethodTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtServerListFunc protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived ServerListFunc record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerListFunc instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubServerListFunc publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived ServerListFunc record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerListFunc instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtServerListFunc protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all ServerListFunc instances.
@@ -509,7 +385,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerListFunc[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtServerListFunc[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived ServerListFunc record instance identified by the unique key IdIdx.
@@ -521,7 +397,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtServerListFunc protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -533,7 +409,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerListFunc[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -548,7 +424,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtServerListFunc protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -561,7 +437,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerListFunc[] protreadDerivedByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadDerivedByMethTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -573,8 +449,8 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerListFunc[] protreadDerivedByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+	public ICFBamProtServerListFunc[] protreadDerivedByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Read an array of the derived ServerListFunc record instances identified by the duplicate key MethTableVisIdx.
@@ -587,9 +463,9 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerListFunc[] protreadDerivedByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadDerivedByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Read an array of the derived ServerListFunc record instances identified by the duplicate key DefSchemaIdx.
@@ -600,7 +476,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerListFunc[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -612,7 +488,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerListFunc[] protreadDerivedByRetTblIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadDerivedByRetTblIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 RetTableId );
 
 	/**
@@ -627,37 +503,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific ServerListFunc record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerListFunc instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtServerListFunc protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific ServerListFunc record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerListFunc instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubServerListFunc pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -672,37 +518,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific ServerListFunc record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerListFunc instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubServerListFunc publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific ServerListFunc record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerListFunc instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtServerListFunc protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -712,7 +528,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@return All the specific ServerListFunc instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtServerListFunc[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtServerListFunc[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific ServerListFunc record instance identified by the unique key IdIdx.
@@ -726,7 +542,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -740,7 +556,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -757,7 +573,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -772,7 +588,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc[] protreadRecByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadRecByMethTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -786,8 +602,8 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc[] protreadRecByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+	public ICFBamProtServerListFunc[] protreadRecByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Read an array of the specific ServerListFunc record instances identified by the duplicate key MethTableVisIdx.
@@ -802,9 +618,9 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc[] protreadRecByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadRecByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Read an array of the specific ServerListFunc record instances identified by the duplicate key DefSchemaIdx.
@@ -817,7 +633,7 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -831,6 +647,6 @@ extends ICFBamProtServerMethodTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerListFunc[] protreadRecByRetTblIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerListFunc[] protreadRecByRetTblIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 RetTableId );
 }

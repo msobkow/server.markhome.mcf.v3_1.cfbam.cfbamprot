@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtTimeColTableObj
 {
@@ -161,47 +164,47 @@ public interface ICFBamProtTimeColTableObj
 	List<ICFBamProtTimeColObj> readCachedAllTimeCol();
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the primary key attributes.
+	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj cached instance for the primary key, or
+	 *	@return	ICFBamProtValueObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTimeColObj readTimeColByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the primary key attributes.
+	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtValueObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTimeColObj readTimeColByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtValueObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The TimeCol key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtValueObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTimeColObj readTimeColByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtValueObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The TimeCol key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtValueObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTimeColObj readTimeColByUNameIdx( CFLibDbKeyHash256 ScopeId,
@@ -209,110 +212,110 @@ public interface ICFBamProtTimeColTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
 	/**
-	 *	Get the map of CFBamProtTimeColObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByScopeIdx( CFLibDbKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtTimeColObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtTimeColObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByPrevIdx( CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtTimeColObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByNextIdx( CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ScopeId	The TimeCol key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByContPrevIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtTimeColObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ScopeId	The TimeCol key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByContPrevIdx( CFLibDbKeyHash256 ScopeId,
@@ -320,26 +323,26 @@ public interface ICFBamProtTimeColTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ScopeId	The TimeCol key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByContNextIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtTimeColObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of ICFBamProtTimeColObj instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ScopeId	The TimeCol key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of ICFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByContNextIdx( CFLibDbKeyHash256 ScopeId,
@@ -347,46 +350,46 @@ public interface ICFBamProtTimeColTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTimeColObj instances sorted by their primary keys for the duplicate TableIdx key.
+	 *	Get the map of List<ICFBamProtTimeColObj> instances sorted by their primary keys for the duplicate TableIdx key.
 	 *
 	 *	@param	TableId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate TableIdx key,
+	 *	@return	List of List<ICFBamProtTimeColObj> cached instances sorted by their primary keys for the duplicate TableIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByTableIdx( CFLibDbKeyHash256 TableId );
 
 	/**
-	 *	Get the map of CFBamProtTimeColObj instances sorted by their primary keys for the duplicate TableIdx key.
+	 *	Get the map of List<ICFBamProtTimeColObj> instances sorted by their primary keys for the duplicate TableIdx key.
 	 *
 	 *	@param	TableId	The TimeCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTimeColObj cached instances sorted by their primary keys for the duplicate TableIdx key,
+	 *	@return	List of List<ICFBamProtTimeColObj> cached instances sorted by their primary keys for the duplicate TableIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTimeColObj> readTimeColByTableIdx( CFLibDbKeyHash256 TableId,
 		boolean forceRead );
 
-	ICFBamProtTimeColObj readCachedTimeColByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtValueObj readCachedTimeColByIdIdx( CFLibDbKeyHash256 Id );
 
-	ICFBamProtTimeColObj readCachedTimeColByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtValueObj readCachedTimeColByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
-	List<ICFBamProtTimeColObj> readCachedTimeColByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtValueObj>> readCachedTimeColByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
-	List<ICFBamProtTimeColObj> readCachedTimeColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtValueObj>> readCachedTimeColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<ICFBamProtTimeColObj> readCachedTimeColByPrevIdx( CFLibDbKeyHash256 PrevId );
+	List<List<ICFBamProtValueObj>> readCachedTimeColByPrevIdx( CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtTimeColObj> readCachedTimeColByNextIdx( CFLibDbKeyHash256 NextId );
+	List<List<ICFBamProtValueObj>> readCachedTimeColByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtTimeColObj> readCachedTimeColByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedTimeColByContPrevIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtTimeColObj> readCachedTimeColByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedTimeColByContNextIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtTimeColObj> readCachedTimeColByTableIdx( CFLibDbKeyHash256 TableId );
+	List<List<ICFBamProtTimeColObj>> readCachedTimeColByTableIdx( CFLibDbKeyHash256 TableId );
 
 	void deepDisposeTimeColByIdIdx( CFLibDbKeyHash256 Id );
 
@@ -492,16 +495,16 @@ public interface ICFBamProtTimeColTableObj
 	void deleteTimeColByTableIdx( CFLibDbKeyHash256 TableId );
 
 	/**
-	 *	Move the CFBamProtTimeColObj instance up in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtTimeColObj instance up in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtTimeColObj refreshed cache instance.
+	 *	@return	ICFBamProtTimeColObj refreshed cache instance.
 	 */
 	ICFBamProtTimeColObj moveUpTimeCol( ICFBamProtTimeColObj Obj );
 
 	/**
-	 *	Move the CFBamProtTimeColObj instance down in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtTimeColObj instance down in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtTimeColObj refreshed cache instance.
+	 *	@return	ICFBamProtTimeColObj refreshed cache instance.
 	 */
 	ICFBamProtTimeColObj moveDownTimeCol( ICFBamProtTimeColObj Obj );
 }

@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtSchemaRefTableObj
 {
@@ -161,89 +164,89 @@ public interface ICFBamProtSchemaRefTableObj
 	List<ICFBamProtSchemaRefObj> readCachedAllSchemaRef();
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj cached instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaRefObj readSchemaRefByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaRefObj readSchemaRefByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtScopeObj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefByTenantIdx( CFLibDbKeyHash256 TenantId );
 
 	/**
-	 *	Get the map of CFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefByTenantIdx( CFLibDbKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate SchemaIdx key.
+	 *	Get the map of List<ICFBamProtSchemaRefObj> instances sorted by their primary keys for the duplicate SchemaIdx key.
 	 *
 	 *	@param	SchemaId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
+	 *	@return	List of List<ICFBamProtSchemaRefObj> cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefBySchemaIdx( CFLibDbKeyHash256 SchemaId );
 
 	/**
-	 *	Get the map of CFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate SchemaIdx key.
+	 *	Get the map of List<ICFBamProtSchemaRefObj> instances sorted by their primary keys for the duplicate SchemaIdx key.
 	 *
 	 *	@param	SchemaId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
+	 *	@return	List of List<ICFBamProtSchemaRefObj> cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefBySchemaIdx( CFLibDbKeyHash256 SchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtSchemaRefObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtSchemaRefObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	SchemaId	The SchemaRef key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtSchemaRefObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtSchemaRefObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaRefObj readSchemaRefByUNameIdx(CFLibDbKeyHash256 SchemaId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtSchemaRefObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtSchemaRefObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	SchemaId	The SchemaRef key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtSchemaRefObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtSchemaRefObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaRefObj readSchemaRefByUNameIdx(CFLibDbKeyHash256 SchemaId,
@@ -251,82 +254,82 @@ public interface ICFBamProtSchemaRefTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate RefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtSchemaRefObj> instances sorted by their primary keys for the duplicate RefSchemaIdx key.
 	 *
 	 *	@param	RefSchemaId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate RefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtSchemaRefObj> cached instances sorted by their primary keys for the duplicate RefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefByRefSchemaIdx( CFLibDbKeyHash256 RefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate RefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtSchemaRefObj> instances sorted by their primary keys for the duplicate RefSchemaIdx key.
 	 *
 	 *	@param	RefSchemaId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate RefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtSchemaRefObj> cached instances sorted by their primary keys for the duplicate RefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefByRefSchemaIdx( CFLibDbKeyHash256 RefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtSchemaRefObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtSchemaRefObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtSchemaRefObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtSchemaRefObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefByPrevIdx( CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtSchemaRefObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtSchemaRefObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtSchemaRefObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtSchemaRefObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The SchemaRef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaRefObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtSchemaRefObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaRefObj> readSchemaRefByNextIdx( CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
-	ICFBamProtSchemaRefObj readCachedSchemaRefByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtScopeObj readCachedSchemaRefByIdIdx( CFLibDbKeyHash256 Id );
 
-	List<ICFBamProtSchemaRefObj> readCachedSchemaRefByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtScopeObj>> readCachedSchemaRefByTenantIdx( CFLibDbKeyHash256 TenantId );
 
-	List<ICFBamProtSchemaRefObj> readCachedSchemaRefBySchemaIdx( CFLibDbKeyHash256 SchemaId );
+	List<List<ICFBamProtSchemaRefObj>> readCachedSchemaRefBySchemaIdx( CFLibDbKeyHash256 SchemaId );
 
 	ICFBamProtSchemaRefObj readCachedSchemaRefByUNameIdx( CFLibDbKeyHash256 SchemaId,
 		String Name );
 
-	List<ICFBamProtSchemaRefObj> readCachedSchemaRefByRefSchemaIdx( CFLibDbKeyHash256 RefSchemaId );
+	List<List<ICFBamProtSchemaRefObj>> readCachedSchemaRefByRefSchemaIdx( CFLibDbKeyHash256 RefSchemaId );
 
-	List<ICFBamProtSchemaRefObj> readCachedSchemaRefByPrevIdx( CFLibDbKeyHash256 PrevId );
+	List<List<ICFBamProtSchemaRefObj>> readCachedSchemaRefByPrevIdx( CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtSchemaRefObj> readCachedSchemaRefByNextIdx( CFLibDbKeyHash256 NextId );
+	List<List<ICFBamProtSchemaRefObj>> readCachedSchemaRefByNextIdx( CFLibDbKeyHash256 NextId );
 
 	void deepDisposeSchemaRefByIdIdx( CFLibDbKeyHash256 Id );
 
@@ -406,16 +409,16 @@ public interface ICFBamProtSchemaRefTableObj
 	void deleteSchemaRefByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Move the CFBamProtSchemaRefObj instance up in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtSchemaRefObj instance up in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtSchemaRefObj refreshed cache instance.
+	 *	@return	ICFBamProtSchemaRefObj refreshed cache instance.
 	 */
 	ICFBamProtSchemaRefObj moveUpSchemaRef( ICFBamProtSchemaRefObj Obj );
 
 	/**
-	 *	Move the CFBamProtSchemaRefObj instance down in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtSchemaRefObj instance down in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtSchemaRefObj refreshed cache instance.
+	 *	@return	ICFBamProtSchemaRefObj refreshed cache instance.
 	 */
 	ICFBamProtSchemaRefObj moveDownSchemaRef( ICFBamProtSchemaRefObj Obj );
 }

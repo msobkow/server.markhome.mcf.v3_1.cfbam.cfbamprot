@@ -54,11 +54,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 
 public interface ICFBamProtRelationObj
 	extends ICFBamProtScopeObj
@@ -256,11 +258,11 @@ public interface ICFBamProtRelationObj
 	String getOptionalDescription();
 
 	/**
-	 *	Get the required ICFBamProtSchema.RelationTypeEnum attribute RelationType.
+	 *	Get the required ICFBamPubSchema.RelationTypeEnum attribute RelationType.
 	 *
-	 *	@return	The required ICFBamProtSchema.RelationTypeEnum attribute RelationType.
+	 *	@return	The required ICFBamPubSchema.RelationTypeEnum attribute RelationType.
 	 */
-	ICFBamProtSchema.RelationTypeEnum getRequiredRelationType();
+	ICFBamPubSchema.RelationTypeEnum getRequiredRelationType();
 
 	/**
 	 *	Get the optional String attribute DbName.
@@ -333,11 +335,11 @@ public interface ICFBamProtRelationObj
 	CFLibDbKeyHash256 getOptionalNarrowedId();
 
 	/**
-	 *	Get the required ICFBamProtSchema.CodeVisibilityEnum attribute CodeVis.
+	 *	Get the required ICFBamPubSchema.CodeVisibilityEnum attribute CodeVis.
 	 *
-	 *	@return	The required ICFBamProtSchema.CodeVisibilityEnum attribute CodeVis.
+	 *	@return	The required ICFBamPubSchema.CodeVisibilityEnum attribute CodeVis.
 	 */
-	ICFBamProtSchema.CodeVisibilityEnum getRequiredCodeVis();
+	ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
 
 	ICFBamSubProjectObj getProject();
 	ICFBamTopDomainObj getCompany();

@@ -82,7 +82,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtSchemaDef protcreateSchemaDef( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protcreateSchemaDef( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaDef rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtSchemaDef protcreateSchemaDef( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protcreateSchemaDef( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaDef rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtSchemaDef protupdateSchemaDef( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protupdateSchemaDef( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaDef rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtSchemaDef protupdateSchemaDef( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protupdateSchemaDef( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaDef rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSchemaDef( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDef( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaDef rec );
 	/**
 	 *	Delete the SchemaDef instances identified by the key CTenantIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaDefByCTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByCTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argCTenantId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByCTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByCTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaDefByCTenantIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key CTenantIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByCTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByCTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaDefByCTenantIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key MinorVersionIdx.
@@ -164,7 +164,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	MinorVersionId	The SchemaDef key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaDefByMinorVersionIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByMinorVersionIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argMinorVersionId );
 
 	/**
@@ -174,7 +174,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByMinorVersionIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByMinorVersionIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaDefByMinorVersionIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key MinorVersionIdx.
@@ -183,7 +183,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByMinorVersionIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByMinorVersionIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaDefByMinorVersionIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key UNameIdx.
@@ -194,7 +194,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	Name	The SchemaDef key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaDefByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argMinorVersionId,
 		String argName );
 
@@ -205,7 +205,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaDefByUNameIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key UNameIdx.
@@ -214,7 +214,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaDefByUNameIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key AuthEMailIdx.
@@ -225,7 +225,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	AuthorEMail	The SchemaDef key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaDefByAuthEMailIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByAuthEMailIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argCTenantId,
 		String argAuthorEMail );
 
@@ -236,7 +236,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByAuthEMailIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByAuthEMailIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaDefByAuthEMailIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key AuthEMailIdx.
@@ -245,7 +245,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByAuthEMailIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByAuthEMailIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaDefByAuthEMailIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key ProjectURLIdx.
@@ -256,7 +256,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	ProjectURL	The SchemaDef key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaDefByProjectURLIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByProjectURLIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argCTenantId,
 		String argProjectURL );
 
@@ -267,7 +267,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByProjectURLIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByProjectURLIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaDefByProjectURLIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key ProjectURLIdx.
@@ -276,7 +276,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByProjectURLIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByProjectURLIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaDefByProjectURLIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key PubURIIdx.
@@ -287,7 +287,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	PublishURI	The SchemaDef key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaDefByPubURIIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByPubURIIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argCTenantId,
 		String argPublishURI );
 
@@ -298,7 +298,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByPubURIIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByPubURIIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaDefByPubURIIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key PubURIIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByPubURIIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByPubURIIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaDefByPubURIIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instance identified by the primary key.
@@ -316,7 +316,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteSchemaDefByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key TenantIdx.
@@ -325,7 +325,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	TenantId	The SchemaDef key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaDefByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -335,7 +335,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 	/**
 	 *	Delete the SchemaDef instances identified by the key TenantIdx.
@@ -344,7 +344,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaDefByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDefByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubScopeByTenantIdxKey argKey );
 
 	/**
@@ -354,80 +354,8 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSchemaDef( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaDef( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaDef rec );
-	/**
-	 *	Delete the SchemaDef instances identified by the key CTenantIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaDefByCTenantIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubSchemaDefByCTenantIdxKey argKey );
-	/**
-	 *	Delete the SchemaDef instances identified by the key MinorVersionIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaDefByMinorVersionIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubSchemaDefByMinorVersionIdxKey argKey );
-	/**
-	 *	Delete the SchemaDef instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaDefByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubSchemaDefByUNameIdxKey argKey );
-	/**
-	 *	Delete the SchemaDef instances identified by the key AuthEMailIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaDefByAuthEMailIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubSchemaDefByAuthEMailIdxKey argKey );
-	/**
-	 *	Delete the SchemaDef instances identified by the key ProjectURLIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaDefByProjectURLIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubSchemaDefByProjectURLIdxKey argKey );
-	/**
-	 *	Delete the SchemaDef instances identified by the key PubURIIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaDefByPubURIIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubSchemaDefByPubURIIdxKey argKey );
-	/**
-	 *	Delete the SchemaDef instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteSchemaDefByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the SchemaDef instances identified by the key TenantIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaDefByTenantIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
@@ -440,34 +368,8 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaDef protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived SchemaDef record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaDef instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubSchemaDef pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived SchemaDef record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaDef instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtSchemaDef protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived SchemaDef record instance by protected primary key.
@@ -479,34 +381,8 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaDef protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived SchemaDef record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaDef instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubSchemaDef publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived SchemaDef record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaDef instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtSchemaDef protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all SchemaDef instances.
@@ -515,7 +391,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaDef[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtSchemaDef[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived SchemaDef record instance identified by the unique key IdIdx.
@@ -527,7 +403,7 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaDef protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -539,7 +415,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaDef[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -551,7 +427,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaDef[] protreadDerivedByCTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadDerivedByCTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 CTenantId );
 
 	/**
@@ -563,7 +439,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaDef[] protreadDerivedByMinorVersionIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadDerivedByMinorVersionIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 MinorVersionId );
 
 	/**
@@ -578,7 +454,7 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaDef protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 MinorVersionId,
 		String Name );
 
@@ -593,7 +469,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaDef[] protreadDerivedByAuthEMailIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadDerivedByAuthEMailIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 CTenantId,
 		String AuthorEMail );
 
@@ -608,7 +484,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaDef[] protreadDerivedByProjectURLIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadDerivedByProjectURLIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 CTenantId,
 		String ProjectURL );
 
@@ -624,7 +500,7 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaDef protreadDerivedByPubURIIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protreadDerivedByPubURIIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 CTenantId,
 		String PublishURI );
 
@@ -640,37 +516,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific SchemaDef record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaDef instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtSchemaDef protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific SchemaDef record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaDef instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubSchemaDef pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -685,37 +531,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific SchemaDef record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaDef instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubSchemaDef publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific SchemaDef record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaDef instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtSchemaDef protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -725,7 +541,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return All the specific SchemaDef instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtSchemaDef[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtSchemaDef[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific SchemaDef record instance identified by the unique key IdIdx.
@@ -739,7 +555,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -753,7 +569,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -767,7 +583,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef[] protreadRecByCTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadRecByCTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 CTenantId );
 
 	/**
@@ -781,7 +597,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef[] protreadRecByMinorVersionIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadRecByMinorVersionIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 MinorVersionId );
 
 	/**
@@ -798,7 +614,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 MinorVersionId,
 		String Name );
 
@@ -815,7 +631,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef[] protreadRecByAuthEMailIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadRecByAuthEMailIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 CTenantId,
 		String AuthorEMail );
 
@@ -832,7 +648,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef[] protreadRecByProjectURLIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef[] protreadRecByProjectURLIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 CTenantId,
 		String ProjectURL );
 
@@ -850,7 +666,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaDef protreadRecByPubURIIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaDef protreadRecByPubURIIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 CTenantId,
 		String PublishURI );
 }

@@ -82,7 +82,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtUuid6Col protcreateUuid6Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protcreateUuid6Col( ICFSecPubAuthorization Authorization,
 		ICFBamProtUuid6Col rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtUuid6Col protcreateUuid6Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protcreateUuid6Col( ICFSecPubAuthorization Authorization,
 		ICFBamPubUuid6Col rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtUuid6Col protupdateUuid6Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protupdateUuid6Col( ICFSecPubAuthorization Authorization,
 		ICFBamProtUuid6Col rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtUuid6Col protupdateUuid6Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protupdateUuid6Col( ICFSecPubAuthorization Authorization,
 		ICFBamPubUuid6Col rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteUuid6Col( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6Col( ICFSecPubAuthorization Authorization,
 		ICFBamProtUuid6Col rec );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key TableIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	TableId	The Uuid6Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteUuid6ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtUuid6ColByTableIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key TableIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubUuid6ColByTableIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteUuid6ColByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	Name	The Uuid6Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteUuid6ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key ScopeIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	ScopeId	The Uuid6Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteUuid6ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key ScopeIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key DefSchemaIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	DefSchemaId	The Uuid6Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteUuid6ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key PrevIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	PrevId	The Uuid6Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteUuid6ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key PrevIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key NextIdx.
@@ -288,7 +288,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	NextId	The Uuid6Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteUuid6ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -298,7 +298,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key NextIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key ContPrevIdx.
@@ -318,7 +318,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	PrevId	The Uuid6Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteUuid6ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -329,7 +329,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key ContPrevIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key ContNextIdx.
@@ -349,7 +349,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	NextId	The Uuid6Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteUuid6ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -360,7 +360,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 	/**
 	 *	Delete the Uuid6Col instances identified by the key ContNextIdx.
@@ -369,7 +369,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteUuid6ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6ColByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContNextIdxKey argKey );
 
 	/**
@@ -379,89 +379,8 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteUuid6Col( ICFSecProtAuthorization Authorization,
+	public void protdeleteUuid6Col( ICFSecPubAuthorization Authorization,
 		ICFBamPubUuid6Col rec );
-	/**
-	 *	Delete the Uuid6Col instances identified by the key TableIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteUuid6ColByTableIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubUuid6ColByTableIdxKey argKey );
-	/**
-	 *	Delete the Uuid6Col instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteUuid6ColByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the Uuid6Col instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteUuid6ColByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByUNameIdxKey argKey );
-	/**
-	 *	Delete the Uuid6Col instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteUuid6ColByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByScopeIdxKey argKey );
-	/**
-	 *	Delete the Uuid6Col instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteUuid6ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the Uuid6Col instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteUuid6ColByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByPrevIdxKey argKey );
-	/**
-	 *	Delete the Uuid6Col instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteUuid6ColByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByNextIdxKey argKey );
-	/**
-	 *	Delete the Uuid6Col instances identified by the key ContPrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteUuid6ColByContPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContPrevIdxKey argKey );
-	/**
-	 *	Delete the Uuid6Col instances identified by the key ContNextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteUuid6ColByContNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
@@ -474,34 +393,8 @@ extends ICFBamProtUuid6DefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtUuid6Col protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived Uuid6Col record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Uuid6Col instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubUuid6Col pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived Uuid6Col record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Uuid6Col instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtUuid6Col protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived Uuid6Col record instance by protected primary key.
@@ -513,34 +406,8 @@ extends ICFBamProtUuid6DefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtUuid6Col protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived Uuid6Col record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Uuid6Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubUuid6Col publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived Uuid6Col record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Uuid6Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtUuid6Col protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all Uuid6Col instances.
@@ -549,7 +416,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtUuid6Col[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtUuid6Col[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived Uuid6Col record instance identified by the unique key IdIdx.
@@ -561,7 +428,7 @@ extends ICFBamProtUuid6DefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtUuid6Col protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -576,7 +443,7 @@ extends ICFBamProtUuid6DefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtUuid6Col protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -589,7 +456,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtUuid6Col[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -601,7 +468,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtUuid6Col[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -613,7 +480,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtUuid6Col[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -625,7 +492,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtUuid6Col[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -639,7 +506,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtUuid6Col[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -654,7 +521,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtUuid6Col[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -667,7 +534,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtUuid6Col[] protreadDerivedByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadDerivedByTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -682,37 +549,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Uuid6Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Uuid6Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtUuid6Col protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Uuid6Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Uuid6Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubUuid6Col pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -727,37 +564,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Uuid6Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Uuid6Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubUuid6Col publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Uuid6Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Uuid6Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtUuid6Col protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -767,7 +574,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return All the specific Uuid6Col instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtUuid6Col[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtUuid6Col[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific Uuid6Col record instance identified by the unique key IdIdx.
@@ -781,7 +588,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -798,7 +605,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -813,7 +620,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -827,7 +634,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -841,7 +648,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -855,7 +662,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -871,7 +678,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -888,7 +695,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -903,7 +710,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtUuid6Col[] protreadRecByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col[] protreadRecByTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -911,7 +718,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtUuid6Col protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -920,7 +727,7 @@ extends ICFBamProtUuid6DefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtUuid6Col protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtUuid6Col protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

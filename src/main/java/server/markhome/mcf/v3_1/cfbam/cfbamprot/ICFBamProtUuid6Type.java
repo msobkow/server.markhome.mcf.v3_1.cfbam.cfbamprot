@@ -53,6 +53,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
@@ -74,7 +75,6 @@ public interface ICFBamProtUuid6Type extends ICFBamProtUuid6Def
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
-	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	@Override
 	public boolean equals( Object obj );

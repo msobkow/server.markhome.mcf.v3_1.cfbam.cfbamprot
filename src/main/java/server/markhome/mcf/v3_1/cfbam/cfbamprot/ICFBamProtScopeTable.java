@@ -81,7 +81,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtScope protcreateScope( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protcreateScope( ICFSecPubAuthorization Authorization,
 		ICFBamProtScope rec );
 
 	/**
@@ -92,7 +92,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtScope protcreateScope( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protcreateScope( ICFSecPubAuthorization Authorization,
 		ICFBamPubScope rec );
 
 
@@ -104,7 +104,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtScope protupdateScope( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protupdateScope( ICFSecPubAuthorization Authorization,
 		ICFBamProtScope rec );
 
 	/**
@@ -115,7 +115,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtScope protupdateScope( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protupdateScope( ICFSecPubAuthorization Authorization,
 		ICFBamPubScope rec );
 
 
@@ -126,7 +126,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteScope( ICFSecProtAuthorization Authorization,
+	public void protdeleteScope( ICFSecPubAuthorization Authorization,
 		ICFBamProtScope rec );
 	/**
 	 *	Delete the Scope instance identified by the primary key.
@@ -135,7 +135,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteScopeByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteScopeByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Scope instances identified by the key TenantIdx.
@@ -144,7 +144,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	TenantId	The Scope key attribute of the instance generating the id.
 	 */
-	public void protdeleteScopeByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteScopeByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -154,7 +154,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteScopeByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteScopeByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 	/**
 	 *	Delete the Scope instances identified by the key TenantIdx.
@@ -163,7 +163,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteScopeByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteScopeByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubScopeByTenantIdxKey argKey );
 
 	/**
@@ -173,26 +173,8 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteScope( ICFSecProtAuthorization Authorization,
+	public void protdeleteScope( ICFSecPubAuthorization Authorization,
 		ICFBamPubScope rec );
-	/**
-	 *	Delete the Scope instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteScopeByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the Scope instances identified by the key TenantIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteScopeByTenantIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
@@ -205,34 +187,8 @@ extends ICFBamPubScopeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtScope protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived Scope record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Scope instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubScope pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived Scope record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Scope instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtScope protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived Scope record instance by protected primary key.
@@ -244,34 +200,8 @@ extends ICFBamPubScopeTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtScope protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived Scope record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Scope instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubScope publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived Scope record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Scope instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtScope protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all Scope instances.
@@ -280,7 +210,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtScope[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtScope[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived Scope record instance identified by the unique key IdIdx.
@@ -292,7 +222,7 @@ extends ICFBamPubScopeTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtScope protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -304,7 +234,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtScope[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -319,37 +249,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtScope protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Scope record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Scope instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtScope protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Scope record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Scope instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubScope pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -364,37 +264,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtScope protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Scope record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Scope instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubScope publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Scope record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Scope instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtScope protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -404,7 +274,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@return All the specific Scope instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtScope[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtScope[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific Scope record instance identified by the unique key IdIdx.
@@ -418,7 +288,7 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtScope protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -432,6 +302,6 @@ extends ICFBamPubScopeTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtScope[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtScope[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 }

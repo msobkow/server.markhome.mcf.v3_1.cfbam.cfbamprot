@@ -53,6 +53,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
@@ -79,14 +80,12 @@ public interface ICFBamProtSchemaDef extends ICFBamProtScope
 	public final static int CLASS_CODE = 0xa802;
 	public final static String S_CLASS_CODE = "a802";
 
-	public ICFIntProtMinorVersion getRequiredContainerMinorVersion();
-	public ICFSecProtTenant getRequiredOwnerCTenant();
-	public void setRequiredContainerMinorVersion(ICFIntProtMinorVersion argObj);
-	public void setRequiredContainerMinorVersion(CFLibDbKeyHash256 argMinorVersionId);
+	public ICFIntPubMinorVersion getRequiredContainerMinorVersion();
+	public ICFSecPubTenant getRequiredOwnerCTenant();
 	public void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj);
-	public void setRequiredOwnerCTenant(ICFSecProtTenant argObj);
-	public void setRequiredOwnerCTenant(CFLibDbKeyHash256 argCTenantId);
+	public void setRequiredContainerMinorVersion(CFLibDbKeyHash256 argMinorVersionId);
 	public void setRequiredOwnerCTenant(ICFSecPubTenant argObj);
+	public void setRequiredOwnerCTenant(CFLibDbKeyHash256 argCTenantId);
 	public CFLibDbKeyHash256 getRequiredCTenantId();
 	public CFLibDbKeyHash256 getRequiredMinorVersionId();
 	public String getRequiredName();

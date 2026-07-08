@@ -54,9 +54,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtRelationH provides access to protlic history records matching the CFBamProtRelation object change history.
@@ -77,8 +81,8 @@ public interface ICFBamProtRelationH extends ICFBamProtScopeH
 	public void setOptionalShortDescription( String value );
 	public String getOptionalDescription();
 	public void setOptionalDescription( String value );
-	public ICFBamProtSchema.RelationTypeEnum getRequiredRelationType();
-	public void setRequiredRelationType( ICFBamProtSchema.RelationTypeEnum value );
+	public ICFBamPubSchema.RelationTypeEnum getRequiredRelationType();
+	public void setRequiredRelationType( ICFBamPubSchema.RelationTypeEnum value );
 	public String getOptionalDbName();
 	public void setOptionalDbName( String value );
 	public String getOptionalSuffix();
@@ -99,8 +103,8 @@ public interface ICFBamProtRelationH extends ICFBamProtScopeH
 	public void setRequiredAllowAddendum( boolean value );
 	public CFLibDbKeyHash256 getOptionalNarrowedId();
 	public void setOptionalNarrowedId( CFLibDbKeyHash256 value );
-	public ICFBamProtSchema.CodeVisibilityEnum getRequiredCodeVis();
-	public void setRequiredCodeVis( ICFBamProtSchema.CodeVisibilityEnum value );
+	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
+	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtDbKeyHash128GenTableObj
 {
@@ -161,47 +164,47 @@ public interface ICFBamProtDbKeyHash128GenTableObj
 	List<ICFBamProtDbKeyHash128GenObj> readCachedAllDbKeyHash128Gen();
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the primary key attributes.
+	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj cached instance for the primary key, or
+	 *	@return	ICFBamProtValueObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtDbKeyHash128GenObj readDbKeyHash128GenByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the primary key attributes.
+	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtValueObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtDbKeyHash128GenObj readDbKeyHash128GenByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtValueObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtValueObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtDbKeyHash128GenObj readDbKeyHash128GenByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtValueObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtValueObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtDbKeyHash128GenObj readDbKeyHash128GenByUNameIdx( CFLibDbKeyHash256 ScopeId,
@@ -209,110 +212,110 @@ public interface ICFBamProtDbKeyHash128GenTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
 	/**
-	 *	Get the map of CFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByScopeIdx( CFLibDbKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByPrevIdx( CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByNextIdx( CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ScopeId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByContPrevIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ScopeId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByContPrevIdx( CFLibDbKeyHash256 ScopeId,
@@ -320,26 +323,26 @@ public interface ICFBamProtDbKeyHash128GenTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ScopeId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByContNextIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ScopeId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenByContNextIdx( CFLibDbKeyHash256 ScopeId,
@@ -347,46 +350,46 @@ public interface ICFBamProtDbKeyHash128GenTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtDbKeyHash128TypeObj instances sorted by their primary keys for the duplicate SchemaIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate SchemaIdx key.
 	 *
 	 *	@param	SchemaDefId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
 
 	/**
-	 *	Get the map of CFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate SchemaIdx key.
+	 *	Get the map of ICFBamProtDbKeyHash128GenObj instances sorted by their primary keys for the duplicate SchemaIdx key.
 	 *
 	 *	@param	SchemaDefId	The DbKeyHash128Gen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
+	 *	@return	List of ICFBamProtDbKeyHash128GenObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtDbKeyHash128GenObj> readDbKeyHash128GenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId,
 		boolean forceRead );
 
-	ICFBamProtDbKeyHash128GenObj readCachedDbKeyHash128GenByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtValueObj readCachedDbKeyHash128GenByIdIdx( CFLibDbKeyHash256 Id );
 
-	ICFBamProtDbKeyHash128GenObj readCachedDbKeyHash128GenByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtValueObj readCachedDbKeyHash128GenByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
-	List<ICFBamProtDbKeyHash128GenObj> readCachedDbKeyHash128GenByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtValueObj>> readCachedDbKeyHash128GenByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
-	List<ICFBamProtDbKeyHash128GenObj> readCachedDbKeyHash128GenByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtValueObj>> readCachedDbKeyHash128GenByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<ICFBamProtDbKeyHash128GenObj> readCachedDbKeyHash128GenByPrevIdx( CFLibDbKeyHash256 PrevId );
+	List<List<ICFBamProtValueObj>> readCachedDbKeyHash128GenByPrevIdx( CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtDbKeyHash128GenObj> readCachedDbKeyHash128GenByNextIdx( CFLibDbKeyHash256 NextId );
+	List<List<ICFBamProtValueObj>> readCachedDbKeyHash128GenByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtDbKeyHash128GenObj> readCachedDbKeyHash128GenByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedDbKeyHash128GenByContPrevIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtDbKeyHash128GenObj> readCachedDbKeyHash128GenByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedDbKeyHash128GenByContNextIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtDbKeyHash128GenObj> readCachedDbKeyHash128GenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	List<List<ICFBamProtDbKeyHash128TypeObj>> readCachedDbKeyHash128GenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
 
 	void deepDisposeDbKeyHash128GenByIdIdx( CFLibDbKeyHash256 Id );
 
@@ -492,16 +495,16 @@ public interface ICFBamProtDbKeyHash128GenTableObj
 	void deleteDbKeyHash128GenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
 
 	/**
-	 *	Move the CFBamProtDbKeyHash128GenObj instance up in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtDbKeyHash128GenObj instance up in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtDbKeyHash128GenObj refreshed cache instance.
+	 *	@return	ICFBamProtDbKeyHash128GenObj refreshed cache instance.
 	 */
 	ICFBamProtDbKeyHash128GenObj moveUpDbKeyHash128Gen( ICFBamProtDbKeyHash128GenObj Obj );
 
 	/**
-	 *	Move the CFBamProtDbKeyHash128GenObj instance down in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtDbKeyHash128GenObj instance down in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtDbKeyHash128GenObj refreshed cache instance.
+	 *	@return	ICFBamProtDbKeyHash128GenObj refreshed cache instance.
 	 */
 	ICFBamProtDbKeyHash128GenObj moveDownDbKeyHash128Gen( ICFBamProtDbKeyHash128GenObj Obj );
 }

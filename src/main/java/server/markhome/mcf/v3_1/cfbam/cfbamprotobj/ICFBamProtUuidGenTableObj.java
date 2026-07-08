@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtUuidGenTableObj
 {
@@ -161,47 +164,47 @@ public interface ICFBamProtUuidGenTableObj
 	List<ICFBamProtUuidGenObj> readCachedAllUuidGen();
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the primary key attributes.
+	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj cached instance for the primary key, or
+	 *	@return	ICFBamProtValueObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtUuidGenObj readUuidGenByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the primary key attributes.
+	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtValueObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtUuidGenObj readUuidGenByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtValueObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The UuidGen key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtValueObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtUuidGenObj readUuidGenByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtValueObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The UuidGen key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtValueObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtUuidGenObj readUuidGenByUNameIdx( CFLibDbKeyHash256 ScopeId,
@@ -209,110 +212,110 @@ public interface ICFBamProtUuidGenTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
 	/**
-	 *	Get the map of CFBamProtUuidGenObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByScopeIdx( CFLibDbKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtUuidGenObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtUuidGenObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByPrevIdx( CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtUuidGenObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByNextIdx( CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ScopeId	The UuidGen key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByContPrevIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtUuidGenObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ScopeId	The UuidGen key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByContPrevIdx( CFLibDbKeyHash256 ScopeId,
@@ -320,26 +323,26 @@ public interface ICFBamProtUuidGenTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ScopeId	The UuidGen key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByContNextIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtUuidGenObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ScopeId	The UuidGen key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenByContNextIdx( CFLibDbKeyHash256 ScopeId,
@@ -347,46 +350,46 @@ public interface ICFBamProtUuidGenTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtUuidTypeObj instances sorted by their primary keys for the duplicate SchemaIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate SchemaIdx key.
 	 *
 	 *	@param	SchemaDefId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
 
 	/**
-	 *	Get the map of CFBamProtUuidGenObj instances sorted by their primary keys for the duplicate SchemaIdx key.
+	 *	Get the map of ICFBamProtUuidGenObj instances sorted by their primary keys for the duplicate SchemaIdx key.
 	 *
 	 *	@param	SchemaDefId	The UuidGen key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
+	 *	@return	List of ICFBamProtUuidGenObj cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtUuidGenObj> readUuidGenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId,
 		boolean forceRead );
 
-	ICFBamProtUuidGenObj readCachedUuidGenByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtValueObj readCachedUuidGenByIdIdx( CFLibDbKeyHash256 Id );
 
-	ICFBamProtUuidGenObj readCachedUuidGenByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtValueObj readCachedUuidGenByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
-	List<ICFBamProtUuidGenObj> readCachedUuidGenByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtValueObj>> readCachedUuidGenByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
-	List<ICFBamProtUuidGenObj> readCachedUuidGenByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtValueObj>> readCachedUuidGenByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<ICFBamProtUuidGenObj> readCachedUuidGenByPrevIdx( CFLibDbKeyHash256 PrevId );
+	List<List<ICFBamProtValueObj>> readCachedUuidGenByPrevIdx( CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtUuidGenObj> readCachedUuidGenByNextIdx( CFLibDbKeyHash256 NextId );
+	List<List<ICFBamProtValueObj>> readCachedUuidGenByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtUuidGenObj> readCachedUuidGenByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedUuidGenByContPrevIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtUuidGenObj> readCachedUuidGenByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedUuidGenByContNextIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtUuidGenObj> readCachedUuidGenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	List<List<ICFBamProtUuidTypeObj>> readCachedUuidGenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
 
 	void deepDisposeUuidGenByIdIdx( CFLibDbKeyHash256 Id );
 
@@ -492,16 +495,16 @@ public interface ICFBamProtUuidGenTableObj
 	void deleteUuidGenBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
 
 	/**
-	 *	Move the CFBamProtUuidGenObj instance up in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtUuidGenObj instance up in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtUuidGenObj refreshed cache instance.
+	 *	@return	ICFBamProtUuidGenObj refreshed cache instance.
 	 */
 	ICFBamProtUuidGenObj moveUpUuidGen( ICFBamProtUuidGenObj Obj );
 
 	/**
-	 *	Move the CFBamProtUuidGenObj instance down in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtUuidGenObj instance down in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtUuidGenObj refreshed cache instance.
+	 *	@return	ICFBamProtUuidGenObj refreshed cache instance.
 	 */
 	ICFBamProtUuidGenObj moveDownUuidGen( ICFBamProtUuidGenObj Obj );
 }

@@ -53,6 +53,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
@@ -74,7 +75,6 @@ public interface ICFBamProtIndexTweak extends ICFBamProtTweak
 	public ICFBamProtIndex getRequiredContainerIndexDef();
 	public void setRequiredContainerIndexDef(ICFBamProtIndex argObj);
 	public void setRequiredContainerIndexDef(CFLibDbKeyHash256 argIndexId);
-	public void setRequiredContainerIndexDef(ICFBamPubIndex argObj);
 	public CFLibDbKeyHash256 getRequiredIndexId();
 	@Override
 	public boolean equals( Object obj );

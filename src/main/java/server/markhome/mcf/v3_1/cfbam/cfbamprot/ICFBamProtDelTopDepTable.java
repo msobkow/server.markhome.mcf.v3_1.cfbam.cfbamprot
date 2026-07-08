@@ -82,7 +82,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtDelTopDep protcreateDelTopDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protcreateDelTopDep( ICFSecPubAuthorization Authorization,
 		ICFBamProtDelTopDep rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtDelTopDep protcreateDelTopDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protcreateDelTopDep( ICFSecPubAuthorization Authorization,
 		ICFBamPubDelTopDep rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtDelTopDep protupdateDelTopDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protupdateDelTopDep( ICFSecPubAuthorization Authorization,
 		ICFBamProtDelTopDep rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtDelTopDep protupdateDelTopDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protupdateDelTopDep( ICFSecPubAuthorization Authorization,
 		ICFBamPubDelTopDep rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteDelTopDep( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDep( ICFSecPubAuthorization Authorization,
 		ICFBamProtDelTopDep rec );
 	/**
 	 *	Delete the DelTopDep instances identified by the key DelTopDepTblIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	TableId	The DelTopDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteDelTopDepByDelTopDepTblIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByDelTopDepTblIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByDelTopDepTblIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByDelTopDepTblIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtDelTopDepByDelTopDepTblIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key DelTopDepTblIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByDelTopDepTblIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByDelTopDepTblIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubDelTopDepByDelTopDepTblIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key UNameIdx.
@@ -166,7 +166,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	Name	The DelTopDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteDelTopDepByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
 		String argName );
 
@@ -177,7 +177,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtDelTopDepByUNameIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key UNameIdx.
@@ -186,7 +186,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubDelTopDepByUNameIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key PrevIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	PrevId	The DelTopDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteDelTopDepByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -205,7 +205,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtDelTopDepByPrevIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key PrevIdx.
@@ -214,7 +214,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubDelTopDepByPrevIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key NextIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	NextId	The DelTopDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteDelTopDepByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -233,7 +233,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtDelTopDepByNextIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key NextIdx.
@@ -242,7 +242,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubDelTopDepByNextIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	DefSchemaId	The DelTopDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteDelTopDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -261,7 +261,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtDelDepByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key DefSchemaIdx.
@@ -270,7 +270,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubDelDepByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key DelDepIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	RelationId	The DelTopDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteDelTopDepByDelDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByDelDepIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argRelationId );
 
 	/**
@@ -289,7 +289,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByDelDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByDelDepIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtDelDepByDelDepIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key DelDepIdx.
@@ -298,7 +298,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByDelDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByDelDepIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubDelDepByDelDepIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instance identified by the primary key.
@@ -307,7 +307,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteDelTopDepByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key TenantIdx.
@@ -316,7 +316,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	TenantId	The DelTopDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteDelTopDepByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -326,7 +326,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 	/**
 	 *	Delete the DelTopDep instances identified by the key TenantIdx.
@@ -335,7 +335,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDelTopDepByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDepByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubScopeByTenantIdxKey argKey );
 
 	/**
@@ -345,80 +345,8 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteDelTopDep( ICFSecProtAuthorization Authorization,
+	public void protdeleteDelTopDep( ICFSecPubAuthorization Authorization,
 		ICFBamPubDelTopDep rec );
-	/**
-	 *	Delete the DelTopDep instances identified by the key DelTopDepTblIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDelTopDepByDelTopDepTblIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubDelTopDepByDelTopDepTblIdxKey argKey );
-	/**
-	 *	Delete the DelTopDep instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDelTopDepByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubDelTopDepByUNameIdxKey argKey );
-	/**
-	 *	Delete the DelTopDep instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDelTopDepByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubDelTopDepByPrevIdxKey argKey );
-	/**
-	 *	Delete the DelTopDep instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDelTopDepByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubDelTopDepByNextIdxKey argKey );
-	/**
-	 *	Delete the DelTopDep instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDelTopDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubDelDepByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the DelTopDep instances identified by the key DelDepIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDelTopDepByDelDepIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubDelDepByDelDepIdxKey argKey );
-	/**
-	 *	Delete the DelTopDep instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteDelTopDepByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the DelTopDep instances identified by the key TenantIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDelTopDepByTenantIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
@@ -431,34 +359,8 @@ extends ICFBamProtDelDepTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDelTopDep protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived DelTopDep record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DelTopDep instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubDelTopDep pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived DelTopDep record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DelTopDep instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtDelTopDep protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived DelTopDep record instance by protected primary key.
@@ -470,34 +372,8 @@ extends ICFBamProtDelDepTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDelTopDep protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived DelTopDep record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DelTopDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubDelTopDep publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived DelTopDep record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DelTopDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtDelTopDep protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all DelTopDep instances.
@@ -506,7 +382,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDelTopDep[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDelTopDep[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived DelTopDep record instance identified by the unique key IdIdx.
@@ -518,7 +394,7 @@ extends ICFBamProtDelDepTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDelTopDep protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -530,7 +406,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDelTopDep[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -542,7 +418,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDelTopDep[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -554,7 +430,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDelTopDep[] protreadDerivedByDelDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadDerivedByDelDepIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -566,7 +442,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDelTopDep[] protreadDerivedByDelTopDepTblIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadDerivedByDelTopDepTblIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -581,7 +457,7 @@ extends ICFBamProtDelDepTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDelTopDep protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -594,7 +470,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDelTopDep[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -606,7 +482,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDelTopDep[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -621,37 +497,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific DelTopDep record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DelTopDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtDelTopDep protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific DelTopDep record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DelTopDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubDelTopDep pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -666,37 +512,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific DelTopDep record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DelTopDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubDelTopDep publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific DelTopDep record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DelTopDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtDelTopDep protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -706,7 +522,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return All the specific DelTopDep instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtDelTopDep[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDelTopDep[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific DelTopDep record instance identified by the unique key IdIdx.
@@ -720,7 +536,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -734,7 +550,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -748,7 +564,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -762,7 +578,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep[] protreadRecByDelDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadRecByDelDepIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -776,7 +592,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep[] protreadRecByDelTopDepTblIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadRecByDelTopDepTblIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -793,7 +609,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -808,7 +624,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -822,7 +638,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDelTopDep[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -830,7 +646,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtDelTopDep protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -839,7 +655,7 @@ extends ICFBamProtDelDepTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtDelTopDep protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDelTopDep protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

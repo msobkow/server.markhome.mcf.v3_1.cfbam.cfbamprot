@@ -82,7 +82,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtDbKeyHash224Col protcreateDbKeyHash224Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protcreateDbKeyHash224Col( ICFSecPubAuthorization Authorization,
 		ICFBamProtDbKeyHash224Col rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtDbKeyHash224Col protcreateDbKeyHash224Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protcreateDbKeyHash224Col( ICFSecPubAuthorization Authorization,
 		ICFBamPubDbKeyHash224Col rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtDbKeyHash224Col protupdateDbKeyHash224Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protupdateDbKeyHash224Col( ICFSecPubAuthorization Authorization,
 		ICFBamProtDbKeyHash224Col rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtDbKeyHash224Col protupdateDbKeyHash224Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protupdateDbKeyHash224Col( ICFSecPubAuthorization Authorization,
 		ICFBamPubDbKeyHash224Col rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteDbKeyHash224Col( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224Col( ICFSecPubAuthorization Authorization,
 		ICFBamProtDbKeyHash224Col rec );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key TableIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	TableId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash224ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtDbKeyHash224ColByTableIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key TableIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubDbKeyHash224ColByTableIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	Name	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash224ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key ScopeIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	ScopeId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash224ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key ScopeIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key DefSchemaIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	DefSchemaId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash224ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key PrevIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	PrevId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash224ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key PrevIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key NextIdx.
@@ -288,7 +288,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	NextId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash224ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -298,7 +298,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key NextIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key ContPrevIdx.
@@ -318,7 +318,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	PrevId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash224ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -329,7 +329,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key ContPrevIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key ContNextIdx.
@@ -349,7 +349,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	NextId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteDbKeyHash224ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -360,7 +360,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash224Col instances identified by the key ContNextIdx.
@@ -369,7 +369,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteDbKeyHash224ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224ColByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContNextIdxKey argKey );
 
 	/**
@@ -379,89 +379,8 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteDbKeyHash224Col( ICFSecProtAuthorization Authorization,
+	public void protdeleteDbKeyHash224Col( ICFSecPubAuthorization Authorization,
 		ICFBamPubDbKeyHash224Col rec );
-	/**
-	 *	Delete the DbKeyHash224Col instances identified by the key TableIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash224ColByTableIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubDbKeyHash224ColByTableIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash224Col instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteDbKeyHash224ColByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the DbKeyHash224Col instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash224ColByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByUNameIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash224Col instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash224ColByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByScopeIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash224Col instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash224ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash224Col instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash224ColByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByPrevIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash224Col instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash224ColByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByNextIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash224Col instances identified by the key ContPrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash224ColByContPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContPrevIdxKey argKey );
-	/**
-	 *	Delete the DbKeyHash224Col instances identified by the key ContNextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteDbKeyHash224ColByContNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
@@ -474,34 +393,8 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDbKeyHash224Col protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived DbKeyHash224Col record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash224Col instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubDbKeyHash224Col pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived DbKeyHash224Col record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash224Col instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtDbKeyHash224Col protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived DbKeyHash224Col record instance by protected primary key.
@@ -513,34 +406,8 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDbKeyHash224Col protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived DbKeyHash224Col record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash224Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubDbKeyHash224Col publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived DbKeyHash224Col record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash224Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtDbKeyHash224Col protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all DbKeyHash224Col instances.
@@ -549,7 +416,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash224Col[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived DbKeyHash224Col record instance identified by the unique key IdIdx.
@@ -561,7 +428,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDbKeyHash224Col protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -576,7 +443,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtDbKeyHash224Col protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -589,7 +456,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -601,7 +468,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -613,7 +480,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -625,7 +492,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -639,7 +506,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -654,7 +521,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -667,7 +534,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadDerivedByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadDerivedByTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -682,37 +549,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific DbKeyHash224Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash224Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtDbKeyHash224Col protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific DbKeyHash224Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash224Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubDbKeyHash224Col pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -727,37 +564,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific DbKeyHash224Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash224Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubDbKeyHash224Col publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific DbKeyHash224Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the DbKeyHash224Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtDbKeyHash224Col protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -767,7 +574,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return All the specific DbKeyHash224Col instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtDbKeyHash224Col[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific DbKeyHash224Col record instance identified by the unique key IdIdx.
@@ -781,7 +588,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -798,7 +605,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -813,7 +620,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -827,7 +634,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -841,7 +648,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -855,7 +662,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -871,7 +678,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -888,7 +695,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -903,7 +710,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtDbKeyHash224Col[] protreadRecByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col[] protreadRecByTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -911,7 +718,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtDbKeyHash224Col protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -920,7 +727,7 @@ extends ICFBamProtDbKeyHash224DefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtDbKeyHash224Col protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash224Col protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

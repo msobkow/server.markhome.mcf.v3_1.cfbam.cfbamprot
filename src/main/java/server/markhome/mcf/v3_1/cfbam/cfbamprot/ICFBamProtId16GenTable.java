@@ -82,7 +82,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtId16Gen protcreateId16Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protcreateId16Gen( ICFSecPubAuthorization Authorization,
 		ICFBamProtId16Gen rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtId16Gen protcreateId16Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protcreateId16Gen( ICFSecPubAuthorization Authorization,
 		ICFBamPubId16Gen rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtId16Gen protupdateId16Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protupdateId16Gen( ICFSecPubAuthorization Authorization,
 		ICFBamProtId16Gen rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtId16Gen protupdateId16Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protupdateId16Gen( ICFSecPubAuthorization Authorization,
 		ICFBamPubId16Gen rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteId16Gen( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16Gen( ICFSecPubAuthorization Authorization,
 		ICFBamProtId16Gen rec );
 	/**
 	 *	Delete the Id16Gen instances identified by the key SchemaIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	SchemaDefId	The Id16Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId16GenBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtInt16TypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key SchemaIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubInt16TypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteId16GenByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	Name	The Id16Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId16GenByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key ScopeIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	ScopeId	The Id16Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId16GenByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key ScopeIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key DefSchemaIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	DefSchemaId	The Id16Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId16GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key PrevIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	PrevId	The Id16Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId16GenByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key PrevIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key NextIdx.
@@ -288,7 +288,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	NextId	The Id16Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId16GenByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -298,7 +298,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key NextIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key ContPrevIdx.
@@ -318,7 +318,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	PrevId	The Id16Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId16GenByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -329,7 +329,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key ContPrevIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key ContNextIdx.
@@ -349,7 +349,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	NextId	The Id16Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId16GenByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -360,7 +360,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 	/**
 	 *	Delete the Id16Gen instances identified by the key ContNextIdx.
@@ -369,7 +369,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId16GenByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16GenByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContNextIdxKey argKey );
 
 	/**
@@ -379,89 +379,8 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteId16Gen( ICFSecProtAuthorization Authorization,
+	public void protdeleteId16Gen( ICFSecPubAuthorization Authorization,
 		ICFBamPubId16Gen rec );
-	/**
-	 *	Delete the Id16Gen instances identified by the key SchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId16GenBySchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubInt16TypeBySchemaIdxKey argKey );
-	/**
-	 *	Delete the Id16Gen instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteId16GenByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the Id16Gen instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId16GenByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByUNameIdxKey argKey );
-	/**
-	 *	Delete the Id16Gen instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId16GenByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByScopeIdxKey argKey );
-	/**
-	 *	Delete the Id16Gen instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId16GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the Id16Gen instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId16GenByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByPrevIdxKey argKey );
-	/**
-	 *	Delete the Id16Gen instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId16GenByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByNextIdxKey argKey );
-	/**
-	 *	Delete the Id16Gen instances identified by the key ContPrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId16GenByContPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContPrevIdxKey argKey );
-	/**
-	 *	Delete the Id16Gen instances identified by the key ContNextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId16GenByContNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
@@ -474,34 +393,8 @@ extends ICFBamProtInt16TypeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtId16Gen protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived Id16Gen record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id16Gen instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubId16Gen pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived Id16Gen record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id16Gen instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtId16Gen protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived Id16Gen record instance by protected primary key.
@@ -513,34 +406,8 @@ extends ICFBamProtInt16TypeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtId16Gen protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived Id16Gen record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id16Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubId16Gen publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived Id16Gen record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id16Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtId16Gen protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all Id16Gen instances.
@@ -549,7 +416,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId16Gen[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtId16Gen[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived Id16Gen record instance identified by the unique key IdIdx.
@@ -561,7 +428,7 @@ extends ICFBamProtInt16TypeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtId16Gen protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -576,7 +443,7 @@ extends ICFBamProtInt16TypeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtId16Gen protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -589,7 +456,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId16Gen[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -601,7 +468,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId16Gen[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -613,7 +480,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId16Gen[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -625,7 +492,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId16Gen[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -639,7 +506,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId16Gen[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -654,7 +521,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId16Gen[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -667,7 +534,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId16Gen[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -682,37 +549,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Id16Gen record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id16Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtId16Gen protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Id16Gen record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id16Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubId16Gen pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -727,37 +564,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Id16Gen record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id16Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubId16Gen publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Id16Gen record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id16Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtId16Gen protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -767,7 +574,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return All the specific Id16Gen instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtId16Gen[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtId16Gen[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific Id16Gen record instance identified by the unique key IdIdx.
@@ -781,7 +588,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -798,7 +605,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -813,7 +620,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -827,7 +634,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -841,7 +648,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -855,7 +662,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -871,7 +678,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -888,7 +695,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -903,7 +710,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId16Gen[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -911,7 +718,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtId16Gen protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -920,7 +727,7 @@ extends ICFBamProtInt16TypeTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtId16Gen protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId16Gen protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

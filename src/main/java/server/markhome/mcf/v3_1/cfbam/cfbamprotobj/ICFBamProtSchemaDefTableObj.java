@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtSchemaDefTableObj
 {
@@ -161,110 +164,110 @@ public interface ICFBamProtSchemaDefTableObj
 	List<ICFBamProtSchemaDefObj> readCachedAllSchemaDef();
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj cached instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaDefObj readSchemaDefByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaDefObj readSchemaDefByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtScopeObj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByTenantIdx( CFLibDbKeyHash256 TenantId );
 
 	/**
-	 *	Get the map of CFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByTenantIdx( CFLibDbKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate CTenantIdx key.
+	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate CTenantIdx key.
 	 *
 	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate CTenantIdx key,
+	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate CTenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByCTenantIdx( CFLibDbKeyHash256 CTenantId );
 
 	/**
-	 *	Get the map of CFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate CTenantIdx key.
+	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate CTenantIdx key.
 	 *
 	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate CTenantIdx key,
+	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate CTenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByCTenantIdx( CFLibDbKeyHash256 CTenantId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate MinorVersionIdx key.
+	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate MinorVersionIdx key.
 	 *
 	 *	@param	MinorVersionId	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate MinorVersionIdx key,
+	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate MinorVersionIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByMinorVersionIdx( CFLibDbKeyHash256 MinorVersionId );
 
 	/**
-	 *	Get the map of CFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate MinorVersionIdx key.
+	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate MinorVersionIdx key.
 	 *
 	 *	@param	MinorVersionId	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate MinorVersionIdx key,
+	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate MinorVersionIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByMinorVersionIdx( CFLibDbKeyHash256 MinorVersionId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtSchemaDefObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtSchemaDefObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	MinorVersionId	The SchemaDef key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtSchemaDefObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtSchemaDefObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaDefObj readSchemaDefByUNameIdx(CFLibDbKeyHash256 MinorVersionId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtSchemaDefObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtSchemaDefObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	MinorVersionId	The SchemaDef key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtSchemaDefObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtSchemaDefObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaDefObj readSchemaDefByUNameIdx(CFLibDbKeyHash256 MinorVersionId,
@@ -272,26 +275,26 @@ public interface ICFBamProtSchemaDefTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate AuthEMailIdx key.
+	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate AuthEMailIdx key.
 	 *
 	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
 	 *	@param	AuthorEMail	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate AuthEMailIdx key,
+	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate AuthEMailIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByAuthEMailIdx( CFLibDbKeyHash256 CTenantId,
 		String AuthorEMail );
 
 	/**
-	 *	Get the map of CFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate AuthEMailIdx key.
+	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate AuthEMailIdx key.
 	 *
 	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
 	 *	@param	AuthorEMail	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate AuthEMailIdx key,
+	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate AuthEMailIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByAuthEMailIdx( CFLibDbKeyHash256 CTenantId,
@@ -299,26 +302,26 @@ public interface ICFBamProtSchemaDefTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate ProjectURLIdx key.
+	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate ProjectURLIdx key.
 	 *
 	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
 	 *	@param	ProjectURL	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate ProjectURLIdx key,
+	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate ProjectURLIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByProjectURLIdx( CFLibDbKeyHash256 CTenantId,
 		String ProjectURL );
 
 	/**
-	 *	Get the map of CFBamProtSchemaDefObj instances sorted by their primary keys for the duplicate ProjectURLIdx key.
+	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate ProjectURLIdx key.
 	 *
 	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
 	 *	@param	ProjectURL	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtSchemaDefObj cached instances sorted by their primary keys for the duplicate ProjectURLIdx key,
+	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate ProjectURLIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtSchemaDefObj> readSchemaDefByProjectURLIdx( CFLibDbKeyHash256 CTenantId,
@@ -326,47 +329,47 @@ public interface ICFBamProtSchemaDefTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtSchemaDefObj instance for the unique PubURIIdx key.
+	 *	Get the ICFBamProtSchemaDefObj instance for the unique PubURIIdx key.
 	 *
 	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
 	 *	@param	PublishURI	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtSchemaDefObj cached instance for the unique PubURIIdx key, or
+	 *	@return	ICFBamProtSchemaDefObj cached instance for the unique PubURIIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaDefObj readSchemaDefByPubURIIdx(CFLibDbKeyHash256 CTenantId,
 		String PublishURI );
 
 	/**
-	 *	Get the CFBamProtSchemaDefObj instance for the unique PubURIIdx key.
+	 *	Get the ICFBamProtSchemaDefObj instance for the unique PubURIIdx key.
 	 *
 	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
 	 *
 	 *	@param	PublishURI	The SchemaDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtSchemaDefObj refreshed instance for the unique PubURIIdx key, or
+	 *	@return	ICFBamProtSchemaDefObj refreshed instance for the unique PubURIIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtSchemaDefObj readSchemaDefByPubURIIdx(CFLibDbKeyHash256 CTenantId,
 		String PublishURI,
 		boolean forceRead );
 
-	ICFBamProtSchemaDefObj readCachedSchemaDefByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtScopeObj readCachedSchemaDefByIdIdx( CFLibDbKeyHash256 Id );
 
-	List<ICFBamProtSchemaDefObj> readCachedSchemaDefByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtScopeObj>> readCachedSchemaDefByTenantIdx( CFLibDbKeyHash256 TenantId );
 
-	List<ICFBamProtSchemaDefObj> readCachedSchemaDefByCTenantIdx( CFLibDbKeyHash256 CTenantId );
+	List<List<ICFBamProtSchemaDefObj>> readCachedSchemaDefByCTenantIdx( CFLibDbKeyHash256 CTenantId );
 
-	List<ICFBamProtSchemaDefObj> readCachedSchemaDefByMinorVersionIdx( CFLibDbKeyHash256 MinorVersionId );
+	List<List<ICFBamProtSchemaDefObj>> readCachedSchemaDefByMinorVersionIdx( CFLibDbKeyHash256 MinorVersionId );
 
 	ICFBamProtSchemaDefObj readCachedSchemaDefByUNameIdx( CFLibDbKeyHash256 MinorVersionId,
 		String Name );
 
-	List<ICFBamProtSchemaDefObj> readCachedSchemaDefByAuthEMailIdx( CFLibDbKeyHash256 CTenantId,
+	List<List<ICFBamProtSchemaDefObj>> readCachedSchemaDefByAuthEMailIdx( CFLibDbKeyHash256 CTenantId,
 		String AuthorEMail );
 
-	List<ICFBamProtSchemaDefObj> readCachedSchemaDefByProjectURLIdx( CFLibDbKeyHash256 CTenantId,
+	List<List<ICFBamProtSchemaDefObj>> readCachedSchemaDefByProjectURLIdx( CFLibDbKeyHash256 CTenantId,
 		String ProjectURL );
 
 	ICFBamProtSchemaDefObj readCachedSchemaDefByPubURIIdx( CFLibDbKeyHash256 CTenantId,

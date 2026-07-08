@@ -82,7 +82,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtInt64Col protcreateInt64Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protcreateInt64Col( ICFSecPubAuthorization Authorization,
 		ICFBamProtInt64Col rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtInt64Col protcreateInt64Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protcreateInt64Col( ICFSecPubAuthorization Authorization,
 		ICFBamPubInt64Col rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtInt64Col protupdateInt64Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protupdateInt64Col( ICFSecPubAuthorization Authorization,
 		ICFBamProtInt64Col rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtInt64Col protupdateInt64Col( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protupdateInt64Col( ICFSecPubAuthorization Authorization,
 		ICFBamPubInt64Col rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteInt64Col( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64Col( ICFSecPubAuthorization Authorization,
 		ICFBamProtInt64Col rec );
 	/**
 	 *	Delete the Int64Col instances identified by the key TableIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	TableId	The Int64Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteInt64ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtInt64ColByTableIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key TableIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubInt64ColByTableIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteInt64ColByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	Name	The Int64Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteInt64ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key ScopeIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	ScopeId	The Int64Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteInt64ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key ScopeIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key DefSchemaIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	DefSchemaId	The Int64Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteInt64ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key PrevIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	PrevId	The Int64Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteInt64ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key PrevIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key NextIdx.
@@ -288,7 +288,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	NextId	The Int64Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteInt64ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -298,7 +298,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key NextIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key ContPrevIdx.
@@ -318,7 +318,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	PrevId	The Int64Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteInt64ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -329,7 +329,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key ContPrevIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key ContNextIdx.
@@ -349,7 +349,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	NextId	The Int64Col key attribute of the instance generating the id.
 	 */
-	public void protdeleteInt64ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -360,7 +360,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 	/**
 	 *	Delete the Int64Col instances identified by the key ContNextIdx.
@@ -369,7 +369,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteInt64ColByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64ColByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContNextIdxKey argKey );
 
 	/**
@@ -379,89 +379,8 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteInt64Col( ICFSecProtAuthorization Authorization,
+	public void protdeleteInt64Col( ICFSecPubAuthorization Authorization,
 		ICFBamPubInt64Col rec );
-	/**
-	 *	Delete the Int64Col instances identified by the key TableIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteInt64ColByTableIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubInt64ColByTableIdxKey argKey );
-	/**
-	 *	Delete the Int64Col instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteInt64ColByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the Int64Col instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteInt64ColByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByUNameIdxKey argKey );
-	/**
-	 *	Delete the Int64Col instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteInt64ColByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByScopeIdxKey argKey );
-	/**
-	 *	Delete the Int64Col instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteInt64ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the Int64Col instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteInt64ColByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByPrevIdxKey argKey );
-	/**
-	 *	Delete the Int64Col instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteInt64ColByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByNextIdxKey argKey );
-	/**
-	 *	Delete the Int64Col instances identified by the key ContPrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteInt64ColByContPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContPrevIdxKey argKey );
-	/**
-	 *	Delete the Int64Col instances identified by the key ContNextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteInt64ColByContNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
@@ -474,34 +393,8 @@ extends ICFBamProtInt64DefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtInt64Col protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived Int64Col record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Int64Col instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubInt64Col pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived Int64Col record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Int64Col instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtInt64Col protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived Int64Col record instance by protected primary key.
@@ -513,34 +406,8 @@ extends ICFBamProtInt64DefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtInt64Col protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived Int64Col record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Int64Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubInt64Col publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived Int64Col record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Int64Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtInt64Col protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all Int64Col instances.
@@ -549,7 +416,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtInt64Col[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtInt64Col[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived Int64Col record instance identified by the unique key IdIdx.
@@ -561,7 +428,7 @@ extends ICFBamProtInt64DefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtInt64Col protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -576,7 +443,7 @@ extends ICFBamProtInt64DefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtInt64Col protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -589,7 +456,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtInt64Col[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -601,7 +468,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtInt64Col[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -613,7 +480,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtInt64Col[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -625,7 +492,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtInt64Col[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -639,7 +506,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtInt64Col[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -654,7 +521,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtInt64Col[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -667,7 +534,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtInt64Col[] protreadDerivedByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadDerivedByTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -682,37 +549,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Int64Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Int64Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtInt64Col protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Int64Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Int64Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubInt64Col pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -727,37 +564,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Int64Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Int64Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubInt64Col publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Int64Col record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Int64Col instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtInt64Col protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -767,7 +574,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return All the specific Int64Col instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtInt64Col[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtInt64Col[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific Int64Col record instance identified by the unique key IdIdx.
@@ -781,7 +588,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -798,7 +605,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -813,7 +620,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -827,7 +634,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -841,7 +648,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -855,7 +662,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -871,7 +678,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -888,7 +695,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -903,7 +710,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtInt64Col[] protreadRecByTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col[] protreadRecByTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -911,7 +718,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtInt64Col protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -920,7 +727,7 @@ extends ICFBamProtInt64DefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtInt64Col protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt64Col protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

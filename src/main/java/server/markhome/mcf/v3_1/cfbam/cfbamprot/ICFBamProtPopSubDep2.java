@@ -53,6 +53,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
@@ -75,7 +76,6 @@ public interface ICFBamProtPopSubDep2 extends ICFBamProtPopDep
 	public ICFBamProtPopSubDep1 getRequiredContainerPopSubDep1();
 	public void setRequiredContainerPopSubDep1(ICFBamProtPopSubDep1 argObj);
 	public void setRequiredContainerPopSubDep1(CFLibDbKeyHash256 argPopSubDep1Id);
-	public void setRequiredContainerPopSubDep1(ICFBamPubPopSubDep1 argObj);
 	public CFLibDbKeyHash256 getRequiredPopSubDep1Id();
 	public String getRequiredName();
 	public void setRequiredName( String value );

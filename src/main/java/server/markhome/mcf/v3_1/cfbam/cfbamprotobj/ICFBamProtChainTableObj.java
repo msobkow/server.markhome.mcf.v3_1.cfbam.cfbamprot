@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtChainTableObj
 {
@@ -161,89 +164,89 @@ public interface ICFBamProtChainTableObj
 	List<ICFBamProtChainObj> readCachedAllChain();
 
 	/**
-	 *	Get the CFBamProtChainObj instance for the primary key attributes.
+	 *	Get the ICFBamProtChainObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtChainObj cached instance for the primary key, or
+	 *	@return	ICFBamProtChainObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtChainObj readChainByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtChainObj instance for the primary key attributes.
+	 *	Get the ICFBamProtChainObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtChainObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtChainObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtChainObj readChainByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtChainObj instances sorted by their primary keys for the duplicate ChainTableIdx key.
+	 *	Get the map of List<ICFBamProtChainObj> instances sorted by their primary keys for the duplicate ChainTableIdx key.
 	 *
 	 *	@param	TableId	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtChainObj cached instances sorted by their primary keys for the duplicate ChainTableIdx key,
+	 *	@return	List of List<ICFBamProtChainObj> cached instances sorted by their primary keys for the duplicate ChainTableIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtChainObj> readChainByChainTableIdx( CFLibDbKeyHash256 TableId );
 
 	/**
-	 *	Get the map of CFBamProtChainObj instances sorted by their primary keys for the duplicate ChainTableIdx key.
+	 *	Get the map of List<ICFBamProtChainObj> instances sorted by their primary keys for the duplicate ChainTableIdx key.
 	 *
 	 *	@param	TableId	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtChainObj cached instances sorted by their primary keys for the duplicate ChainTableIdx key,
+	 *	@return	List of List<ICFBamProtChainObj> cached instances sorted by their primary keys for the duplicate ChainTableIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtChainObj> readChainByChainTableIdx( CFLibDbKeyHash256 TableId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtChainObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtChainObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtChainObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtChainObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtChainObj> readChainByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtChainObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtChainObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtChainObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtChainObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtChainObj> readChainByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtChainObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtChainObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	TableId	The Chain key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtChainObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtChainObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtChainObj readChainByUNameIdx(CFLibDbKeyHash256 TableId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtChainObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtChainObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	TableId	The Chain key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtChainObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtChainObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtChainObj readChainByUNameIdx(CFLibDbKeyHash256 TableId,
@@ -251,42 +254,42 @@ public interface ICFBamProtChainTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtChainObj instances sorted by their primary keys for the duplicate PrevRelIdx key.
+	 *	Get the map of List<ICFBamProtChainObj> instances sorted by their primary keys for the duplicate PrevRelIdx key.
 	 *
 	 *	@param	PrevRelationId	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtChainObj cached instances sorted by their primary keys for the duplicate PrevRelIdx key,
+	 *	@return	List of List<ICFBamProtChainObj> cached instances sorted by their primary keys for the duplicate PrevRelIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtChainObj> readChainByPrevRelIdx( CFLibDbKeyHash256 PrevRelationId );
 
 	/**
-	 *	Get the map of CFBamProtChainObj instances sorted by their primary keys for the duplicate PrevRelIdx key.
+	 *	Get the map of List<ICFBamProtChainObj> instances sorted by their primary keys for the duplicate PrevRelIdx key.
 	 *
 	 *	@param	PrevRelationId	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtChainObj cached instances sorted by their primary keys for the duplicate PrevRelIdx key,
+	 *	@return	List of List<ICFBamProtChainObj> cached instances sorted by their primary keys for the duplicate PrevRelIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtChainObj> readChainByPrevRelIdx( CFLibDbKeyHash256 PrevRelationId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtChainObj instances sorted by their primary keys for the duplicate NextRelIdx key.
+	 *	Get the map of List<ICFBamProtChainObj> instances sorted by their primary keys for the duplicate NextRelIdx key.
 	 *
 	 *	@param	NextRelationId	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtChainObj cached instances sorted by their primary keys for the duplicate NextRelIdx key,
+	 *	@return	List of List<ICFBamProtChainObj> cached instances sorted by their primary keys for the duplicate NextRelIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtChainObj> readChainByNextRelIdx( CFLibDbKeyHash256 NextRelationId );
 
 	/**
-	 *	Get the map of CFBamProtChainObj instances sorted by their primary keys for the duplicate NextRelIdx key.
+	 *	Get the map of List<ICFBamProtChainObj> instances sorted by their primary keys for the duplicate NextRelIdx key.
 	 *
 	 *	@param	NextRelationId	The Chain key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtChainObj cached instances sorted by their primary keys for the duplicate NextRelIdx key,
+	 *	@return	List of List<ICFBamProtChainObj> cached instances sorted by their primary keys for the duplicate NextRelIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtChainObj> readChainByNextRelIdx( CFLibDbKeyHash256 NextRelationId,
@@ -294,16 +297,16 @@ public interface ICFBamProtChainTableObj
 
 	ICFBamProtChainObj readCachedChainByIdIdx( CFLibDbKeyHash256 Id );
 
-	List<ICFBamProtChainObj> readCachedChainByChainTableIdx( CFLibDbKeyHash256 TableId );
+	List<List<ICFBamProtChainObj>> readCachedChainByChainTableIdx( CFLibDbKeyHash256 TableId );
 
-	List<ICFBamProtChainObj> readCachedChainByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtChainObj>> readCachedChainByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	ICFBamProtChainObj readCachedChainByUNameIdx( CFLibDbKeyHash256 TableId,
 		String Name );
 
-	List<ICFBamProtChainObj> readCachedChainByPrevRelIdx( CFLibDbKeyHash256 PrevRelationId );
+	List<List<ICFBamProtChainObj>> readCachedChainByPrevRelIdx( CFLibDbKeyHash256 PrevRelationId );
 
-	List<ICFBamProtChainObj> readCachedChainByNextRelIdx( CFLibDbKeyHash256 NextRelationId );
+	List<List<ICFBamProtChainObj>> readCachedChainByNextRelIdx( CFLibDbKeyHash256 NextRelationId );
 
 	void deepDisposeChainByIdIdx( CFLibDbKeyHash256 Id );
 

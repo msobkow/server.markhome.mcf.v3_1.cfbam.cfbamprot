@@ -53,6 +53,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
@@ -75,7 +76,6 @@ public interface ICFBamProtDelSubDep3 extends ICFBamProtDelDep
 	public ICFBamProtDelSubDep2 getRequiredContainerDelSubDep2();
 	public void setRequiredContainerDelSubDep2(ICFBamProtDelSubDep2 argObj);
 	public void setRequiredContainerDelSubDep2(CFLibDbKeyHash256 argDelSubDep2Id);
-	public void setRequiredContainerDelSubDep2(ICFBamPubDelSubDep2 argObj);
 	public CFLibDbKeyHash256 getRequiredDelSubDep2Id();
 	public String getRequiredName();
 	public void setRequiredName( String value );

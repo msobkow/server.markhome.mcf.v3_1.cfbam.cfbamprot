@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtTableTableObj
 {
@@ -161,158 +164,158 @@ public interface ICFBamProtTableTableObj
 	List<ICFBamProtTableObj> readCachedAllTable();
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj cached instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableObj readTableByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableObj readTableByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtScopeObj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtTableObj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtTableObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByTenantIdx( CFLibDbKeyHash256 TenantId );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtTableObj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtTableObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByTenantIdx( CFLibDbKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate SchemaDefIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate SchemaDefIdx key.
 	 *
 	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate SchemaDefIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate SchemaDefIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableBySchemaDefIdx( CFLibDbKeyHash256 SchemaDefId );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate SchemaDefIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate SchemaDefIdx key.
 	 *
 	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate SchemaDefIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate SchemaDefIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableBySchemaDefIdx( CFLibDbKeyHash256 SchemaDefId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate CodeVisIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate CodeVisIdx key.
 	 *
 	 *	@param	CodeVis	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate CodeVisIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate CodeVisIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtTableObj> readTableByCodeVisIdx( ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+	List<ICFBamProtTableObj> readTableByCodeVisIdx( ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate CodeVisIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate CodeVisIdx key.
 	 *
 	 *	@param	CodeVis	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate CodeVisIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate CodeVisIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtTableObj> readTableByCodeVisIdx( ICFBamProtSchema.CodeVisibilityEnum CodeVis,
+	List<ICFBamProtTableObj> readTableByCodeVisIdx( ICFBamPubSchema.CodeVisibilityEnum CodeVis,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate SchemaCodeVisIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate SchemaCodeVisIdx key.
 	 *
 	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
 	 *
 	 *	@param	CodeVis	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate SchemaCodeVisIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate SchemaCodeVisIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableBySchemaCodeVisIdx( CFLibDbKeyHash256 SchemaDefId,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate SchemaCodeVisIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate SchemaCodeVisIdx key.
 	 *
 	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
 	 *
 	 *	@param	CodeVis	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate SchemaCodeVisIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate SchemaCodeVisIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableBySchemaCodeVisIdx( CFLibDbKeyHash256 SchemaDefId,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis,
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtTableObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtTableObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTableObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtTableObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableObj readTableByUNameIdx(CFLibDbKeyHash256 SchemaDefId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtTableObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtTableObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTableObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtTableObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableObj readTableByUNameIdx(CFLibDbKeyHash256 SchemaDefId,
@@ -320,26 +323,26 @@ public interface ICFBamProtTableTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtTableObj instance for the unique SchemaCdIdx key.
+	 *	Get the ICFBamProtTableObj instance for the unique SchemaCdIdx key.
 	 *
 	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
 	 *
 	 *	@param	TableClassCode	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTableObj cached instance for the unique SchemaCdIdx key, or
+	 *	@return	ICFBamProtTableObj cached instance for the unique SchemaCdIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableObj readTableBySchemaCdIdx(CFLibDbKeyHash256 SchemaDefId,
 		String TableClassCode );
 
 	/**
-	 *	Get the CFBamProtTableObj instance for the unique SchemaCdIdx key.
+	 *	Get the ICFBamProtTableObj instance for the unique SchemaCdIdx key.
 	 *
 	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
 	 *
 	 *	@param	TableClassCode	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTableObj refreshed instance for the unique SchemaCdIdx key, or
+	 *	@return	ICFBamProtTableObj refreshed instance for the unique SchemaCdIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableObj readTableBySchemaCdIdx(CFLibDbKeyHash256 SchemaDefId,
@@ -347,101 +350,101 @@ public interface ICFBamProtTableTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate PrimaryIndexIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate PrimaryIndexIdx key.
 	 *
 	 *	@param	PrimaryIndexId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate PrimaryIndexIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate PrimaryIndexIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByPrimaryIndexIdx( CFLibDbKeyHash256 PrimaryIndexId );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate PrimaryIndexIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate PrimaryIndexIdx key.
 	 *
 	 *	@param	PrimaryIndexId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate PrimaryIndexIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate PrimaryIndexIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByPrimaryIndexIdx( CFLibDbKeyHash256 PrimaryIndexId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate LookupIndexIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate LookupIndexIdx key.
 	 *
 	 *	@param	LookupIndexId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate LookupIndexIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate LookupIndexIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByLookupIndexIdx( CFLibDbKeyHash256 LookupIndexId );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate LookupIndexIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate LookupIndexIdx key.
 	 *
 	 *	@param	LookupIndexId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate LookupIndexIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate LookupIndexIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByLookupIndexIdx( CFLibDbKeyHash256 LookupIndexId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate AltIndexIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate AltIndexIdx key.
 	 *
 	 *	@param	AltIndexId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate AltIndexIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate AltIndexIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByAltIndexIdx( CFLibDbKeyHash256 AltIndexId );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate AltIndexIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate AltIndexIdx key.
 	 *
 	 *	@param	AltIndexId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate AltIndexIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate AltIndexIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByAltIndexIdx( CFLibDbKeyHash256 AltIndexId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate QualTableIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate QualTableIdx key.
 	 *
 	 *	@param	QualifyingTableId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate QualTableIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate QualTableIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByQualTableIdx( CFLibDbKeyHash256 QualifyingTableId );
 
 	/**
-	 *	Get the map of CFBamProtTableObj instances sorted by their primary keys for the duplicate QualTableIdx key.
+	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate QualTableIdx key.
 	 *
 	 *	@param	QualifyingTableId	The Table key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableObj cached instances sorted by their primary keys for the duplicate QualTableIdx key,
+	 *	@return	List of List<ICFBamProtTableObj> cached instances sorted by their primary keys for the duplicate QualTableIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableObj> readTableByQualTableIdx( CFLibDbKeyHash256 QualifyingTableId,
 		boolean forceRead );
 
-	ICFBamProtTableObj readCachedTableByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtScopeObj readCachedTableByIdIdx( CFLibDbKeyHash256 Id );
 
-	List<ICFBamProtTableObj> readCachedTableByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtScopeObj>> readCachedTableByTenantIdx( CFLibDbKeyHash256 TenantId );
 
-	List<ICFBamProtTableObj> readCachedTableBySchemaDefIdx( CFLibDbKeyHash256 SchemaDefId );
+	List<List<ICFBamProtTableObj>> readCachedTableBySchemaDefIdx( CFLibDbKeyHash256 SchemaDefId );
 
-	List<ICFBamProtTableObj> readCachedTableByCodeVisIdx( ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+	List<List<ICFBamProtTableObj>> readCachedTableByCodeVisIdx( ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
-	List<ICFBamProtTableObj> readCachedTableBySchemaCodeVisIdx( CFLibDbKeyHash256 SchemaDefId,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+	List<List<ICFBamProtTableObj>> readCachedTableBySchemaCodeVisIdx( CFLibDbKeyHash256 SchemaDefId,
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
-	List<ICFBamProtTableObj> readCachedTableByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtTableObj>> readCachedTableByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	ICFBamProtTableObj readCachedTableByUNameIdx( CFLibDbKeyHash256 SchemaDefId,
 		String Name );
@@ -449,13 +452,13 @@ public interface ICFBamProtTableTableObj
 	ICFBamProtTableObj readCachedTableBySchemaCdIdx( CFLibDbKeyHash256 SchemaDefId,
 		String TableClassCode );
 
-	List<ICFBamProtTableObj> readCachedTableByPrimaryIndexIdx( CFLibDbKeyHash256 PrimaryIndexId );
+	List<List<ICFBamProtTableObj>> readCachedTableByPrimaryIndexIdx( CFLibDbKeyHash256 PrimaryIndexId );
 
-	List<ICFBamProtTableObj> readCachedTableByLookupIndexIdx( CFLibDbKeyHash256 LookupIndexId );
+	List<List<ICFBamProtTableObj>> readCachedTableByLookupIndexIdx( CFLibDbKeyHash256 LookupIndexId );
 
-	List<ICFBamProtTableObj> readCachedTableByAltIndexIdx( CFLibDbKeyHash256 AltIndexId );
+	List<List<ICFBamProtTableObj>> readCachedTableByAltIndexIdx( CFLibDbKeyHash256 AltIndexId );
 
-	List<ICFBamProtTableObj> readCachedTableByQualTableIdx( CFLibDbKeyHash256 QualifyingTableId );
+	List<List<ICFBamProtTableObj>> readCachedTableByQualTableIdx( CFLibDbKeyHash256 QualifyingTableId );
 
 	void deepDisposeTableByIdIdx( CFLibDbKeyHash256 Id );
 
@@ -463,10 +466,10 @@ public interface ICFBamProtTableTableObj
 
 	void deepDisposeTableBySchemaDefIdx( CFLibDbKeyHash256 SchemaDefId );
 
-	void deepDisposeTableByCodeVisIdx( ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+	void deepDisposeTableByCodeVisIdx( ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	void deepDisposeTableBySchemaCodeVisIdx( CFLibDbKeyHash256 SchemaDefId,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	void deepDisposeTableByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
@@ -520,7 +523,7 @@ public interface ICFBamProtTableTableObj
 	 *
 	 *	@param	CodeVis	The Table key attribute of the instance generating the id.
 	 */
-	void deleteTableByCodeVisIdx( ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+	void deleteTableByCodeVisIdx( ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Internal use only.
@@ -530,7 +533,7 @@ public interface ICFBamProtTableTableObj
 	 *	@param	CodeVis	The Table key attribute of the instance generating the id.
 	 */
 	void deleteTableBySchemaCodeVisIdx( CFLibDbKeyHash256 SchemaDefId,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Internal use only.

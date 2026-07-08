@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtParamTableObj
 {
@@ -161,47 +164,47 @@ public interface ICFBamProtParamTableObj
 	List<ICFBamProtParamObj> readCachedAllParam();
 
 	/**
-	 *	Get the CFBamProtParamObj instance for the primary key attributes.
+	 *	Get the ICFBamProtParamObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtParamObj cached instance for the primary key, or
+	 *	@return	ICFBamProtParamObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtParamObj readParamByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtParamObj instance for the primary key attributes.
+	 *	Get the ICFBamProtParamObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtParamObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtParamObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtParamObj readParamByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtParamObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtParamObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ServerMethodId	The Param key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtParamObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtParamObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtParamObj readParamByUNameIdx(CFLibDbKeyHash256 ServerMethodId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtParamObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtParamObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ServerMethodId	The Param key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtParamObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtParamObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtParamObj readParamByUNameIdx(CFLibDbKeyHash256 ServerMethodId,
@@ -209,131 +212,131 @@ public interface ICFBamProtParamTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate ServerMethodIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate ServerMethodIdx key.
 	 *
 	 *	@param	ServerMethodId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate ServerMethodIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate ServerMethodIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByServerMethodIdx( CFLibDbKeyHash256 ServerMethodId );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate ServerMethodIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate ServerMethodIdx key.
 	 *
 	 *	@param	ServerMethodId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate ServerMethodIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate ServerMethodIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByServerMethodIdx( CFLibDbKeyHash256 ServerMethodId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate ServerTypeIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate ServerTypeIdx key.
 	 *
 	 *	@param	TypeId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate ServerTypeIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate ServerTypeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByServerTypeIdx( CFLibDbKeyHash256 TypeId );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate ServerTypeIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate ServerTypeIdx key.
 	 *
 	 *	@param	TypeId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate ServerTypeIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate ServerTypeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByServerTypeIdx( CFLibDbKeyHash256 TypeId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByPrevIdx( CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByNextIdx( CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ServerMethodId	The Param key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByContPrevIdx( CFLibDbKeyHash256 ServerMethodId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ServerMethodId	The Param key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByContPrevIdx( CFLibDbKeyHash256 ServerMethodId,
@@ -341,26 +344,26 @@ public interface ICFBamProtParamTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ServerMethodId	The Param key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByContNextIdx( CFLibDbKeyHash256 ServerMethodId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtParamObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of List<ICFBamProtParamObj> instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ServerMethodId	The Param key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The Param key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtParamObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of List<ICFBamProtParamObj> cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtParamObj> readParamByContNextIdx( CFLibDbKeyHash256 ServerMethodId,
@@ -372,20 +375,20 @@ public interface ICFBamProtParamTableObj
 	ICFBamProtParamObj readCachedParamByUNameIdx( CFLibDbKeyHash256 ServerMethodId,
 		String Name );
 
-	List<ICFBamProtParamObj> readCachedParamByServerMethodIdx( CFLibDbKeyHash256 ServerMethodId );
+	List<List<ICFBamProtParamObj>> readCachedParamByServerMethodIdx( CFLibDbKeyHash256 ServerMethodId );
 
-	List<ICFBamProtParamObj> readCachedParamByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtParamObj>> readCachedParamByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<ICFBamProtParamObj> readCachedParamByServerTypeIdx( CFLibDbKeyHash256 TypeId );
+	List<List<ICFBamProtParamObj>> readCachedParamByServerTypeIdx( CFLibDbKeyHash256 TypeId );
 
-	List<ICFBamProtParamObj> readCachedParamByPrevIdx( CFLibDbKeyHash256 PrevId );
+	List<List<ICFBamProtParamObj>> readCachedParamByPrevIdx( CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtParamObj> readCachedParamByNextIdx( CFLibDbKeyHash256 NextId );
+	List<List<ICFBamProtParamObj>> readCachedParamByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtParamObj> readCachedParamByContPrevIdx( CFLibDbKeyHash256 ServerMethodId,
+	List<List<ICFBamProtParamObj>> readCachedParamByContPrevIdx( CFLibDbKeyHash256 ServerMethodId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtParamObj> readCachedParamByContNextIdx( CFLibDbKeyHash256 ServerMethodId,
+	List<List<ICFBamProtParamObj>> readCachedParamByContNextIdx( CFLibDbKeyHash256 ServerMethodId,
 		CFLibDbKeyHash256 NextId );
 
 	void deepDisposeParamByIdIdx( CFLibDbKeyHash256 Id );
@@ -492,16 +495,16 @@ public interface ICFBamProtParamTableObj
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Move the CFBamProtParamObj instance up in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtParamObj instance up in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtParamObj refreshed cache instance.
+	 *	@return	ICFBamProtParamObj refreshed cache instance.
 	 */
 	ICFBamProtParamObj moveUpParam( ICFBamProtParamObj Obj );
 
 	/**
-	 *	Move the CFBamProtParamObj instance down in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtParamObj instance down in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtParamObj refreshed cache instance.
+	 *	@return	ICFBamProtParamObj refreshed cache instance.
 	 */
 	ICFBamProtParamObj moveDownParam( ICFBamProtParamObj Obj );
 }

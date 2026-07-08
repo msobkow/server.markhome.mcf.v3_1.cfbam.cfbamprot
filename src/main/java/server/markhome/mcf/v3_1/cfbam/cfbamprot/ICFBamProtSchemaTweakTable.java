@@ -82,7 +82,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtSchemaTweak protcreateSchemaTweak( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protcreateSchemaTweak( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaTweak rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtSchemaTweak protcreateSchemaTweak( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protcreateSchemaTweak( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaTweak rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtSchemaTweak protupdateSchemaTweak( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protupdateSchemaTweak( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaTweak rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtSchemaTweak protupdateSchemaTweak( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protupdateSchemaTweak( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaTweak rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSchemaTweak( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweak( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaTweak rec );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key SchemaIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	SchemaDefId	The SchemaTweak key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaTweakBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtSchemaTweakBySchemaIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key SchemaIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaTweakBySchemaIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteSchemaTweakByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	Name	The SchemaTweak key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaTweakByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtTweakByUNameIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubTweakByUNameIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key ValTentIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	TenantId	The SchemaTweak key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaTweakByValTentIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByValTentIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByValTentIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByValTentIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtTweakByValTentIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key ValTentIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByValTentIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByValTentIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubTweakByValTentIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key ScopeIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	ScopeId	The SchemaTweak key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaTweakByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtTweakByScopeIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key ScopeIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubTweakByScopeIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key DefSchemaIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	DefSchemaId	The SchemaTweak key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaTweakByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtTweakByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key DefSchemaIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubTweakByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key UDefIdx.
@@ -296,7 +296,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	Name	The SchemaTweak key attribute of the instance generating the id.
 	 */
-	public void protdeleteSchemaTweakByUDefIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByUDefIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argDefSchemaTenantId,
@@ -310,7 +310,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByUDefIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByUDefIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtTweakByUDefIdxKey argKey );
 	/**
 	 *	Delete the SchemaTweak instances identified by the key UDefIdx.
@@ -319,7 +319,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSchemaTweakByUDefIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweakByUDefIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubTweakByUDefIdxKey argKey );
 
 	/**
@@ -329,71 +329,8 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSchemaTweak( ICFSecProtAuthorization Authorization,
+	public void protdeleteSchemaTweak( ICFSecPubAuthorization Authorization,
 		ICFBamPubSchemaTweak rec );
-	/**
-	 *	Delete the SchemaTweak instances identified by the key SchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaTweakBySchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubSchemaTweakBySchemaIdxKey argKey );
-	/**
-	 *	Delete the SchemaTweak instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteSchemaTweakByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the SchemaTweak instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaTweakByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubTweakByUNameIdxKey argKey );
-	/**
-	 *	Delete the SchemaTweak instances identified by the key ValTentIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaTweakByValTentIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubTweakByValTentIdxKey argKey );
-	/**
-	 *	Delete the SchemaTweak instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaTweakByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubTweakByScopeIdxKey argKey );
-	/**
-	 *	Delete the SchemaTweak instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaTweakByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubTweakByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the SchemaTweak instances identified by the key UDefIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSchemaTweakByUDefIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubTweakByUDefIdxKey argKey );
 
 
 	/**
@@ -406,34 +343,8 @@ extends ICFBamProtTweakTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaTweak protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived SchemaTweak record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaTweak instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubSchemaTweak pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived SchemaTweak record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaTweak instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtSchemaTweak protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived SchemaTweak record instance by protected primary key.
@@ -445,34 +356,8 @@ extends ICFBamProtTweakTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaTweak protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived SchemaTweak record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaTweak instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubSchemaTweak publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived SchemaTweak record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaTweak instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtSchemaTweak protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all SchemaTweak instances.
@@ -481,7 +366,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaTweak[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtSchemaTweak[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived SchemaTweak record instance identified by the unique key IdIdx.
@@ -493,7 +378,7 @@ extends ICFBamProtTweakTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaTweak protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -508,7 +393,7 @@ extends ICFBamProtTweakTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaTweak protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -521,7 +406,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaTweak[] protreadDerivedByValTentIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak[] protreadDerivedByValTentIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -533,7 +418,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaTweak[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -545,7 +430,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaTweak[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -566,7 +451,7 @@ extends ICFBamProtTweakTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtSchemaTweak protreadDerivedByUDefIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protreadDerivedByUDefIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
@@ -582,7 +467,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtSchemaTweak[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -597,37 +482,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaTweak protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific SchemaTweak record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaTweak instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtSchemaTweak protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific SchemaTweak record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaTweak instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubSchemaTweak pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -642,37 +497,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaTweak protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific SchemaTweak record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaTweak instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubSchemaTweak publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific SchemaTweak record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the SchemaTweak instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtSchemaTweak protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -682,7 +507,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@return All the specific SchemaTweak instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtSchemaTweak[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtSchemaTweak[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific SchemaTweak record instance identified by the unique key IdIdx.
@@ -696,7 +521,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaTweak protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -713,7 +538,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaTweak protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -728,7 +553,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaTweak[] protreadRecByValTentIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak[] protreadRecByValTentIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -742,7 +567,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaTweak[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -756,7 +581,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaTweak[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -779,7 +604,7 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaTweak protreadRecByUDefIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak protreadRecByUDefIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
@@ -797,6 +622,6 @@ extends ICFBamProtTweakTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtSchemaTweak[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtSchemaTweak[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 }

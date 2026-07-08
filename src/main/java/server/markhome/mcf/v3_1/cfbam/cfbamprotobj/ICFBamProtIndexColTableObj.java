@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtIndexColTableObj
 {
@@ -161,47 +164,47 @@ public interface ICFBamProtIndexColTableObj
 	List<ICFBamProtIndexColObj> readCachedAllIndexCol();
 
 	/**
-	 *	Get the CFBamProtIndexColObj instance for the primary key attributes.
+	 *	Get the ICFBamProtIndexColObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtIndexColObj cached instance for the primary key, or
+	 *	@return	ICFBamProtIndexColObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtIndexColObj readIndexColByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtIndexColObj instance for the primary key attributes.
+	 *	Get the ICFBamProtIndexColObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtIndexColObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtIndexColObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtIndexColObj readIndexColByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtIndexColObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtIndexColObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	IndexId	The IndexCol key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtIndexColObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtIndexColObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtIndexColObj readIndexColByUNameIdx(CFLibDbKeyHash256 IndexId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtIndexColObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtIndexColObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	IndexId	The IndexCol key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtIndexColObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtIndexColObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtIndexColObj readIndexColByUNameIdx(CFLibDbKeyHash256 IndexId,
@@ -209,131 +212,131 @@ public interface ICFBamProtIndexColTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate IndexIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate IndexIdx key.
 	 *
 	 *	@param	IndexId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate IndexIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate IndexIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByIndexIdx( CFLibDbKeyHash256 IndexId );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate IndexIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate IndexIdx key.
 	 *
 	 *	@param	IndexId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate IndexIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate IndexIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByIndexIdx( CFLibDbKeyHash256 IndexId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate ColIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate ColIdx key.
 	 *
 	 *	@param	ColumnId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate ColIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate ColIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByColIdx( CFLibDbKeyHash256 ColumnId );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate ColIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate ColIdx key.
 	 *
 	 *	@param	ColumnId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate ColIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate ColIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByColIdx( CFLibDbKeyHash256 ColumnId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByPrevIdx( CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByNextIdx( CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate IdxPrevIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate IdxPrevIdx key.
 	 *
 	 *	@param	IndexId	The IndexCol key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate IdxPrevIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate IdxPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByIdxPrevIdx( CFLibDbKeyHash256 IndexId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate IdxPrevIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate IdxPrevIdx key.
 	 *
 	 *	@param	IndexId	The IndexCol key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate IdxPrevIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate IdxPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByIdxPrevIdx( CFLibDbKeyHash256 IndexId,
@@ -341,26 +344,26 @@ public interface ICFBamProtIndexColTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate IdxNextIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate IdxNextIdx key.
 	 *
 	 *	@param	IndexId	The IndexCol key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate IdxNextIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate IdxNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByIdxNextIdx( CFLibDbKeyHash256 IndexId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtIndexColObj instances sorted by their primary keys for the duplicate IdxNextIdx key.
+	 *	Get the map of List<ICFBamProtIndexColObj> instances sorted by their primary keys for the duplicate IdxNextIdx key.
 	 *
 	 *	@param	IndexId	The IndexCol key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The IndexCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtIndexColObj cached instances sorted by their primary keys for the duplicate IdxNextIdx key,
+	 *	@return	List of List<ICFBamProtIndexColObj> cached instances sorted by their primary keys for the duplicate IdxNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtIndexColObj> readIndexColByIdxNextIdx( CFLibDbKeyHash256 IndexId,
@@ -372,20 +375,20 @@ public interface ICFBamProtIndexColTableObj
 	ICFBamProtIndexColObj readCachedIndexColByUNameIdx( CFLibDbKeyHash256 IndexId,
 		String Name );
 
-	List<ICFBamProtIndexColObj> readCachedIndexColByIndexIdx( CFLibDbKeyHash256 IndexId );
+	List<List<ICFBamProtIndexColObj>> readCachedIndexColByIndexIdx( CFLibDbKeyHash256 IndexId );
 
-	List<ICFBamProtIndexColObj> readCachedIndexColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtIndexColObj>> readCachedIndexColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<ICFBamProtIndexColObj> readCachedIndexColByColIdx( CFLibDbKeyHash256 ColumnId );
+	List<List<ICFBamProtIndexColObj>> readCachedIndexColByColIdx( CFLibDbKeyHash256 ColumnId );
 
-	List<ICFBamProtIndexColObj> readCachedIndexColByPrevIdx( CFLibDbKeyHash256 PrevId );
+	List<List<ICFBamProtIndexColObj>> readCachedIndexColByPrevIdx( CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtIndexColObj> readCachedIndexColByNextIdx( CFLibDbKeyHash256 NextId );
+	List<List<ICFBamProtIndexColObj>> readCachedIndexColByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtIndexColObj> readCachedIndexColByIdxPrevIdx( CFLibDbKeyHash256 IndexId,
+	List<List<ICFBamProtIndexColObj>> readCachedIndexColByIdxPrevIdx( CFLibDbKeyHash256 IndexId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtIndexColObj> readCachedIndexColByIdxNextIdx( CFLibDbKeyHash256 IndexId,
+	List<List<ICFBamProtIndexColObj>> readCachedIndexColByIdxNextIdx( CFLibDbKeyHash256 IndexId,
 		CFLibDbKeyHash256 NextId );
 
 	void deepDisposeIndexColByIdIdx( CFLibDbKeyHash256 Id );
@@ -492,16 +495,16 @@ public interface ICFBamProtIndexColTableObj
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Move the CFBamProtIndexColObj instance up in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtIndexColObj instance up in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtIndexColObj refreshed cache instance.
+	 *	@return	ICFBamProtIndexColObj refreshed cache instance.
 	 */
 	ICFBamProtIndexColObj moveUpIndexCol( ICFBamProtIndexColObj Obj );
 
 	/**
-	 *	Move the CFBamProtIndexColObj instance down in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtIndexColObj instance down in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtIndexColObj refreshed cache instance.
+	 *	@return	ICFBamProtIndexColObj refreshed cache instance.
 	 */
 	ICFBamProtIndexColObj moveDownIndexCol( ICFBamProtIndexColObj Obj );
 }

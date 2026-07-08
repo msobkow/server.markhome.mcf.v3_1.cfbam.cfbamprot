@@ -82,7 +82,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtTZDateType protcreateTZDateType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protcreateTZDateType( ICFSecPubAuthorization Authorization,
 		ICFBamProtTZDateType rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtTZDateType protcreateTZDateType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protcreateTZDateType( ICFSecPubAuthorization Authorization,
 		ICFBamPubTZDateType rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtTZDateType protupdateTZDateType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protupdateTZDateType( ICFSecPubAuthorization Authorization,
 		ICFBamProtTZDateType rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtTZDateType protupdateTZDateType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protupdateTZDateType( ICFSecPubAuthorization Authorization,
 		ICFBamPubTZDateType rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteTZDateType( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateType( ICFSecPubAuthorization Authorization,
 		ICFBamProtTZDateType rec );
 	/**
 	 *	Delete the TZDateType instances identified by the key SchemaIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	SchemaDefId	The TZDateType key attribute of the instance generating the id.
 	 */
-	public void protdeleteTZDateTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtTZDateTypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key SchemaIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubTZDateTypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteTZDateTypeByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	Name	The TZDateType key attribute of the instance generating the id.
 	 */
-	public void protdeleteTZDateTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key ScopeIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	ScopeId	The TZDateType key attribute of the instance generating the id.
 	 */
-	public void protdeleteTZDateTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key ScopeIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key DefSchemaIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	DefSchemaId	The TZDateType key attribute of the instance generating the id.
 	 */
-	public void protdeleteTZDateTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key PrevIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	PrevId	The TZDateType key attribute of the instance generating the id.
 	 */
-	public void protdeleteTZDateTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key PrevIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key NextIdx.
@@ -288,7 +288,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	NextId	The TZDateType key attribute of the instance generating the id.
 	 */
-	public void protdeleteTZDateTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -298,7 +298,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key NextIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key ContPrevIdx.
@@ -318,7 +318,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	PrevId	The TZDateType key attribute of the instance generating the id.
 	 */
-	public void protdeleteTZDateTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -329,7 +329,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key ContPrevIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key ContNextIdx.
@@ -349,7 +349,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	NextId	The TZDateType key attribute of the instance generating the id.
 	 */
-	public void protdeleteTZDateTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -360,7 +360,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 	/**
 	 *	Delete the TZDateType instances identified by the key ContNextIdx.
@@ -369,7 +369,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTZDateTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateTypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContNextIdxKey argKey );
 
 	/**
@@ -379,89 +379,8 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteTZDateType( ICFSecProtAuthorization Authorization,
+	public void protdeleteTZDateType( ICFSecPubAuthorization Authorization,
 		ICFBamPubTZDateType rec );
-	/**
-	 *	Delete the TZDateType instances identified by the key SchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTZDateTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubTZDateTypeBySchemaIdxKey argKey );
-	/**
-	 *	Delete the TZDateType instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteTZDateTypeByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the TZDateType instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTZDateTypeByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByUNameIdxKey argKey );
-	/**
-	 *	Delete the TZDateType instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTZDateTypeByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByScopeIdxKey argKey );
-	/**
-	 *	Delete the TZDateType instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTZDateTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the TZDateType instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTZDateTypeByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByPrevIdxKey argKey );
-	/**
-	 *	Delete the TZDateType instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTZDateTypeByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByNextIdxKey argKey );
-	/**
-	 *	Delete the TZDateType instances identified by the key ContPrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTZDateTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContPrevIdxKey argKey );
-	/**
-	 *	Delete the TZDateType instances identified by the key ContNextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTZDateTypeByContNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
@@ -474,34 +393,8 @@ extends ICFBamProtTZDateDefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtTZDateType protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived TZDateType record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the TZDateType instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubTZDateType pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived TZDateType record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the TZDateType instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtTZDateType protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived TZDateType record instance by protected primary key.
@@ -513,34 +406,8 @@ extends ICFBamProtTZDateDefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtTZDateType protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived TZDateType record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the TZDateType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubTZDateType publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived TZDateType record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the TZDateType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtTZDateType protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all TZDateType instances.
@@ -549,7 +416,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtTZDateType[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtTZDateType[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived TZDateType record instance identified by the unique key IdIdx.
@@ -561,7 +428,7 @@ extends ICFBamProtTZDateDefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtTZDateType protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -576,7 +443,7 @@ extends ICFBamProtTZDateDefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtTZDateType protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -589,7 +456,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtTZDateType[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -601,7 +468,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtTZDateType[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -613,7 +480,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtTZDateType[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -625,7 +492,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtTZDateType[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -639,7 +506,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtTZDateType[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -654,7 +521,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtTZDateType[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -667,7 +534,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtTZDateType[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -682,37 +549,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific TZDateType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the TZDateType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtTZDateType protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific TZDateType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the TZDateType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubTZDateType pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -727,37 +564,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific TZDateType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the TZDateType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubTZDateType publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific TZDateType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the TZDateType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtTZDateType protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -767,7 +574,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return All the specific TZDateType instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtTZDateType[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtTZDateType[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific TZDateType record instance identified by the unique key IdIdx.
@@ -781,7 +588,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -798,7 +605,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -813,7 +620,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -827,7 +634,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -841,7 +648,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -855,7 +662,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -871,7 +678,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -888,7 +695,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -903,7 +710,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtTZDateType[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -911,7 +718,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtTZDateType protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -920,7 +727,7 @@ extends ICFBamProtTZDateDefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtTZDateType protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtTZDateType protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

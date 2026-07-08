@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtValueTableObj
 {
@@ -105,7 +108,7 @@ public interface ICFBamProtValueTableObj
 	 *
 	 *	@param	backingClassCode	The backing store class code used to identify the proposed instance class.
 	 *
-	 *	@return	ICFBamProtValueObj instance, which may be a subclass of a Value instance.
+	 *	@return	ICFBamProtValueEditObj instance, which may be a subclass of a Value instance.
 	 */
 	ICFBamProtValueObj constructByClassCode( int backingClassCode );
 
@@ -170,47 +173,47 @@ public interface ICFBamProtValueTableObj
 	List<ICFBamProtValueObj> readCachedAllValue();
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the primary key attributes.
+	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj cached instance for the primary key, or
+	 *	@return	ICFBamProtValueObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtValueObj readValueByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the primary key attributes.
+	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtValueObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtValueObj readValueByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtValueObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The Value key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtValueObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtValueObj readValueByUNameIdx(CFLibDbKeyHash256 ScopeId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtValueObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtValueObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The Value key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtValueObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtValueObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtValueObj readValueByUNameIdx(CFLibDbKeyHash256 ScopeId,
@@ -218,110 +221,110 @@ public interface ICFBamProtValueTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByScopeIdx( CFLibDbKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByPrevIdx( CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByNextIdx( CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ScopeId	The Value key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByContPrevIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContPrevIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate ContPrevIdx key.
 	 *
 	 *	@param	ScopeId	The Value key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByContPrevIdx( CFLibDbKeyHash256 ScopeId,
@@ -329,26 +332,26 @@ public interface ICFBamProtValueTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ScopeId	The Value key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByContNextIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtValueObj instances sorted by their primary keys for the duplicate ContNextIdx key.
+	 *	Get the map of List<ICFBamProtValueObj> instances sorted by their primary keys for the duplicate ContNextIdx key.
 	 *
 	 *	@param	ScopeId	The Value key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The Value key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtValueObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
+	 *	@return	List of List<ICFBamProtValueObj> cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtValueObj> readValueByContNextIdx( CFLibDbKeyHash256 ScopeId,
@@ -360,18 +363,18 @@ public interface ICFBamProtValueTableObj
 	ICFBamProtValueObj readCachedValueByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
-	List<ICFBamProtValueObj> readCachedValueByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtValueObj>> readCachedValueByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
-	List<ICFBamProtValueObj> readCachedValueByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtValueObj>> readCachedValueByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<ICFBamProtValueObj> readCachedValueByPrevIdx( CFLibDbKeyHash256 PrevId );
+	List<List<ICFBamProtValueObj>> readCachedValueByPrevIdx( CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtValueObj> readCachedValueByNextIdx( CFLibDbKeyHash256 NextId );
+	List<List<ICFBamProtValueObj>> readCachedValueByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtValueObj> readCachedValueByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedValueByContPrevIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtValueObj> readCachedValueByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedValueByContNextIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	void deepDisposeValueByIdIdx( CFLibDbKeyHash256 Id );
@@ -469,16 +472,16 @@ public interface ICFBamProtValueTableObj
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Move the CFBamProtValueObj instance up in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtValueObj instance up in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtValueObj refreshed cache instance.
+	 *	@return	ICFBamProtValueObj refreshed cache instance.
 	 */
 	ICFBamProtValueObj moveUpValue( ICFBamProtValueObj Obj );
 
 	/**
-	 *	Move the CFBamProtValueObj instance down in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtValueObj instance down in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtValueObj refreshed cache instance.
+	 *	@return	ICFBamProtValueObj refreshed cache instance.
 	 */
 	ICFBamProtValueObj moveDownValue( ICFBamProtValueObj Obj );
 }

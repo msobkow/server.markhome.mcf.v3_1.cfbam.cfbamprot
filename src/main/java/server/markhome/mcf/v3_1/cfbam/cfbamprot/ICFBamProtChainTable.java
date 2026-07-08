@@ -81,7 +81,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtChain protcreateChain( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protcreateChain( ICFSecPubAuthorization Authorization,
 		ICFBamProtChain rec );
 
 	/**
@@ -92,7 +92,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtChain protcreateChain( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protcreateChain( ICFSecPubAuthorization Authorization,
 		ICFBamPubChain rec );
 
 
@@ -104,7 +104,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtChain protupdateChain( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protupdateChain( ICFSecPubAuthorization Authorization,
 		ICFBamProtChain rec );
 
 	/**
@@ -115,7 +115,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtChain protupdateChain( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protupdateChain( ICFSecPubAuthorization Authorization,
 		ICFBamPubChain rec );
 
 
@@ -126,7 +126,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteChain( ICFSecProtAuthorization Authorization,
+	public void protdeleteChain( ICFSecPubAuthorization Authorization,
 		ICFBamProtChain rec );
 	/**
 	 *	Delete the Chain instance identified by the primary key.
@@ -135,7 +135,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteChainByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Chain instances identified by the key ChainTableIdx.
@@ -144,7 +144,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	TableId	The Chain key attribute of the instance generating the id.
 	 */
-	public void protdeleteChainByChainTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByChainTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -154,7 +154,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByChainTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByChainTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtChainByChainTableIdxKey argKey );
 	/**
 	 *	Delete the Chain instances identified by the key ChainTableIdx.
@@ -163,7 +163,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByChainTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByChainTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubChainByChainTableIdxKey argKey );
 	/**
 	 *	Delete the Chain instances identified by the key DefSchemaIdx.
@@ -172,7 +172,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	DefSchemaId	The Chain key attribute of the instance generating the id.
 	 */
-	public void protdeleteChainByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -182,7 +182,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtChainByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Chain instances identified by the key DefSchemaIdx.
@@ -191,7 +191,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubChainByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Chain instances identified by the key UNameIdx.
@@ -202,7 +202,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	Name	The Chain key attribute of the instance generating the id.
 	 */
-	public void protdeleteChainByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
 		String argName );
 
@@ -213,7 +213,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtChainByUNameIdxKey argKey );
 	/**
 	 *	Delete the Chain instances identified by the key UNameIdx.
@@ -222,7 +222,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubChainByUNameIdxKey argKey );
 	/**
 	 *	Delete the Chain instances identified by the key PrevRelIdx.
@@ -231,7 +231,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	PrevRelationId	The Chain key attribute of the instance generating the id.
 	 */
-	public void protdeleteChainByPrevRelIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByPrevRelIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevRelationId );
 
 	/**
@@ -241,7 +241,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByPrevRelIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByPrevRelIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtChainByPrevRelIdxKey argKey );
 	/**
 	 *	Delete the Chain instances identified by the key PrevRelIdx.
@@ -250,7 +250,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByPrevRelIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByPrevRelIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubChainByPrevRelIdxKey argKey );
 	/**
 	 *	Delete the Chain instances identified by the key NextRelIdx.
@@ -259,7 +259,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	NextRelationId	The Chain key attribute of the instance generating the id.
 	 */
-	public void protdeleteChainByNextRelIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByNextRelIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextRelationId );
 
 	/**
@@ -269,7 +269,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByNextRelIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByNextRelIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtChainByNextRelIdxKey argKey );
 	/**
 	 *	Delete the Chain instances identified by the key NextRelIdx.
@@ -278,7 +278,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteChainByNextRelIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteChainByNextRelIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubChainByNextRelIdxKey argKey );
 
 	/**
@@ -288,62 +288,8 @@ extends ICFBamPubChainTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteChain( ICFSecProtAuthorization Authorization,
+	public void protdeleteChain( ICFSecPubAuthorization Authorization,
 		ICFBamPubChain rec );
-	/**
-	 *	Delete the Chain instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteChainByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the Chain instances identified by the key ChainTableIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteChainByChainTableIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubChainByChainTableIdxKey argKey );
-	/**
-	 *	Delete the Chain instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteChainByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubChainByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the Chain instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteChainByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubChainByUNameIdxKey argKey );
-	/**
-	 *	Delete the Chain instances identified by the key PrevRelIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteChainByPrevRelIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubChainByPrevRelIdxKey argKey );
-	/**
-	 *	Delete the Chain instances identified by the key NextRelIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteChainByNextRelIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubChainByNextRelIdxKey argKey );
 
 
 	/**
@@ -356,34 +302,8 @@ extends ICFBamPubChainTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtChain protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived Chain record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Chain instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubChain pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived Chain record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Chain instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtChain protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived Chain record instance by protected primary key.
@@ -395,34 +315,8 @@ extends ICFBamPubChainTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtChain protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived Chain record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Chain instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubChain publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived Chain record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Chain instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtChain protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all Chain instances.
@@ -431,7 +325,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtChain[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtChain[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived Chain record instance identified by the unique key IdIdx.
@@ -443,7 +337,7 @@ extends ICFBamPubChainTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtChain protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -455,7 +349,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtChain[] protreadDerivedByChainTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain[] protreadDerivedByChainTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -467,7 +361,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtChain[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -482,7 +376,7 @@ extends ICFBamPubChainTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtChain protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -495,7 +389,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtChain[] protreadDerivedByPrevRelIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain[] protreadDerivedByPrevRelIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevRelationId );
 
 	/**
@@ -507,7 +401,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtChain[] protreadDerivedByNextRelIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain[] protreadDerivedByNextRelIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextRelationId );
 
 	/**
@@ -522,37 +416,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtChain protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Chain record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Chain instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtChain protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Chain record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Chain instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubChain pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -567,37 +431,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtChain protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Chain record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Chain instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubChain publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Chain record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Chain instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtChain protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -607,7 +441,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@return All the specific Chain instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtChain[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtChain[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific Chain record instance identified by the unique key IdIdx.
@@ -621,7 +455,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtChain protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -635,7 +469,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtChain[] protreadRecByChainTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain[] protreadRecByChainTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -649,7 +483,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtChain[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -666,7 +500,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtChain protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -681,7 +515,7 @@ extends ICFBamPubChainTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtChain[] protreadRecByPrevRelIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain[] protreadRecByPrevRelIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevRelationId );
 
 	/**
@@ -695,6 +529,6 @@ extends ICFBamPubChainTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtChain[] protreadRecByNextRelIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtChain[] protreadRecByNextRelIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextRelationId );
 }

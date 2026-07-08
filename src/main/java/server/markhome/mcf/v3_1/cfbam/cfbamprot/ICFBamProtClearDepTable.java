@@ -82,7 +82,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtClearDep protcreateClearDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protcreateClearDep( ICFSecPubAuthorization Authorization,
 		ICFBamProtClearDep rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtClearDep protcreateClearDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protcreateClearDep( ICFSecPubAuthorization Authorization,
 		ICFBamPubClearDep rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtClearDep protupdateClearDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protupdateClearDep( ICFSecPubAuthorization Authorization,
 		ICFBamProtClearDep rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtClearDep protupdateClearDep( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protupdateClearDep( ICFSecPubAuthorization Authorization,
 		ICFBamPubClearDep rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteClearDep( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDep( ICFSecPubAuthorization Authorization,
 		ICFBamProtClearDep rec );
 	/**
 	 *	Delete the ClearDep instances identified by the key ClearDepIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	RelationId	The ClearDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteClearDepByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByClearDepIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argRelationId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteClearDepByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByClearDepIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtClearDepByClearDepIdxKey argKey );
 	/**
 	 *	Delete the ClearDep instances identified by the key ClearDepIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteClearDepByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByClearDepIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubClearDepByClearDepIdxKey argKey );
 	/**
 	 *	Delete the ClearDep instances identified by the key DefSchemaIdx.
@@ -164,7 +164,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	DefSchemaId	The ClearDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteClearDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -174,7 +174,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteClearDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtClearDepByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ClearDep instances identified by the key DefSchemaIdx.
@@ -183,7 +183,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteClearDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubClearDepByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ClearDep instance identified by the primary key.
@@ -192,7 +192,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteClearDepByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the ClearDep instances identified by the key TenantIdx.
@@ -201,7 +201,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	TenantId	The ClearDep key attribute of the instance generating the id.
 	 */
-	public void protdeleteClearDepByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -211,7 +211,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteClearDepByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 	/**
 	 *	Delete the ClearDep instances identified by the key TenantIdx.
@@ -220,7 +220,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteClearDepByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDepByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubScopeByTenantIdxKey argKey );
 
 	/**
@@ -230,44 +230,8 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteClearDep( ICFSecProtAuthorization Authorization,
+	public void protdeleteClearDep( ICFSecPubAuthorization Authorization,
 		ICFBamPubClearDep rec );
-	/**
-	 *	Delete the ClearDep instances identified by the key ClearDepIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteClearDepByClearDepIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubClearDepByClearDepIdxKey argKey );
-	/**
-	 *	Delete the ClearDep instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteClearDepByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubClearDepByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the ClearDep instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteClearDepByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the ClearDep instances identified by the key TenantIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteClearDepByTenantIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
@@ -280,34 +244,8 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtClearDep protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived ClearDep record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ClearDep instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubClearDep pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived ClearDep record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ClearDep instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtClearDep protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived ClearDep record instance by protected primary key.
@@ -319,34 +257,8 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtClearDep protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived ClearDep record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ClearDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubClearDep publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived ClearDep record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ClearDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtClearDep protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all ClearDep instances.
@@ -355,7 +267,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtClearDep[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtClearDep[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived ClearDep record instance identified by the unique key IdIdx.
@@ -367,7 +279,7 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtClearDep protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -379,7 +291,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtClearDep[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -391,7 +303,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtClearDep[] protreadDerivedByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadDerivedByClearDepIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -403,7 +315,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtClearDep[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -418,37 +330,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtClearDep protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific ClearDep record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ClearDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtClearDep protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific ClearDep record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ClearDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubClearDep pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -463,37 +345,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtClearDep protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific ClearDep record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ClearDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubClearDep publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific ClearDep record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ClearDep instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtClearDep protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -503,7 +355,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return All the specific ClearDep instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtClearDep[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtClearDep[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific ClearDep record instance identified by the unique key IdIdx.
@@ -517,7 +369,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtClearDep protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -531,7 +383,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtClearDep[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -545,7 +397,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtClearDep[] protreadRecByClearDepIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadRecByClearDepIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 RelationId );
 
 	/**
@@ -559,6 +411,6 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtClearDep[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtClearDep[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 }

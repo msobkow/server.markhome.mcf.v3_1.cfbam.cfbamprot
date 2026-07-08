@@ -54,9 +54,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtTableH provides access to protlic history records matching the CFBamProtTable object change history.
@@ -101,12 +105,12 @@ public interface ICFBamProtTableH extends ICFBamProtScopeH
 	public void setRequiredIsMutable( boolean value );
 	public boolean getRequiredIsServerOnly();
 	public void setRequiredIsServerOnly( boolean value );
-	public ICFBamProtSchema.LoaderBehaviourEnum getRequiredLoaderBehaviour();
-	public void setRequiredLoaderBehaviour( ICFBamProtSchema.LoaderBehaviourEnum value );
-	public ICFBamProtSchema.SecScopeEnum getRequiredSecScope();
-	public void setRequiredSecScope( ICFBamProtSchema.SecScopeEnum value );
-	public ICFBamProtSchema.CodeVisibilityEnum getRequiredCodeVis();
-	public void setRequiredCodeVis( ICFBamProtSchema.CodeVisibilityEnum value );
+	public ICFBamPubSchema.LoaderBehaviourEnum getRequiredLoaderBehaviour();
+	public void setRequiredLoaderBehaviour( ICFBamPubSchema.LoaderBehaviourEnum value );
+	public ICFBamPubSchema.SecScopeEnum getRequiredSecScope();
+	public void setRequiredSecScope( ICFBamPubSchema.SecScopeEnum value );
+	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
+	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
 	@Override
 	public boolean equals( Object obj );
 

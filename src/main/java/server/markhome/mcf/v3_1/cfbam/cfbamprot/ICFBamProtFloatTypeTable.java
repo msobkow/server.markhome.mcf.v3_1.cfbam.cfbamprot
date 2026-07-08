@@ -82,7 +82,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtFloatType protcreateFloatType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protcreateFloatType( ICFSecPubAuthorization Authorization,
 		ICFBamProtFloatType rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtFloatType protcreateFloatType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protcreateFloatType( ICFSecPubAuthorization Authorization,
 		ICFBamPubFloatType rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtFloatType protupdateFloatType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protupdateFloatType( ICFSecPubAuthorization Authorization,
 		ICFBamProtFloatType rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtFloatType protupdateFloatType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protupdateFloatType( ICFSecPubAuthorization Authorization,
 		ICFBamPubFloatType rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteFloatType( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatType( ICFSecPubAuthorization Authorization,
 		ICFBamProtFloatType rec );
 	/**
 	 *	Delete the FloatType instances identified by the key SchemaIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	SchemaDefId	The FloatType key attribute of the instance generating the id.
 	 */
-	public void protdeleteFloatTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtFloatTypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key SchemaIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubFloatTypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the FloatType instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteFloatTypeByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	Name	The FloatType key attribute of the instance generating the id.
 	 */
-	public void protdeleteFloatTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key ScopeIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	ScopeId	The FloatType key attribute of the instance generating the id.
 	 */
-	public void protdeleteFloatTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key ScopeIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key DefSchemaIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	DefSchemaId	The FloatType key attribute of the instance generating the id.
 	 */
-	public void protdeleteFloatTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key PrevIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	PrevId	The FloatType key attribute of the instance generating the id.
 	 */
-	public void protdeleteFloatTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key PrevIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key NextIdx.
@@ -288,7 +288,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	NextId	The FloatType key attribute of the instance generating the id.
 	 */
-	public void protdeleteFloatTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -298,7 +298,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key NextIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key ContPrevIdx.
@@ -318,7 +318,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	PrevId	The FloatType key attribute of the instance generating the id.
 	 */
-	public void protdeleteFloatTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -329,7 +329,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key ContPrevIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key ContNextIdx.
@@ -349,7 +349,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	NextId	The FloatType key attribute of the instance generating the id.
 	 */
-	public void protdeleteFloatTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -360,7 +360,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 	/**
 	 *	Delete the FloatType instances identified by the key ContNextIdx.
@@ -369,7 +369,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteFloatTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatTypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContNextIdxKey argKey );
 
 	/**
@@ -379,89 +379,8 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteFloatType( ICFSecProtAuthorization Authorization,
+	public void protdeleteFloatType( ICFSecPubAuthorization Authorization,
 		ICFBamPubFloatType rec );
-	/**
-	 *	Delete the FloatType instances identified by the key SchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteFloatTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubFloatTypeBySchemaIdxKey argKey );
-	/**
-	 *	Delete the FloatType instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteFloatTypeByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the FloatType instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteFloatTypeByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByUNameIdxKey argKey );
-	/**
-	 *	Delete the FloatType instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteFloatTypeByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByScopeIdxKey argKey );
-	/**
-	 *	Delete the FloatType instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteFloatTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the FloatType instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteFloatTypeByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByPrevIdxKey argKey );
-	/**
-	 *	Delete the FloatType instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteFloatTypeByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByNextIdxKey argKey );
-	/**
-	 *	Delete the FloatType instances identified by the key ContPrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteFloatTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContPrevIdxKey argKey );
-	/**
-	 *	Delete the FloatType instances identified by the key ContNextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteFloatTypeByContNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
@@ -474,34 +393,8 @@ extends ICFBamProtFloatDefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtFloatType protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived FloatType record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the FloatType instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubFloatType pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived FloatType record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the FloatType instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtFloatType protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived FloatType record instance by protected primary key.
@@ -513,34 +406,8 @@ extends ICFBamProtFloatDefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtFloatType protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived FloatType record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the FloatType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubFloatType publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived FloatType record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the FloatType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtFloatType protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all FloatType instances.
@@ -549,7 +416,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtFloatType[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtFloatType[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived FloatType record instance identified by the unique key IdIdx.
@@ -561,7 +428,7 @@ extends ICFBamProtFloatDefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtFloatType protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -576,7 +443,7 @@ extends ICFBamProtFloatDefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtFloatType protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -589,7 +456,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtFloatType[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -601,7 +468,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtFloatType[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -613,7 +480,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtFloatType[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -625,7 +492,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtFloatType[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -639,7 +506,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtFloatType[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -654,7 +521,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtFloatType[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -667,7 +534,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtFloatType[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -682,37 +549,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific FloatType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the FloatType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtFloatType protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific FloatType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the FloatType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubFloatType pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -727,37 +564,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific FloatType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the FloatType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubFloatType publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific FloatType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the FloatType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtFloatType protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -767,7 +574,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return All the specific FloatType instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtFloatType[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtFloatType[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific FloatType record instance identified by the unique key IdIdx.
@@ -781,7 +588,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -798,7 +605,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -813,7 +620,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -827,7 +634,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -841,7 +648,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -855,7 +662,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -871,7 +678,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -888,7 +695,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -903,7 +710,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtFloatType[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -911,7 +718,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtFloatType protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -920,7 +727,7 @@ extends ICFBamProtFloatDefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtFloatType protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtFloatType protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtPopTopDepTableObj
 {
@@ -161,146 +164,146 @@ public interface ICFBamProtPopTopDepTableObj
 	List<ICFBamProtPopTopDepObj> readCachedAllPopTopDep();
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj cached instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtPopTopDepObj readPopTopDepByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtPopTopDepObj readPopTopDepByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtScopeObj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtPopTopDepObj> readPopTopDepByTenantIdx( CFLibDbKeyHash256 TenantId );
 
 	/**
-	 *	Get the map of CFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtPopTopDepObj> readPopTopDepByTenantIdx( CFLibDbKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtPopDepObj instances sorted by their primary keys for the duplicate RelationIdx key.
+	 *	Get the map of ICFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate RelationIdx key.
 	 *
 	 *	@param	RelationId	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate RelationIdx key,
+	 *	@return	List of ICFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate RelationIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtPopTopDepObj> readPopTopDepByRelationIdx( CFLibDbKeyHash256 RelationId );
 
 	/**
-	 *	Get the map of CFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate RelationIdx key.
+	 *	Get the map of ICFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate RelationIdx key.
 	 *
 	 *	@param	RelationId	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate RelationIdx key,
+	 *	@return	List of ICFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate RelationIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtPopTopDepObj> readPopTopDepByRelationIdx( CFLibDbKeyHash256 RelationId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtPopDepObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtPopTopDepObj> readPopTopDepByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtPopTopDepObj> readPopTopDepByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate ContRelIdx key.
+	 *	Get the map of List<ICFBamProtPopTopDepObj> instances sorted by their primary keys for the duplicate ContRelIdx key.
 	 *
 	 *	@param	ContRelationId	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate ContRelIdx key,
+	 *	@return	List of List<ICFBamProtPopTopDepObj> cached instances sorted by their primary keys for the duplicate ContRelIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtPopTopDepObj> readPopTopDepByContRelIdx( CFLibDbKeyHash256 ContRelationId );
 
 	/**
-	 *	Get the map of CFBamProtPopTopDepObj instances sorted by their primary keys for the duplicate ContRelIdx key.
+	 *	Get the map of List<ICFBamProtPopTopDepObj> instances sorted by their primary keys for the duplicate ContRelIdx key.
 	 *
 	 *	@param	ContRelationId	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtPopTopDepObj cached instances sorted by their primary keys for the duplicate ContRelIdx key,
+	 *	@return	List of List<ICFBamProtPopTopDepObj> cached instances sorted by their primary keys for the duplicate ContRelIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtPopTopDepObj> readPopTopDepByContRelIdx( CFLibDbKeyHash256 ContRelationId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtPopTopDepObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtPopTopDepObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ContRelationId	The PopTopDep key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtPopTopDepObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtPopTopDepObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtPopTopDepObj readPopTopDepByUNameIdx(CFLibDbKeyHash256 ContRelationId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtPopTopDepObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtPopTopDepObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ContRelationId	The PopTopDep key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The PopTopDep key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtPopTopDepObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtPopTopDepObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtPopTopDepObj readPopTopDepByUNameIdx(CFLibDbKeyHash256 ContRelationId,
 		String Name,
 		boolean forceRead );
 
-	ICFBamProtPopTopDepObj readCachedPopTopDepByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtScopeObj readCachedPopTopDepByIdIdx( CFLibDbKeyHash256 Id );
 
-	List<ICFBamProtPopTopDepObj> readCachedPopTopDepByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtScopeObj>> readCachedPopTopDepByTenantIdx( CFLibDbKeyHash256 TenantId );
 
-	List<ICFBamProtPopTopDepObj> readCachedPopTopDepByRelationIdx( CFLibDbKeyHash256 RelationId );
+	List<List<ICFBamProtPopDepObj>> readCachedPopTopDepByRelationIdx( CFLibDbKeyHash256 RelationId );
 
-	List<ICFBamProtPopTopDepObj> readCachedPopTopDepByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtPopDepObj>> readCachedPopTopDepByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<ICFBamProtPopTopDepObj> readCachedPopTopDepByContRelIdx( CFLibDbKeyHash256 ContRelationId );
+	List<List<ICFBamProtPopTopDepObj>> readCachedPopTopDepByContRelIdx( CFLibDbKeyHash256 ContRelationId );
 
 	ICFBamProtPopTopDepObj readCachedPopTopDepByUNameIdx( CFLibDbKeyHash256 ContRelationId,
 		String Name );

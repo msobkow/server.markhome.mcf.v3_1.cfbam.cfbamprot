@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtRoleDefTableObj
 {
@@ -105,7 +108,7 @@ public interface ICFBamProtRoleDefTableObj
 	 *
 	 *	@param	backingClassCode	The backing store class code used to identify the proposed instance class.
 	 *
-	 *	@return	ICFBamProtRoleDefObj instance, which may be a subclass of a RoleDef instance.
+	 *	@return	ICFBamProtRoleDefEditObj instance, which may be a subclass of a RoleDef instance.
 	 */
 	ICFBamProtRoleDefObj constructByClassCode( int backingClassCode );
 
@@ -170,47 +173,47 @@ public interface ICFBamProtRoleDefTableObj
 	List<ICFBamProtRoleDefObj> readCachedAllRoleDef();
 
 	/**
-	 *	Get the CFBamProtRoleDefObj instance for the primary key attributes.
+	 *	Get the ICFBamProtRoleDefObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRoleDefObj cached instance for the primary key, or
+	 *	@return	ICFBamProtRoleDefObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRoleDefObj readRoleDefByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtRoleDefObj instance for the primary key attributes.
+	 *	Get the ICFBamProtRoleDefObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRoleDefObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtRoleDefObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRoleDefObj readRoleDefByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtRoleDefObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtRoleDefObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The RoleDef key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRoleDefObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtRoleDefObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRoleDefObj readRoleDefByUNameIdx(CFLibDbKeyHash256 ScopeId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtRoleDefObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtRoleDefObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The RoleDef key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRoleDefObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtRoleDefObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRoleDefObj readRoleDefByUNameIdx(CFLibDbKeyHash256 ScopeId,
@@ -218,49 +221,49 @@ public interface ICFBamProtRoleDefTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRoleDefObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of List<ICFBamProtRoleDefObj> instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRoleDefObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of List<ICFBamProtRoleDefObj> cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRoleDefObj> readRoleDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
 	/**
-	 *	Get the map of CFBamProtRoleDefObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of List<ICFBamProtRoleDefObj> instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRoleDefObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of List<ICFBamProtRoleDefObj> cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRoleDefObj> readRoleDefByScopeIdx( CFLibDbKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRoleDefObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtRoleDefObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRoleDefObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtRoleDefObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRoleDefObj> readRoleDefByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtRoleDefObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtRoleDefObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRoleDefObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtRoleDefObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRoleDefObj> readRoleDefByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtRoleDefObj instance for the unique UDefIdx key.
+	 *	Get the ICFBamProtRoleDefObj instance for the unique UDefIdx key.
 	 *
 	 *	@param	ScopeId	The RoleDef key attribute of the instance generating the id.
 	 *
@@ -268,7 +271,7 @@ public interface ICFBamProtRoleDefTableObj
 	 *
 	 *	@param	Name	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRoleDefObj cached instance for the unique UDefIdx key, or
+	 *	@return	ICFBamProtRoleDefObj cached instance for the unique UDefIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRoleDefObj readRoleDefByUDefIdx(CFLibDbKeyHash256 ScopeId,
@@ -276,7 +279,7 @@ public interface ICFBamProtRoleDefTableObj
 		String Name );
 
 	/**
-	 *	Get the CFBamProtRoleDefObj instance for the unique UDefIdx key.
+	 *	Get the ICFBamProtRoleDefObj instance for the unique UDefIdx key.
 	 *
 	 *	@param	ScopeId	The RoleDef key attribute of the instance generating the id.
 	 *
@@ -284,7 +287,7 @@ public interface ICFBamProtRoleDefTableObj
 	 *
 	 *	@param	Name	The RoleDef key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRoleDefObj refreshed instance for the unique UDefIdx key, or
+	 *	@return	ICFBamProtRoleDefObj refreshed instance for the unique UDefIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRoleDefObj readRoleDefByUDefIdx(CFLibDbKeyHash256 ScopeId,
@@ -297,9 +300,9 @@ public interface ICFBamProtRoleDefTableObj
 	ICFBamProtRoleDefObj readCachedRoleDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
-	List<ICFBamProtRoleDefObj> readCachedRoleDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtRoleDefObj>> readCachedRoleDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
-	List<ICFBamProtRoleDefObj> readCachedRoleDefByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtRoleDefObj>> readCachedRoleDefByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	ICFBamProtRoleDefObj readCachedRoleDefByUDefIdx( CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,

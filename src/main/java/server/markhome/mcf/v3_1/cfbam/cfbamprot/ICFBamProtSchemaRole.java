@@ -53,6 +53,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
@@ -70,17 +71,16 @@ public interface ICFBamProtSchemaRole extends ICFBamProtRoleDef
 	public static final ICFBamProtSchema.RoleScopeEnum ROLESCOPE_MAX_VALUE = ICFBamProtSchema.RoleScopeEnum.TentRole;
 	public static final String S_SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaRole.S_SCHEMADEFID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaRole.SCHEMADEFID_INIT_VALUE;
-	public static final ICFBamProtSchema.RoleScopeEnum ROLESCOPE_INIT_VALUE = ICFBamPubSchemaRole.ROLESCOPE_INIT_VALUE;
+	public static final ICFBamPubSchema.RoleScopeEnum ROLESCOPE_INIT_VALUE = ICFBamPubSchemaRole.ROLESCOPE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa88f;
 	public final static String S_CLASS_CODE = "a88f";
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
-	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
-	public ICFBamProtSchema.RoleScopeEnum getRequiredRoleScope();
-	public void setRequiredRoleScope( ICFBamProtSchema.RoleScopeEnum value );
+	public ICFBamPubSchema.RoleScopeEnum getRequiredRoleScope();
+	public void setRequiredRoleScope( ICFBamPubSchema.RoleScopeEnum value );
 	@Override
 	public boolean equals( Object obj );
 	

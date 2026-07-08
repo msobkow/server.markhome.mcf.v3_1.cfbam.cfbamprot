@@ -82,7 +82,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtNmTokensType protcreateNmTokensType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protcreateNmTokensType( ICFSecPubAuthorization Authorization,
 		ICFBamProtNmTokensType rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtNmTokensType protcreateNmTokensType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protcreateNmTokensType( ICFSecPubAuthorization Authorization,
 		ICFBamPubNmTokensType rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtNmTokensType protupdateNmTokensType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protupdateNmTokensType( ICFSecPubAuthorization Authorization,
 		ICFBamProtNmTokensType rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtNmTokensType protupdateNmTokensType( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protupdateNmTokensType( ICFSecPubAuthorization Authorization,
 		ICFBamPubNmTokensType rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteNmTokensType( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensType( ICFSecPubAuthorization Authorization,
 		ICFBamProtNmTokensType rec );
 	/**
 	 *	Delete the NmTokensType instances identified by the key SchemaIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	SchemaDefId	The NmTokensType key attribute of the instance generating the id.
 	 */
-	public void protdeleteNmTokensTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtNmTokensTypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key SchemaIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubNmTokensTypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	Name	The NmTokensType key attribute of the instance generating the id.
 	 */
-	public void protdeleteNmTokensTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key ScopeIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	ScopeId	The NmTokensType key attribute of the instance generating the id.
 	 */
-	public void protdeleteNmTokensTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key ScopeIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key DefSchemaIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	DefSchemaId	The NmTokensType key attribute of the instance generating the id.
 	 */
-	public void protdeleteNmTokensTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key PrevIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	PrevId	The NmTokensType key attribute of the instance generating the id.
 	 */
-	public void protdeleteNmTokensTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key PrevIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key NextIdx.
@@ -288,7 +288,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	NextId	The NmTokensType key attribute of the instance generating the id.
 	 */
-	public void protdeleteNmTokensTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -298,7 +298,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key NextIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key ContPrevIdx.
@@ -318,7 +318,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	PrevId	The NmTokensType key attribute of the instance generating the id.
 	 */
-	public void protdeleteNmTokensTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -329,7 +329,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key ContPrevIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key ContNextIdx.
@@ -349,7 +349,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	NextId	The NmTokensType key attribute of the instance generating the id.
 	 */
-	public void protdeleteNmTokensTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -360,7 +360,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 	/**
 	 *	Delete the NmTokensType instances identified by the key ContNextIdx.
@@ -369,7 +369,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteNmTokensTypeByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensTypeByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContNextIdxKey argKey );
 
 	/**
@@ -379,89 +379,8 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteNmTokensType( ICFSecProtAuthorization Authorization,
+	public void protdeleteNmTokensType( ICFSecPubAuthorization Authorization,
 		ICFBamPubNmTokensType rec );
-	/**
-	 *	Delete the NmTokensType instances identified by the key SchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteNmTokensTypeBySchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubNmTokensTypeBySchemaIdxKey argKey );
-	/**
-	 *	Delete the NmTokensType instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteNmTokensTypeByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the NmTokensType instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteNmTokensTypeByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByUNameIdxKey argKey );
-	/**
-	 *	Delete the NmTokensType instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteNmTokensTypeByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByScopeIdxKey argKey );
-	/**
-	 *	Delete the NmTokensType instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteNmTokensTypeByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the NmTokensType instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteNmTokensTypeByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByPrevIdxKey argKey );
-	/**
-	 *	Delete the NmTokensType instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteNmTokensTypeByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByNextIdxKey argKey );
-	/**
-	 *	Delete the NmTokensType instances identified by the key ContPrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteNmTokensTypeByContPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContPrevIdxKey argKey );
-	/**
-	 *	Delete the NmTokensType instances identified by the key ContNextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteNmTokensTypeByContNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
@@ -474,34 +393,8 @@ extends ICFBamProtNmTokensDefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtNmTokensType protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived NmTokensType record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the NmTokensType instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubNmTokensType pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived NmTokensType record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the NmTokensType instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtNmTokensType protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived NmTokensType record instance by protected primary key.
@@ -513,34 +406,8 @@ extends ICFBamProtNmTokensDefTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtNmTokensType protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived NmTokensType record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the NmTokensType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubNmTokensType publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived NmTokensType record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the NmTokensType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtNmTokensType protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all NmTokensType instances.
@@ -549,7 +416,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtNmTokensType[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtNmTokensType[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived NmTokensType record instance identified by the unique key IdIdx.
@@ -561,7 +428,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtNmTokensType protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -576,7 +443,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtNmTokensType protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -589,7 +456,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtNmTokensType[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -601,7 +468,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtNmTokensType[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -613,7 +480,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtNmTokensType[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -625,7 +492,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtNmTokensType[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -639,7 +506,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtNmTokensType[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -654,7 +521,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtNmTokensType[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -667,7 +534,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtNmTokensType[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -682,37 +549,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific NmTokensType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the NmTokensType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtNmTokensType protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific NmTokensType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the NmTokensType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubNmTokensType pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -727,37 +564,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific NmTokensType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the NmTokensType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubNmTokensType publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific NmTokensType record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the NmTokensType instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtNmTokensType protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -767,7 +574,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return All the specific NmTokensType instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtNmTokensType[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtNmTokensType[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific NmTokensType record instance identified by the unique key IdIdx.
@@ -781,7 +588,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -798,7 +605,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -813,7 +620,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -827,7 +634,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -841,7 +648,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -855,7 +662,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -871,7 +678,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -888,7 +695,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -903,7 +710,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtNmTokensType[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -911,7 +718,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtNmTokensType protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -920,7 +727,7 @@ extends ICFBamProtNmTokensDefTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtNmTokensType protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokensType protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

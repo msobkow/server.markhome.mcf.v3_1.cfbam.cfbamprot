@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtClearSubDep2TableObj
 {
@@ -161,146 +164,146 @@ public interface ICFBamProtClearSubDep2TableObj
 	List<ICFBamProtClearSubDep2Obj> readCachedAllClearSubDep2();
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj cached instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtClearSubDep2Obj readClearSubDep2ByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtScopeObj instance for the primary key attributes.
+	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtScopeObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtScopeObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtClearSubDep2Obj readClearSubDep2ByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtScopeObj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByTenantIdx( CFLibDbKeyHash256 TenantId );
 
 	/**
-	 *	Get the map of CFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate TenantIdx key.
+	 *	Get the map of ICFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate TenantIdx key.
 	 *
 	 *	@param	TenantId	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate TenantIdx key,
+	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByTenantIdx( CFLibDbKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtClearDepObj instances sorted by their primary keys for the duplicate ClearDepIdx key.
+	 *	Get the map of ICFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate ClearDepIdx key.
 	 *
 	 *	@param	RelationId	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate ClearDepIdx key,
+	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate ClearDepIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearDepIdx( CFLibDbKeyHash256 RelationId );
 
 	/**
-	 *	Get the map of CFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate ClearDepIdx key.
+	 *	Get the map of ICFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate ClearDepIdx key.
 	 *
 	 *	@param	RelationId	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate ClearDepIdx key,
+	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate ClearDepIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearDepIdx( CFLibDbKeyHash256 RelationId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtClearDepObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate ClearSubDep1Idx key.
+	 *	Get the map of List<ICFBamProtClearSubDep2Obj> instances sorted by their primary keys for the duplicate ClearSubDep1Idx key.
 	 *
 	 *	@param	ClearSubDep1Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate ClearSubDep1Idx key,
+	 *	@return	List of List<ICFBamProtClearSubDep2Obj> cached instances sorted by their primary keys for the duplicate ClearSubDep1Idx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearSubDep1Idx( CFLibDbKeyHash256 ClearSubDep1Id );
 
 	/**
-	 *	Get the map of CFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate ClearSubDep1Idx key.
+	 *	Get the map of List<ICFBamProtClearSubDep2Obj> instances sorted by their primary keys for the duplicate ClearSubDep1Idx key.
 	 *
 	 *	@param	ClearSubDep1Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate ClearSubDep1Idx key,
+	 *	@return	List of List<ICFBamProtClearSubDep2Obj> cached instances sorted by their primary keys for the duplicate ClearSubDep1Idx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearSubDep1Idx( CFLibDbKeyHash256 ClearSubDep1Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtClearSubDep2Obj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtClearSubDep2Obj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ClearSubDep1Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtClearSubDep2Obj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtClearSubDep2Obj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtClearSubDep2Obj readClearSubDep2ByUNameIdx(CFLibDbKeyHash256 ClearSubDep1Id,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtClearSubDep2Obj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtClearSubDep2Obj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ClearSubDep1Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The ClearSubDep2 key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtClearSubDep2Obj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtClearSubDep2Obj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtClearSubDep2Obj readClearSubDep2ByUNameIdx(CFLibDbKeyHash256 ClearSubDep1Id,
 		String Name,
 		boolean forceRead );
 
-	ICFBamProtClearSubDep2Obj readCachedClearSubDep2ByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtScopeObj readCachedClearSubDep2ByIdIdx( CFLibDbKeyHash256 Id );
 
-	List<ICFBamProtClearSubDep2Obj> readCachedClearSubDep2ByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtScopeObj>> readCachedClearSubDep2ByTenantIdx( CFLibDbKeyHash256 TenantId );
 
-	List<ICFBamProtClearSubDep2Obj> readCachedClearSubDep2ByClearDepIdx( CFLibDbKeyHash256 RelationId );
+	List<List<ICFBamProtClearDepObj>> readCachedClearSubDep2ByClearDepIdx( CFLibDbKeyHash256 RelationId );
 
-	List<ICFBamProtClearSubDep2Obj> readCachedClearSubDep2ByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtClearDepObj>> readCachedClearSubDep2ByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<ICFBamProtClearSubDep2Obj> readCachedClearSubDep2ByClearSubDep1Idx( CFLibDbKeyHash256 ClearSubDep1Id );
+	List<List<ICFBamProtClearSubDep2Obj>> readCachedClearSubDep2ByClearSubDep1Idx( CFLibDbKeyHash256 ClearSubDep1Id );
 
 	ICFBamProtClearSubDep2Obj readCachedClearSubDep2ByUNameIdx( CFLibDbKeyHash256 ClearSubDep1Id,
 		String Name );

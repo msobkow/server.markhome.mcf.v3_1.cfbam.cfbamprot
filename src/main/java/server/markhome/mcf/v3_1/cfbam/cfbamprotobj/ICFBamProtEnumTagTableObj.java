@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtEnumTagTableObj
 {
@@ -161,89 +164,89 @@ public interface ICFBamProtEnumTagTableObj
 	List<ICFBamProtEnumTagObj> readCachedAllEnumTag();
 
 	/**
-	 *	Get the CFBamProtEnumTagObj instance for the primary key attributes.
+	 *	Get the ICFBamProtEnumTagObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtEnumTagObj cached instance for the primary key, or
+	 *	@return	ICFBamProtEnumTagObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtEnumTagObj readEnumTagByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtEnumTagObj instance for the primary key attributes.
+	 *	Get the ICFBamProtEnumTagObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtEnumTagObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtEnumTagObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtEnumTagObj readEnumTagByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtEnumTagObj instances sorted by their primary keys for the duplicate EnumIdx key.
+	 *	Get the map of List<ICFBamProtEnumTagObj> instances sorted by their primary keys for the duplicate EnumIdx key.
 	 *
 	 *	@param	EnumId	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtEnumTagObj cached instances sorted by their primary keys for the duplicate EnumIdx key,
+	 *	@return	List of List<ICFBamProtEnumTagObj> cached instances sorted by their primary keys for the duplicate EnumIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtEnumTagObj> readEnumTagByEnumIdx( CFLibDbKeyHash256 EnumId );
 
 	/**
-	 *	Get the map of CFBamProtEnumTagObj instances sorted by their primary keys for the duplicate EnumIdx key.
+	 *	Get the map of List<ICFBamProtEnumTagObj> instances sorted by their primary keys for the duplicate EnumIdx key.
 	 *
 	 *	@param	EnumId	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtEnumTagObj cached instances sorted by their primary keys for the duplicate EnumIdx key,
+	 *	@return	List of List<ICFBamProtEnumTagObj> cached instances sorted by their primary keys for the duplicate EnumIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtEnumTagObj> readEnumTagByEnumIdx( CFLibDbKeyHash256 EnumId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtEnumTagObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtEnumTagObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtEnumTagObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtEnumTagObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtEnumTagObj> readEnumTagByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtEnumTagObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtEnumTagObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtEnumTagObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtEnumTagObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtEnumTagObj> readEnumTagByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtEnumTagObj instance for the unique EnumNameIdx key.
+	 *	Get the ICFBamProtEnumTagObj instance for the unique EnumNameIdx key.
 	 *
 	 *	@param	EnumId	The EnumTag key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtEnumTagObj cached instance for the unique EnumNameIdx key, or
+	 *	@return	ICFBamProtEnumTagObj cached instance for the unique EnumNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtEnumTagObj readEnumTagByEnumNameIdx(CFLibDbKeyHash256 EnumId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtEnumTagObj instance for the unique EnumNameIdx key.
+	 *	Get the ICFBamProtEnumTagObj instance for the unique EnumNameIdx key.
 	 *
 	 *	@param	EnumId	The EnumTag key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtEnumTagObj refreshed instance for the unique EnumNameIdx key, or
+	 *	@return	ICFBamProtEnumTagObj refreshed instance for the unique EnumNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtEnumTagObj readEnumTagByEnumNameIdx(CFLibDbKeyHash256 EnumId,
@@ -251,42 +254,42 @@ public interface ICFBamProtEnumTagTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtEnumTagObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtEnumTagObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtEnumTagObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtEnumTagObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtEnumTagObj> readEnumTagByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtEnumTagObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtEnumTagObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtEnumTagObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtEnumTagObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtEnumTagObj> readEnumTagByPrevIdx( CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtEnumTagObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtEnumTagObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtEnumTagObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtEnumTagObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtEnumTagObj> readEnumTagByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtEnumTagObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtEnumTagObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The EnumTag key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtEnumTagObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtEnumTagObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtEnumTagObj> readEnumTagByNextIdx( CFLibDbKeyHash256 NextId,
@@ -294,16 +297,16 @@ public interface ICFBamProtEnumTagTableObj
 
 	ICFBamProtEnumTagObj readCachedEnumTagByIdIdx( CFLibDbKeyHash256 Id );
 
-	List<ICFBamProtEnumTagObj> readCachedEnumTagByEnumIdx( CFLibDbKeyHash256 EnumId );
+	List<List<ICFBamProtEnumTagObj>> readCachedEnumTagByEnumIdx( CFLibDbKeyHash256 EnumId );
 
-	List<ICFBamProtEnumTagObj> readCachedEnumTagByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtEnumTagObj>> readCachedEnumTagByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	ICFBamProtEnumTagObj readCachedEnumTagByEnumNameIdx( CFLibDbKeyHash256 EnumId,
 		String Name );
 
-	List<ICFBamProtEnumTagObj> readCachedEnumTagByPrevIdx( CFLibDbKeyHash256 PrevId );
+	List<List<ICFBamProtEnumTagObj>> readCachedEnumTagByPrevIdx( CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtEnumTagObj> readCachedEnumTagByNextIdx( CFLibDbKeyHash256 NextId );
+	List<List<ICFBamProtEnumTagObj>> readCachedEnumTagByNextIdx( CFLibDbKeyHash256 NextId );
 
 	void deepDisposeEnumTagByIdIdx( CFLibDbKeyHash256 Id );
 
@@ -374,16 +377,16 @@ public interface ICFBamProtEnumTagTableObj
 	void deleteEnumTagByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Move the CFBamProtEnumTagObj instance up in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtEnumTagObj instance up in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtEnumTagObj refreshed cache instance.
+	 *	@return	ICFBamProtEnumTagObj refreshed cache instance.
 	 */
 	ICFBamProtEnumTagObj moveUpEnumTag( ICFBamProtEnumTagObj Obj );
 
 	/**
-	 *	Move the CFBamProtEnumTagObj instance down in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtEnumTagObj instance down in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtEnumTagObj refreshed cache instance.
+	 *	@return	ICFBamProtEnumTagObj refreshed cache instance.
 	 */
 	ICFBamProtEnumTagObj moveDownEnumTag( ICFBamProtEnumTagObj Obj );
 }

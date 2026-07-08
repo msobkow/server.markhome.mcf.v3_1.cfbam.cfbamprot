@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtRelationColTableObj
 {
@@ -161,47 +164,47 @@ public interface ICFBamProtRelationColTableObj
 	List<ICFBamProtRelationColObj> readCachedAllRelationCol();
 
 	/**
-	 *	Get the CFBamProtRelationColObj instance for the primary key attributes.
+	 *	Get the ICFBamProtRelationColObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRelationColObj cached instance for the primary key, or
+	 *	@return	ICFBamProtRelationColObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRelationColObj readRelationColByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtRelationColObj instance for the primary key attributes.
+	 *	Get the ICFBamProtRelationColObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRelationColObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtRelationColObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRelationColObj readRelationColByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtRelationColObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtRelationColObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	RelationId	The RelationCol key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRelationColObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtRelationColObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRelationColObj readRelationColByUNameIdx(CFLibDbKeyHash256 RelationId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtRelationColObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtRelationColObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	RelationId	The RelationCol key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtRelationColObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtRelationColObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtRelationColObj readRelationColByUNameIdx(CFLibDbKeyHash256 RelationId,
@@ -209,152 +212,152 @@ public interface ICFBamProtRelationColTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate RelationIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate RelationIdx key.
 	 *
 	 *	@param	RelationId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate RelationIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate RelationIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByRelationIdx( CFLibDbKeyHash256 RelationId );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate RelationIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate RelationIdx key.
 	 *
 	 *	@param	RelationId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate RelationIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate RelationIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByRelationIdx( CFLibDbKeyHash256 RelationId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate FromColIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate FromColIdx key.
 	 *
 	 *	@param	FromColId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate FromColIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate FromColIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByFromColIdx( CFLibDbKeyHash256 FromColId );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate FromColIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate FromColIdx key.
 	 *
 	 *	@param	FromColId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate FromColIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate FromColIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByFromColIdx( CFLibDbKeyHash256 FromColId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate ToColIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate ToColIdx key.
 	 *
 	 *	@param	ToColId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate ToColIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate ToColIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByToColIdx( CFLibDbKeyHash256 ToColId );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate ToColIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate ToColIdx key.
 	 *
 	 *	@param	ToColId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate ToColIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate ToColIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByToColIdx( CFLibDbKeyHash256 ToColId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate PrevIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate PrevIdx key.
 	 *
 	 *	@param	PrevId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate PrevIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate PrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByPrevIdx( CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByNextIdx( CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate NextIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate NextIdx key.
 	 *
 	 *	@param	NextId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate NextIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate NextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByNextIdx( CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate RelPrevIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate RelPrevIdx key.
 	 *
 	 *	@param	RelationId	The RelationCol key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate RelPrevIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate RelPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByRelPrevIdx( CFLibDbKeyHash256 RelationId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate RelPrevIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate RelPrevIdx key.
 	 *
 	 *	@param	RelationId	The RelationCol key attribute of the instance generating the id.
 	 *
 	 *	@param	PrevId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate RelPrevIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate RelPrevIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByRelPrevIdx( CFLibDbKeyHash256 RelationId,
@@ -362,26 +365,26 @@ public interface ICFBamProtRelationColTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate RelNextIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate RelNextIdx key.
 	 *
 	 *	@param	RelationId	The RelationCol key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate RelNextIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate RelNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByRelNextIdx( CFLibDbKeyHash256 RelationId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Get the map of CFBamProtRelationColObj instances sorted by their primary keys for the duplicate RelNextIdx key.
+	 *	Get the map of List<ICFBamProtRelationColObj> instances sorted by their primary keys for the duplicate RelNextIdx key.
 	 *
 	 *	@param	RelationId	The RelationCol key attribute of the instance generating the id.
 	 *
 	 *	@param	NextId	The RelationCol key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtRelationColObj cached instances sorted by their primary keys for the duplicate RelNextIdx key,
+	 *	@return	List of List<ICFBamProtRelationColObj> cached instances sorted by their primary keys for the duplicate RelNextIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtRelationColObj> readRelationColByRelNextIdx( CFLibDbKeyHash256 RelationId,
@@ -393,22 +396,22 @@ public interface ICFBamProtRelationColTableObj
 	ICFBamProtRelationColObj readCachedRelationColByUNameIdx( CFLibDbKeyHash256 RelationId,
 		String Name );
 
-	List<ICFBamProtRelationColObj> readCachedRelationColByRelationIdx( CFLibDbKeyHash256 RelationId );
+	List<List<ICFBamProtRelationColObj>> readCachedRelationColByRelationIdx( CFLibDbKeyHash256 RelationId );
 
-	List<ICFBamProtRelationColObj> readCachedRelationColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtRelationColObj>> readCachedRelationColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<ICFBamProtRelationColObj> readCachedRelationColByFromColIdx( CFLibDbKeyHash256 FromColId );
+	List<List<ICFBamProtRelationColObj>> readCachedRelationColByFromColIdx( CFLibDbKeyHash256 FromColId );
 
-	List<ICFBamProtRelationColObj> readCachedRelationColByToColIdx( CFLibDbKeyHash256 ToColId );
+	List<List<ICFBamProtRelationColObj>> readCachedRelationColByToColIdx( CFLibDbKeyHash256 ToColId );
 
-	List<ICFBamProtRelationColObj> readCachedRelationColByPrevIdx( CFLibDbKeyHash256 PrevId );
+	List<List<ICFBamProtRelationColObj>> readCachedRelationColByPrevIdx( CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtRelationColObj> readCachedRelationColByNextIdx( CFLibDbKeyHash256 NextId );
+	List<List<ICFBamProtRelationColObj>> readCachedRelationColByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<ICFBamProtRelationColObj> readCachedRelationColByRelPrevIdx( CFLibDbKeyHash256 RelationId,
+	List<List<ICFBamProtRelationColObj>> readCachedRelationColByRelPrevIdx( CFLibDbKeyHash256 RelationId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<ICFBamProtRelationColObj> readCachedRelationColByRelNextIdx( CFLibDbKeyHash256 RelationId,
+	List<List<ICFBamProtRelationColObj>> readCachedRelationColByRelNextIdx( CFLibDbKeyHash256 RelationId,
 		CFLibDbKeyHash256 NextId );
 
 	void deepDisposeRelationColByIdIdx( CFLibDbKeyHash256 Id );
@@ -524,16 +527,16 @@ public interface ICFBamProtRelationColTableObj
 		CFLibDbKeyHash256 NextId );
 
 	/**
-	 *	Move the CFBamProtRelationColObj instance up in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtRelationColObj instance up in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtRelationColObj refreshed cache instance.
+	 *	@return	ICFBamProtRelationColObj refreshed cache instance.
 	 */
 	ICFBamProtRelationColObj moveUpRelationCol( ICFBamProtRelationColObj Obj );
 
 	/**
-	 *	Move the CFBamProtRelationColObj instance down in the chain.  The instance is always refreshed.
+	 *	Move the ICFBamProtRelationColObj instance down in the chain.  The instance is always refreshed.
 	 *
-	 *	@return	CFBamProtRelationColObj refreshed cache instance.
+	 *	@return	ICFBamProtRelationColObj refreshed cache instance.
 	 */
 	ICFBamProtRelationColObj moveDownRelationCol( ICFBamProtRelationColObj Obj );
 }

@@ -82,7 +82,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtId32Gen protcreateId32Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protcreateId32Gen( ICFSecPubAuthorization Authorization,
 		ICFBamProtId32Gen rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtId32Gen protcreateId32Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protcreateId32Gen( ICFSecPubAuthorization Authorization,
 		ICFBamPubId32Gen rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtId32Gen protupdateId32Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protupdateId32Gen( ICFSecPubAuthorization Authorization,
 		ICFBamProtId32Gen rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtId32Gen protupdateId32Gen( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protupdateId32Gen( ICFSecPubAuthorization Authorization,
 		ICFBamPubId32Gen rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteId32Gen( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32Gen( ICFSecPubAuthorization Authorization,
 		ICFBamProtId32Gen rec );
 	/**
 	 *	Delete the Id32Gen instances identified by the key SchemaIdx.
@@ -136,7 +136,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	SchemaDefId	The Id32Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId32GenBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSchemaDefId );
 
 	/**
@@ -146,7 +146,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtInt32TypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key SchemaIdx.
@@ -155,7 +155,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenBySchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubInt32TypeBySchemaIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instance identified by the primary key.
@@ -164,7 +164,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteId32GenByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key UNameIdx.
@@ -175,7 +175,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	Name	The Id32Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId32GenByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		String argName );
 
@@ -186,7 +186,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key UNameIdx.
@@ -195,7 +195,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByUNameIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key ScopeIdx.
@@ -204,7 +204,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	ScopeId	The Id32Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId32GenByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId );
 
 	/**
@@ -214,7 +214,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key ScopeIdx.
@@ -223,7 +223,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByScopeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByScopeIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key DefSchemaIdx.
@@ -232,7 +232,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	DefSchemaId	The Id32Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId32GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -242,7 +242,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key DefSchemaIdx.
@@ -251,7 +251,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key PrevIdx.
@@ -260,7 +260,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	PrevId	The Id32Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId32GenByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -270,7 +270,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key PrevIdx.
@@ -279,7 +279,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByPrevIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key NextIdx.
@@ -288,7 +288,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	NextId	The Id32Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId32GenByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -298,7 +298,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key NextIdx.
@@ -307,7 +307,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key ContPrevIdx.
@@ -318,7 +318,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	PrevId	The Id32Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId32GenByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
@@ -329,7 +329,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key ContPrevIdx.
@@ -338,7 +338,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByContPrevIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContPrevIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key ContNextIdx.
@@ -349,7 +349,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	NextId	The Id32Gen key attribute of the instance generating the id.
 	 */
-	public void protdeleteId32GenByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
@@ -360,7 +360,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
 	/**
 	 *	Delete the Id32Gen instances identified by the key ContNextIdx.
@@ -369,7 +369,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteId32GenByContNextIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32GenByContNextIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubValueByContNextIdxKey argKey );
 
 	/**
@@ -379,89 +379,8 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteId32Gen( ICFSecProtAuthorization Authorization,
+	public void protdeleteId32Gen( ICFSecPubAuthorization Authorization,
 		ICFBamPubId32Gen rec );
-	/**
-	 *	Delete the Id32Gen instances identified by the key SchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId32GenBySchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubInt32TypeBySchemaIdxKey argKey );
-	/**
-	 *	Delete the Id32Gen instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteId32GenByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the Id32Gen instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId32GenByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByUNameIdxKey argKey );
-	/**
-	 *	Delete the Id32Gen instances identified by the key ScopeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId32GenByScopeIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByScopeIdxKey argKey );
-	/**
-	 *	Delete the Id32Gen instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId32GenByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the Id32Gen instances identified by the key PrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId32GenByPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByPrevIdxKey argKey );
-	/**
-	 *	Delete the Id32Gen instances identified by the key NextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId32GenByNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByNextIdxKey argKey );
-	/**
-	 *	Delete the Id32Gen instances identified by the key ContPrevIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId32GenByContPrevIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContPrevIdxKey argKey );
-	/**
-	 *	Delete the Id32Gen instances identified by the key ContNextIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteId32GenByContNextIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
@@ -474,34 +393,8 @@ extends ICFBamProtInt32TypeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtId32Gen protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived Id32Gen record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id32Gen instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubId32Gen pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived Id32Gen record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id32Gen instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtId32Gen protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived Id32Gen record instance by protected primary key.
@@ -513,34 +406,8 @@ extends ICFBamProtInt32TypeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtId32Gen protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived Id32Gen record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id32Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubId32Gen publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived Id32Gen record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id32Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtId32Gen protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all Id32Gen instances.
@@ -549,7 +416,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId32Gen[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtId32Gen[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived Id32Gen record instance identified by the unique key IdIdx.
@@ -561,7 +428,7 @@ extends ICFBamProtInt32TypeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtId32Gen protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -576,7 +443,7 @@ extends ICFBamProtInt32TypeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtId32Gen protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -589,7 +456,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId32Gen[] protreadDerivedByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -601,7 +468,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId32Gen[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -613,7 +480,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId32Gen[] protreadDerivedByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadDerivedByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -625,7 +492,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId32Gen[] protreadDerivedByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadDerivedByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -639,7 +506,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId32Gen[] protreadDerivedByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -654,7 +521,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId32Gen[] protreadDerivedByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -667,7 +534,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtId32Gen[] protreadDerivedBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -682,37 +549,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Id32Gen record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id32Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtId32Gen protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Id32Gen record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id32Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubId32Gen pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -727,37 +564,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Id32Gen record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id32Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubId32Gen publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Id32Gen record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Id32Gen instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtId32Gen protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -767,7 +574,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return All the specific Id32Gen instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtId32Gen[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtId32Gen[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific Id32Gen record instance identified by the unique key IdIdx.
@@ -781,7 +588,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -798,7 +605,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		String Name );
 
@@ -813,7 +620,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen[] protreadRecByScopeIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId );
 
 	/**
@@ -827,7 +634,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -841,7 +648,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen[] protreadRecByPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadRecByPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -855,7 +662,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen[] protreadRecByNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadRecByNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -871,7 +678,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen[] protreadRecByContPrevIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
@@ -888,7 +695,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen[] protreadRecByContNextIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
@@ -903,7 +710,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtId32Gen[] protreadRecBySchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SchemaDefId );
 
 	/**
@@ -911,7 +718,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtId32Gen protmoveRecUp( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protmoveRecUp( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 
@@ -920,7 +727,7 @@ extends ICFBamProtInt32TypeTable,
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamProtId32Gen protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtId32Gen protmoveRecDown( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

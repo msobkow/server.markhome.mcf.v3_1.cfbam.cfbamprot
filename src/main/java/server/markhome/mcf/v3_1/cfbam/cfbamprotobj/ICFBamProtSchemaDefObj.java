@@ -54,11 +54,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 
 public interface ICFBamProtSchemaDefObj
 	extends ICFBamProtScopeObj
@@ -92,14 +94,14 @@ public interface ICFBamProtSchemaDefObj
 	 *
 	 *	@return	The required ICFBamProtMinorVersionObj instance referenced by the MinorVersion key.
 	 */
-	ICFIntProtMinorVersionObj getRequiredContainerMinorVersion();
+	ICFIntPubMinorVersionObj getRequiredContainerMinorVersion();
 
 	/**
 	 *	Get the required ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
 	 *
 	 *	@return	The required ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
 	 */
-	ICFIntProtMinorVersionObj getRequiredContainerMinorVersion( boolean forceRead );
+	ICFIntPubMinorVersionObj getRequiredContainerMinorVersion( boolean forceRead );
 
 	/**
 	 *	Get the array of optional ICFBamProtTableObj array of instances referenced by the Tables key.
@@ -176,14 +178,14 @@ public interface ICFBamProtSchemaDefObj
 	 *
 	 *	@return	The required ICFBamProtTenantObj instance referenced by the CTenant key.
 	 */
-	ICFSecProtTenantObj getRequiredOwnerCTenant();
+	ICFSecPubTenantObj getRequiredOwnerCTenant();
 
 	/**
 	 *	Get the required ICFSecProtTenantObj instance referenced by the CTenant key.
 	 *
 	 *	@return	The required ICFSecProtTenantObj instance referenced by the CTenant key.
 	 */
-	ICFSecProtTenantObj getRequiredOwnerCTenant( boolean forceRead );
+	ICFSecPubTenantObj getRequiredOwnerCTenant( boolean forceRead );
 
 	/**
 	 *	Get the required CFLibDbKeyHash256 attribute Id.

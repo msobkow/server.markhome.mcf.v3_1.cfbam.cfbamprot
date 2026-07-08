@@ -53,6 +53,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
@@ -75,7 +76,7 @@ public interface ICFBamProtServerMethod extends ICFBamProtScope
 	public static final String NAME_INIT_VALUE = ICFBamPubServerMethod.NAME_INIT_VALUE;
 	public final static boolean ISINSTANCEMETHOD_INIT_VALUE = ICFBamPubServerMethod.ISINSTANCEMETHOD_INIT_VALUE;
 	public final static boolean ISSERVERONLY_INIT_VALUE = ICFBamPubServerMethod.ISSERVERONLY_INIT_VALUE;
-	public static final ICFBamProtSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubServerMethod.CODEVIS_INIT_VALUE;
+	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubServerMethod.CODEVIS_INIT_VALUE;
 	public static final String JMETHODBODY_INIT_VALUE = ICFBamPubServerMethod.JMETHODBODY_INIT_VALUE;
 	public static final String CPPMETHODBODY_INIT_VALUE = ICFBamPubServerMethod.CPPMETHODBODY_INIT_VALUE;
 	public static final String CSMETHODBODY_INIT_VALUE = ICFBamPubServerMethod.CSMETHODBODY_INIT_VALUE;
@@ -86,10 +87,8 @@ public interface ICFBamProtServerMethod extends ICFBamProtScope
 	public ICFBamProtTable getRequiredContainerForTable();
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
-	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public void setRequiredContainerForTable(ICFBamProtTable argObj);
 	public void setRequiredContainerForTable(CFLibDbKeyHash256 argTableId);
-	public void setRequiredContainerForTable(ICFBamPubTable argObj);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
@@ -108,8 +107,8 @@ public interface ICFBamProtServerMethod extends ICFBamProtScope
 	public void setRequiredIsInstanceMethod( boolean value );
 	public boolean getRequiredIsServerOnly();
 	public void setRequiredIsServerOnly( boolean value );
-	public ICFBamProtSchema.CodeVisibilityEnum getRequiredCodeVis();
-	public void setRequiredCodeVis( ICFBamProtSchema.CodeVisibilityEnum value );
+	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
+	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
 	public String getRequiredJMethodBody();
 	public void setRequiredJMethodBody( String value );
 	public String getRequiredCppMethodBody();

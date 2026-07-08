@@ -53,6 +53,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
@@ -92,9 +93,9 @@ public interface ICFBamProtTable extends ICFBamProtScope
 	public final static boolean HASAUDITCOLUMNS_INIT_VALUE = ICFBamPubTable.HASAUDITCOLUMNS_INIT_VALUE;
 	public final static boolean ISMUTABLE_INIT_VALUE = ICFBamPubTable.ISMUTABLE_INIT_VALUE;
 	public final static boolean ISSERVERONLY_INIT_VALUE = ICFBamPubTable.ISSERVERONLY_INIT_VALUE;
-	public static final ICFBamProtSchema.LoaderBehaviourEnum LOADERBEHAVIOUR_INIT_VALUE = ICFBamPubTable.LOADERBEHAVIOUR_INIT_VALUE;
-	public static final ICFBamProtSchema.SecScopeEnum SECSCOPE_INIT_VALUE = ICFBamPubTable.SECSCOPE_INIT_VALUE;
-	public static final ICFBamProtSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubTable.CODEVIS_INIT_VALUE;
+	public static final ICFBamPubSchema.LoaderBehaviourEnum LOADERBEHAVIOUR_INIT_VALUE = ICFBamPubTable.LOADERBEHAVIOUR_INIT_VALUE;
+	public static final ICFBamPubSchema.SecScopeEnum SECSCOPE_INIT_VALUE = ICFBamPubTable.SECSCOPE_INIT_VALUE;
+	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubTable.CODEVIS_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa807;
 	public final static String S_CLASS_CODE = "a807";
 
@@ -106,22 +107,16 @@ public interface ICFBamProtTable extends ICFBamProtScope
 	public ICFBamProtIndex getOptionalLookupPrimaryIndex();
 	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
-	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
-	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public void setOptionalLookupLookupIndex(ICFBamProtIndex argObj);
 	public void setOptionalLookupLookupIndex(CFLibDbKeyHash256 argLookupIndexId);
-	public void setOptionalLookupLookupIndex(ICFBamPubIndex argObj);
 	public void setOptionalLookupAltIndex(ICFBamProtIndex argObj);
 	public void setOptionalLookupAltIndex(CFLibDbKeyHash256 argAltIndexId);
-	public void setOptionalLookupAltIndex(ICFBamPubIndex argObj);
 	public void setOptionalLookupQualTable(ICFBamProtTable argObj);
 	public void setOptionalLookupQualTable(CFLibDbKeyHash256 argQualifyingTableId);
-	public void setOptionalLookupQualTable(ICFBamPubTable argObj);
 	public void setOptionalLookupPrimaryIndex(ICFBamProtIndex argObj);
 	public void setOptionalLookupPrimaryIndex(CFLibDbKeyHash256 argPrimaryIndexId);
-	public void setOptionalLookupPrimaryIndex(ICFBamPubIndex argObj);
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
@@ -154,12 +149,12 @@ public interface ICFBamProtTable extends ICFBamProtScope
 	public void setRequiredIsMutable( boolean value );
 	public boolean getRequiredIsServerOnly();
 	public void setRequiredIsServerOnly( boolean value );
-	public ICFBamProtSchema.LoaderBehaviourEnum getRequiredLoaderBehaviour();
-	public void setRequiredLoaderBehaviour( ICFBamProtSchema.LoaderBehaviourEnum value );
-	public ICFBamProtSchema.SecScopeEnum getRequiredSecScope();
-	public void setRequiredSecScope( ICFBamProtSchema.SecScopeEnum value );
-	public ICFBamProtSchema.CodeVisibilityEnum getRequiredCodeVis();
-	public void setRequiredCodeVis( ICFBamProtSchema.CodeVisibilityEnum value );
+	public ICFBamPubSchema.LoaderBehaviourEnum getRequiredLoaderBehaviour();
+	public void setRequiredLoaderBehaviour( ICFBamPubSchema.LoaderBehaviourEnum value );
+	public ICFBamPubSchema.SecScopeEnum getRequiredSecScope();
+	public void setRequiredSecScope( ICFBamPubSchema.SecScopeEnum value );
+	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
+	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
 	@Override
 	public boolean equals( Object obj );
 	

@@ -82,7 +82,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtServerMethod protcreateServerMethod( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protcreateServerMethod( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethod rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFBamProtServerMethod protcreateServerMethod( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protcreateServerMethod( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethod rec );
 
 
@@ -105,7 +105,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtServerMethod protupdateServerMethod( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protupdateServerMethod( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethod rec );
 
 	/**
@@ -116,7 +116,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFBamProtServerMethod protupdateServerMethod( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protupdateServerMethod( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethod rec );
 
 
@@ -127,7 +127,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteServerMethod( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethod( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethod rec );
 	/**
 	 *	Delete the ServerMethod instances identified by the key UNameIdx.
@@ -138,7 +138,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	Name	The ServerMethod key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerMethodByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
 		String argName );
 
@@ -149,7 +149,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByUNameIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key UNameIdx.
@@ -158,7 +158,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByUNameIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key MethTableIdx.
@@ -167,7 +167,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	TableId	The ServerMethod key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerMethodByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByMethTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId );
 
 	/**
@@ -177,7 +177,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByMethTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByMethTableIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key MethTableIdx.
@@ -186,7 +186,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByMethTableIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByMethTableIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key MethCodeVisIdx.
@@ -195,8 +195,8 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	CodeVis	The ServerMethod key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerMethodByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamProtSchema.CodeVisibilityEnum argCodeVis );
+	public void protdeleteServerMethodByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
+		ICFBamPubSchema.CodeVisibilityEnum argCodeVis );
 
 	/**
 	 *	Delete the ServerMethod instances identified by the key MethCodeVisIdx.
@@ -205,7 +205,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByMethCodeVisIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key MethCodeVisIdx.
@@ -214,7 +214,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByMethCodeVisIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key MethTableVisIdx.
@@ -225,9 +225,9 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	CodeVis	The ServerMethod key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerMethodByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTableId,
-		ICFBamProtSchema.CodeVisibilityEnum argCodeVis );
+		ICFBamPubSchema.CodeVisibilityEnum argCodeVis );
 
 	/**
 	 *	Delete the ServerMethod instances identified by the key MethTableVisIdx.
@@ -236,7 +236,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByMethTableVisIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key MethTableVisIdx.
@@ -245,7 +245,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByMethTableVisIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key DefSchemaIdx.
@@ -254,7 +254,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	DefSchemaId	The ServerMethod key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerMethodByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argDefSchemaId );
 
 	/**
@@ -264,7 +264,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtServerMethodByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key DefSchemaIdx.
@@ -273,7 +273,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethodByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instance identified by the primary key.
@@ -282,7 +282,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteServerMethodByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key TenantIdx.
@@ -291,7 +291,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	TenantId	The ServerMethod key attribute of the instance generating the id.
 	 */
-	public void protdeleteServerMethodByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -301,7 +301,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
 	/**
 	 *	Delete the ServerMethod instances identified by the key TenantIdx.
@@ -310,7 +310,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteServerMethodByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethodByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFBamPubScopeByTenantIdxKey argKey );
 
 	/**
@@ -320,71 +320,8 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteServerMethod( ICFSecProtAuthorization Authorization,
+	public void protdeleteServerMethod( ICFSecPubAuthorization Authorization,
 		ICFBamPubServerMethod rec );
-	/**
-	 *	Delete the ServerMethod instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerMethodByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByUNameIdxKey argKey );
-	/**
-	 *	Delete the ServerMethod instances identified by the key MethTableIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerMethodByMethTableIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByMethTableIdxKey argKey );
-	/**
-	 *	Delete the ServerMethod instances identified by the key MethCodeVisIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerMethodByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByMethCodeVisIdxKey argKey );
-	/**
-	 *	Delete the ServerMethod instances identified by the key MethTableVisIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerMethodByMethTableVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByMethTableVisIdxKey argKey );
-	/**
-	 *	Delete the ServerMethod instances identified by the key DefSchemaIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerMethodByDefSchemaIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubServerMethodByDefSchemaIdxKey argKey );
-	/**
-	 *	Delete the ServerMethod instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteServerMethodByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the ServerMethod instances identified by the key TenantIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteServerMethodByTenantIdx( ICFSecProtAuthorization Authorization,
-		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
@@ -397,34 +334,8 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtServerMethod protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived ServerMethod record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerMethod instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubServerMethod pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived ServerMethod record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerMethod instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtServerMethod protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived ServerMethod record instance by protected primary key.
@@ -436,34 +347,8 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtServerMethod protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived ServerMethod record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerMethod instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamPubServerMethod publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived ServerMethod record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerMethod instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFBamProtServerMethod protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all ServerMethod instances.
@@ -472,7 +357,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerMethod[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFBamProtServerMethod[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived ServerMethod record instance identified by the unique key IdIdx.
@@ -484,7 +369,7 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtServerMethod protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -496,7 +381,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerMethod[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -511,7 +396,7 @@ extends ICFBamProtScopeTable,
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFBamProtServerMethod protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -524,7 +409,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerMethod[] protreadDerivedByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod[] protreadDerivedByMethTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -536,8 +421,8 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerMethod[] protreadDerivedByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+	public ICFBamProtServerMethod[] protreadDerivedByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Read an array of the derived ServerMethod record instances identified by the duplicate key MethTableVisIdx.
@@ -550,9 +435,9 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerMethod[] protreadDerivedByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod[] protreadDerivedByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Read an array of the derived ServerMethod record instances identified by the duplicate key DefSchemaIdx.
@@ -563,7 +448,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFBamProtServerMethod[] protreadDerivedByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod[] protreadDerivedByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 
 	/**
@@ -578,37 +463,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerMethod protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific ServerMethod record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerMethod instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtServerMethod protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific ServerMethod record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerMethod instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubServerMethod pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -623,37 +478,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerMethod protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific ServerMethod record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerMethod instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamPubServerMethod publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific ServerMethod record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ServerMethod instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFBamProtServerMethod protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -663,7 +488,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@return All the specific ServerMethod instances in the database accessible for the Authorization.
 	 */
-	public ICFBamProtServerMethod[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFBamProtServerMethod[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific ServerMethod record instance identified by the unique key IdIdx.
@@ -677,7 +502,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerMethod protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -691,7 +516,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerMethod[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -708,7 +533,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerMethod protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
 		String Name );
 
@@ -723,7 +548,7 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerMethod[] protreadRecByMethTableIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod[] protreadRecByMethTableIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId );
 
 	/**
@@ -737,8 +562,8 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerMethod[] protreadRecByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+	public ICFBamProtServerMethod[] protreadRecByMethCodeVisIdx( ICFSecPubAuthorization Authorization,
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Read an array of the specific ServerMethod record instances identified by the duplicate key MethTableVisIdx.
@@ -753,9 +578,9 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerMethod[] protreadRecByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod[] protreadRecByMethTableVisIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TableId,
-		ICFBamProtSchema.CodeVisibilityEnum CodeVis );
+		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
 	 *	Read an array of the specific ServerMethod record instances identified by the duplicate key DefSchemaIdx.
@@ -768,6 +593,6 @@ extends ICFBamProtScopeTable,
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFBamProtServerMethod[] protreadRecByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+	public ICFBamProtServerMethod[] protreadRecByDefSchemaIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 DefSchemaId );
 }

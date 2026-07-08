@@ -54,11 +54,14 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public interface ICFBamProtTableTweakTableObj
 {
@@ -161,47 +164,47 @@ public interface ICFBamProtTableTweakTableObj
 	List<ICFBamProtTableTweakObj> readCachedAllTableTweak();
 
 	/**
-	 *	Get the CFBamProtTweakObj instance for the primary key attributes.
+	 *	Get the ICFBamProtTweakObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTweakObj cached instance for the primary key, or
+	 *	@return	ICFBamProtTweakObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableTweakObj readTableTweakByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFBamProtTweakObj instance for the primary key attributes.
+	 *	Get the ICFBamProtTweakObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTweakObj refreshed instance for the primary key, or
+	 *	@return	ICFBamProtTweakObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableTweakObj readTableTweakByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtTweakObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtTweakObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The TableTweak key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTweakObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtTweakObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableTweakObj readTableTweakByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
 	/**
-	 *	Get the CFBamProtTweakObj instance for the unique UNameIdx key.
+	 *	Get the ICFBamProtTweakObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	ScopeId	The TableTweak key attribute of the instance generating the id.
 	 *
 	 *	@param	Name	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTweakObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFBamProtTweakObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableTweakObj readTableTweakByUNameIdx( CFLibDbKeyHash256 ScopeId,
@@ -209,70 +212,70 @@ public interface ICFBamProtTableTweakTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTweakObj instances sorted by their primary keys for the duplicate ValTentIdx key.
+	 *	Get the map of ICFBamProtTableTweakObj instances sorted by their primary keys for the duplicate ValTentIdx key.
 	 *
 	 *	@param	TenantId	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate ValTentIdx key,
+	 *	@return	List of ICFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate ValTentIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableTweakObj> readTableTweakByValTentIdx( CFLibDbKeyHash256 TenantId );
 
 	/**
-	 *	Get the map of CFBamProtTableTweakObj instances sorted by their primary keys for the duplicate ValTentIdx key.
+	 *	Get the map of ICFBamProtTableTweakObj instances sorted by their primary keys for the duplicate ValTentIdx key.
 	 *
 	 *	@param	TenantId	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate ValTentIdx key,
+	 *	@return	List of ICFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate ValTentIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableTweakObj> readTableTweakByValTentIdx( CFLibDbKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTweakObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of ICFBamProtTableTweakObj instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of ICFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableTweakObj> readTableTweakByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
 	/**
-	 *	Get the map of CFBamProtTableTweakObj instances sorted by their primary keys for the duplicate ScopeIdx key.
+	 *	Get the map of ICFBamProtTableTweakObj instances sorted by their primary keys for the duplicate ScopeIdx key.
 	 *
 	 *	@param	ScopeId	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
+	 *	@return	List of ICFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableTweakObj> readTableTweakByScopeIdx( CFLibDbKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTweakObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtTableTweakObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableTweakObj> readTableTweakByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
 	/**
-	 *	Get the map of CFBamProtTableTweakObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
+	 *	Get the map of ICFBamProtTableTweakObj instances sorted by their primary keys for the duplicate DefSchemaIdx key.
 	 *
 	 *	@param	DefSchemaId	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
+	 *	@return	List of ICFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate DefSchemaIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableTweakObj> readTableTweakByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFBamProtTweakObj instance for the unique UDefIdx key.
+	 *	Get the ICFBamProtTweakObj instance for the unique UDefIdx key.
 	 *
 	 *	@param	TenantId	The TableTweak key attribute of the instance generating the id.
 	 *
@@ -284,7 +287,7 @@ public interface ICFBamProtTableTweakTableObj
 	 *
 	 *	@param	Name	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTweakObj cached instance for the unique UDefIdx key, or
+	 *	@return	ICFBamProtTweakObj cached instance for the unique UDefIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableTweakObj readTableTweakByUDefIdx( CFLibDbKeyHash256 TenantId,
@@ -294,7 +297,7 @@ public interface ICFBamProtTableTweakTableObj
 		String Name );
 
 	/**
-	 *	Get the CFBamProtTweakObj instance for the unique UDefIdx key.
+	 *	Get the ICFBamProtTweakObj instance for the unique UDefIdx key.
 	 *
 	 *	@param	TenantId	The TableTweak key attribute of the instance generating the id.
 	 *
@@ -306,7 +309,7 @@ public interface ICFBamProtTableTweakTableObj
 	 *
 	 *	@param	Name	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	CFBamProtTweakObj refreshed instance for the unique UDefIdx key, or
+	 *	@return	ICFBamProtTweakObj refreshed instance for the unique UDefIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFBamProtTableTweakObj readTableTweakByUDefIdx( CFLibDbKeyHash256 TenantId,
@@ -317,44 +320,44 @@ public interface ICFBamProtTableTweakTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFBamProtTableTweakObj instances sorted by their primary keys for the duplicate TableIdx key.
+	 *	Get the map of List<ICFBamProtTableTweakObj> instances sorted by their primary keys for the duplicate TableIdx key.
 	 *
 	 *	@param	TableId	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate TableIdx key,
+	 *	@return	List of List<ICFBamProtTableTweakObj> cached instances sorted by their primary keys for the duplicate TableIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableTweakObj> readTableTweakByTableIdx( CFLibDbKeyHash256 TableId );
 
 	/**
-	 *	Get the map of CFBamProtTableTweakObj instances sorted by their primary keys for the duplicate TableIdx key.
+	 *	Get the map of List<ICFBamProtTableTweakObj> instances sorted by their primary keys for the duplicate TableIdx key.
 	 *
 	 *	@param	TableId	The TableTweak key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFBamProtTableTweakObj cached instances sorted by their primary keys for the duplicate TableIdx key,
+	 *	@return	List of List<ICFBamProtTableTweakObj> cached instances sorted by their primary keys for the duplicate TableIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFBamProtTableTweakObj> readTableTweakByTableIdx( CFLibDbKeyHash256 TableId,
 		boolean forceRead );
 
-	ICFBamProtTableTweakObj readCachedTableTweakByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtTweakObj readCachedTableTweakByIdIdx( CFLibDbKeyHash256 Id );
 
-	ICFBamProtTableTweakObj readCachedTableTweakByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtTweakObj readCachedTableTweakByUNameIdx( CFLibDbKeyHash256 ScopeId,
 		String Name );
 
-	List<ICFBamProtTableTweakObj> readCachedTableTweakByValTentIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtTweakObj>> readCachedTableTweakByValTentIdx( CFLibDbKeyHash256 TenantId );
 
-	List<ICFBamProtTableTweakObj> readCachedTableTweakByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtTweakObj>> readCachedTableTweakByScopeIdx( CFLibDbKeyHash256 ScopeId );
 
-	List<ICFBamProtTableTweakObj> readCachedTableTweakByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
+	List<List<ICFBamProtTweakObj>> readCachedTableTweakByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	ICFBamProtTableTweakObj readCachedTableTweakByUDefIdx( CFLibDbKeyHash256 TenantId,
+	ICFBamProtTweakObj readCachedTableTweakByUDefIdx( CFLibDbKeyHash256 TenantId,
 		CFLibDbKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
-	List<ICFBamProtTableTweakObj> readCachedTableTweakByTableIdx( CFLibDbKeyHash256 TableId );
+	List<List<ICFBamProtTableTweakObj>> readCachedTableTweakByTableIdx( CFLibDbKeyHash256 TableId );
 
 	void deepDisposeTableTweakByIdIdx( CFLibDbKeyHash256 Id );
 
