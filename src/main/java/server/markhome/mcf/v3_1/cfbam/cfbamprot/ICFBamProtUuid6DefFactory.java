@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtUuid6DefFactory protected interface for Uuid6Def
  */
-public interface ICFBamProtUuid6DefFactory
-extends ICFBamPubUuid6DefFactory
+public interface ICFBamProtUuid6DefFactory extends ICFBamPubUuid6DefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubUuid6DefFactory
 	public ICFBamProtUuid6Def newProtRec();
 
 	/**
+	 *	Allocate a public Uuid6Def interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUuid6Def asPublic(ICFBamProtUuid6Def src);
+
+	/**
 	 *	Allocate a protected Uuid6Def history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtUuid6DefH newProtHRec();
+
+	/**
+	 *	Allocate a public Uuid6Def history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUuid6DefH asPublic(ICFBamProtUuid6DefH src);
 
 }

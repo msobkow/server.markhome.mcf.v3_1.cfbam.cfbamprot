@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtIndexTweakFactory protected interface for IndexTweak
  */
-public interface ICFBamProtIndexTweakFactory
-extends ICFBamPubIndexTweakFactory
+public interface ICFBamProtIndexTweakFactory extends ICFBamPubIndexTweakFactory
 {
 
 	/**
-	 *	Allocate a protected IndexIdx key over public IndexTweak instances.
+	 *	Allocate a protected IndexIdx key over protected IndexTweak instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtIndexTweakByIndexIdxKey newProtByIndexIdxKey();
+
+	/**
+	 *	Allocate a public IndexIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndexTweakByIndexIdxKey asPublic(ICFBamProtIndexTweakByIndexIdxKey src);
 
 	/**
 	 *	Allocate a protected IndexTweak interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubIndexTweakFactory
 	public ICFBamProtIndexTweak newProtRec();
 
 	/**
+	 *	Allocate a public IndexTweak interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndexTweak asPublic(ICFBamProtIndexTweak src);
+
+	/**
 	 *	Allocate a protected IndexTweak history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtIndexTweakH newProtHRec();
+
+	/**
+	 *	Allocate a public IndexTweak history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndexTweakH asPublic(ICFBamProtIndexTweakH src);
 
 }

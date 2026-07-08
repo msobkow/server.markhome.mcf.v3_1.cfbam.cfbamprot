@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtSchemaTweakFactory protected interface for SchemaTweak
  */
-public interface ICFBamProtSchemaTweakFactory
-extends ICFBamPubSchemaTweakFactory
+public interface ICFBamProtSchemaTweakFactory extends ICFBamPubSchemaTweakFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public SchemaTweak instances.
+	 *	Allocate a protected SchemaIdx key over protected SchemaTweak instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaTweakBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaTweakBySchemaIdxKey asPublic(ICFBamProtSchemaTweakBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected SchemaTweak interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubSchemaTweakFactory
 	public ICFBamProtSchemaTweak newProtRec();
 
 	/**
+	 *	Allocate a public SchemaTweak interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaTweak asPublic(ICFBamProtSchemaTweak src);
+
+	/**
 	 *	Allocate a protected SchemaTweak history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaTweakH newProtHRec();
+
+	/**
+	 *	Allocate a public SchemaTweak history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaTweakH asPublic(ICFBamProtSchemaTweakH src);
 
 }

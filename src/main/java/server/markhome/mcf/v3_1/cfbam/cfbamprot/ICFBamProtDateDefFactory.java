@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDateDefFactory protected interface for DateDef
  */
-public interface ICFBamProtDateDefFactory
-extends ICFBamPubDateDefFactory
+public interface ICFBamProtDateDefFactory extends ICFBamPubDateDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubDateDefFactory
 	public ICFBamProtDateDef newProtRec();
 
 	/**
+	 *	Allocate a public DateDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDateDef asPublic(ICFBamProtDateDef src);
+
+	/**
 	 *	Allocate a protected DateDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDateDefH newProtHRec();
+
+	/**
+	 *	Allocate a public DateDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDateDefH asPublic(ICFBamProtDateDefH src);
 
 }

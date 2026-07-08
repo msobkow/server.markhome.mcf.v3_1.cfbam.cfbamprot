@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTZTimestampDefFactory protected interface for TZTimestampDef
  */
-public interface ICFBamProtTZTimestampDefFactory
-extends ICFBamPubTZTimestampDefFactory
+public interface ICFBamProtTZTimestampDefFactory extends ICFBamPubTZTimestampDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubTZTimestampDefFactory
 	public ICFBamProtTZTimestampDef newProtRec();
 
 	/**
+	 *	Allocate a public TZTimestampDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZTimestampDef asPublic(ICFBamProtTZTimestampDef src);
+
+	/**
 	 *	Allocate a protected TZTimestampDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTZTimestampDefH newProtHRec();
+
+	/**
+	 *	Allocate a public TZTimestampDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZTimestampDefH asPublic(ICFBamProtTZTimestampDefH src);
 
 }

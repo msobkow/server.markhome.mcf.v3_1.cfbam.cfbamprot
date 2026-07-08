@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for Atom.
+// Description: Java 25 protlic DbIO interface for Atom.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtAtomTable protected database interface for Atom has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtAtomTable protlic database interface for Atom has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtAtomTable
+extends ICFBamProtValueTable,
+	ICFBamPubAtomTable
 {
 	public static final String TABLE_NAME = "Atom";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtAtomTable
 	public ICFBamProtAtom protcreateAtom( ICFSecProtAuthorization Authorization,
 		ICFBamProtAtom rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtAtom protcreateAtom( ICFSecProtAuthorization Authorization,
+		ICFBamPubAtom rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtAtomTable
 	 */
 	public ICFBamProtAtom protupdateAtom( ICFSecProtAuthorization Authorization,
 		ICFBamProtAtom rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtAtom protupdateAtom( ICFSecProtAuthorization Authorization,
+		ICFBamPubAtom rec );
 
 
 	/**
@@ -135,6 +161,15 @@ public interface ICFBamProtAtomTable
 	public void protdeleteAtomByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
+	 *	Delete the Atom instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
 	 *	Delete the Atom instances identified by the key ScopeIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -153,6 +188,15 @@ public interface ICFBamProtAtomTable
 	 */
 	public void protdeleteAtomByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the Atom instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Atom instances identified by the key DefSchemaIdx.
 	 *
@@ -173,6 +217,15 @@ public interface ICFBamProtAtomTable
 	public void protdeleteAtomByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
+	 *	Delete the Atom instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
 	 *	Delete the Atom instances identified by the key PrevIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -192,6 +245,15 @@ public interface ICFBamProtAtomTable
 	public void protdeleteAtomByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
+	 *	Delete the Atom instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
 	 *	Delete the Atom instances identified by the key NextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -210,6 +272,15 @@ public interface ICFBamProtAtomTable
 	 */
 	public void protdeleteAtomByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
+	/**
+	 *	Delete the Atom instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Atom instances identified by the key ContPrevIdx.
 	 *
@@ -233,6 +304,15 @@ public interface ICFBamProtAtomTable
 	public void protdeleteAtomByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
+	 *	Delete the Atom instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
 	 *	Delete the Atom instances identified by the key ContNextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -254,10 +334,126 @@ public interface ICFBamProtAtomTable
 	 */
 	public void protdeleteAtomByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
+	/**
+	 *	Delete the Atom instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteAtom( ICFSecProtAuthorization Authorization,
+		ICFBamPubAtom rec );
+	/**
+	 *	Delete the Atom instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteAtomByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the Atom instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
+	 *	Delete the Atom instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the Atom instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the Atom instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
+	 *	Delete the Atom instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
+	/**
+	 *	Delete the Atom instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
+	 *	Delete the Atom instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteAtomByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
-	 *	Read the derived Atom record instance by primary key.
+	 *	Read the derived Atom record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Atom instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtAtom protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived Atom record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Atom instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubAtom pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived Atom record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -269,8 +465,9 @@ public interface ICFBamProtAtomTable
 	public ICFBamProtAtom protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived Atom record instance by primary key.
+	 *	Lock the derived Atom record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -281,6 +478,32 @@ public interface ICFBamProtAtomTable
 	 */
 	public ICFBamProtAtom protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived Atom record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Atom instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubAtom publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived Atom record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Atom instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtAtom protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all Atom instances.
@@ -411,6 +634,66 @@ public interface ICFBamProtAtomTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtAtom protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Atom record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Atom instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtAtom protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Atom record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Atom instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubAtom pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Atom record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Atom instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtAtom protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Atom record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Atom instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubAtom publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -574,7 +857,7 @@ public interface ICFBamProtAtomTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamAtom protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtAtom protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

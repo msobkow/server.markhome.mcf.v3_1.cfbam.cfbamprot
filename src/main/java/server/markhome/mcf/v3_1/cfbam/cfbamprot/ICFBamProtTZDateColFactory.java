@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTZDateColFactory protected interface for TZDateCol
  */
-public interface ICFBamProtTZDateColFactory
-extends ICFBamPubTZDateColFactory
+public interface ICFBamProtTZDateColFactory extends ICFBamPubTZDateColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public TZDateCol instances.
+	 *	Allocate a protected TableIdx key over protected TZDateCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTZDateColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZDateColByTableIdxKey asPublic(ICFBamProtTZDateColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected TZDateCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubTZDateColFactory
 	public ICFBamProtTZDateCol newProtRec();
 
 	/**
+	 *	Allocate a public TZDateCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZDateCol asPublic(ICFBamProtTZDateCol src);
+
+	/**
 	 *	Allocate a protected TZDateCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTZDateColH newProtHRec();
+
+	/**
+	 *	Allocate a public TZDateCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZDateColH asPublic(ICFBamProtTZDateColH src);
 
 }

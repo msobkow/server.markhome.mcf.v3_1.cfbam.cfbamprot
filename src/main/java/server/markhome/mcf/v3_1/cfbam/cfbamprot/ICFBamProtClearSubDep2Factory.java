@@ -59,29 +59,44 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtClearSubDep2Factory protected interface for ClearSubDep2
  */
-public interface ICFBamProtClearSubDep2Factory
-extends ICFBamPubClearSubDep2Factory
+public interface ICFBamProtClearSubDep2Factory extends ICFBamPubClearSubDep2Factory
 {
 
 	/**
-	 *	Allocate a protected ClearSubDep1Idx key over public ClearSubDep2 instances.
+	 *	Allocate a protected ClearSubDep1Idx key over protected ClearSubDep2 instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtClearSubDep2ByClearSubDep1IdxKey newProtByClearSubDep1IdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public ClearSubDep2 instances.
+	 *	Allocate a public ClearSubDep1Idx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearSubDep2ByClearSubDep1IdxKey asPublic(ICFBamProtClearSubDep2ByClearSubDep1IdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected ClearSubDep2 instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtClearSubDep2ByUNameIdxKey newProtByUNameIdxKey();
+
+	/**
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearSubDep2ByUNameIdxKey asPublic(ICFBamProtClearSubDep2ByUNameIdxKey src);
 
 	/**
 	 *	Allocate a protected ClearSubDep2 interface implementation.
@@ -91,10 +106,24 @@ extends ICFBamPubClearSubDep2Factory
 	public ICFBamProtClearSubDep2 newProtRec();
 
 	/**
+	 *	Allocate a public ClearSubDep2 interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearSubDep2 asPublic(ICFBamProtClearSubDep2 src);
+
+	/**
 	 *	Allocate a protected ClearSubDep2 history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtClearSubDep2H newProtHRec();
+
+	/**
+	 *	Allocate a public ClearSubDep2 history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearSubDep2H asPublic(ICFBamProtClearSubDep2H src);
 
 }

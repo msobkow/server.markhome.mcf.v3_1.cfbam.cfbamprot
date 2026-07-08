@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for BlobDef.
+// Description: Java 25 protlic DbIO interface for BlobDef.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtBlobDefTable protected database interface for BlobDef has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtBlobDefTable protlic database interface for BlobDef has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtBlobDefTable
+extends ICFBamProtAtomTable,
+	ICFBamPubBlobDefTable
 {
 	public static final String TABLE_NAME = "BlobDef";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtBlobDefTable
 	public ICFBamProtBlobDef protcreateBlobDef( ICFSecProtAuthorization Authorization,
 		ICFBamProtBlobDef rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtBlobDef protcreateBlobDef( ICFSecProtAuthorization Authorization,
+		ICFBamPubBlobDef rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtBlobDefTable
 	 */
 	public ICFBamProtBlobDef protupdateBlobDef( ICFSecProtAuthorization Authorization,
 		ICFBamProtBlobDef rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtBlobDef protupdateBlobDef( ICFSecProtAuthorization Authorization,
+		ICFBamPubBlobDef rec );
 
 
 	/**
@@ -135,6 +161,15 @@ public interface ICFBamProtBlobDefTable
 	public void protdeleteBlobDefByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
+	 *	Delete the BlobDef instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
 	 *	Delete the BlobDef instances identified by the key ScopeIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -153,6 +188,15 @@ public interface ICFBamProtBlobDefTable
 	 */
 	public void protdeleteBlobDefByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the BlobDef instances identified by the key DefSchemaIdx.
 	 *
@@ -173,6 +217,15 @@ public interface ICFBamProtBlobDefTable
 	public void protdeleteBlobDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
+	 *	Delete the BlobDef instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
 	 *	Delete the BlobDef instances identified by the key PrevIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -192,6 +245,15 @@ public interface ICFBamProtBlobDefTable
 	public void protdeleteBlobDefByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
+	 *	Delete the BlobDef instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
 	 *	Delete the BlobDef instances identified by the key NextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -210,6 +272,15 @@ public interface ICFBamProtBlobDefTable
 	 */
 	public void protdeleteBlobDefByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the BlobDef instances identified by the key ContPrevIdx.
 	 *
@@ -233,6 +304,15 @@ public interface ICFBamProtBlobDefTable
 	public void protdeleteBlobDefByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
+	 *	Delete the BlobDef instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
 	 *	Delete the BlobDef instances identified by the key ContNextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -254,10 +334,126 @@ public interface ICFBamProtBlobDefTable
 	 */
 	public void protdeleteBlobDefByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteBlobDef( ICFSecProtAuthorization Authorization,
+		ICFBamPubBlobDef rec );
+	/**
+	 *	Delete the BlobDef instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteBlobDefByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
+	 *	Delete the BlobDef instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteBlobDefByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
-	 *	Read the derived BlobDef record instance by primary key.
+	 *	Read the derived BlobDef record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the BlobDef instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtBlobDef protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived BlobDef record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the BlobDef instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubBlobDef pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived BlobDef record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -269,8 +465,9 @@ public interface ICFBamProtBlobDefTable
 	public ICFBamProtBlobDef protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived BlobDef record instance by primary key.
+	 *	Lock the derived BlobDef record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -281,6 +478,32 @@ public interface ICFBamProtBlobDefTable
 	 */
 	public ICFBamProtBlobDef protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived BlobDef record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the BlobDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubBlobDef publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived BlobDef record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the BlobDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtBlobDef protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all BlobDef instances.
@@ -411,6 +634,66 @@ public interface ICFBamProtBlobDefTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtBlobDef protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific BlobDef record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the BlobDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtBlobDef protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific BlobDef record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the BlobDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubBlobDef pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific BlobDef record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the BlobDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtBlobDef protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific BlobDef record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the BlobDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubBlobDef publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -574,7 +857,7 @@ public interface ICFBamProtBlobDefTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamBlobDef protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtBlobDef protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

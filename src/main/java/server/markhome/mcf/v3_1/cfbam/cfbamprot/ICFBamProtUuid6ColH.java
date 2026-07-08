@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a Uuid6Col history object
+// Description: Java 25 protlic interface for a Uuid6Col history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtUuid6ColH provides access to protected history records matching the CFBamProtUuid6Col object change history.
+ *	ICFBamProtUuid6ColH provides access to protlic history records matching the CFBamProtUuid6Col object change history.
  */
 public interface ICFBamProtUuid6ColH extends ICFBamProtUuid6DefH
 {

@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for DbKeyHash256Def.
+// Description: Java 25 protlic DbIO interface for DbKeyHash256Def.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtDbKeyHash256DefTable protected database interface for DbKeyHash256Def has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtDbKeyHash256DefTable protlic database interface for DbKeyHash256Def has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtDbKeyHash256DefTable
+extends ICFBamProtAtomTable,
+	ICFBamPubDbKeyHash256DefTable
 {
 	public static final String TABLE_NAME = "DbKeyHash256Def";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtDbKeyHash256DefTable
 	public ICFBamProtDbKeyHash256Def protcreateDbKeyHash256Def( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash256Def rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtDbKeyHash256Def protcreateDbKeyHash256Def( ICFSecProtAuthorization Authorization,
+		ICFBamPubDbKeyHash256Def rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtDbKeyHash256DefTable
 	 */
 	public ICFBamProtDbKeyHash256Def protupdateDbKeyHash256Def( ICFSecProtAuthorization Authorization,
 		ICFBamProtDbKeyHash256Def rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtDbKeyHash256Def protupdateDbKeyHash256Def( ICFSecProtAuthorization Authorization,
+		ICFBamPubDbKeyHash256Def rec );
 
 
 	/**
@@ -135,6 +161,15 @@ public interface ICFBamProtDbKeyHash256DefTable
 	public void protdeleteDbKeyHash256DefByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
 	 *	Delete the DbKeyHash256Def instances identified by the key ScopeIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -153,6 +188,15 @@ public interface ICFBamProtDbKeyHash256DefTable
 	 */
 	public void protdeleteDbKeyHash256DefByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash256Def instances identified by the key DefSchemaIdx.
 	 *
@@ -173,6 +217,15 @@ public interface ICFBamProtDbKeyHash256DefTable
 	public void protdeleteDbKeyHash256DefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
 	 *	Delete the DbKeyHash256Def instances identified by the key PrevIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -192,6 +245,15 @@ public interface ICFBamProtDbKeyHash256DefTable
 	public void protdeleteDbKeyHash256DefByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
 	 *	Delete the DbKeyHash256Def instances identified by the key NextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -210,6 +272,15 @@ public interface ICFBamProtDbKeyHash256DefTable
 	 */
 	public void protdeleteDbKeyHash256DefByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the DbKeyHash256Def instances identified by the key ContPrevIdx.
 	 *
@@ -233,6 +304,15 @@ public interface ICFBamProtDbKeyHash256DefTable
 	public void protdeleteDbKeyHash256DefByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
 	 *	Delete the DbKeyHash256Def instances identified by the key ContNextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -254,10 +334,126 @@ public interface ICFBamProtDbKeyHash256DefTable
 	 */
 	public void protdeleteDbKeyHash256DefByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteDbKeyHash256Def( ICFSecProtAuthorization Authorization,
+		ICFBamPubDbKeyHash256Def rec );
+	/**
+	 *	Delete the DbKeyHash256Def instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
+	 *	Delete the DbKeyHash256Def instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDbKeyHash256DefByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
-	 *	Read the derived DbKeyHash256Def record instance by primary key.
+	 *	Read the derived DbKeyHash256Def record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DbKeyHash256Def instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtDbKeyHash256Def protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived DbKeyHash256Def record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DbKeyHash256Def instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubDbKeyHash256Def pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived DbKeyHash256Def record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -269,8 +465,9 @@ public interface ICFBamProtDbKeyHash256DefTable
 	public ICFBamProtDbKeyHash256Def protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived DbKeyHash256Def record instance by primary key.
+	 *	Lock the derived DbKeyHash256Def record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -281,6 +478,32 @@ public interface ICFBamProtDbKeyHash256DefTable
 	 */
 	public ICFBamProtDbKeyHash256Def protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived DbKeyHash256Def record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DbKeyHash256Def instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubDbKeyHash256Def publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived DbKeyHash256Def record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DbKeyHash256Def instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtDbKeyHash256Def protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all DbKeyHash256Def instances.
@@ -411,6 +634,66 @@ public interface ICFBamProtDbKeyHash256DefTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDbKeyHash256Def protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific DbKeyHash256Def record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DbKeyHash256Def instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtDbKeyHash256Def protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific DbKeyHash256Def record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DbKeyHash256Def instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubDbKeyHash256Def pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific DbKeyHash256Def record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DbKeyHash256Def instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtDbKeyHash256Def protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific DbKeyHash256Def record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DbKeyHash256Def instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubDbKeyHash256Def publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -574,7 +857,7 @@ public interface ICFBamProtDbKeyHash256DefTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamDbKeyHash256Def protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtDbKeyHash256Def protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

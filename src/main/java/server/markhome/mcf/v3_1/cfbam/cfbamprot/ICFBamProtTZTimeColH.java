@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a TZTimeCol history object
+// Description: Java 25 protlic interface for a TZTimeCol history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtTZTimeColH provides access to protected history records matching the CFBamProtTZTimeCol object change history.
+ *	ICFBamProtTZTimeColH provides access to protlic history records matching the CFBamProtTZTimeCol object change history.
  */
 public interface ICFBamProtTZTimeColH extends ICFBamProtTZTimeDefH
 {

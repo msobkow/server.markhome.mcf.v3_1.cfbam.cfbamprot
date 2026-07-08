@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for Int16Col.
+// Description: Java 25 protlic DbIO interface for Int16Col.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtInt16ColTable protected database interface for Int16Col has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtInt16ColTable protlic database interface for Int16Col has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtInt16ColTable
+extends ICFBamProtInt16DefTable,
+	ICFBamPubInt16ColTable
 {
 	public static final String TABLE_NAME = "Int16Col";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtInt16ColTable
 	public ICFBamProtInt16Col protcreateInt16Col( ICFSecProtAuthorization Authorization,
 		ICFBamProtInt16Col rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtInt16Col protcreateInt16Col( ICFSecProtAuthorization Authorization,
+		ICFBamPubInt16Col rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtInt16ColTable
 	 */
 	public ICFBamProtInt16Col protupdateInt16Col( ICFSecProtAuthorization Authorization,
 		ICFBamProtInt16Col rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtInt16Col protupdateInt16Col( ICFSecProtAuthorization Authorization,
+		ICFBamPubInt16Col rec );
 
 
 	/**
@@ -122,6 +148,15 @@ public interface ICFBamProtInt16ColTable
 	 */
 	public void protdeleteInt16ColByTableIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtInt16ColByTableIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key TableIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByTableIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubInt16ColByTableIdxKey argKey );
 	/**
 	 *	Delete the Int16Col instance identified by the primary key.
 	 *
@@ -154,6 +189,15 @@ public interface ICFBamProtInt16ColTable
 	public void protdeleteInt16ColByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
+	 *	Delete the Int16Col instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
 	 *	Delete the Int16Col instances identified by the key ScopeIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -172,6 +216,15 @@ public interface ICFBamProtInt16ColTable
 	 */
 	public void protdeleteInt16ColByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the Int16Col instances identified by the key DefSchemaIdx.
 	 *
@@ -192,6 +245,15 @@ public interface ICFBamProtInt16ColTable
 	public void protdeleteInt16ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
+	 *	Delete the Int16Col instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
 	 *	Delete the Int16Col instances identified by the key PrevIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -211,6 +273,15 @@ public interface ICFBamProtInt16ColTable
 	public void protdeleteInt16ColByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
+	 *	Delete the Int16Col instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
 	 *	Delete the Int16Col instances identified by the key NextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -229,6 +300,15 @@ public interface ICFBamProtInt16ColTable
 	 */
 	public void protdeleteInt16ColByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the Int16Col instances identified by the key ContPrevIdx.
 	 *
@@ -252,6 +332,15 @@ public interface ICFBamProtInt16ColTable
 	public void protdeleteInt16ColByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
+	 *	Delete the Int16Col instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
 	 *	Delete the Int16Col instances identified by the key ContNextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -273,10 +362,135 @@ public interface ICFBamProtInt16ColTable
 	 */
 	public void protdeleteInt16ColByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteInt16Col( ICFSecProtAuthorization Authorization,
+		ICFBamPubInt16Col rec );
+	/**
+	 *	Delete the Int16Col instances identified by the key TableIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByTableIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubInt16ColByTableIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteInt16ColByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
+	 *	Delete the Int16Col instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteInt16ColByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
-	 *	Read the derived Int16Col record instance by primary key.
+	 *	Read the derived Int16Col record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Int16Col instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtInt16Col protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived Int16Col record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Int16Col instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubInt16Col pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived Int16Col record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -288,8 +502,9 @@ public interface ICFBamProtInt16ColTable
 	public ICFBamProtInt16Col protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived Int16Col record instance by primary key.
+	 *	Lock the derived Int16Col record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -300,6 +515,32 @@ public interface ICFBamProtInt16ColTable
 	 */
 	public ICFBamProtInt16Col protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived Int16Col record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Int16Col instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubInt16Col publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived Int16Col record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Int16Col instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtInt16Col protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all Int16Col instances.
@@ -442,6 +683,66 @@ public interface ICFBamProtInt16ColTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtInt16Col protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Int16Col record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Int16Col instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtInt16Col protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Int16Col record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Int16Col instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubInt16Col pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Int16Col record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Int16Col instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtInt16Col protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Int16Col record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Int16Col instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubInt16Col publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -619,7 +920,7 @@ public interface ICFBamProtInt16ColTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamInt16Col protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtInt16Col protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

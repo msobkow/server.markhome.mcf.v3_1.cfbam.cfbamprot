@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for Relation.
+// Description: Java 25 protlic DbIO interface for Relation.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtRelationTable protected database interface for Relation has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtRelationTable protlic database interface for Relation has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtRelationTable
+extends ICFBamProtScopeTable,
+	ICFBamPubRelationTable
 {
 	public static final String TABLE_NAME = "Relation";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtRelationTable
 	public ICFBamProtRelation protcreateRelation( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelation rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtRelation protcreateRelation( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelation rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtRelationTable
 	 */
 	public ICFBamProtRelation protupdateRelation( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelation rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtRelation protupdateRelation( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelation rec );
 
 
 	/**
@@ -126,6 +152,15 @@ public interface ICFBamProtRelationTable
 	public void protdeleteRelationByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByUNameIdxKey argKey );
 	/**
+	 *	Delete the Relation instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByUNameIdxKey argKey );
+	/**
 	 *	Delete the Relation instances identified by the key RelTableIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -145,6 +180,15 @@ public interface ICFBamProtRelationTable
 	public void protdeleteRelationByRelTableIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByRelTableIdxKey argKey );
 	/**
+	 *	Delete the Relation instances identified by the key RelTableIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByRelTableIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByRelTableIdxKey argKey );
+	/**
 	 *	Delete the Relation instances identified by the key RelCodeVisIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -163,6 +207,15 @@ public interface ICFBamProtRelationTable
 	 */
 	public void protdeleteRelationByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByRelCodeVisIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key RelCodeVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByRelCodeVisIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key RelTableCodeVisX.
 	 *
@@ -186,6 +239,15 @@ public interface ICFBamProtRelationTable
 	public void protdeleteRelationByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByRelTableCodeVisXKey argKey );
 	/**
+	 *	Delete the Relation instances identified by the key RelTableCodeVisX.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByRelTableCodeVisXKey argKey );
+	/**
 	 *	Delete the Relation instances identified by the key DefSchemaIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -204,6 +266,15 @@ public interface ICFBamProtRelationTable
 	 */
 	public void protdeleteRelationByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key FromKeyIdx.
 	 *
@@ -224,6 +295,15 @@ public interface ICFBamProtRelationTable
 	public void protdeleteRelationByFromKeyIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByFromKeyIdxKey argKey );
 	/**
+	 *	Delete the Relation instances identified by the key FromKeyIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByFromKeyIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByFromKeyIdxKey argKey );
+	/**
 	 *	Delete the Relation instances identified by the key ToTblIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -242,6 +322,15 @@ public interface ICFBamProtRelationTable
 	 */
 	public void protdeleteRelationByToTblIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByToTblIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key ToTblIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByToTblIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByToTblIdxKey argKey );
 	/**
 	 *	Delete the Relation instances identified by the key ToKeyIdx.
 	 *
@@ -262,6 +351,15 @@ public interface ICFBamProtRelationTable
 	public void protdeleteRelationByToKeyIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByToKeyIdxKey argKey );
 	/**
+	 *	Delete the Relation instances identified by the key ToKeyIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByToKeyIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByToKeyIdxKey argKey );
+	/**
 	 *	Delete the Relation instances identified by the key NarrowedIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -280,6 +378,15 @@ public interface ICFBamProtRelationTable
 	 */
 	public void protdeleteRelationByNarrowedIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRelationByNarrowedIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key NarrowedIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByNarrowedIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByNarrowedIdxKey argKey );
 	/**
 	 *	Delete the Relation instance identified by the primary key.
 	 *
@@ -308,10 +415,153 @@ public interface ICFBamProtRelationTable
 	 */
 	public void protdeleteRelationByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteRelation( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelation rec );
+	/**
+	 *	Delete the Relation instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByUNameIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key RelTableIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByRelTableIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByRelTableIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key RelCodeVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByRelCodeVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByRelCodeVisIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key RelTableCodeVisX.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByRelTableCodeVisX( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByRelTableCodeVisXKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key FromKeyIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByFromKeyIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByFromKeyIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key ToTblIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByToTblIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByToTblIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key ToKeyIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByToKeyIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByToKeyIdxKey argKey );
+	/**
+	 *	Delete the Relation instances identified by the key NarrowedIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByNarrowedIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRelationByNarrowedIdxKey argKey );
+	/**
+	 *	Delete the Relation instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteRelationByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the Relation instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteRelationByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
-	 *	Read the derived Relation record instance by primary key.
+	 *	Read the derived Relation record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Relation instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtRelation protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived Relation record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Relation instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubRelation pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived Relation record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -323,8 +573,9 @@ public interface ICFBamProtRelationTable
 	public ICFBamProtRelation protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived Relation record instance by primary key.
+	 *	Lock the derived Relation record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -335,6 +586,32 @@ public interface ICFBamProtRelationTable
 	 */
 	public ICFBamProtRelation protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived Relation record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Relation instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubRelation publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived Relation record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Relation instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtRelation protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all Relation instances.
@@ -498,6 +775,66 @@ public interface ICFBamProtRelationTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRelation protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Relation record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Relation instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtRelation protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Relation record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Relation instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubRelation pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Relation record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Relation instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtRelation protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Relation record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Relation instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubRelation publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

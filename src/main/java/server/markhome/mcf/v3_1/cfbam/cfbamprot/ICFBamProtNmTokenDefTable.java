@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for NmTokenDef.
+// Description: Java 25 protlic DbIO interface for NmTokenDef.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtNmTokenDefTable protected database interface for NmTokenDef has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtNmTokenDefTable protlic database interface for NmTokenDef has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtNmTokenDefTable
+extends ICFBamProtAtomTable,
+	ICFBamPubNmTokenDefTable
 {
 	public static final String TABLE_NAME = "NmTokenDef";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtNmTokenDefTable
 	public ICFBamProtNmTokenDef protcreateNmTokenDef( ICFSecProtAuthorization Authorization,
 		ICFBamProtNmTokenDef rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtNmTokenDef protcreateNmTokenDef( ICFSecProtAuthorization Authorization,
+		ICFBamPubNmTokenDef rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtNmTokenDefTable
 	 */
 	public ICFBamProtNmTokenDef protupdateNmTokenDef( ICFSecProtAuthorization Authorization,
 		ICFBamProtNmTokenDef rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtNmTokenDef protupdateNmTokenDef( ICFSecProtAuthorization Authorization,
+		ICFBamPubNmTokenDef rec );
 
 
 	/**
@@ -135,6 +161,15 @@ public interface ICFBamProtNmTokenDefTable
 	public void protdeleteNmTokenDefByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByUNameIdxKey argKey );
 	/**
+	 *	Delete the NmTokenDef instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
 	 *	Delete the NmTokenDef instances identified by the key ScopeIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -153,6 +188,15 @@ public interface ICFBamProtNmTokenDefTable
 	 */
 	public void protdeleteNmTokenDefByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
 	/**
 	 *	Delete the NmTokenDef instances identified by the key DefSchemaIdx.
 	 *
@@ -173,6 +217,15 @@ public interface ICFBamProtNmTokenDefTable
 	public void protdeleteNmTokenDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByDefSchemaIdxKey argKey );
 	/**
+	 *	Delete the NmTokenDef instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
 	 *	Delete the NmTokenDef instances identified by the key PrevIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -192,6 +245,15 @@ public interface ICFBamProtNmTokenDefTable
 	public void protdeleteNmTokenDefByPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByPrevIdxKey argKey );
 	/**
+	 *	Delete the NmTokenDef instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
 	 *	Delete the NmTokenDef instances identified by the key NextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -210,6 +272,15 @@ public interface ICFBamProtNmTokenDefTable
 	 */
 	public void protdeleteNmTokenDefByNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByNextIdxKey argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
 	/**
 	 *	Delete the NmTokenDef instances identified by the key ContPrevIdx.
 	 *
@@ -233,6 +304,15 @@ public interface ICFBamProtNmTokenDefTable
 	public void protdeleteNmTokenDefByContPrevIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContPrevIdxKey argKey );
 	/**
+	 *	Delete the NmTokenDef instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
 	 *	Delete the NmTokenDef instances identified by the key ContNextIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -254,10 +334,126 @@ public interface ICFBamProtNmTokenDefTable
 	 */
 	public void protdeleteNmTokenDefByContNextIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtValueByContNextIdxKey argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteNmTokenDef( ICFSecProtAuthorization Authorization,
+		ICFBamPubNmTokenDef rec );
+	/**
+	 *	Delete the NmTokenDef instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteNmTokenDefByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByUNameIdxKey argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByScopeIdxKey argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key PrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByPrevIdxKey argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key NextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByNextIdxKey argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key ContPrevIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByContPrevIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContPrevIdxKey argKey );
+	/**
+	 *	Delete the NmTokenDef instances identified by the key ContNextIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteNmTokenDefByContNextIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubValueByContNextIdxKey argKey );
 
 
 	/**
-	 *	Read the derived NmTokenDef record instance by primary key.
+	 *	Read the derived NmTokenDef record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the NmTokenDef instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtNmTokenDef protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived NmTokenDef record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the NmTokenDef instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubNmTokenDef pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived NmTokenDef record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -269,8 +465,9 @@ public interface ICFBamProtNmTokenDefTable
 	public ICFBamProtNmTokenDef protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived NmTokenDef record instance by primary key.
+	 *	Lock the derived NmTokenDef record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -281,6 +478,32 @@ public interface ICFBamProtNmTokenDefTable
 	 */
 	public ICFBamProtNmTokenDef protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived NmTokenDef record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the NmTokenDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubNmTokenDef publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived NmTokenDef record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the NmTokenDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtNmTokenDef protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all NmTokenDef instances.
@@ -411,6 +634,66 @@ public interface ICFBamProtNmTokenDefTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtNmTokenDef protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific NmTokenDef record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the NmTokenDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtNmTokenDef protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific NmTokenDef record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the NmTokenDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubNmTokenDef pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific NmTokenDef record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the NmTokenDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtNmTokenDef protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific NmTokenDef record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the NmTokenDef instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubNmTokenDef publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -574,7 +857,7 @@ public interface ICFBamProtNmTokenDefTable
 	 *
 	 *	@return	The refreshed record after it has been moved
 	 */
-	public ICFBamNmTokenDef protmoveRecDown( ICFSecProtAuthorization Authorization,
+	public ICFBamProtNmTokenDef protmoveRecDown( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id,
 		int revision );
 }

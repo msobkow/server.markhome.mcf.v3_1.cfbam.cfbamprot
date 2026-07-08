@@ -53,23 +53,26 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtClearTopDep persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtClearTopDep extends ICFBamProtClearDep
 {
-	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
-	public static final String NAME_INIT_VALUE = new String( "" );
-	public static final String S_PREVID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVID_INIT_VALUE );
-	public static final String S_NEXTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTID_INIT_VALUE );
+	public static final String S_TABLEID_INIT_VALUE = ICFBamPubClearTopDep.S_TABLEID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubClearTopDep.TABLEID_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFBamPubClearTopDep.NAME_INIT_VALUE;
+	public static final String S_PREVID_INIT_VALUE = ICFBamPubClearTopDep.S_PREVID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = ICFBamPubClearTopDep.PREVID_INIT_VALUE;
+	public static final String S_NEXTID_INIT_VALUE = ICFBamPubClearTopDep.S_NEXTID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = ICFBamPubClearTopDep.NEXTID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa818;
 	public final static String S_CLASS_CODE = "a818";
 
@@ -78,10 +81,13 @@ public interface ICFBamProtClearTopDep extends ICFBamProtClearDep
 	public ICFBamProtClearTopDep getOptionalLookupNext();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public void setOptionalLookupPrev(ICFBamProtClearTopDep argObj);
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
+	public void setOptionalLookupPrev(ICFBamPubClearTopDep argObj);
 	public void setOptionalLookupNext(ICFBamProtClearTopDep argObj);
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
+	public void setOptionalLookupNext(ICFBamPubClearTopDep argObj);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
@@ -97,7 +103,11 @@ public interface ICFBamProtClearTopDep extends ICFBamProtClearDep
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
-	public void setProtClearTopDep( ICFBamProtClearTopDep src );
+	public void setClearTopDep( ICFBamProtClearTopDep src );
+	public void set( ICFBamPubScope src );
 	public void set( ICFBamProtScopeH src );
-	public void setProtClearTopDep( ICFBamProtClearTopDepH src );
+	public void setClearTopDep( ICFBamProtClearTopDepH src );
+	public void set( ICFBamPubScopeH src );
+	public void setClearTopDep( ICFBamPubClearTopDepH src );
+
 }

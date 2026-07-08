@@ -53,27 +53,30 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtSchemaRef persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtSchemaRef extends ICFBamProtScope
 {
-	public static final String S_SCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 SCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SCHEMAID_INIT_VALUE );
-	public static final String NAME_INIT_VALUE = new String( "" );
-	public static final String REFMODELNAME_INIT_VALUE = new String( "" );
-	public static final String INCLUDEROOT_INIT_VALUE = new String( "" );
-	public static final String S_REFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 REFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_REFSCHEMAID_INIT_VALUE );
-	public static final String S_PREVID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVID_INIT_VALUE );
-	public static final String S_NEXTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTID_INIT_VALUE );
+	public static final String S_SCHEMAID_INIT_VALUE = ICFBamPubSchemaRef.S_SCHEMAID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 SCHEMAID_INIT_VALUE = ICFBamPubSchemaRef.SCHEMAID_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFBamPubSchemaRef.NAME_INIT_VALUE;
+	public static final String REFMODELNAME_INIT_VALUE = ICFBamPubSchemaRef.REFMODELNAME_INIT_VALUE;
+	public static final String INCLUDEROOT_INIT_VALUE = ICFBamPubSchemaRef.INCLUDEROOT_INIT_VALUE;
+	public static final String S_REFSCHEMAID_INIT_VALUE = ICFBamPubSchemaRef.S_REFSCHEMAID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 REFSCHEMAID_INIT_VALUE = ICFBamPubSchemaRef.REFSCHEMAID_INIT_VALUE;
+	public static final String S_PREVID_INIT_VALUE = ICFBamPubSchemaRef.S_PREVID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = ICFBamPubSchemaRef.PREVID_INIT_VALUE;
+	public static final String S_NEXTID_INIT_VALUE = ICFBamPubSchemaRef.S_NEXTID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = ICFBamPubSchemaRef.NEXTID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa803;
 	public final static String S_CLASS_CODE = "a803";
 
@@ -83,12 +86,16 @@ public interface ICFBamProtSchemaRef extends ICFBamProtScope
 	public ICFBamProtSchemaRef getOptionalLookupNext();
 	public void setRequiredContainerSchema(ICFBamProtSchemaDef argObj);
 	public void setRequiredContainerSchema(CFLibDbKeyHash256 argSchemaId);
+	public void setRequiredContainerSchema(ICFBamPubSchemaDef argObj);
 	public void setOptionalLookupRefSchema(ICFBamProtSchemaDef argObj);
 	public void setOptionalLookupRefSchema(CFLibDbKeyHash256 argRefSchemaId);
+	public void setOptionalLookupRefSchema(ICFBamPubSchemaDef argObj);
 	public void setOptionalLookupPrev(ICFBamProtSchemaRef argObj);
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
+	public void setOptionalLookupPrev(ICFBamPubSchemaRef argObj);
 	public void setOptionalLookupNext(ICFBamProtSchemaRef argObj);
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
+	public void setOptionalLookupNext(ICFBamPubSchemaRef argObj);
 	public CFLibDbKeyHash256 getRequiredSchemaId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
@@ -109,7 +116,11 @@ public interface ICFBamProtSchemaRef extends ICFBamProtScope
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
-	public void setProtSchemaRef( ICFBamProtSchemaRef src );
+	public void setSchemaRef( ICFBamProtSchemaRef src );
+	public void set( ICFBamPubScope src );
 	public void set( ICFBamProtScopeH src );
-	public void setProtSchemaRef( ICFBamProtSchemaRefH src );
+	public void setSchemaRef( ICFBamProtSchemaRefH src );
+	public void set( ICFBamPubScopeH src );
+	public void setSchemaRef( ICFBamPubSchemaRefH src );
+
 }

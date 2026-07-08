@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtFloatTypeFactory protected interface for FloatType
  */
-public interface ICFBamProtFloatTypeFactory
-extends ICFBamPubFloatTypeFactory
+public interface ICFBamProtFloatTypeFactory extends ICFBamPubFloatTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public FloatType instances.
+	 *	Allocate a protected SchemaIdx key over protected FloatType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtFloatTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubFloatTypeBySchemaIdxKey asPublic(ICFBamProtFloatTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected FloatType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubFloatTypeFactory
 	public ICFBamProtFloatType newProtRec();
 
 	/**
+	 *	Allocate a public FloatType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubFloatType asPublic(ICFBamProtFloatType src);
+
+	/**
 	 *	Allocate a protected FloatType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtFloatTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public FloatType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubFloatTypeH asPublic(ICFBamProtFloatTypeH src);
 
 }

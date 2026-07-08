@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtServerProcFactory protected interface for ServerProc
  */
-public interface ICFBamProtServerProcFactory
-extends ICFBamPubServerProcFactory
+public interface ICFBamProtServerProcFactory extends ICFBamPubServerProcFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubServerProcFactory
 	public ICFBamProtServerProc newProtRec();
 
 	/**
+	 *	Allocate a public ServerProc interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerProc asPublic(ICFBamProtServerProc src);
+
+	/**
 	 *	Allocate a protected ServerProc history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerProcH newProtHRec();
+
+	/**
+	 *	Allocate a public ServerProc history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerProcH asPublic(ICFBamProtServerProcH src);
 
 }

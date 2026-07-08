@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SchemaDef history object
+// Description: Java 25 protlic interface for a SchemaDef history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtSchemaDefH provides access to protected history records matching the CFBamProtSchemaDef object change history.
+ *	ICFBamProtSchemaDefH provides access to protlic history records matching the CFBamProtSchemaDef object change history.
  */
 public interface ICFBamProtSchemaDefH extends ICFBamProtScopeH
 {

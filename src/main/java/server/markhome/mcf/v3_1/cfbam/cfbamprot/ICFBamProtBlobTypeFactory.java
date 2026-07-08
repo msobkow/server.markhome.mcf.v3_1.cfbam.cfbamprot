@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtBlobTypeFactory protected interface for BlobType
  */
-public interface ICFBamProtBlobTypeFactory
-extends ICFBamPubBlobTypeFactory
+public interface ICFBamProtBlobTypeFactory extends ICFBamPubBlobTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public BlobType instances.
+	 *	Allocate a protected SchemaIdx key over protected BlobType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtBlobTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubBlobTypeBySchemaIdxKey asPublic(ICFBamProtBlobTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected BlobType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubBlobTypeFactory
 	public ICFBamProtBlobType newProtRec();
 
 	/**
+	 *	Allocate a public BlobType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubBlobType asPublic(ICFBamProtBlobType src);
+
+	/**
 	 *	Allocate a protected BlobType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtBlobTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public BlobType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubBlobTypeH asPublic(ICFBamProtBlobTypeH src);
 
 }

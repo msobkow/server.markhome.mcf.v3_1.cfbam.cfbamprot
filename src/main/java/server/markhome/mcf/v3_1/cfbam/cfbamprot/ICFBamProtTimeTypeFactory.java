@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTimeTypeFactory protected interface for TimeType
  */
-public interface ICFBamProtTimeTypeFactory
-extends ICFBamPubTimeTypeFactory
+public interface ICFBamProtTimeTypeFactory extends ICFBamPubTimeTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public TimeType instances.
+	 *	Allocate a protected SchemaIdx key over protected TimeType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTimeTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimeTypeBySchemaIdxKey asPublic(ICFBamProtTimeTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected TimeType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubTimeTypeFactory
 	public ICFBamProtTimeType newProtRec();
 
 	/**
+	 *	Allocate a public TimeType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimeType asPublic(ICFBamProtTimeType src);
+
+	/**
 	 *	Allocate a protected TimeType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTimeTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public TimeType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimeTypeH asPublic(ICFBamProtTimeTypeH src);
 
 }

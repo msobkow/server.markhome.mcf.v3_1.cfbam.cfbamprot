@@ -53,10 +53,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtEnumTag persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -65,22 +68,22 @@ public interface ICFBamProtEnumTag
 {
 	public static final short ENUMCODE_MIN_VALUE = (short)0;
 	public static final short ENUMCODE_MAX_VALUE = (short)32767;
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
-	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
-	public static final String S_ENUMID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 ENUMID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ENUMID_INIT_VALUE );
-	public static final short ENUMCODE_INIT_VALUE = (short)0;
-	public static final String NAME_INIT_VALUE = new String( "" );
-	public static final String S_PREVID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVID_INIT_VALUE );
-	public static final String S_NEXTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTID_INIT_VALUE );
+	public static final String S_INIT_CREATED_BY = ICFBamPubEnumTag.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFBamPubEnumTag.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFBamPubEnumTag.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFBamPubEnumTag.INIT_UPDATED_BY;
+	public static final String S_ID_INIT_VALUE = ICFBamPubEnumTag.S_ID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFBamPubEnumTag.ID_INIT_VALUE;
+	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubEnumTag.S_DEFSCHEMAID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubEnumTag.DEFSCHEMAID_INIT_VALUE;
+	public static final String S_ENUMID_INIT_VALUE = ICFBamPubEnumTag.S_ENUMID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 ENUMID_INIT_VALUE = ICFBamPubEnumTag.ENUMID_INIT_VALUE;
+	public static final short ENUMCODE_INIT_VALUE = ICFBamPubEnumTag.ENUMCODE_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFBamPubEnumTag.NAME_INIT_VALUE;
+	public static final String S_PREVID_INIT_VALUE = ICFBamPubEnumTag.S_PREVID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = ICFBamPubEnumTag.PREVID_INIT_VALUE;
+	public static final String S_NEXTID_INIT_VALUE = ICFBamPubEnumTag.S_NEXTID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = ICFBamPubEnumTag.NEXTID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa822;
 	public final static String S_CLASS_CODE = "a822";
 
@@ -95,8 +98,8 @@ public interface ICFBamProtEnumTag
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getProtPKey();
-	public void setProtPKey(CFLibDbKeyHash256 requiredId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredId);
 	
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
@@ -109,12 +112,16 @@ public interface ICFBamProtEnumTag
 	public ICFBamProtEnumTag getOptionalLookupNext();
 	public void setRequiredContainerEnumDef(ICFBamProtEnumDef argObj);
 	public void setRequiredContainerEnumDef(CFLibDbKeyHash256 argEnumId);
+	public void setRequiredContainerEnumDef(ICFBamPubEnumDef argObj);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public void setOptionalLookupPrev(ICFBamProtEnumTag argObj);
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
+	public void setOptionalLookupPrev(ICFBamPubEnumTag argObj);
 	public void setOptionalLookupNext(ICFBamProtEnumTag argObj);
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
+	public void setOptionalLookupNext(ICFBamPubEnumTag argObj);
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public CFLibDbKeyHash256 getRequiredEnumId();
 	public Short getOptionalEnumCode();
@@ -133,9 +140,13 @@ public interface ICFBamProtEnumTag
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtEnumTag src );
-	public void setProtEnumTag( ICFBamProtEnumTag src );
+	public void setEnumTag( ICFBamProtEnumTag src );
+	public void set( ICFBamPubEnumTag src );
 	public void set( ICFBamProtEnumTagH src );
-	public void setProtEnumTag( ICFBamProtEnumTagH src );
+	public void setEnumTag( ICFBamProtEnumTagH src );
+	public void set( ICFBamPubEnumTagH src );
+	public void setEnumTag( ICFBamPubEnumTagH src );
+
 
 	public String getXmlAttrFragment();
 

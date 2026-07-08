@@ -59,36 +59,58 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtSchemaRoleFactory protected interface for SchemaRole
  */
-public interface ICFBamProtSchemaRoleFactory
-extends ICFBamPubSchemaRoleFactory
+public interface ICFBamProtSchemaRoleFactory extends ICFBamPubSchemaRoleFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public SchemaRole instances.
+	 *	Allocate a protected SchemaIdx key over protected SchemaRole instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRoleBySchemaIdxKey newProtBySchemaIdxKey();
 
 	/**
-	 *	Allocate a protected RoleScopeIdx key over public SchemaRole instances.
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRoleBySchemaIdxKey asPublic(ICFBamProtSchemaRoleBySchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected RoleScopeIdx key over protected SchemaRole instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRoleByRoleScopeIdxKey newProtByRoleScopeIdxKey();
 
 	/**
-	 *	Allocate a protected SchRoleScpIdx key over public SchemaRole instances.
+	 *	Allocate a public RoleScopeIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRoleByRoleScopeIdxKey asPublic(ICFBamProtSchemaRoleByRoleScopeIdxKey src);
+
+	/**
+	 *	Allocate a protected SchRoleScpIdx key over protected SchemaRole instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRoleBySchRoleScpIdxKey newProtBySchRoleScpIdxKey();
+
+	/**
+	 *	Allocate a public SchRoleScpIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRoleBySchRoleScpIdxKey asPublic(ICFBamProtSchemaRoleBySchRoleScpIdxKey src);
 
 	/**
 	 *	Allocate a protected SchemaRole interface implementation.
@@ -98,10 +120,24 @@ extends ICFBamPubSchemaRoleFactory
 	public ICFBamProtSchemaRole newProtRec();
 
 	/**
+	 *	Allocate a public SchemaRole interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRole asPublic(ICFBamProtSchemaRole src);
+
+	/**
 	 *	Allocate a protected SchemaRole history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRoleH newProtHRec();
+
+	/**
+	 *	Allocate a public SchemaRole history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRoleH asPublic(ICFBamProtSchemaRoleH src);
 
 }

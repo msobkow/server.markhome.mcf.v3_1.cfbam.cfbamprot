@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtRelationColFactory protected interface for RelationCol
  */
-public interface ICFBamProtRelationColFactory
-extends ICFBamPubRelationColFactory
+public interface ICFBamProtRelationColFactory extends ICFBamPubRelationColFactory
 {
 
 	/**
@@ -77,67 +78,137 @@ extends ICFBamPubRelationColFactory
 	ICFBamProtRelationColHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public RelationCol instances.
+	 *	Allocate a public primary history key for RelationCol instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFBamPubRelationColHPKey asPublic(ICFBamProtRelationColHPKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected RelationCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected RelationIdx key over public RelationCol instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColByUNameIdxKey asPublic(ICFBamProtRelationColByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected RelationIdx key over protected RelationCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColByRelationIdxKey newProtByRelationIdxKey();
 
 	/**
-	 *	Allocate a protected DefSchemaIdx key over public RelationCol instances.
+	 *	Allocate a public RelationIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColByRelationIdxKey asPublic(ICFBamProtRelationColByRelationIdxKey src);
+
+	/**
+	 *	Allocate a protected DefSchemaIdx key over protected RelationCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColByDefSchemaIdxKey newProtByDefSchemaIdxKey();
 
 	/**
-	 *	Allocate a protected FromColIdx key over public RelationCol instances.
+	 *	Allocate a public DefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColByDefSchemaIdxKey asPublic(ICFBamProtRelationColByDefSchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected FromColIdx key over protected RelationCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColByFromColIdxKey newProtByFromColIdxKey();
 
 	/**
-	 *	Allocate a protected ToColIdx key over public RelationCol instances.
+	 *	Allocate a public FromColIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColByFromColIdxKey asPublic(ICFBamProtRelationColByFromColIdxKey src);
+
+	/**
+	 *	Allocate a protected ToColIdx key over protected RelationCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColByToColIdxKey newProtByToColIdxKey();
 
 	/**
-	 *	Allocate a protected PrevIdx key over public RelationCol instances.
+	 *	Allocate a public ToColIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColByToColIdxKey asPublic(ICFBamProtRelationColByToColIdxKey src);
+
+	/**
+	 *	Allocate a protected PrevIdx key over protected RelationCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColByPrevIdxKey newProtByPrevIdxKey();
 
 	/**
-	 *	Allocate a protected NextIdx key over public RelationCol instances.
+	 *	Allocate a public PrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColByPrevIdxKey asPublic(ICFBamProtRelationColByPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected NextIdx key over protected RelationCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColByNextIdxKey newProtByNextIdxKey();
 
 	/**
-	 *	Allocate a protected RelPrevIdx key over public RelationCol instances.
+	 *	Allocate a public NextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColByNextIdxKey asPublic(ICFBamProtRelationColByNextIdxKey src);
+
+	/**
+	 *	Allocate a protected RelPrevIdx key over protected RelationCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColByRelPrevIdxKey newProtByRelPrevIdxKey();
 
 	/**
-	 *	Allocate a protected RelNextIdx key over public RelationCol instances.
+	 *	Allocate a public RelPrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColByRelPrevIdxKey asPublic(ICFBamProtRelationColByRelPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected RelNextIdx key over protected RelationCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColByRelNextIdxKey newProtByRelNextIdxKey();
+
+	/**
+	 *	Allocate a public RelNextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColByRelNextIdxKey asPublic(ICFBamProtRelationColByRelNextIdxKey src);
 
 	/**
 	 *	Allocate a protected RelationCol interface implementation.
@@ -147,10 +218,24 @@ extends ICFBamPubRelationColFactory
 	public ICFBamProtRelationCol newProtRec();
 
 	/**
+	 *	Allocate a public RelationCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationCol asPublic(ICFBamProtRelationCol src);
+
+	/**
 	 *	Allocate a protected RelationCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtRelationColH newProtHRec();
+
+	/**
+	 *	Allocate a public RelationCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubRelationColH asPublic(ICFBamProtRelationColH src);
 
 }

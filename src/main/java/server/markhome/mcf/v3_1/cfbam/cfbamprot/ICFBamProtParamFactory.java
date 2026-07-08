@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtParamFactory protected interface for Param
  */
-public interface ICFBamProtParamFactory
-extends ICFBamPubParamFactory
+public interface ICFBamProtParamFactory extends ICFBamPubParamFactory
 {
 
 	/**
@@ -77,60 +78,123 @@ extends ICFBamPubParamFactory
 	ICFBamProtParamHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public Param instances.
+	 *	Allocate a public primary history key for Param instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFBamPubParamHPKey asPublic(ICFBamProtParamHPKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected Param instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtParamByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected ServerMethodIdx key over public Param instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParamByUNameIdxKey asPublic(ICFBamProtParamByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected ServerMethodIdx key over protected Param instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtParamByServerMethodIdxKey newProtByServerMethodIdxKey();
 
 	/**
-	 *	Allocate a protected DefSchemaIdx key over public Param instances.
+	 *	Allocate a public ServerMethodIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParamByServerMethodIdxKey asPublic(ICFBamProtParamByServerMethodIdxKey src);
+
+	/**
+	 *	Allocate a protected DefSchemaIdx key over protected Param instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtParamByDefSchemaIdxKey newProtByDefSchemaIdxKey();
 
 	/**
-	 *	Allocate a protected ServerTypeIdx key over public Param instances.
+	 *	Allocate a public DefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParamByDefSchemaIdxKey asPublic(ICFBamProtParamByDefSchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected ServerTypeIdx key over protected Param instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtParamByServerTypeIdxKey newProtByServerTypeIdxKey();
 
 	/**
-	 *	Allocate a protected PrevIdx key over public Param instances.
+	 *	Allocate a public ServerTypeIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParamByServerTypeIdxKey asPublic(ICFBamProtParamByServerTypeIdxKey src);
+
+	/**
+	 *	Allocate a protected PrevIdx key over protected Param instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtParamByPrevIdxKey newProtByPrevIdxKey();
 
 	/**
-	 *	Allocate a protected NextIdx key over public Param instances.
+	 *	Allocate a public PrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParamByPrevIdxKey asPublic(ICFBamProtParamByPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected NextIdx key over protected Param instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtParamByNextIdxKey newProtByNextIdxKey();
 
 	/**
-	 *	Allocate a protected ContPrevIdx key over public Param instances.
+	 *	Allocate a public NextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParamByNextIdxKey asPublic(ICFBamProtParamByNextIdxKey src);
+
+	/**
+	 *	Allocate a protected ContPrevIdx key over protected Param instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtParamByContPrevIdxKey newProtByContPrevIdxKey();
 
 	/**
-	 *	Allocate a protected ContNextIdx key over public Param instances.
+	 *	Allocate a public ContPrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParamByContPrevIdxKey asPublic(ICFBamProtParamByContPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected ContNextIdx key over protected Param instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtParamByContNextIdxKey newProtByContNextIdxKey();
+
+	/**
+	 *	Allocate a public ContNextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParamByContNextIdxKey asPublic(ICFBamProtParamByContNextIdxKey src);
 
 	/**
 	 *	Allocate a protected Param interface implementation.
@@ -140,10 +204,24 @@ extends ICFBamPubParamFactory
 	public ICFBamProtParam newProtRec();
 
 	/**
+	 *	Allocate a public Param interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParam asPublic(ICFBamProtParam src);
+
+	/**
 	 *	Allocate a protected Param history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtParamH newProtHRec();
+
+	/**
+	 *	Allocate a public Param history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubParamH asPublic(ICFBamProtParamH src);
 
 }

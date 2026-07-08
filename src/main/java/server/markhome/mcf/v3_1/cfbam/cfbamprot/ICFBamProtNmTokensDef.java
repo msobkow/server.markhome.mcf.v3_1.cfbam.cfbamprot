@@ -53,10 +53,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtNmTokensDef persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -65,7 +68,7 @@ public interface ICFBamProtNmTokensDef extends ICFBamProtAtom
 {
 	public static final int MAXLEN_MIN_VALUE = 0;
 	public static final int MAXLEN_MAX_VALUE = 2147483647;
-	public static final int MAXLEN_INIT_VALUE = 0;
+	public static final int MAXLEN_INIT_VALUE = ICFBamPubNmTokensDef.MAXLEN_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa82f;
 	public final static String S_CLASS_CODE = "a82f";
 
@@ -83,7 +86,11 @@ public interface ICFBamProtNmTokensDef extends ICFBamProtAtom
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
-	public void setProtNmTokensDef( ICFBamProtNmTokensDef src );
+	public void setNmTokensDef( ICFBamProtNmTokensDef src );
+	public void set( ICFBamPubValue src );
 	public void set( ICFBamProtValueH src );
-	public void setProtNmTokensDef( ICFBamProtNmTokensDefH src );
+	public void setNmTokensDef( ICFBamProtNmTokensDefH src );
+	public void set( ICFBamPubValueH src );
+	public void setNmTokensDef( ICFBamPubNmTokensDefH src );
+
 }

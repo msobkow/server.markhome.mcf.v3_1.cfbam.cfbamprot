@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a UInt32Def history object
+// Description: Java 25 protlic interface for a UInt32Def history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtUInt32DefH provides access to protected history records matching the CFBamProtUInt32Def object change history.
+ *	ICFBamProtUInt32DefH provides access to protlic history records matching the CFBamProtUInt32Def object change history.
  */
 public interface ICFBamProtUInt32DefH extends ICFBamProtAtomH
 {

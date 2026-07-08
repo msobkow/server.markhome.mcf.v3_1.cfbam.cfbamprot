@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a Param history object
+// Description: Java 25 protlic interface for a Param history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtParamH provides access to protected history records matching the CFBamProtParam object change history.
+ *	ICFBamProtParamH provides access to protlic history records matching the CFBamProtParam object change history.
  */
 public interface ICFBamProtParamH
 {

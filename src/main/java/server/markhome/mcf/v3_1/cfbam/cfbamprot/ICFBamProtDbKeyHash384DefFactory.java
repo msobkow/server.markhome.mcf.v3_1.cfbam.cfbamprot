@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDbKeyHash384DefFactory protected interface for DbKeyHash384Def
  */
-public interface ICFBamProtDbKeyHash384DefFactory
-extends ICFBamPubDbKeyHash384DefFactory
+public interface ICFBamProtDbKeyHash384DefFactory extends ICFBamPubDbKeyHash384DefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubDbKeyHash384DefFactory
 	public ICFBamProtDbKeyHash384Def newProtRec();
 
 	/**
+	 *	Allocate a public DbKeyHash384Def interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash384Def asPublic(ICFBamProtDbKeyHash384Def src);
+
+	/**
 	 *	Allocate a protected DbKeyHash384Def history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash384DefH newProtHRec();
+
+	/**
+	 *	Allocate a public DbKeyHash384Def history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash384DefH asPublic(ICFBamProtDbKeyHash384DefH src);
 
 }

@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a TZDateType history object
+// Description: Java 25 protlic interface for a TZDateType history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtTZDateTypeH provides access to protected history records matching the CFBamProtTZDateType object change history.
+ *	ICFBamProtTZDateTypeH provides access to protlic history records matching the CFBamProtTZDateType object change history.
  */
 public interface ICFBamProtTZDateTypeH extends ICFBamProtTZDateDefH
 {

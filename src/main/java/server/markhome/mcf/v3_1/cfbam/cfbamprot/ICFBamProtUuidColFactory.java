@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtUuidColFactory protected interface for UuidCol
  */
-public interface ICFBamProtUuidColFactory
-extends ICFBamPubUuidColFactory
+public interface ICFBamProtUuidColFactory extends ICFBamPubUuidColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public UuidCol instances.
+	 *	Allocate a protected TableIdx key over protected UuidCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtUuidColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUuidColByTableIdxKey asPublic(ICFBamProtUuidColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected UuidCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubUuidColFactory
 	public ICFBamProtUuidCol newProtRec();
 
 	/**
+	 *	Allocate a public UuidCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUuidCol asPublic(ICFBamProtUuidCol src);
+
+	/**
 	 *	Allocate a protected UuidCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtUuidColH newProtHRec();
+
+	/**
+	 *	Allocate a public UuidCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUuidColH asPublic(ICFBamProtUuidColH src);
 
 }

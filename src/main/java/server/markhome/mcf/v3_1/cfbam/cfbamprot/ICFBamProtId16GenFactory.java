@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtId16GenFactory protected interface for Id16Gen
  */
-public interface ICFBamProtId16GenFactory
-extends ICFBamPubId16GenFactory
+public interface ICFBamProtId16GenFactory extends ICFBamPubId16GenFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubId16GenFactory
 	public ICFBamProtId16Gen newProtRec();
 
 	/**
+	 *	Allocate a public Id16Gen interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubId16Gen asPublic(ICFBamProtId16Gen src);
+
+	/**
 	 *	Allocate a protected Id16Gen history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtId16GenH newProtHRec();
+
+	/**
+	 *	Allocate a public Id16Gen history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubId16GenH asPublic(ICFBamProtId16GenH src);
 
 }

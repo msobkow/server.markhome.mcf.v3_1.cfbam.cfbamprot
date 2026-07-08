@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDbKeyHash224DefFactory protected interface for DbKeyHash224Def
  */
-public interface ICFBamProtDbKeyHash224DefFactory
-extends ICFBamPubDbKeyHash224DefFactory
+public interface ICFBamProtDbKeyHash224DefFactory extends ICFBamPubDbKeyHash224DefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubDbKeyHash224DefFactory
 	public ICFBamProtDbKeyHash224Def newProtRec();
 
 	/**
+	 *	Allocate a public DbKeyHash224Def interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash224Def asPublic(ICFBamProtDbKeyHash224Def src);
+
+	/**
 	 *	Allocate a protected DbKeyHash224Def history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash224DefH newProtHRec();
+
+	/**
+	 *	Allocate a public DbKeyHash224Def history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash224DefH asPublic(ICFBamProtDbKeyHash224DefH src);
 
 }

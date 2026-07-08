@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtUuidGenFactory protected interface for UuidGen
  */
-public interface ICFBamProtUuidGenFactory
-extends ICFBamPubUuidGenFactory
+public interface ICFBamProtUuidGenFactory extends ICFBamPubUuidGenFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubUuidGenFactory
 	public ICFBamProtUuidGen newProtRec();
 
 	/**
+	 *	Allocate a public UuidGen interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUuidGen asPublic(ICFBamProtUuidGen src);
+
+	/**
 	 *	Allocate a protected UuidGen history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtUuidGenH newProtHRec();
+
+	/**
+	 *	Allocate a public UuidGen history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUuidGenH asPublic(ICFBamProtUuidGenH src);
 
 }

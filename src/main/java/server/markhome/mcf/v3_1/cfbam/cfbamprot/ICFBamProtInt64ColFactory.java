@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtInt64ColFactory protected interface for Int64Col
  */
-public interface ICFBamProtInt64ColFactory
-extends ICFBamPubInt64ColFactory
+public interface ICFBamProtInt64ColFactory extends ICFBamPubInt64ColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public Int64Col instances.
+	 *	Allocate a protected TableIdx key over protected Int64Col instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtInt64ColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubInt64ColByTableIdxKey asPublic(ICFBamProtInt64ColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected Int64Col interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubInt64ColFactory
 	public ICFBamProtInt64Col newProtRec();
 
 	/**
+	 *	Allocate a public Int64Col interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubInt64Col asPublic(ICFBamProtInt64Col src);
+
+	/**
 	 *	Allocate a protected Int64Col history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtInt64ColH newProtHRec();
+
+	/**
+	 *	Allocate a public Int64Col history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubInt64ColH asPublic(ICFBamProtInt64ColH src);
 
 }

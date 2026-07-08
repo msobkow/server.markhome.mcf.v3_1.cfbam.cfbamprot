@@ -53,10 +53,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtDbKeyHash256Gen persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -67,8 +70,8 @@ public interface ICFBamProtDbKeyHash256Gen extends ICFBamProtDbKeyHash256Type
 	public static final int BLOCKSIZE_MIN_VALUE = 1;
 	public static final short SLICE_MAX_VALUE = (short)32767;
 	public static final int BLOCKSIZE_MAX_VALUE = 2147483647;
-	public static final short SLICE_INIT_VALUE = (short)0;
-	public static final int BLOCKSIZE_INIT_VALUE = 1;
+	public static final short SLICE_INIT_VALUE = ICFBamPubDbKeyHash256Gen.SLICE_INIT_VALUE;
+	public static final int BLOCKSIZE_INIT_VALUE = ICFBamPubDbKeyHash256Gen.BLOCKSIZE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa84b;
 	public final static String S_CLASS_CODE = "a84b";
 
@@ -86,7 +89,11 @@ public interface ICFBamProtDbKeyHash256Gen extends ICFBamProtDbKeyHash256Type
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
-	public void setProtDbKeyHash256Gen( ICFBamProtDbKeyHash256Gen src );
+	public void setDbKeyHash256Gen( ICFBamProtDbKeyHash256Gen src );
+	public void set( ICFBamPubValue src );
 	public void set( ICFBamProtValueH src );
-	public void setProtDbKeyHash256Gen( ICFBamProtDbKeyHash256GenH src );
+	public void setDbKeyHash256Gen( ICFBamProtDbKeyHash256GenH src );
+	public void set( ICFBamPubValueH src );
+	public void setDbKeyHash256Gen( ICFBamPubDbKeyHash256GenH src );
+
 }

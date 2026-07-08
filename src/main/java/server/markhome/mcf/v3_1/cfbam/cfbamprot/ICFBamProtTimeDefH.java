@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a TimeDef history object
+// Description: Java 25 protlic interface for a TimeDef history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtTimeDefH provides access to protected history records matching the CFBamProtTimeDef object change history.
+ *	ICFBamProtTimeDefH provides access to protlic history records matching the CFBamProtTimeDef object change history.
  */
 public interface ICFBamProtTimeDefH extends ICFBamProtAtomH
 {

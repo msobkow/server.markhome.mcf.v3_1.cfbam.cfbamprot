@@ -53,26 +53,29 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtSchemaDef persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtSchemaDef extends ICFBamProtScope
 {
-	public static final String S_CTENANTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 CTENANTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_CTENANTID_INIT_VALUE );
-	public static final String S_MINORVERSIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 MINORVERSIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_MINORVERSIONID_INIT_VALUE );
-	public static final String NAME_INIT_VALUE = new String( "" );
-	public static final String COPYRIGHTPERIOD_INIT_VALUE = new String( "2020" );
-	public static final String COPYRIGHTHOLDER_INIT_VALUE = new String( "YourNameHere" );
-	public static final String AUTHOREMAIL_INIT_VALUE = new String( "" );
-	public static final String PROJECTURL_INIT_VALUE = new String( "" );
-	public static final String PUBLISHURI_INIT_VALUE = new String( "" );
+	public static final String S_CTENANTID_INIT_VALUE = ICFBamPubSchemaDef.S_CTENANTID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 CTENANTID_INIT_VALUE = ICFBamPubSchemaDef.CTENANTID_INIT_VALUE;
+	public static final String S_MINORVERSIONID_INIT_VALUE = ICFBamPubSchemaDef.S_MINORVERSIONID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 MINORVERSIONID_INIT_VALUE = ICFBamPubSchemaDef.MINORVERSIONID_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFBamPubSchemaDef.NAME_INIT_VALUE;
+	public static final String COPYRIGHTPERIOD_INIT_VALUE = ICFBamPubSchemaDef.COPYRIGHTPERIOD_INIT_VALUE;
+	public static final String COPYRIGHTHOLDER_INIT_VALUE = ICFBamPubSchemaDef.COPYRIGHTHOLDER_INIT_VALUE;
+	public static final String AUTHOREMAIL_INIT_VALUE = ICFBamPubSchemaDef.AUTHOREMAIL_INIT_VALUE;
+	public static final String PROJECTURL_INIT_VALUE = ICFBamPubSchemaDef.PROJECTURL_INIT_VALUE;
+	public static final String PUBLISHURI_INIT_VALUE = ICFBamPubSchemaDef.PUBLISHURI_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa802;
 	public final static String S_CLASS_CODE = "a802";
 
@@ -80,8 +83,10 @@ public interface ICFBamProtSchemaDef extends ICFBamProtScope
 	public ICFSecProtTenant getRequiredOwnerCTenant();
 	public void setRequiredContainerMinorVersion(ICFIntProtMinorVersion argObj);
 	public void setRequiredContainerMinorVersion(CFLibDbKeyHash256 argMinorVersionId);
+	public void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj);
 	public void setRequiredOwnerCTenant(ICFSecProtTenant argObj);
 	public void setRequiredOwnerCTenant(CFLibDbKeyHash256 argCTenantId);
+	public void setRequiredOwnerCTenant(ICFSecPubTenant argObj);
 	public CFLibDbKeyHash256 getRequiredCTenantId();
 	public CFLibDbKeyHash256 getRequiredMinorVersionId();
 	public String getRequiredName();
@@ -116,7 +121,11 @@ public interface ICFBamProtSchemaDef extends ICFBamProtScope
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
-	public void setProtSchemaDef( ICFBamProtSchemaDef src );
+	public void setSchemaDef( ICFBamProtSchemaDef src );
+	public void set( ICFBamPubScope src );
 	public void set( ICFBamProtScopeH src );
-	public void setProtSchemaDef( ICFBamProtSchemaDefH src );
+	public void setSchemaDef( ICFBamProtSchemaDefH src );
+	public void set( ICFBamPubScopeH src );
+	public void setSchemaDef( ICFBamPubSchemaDefH src );
+
 }

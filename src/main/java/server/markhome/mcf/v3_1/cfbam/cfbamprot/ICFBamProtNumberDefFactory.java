@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtNumberDefFactory protected interface for NumberDef
  */
-public interface ICFBamProtNumberDefFactory
-extends ICFBamPubNumberDefFactory
+public interface ICFBamProtNumberDefFactory extends ICFBamPubNumberDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubNumberDefFactory
 	public ICFBamProtNumberDef newProtRec();
 
 	/**
+	 *	Allocate a public NumberDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNumberDef asPublic(ICFBamProtNumberDef src);
+
+	/**
 	 *	Allocate a protected NumberDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtNumberDefH newProtHRec();
+
+	/**
+	 *	Allocate a public NumberDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNumberDefH asPublic(ICFBamProtNumberDefH src);
 
 }

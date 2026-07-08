@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDbKeyHash512TypeFactory protected interface for DbKeyHash512Type
  */
-public interface ICFBamProtDbKeyHash512TypeFactory
-extends ICFBamPubDbKeyHash512TypeFactory
+public interface ICFBamProtDbKeyHash512TypeFactory extends ICFBamPubDbKeyHash512TypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public DbKeyHash512Type instances.
+	 *	Allocate a protected SchemaIdx key over protected DbKeyHash512Type instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash512TypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash512TypeBySchemaIdxKey asPublic(ICFBamProtDbKeyHash512TypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected DbKeyHash512Type interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubDbKeyHash512TypeFactory
 	public ICFBamProtDbKeyHash512Type newProtRec();
 
 	/**
+	 *	Allocate a public DbKeyHash512Type interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash512Type asPublic(ICFBamProtDbKeyHash512Type src);
+
+	/**
 	 *	Allocate a protected DbKeyHash512Type history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash512TypeH newProtHRec();
+
+	/**
+	 *	Allocate a public DbKeyHash512Type history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash512TypeH asPublic(ICFBamProtDbKeyHash512TypeH src);
 
 }

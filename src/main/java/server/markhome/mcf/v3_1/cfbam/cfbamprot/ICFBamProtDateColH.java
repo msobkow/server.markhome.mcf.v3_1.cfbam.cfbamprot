@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a DateCol history object
+// Description: Java 25 protlic interface for a DateCol history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtDateColH provides access to protected history records matching the CFBamProtDateCol object change history.
+ *	ICFBamProtDateColH provides access to protlic history records matching the CFBamProtDateCol object change history.
  */
 public interface ICFBamProtDateColH extends ICFBamProtDateDefH
 {

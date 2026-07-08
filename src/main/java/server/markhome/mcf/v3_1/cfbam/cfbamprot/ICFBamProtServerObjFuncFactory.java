@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtServerObjFuncFactory protected interface for ServerObjFunc
  */
-public interface ICFBamProtServerObjFuncFactory
-extends ICFBamPubServerObjFuncFactory
+public interface ICFBamProtServerObjFuncFactory extends ICFBamPubServerObjFuncFactory
 {
 
 	/**
-	 *	Allocate a protected RetTblIdx key over public ServerObjFunc instances.
+	 *	Allocate a protected RetTblIdx key over protected ServerObjFunc instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerObjFuncByRetTblIdxKey newProtByRetTblIdxKey();
+
+	/**
+	 *	Allocate a public RetTblIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerObjFuncByRetTblIdxKey asPublic(ICFBamProtServerObjFuncByRetTblIdxKey src);
 
 	/**
 	 *	Allocate a protected ServerObjFunc interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubServerObjFuncFactory
 	public ICFBamProtServerObjFunc newProtRec();
 
 	/**
+	 *	Allocate a public ServerObjFunc interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerObjFunc asPublic(ICFBamProtServerObjFunc src);
+
+	/**
 	 *	Allocate a protected ServerObjFunc history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerObjFuncH newProtHRec();
+
+	/**
+	 *	Allocate a public ServerObjFunc history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerObjFuncH asPublic(ICFBamProtServerObjFuncH src);
 
 }

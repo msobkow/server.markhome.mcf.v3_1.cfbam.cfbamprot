@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtId64GenFactory protected interface for Id64Gen
  */
-public interface ICFBamProtId64GenFactory
-extends ICFBamPubId64GenFactory
+public interface ICFBamProtId64GenFactory extends ICFBamPubId64GenFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubId64GenFactory
 	public ICFBamProtId64Gen newProtRec();
 
 	/**
+	 *	Allocate a public Id64Gen interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubId64Gen asPublic(ICFBamProtId64Gen src);
+
+	/**
 	 *	Allocate a protected Id64Gen history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtId64GenH newProtHRec();
+
+	/**
+	 *	Allocate a public Id64Gen history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubId64GenH asPublic(ICFBamProtId64GenH src);
 
 }

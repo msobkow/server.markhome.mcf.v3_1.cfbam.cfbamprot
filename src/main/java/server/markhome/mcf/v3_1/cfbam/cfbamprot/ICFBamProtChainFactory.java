@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtChainFactory protected interface for Chain
  */
-public interface ICFBamProtChainFactory
-extends ICFBamPubChainFactory
+public interface ICFBamProtChainFactory extends ICFBamPubChainFactory
 {
 
 	/**
@@ -77,39 +78,81 @@ extends ICFBamPubChainFactory
 	ICFBamProtChainHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected ChainTableIdx key over public Chain instances.
+	 *	Allocate a public primary history key for Chain instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFBamPubChainHPKey asPublic(ICFBamProtChainHPKey src);
+
+	/**
+	 *	Allocate a protected ChainTableIdx key over protected Chain instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtChainByChainTableIdxKey newProtByChainTableIdxKey();
 
 	/**
-	 *	Allocate a protected DefSchemaIdx key over public Chain instances.
+	 *	Allocate a public ChainTableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubChainByChainTableIdxKey asPublic(ICFBamProtChainByChainTableIdxKey src);
+
+	/**
+	 *	Allocate a protected DefSchemaIdx key over protected Chain instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtChainByDefSchemaIdxKey newProtByDefSchemaIdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public Chain instances.
+	 *	Allocate a public DefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubChainByDefSchemaIdxKey asPublic(ICFBamProtChainByDefSchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected Chain instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtChainByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected PrevRelIdx key over public Chain instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubChainByUNameIdxKey asPublic(ICFBamProtChainByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected PrevRelIdx key over protected Chain instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtChainByPrevRelIdxKey newProtByPrevRelIdxKey();
 
 	/**
-	 *	Allocate a protected NextRelIdx key over public Chain instances.
+	 *	Allocate a public PrevRelIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubChainByPrevRelIdxKey asPublic(ICFBamProtChainByPrevRelIdxKey src);
+
+	/**
+	 *	Allocate a protected NextRelIdx key over protected Chain instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtChainByNextRelIdxKey newProtByNextRelIdxKey();
+
+	/**
+	 *	Allocate a public NextRelIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubChainByNextRelIdxKey asPublic(ICFBamProtChainByNextRelIdxKey src);
 
 	/**
 	 *	Allocate a protected Chain interface implementation.
@@ -119,10 +162,24 @@ extends ICFBamPubChainFactory
 	public ICFBamProtChain newProtRec();
 
 	/**
+	 *	Allocate a public Chain interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubChain asPublic(ICFBamProtChain src);
+
+	/**
 	 *	Allocate a protected Chain history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtChainH newProtHRec();
+
+	/**
+	 *	Allocate a public Chain history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubChainH asPublic(ICFBamProtChainH src);
 
 }

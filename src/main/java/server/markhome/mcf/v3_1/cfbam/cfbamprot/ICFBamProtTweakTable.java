@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for Tweak.
+// Description: Java 25 protlic DbIO interface for Tweak.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,19 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtTweakTable protected database interface for Tweak has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtTweakTable protlic database interface for Tweak has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtTweakTable
+extends ICFBamPubTweakTable
 {
 	public static final String TABLE_NAME = "Tweak";
 
@@ -81,6 +84,17 @@ public interface ICFBamProtTweakTable
 	public ICFBamProtTweak protcreateTweak( ICFSecProtAuthorization Authorization,
 		ICFBamProtTweak rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtTweak protcreateTweak( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweak rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +106,17 @@ public interface ICFBamProtTweakTable
 	 */
 	public ICFBamProtTweak protupdateTweak( ICFSecProtAuthorization Authorization,
 		ICFBamProtTweak rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtTweak protupdateTweak( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweak rec );
 
 
 	/**
@@ -135,6 +160,15 @@ public interface ICFBamProtTweakTable
 	public void protdeleteTweakByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTweakByUNameIdxKey argKey );
 	/**
+	 *	Delete the Tweak instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByUNameIdxKey argKey );
+	/**
 	 *	Delete the Tweak instances identified by the key ValTentIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -153,6 +187,15 @@ public interface ICFBamProtTweakTable
 	 */
 	public void protdeleteTweakByValTentIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTweakByValTentIdxKey argKey );
+	/**
+	 *	Delete the Tweak instances identified by the key ValTentIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByValTentIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByValTentIdxKey argKey );
 	/**
 	 *	Delete the Tweak instances identified by the key ScopeIdx.
 	 *
@@ -173,6 +216,15 @@ public interface ICFBamProtTweakTable
 	public void protdeleteTweakByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTweakByScopeIdxKey argKey );
 	/**
+	 *	Delete the Tweak instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByScopeIdxKey argKey );
+	/**
 	 *	Delete the Tweak instances identified by the key DefSchemaIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -191,6 +243,15 @@ public interface ICFBamProtTweakTable
 	 */
 	public void protdeleteTweakByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTweakByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the Tweak instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Tweak instances identified by the key UDefIdx.
 	 *
@@ -222,10 +283,108 @@ public interface ICFBamProtTweakTable
 	 */
 	public void protdeleteTweakByUDefIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTweakByUDefIdxKey argKey );
+	/**
+	 *	Delete the Tweak instances identified by the key UDefIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByUDefIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByUDefIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteTweak( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweak rec );
+	/**
+	 *	Delete the Tweak instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteTweakByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the Tweak instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByUNameIdxKey argKey );
+	/**
+	 *	Delete the Tweak instances identified by the key ValTentIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByValTentIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByValTentIdxKey argKey );
+	/**
+	 *	Delete the Tweak instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByScopeIdxKey argKey );
+	/**
+	 *	Delete the Tweak instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the Tweak instances identified by the key UDefIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTweakByUDefIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTweakByUDefIdxKey argKey );
 
 
 	/**
-	 *	Read the derived Tweak record instance by primary key.
+	 *	Read the derived Tweak record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Tweak instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtTweak protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived Tweak record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Tweak instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubTweak pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived Tweak record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -237,8 +396,9 @@ public interface ICFBamProtTweakTable
 	public ICFBamProtTweak protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived Tweak record instance by primary key.
+	 *	Lock the derived Tweak record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -249,6 +409,32 @@ public interface ICFBamProtTweakTable
 	 */
 	public ICFBamProtTweak protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived Tweak record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Tweak instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubTweak publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived Tweak record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Tweak instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtTweak protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all Tweak instances.
@@ -362,6 +548,66 @@ public interface ICFBamProtTweakTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTweak protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Tweak record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Tweak instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtTweak protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Tweak record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Tweak instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubTweak pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Tweak record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Tweak instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtTweak protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Tweak record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Tweak instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubTweak publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

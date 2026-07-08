@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTZTimestampColFactory protected interface for TZTimestampCol
  */
-public interface ICFBamProtTZTimestampColFactory
-extends ICFBamPubTZTimestampColFactory
+public interface ICFBamProtTZTimestampColFactory extends ICFBamPubTZTimestampColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public TZTimestampCol instances.
+	 *	Allocate a protected TableIdx key over protected TZTimestampCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTZTimestampColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZTimestampColByTableIdxKey asPublic(ICFBamProtTZTimestampColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected TZTimestampCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubTZTimestampColFactory
 	public ICFBamProtTZTimestampCol newProtRec();
 
 	/**
+	 *	Allocate a public TZTimestampCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZTimestampCol asPublic(ICFBamProtTZTimestampCol src);
+
+	/**
 	 *	Allocate a protected TZTimestampCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTZTimestampColH newProtHRec();
+
+	/**
+	 *	Allocate a public TZTimestampCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZTimestampColH asPublic(ICFBamProtTZTimestampColH src);
 
 }

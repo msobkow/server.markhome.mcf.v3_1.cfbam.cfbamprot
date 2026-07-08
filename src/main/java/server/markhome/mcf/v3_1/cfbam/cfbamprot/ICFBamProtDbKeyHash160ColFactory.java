@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDbKeyHash160ColFactory protected interface for DbKeyHash160Col
  */
-public interface ICFBamProtDbKeyHash160ColFactory
-extends ICFBamPubDbKeyHash160ColFactory
+public interface ICFBamProtDbKeyHash160ColFactory extends ICFBamPubDbKeyHash160ColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public DbKeyHash160Col instances.
+	 *	Allocate a protected TableIdx key over protected DbKeyHash160Col instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash160ColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash160ColByTableIdxKey asPublic(ICFBamProtDbKeyHash160ColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected DbKeyHash160Col interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubDbKeyHash160ColFactory
 	public ICFBamProtDbKeyHash160Col newProtRec();
 
 	/**
+	 *	Allocate a public DbKeyHash160Col interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash160Col asPublic(ICFBamProtDbKeyHash160Col src);
+
+	/**
 	 *	Allocate a protected DbKeyHash160Col history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash160ColH newProtHRec();
+
+	/**
+	 *	Allocate a public DbKeyHash160Col history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash160ColH asPublic(ICFBamProtDbKeyHash160ColH src);
 
 }

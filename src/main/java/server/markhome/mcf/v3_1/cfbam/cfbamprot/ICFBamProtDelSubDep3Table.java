@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for DelSubDep3.
+// Description: Java 25 protlic DbIO interface for DelSubDep3.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtDelSubDep3Table protected database interface for DelSubDep3 has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtDelSubDep3Table protlic database interface for DelSubDep3 has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtDelSubDep3Table
+extends ICFBamProtDelDepTable,
+	ICFBamPubDelSubDep3Table
 {
 	public static final String TABLE_NAME = "DelSubDep3";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtDelSubDep3Table
 	public ICFBamProtDelSubDep3 protcreateDelSubDep3( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelSubDep3 rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtDelSubDep3 protcreateDelSubDep3( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelSubDep3 rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtDelSubDep3Table
 	 */
 	public ICFBamProtDelSubDep3 protupdateDelSubDep3( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelSubDep3 rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtDelSubDep3 protupdateDelSubDep3( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelSubDep3 rec );
 
 
 	/**
@@ -123,6 +149,15 @@ public interface ICFBamProtDelSubDep3Table
 	public void protdeleteDelSubDep3ByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelSubDep3ByDelSubDep2IdxKey argKey );
 	/**
+	 *	Delete the DelSubDep3 instances identified by the key DelSubDep2Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelSubDep3ByDelSubDep2IdxKey argKey );
+	/**
 	 *	Delete the DelSubDep3 instances identified by the key UNameIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -145,6 +180,15 @@ public interface ICFBamProtDelSubDep3Table
 	public void protdeleteDelSubDep3ByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelSubDep3ByUNameIdxKey argKey );
 	/**
+	 *	Delete the DelSubDep3 instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelSubDep3ByUNameIdxKey argKey );
+	/**
 	 *	Delete the DelSubDep3 instances identified by the key DefSchemaIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -164,6 +208,15 @@ public interface ICFBamProtDelSubDep3Table
 	public void protdeleteDelSubDep3ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelDepByDefSchemaIdxKey argKey );
 	/**
+	 *	Delete the DelSubDep3 instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelDepByDefSchemaIdxKey argKey );
+	/**
 	 *	Delete the DelSubDep3 instances identified by the key DelDepIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -182,6 +235,15 @@ public interface ICFBamProtDelSubDep3Table
 	 */
 	public void protdeleteDelSubDep3ByDelDepIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtDelDepByDelDepIdxKey argKey );
+	/**
+	 *	Delete the DelSubDep3 instances identified by the key DelDepIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByDelDepIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelDepByDelDepIdxKey argKey );
 	/**
 	 *	Delete the DelSubDep3 instance identified by the primary key.
 	 *
@@ -210,10 +272,108 @@ public interface ICFBamProtDelSubDep3Table
 	 */
 	public void protdeleteDelSubDep3ByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
+	/**
+	 *	Delete the DelSubDep3 instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteDelSubDep3( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelSubDep3 rec );
+	/**
+	 *	Delete the DelSubDep3 instances identified by the key DelSubDep2Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByDelSubDep2Idx( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelSubDep3ByDelSubDep2IdxKey argKey );
+	/**
+	 *	Delete the DelSubDep3 instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelSubDep3ByUNameIdxKey argKey );
+	/**
+	 *	Delete the DelSubDep3 instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelDepByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the DelSubDep3 instances identified by the key DelDepIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByDelDepIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubDelDepByDelDepIdxKey argKey );
+	/**
+	 *	Delete the DelSubDep3 instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the DelSubDep3 instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteDelSubDep3ByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
-	 *	Read the derived DelSubDep3 record instance by primary key.
+	 *	Read the derived DelSubDep3 record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DelSubDep3 instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtDelSubDep3 protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived DelSubDep3 record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DelSubDep3 instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubDelSubDep3 pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived DelSubDep3 record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -225,8 +385,9 @@ public interface ICFBamProtDelSubDep3Table
 	public ICFBamProtDelSubDep3 protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived DelSubDep3 record instance by primary key.
+	 *	Lock the derived DelSubDep3 record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -237,6 +398,32 @@ public interface ICFBamProtDelSubDep3Table
 	 */
 	public ICFBamProtDelSubDep3 protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived DelSubDep3 record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DelSubDep3 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubDelSubDep3 publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived DelSubDep3 record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DelSubDep3 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtDelSubDep3 protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all DelSubDep3 instances.
@@ -337,6 +524,66 @@ public interface ICFBamProtDelSubDep3Table
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDelSubDep3 protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific DelSubDep3 record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DelSubDep3 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtDelSubDep3 protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific DelSubDep3 record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DelSubDep3 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubDelSubDep3 pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific DelSubDep3 record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DelSubDep3 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtDelSubDep3 protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific DelSubDep3 record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the DelSubDep3 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubDelSubDep3 publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDoubleColFactory protected interface for DoubleCol
  */
-public interface ICFBamProtDoubleColFactory
-extends ICFBamPubDoubleColFactory
+public interface ICFBamProtDoubleColFactory extends ICFBamPubDoubleColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public DoubleCol instances.
+	 *	Allocate a protected TableIdx key over protected DoubleCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDoubleColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDoubleColByTableIdxKey asPublic(ICFBamProtDoubleColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected DoubleCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubDoubleColFactory
 	public ICFBamProtDoubleCol newProtRec();
 
 	/**
+	 *	Allocate a public DoubleCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDoubleCol asPublic(ICFBamProtDoubleCol src);
+
+	/**
 	 *	Allocate a protected DoubleCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDoubleColH newProtHRec();
+
+	/**
+	 *	Allocate a public DoubleCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDoubleColH asPublic(ICFBamProtDoubleColH src);
 
 }

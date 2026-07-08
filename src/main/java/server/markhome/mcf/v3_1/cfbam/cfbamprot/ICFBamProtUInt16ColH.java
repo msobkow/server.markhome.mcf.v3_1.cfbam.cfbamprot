@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a UInt16Col history object
+// Description: Java 25 protlic interface for a UInt16Col history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtUInt16ColH provides access to protected history records matching the CFBamProtUInt16Col object change history.
+ *	ICFBamProtUInt16ColH provides access to protlic history records matching the CFBamProtUInt16Col object change history.
  */
 public interface ICFBamProtUInt16ColH extends ICFBamProtUInt16DefH
 {

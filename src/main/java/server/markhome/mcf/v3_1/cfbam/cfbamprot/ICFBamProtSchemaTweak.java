@@ -53,24 +53,28 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtSchemaTweak persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtSchemaTweak extends ICFBamProtTweak
 {
-	public static final String S_SCHEMADEFID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SCHEMADEFID_INIT_VALUE );
+	public static final String S_SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaTweak.S_SCHEMADEFID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaTweak.SCHEMADEFID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa80a;
 	public final static String S_CLASS_CODE = "a80a";
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
+	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	@Override
 	public boolean equals( Object obj );
@@ -82,7 +86,11 @@ public interface ICFBamProtSchemaTweak extends ICFBamProtTweak
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtTweak src );
-	public void setProtSchemaTweak( ICFBamProtSchemaTweak src );
+	public void setSchemaTweak( ICFBamProtSchemaTweak src );
+	public void set( ICFBamPubTweak src );
 	public void set( ICFBamProtTweakH src );
-	public void setProtSchemaTweak( ICFBamProtSchemaTweakH src );
+	public void setSchemaTweak( ICFBamProtSchemaTweakH src );
+	public void set( ICFBamPubTweakH src );
+	public void setSchemaTweak( ICFBamPubSchemaTweakH src );
+
 }

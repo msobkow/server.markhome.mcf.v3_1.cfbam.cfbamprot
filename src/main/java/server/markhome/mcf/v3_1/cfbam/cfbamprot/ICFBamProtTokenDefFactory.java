@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTokenDefFactory protected interface for TokenDef
  */
-public interface ICFBamProtTokenDefFactory
-extends ICFBamPubTokenDefFactory
+public interface ICFBamProtTokenDefFactory extends ICFBamPubTokenDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubTokenDefFactory
 	public ICFBamProtTokenDef newProtRec();
 
 	/**
+	 *	Allocate a public TokenDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTokenDef asPublic(ICFBamProtTokenDef src);
+
+	/**
 	 *	Allocate a protected TokenDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTokenDefH newProtHRec();
+
+	/**
+	 *	Allocate a public TokenDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTokenDefH asPublic(ICFBamProtTokenDefH src);
 
 }

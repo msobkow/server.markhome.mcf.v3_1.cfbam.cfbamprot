@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for SchemaRole.
+// Description: Java 25 protlic DbIO interface for SchemaRole.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtSchemaRoleTable protected database interface for SchemaRole has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtSchemaRoleTable protlic database interface for SchemaRole has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtSchemaRoleTable
+extends ICFBamProtRoleDefTable,
+	ICFBamPubSchemaRoleTable
 {
 	public static final String TABLE_NAME = "SchemaRole";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtSchemaRoleTable
 	public ICFBamProtSchemaRole protcreateSchemaRole( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRole rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtSchemaRole protcreateSchemaRole( ICFSecProtAuthorization Authorization,
+		ICFBamPubSchemaRole rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtSchemaRoleTable
 	 */
 	public ICFBamProtSchemaRole protupdateSchemaRole( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRole rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtSchemaRole protupdateSchemaRole( ICFSecProtAuthorization Authorization,
+		ICFBamPubSchemaRole rec );
 
 
 	/**
@@ -123,6 +149,15 @@ public interface ICFBamProtSchemaRoleTable
 	public void protdeleteSchemaRoleBySchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRoleBySchemaIdxKey argKey );
 	/**
+	 *	Delete the SchemaRole instances identified by the key SchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleBySchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubSchemaRoleBySchemaIdxKey argKey );
+	/**
 	 *	Delete the SchemaRole instances identified by the key RoleScopeIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -141,6 +176,15 @@ public interface ICFBamProtSchemaRoleTable
 	 */
 	public void protdeleteSchemaRoleByRoleScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRoleByRoleScopeIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key RoleScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByRoleScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubSchemaRoleByRoleScopeIdxKey argKey );
 	/**
 	 *	Delete the SchemaRole instances identified by the key SchRoleScpIdx.
 	 *
@@ -163,6 +207,15 @@ public interface ICFBamProtSchemaRoleTable
 	 */
 	public void protdeleteSchemaRoleBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtSchemaRoleBySchRoleScpIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key SchRoleScpIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubSchemaRoleBySchRoleScpIdxKey argKey );
 	/**
 	 *	Delete the SchemaRole instance identified by the primary key.
 	 *
@@ -195,6 +248,15 @@ public interface ICFBamProtSchemaRoleTable
 	public void protdeleteSchemaRoleByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRoleDefByUNameIdxKey argKey );
 	/**
+	 *	Delete the SchemaRole instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRoleDefByUNameIdxKey argKey );
+	/**
 	 *	Delete the SchemaRole instances identified by the key ScopeIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -214,6 +276,15 @@ public interface ICFBamProtSchemaRoleTable
 	public void protdeleteSchemaRoleByScopeIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRoleDefByScopeIdxKey argKey );
 	/**
+	 *	Delete the SchemaRole instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRoleDefByScopeIdxKey argKey );
+	/**
 	 *	Delete the SchemaRole instances identified by the key DefSchemaIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -232,6 +303,15 @@ public interface ICFBamProtSchemaRoleTable
 	 */
 	public void protdeleteSchemaRoleByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRoleDefByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRoleDefByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the SchemaRole instances identified by the key UDefIdx.
 	 *
@@ -257,10 +337,126 @@ public interface ICFBamProtSchemaRoleTable
 	 */
 	public void protdeleteSchemaRoleByUDefIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtRoleDefByUDefIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key UDefIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByUDefIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRoleDefByUDefIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteSchemaRole( ICFSecProtAuthorization Authorization,
+		ICFBamPubSchemaRole rec );
+	/**
+	 *	Delete the SchemaRole instances identified by the key SchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleBySchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubSchemaRoleBySchemaIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key RoleScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByRoleScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubSchemaRoleByRoleScopeIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key SchRoleScpIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleBySchRoleScpIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubSchemaRoleBySchRoleScpIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteSchemaRoleByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRoleDefByUNameIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key ScopeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByScopeIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRoleDefByScopeIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRoleDefByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the SchemaRole instances identified by the key UDefIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSchemaRoleByUDefIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubRoleDefByUDefIdxKey argKey );
 
 
 	/**
-	 *	Read the derived SchemaRole record instance by primary key.
+	 *	Read the derived SchemaRole record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SchemaRole instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtSchemaRole protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived SchemaRole record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SchemaRole instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubSchemaRole pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived SchemaRole record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -272,8 +468,9 @@ public interface ICFBamProtSchemaRoleTable
 	public ICFBamProtSchemaRole protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived SchemaRole record instance by primary key.
+	 *	Lock the derived SchemaRole record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -284,6 +481,32 @@ public interface ICFBamProtSchemaRoleTable
 	 */
 	public ICFBamProtSchemaRole protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived SchemaRole record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SchemaRole instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubSchemaRole publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived SchemaRole record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SchemaRole instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtSchemaRole protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all SchemaRole instances.
@@ -418,6 +641,66 @@ public interface ICFBamProtSchemaRoleTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRole protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific SchemaRole record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SchemaRole instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtSchemaRole protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific SchemaRole record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SchemaRole instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubSchemaRole pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific SchemaRole record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SchemaRole instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtSchemaRole protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific SchemaRole record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SchemaRole instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubSchemaRole publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

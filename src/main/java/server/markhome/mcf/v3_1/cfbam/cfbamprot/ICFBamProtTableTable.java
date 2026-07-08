@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for Table.
+// Description: Java 25 protlic DbIO interface for Table.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtTableTable protected database interface for Table has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtTableTable protlic database interface for Table has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtTableTable
+extends ICFBamProtScopeTable,
+	ICFBamPubTableTable
 {
 	public static final String TABLE_NAME = "Table";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtTableTable
 	public ICFBamProtTable protcreateTable( ICFSecProtAuthorization Authorization,
 		ICFBamProtTable rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtTable protcreateTable( ICFSecProtAuthorization Authorization,
+		ICFBamPubTable rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtTableTable
 	 */
 	public ICFBamProtTable protupdateTable( ICFSecProtAuthorization Authorization,
 		ICFBamProtTable rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtTable protupdateTable( ICFSecProtAuthorization Authorization,
+		ICFBamPubTable rec );
 
 
 	/**
@@ -123,6 +149,15 @@ public interface ICFBamProtTableTable
 	public void protdeleteTableBySchemaDefIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableBySchemaDefIdxKey argKey );
 	/**
+	 *	Delete the Table instances identified by the key SchemaDefIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableBySchemaDefIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableBySchemaDefIdxKey argKey );
+	/**
 	 *	Delete the Table instances identified by the key CodeVisIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -141,6 +176,15 @@ public interface ICFBamProtTableTable
 	 */
 	public void protdeleteTableByCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableByCodeVisIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key CodeVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByCodeVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByCodeVisIdxKey argKey );
 	/**
 	 *	Delete the Table instances identified by the key SchemaCodeVisIdx.
 	 *
@@ -164,6 +208,15 @@ public interface ICFBamProtTableTable
 	public void protdeleteTableBySchemaCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableBySchemaCodeVisIdxKey argKey );
 	/**
+	 *	Delete the Table instances identified by the key SchemaCodeVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableBySchemaCodeVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableBySchemaCodeVisIdxKey argKey );
+	/**
 	 *	Delete the Table instances identified by the key DefSchemaIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -182,6 +235,15 @@ public interface ICFBamProtTableTable
 	 */
 	public void protdeleteTableByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the Table instances identified by the key UNameIdx.
 	 *
@@ -205,6 +267,15 @@ public interface ICFBamProtTableTable
 	public void protdeleteTableByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableByUNameIdxKey argKey );
 	/**
+	 *	Delete the Table instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByUNameIdxKey argKey );
+	/**
 	 *	Delete the Table instances identified by the key SchemaCdIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -227,6 +298,15 @@ public interface ICFBamProtTableTable
 	public void protdeleteTableBySchemaCdIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableBySchemaCdIdxKey argKey );
 	/**
+	 *	Delete the Table instances identified by the key SchemaCdIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableBySchemaCdIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableBySchemaCdIdxKey argKey );
+	/**
 	 *	Delete the Table instances identified by the key PrimaryIndexIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -245,6 +325,15 @@ public interface ICFBamProtTableTable
 	 */
 	public void protdeleteTableByPrimaryIndexIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableByPrimaryIndexIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key PrimaryIndexIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByPrimaryIndexIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByPrimaryIndexIdxKey argKey );
 	/**
 	 *	Delete the Table instances identified by the key LookupIndexIdx.
 	 *
@@ -265,6 +354,15 @@ public interface ICFBamProtTableTable
 	public void protdeleteTableByLookupIndexIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableByLookupIndexIdxKey argKey );
 	/**
+	 *	Delete the Table instances identified by the key LookupIndexIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByLookupIndexIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByLookupIndexIdxKey argKey );
+	/**
 	 *	Delete the Table instances identified by the key AltIndexIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -284,6 +382,15 @@ public interface ICFBamProtTableTable
 	public void protdeleteTableByAltIndexIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableByAltIndexIdxKey argKey );
 	/**
+	 *	Delete the Table instances identified by the key AltIndexIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByAltIndexIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByAltIndexIdxKey argKey );
+	/**
 	 *	Delete the Table instances identified by the key QualTableIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -302,6 +409,15 @@ public interface ICFBamProtTableTable
 	 */
 	public void protdeleteTableByQualTableIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtTableByQualTableIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key QualTableIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByQualTableIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByQualTableIdxKey argKey );
 	/**
 	 *	Delete the Table instance identified by the primary key.
 	 *
@@ -330,10 +446,162 @@ public interface ICFBamProtTableTable
 	 */
 	public void protdeleteTableByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteTable( ICFSecProtAuthorization Authorization,
+		ICFBamPubTable rec );
+	/**
+	 *	Delete the Table instances identified by the key SchemaDefIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableBySchemaDefIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableBySchemaDefIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key CodeVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByCodeVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByCodeVisIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key SchemaCodeVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableBySchemaCodeVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableBySchemaCodeVisIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByUNameIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key SchemaCdIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableBySchemaCdIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableBySchemaCdIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key PrimaryIndexIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByPrimaryIndexIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByPrimaryIndexIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key LookupIndexIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByLookupIndexIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByLookupIndexIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key AltIndexIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByAltIndexIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByAltIndexIdxKey argKey );
+	/**
+	 *	Delete the Table instances identified by the key QualTableIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByQualTableIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubTableByQualTableIdxKey argKey );
+	/**
+	 *	Delete the Table instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteTableByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the Table instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
-	 *	Read the derived Table record instance by primary key.
+	 *	Read the derived Table record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Table instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtTable protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived Table record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Table instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubTable pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived Table record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -345,8 +613,9 @@ public interface ICFBamProtTableTable
 	public ICFBamProtTable protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived Table record instance by primary key.
+	 *	Lock the derived Table record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -357,6 +626,32 @@ public interface ICFBamProtTableTable
 	 */
 	public ICFBamProtTable protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived Table record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Table instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubTable publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived Table record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Table instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtTable protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all Table instances.
@@ -536,6 +831,66 @@ public interface ICFBamProtTableTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTable protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Table record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Table instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtTable protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Table record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Table instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubTable pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Table record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Table instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtTable protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Table record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Table instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubTable publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

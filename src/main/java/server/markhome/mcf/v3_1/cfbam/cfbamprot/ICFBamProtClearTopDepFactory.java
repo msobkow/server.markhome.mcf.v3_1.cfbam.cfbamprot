@@ -59,43 +59,72 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtClearTopDepFactory protected interface for ClearTopDep
  */
-public interface ICFBamProtClearTopDepFactory
-extends ICFBamPubClearTopDepFactory
+public interface ICFBamProtClearTopDepFactory extends ICFBamPubClearTopDepFactory
 {
 
 	/**
-	 *	Allocate a protected ClrTopDepTblIdx key over public ClearTopDep instances.
+	 *	Allocate a protected ClrTopDepTblIdx key over protected ClearTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtClearTopDepByClrTopDepTblIdxKey newProtByClrTopDepTblIdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public ClearTopDep instances.
+	 *	Allocate a public ClrTopDepTblIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearTopDepByClrTopDepTblIdxKey asPublic(ICFBamProtClearTopDepByClrTopDepTblIdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected ClearTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtClearTopDepByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected PrevIdx key over public ClearTopDep instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearTopDepByUNameIdxKey asPublic(ICFBamProtClearTopDepByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected PrevIdx key over protected ClearTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtClearTopDepByPrevIdxKey newProtByPrevIdxKey();
 
 	/**
-	 *	Allocate a protected NextIdx key over public ClearTopDep instances.
+	 *	Allocate a public PrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearTopDepByPrevIdxKey asPublic(ICFBamProtClearTopDepByPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected NextIdx key over protected ClearTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtClearTopDepByNextIdxKey newProtByNextIdxKey();
+
+	/**
+	 *	Allocate a public NextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearTopDepByNextIdxKey asPublic(ICFBamProtClearTopDepByNextIdxKey src);
 
 	/**
 	 *	Allocate a protected ClearTopDep interface implementation.
@@ -105,10 +134,24 @@ extends ICFBamPubClearTopDepFactory
 	public ICFBamProtClearTopDep newProtRec();
 
 	/**
+	 *	Allocate a public ClearTopDep interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearTopDep asPublic(ICFBamProtClearTopDep src);
+
+	/**
 	 *	Allocate a protected ClearTopDep history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtClearTopDepH newProtHRec();
+
+	/**
+	 *	Allocate a public ClearTopDep history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubClearTopDepH asPublic(ICFBamProtClearTopDepH src);
 
 }

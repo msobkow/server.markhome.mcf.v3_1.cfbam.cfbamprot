@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a DbKeyHash224Type history object
+// Description: Java 25 protlic interface for a DbKeyHash224Type history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtDbKeyHash224TypeH provides access to protected history records matching the CFBamProtDbKeyHash224Type object change history.
+ *	ICFBamProtDbKeyHash224TypeH provides access to protlic history records matching the CFBamProtDbKeyHash224Type object change history.
  */
 public interface ICFBamProtDbKeyHash224TypeH extends ICFBamProtDbKeyHash224DefH
 {

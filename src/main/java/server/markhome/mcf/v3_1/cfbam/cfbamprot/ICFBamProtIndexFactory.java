@@ -59,50 +59,86 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtIndexFactory protected interface for Index
  */
-public interface ICFBamProtIndexFactory
-extends ICFBamPubIndexFactory
+public interface ICFBamProtIndexFactory extends ICFBamPubIndexFactory
 {
 
 	/**
-	 *	Allocate a protected UNameIdx key over public Index instances.
+	 *	Allocate a protected UNameIdx key over protected Index instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtIndexByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected IdxTableIdx key over public Index instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndexByUNameIdxKey asPublic(ICFBamProtIndexByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected IdxTableIdx key over protected Index instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtIndexByIdxTableIdxKey newProtByIdxTableIdxKey();
 
 	/**
-	 *	Allocate a protected IdxCodeVisIdx key over public Index instances.
+	 *	Allocate a public IdxTableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndexByIdxTableIdxKey asPublic(ICFBamProtIndexByIdxTableIdxKey src);
+
+	/**
+	 *	Allocate a protected IdxCodeVisIdx key over protected Index instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtIndexByIdxCodeVisIdxKey newProtByIdxCodeVisIdxKey();
 
 	/**
-	 *	Allocate a protected IdxTblCdVisX key over public Index instances.
+	 *	Allocate a public IdxCodeVisIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndexByIdxCodeVisIdxKey asPublic(ICFBamProtIndexByIdxCodeVisIdxKey src);
+
+	/**
+	 *	Allocate a protected IdxTblCdVisX key over protected Index instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtIndexByIdxTblCdVisXKey newProtByIdxTblCdVisXKey();
 
 	/**
-	 *	Allocate a protected DefSchemaIdx key over public Index instances.
+	 *	Allocate a public IdxTblCdVisX key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndexByIdxTblCdVisXKey asPublic(ICFBamProtIndexByIdxTblCdVisXKey src);
+
+	/**
+	 *	Allocate a protected DefSchemaIdx key over protected Index instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtIndexByDefSchemaIdxKey newProtByDefSchemaIdxKey();
+
+	/**
+	 *	Allocate a public DefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndexByDefSchemaIdxKey asPublic(ICFBamProtIndexByDefSchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected Index interface implementation.
@@ -112,10 +148,24 @@ extends ICFBamPubIndexFactory
 	public ICFBamProtIndex newProtRec();
 
 	/**
+	 *	Allocate a public Index interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndex asPublic(ICFBamProtIndex src);
+
+	/**
 	 *	Allocate a protected Index history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtIndexH newProtHRec();
+
+	/**
+	 *	Allocate a public Index history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubIndexH asPublic(ICFBamProtIndexH src);
 
 }

@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a TextType history object
+// Description: Java 25 protlic interface for a TextType history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtTextTypeH provides access to protected history records matching the CFBamProtTextType object change history.
+ *	ICFBamProtTextTypeH provides access to protlic history records matching the CFBamProtTextType object change history.
  */
 public interface ICFBamProtTextTypeH extends ICFBamProtTextDefH
 {

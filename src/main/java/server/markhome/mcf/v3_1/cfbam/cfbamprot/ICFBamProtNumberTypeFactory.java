@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtNumberTypeFactory protected interface for NumberType
  */
-public interface ICFBamProtNumberTypeFactory
-extends ICFBamPubNumberTypeFactory
+public interface ICFBamProtNumberTypeFactory extends ICFBamPubNumberTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public NumberType instances.
+	 *	Allocate a protected SchemaIdx key over protected NumberType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtNumberTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNumberTypeBySchemaIdxKey asPublic(ICFBamProtNumberTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected NumberType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubNumberTypeFactory
 	public ICFBamProtNumberType newProtRec();
 
 	/**
+	 *	Allocate a public NumberType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNumberType asPublic(ICFBamProtNumberType src);
+
+	/**
 	 *	Allocate a protected NumberType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtNumberTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public NumberType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNumberTypeH asPublic(ICFBamProtNumberTypeH src);
 
 }

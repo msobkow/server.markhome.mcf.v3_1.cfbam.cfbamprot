@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTweakFactory protected interface for Tweak
  */
-public interface ICFBamProtTweakFactory
-extends ICFBamPubTweakFactory
+public interface ICFBamProtTweakFactory extends ICFBamPubTweakFactory
 {
 
 	/**
@@ -77,39 +78,81 @@ extends ICFBamPubTweakFactory
 	ICFBamProtTweakHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public Tweak instances.
+	 *	Allocate a public primary history key for Tweak instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFBamPubTweakHPKey asPublic(ICFBamProtTweakHPKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected Tweak instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTweakByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected ValTentIdx key over public Tweak instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTweakByUNameIdxKey asPublic(ICFBamProtTweakByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected ValTentIdx key over protected Tweak instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTweakByValTentIdxKey newProtByValTentIdxKey();
 
 	/**
-	 *	Allocate a protected ScopeIdx key over public Tweak instances.
+	 *	Allocate a public ValTentIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTweakByValTentIdxKey asPublic(ICFBamProtTweakByValTentIdxKey src);
+
+	/**
+	 *	Allocate a protected ScopeIdx key over protected Tweak instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTweakByScopeIdxKey newProtByScopeIdxKey();
 
 	/**
-	 *	Allocate a protected DefSchemaIdx key over public Tweak instances.
+	 *	Allocate a public ScopeIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTweakByScopeIdxKey asPublic(ICFBamProtTweakByScopeIdxKey src);
+
+	/**
+	 *	Allocate a protected DefSchemaIdx key over protected Tweak instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTweakByDefSchemaIdxKey newProtByDefSchemaIdxKey();
 
 	/**
-	 *	Allocate a protected UDefIdx key over public Tweak instances.
+	 *	Allocate a public DefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTweakByDefSchemaIdxKey asPublic(ICFBamProtTweakByDefSchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected UDefIdx key over protected Tweak instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTweakByUDefIdxKey newProtByUDefIdxKey();
+
+	/**
+	 *	Allocate a public UDefIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTweakByUDefIdxKey asPublic(ICFBamProtTweakByUDefIdxKey src);
 
 	/**
 	 *	Allocate a protected Tweak interface implementation.
@@ -119,10 +162,24 @@ extends ICFBamPubTweakFactory
 	public ICFBamProtTweak newProtRec();
 
 	/**
+	 *	Allocate a public Tweak interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTweak asPublic(ICFBamProtTweak src);
+
+	/**
 	 *	Allocate a protected Tweak history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTweakH newProtHRec();
+
+	/**
+	 *	Allocate a public Tweak history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTweakH asPublic(ICFBamProtTweakH src);
 
 }

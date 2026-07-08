@@ -53,10 +53,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtId16Gen persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -67,8 +70,8 @@ public interface ICFBamProtId16Gen extends ICFBamProtInt16Type
 	public static final short BLOCKSIZE_MIN_VALUE = (short)1;
 	public static final short SLICE_MAX_VALUE = (short)32767;
 	public static final short BLOCKSIZE_MAX_VALUE = (short)32767;
-	public static final short SLICE_INIT_VALUE = (short)0;
-	public static final short BLOCKSIZE_INIT_VALUE = (short)1;
+	public static final short SLICE_INIT_VALUE = ICFBamPubId16Gen.SLICE_INIT_VALUE;
+	public static final short BLOCKSIZE_INIT_VALUE = ICFBamPubId16Gen.BLOCKSIZE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa876;
 	public final static String S_CLASS_CODE = "a876";
 
@@ -86,7 +89,11 @@ public interface ICFBamProtId16Gen extends ICFBamProtInt16Type
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
-	public void setProtId16Gen( ICFBamProtId16Gen src );
+	public void setId16Gen( ICFBamProtId16Gen src );
+	public void set( ICFBamPubValue src );
 	public void set( ICFBamProtValueH src );
-	public void setProtId16Gen( ICFBamProtId16GenH src );
+	public void setId16Gen( ICFBamProtId16GenH src );
+	public void set( ICFBamPubValueH src );
+	public void setId16Gen( ICFBamPubId16GenH src );
+
 }

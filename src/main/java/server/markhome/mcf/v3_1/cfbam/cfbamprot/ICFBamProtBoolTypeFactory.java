@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtBoolTypeFactory protected interface for BoolType
  */
-public interface ICFBamProtBoolTypeFactory
-extends ICFBamPubBoolTypeFactory
+public interface ICFBamProtBoolTypeFactory extends ICFBamPubBoolTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public BoolType instances.
+	 *	Allocate a protected SchemaIdx key over protected BoolType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtBoolTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubBoolTypeBySchemaIdxKey asPublic(ICFBamProtBoolTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected BoolType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubBoolTypeFactory
 	public ICFBamProtBoolType newProtRec();
 
 	/**
+	 *	Allocate a public BoolType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubBoolType asPublic(ICFBamProtBoolType src);
+
+	/**
 	 *	Allocate a protected BoolType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtBoolTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public BoolType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubBoolTypeH asPublic(ICFBamProtBoolTypeH src);
 
 }

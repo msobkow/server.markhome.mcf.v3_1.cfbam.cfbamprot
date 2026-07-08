@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDbKeyHash256GenFactory protected interface for DbKeyHash256Gen
  */
-public interface ICFBamProtDbKeyHash256GenFactory
-extends ICFBamPubDbKeyHash256GenFactory
+public interface ICFBamProtDbKeyHash256GenFactory extends ICFBamPubDbKeyHash256GenFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubDbKeyHash256GenFactory
 	public ICFBamProtDbKeyHash256Gen newProtRec();
 
 	/**
+	 *	Allocate a public DbKeyHash256Gen interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash256Gen asPublic(ICFBamProtDbKeyHash256Gen src);
+
+	/**
 	 *	Allocate a protected DbKeyHash256Gen history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash256GenH newProtHRec();
+
+	/**
+	 *	Allocate a public DbKeyHash256Gen history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash256GenH asPublic(ICFBamProtDbKeyHash256GenH src);
 
 }

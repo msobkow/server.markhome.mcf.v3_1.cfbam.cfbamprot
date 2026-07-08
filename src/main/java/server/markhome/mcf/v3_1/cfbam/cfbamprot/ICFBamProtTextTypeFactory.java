@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTextTypeFactory protected interface for TextType
  */
-public interface ICFBamProtTextTypeFactory
-extends ICFBamPubTextTypeFactory
+public interface ICFBamProtTextTypeFactory extends ICFBamPubTextTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public TextType instances.
+	 *	Allocate a protected SchemaIdx key over protected TextType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTextTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTextTypeBySchemaIdxKey asPublic(ICFBamProtTextTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected TextType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubTextTypeFactory
 	public ICFBamProtTextType newProtRec();
 
 	/**
+	 *	Allocate a public TextType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTextType asPublic(ICFBamProtTextType src);
+
+	/**
 	 *	Allocate a protected TextType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTextTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public TextType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTextTypeH asPublic(ICFBamProtTextTypeH src);
 
 }

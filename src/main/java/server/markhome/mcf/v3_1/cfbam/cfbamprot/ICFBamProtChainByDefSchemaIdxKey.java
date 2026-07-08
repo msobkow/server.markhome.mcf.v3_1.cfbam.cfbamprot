@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a Chain by DefSchemaIdx index key object
+// Description: Java 25 protlic interface for a Chain by DefSchemaIdx index key object
 
 /*
  *	server.markhome.mcf.CFBam

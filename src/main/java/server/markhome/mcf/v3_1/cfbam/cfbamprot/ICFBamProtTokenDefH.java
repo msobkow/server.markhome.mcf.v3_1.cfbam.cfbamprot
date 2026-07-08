@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a TokenDef history object
+// Description: Java 25 protlic interface for a TokenDef history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtTokenDefH provides access to protected history records matching the CFBamProtTokenDef object change history.
+ *	ICFBamProtTokenDefH provides access to protlic history records matching the CFBamProtTokenDef object change history.
  */
 public interface ICFBamProtTokenDefH extends ICFBamProtAtomH
 {

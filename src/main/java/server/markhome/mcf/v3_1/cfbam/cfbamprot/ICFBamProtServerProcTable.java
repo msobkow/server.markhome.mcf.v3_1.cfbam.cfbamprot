@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for ServerProc.
+// Description: Java 25 protlic DbIO interface for ServerProc.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtServerProcTable protected database interface for ServerProc has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtServerProcTable protlic database interface for ServerProc has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtServerProcTable
+extends ICFBamProtServerMethodTable,
+	ICFBamPubServerProcTable
 {
 	public static final String TABLE_NAME = "ServerProc";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtServerProcTable
 	public ICFBamProtServerProc protcreateServerProc( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerProc rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtServerProc protcreateServerProc( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerProc rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtServerProcTable
 	 */
 	public ICFBamProtServerProc protupdateServerProc( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerProc rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtServerProc protupdateServerProc( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerProc rec );
 
 
 	/**
@@ -126,6 +152,15 @@ public interface ICFBamProtServerProcTable
 	public void protdeleteServerProcByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByUNameIdxKey argKey );
 	/**
+	 *	Delete the ServerProc instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByUNameIdxKey argKey );
+	/**
 	 *	Delete the ServerProc instances identified by the key MethTableIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -145,6 +180,15 @@ public interface ICFBamProtServerProcTable
 	public void protdeleteServerProcByMethTableIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByMethTableIdxKey argKey );
 	/**
+	 *	Delete the ServerProc instances identified by the key MethTableIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByMethTableIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByMethTableIdxKey argKey );
+	/**
 	 *	Delete the ServerProc instances identified by the key MethCodeVisIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -163,6 +207,15 @@ public interface ICFBamProtServerProcTable
 	 */
 	public void protdeleteServerProcByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByMethCodeVisIdxKey argKey );
+	/**
+	 *	Delete the ServerProc instances identified by the key MethCodeVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByMethCodeVisIdxKey argKey );
 	/**
 	 *	Delete the ServerProc instances identified by the key MethTableVisIdx.
 	 *
@@ -186,6 +239,15 @@ public interface ICFBamProtServerProcTable
 	public void protdeleteServerProcByMethTableVisIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByMethTableVisIdxKey argKey );
 	/**
+	 *	Delete the ServerProc instances identified by the key MethTableVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByMethTableVisIdxKey argKey );
+	/**
 	 *	Delete the ServerProc instances identified by the key DefSchemaIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -204,6 +266,15 @@ public interface ICFBamProtServerProcTable
 	 */
 	public void protdeleteServerProcByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtServerMethodByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the ServerProc instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the ServerProc instance identified by the primary key.
 	 *
@@ -232,10 +303,117 @@ public interface ICFBamProtServerProcTable
 	 */
 	public void protdeleteServerProcByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
+	/**
+	 *	Delete the ServerProc instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteServerProc( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerProc rec );
+	/**
+	 *	Delete the ServerProc instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByUNameIdxKey argKey );
+	/**
+	 *	Delete the ServerProc instances identified by the key MethTableIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByMethTableIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByMethTableIdxKey argKey );
+	/**
+	 *	Delete the ServerProc instances identified by the key MethCodeVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByMethCodeVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByMethCodeVisIdxKey argKey );
+	/**
+	 *	Delete the ServerProc instances identified by the key MethTableVisIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByMethTableVisIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByMethTableVisIdxKey argKey );
+	/**
+	 *	Delete the ServerProc instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubServerMethodByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the ServerProc instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteServerProcByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the ServerProc instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteServerProcByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
-	 *	Read the derived ServerProc record instance by primary key.
+	 *	Read the derived ServerProc record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ServerProc instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtServerProc protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived ServerProc record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ServerProc instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubServerProc pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived ServerProc record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -247,8 +425,9 @@ public interface ICFBamProtServerProcTable
 	public ICFBamProtServerProc protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived ServerProc record instance by primary key.
+	 *	Lock the derived ServerProc record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -259,6 +438,32 @@ public interface ICFBamProtServerProcTable
 	 */
 	public ICFBamProtServerProc protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived ServerProc record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ServerProc instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubServerProc publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived ServerProc record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ServerProc instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtServerProc protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all ServerProc instances.
@@ -374,6 +579,66 @@ public interface ICFBamProtServerProcTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtServerProc protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific ServerProc record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ServerProc instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtServerProc protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific ServerProc record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ServerProc instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubServerProc pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific ServerProc record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ServerProc instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtServerProc protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific ServerProc record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ServerProc instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubServerProc publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

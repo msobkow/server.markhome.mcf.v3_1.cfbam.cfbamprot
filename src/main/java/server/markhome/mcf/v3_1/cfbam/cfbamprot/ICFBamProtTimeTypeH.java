@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a TimeType history object
+// Description: Java 25 protlic interface for a TimeType history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtTimeTypeH provides access to protected history records matching the CFBamProtTimeType object change history.
+ *	ICFBamProtTimeTypeH provides access to protlic history records matching the CFBamProtTimeType object change history.
  */
 public interface ICFBamProtTimeTypeH extends ICFBamProtTimeDefH
 {

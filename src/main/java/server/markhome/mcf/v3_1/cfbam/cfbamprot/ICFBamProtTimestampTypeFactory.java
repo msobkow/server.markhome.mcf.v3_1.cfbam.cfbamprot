@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTimestampTypeFactory protected interface for TimestampType
  */
-public interface ICFBamProtTimestampTypeFactory
-extends ICFBamPubTimestampTypeFactory
+public interface ICFBamProtTimestampTypeFactory extends ICFBamPubTimestampTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public TimestampType instances.
+	 *	Allocate a protected SchemaIdx key over protected TimestampType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTimestampTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimestampTypeBySchemaIdxKey asPublic(ICFBamProtTimestampTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected TimestampType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubTimestampTypeFactory
 	public ICFBamProtTimestampType newProtRec();
 
 	/**
+	 *	Allocate a public TimestampType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimestampType asPublic(ICFBamProtTimestampType src);
+
+	/**
 	 *	Allocate a protected TimestampType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTimestampTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public TimestampType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimestampTypeH asPublic(ICFBamProtTimestampTypeH src);
 
 }

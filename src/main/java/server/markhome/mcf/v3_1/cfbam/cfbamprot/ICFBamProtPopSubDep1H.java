@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a PopSubDep1 history object
+// Description: Java 25 protlic interface for a PopSubDep1 history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtPopSubDep1H provides access to protected history records matching the CFBamProtPopSubDep1 object change history.
+ *	ICFBamProtPopSubDep1H provides access to protlic history records matching the CFBamProtPopSubDep1 object change history.
  */
 public interface ICFBamProtPopSubDep1H extends ICFBamProtPopDepH
 {

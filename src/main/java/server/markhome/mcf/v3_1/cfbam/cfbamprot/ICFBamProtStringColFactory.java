@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtStringColFactory protected interface for StringCol
  */
-public interface ICFBamProtStringColFactory
-extends ICFBamPubStringColFactory
+public interface ICFBamProtStringColFactory extends ICFBamPubStringColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public StringCol instances.
+	 *	Allocate a protected TableIdx key over protected StringCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtStringColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubStringColByTableIdxKey asPublic(ICFBamProtStringColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected StringCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubStringColFactory
 	public ICFBamProtStringCol newProtRec();
 
 	/**
+	 *	Allocate a public StringCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubStringCol asPublic(ICFBamProtStringCol src);
+
+	/**
 	 *	Allocate a protected StringCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtStringColH newProtHRec();
+
+	/**
+	 *	Allocate a public StringCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubStringColH asPublic(ICFBamProtStringColH src);
 
 }

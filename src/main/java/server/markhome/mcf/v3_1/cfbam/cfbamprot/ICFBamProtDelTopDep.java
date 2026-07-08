@@ -53,23 +53,26 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtDelTopDep persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtDelTopDep extends ICFBamProtDelDep
 {
-	public static final String NAME_INIT_VALUE = new String( "" );
-	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
-	public static final String S_PREVID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVID_INIT_VALUE );
-	public static final String S_NEXTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = ICFBamPubDelTopDep.NAME_INIT_VALUE;
+	public static final String S_TABLEID_INIT_VALUE = ICFBamPubDelTopDep.S_TABLEID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubDelTopDep.TABLEID_INIT_VALUE;
+	public static final String S_PREVID_INIT_VALUE = ICFBamPubDelTopDep.S_PREVID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = ICFBamPubDelTopDep.PREVID_INIT_VALUE;
+	public static final String S_NEXTID_INIT_VALUE = ICFBamPubDelTopDep.S_NEXTID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = ICFBamPubDelTopDep.NEXTID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa81f;
 	public final static String S_CLASS_CODE = "a81f";
 
@@ -78,10 +81,13 @@ public interface ICFBamProtDelTopDep extends ICFBamProtDelDep
 	public ICFBamProtDelTopDep getOptionalLookupNext();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public void setOptionalLookupPrev(ICFBamProtDelTopDep argObj);
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
+	public void setOptionalLookupPrev(ICFBamPubDelTopDep argObj);
 	public void setOptionalLookupNext(ICFBamProtDelTopDep argObj);
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
+	public void setOptionalLookupNext(ICFBamPubDelTopDep argObj);
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public CFLibDbKeyHash256 getRequiredTableId();
@@ -97,7 +103,11 @@ public interface ICFBamProtDelTopDep extends ICFBamProtDelDep
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
-	public void setProtDelTopDep( ICFBamProtDelTopDep src );
+	public void setDelTopDep( ICFBamProtDelTopDep src );
+	public void set( ICFBamPubScope src );
 	public void set( ICFBamProtScopeH src );
-	public void setProtDelTopDep( ICFBamProtDelTopDepH src );
+	public void setDelTopDep( ICFBamProtDelTopDepH src );
+	public void set( ICFBamPubScopeH src );
+	public void setDelTopDep( ICFBamPubDelTopDepH src );
+
 }

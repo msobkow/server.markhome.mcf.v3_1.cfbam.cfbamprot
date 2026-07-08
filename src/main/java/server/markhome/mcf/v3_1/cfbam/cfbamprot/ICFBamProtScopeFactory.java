@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtScopeFactory protected interface for Scope
  */
-public interface ICFBamProtScopeFactory
-extends ICFBamPubScopeFactory
+public interface ICFBamProtScopeFactory extends ICFBamPubScopeFactory
 {
 
 	/**
@@ -77,11 +78,25 @@ extends ICFBamPubScopeFactory
 	ICFBamProtScopeHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected TenantIdx key over public Scope instances.
+	 *	Allocate a public primary history key for Scope instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFBamPubScopeHPKey asPublic(ICFBamProtScopeHPKey src);
+
+	/**
+	 *	Allocate a protected TenantIdx key over protected Scope instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtScopeByTenantIdxKey newProtByTenantIdxKey();
+
+	/**
+	 *	Allocate a public TenantIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubScopeByTenantIdxKey asPublic(ICFBamProtScopeByTenantIdxKey src);
 
 	/**
 	 *	Allocate a protected Scope interface implementation.
@@ -91,10 +106,24 @@ extends ICFBamPubScopeFactory
 	public ICFBamProtScope newProtRec();
 
 	/**
+	 *	Allocate a public Scope interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubScope asPublic(ICFBamProtScope src);
+
+	/**
 	 *	Allocate a protected Scope history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtScopeH newProtHRec();
+
+	/**
+	 *	Allocate a public Scope history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubScopeH asPublic(ICFBamProtScopeH src);
 
 }

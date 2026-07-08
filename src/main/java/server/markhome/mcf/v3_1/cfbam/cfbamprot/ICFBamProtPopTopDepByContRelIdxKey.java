@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a PopTopDep by ContRelIdx index key object
+// Description: Java 25 protlic interface for a PopTopDep by ContRelIdx index key object
 
 /*
  *	server.markhome.mcf.CFBam

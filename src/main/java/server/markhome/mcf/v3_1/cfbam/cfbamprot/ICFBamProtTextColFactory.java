@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTextColFactory protected interface for TextCol
  */
-public interface ICFBamProtTextColFactory
-extends ICFBamPubTextColFactory
+public interface ICFBamProtTextColFactory extends ICFBamPubTextColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public TextCol instances.
+	 *	Allocate a protected TableIdx key over protected TextCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTextColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTextColByTableIdxKey asPublic(ICFBamProtTextColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected TextCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubTextColFactory
 	public ICFBamProtTextCol newProtRec();
 
 	/**
+	 *	Allocate a public TextCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTextCol asPublic(ICFBamProtTextCol src);
+
+	/**
 	 *	Allocate a protected TextCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTextColH newProtHRec();
+
+	/**
+	 *	Allocate a public TextCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTextColH asPublic(ICFBamProtTextColH src);
 
 }

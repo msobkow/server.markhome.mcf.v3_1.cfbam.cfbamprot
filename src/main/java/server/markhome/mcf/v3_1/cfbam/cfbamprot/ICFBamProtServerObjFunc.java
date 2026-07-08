@@ -53,24 +53,28 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtServerObjFunc persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtServerObjFunc extends ICFBamProtServerMethod
 {
-	public static final String S_RETTABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 RETTABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_RETTABLEID_INIT_VALUE );
+	public static final String S_RETTABLEID_INIT_VALUE = ICFBamPubServerObjFunc.S_RETTABLEID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 RETTABLEID_INIT_VALUE = ICFBamPubServerObjFunc.RETTABLEID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa805;
 	public final static String S_CLASS_CODE = "a805";
 
 	public ICFBamProtTable getOptionalLookupRetTable();
 	public void setOptionalLookupRetTable(ICFBamProtTable argObj);
 	public void setOptionalLookupRetTable(CFLibDbKeyHash256 argRetTableId);
+	public void setOptionalLookupRetTable(ICFBamPubTable argObj);
 	public CFLibDbKeyHash256 getOptionalRetTableId();
 	@Override
 	public boolean equals( Object obj );
@@ -82,7 +86,11 @@ public interface ICFBamProtServerObjFunc extends ICFBamProtServerMethod
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
-	public void setProtServerObjFunc( ICFBamProtServerObjFunc src );
+	public void setServerObjFunc( ICFBamProtServerObjFunc src );
+	public void set( ICFBamPubScope src );
 	public void set( ICFBamProtScopeH src );
-	public void setProtServerObjFunc( ICFBamProtServerObjFuncH src );
+	public void setServerObjFunc( ICFBamProtServerObjFuncH src );
+	public void set( ICFBamPubScopeH src );
+	public void setServerObjFunc( ICFBamPubServerObjFuncH src );
+
 }

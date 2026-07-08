@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a Int64Col history object
+// Description: Java 25 protlic interface for a Int64Col history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtInt64ColH provides access to protected history records matching the CFBamProtInt64Col object change history.
+ *	ICFBamProtInt64ColH provides access to protlic history records matching the CFBamProtInt64Col object change history.
  */
 public interface ICFBamProtInt64ColH extends ICFBamProtInt64DefH
 {

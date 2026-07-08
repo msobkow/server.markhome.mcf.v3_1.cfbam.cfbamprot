@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for PopSubDep2.
+// Description: Java 25 protlic DbIO interface for PopSubDep2.
 
 /*
  *	server.markhome.mcf.CFBam
@@ -57,16 +57,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
-import server.markhome.mcf.v3_1.cfint.cfintprotobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
- *	CFBamProtPopSubDep2Table protected database interface for PopSubDep2 has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFBamProtPopSubDep2Table protlic database interface for PopSubDep2 has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtPopSubDep2Table
+extends ICFBamProtPopDepTable,
+	ICFBamPubPopSubDep2Table
 {
 	public static final String TABLE_NAME = "PopSubDep2";
 
@@ -81,6 +85,17 @@ public interface ICFBamProtPopSubDep2Table
 	public ICFBamProtPopSubDep2 protcreatePopSubDep2( ICFSecProtAuthorization Authorization,
 		ICFBamProtPopSubDep2 rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFBamProtPopSubDep2 protcreatePopSubDep2( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopSubDep2 rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -92,6 +107,17 @@ public interface ICFBamProtPopSubDep2Table
 	 */
 	public ICFBamProtPopSubDep2 protupdatePopSubDep2( ICFSecProtAuthorization Authorization,
 		ICFBamProtPopSubDep2 rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFBamProtPopSubDep2 protupdatePopSubDep2( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopSubDep2 rec );
 
 
 	/**
@@ -123,6 +149,15 @@ public interface ICFBamProtPopSubDep2Table
 	public void protdeletePopSubDep2ByPopSubDep1Idx( ICFSecProtAuthorization Authorization,
 		ICFBamProtPopSubDep2ByPopSubDep1IdxKey argKey );
 	/**
+	 *	Delete the PopSubDep2 instances identified by the key PopSubDep1Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByPopSubDep1Idx( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopSubDep2ByPopSubDep1IdxKey argKey );
+	/**
 	 *	Delete the PopSubDep2 instances identified by the key UNameIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -145,6 +180,15 @@ public interface ICFBamProtPopSubDep2Table
 	public void protdeletePopSubDep2ByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtPopSubDep2ByUNameIdxKey argKey );
 	/**
+	 *	Delete the PopSubDep2 instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopSubDep2ByUNameIdxKey argKey );
+	/**
 	 *	Delete the PopSubDep2 instances identified by the key RelationIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -164,6 +208,15 @@ public interface ICFBamProtPopSubDep2Table
 	public void protdeletePopSubDep2ByRelationIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtPopDepByRelationIdxKey argKey );
 	/**
+	 *	Delete the PopSubDep2 instances identified by the key RelationIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByRelationIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopDepByRelationIdxKey argKey );
+	/**
 	 *	Delete the PopSubDep2 instances identified by the key DefSchemaIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -182,6 +235,15 @@ public interface ICFBamProtPopSubDep2Table
 	 */
 	public void protdeletePopSubDep2ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtPopDepByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the PopSubDep2 instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopDepByDefSchemaIdxKey argKey );
 	/**
 	 *	Delete the PopSubDep2 instance identified by the primary key.
 	 *
@@ -210,10 +272,108 @@ public interface ICFBamProtPopSubDep2Table
 	 */
 	public void protdeletePopSubDep2ByTenantIdx( ICFSecProtAuthorization Authorization,
 		ICFBamProtScopeByTenantIdxKey argKey );
+	/**
+	 *	Delete the PopSubDep2 instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeletePopSubDep2( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopSubDep2 rec );
+	/**
+	 *	Delete the PopSubDep2 instances identified by the key PopSubDep1Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByPopSubDep1Idx( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopSubDep2ByPopSubDep1IdxKey argKey );
+	/**
+	 *	Delete the PopSubDep2 instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopSubDep2ByUNameIdxKey argKey );
+	/**
+	 *	Delete the PopSubDep2 instances identified by the key RelationIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByRelationIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopDepByRelationIdxKey argKey );
+	/**
+	 *	Delete the PopSubDep2 instances identified by the key DefSchemaIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByDefSchemaIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubPopDepByDefSchemaIdxKey argKey );
+	/**
+	 *	Delete the PopSubDep2 instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeletePopSubDep2ByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the PopSubDep2 instances identified by the key TenantIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeletePopSubDep2ByTenantIdx( ICFSecProtAuthorization Authorization,
+		ICFBamPubScopeByTenantIdxKey argKey );
 
 
 	/**
-	 *	Read the derived PopSubDep2 record instance by primary key.
+	 *	Read the derived PopSubDep2 record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the PopSubDep2 instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtPopSubDep2 protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived PopSubDep2 record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the PopSubDep2 instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubPopSubDep2 pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived PopSubDep2 record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -225,8 +385,9 @@ public interface ICFBamProtPopSubDep2Table
 	public ICFBamProtPopSubDep2 protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived PopSubDep2 record instance by primary key.
+	 *	Lock the derived PopSubDep2 record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -237,6 +398,32 @@ public interface ICFBamProtPopSubDep2Table
 	 */
 	public ICFBamProtPopSubDep2 protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived PopSubDep2 record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the PopSubDep2 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamPubPopSubDep2 publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived PopSubDep2 record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the PopSubDep2 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFBamProtPopSubDep2 protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all PopSubDep2 instances.
@@ -337,6 +524,66 @@ public interface ICFBamProtPopSubDep2Table
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtPopSubDep2 protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific PopSubDep2 record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the PopSubDep2 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtPopSubDep2 protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific PopSubDep2 record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the PopSubDep2 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubPopSubDep2 pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific PopSubDep2 record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the PopSubDep2 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamProtPopSubDep2 protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific PopSubDep2 record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the PopSubDep2 instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFBamPubPopSubDep2 publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

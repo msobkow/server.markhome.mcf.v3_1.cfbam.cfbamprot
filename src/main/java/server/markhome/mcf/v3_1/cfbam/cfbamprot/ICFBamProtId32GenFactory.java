@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtId32GenFactory protected interface for Id32Gen
  */
-public interface ICFBamProtId32GenFactory
-extends ICFBamPubId32GenFactory
+public interface ICFBamProtId32GenFactory extends ICFBamPubId32GenFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubId32GenFactory
 	public ICFBamProtId32Gen newProtRec();
 
 	/**
+	 *	Allocate a public Id32Gen interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubId32Gen asPublic(ICFBamProtId32Gen src);
+
+	/**
 	 *	Allocate a protected Id32Gen history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtId32GenH newProtHRec();
+
+	/**
+	 *	Allocate a public Id32Gen history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubId32GenH asPublic(ICFBamProtId32GenH src);
 
 }

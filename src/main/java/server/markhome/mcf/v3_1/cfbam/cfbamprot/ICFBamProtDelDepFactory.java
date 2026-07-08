@@ -59,29 +59,44 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDelDepFactory protected interface for DelDep
  */
-public interface ICFBamProtDelDepFactory
-extends ICFBamPubDelDepFactory
+public interface ICFBamProtDelDepFactory extends ICFBamPubDelDepFactory
 {
 
 	/**
-	 *	Allocate a protected DefSchemaIdx key over public DelDep instances.
+	 *	Allocate a protected DefSchemaIdx key over protected DelDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelDepByDefSchemaIdxKey newProtByDefSchemaIdxKey();
 
 	/**
-	 *	Allocate a protected DelDepIdx key over public DelDep instances.
+	 *	Allocate a public DefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelDepByDefSchemaIdxKey asPublic(ICFBamProtDelDepByDefSchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected DelDepIdx key over protected DelDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelDepByDelDepIdxKey newProtByDelDepIdxKey();
+
+	/**
+	 *	Allocate a public DelDepIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelDepByDelDepIdxKey asPublic(ICFBamProtDelDepByDelDepIdxKey src);
 
 	/**
 	 *	Allocate a protected DelDep interface implementation.
@@ -91,10 +106,24 @@ extends ICFBamPubDelDepFactory
 	public ICFBamProtDelDep newProtRec();
 
 	/**
+	 *	Allocate a public DelDep interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelDep asPublic(ICFBamProtDelDep src);
+
+	/**
 	 *	Allocate a protected DelDep history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelDepH newProtHRec();
+
+	/**
+	 *	Allocate a public DelDep history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelDepH asPublic(ICFBamProtDelDepH src);
 
 }

@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a Int32Type history object
+// Description: Java 25 protlic interface for a Int32Type history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtInt32TypeH provides access to protected history records matching the CFBamProtInt32Type object change history.
+ *	ICFBamProtInt32TypeH provides access to protlic history records matching the CFBamProtInt32Type object change history.
  */
 public interface ICFBamProtInt32TypeH extends ICFBamProtInt32DefH
 {

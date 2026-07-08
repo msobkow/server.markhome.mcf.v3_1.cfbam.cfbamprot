@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtUInt32TypeFactory protected interface for UInt32Type
  */
-public interface ICFBamProtUInt32TypeFactory
-extends ICFBamPubUInt32TypeFactory
+public interface ICFBamProtUInt32TypeFactory extends ICFBamPubUInt32TypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public UInt32Type instances.
+	 *	Allocate a protected SchemaIdx key over protected UInt32Type instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtUInt32TypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUInt32TypeBySchemaIdxKey asPublic(ICFBamProtUInt32TypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected UInt32Type interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubUInt32TypeFactory
 	public ICFBamProtUInt32Type newProtRec();
 
 	/**
+	 *	Allocate a public UInt32Type interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUInt32Type asPublic(ICFBamProtUInt32Type src);
+
+	/**
 	 *	Allocate a protected UInt32Type history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtUInt32TypeH newProtHRec();
+
+	/**
+	 *	Allocate a public UInt32Type history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUInt32TypeH asPublic(ICFBamProtUInt32TypeH src);
 
 }

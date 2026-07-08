@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTZTimestampTypeFactory protected interface for TZTimestampType
  */
-public interface ICFBamProtTZTimestampTypeFactory
-extends ICFBamPubTZTimestampTypeFactory
+public interface ICFBamProtTZTimestampTypeFactory extends ICFBamPubTZTimestampTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public TZTimestampType instances.
+	 *	Allocate a protected SchemaIdx key over protected TZTimestampType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTZTimestampTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZTimestampTypeBySchemaIdxKey asPublic(ICFBamProtTZTimestampTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected TZTimestampType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubTZTimestampTypeFactory
 	public ICFBamProtTZTimestampType newProtRec();
 
 	/**
+	 *	Allocate a public TZTimestampType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZTimestampType asPublic(ICFBamProtTZTimestampType src);
+
+	/**
 	 *	Allocate a protected TZTimestampType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTZTimestampTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public TZTimestampType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZTimestampTypeH asPublic(ICFBamProtTZTimestampTypeH src);
 
 }

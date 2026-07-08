@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a DelSubDep2 by ContDelDep1Idx index key object
+// Description: Java 25 protlic interface for a DelSubDep2 by ContDelDep1Idx index key object
 
 /*
  *	server.markhome.mcf.CFBam

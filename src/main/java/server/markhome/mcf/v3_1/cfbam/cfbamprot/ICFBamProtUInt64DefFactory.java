@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtUInt64DefFactory protected interface for UInt64Def
  */
-public interface ICFBamProtUInt64DefFactory
-extends ICFBamPubUInt64DefFactory
+public interface ICFBamProtUInt64DefFactory extends ICFBamPubUInt64DefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubUInt64DefFactory
 	public ICFBamProtUInt64Def newProtRec();
 
 	/**
+	 *	Allocate a public UInt64Def interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUInt64Def asPublic(ICFBamProtUInt64Def src);
+
+	/**
 	 *	Allocate a protected UInt64Def history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtUInt64DefH newProtHRec();
+
+	/**
+	 *	Allocate a public UInt64Def history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUInt64DefH asPublic(ICFBamProtUInt64DefH src);
 
 }

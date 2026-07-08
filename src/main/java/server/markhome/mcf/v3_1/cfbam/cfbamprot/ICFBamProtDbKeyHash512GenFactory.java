@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDbKeyHash512GenFactory protected interface for DbKeyHash512Gen
  */
-public interface ICFBamProtDbKeyHash512GenFactory
-extends ICFBamPubDbKeyHash512GenFactory
+public interface ICFBamProtDbKeyHash512GenFactory extends ICFBamPubDbKeyHash512GenFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubDbKeyHash512GenFactory
 	public ICFBamProtDbKeyHash512Gen newProtRec();
 
 	/**
+	 *	Allocate a public DbKeyHash512Gen interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash512Gen asPublic(ICFBamProtDbKeyHash512Gen src);
+
+	/**
 	 *	Allocate a protected DbKeyHash512Gen history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash512GenH newProtHRec();
+
+	/**
+	 *	Allocate a public DbKeyHash512Gen history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash512GenH asPublic(ICFBamProtDbKeyHash512GenH src);
 
 }

@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtAtomFactory protected interface for Atom
  */
-public interface ICFBamProtAtomFactory
-extends ICFBamPubAtomFactory
+public interface ICFBamProtAtomFactory extends ICFBamPubAtomFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubAtomFactory
 	public ICFBamProtAtom newProtRec();
 
 	/**
+	 *	Allocate a public Atom interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubAtom asPublic(ICFBamProtAtom src);
+
+	/**
 	 *	Allocate a protected Atom history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtAtomH newProtHRec();
+
+	/**
+	 *	Allocate a public Atom history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubAtomH asPublic(ICFBamProtAtomH src);
 
 }

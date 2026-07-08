@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a DelSubDep1 history object
+// Description: Java 25 protlic interface for a DelSubDep1 history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtDelSubDep1H provides access to protected history records matching the CFBamProtDelSubDep1 object change history.
+ *	ICFBamProtDelSubDep1H provides access to protlic history records matching the CFBamProtDelSubDep1 object change history.
  */
 public interface ICFBamProtDelSubDep1H extends ICFBamProtDelDepH
 {

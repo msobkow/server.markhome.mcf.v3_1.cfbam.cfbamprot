@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtUInt32DefFactory protected interface for UInt32Def
  */
-public interface ICFBamProtUInt32DefFactory
-extends ICFBamPubUInt32DefFactory
+public interface ICFBamProtUInt32DefFactory extends ICFBamPubUInt32DefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubUInt32DefFactory
 	public ICFBamProtUInt32Def newProtRec();
 
 	/**
+	 *	Allocate a public UInt32Def interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUInt32Def asPublic(ICFBamProtUInt32Def src);
+
+	/**
 	 *	Allocate a protected UInt32Def history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtUInt32DefH newProtHRec();
+
+	/**
+	 *	Allocate a public UInt32Def history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubUInt32DefH asPublic(ICFBamProtUInt32DefH src);
 
 }

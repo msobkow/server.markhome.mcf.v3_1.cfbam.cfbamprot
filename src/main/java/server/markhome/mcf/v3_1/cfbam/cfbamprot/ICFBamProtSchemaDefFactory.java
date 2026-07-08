@@ -59,57 +59,100 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtSchemaDefFactory protected interface for SchemaDef
  */
-public interface ICFBamProtSchemaDefFactory
-extends ICFBamPubSchemaDefFactory
+public interface ICFBamProtSchemaDefFactory extends ICFBamPubSchemaDefFactory
 {
 
 	/**
-	 *	Allocate a protected CTenantIdx key over public SchemaDef instances.
+	 *	Allocate a protected CTenantIdx key over protected SchemaDef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaDefByCTenantIdxKey newProtByCTenantIdxKey();
 
 	/**
-	 *	Allocate a protected MinorVersionIdx key over public SchemaDef instances.
+	 *	Allocate a public CTenantIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaDefByCTenantIdxKey asPublic(ICFBamProtSchemaDefByCTenantIdxKey src);
+
+	/**
+	 *	Allocate a protected MinorVersionIdx key over protected SchemaDef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaDefByMinorVersionIdxKey newProtByMinorVersionIdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public SchemaDef instances.
+	 *	Allocate a public MinorVersionIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaDefByMinorVersionIdxKey asPublic(ICFBamProtSchemaDefByMinorVersionIdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected SchemaDef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaDefByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected AuthEMailIdx key over public SchemaDef instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaDefByUNameIdxKey asPublic(ICFBamProtSchemaDefByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected AuthEMailIdx key over protected SchemaDef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaDefByAuthEMailIdxKey newProtByAuthEMailIdxKey();
 
 	/**
-	 *	Allocate a protected ProjectURLIdx key over public SchemaDef instances.
+	 *	Allocate a public AuthEMailIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaDefByAuthEMailIdxKey asPublic(ICFBamProtSchemaDefByAuthEMailIdxKey src);
+
+	/**
+	 *	Allocate a protected ProjectURLIdx key over protected SchemaDef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaDefByProjectURLIdxKey newProtByProjectURLIdxKey();
 
 	/**
-	 *	Allocate a protected PubURIIdx key over public SchemaDef instances.
+	 *	Allocate a public ProjectURLIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaDefByProjectURLIdxKey asPublic(ICFBamProtSchemaDefByProjectURLIdxKey src);
+
+	/**
+	 *	Allocate a protected PubURIIdx key over protected SchemaDef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaDefByPubURIIdxKey newProtByPubURIIdxKey();
+
+	/**
+	 *	Allocate a public PubURIIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaDefByPubURIIdxKey asPublic(ICFBamProtSchemaDefByPubURIIdxKey src);
 
 	/**
 	 *	Allocate a protected SchemaDef interface implementation.
@@ -119,10 +162,24 @@ extends ICFBamPubSchemaDefFactory
 	public ICFBamProtSchemaDef newProtRec();
 
 	/**
+	 *	Allocate a public SchemaDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaDef asPublic(ICFBamProtSchemaDef src);
+
+	/**
 	 *	Allocate a protected SchemaDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaDefH newProtHRec();
+
+	/**
+	 *	Allocate a public SchemaDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaDefH asPublic(ICFBamProtSchemaDefH src);
 
 }

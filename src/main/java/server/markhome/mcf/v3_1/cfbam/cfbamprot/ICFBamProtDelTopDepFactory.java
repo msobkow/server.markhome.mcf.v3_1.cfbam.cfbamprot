@@ -59,43 +59,72 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDelTopDepFactory protected interface for DelTopDep
  */
-public interface ICFBamProtDelTopDepFactory
-extends ICFBamPubDelTopDepFactory
+public interface ICFBamProtDelTopDepFactory extends ICFBamPubDelTopDepFactory
 {
 
 	/**
-	 *	Allocate a protected DelTopDepTblIdx key over public DelTopDep instances.
+	 *	Allocate a protected DelTopDepTblIdx key over protected DelTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelTopDepByDelTopDepTblIdxKey newProtByDelTopDepTblIdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public DelTopDep instances.
+	 *	Allocate a public DelTopDepTblIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelTopDepByDelTopDepTblIdxKey asPublic(ICFBamProtDelTopDepByDelTopDepTblIdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected DelTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelTopDepByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected PrevIdx key over public DelTopDep instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelTopDepByUNameIdxKey asPublic(ICFBamProtDelTopDepByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected PrevIdx key over protected DelTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelTopDepByPrevIdxKey newProtByPrevIdxKey();
 
 	/**
-	 *	Allocate a protected NextIdx key over public DelTopDep instances.
+	 *	Allocate a public PrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelTopDepByPrevIdxKey asPublic(ICFBamProtDelTopDepByPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected NextIdx key over protected DelTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelTopDepByNextIdxKey newProtByNextIdxKey();
+
+	/**
+	 *	Allocate a public NextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelTopDepByNextIdxKey asPublic(ICFBamProtDelTopDepByNextIdxKey src);
 
 	/**
 	 *	Allocate a protected DelTopDep interface implementation.
@@ -105,10 +134,24 @@ extends ICFBamPubDelTopDepFactory
 	public ICFBamProtDelTopDep newProtRec();
 
 	/**
+	 *	Allocate a public DelTopDep interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelTopDep asPublic(ICFBamProtDelTopDep src);
+
+	/**
 	 *	Allocate a protected DelTopDep history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelTopDepH newProtHRec();
+
+	/**
+	 *	Allocate a public DelTopDep history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelTopDepH asPublic(ICFBamProtDelTopDepH src);
 
 }

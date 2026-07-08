@@ -53,24 +53,28 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtInt64Col persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtInt64Col extends ICFBamProtInt64Def
 {
-	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
+	public static final String S_TABLEID_INIT_VALUE = ICFBamPubInt64Col.S_TABLEID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubInt64Col.TABLEID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa87b;
 	public final static String S_CLASS_CODE = "a87b";
 
 	public ICFBamProtTable getRequiredContainerTable();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	@Override
 	public boolean equals( Object obj );
@@ -82,7 +86,11 @@ public interface ICFBamProtInt64Col extends ICFBamProtInt64Def
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
-	public void setProtInt64Col( ICFBamProtInt64Col src );
+	public void setInt64Col( ICFBamProtInt64Col src );
+	public void set( ICFBamPubValue src );
 	public void set( ICFBamProtValueH src );
-	public void setProtInt64Col( ICFBamProtInt64ColH src );
+	public void setInt64Col( ICFBamProtInt64ColH src );
+	public void set( ICFBamPubValueH src );
+	public void setInt64Col( ICFBamPubInt64ColH src );
+
 }

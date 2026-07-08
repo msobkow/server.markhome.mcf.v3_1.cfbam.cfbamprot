@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtEnumTypeFactory protected interface for EnumType
  */
-public interface ICFBamProtEnumTypeFactory
-extends ICFBamPubEnumTypeFactory
+public interface ICFBamProtEnumTypeFactory extends ICFBamPubEnumTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public EnumType instances.
+	 *	Allocate a protected SchemaIdx key over protected EnumType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtEnumTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumTypeBySchemaIdxKey asPublic(ICFBamProtEnumTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected EnumType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubEnumTypeFactory
 	public ICFBamProtEnumType newProtRec();
 
 	/**
+	 *	Allocate a public EnumType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumType asPublic(ICFBamProtEnumType src);
+
+	/**
 	 *	Allocate a protected EnumType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtEnumTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public EnumType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumTypeH asPublic(ICFBamProtEnumTypeH src);
 
 }

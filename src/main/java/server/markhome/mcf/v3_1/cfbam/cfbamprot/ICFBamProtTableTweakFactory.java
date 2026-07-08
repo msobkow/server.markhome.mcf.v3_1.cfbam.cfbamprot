@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTableTweakFactory protected interface for TableTweak
  */
-public interface ICFBamProtTableTweakFactory
-extends ICFBamPubTableTweakFactory
+public interface ICFBamProtTableTweakFactory extends ICFBamPubTableTweakFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public TableTweak instances.
+	 *	Allocate a protected TableIdx key over protected TableTweak instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTableTweakByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTableTweakByTableIdxKey asPublic(ICFBamProtTableTweakByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected TableTweak interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubTableTweakFactory
 	public ICFBamProtTableTweak newProtRec();
 
 	/**
+	 *	Allocate a public TableTweak interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTableTweak asPublic(ICFBamProtTableTweak src);
+
+	/**
 	 *	Allocate a protected TableTweak history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTableTweakH newProtHRec();
+
+	/**
+	 *	Allocate a public TableTweak history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTableTweakH asPublic(ICFBamProtTableTweakH src);
 
 }

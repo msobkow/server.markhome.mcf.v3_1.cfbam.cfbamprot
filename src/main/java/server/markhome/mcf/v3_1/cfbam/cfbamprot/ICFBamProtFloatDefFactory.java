@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtFloatDefFactory protected interface for FloatDef
  */
-public interface ICFBamProtFloatDefFactory
-extends ICFBamPubFloatDefFactory
+public interface ICFBamProtFloatDefFactory extends ICFBamPubFloatDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubFloatDefFactory
 	public ICFBamProtFloatDef newProtRec();
 
 	/**
+	 *	Allocate a public FloatDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubFloatDef asPublic(ICFBamProtFloatDef src);
+
+	/**
 	 *	Allocate a protected FloatDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtFloatDefH newProtHRec();
+
+	/**
+	 *	Allocate a public FloatDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubFloatDefH asPublic(ICFBamProtFloatDefH src);
 
 }

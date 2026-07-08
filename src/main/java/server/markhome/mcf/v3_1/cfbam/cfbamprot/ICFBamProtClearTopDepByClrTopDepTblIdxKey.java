@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a ClearTopDep by ClrTopDepTblIdx index key object
+// Description: Java 25 protlic interface for a ClearTopDep by ClrTopDepTblIdx index key object
 
 /*
  *	server.markhome.mcf.CFBam

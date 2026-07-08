@@ -53,21 +53,24 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtTableCol persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtTableCol extends ICFBamProtValue
 {
-	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
-	public static final String S_DATAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 DATAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DATAID_INIT_VALUE );
-	public static final String XMLELEMENTNAME_INIT_VALUE = new String( "" );
+	public static final String S_TABLEID_INIT_VALUE = ICFBamPubTableCol.S_TABLEID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubTableCol.TABLEID_INIT_VALUE;
+	public static final String S_DATAID_INIT_VALUE = ICFBamPubTableCol.S_DATAID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 DATAID_INIT_VALUE = ICFBamPubTableCol.DATAID_INIT_VALUE;
+	public static final String XMLELEMENTNAME_INIT_VALUE = ICFBamPubTableCol.XMLELEMENTNAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa85c;
 	public final static String S_CLASS_CODE = "a85c";
 
@@ -75,8 +78,10 @@ public interface ICFBamProtTableCol extends ICFBamProtValue
 	public ICFBamProtValue getRequiredParentDataType();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public void setRequiredParentDataType(ICFBamProtValue argObj);
 	public void setRequiredParentDataType(CFLibDbKeyHash256 argDataId);
+	public void setRequiredParentDataType(ICFBamPubValue argObj);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public String getOptionalDbName();
 	public void setOptionalDbName( String value );
@@ -93,7 +98,11 @@ public interface ICFBamProtTableCol extends ICFBamProtValue
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
-	public void setProtTableCol( ICFBamProtTableCol src );
+	public void setTableCol( ICFBamProtTableCol src );
+	public void set( ICFBamPubValue src );
 	public void set( ICFBamProtValueH src );
-	public void setProtTableCol( ICFBamProtTableColH src );
+	public void setTableCol( ICFBamProtTableColH src );
+	public void set( ICFBamPubValueH src );
+	public void setTableCol( ICFBamPubTableColH src );
+
 }

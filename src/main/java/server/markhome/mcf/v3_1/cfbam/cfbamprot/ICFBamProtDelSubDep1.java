@@ -53,25 +53,29 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtDelSubDep1 persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtDelSubDep1 extends ICFBamProtDelDep
 {
-	public static final String S_DELTOPDEPID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 DELTOPDEPID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DELTOPDEPID_INIT_VALUE );
-	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final String S_DELTOPDEPID_INIT_VALUE = ICFBamPubDelSubDep1.S_DELTOPDEPID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 DELTOPDEPID_INIT_VALUE = ICFBamPubDelSubDep1.DELTOPDEPID_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFBamPubDelSubDep1.NAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa81c;
 	public final static String S_CLASS_CODE = "a81c";
 
 	public ICFBamProtDelTopDep getRequiredContainerDelTopDep();
 	public void setRequiredContainerDelTopDep(ICFBamProtDelTopDep argObj);
 	public void setRequiredContainerDelTopDep(CFLibDbKeyHash256 argDelTopDepId);
+	public void setRequiredContainerDelTopDep(ICFBamPubDelTopDep argObj);
 	public CFLibDbKeyHash256 getRequiredDelTopDepId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
@@ -85,7 +89,11 @@ public interface ICFBamProtDelSubDep1 extends ICFBamProtDelDep
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
-	public void setProtDelSubDep1( ICFBamProtDelSubDep1 src );
+	public void setDelSubDep1( ICFBamProtDelSubDep1 src );
+	public void set( ICFBamPubScope src );
 	public void set( ICFBamProtScopeH src );
-	public void setProtDelSubDep1( ICFBamProtDelSubDep1H src );
+	public void setDelSubDep1( ICFBamProtDelSubDep1H src );
+	public void set( ICFBamPubScopeH src );
+	public void setDelSubDep1( ICFBamPubDelSubDep1H src );
+
 }

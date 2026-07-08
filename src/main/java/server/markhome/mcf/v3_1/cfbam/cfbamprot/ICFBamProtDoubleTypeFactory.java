@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDoubleTypeFactory protected interface for DoubleType
  */
-public interface ICFBamProtDoubleTypeFactory
-extends ICFBamPubDoubleTypeFactory
+public interface ICFBamProtDoubleTypeFactory extends ICFBamPubDoubleTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public DoubleType instances.
+	 *	Allocate a protected SchemaIdx key over protected DoubleType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDoubleTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDoubleTypeBySchemaIdxKey asPublic(ICFBamProtDoubleTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected DoubleType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubDoubleTypeFactory
 	public ICFBamProtDoubleType newProtRec();
 
 	/**
+	 *	Allocate a public DoubleType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDoubleType asPublic(ICFBamProtDoubleType src);
+
+	/**
 	 *	Allocate a protected DoubleType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDoubleTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public DoubleType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDoubleTypeH asPublic(ICFBamProtDoubleTypeH src);
 
 }

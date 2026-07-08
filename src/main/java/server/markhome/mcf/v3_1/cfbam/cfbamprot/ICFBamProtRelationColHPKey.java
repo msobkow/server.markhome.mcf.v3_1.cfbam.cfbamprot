@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a RelationCol history primary key object
+// Description: Java 25 protlic interface for a RelationCol history primary key object
 
 /*
  *	server.markhome.mcf.CFBam

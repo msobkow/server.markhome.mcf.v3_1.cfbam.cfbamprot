@@ -53,20 +53,23 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtClearDep persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtClearDep extends ICFBamProtScope
 {
-	public static final String S_RELATIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 RELATIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_RELATIONID_INIT_VALUE );
-	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
+	public static final String S_RELATIONID_INIT_VALUE = ICFBamPubClearDep.S_RELATIONID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 RELATIONID_INIT_VALUE = ICFBamPubClearDep.RELATIONID_INIT_VALUE;
+	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubClearDep.S_DEFSCHEMAID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubClearDep.DEFSCHEMAID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa814;
 	public final static String S_CLASS_CODE = "a814";
 
@@ -74,8 +77,10 @@ public interface ICFBamProtClearDep extends ICFBamProtScope
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 	public void setRequiredLookupRelation(ICFBamProtRelation argObj);
 	public void setRequiredLookupRelation(CFLibDbKeyHash256 argRelationId);
+	public void setRequiredLookupRelation(ICFBamPubRelation argObj);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public CFLibDbKeyHash256 getRequiredRelationId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	@Override
@@ -88,7 +93,11 @@ public interface ICFBamProtClearDep extends ICFBamProtScope
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
-	public void setProtClearDep( ICFBamProtClearDep src );
+	public void setClearDep( ICFBamProtClearDep src );
+	public void set( ICFBamPubScope src );
 	public void set( ICFBamProtScopeH src );
-	public void setProtClearDep( ICFBamProtClearDepH src );
+	public void setClearDep( ICFBamProtClearDepH src );
+	public void set( ICFBamPubScopeH src );
+	public void setClearDep( ICFBamPubClearDepH src );
+
 }

@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a PopDep by RelationIdx index key object
+// Description: Java 25 protlic interface for a PopDep by RelationIdx index key object
 
 /*
  *	server.markhome.mcf.CFBam

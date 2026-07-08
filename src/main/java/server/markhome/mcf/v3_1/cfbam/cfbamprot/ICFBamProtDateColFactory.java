@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDateColFactory protected interface for DateCol
  */
-public interface ICFBamProtDateColFactory
-extends ICFBamPubDateColFactory
+public interface ICFBamProtDateColFactory extends ICFBamPubDateColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public DateCol instances.
+	 *	Allocate a protected TableIdx key over protected DateCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDateColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDateColByTableIdxKey asPublic(ICFBamProtDateColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected DateCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubDateColFactory
 	public ICFBamProtDateCol newProtRec();
 
 	/**
+	 *	Allocate a public DateCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDateCol asPublic(ICFBamProtDateCol src);
+
+	/**
 	 *	Allocate a protected DateCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDateColH newProtHRec();
+
+	/**
+	 *	Allocate a public DateCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDateColH asPublic(ICFBamProtDateColH src);
 
 }

@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDbKeyHash128DefFactory protected interface for DbKeyHash128Def
  */
-public interface ICFBamProtDbKeyHash128DefFactory
-extends ICFBamPubDbKeyHash128DefFactory
+public interface ICFBamProtDbKeyHash128DefFactory extends ICFBamPubDbKeyHash128DefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubDbKeyHash128DefFactory
 	public ICFBamProtDbKeyHash128Def newProtRec();
 
 	/**
+	 *	Allocate a public DbKeyHash128Def interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash128Def asPublic(ICFBamProtDbKeyHash128Def src);
+
+	/**
 	 *	Allocate a protected DbKeyHash128Def history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash128DefH newProtHRec();
+
+	/**
+	 *	Allocate a public DbKeyHash128Def history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash128DefH asPublic(ICFBamProtDbKeyHash128DefH src);
 
 }

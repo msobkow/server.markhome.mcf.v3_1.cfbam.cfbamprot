@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a BlobDef history object
+// Description: Java 25 protlic interface for a BlobDef history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtBlobDefH provides access to protected history records matching the CFBamProtBlobDef object change history.
+ *	ICFBamProtBlobDefH provides access to protlic history records matching the CFBamProtBlobDef object change history.
  */
 public interface ICFBamProtBlobDefH extends ICFBamProtAtomH
 {

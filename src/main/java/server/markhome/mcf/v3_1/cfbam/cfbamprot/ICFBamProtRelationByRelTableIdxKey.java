@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a Relation by RelTableIdx index key object
+// Description: Java 25 protlic interface for a Relation by RelTableIdx index key object
 
 /*
  *	server.markhome.mcf.CFBam

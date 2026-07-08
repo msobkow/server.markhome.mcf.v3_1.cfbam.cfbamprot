@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtNmTokenColFactory protected interface for NmTokenCol
  */
-public interface ICFBamProtNmTokenColFactory
-extends ICFBamPubNmTokenColFactory
+public interface ICFBamProtNmTokenColFactory extends ICFBamPubNmTokenColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public NmTokenCol instances.
+	 *	Allocate a protected TableIdx key over protected NmTokenCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtNmTokenColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNmTokenColByTableIdxKey asPublic(ICFBamProtNmTokenColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected NmTokenCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubNmTokenColFactory
 	public ICFBamProtNmTokenCol newProtRec();
 
 	/**
+	 *	Allocate a public NmTokenCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNmTokenCol asPublic(ICFBamProtNmTokenCol src);
+
+	/**
 	 *	Allocate a protected NmTokenCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtNmTokenColH newProtHRec();
+
+	/**
+	 *	Allocate a public NmTokenCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNmTokenColH asPublic(ICFBamProtNmTokenColH src);
 
 }

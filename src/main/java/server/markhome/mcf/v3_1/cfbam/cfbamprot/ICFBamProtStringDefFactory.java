@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtStringDefFactory protected interface for StringDef
  */
-public interface ICFBamProtStringDefFactory
-extends ICFBamPubStringDefFactory
+public interface ICFBamProtStringDefFactory extends ICFBamPubStringDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubStringDefFactory
 	public ICFBamProtStringDef newProtRec();
 
 	/**
+	 *	Allocate a public StringDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubStringDef asPublic(ICFBamProtStringDef src);
+
+	/**
 	 *	Allocate a protected StringDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtStringDefH newProtHRec();
+
+	/**
+	 *	Allocate a public StringDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubStringDefH asPublic(ICFBamProtStringDefH src);
 
 }

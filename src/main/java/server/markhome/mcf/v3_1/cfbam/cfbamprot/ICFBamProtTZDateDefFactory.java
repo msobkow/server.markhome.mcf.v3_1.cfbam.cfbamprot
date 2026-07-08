@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTZDateDefFactory protected interface for TZDateDef
  */
-public interface ICFBamProtTZDateDefFactory
-extends ICFBamPubTZDateDefFactory
+public interface ICFBamProtTZDateDefFactory extends ICFBamPubTZDateDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubTZDateDefFactory
 	public ICFBamProtTZDateDef newProtRec();
 
 	/**
+	 *	Allocate a public TZDateDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZDateDef asPublic(ICFBamProtTZDateDef src);
+
+	/**
 	 *	Allocate a protected TZDateDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTZDateDefH newProtHRec();
+
+	/**
+	 *	Allocate a public TZDateDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTZDateDefH asPublic(ICFBamProtTZDateDefH src);
 
 }

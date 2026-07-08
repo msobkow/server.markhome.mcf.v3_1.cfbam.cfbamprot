@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtNumberColFactory protected interface for NumberCol
  */
-public interface ICFBamProtNumberColFactory
-extends ICFBamPubNumberColFactory
+public interface ICFBamProtNumberColFactory extends ICFBamPubNumberColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public NumberCol instances.
+	 *	Allocate a protected TableIdx key over protected NumberCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtNumberColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNumberColByTableIdxKey asPublic(ICFBamProtNumberColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected NumberCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubNumberColFactory
 	public ICFBamProtNumberCol newProtRec();
 
 	/**
+	 *	Allocate a public NumberCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNumberCol asPublic(ICFBamProtNumberCol src);
+
+	/**
 	 *	Allocate a protected NumberCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtNumberColH newProtHRec();
+
+	/**
+	 *	Allocate a public NumberCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubNumberColH asPublic(ICFBamProtNumberColH src);
 
 }

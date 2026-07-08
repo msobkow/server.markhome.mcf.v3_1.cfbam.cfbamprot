@@ -53,10 +53,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtUInt64Def persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -66,9 +69,9 @@ public interface ICFBamProtUInt64Def extends ICFBamProtAtom
 	public static final BigDecimal INITVALUE_MIN_VALUE = CFLibBigDecimalUtil.parse( "CFBamProt.UInt64Def.InitValue", "CFBamProt.UInt64Def.InitValue", 19, 0, "0" );
 	public static final BigDecimal MINVALUE_MIN_VALUE = CFLibBigDecimalUtil.parse( "CFBamProt.UInt64Def.MinValue", "CFBamProt.UInt64Def.MinValue", 19, 0, "0" );
 	public static final BigDecimal MAXVALUE_MIN_VALUE = CFLibBigDecimalUtil.parse( "CFBamProt.UInt64Def.MaxValue", "CFBamProt.UInt64Def.MaxValue", 19, 0, "0" );
-	public static final BigDecimal INITVALUE_INIT_VALUE = CFLibBigDecimalUtil.parse( "CFBamProt.UInt64Def.InitValue", "CFBamProt.UInt64Def.InitValue", 19, 0, "0" );
-	public static final BigDecimal MINVALUE_INIT_VALUE = CFLibBigDecimalUtil.parse( "CFBamProt.UInt64Def.MinValue", "CFBamProt.UInt64Def.MinValue", 19, 0, "0" );
-	public static final BigDecimal MAXVALUE_INIT_VALUE = CFLibBigDecimalUtil.parse( "CFBamProt.UInt64Def.MaxValue", "CFBamProt.UInt64Def.MaxValue", 19, 0, "0" );
+	public static final BigDecimal INITVALUE_INIT_VALUE = ICFBamPubUInt64Def.INITVALUE_INIT_VALUE;
+	public static final BigDecimal MINVALUE_INIT_VALUE = ICFBamPubUInt64Def.MINVALUE_INIT_VALUE;
+	public static final BigDecimal MAXVALUE_INIT_VALUE = ICFBamPubUInt64Def.MAXVALUE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa869;
 	public final static String S_CLASS_CODE = "a869";
 
@@ -88,7 +91,11 @@ public interface ICFBamProtUInt64Def extends ICFBamProtAtom
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
-	public void setProtUInt64Def( ICFBamProtUInt64Def src );
+	public void setUInt64Def( ICFBamProtUInt64Def src );
+	public void set( ICFBamPubValue src );
 	public void set( ICFBamProtValueH src );
-	public void setProtUInt64Def( ICFBamProtUInt64DefH src );
+	public void setUInt64Def( ICFBamProtUInt64DefH src );
+	public void set( ICFBamPubValueH src );
+	public void setUInt64Def( ICFBamPubUInt64DefH src );
+
 }

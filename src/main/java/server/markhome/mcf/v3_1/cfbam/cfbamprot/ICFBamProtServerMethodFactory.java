@@ -59,50 +59,86 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtServerMethodFactory protected interface for ServerMethod
  */
-public interface ICFBamProtServerMethodFactory
-extends ICFBamPubServerMethodFactory
+public interface ICFBamProtServerMethodFactory extends ICFBamPubServerMethodFactory
 {
 
 	/**
-	 *	Allocate a protected UNameIdx key over public ServerMethod instances.
+	 *	Allocate a protected UNameIdx key over protected ServerMethod instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerMethodByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected MethTableIdx key over public ServerMethod instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerMethodByUNameIdxKey asPublic(ICFBamProtServerMethodByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected MethTableIdx key over protected ServerMethod instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerMethodByMethTableIdxKey newProtByMethTableIdxKey();
 
 	/**
-	 *	Allocate a protected MethCodeVisIdx key over public ServerMethod instances.
+	 *	Allocate a public MethTableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerMethodByMethTableIdxKey asPublic(ICFBamProtServerMethodByMethTableIdxKey src);
+
+	/**
+	 *	Allocate a protected MethCodeVisIdx key over protected ServerMethod instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerMethodByMethCodeVisIdxKey newProtByMethCodeVisIdxKey();
 
 	/**
-	 *	Allocate a protected MethTableVisIdx key over public ServerMethod instances.
+	 *	Allocate a public MethCodeVisIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerMethodByMethCodeVisIdxKey asPublic(ICFBamProtServerMethodByMethCodeVisIdxKey src);
+
+	/**
+	 *	Allocate a protected MethTableVisIdx key over protected ServerMethod instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerMethodByMethTableVisIdxKey newProtByMethTableVisIdxKey();
 
 	/**
-	 *	Allocate a protected DefSchemaIdx key over public ServerMethod instances.
+	 *	Allocate a public MethTableVisIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerMethodByMethTableVisIdxKey asPublic(ICFBamProtServerMethodByMethTableVisIdxKey src);
+
+	/**
+	 *	Allocate a protected DefSchemaIdx key over protected ServerMethod instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerMethodByDefSchemaIdxKey newProtByDefSchemaIdxKey();
+
+	/**
+	 *	Allocate a public DefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerMethodByDefSchemaIdxKey asPublic(ICFBamProtServerMethodByDefSchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected ServerMethod interface implementation.
@@ -112,10 +148,24 @@ extends ICFBamPubServerMethodFactory
 	public ICFBamProtServerMethod newProtRec();
 
 	/**
+	 *	Allocate a public ServerMethod interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerMethod asPublic(ICFBamProtServerMethod src);
+
+	/**
 	 *	Allocate a protected ServerMethod history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerMethodH newProtHRec();
+
+	/**
+	 *	Allocate a public ServerMethod history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerMethodH asPublic(ICFBamProtServerMethodH src);
 
 }

@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtValueFactory protected interface for Value
  */
-public interface ICFBamProtValueFactory
-extends ICFBamPubValueFactory
+public interface ICFBamProtValueFactory extends ICFBamPubValueFactory
 {
 
 	/**
@@ -77,53 +78,109 @@ extends ICFBamPubValueFactory
 	ICFBamProtValueHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public Value instances.
+	 *	Allocate a public primary history key for Value instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFBamPubValueHPKey asPublic(ICFBamProtValueHPKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected Value instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtValueByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected ScopeIdx key over public Value instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubValueByUNameIdxKey asPublic(ICFBamProtValueByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected ScopeIdx key over protected Value instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtValueByScopeIdxKey newProtByScopeIdxKey();
 
 	/**
-	 *	Allocate a protected DefSchemaIdx key over public Value instances.
+	 *	Allocate a public ScopeIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubValueByScopeIdxKey asPublic(ICFBamProtValueByScopeIdxKey src);
+
+	/**
+	 *	Allocate a protected DefSchemaIdx key over protected Value instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtValueByDefSchemaIdxKey newProtByDefSchemaIdxKey();
 
 	/**
-	 *	Allocate a protected PrevIdx key over public Value instances.
+	 *	Allocate a public DefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubValueByDefSchemaIdxKey asPublic(ICFBamProtValueByDefSchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected PrevIdx key over protected Value instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtValueByPrevIdxKey newProtByPrevIdxKey();
 
 	/**
-	 *	Allocate a protected NextIdx key over public Value instances.
+	 *	Allocate a public PrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubValueByPrevIdxKey asPublic(ICFBamProtValueByPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected NextIdx key over protected Value instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtValueByNextIdxKey newProtByNextIdxKey();
 
 	/**
-	 *	Allocate a protected ContPrevIdx key over public Value instances.
+	 *	Allocate a public NextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubValueByNextIdxKey asPublic(ICFBamProtValueByNextIdxKey src);
+
+	/**
+	 *	Allocate a protected ContPrevIdx key over protected Value instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtValueByContPrevIdxKey newProtByContPrevIdxKey();
 
 	/**
-	 *	Allocate a protected ContNextIdx key over public Value instances.
+	 *	Allocate a public ContPrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubValueByContPrevIdxKey asPublic(ICFBamProtValueByContPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected ContNextIdx key over protected Value instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtValueByContNextIdxKey newProtByContNextIdxKey();
+
+	/**
+	 *	Allocate a public ContNextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubValueByContNextIdxKey asPublic(ICFBamProtValueByContNextIdxKey src);
 
 	/**
 	 *	Allocate a protected Value interface implementation.
@@ -133,10 +190,24 @@ extends ICFBamPubValueFactory
 	public ICFBamProtValue newProtRec();
 
 	/**
+	 *	Allocate a public Value interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubValue asPublic(ICFBamProtValue src);
+
+	/**
 	 *	Allocate a protected Value history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtValueH newProtHRec();
+
+	/**
+	 *	Allocate a public Value history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubValueH asPublic(ICFBamProtValueH src);
 
 }

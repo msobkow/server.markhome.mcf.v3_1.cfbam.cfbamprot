@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SchemaRole by SchRoleScpIdx index key object
+// Description: Java 25 protlic interface for a SchemaRole by SchRoleScpIdx index key object
 
 /*
  *	server.markhome.mcf.CFBam

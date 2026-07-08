@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTimeColFactory protected interface for TimeCol
  */
-public interface ICFBamProtTimeColFactory
-extends ICFBamPubTimeColFactory
+public interface ICFBamProtTimeColFactory extends ICFBamPubTimeColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public TimeCol instances.
+	 *	Allocate a protected TableIdx key over protected TimeCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTimeColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimeColByTableIdxKey asPublic(ICFBamProtTimeColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected TimeCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubTimeColFactory
 	public ICFBamProtTimeCol newProtRec();
 
 	/**
+	 *	Allocate a public TimeCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimeCol asPublic(ICFBamProtTimeCol src);
+
+	/**
 	 *	Allocate a protected TimeCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTimeColH newProtHRec();
+
+	/**
+	 *	Allocate a public TimeCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimeColH asPublic(ICFBamProtTimeColH src);
 
 }

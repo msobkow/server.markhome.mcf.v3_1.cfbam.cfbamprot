@@ -59,29 +59,44 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtPopTopDepFactory protected interface for PopTopDep
  */
-public interface ICFBamProtPopTopDepFactory
-extends ICFBamPubPopTopDepFactory
+public interface ICFBamProtPopTopDepFactory extends ICFBamPubPopTopDepFactory
 {
 
 	/**
-	 *	Allocate a protected ContRelIdx key over public PopTopDep instances.
+	 *	Allocate a protected ContRelIdx key over protected PopTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtPopTopDepByContRelIdxKey newProtByContRelIdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public PopTopDep instances.
+	 *	Allocate a public ContRelIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubPopTopDepByContRelIdxKey asPublic(ICFBamProtPopTopDepByContRelIdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected PopTopDep instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtPopTopDepByUNameIdxKey newProtByUNameIdxKey();
+
+	/**
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubPopTopDepByUNameIdxKey asPublic(ICFBamProtPopTopDepByUNameIdxKey src);
 
 	/**
 	 *	Allocate a protected PopTopDep interface implementation.
@@ -91,10 +106,24 @@ extends ICFBamPubPopTopDepFactory
 	public ICFBamProtPopTopDep newProtRec();
 
 	/**
+	 *	Allocate a public PopTopDep interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubPopTopDep asPublic(ICFBamProtPopTopDep src);
+
+	/**
 	 *	Allocate a protected PopTopDep history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtPopTopDepH newProtHRec();
+
+	/**
+	 *	Allocate a public PopTopDep history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubPopTopDepH asPublic(ICFBamProtPopTopDepH src);
 
 }

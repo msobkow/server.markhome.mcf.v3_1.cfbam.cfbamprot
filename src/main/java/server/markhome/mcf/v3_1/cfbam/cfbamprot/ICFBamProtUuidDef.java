@@ -53,10 +53,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtUuidDef persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -78,7 +81,11 @@ public interface ICFBamProtUuidDef extends ICFBamProtAtom
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
-	public void setProtUuidDef( ICFBamProtUuidDef src );
+	public void setUuidDef( ICFBamProtUuidDef src );
+	public void set( ICFBamPubValue src );
 	public void set( ICFBamProtValueH src );
-	public void setProtUuidDef( ICFBamProtUuidDefH src );
+	public void setUuidDef( ICFBamProtUuidDefH src );
+	public void set( ICFBamPubValueH src );
+	public void setUuidDef( ICFBamPubUuidDefH src );
+
 }

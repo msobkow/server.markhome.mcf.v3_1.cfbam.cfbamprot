@@ -53,24 +53,28 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtTZDateCol persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtTZDateCol extends ICFBamProtTZDateDef
 {
-	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
+	public static final String S_TABLEID_INIT_VALUE = ICFBamPubTZDateCol.S_TABLEID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubTZDateCol.TABLEID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa880;
 	public final static String S_CLASS_CODE = "a880";
 
 	public ICFBamProtTable getRequiredContainerTable();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	@Override
 	public boolean equals( Object obj );
@@ -82,7 +86,11 @@ public interface ICFBamProtTZDateCol extends ICFBamProtTZDateDef
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
-	public void setProtTZDateCol( ICFBamProtTZDateCol src );
+	public void setTZDateCol( ICFBamProtTZDateCol src );
+	public void set( ICFBamPubValue src );
 	public void set( ICFBamProtValueH src );
-	public void setProtTZDateCol( ICFBamProtTZDateColH src );
+	public void setTZDateCol( ICFBamProtTZDateColH src );
+	public void set( ICFBamPubValueH src );
+	public void setTZDateCol( ICFBamPubTZDateColH src );
+
 }

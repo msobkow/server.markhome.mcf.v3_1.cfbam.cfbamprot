@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a Scope history object
+// Description: Java 25 protlic interface for a Scope history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtScopeH provides access to protected history records matching the CFBamProtScope object change history.
+ *	ICFBamProtScopeH provides access to protlic history records matching the CFBamProtScope object change history.
  */
 public interface ICFBamProtScopeH
 {

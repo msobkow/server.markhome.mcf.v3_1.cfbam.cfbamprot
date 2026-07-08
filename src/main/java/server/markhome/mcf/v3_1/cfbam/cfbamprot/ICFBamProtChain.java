@@ -53,31 +53,34 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtChain persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtChain
 {
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
-	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
-	public static final String NAME_INIT_VALUE = new String( "" );
-	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
-	public static final String S_PREVRELATIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 PREVRELATIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVRELATIONID_INIT_VALUE );
-	public static final String S_NEXTRELATIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 NEXTRELATIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTRELATIONID_INIT_VALUE );
+	public static final String S_INIT_CREATED_BY = ICFBamPubChain.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFBamPubChain.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFBamPubChain.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFBamPubChain.INIT_UPDATED_BY;
+	public static final String S_ID_INIT_VALUE = ICFBamPubChain.S_ID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFBamPubChain.ID_INIT_VALUE;
+	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubChain.S_DEFSCHEMAID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubChain.DEFSCHEMAID_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFBamPubChain.NAME_INIT_VALUE;
+	public static final String S_TABLEID_INIT_VALUE = ICFBamPubChain.S_TABLEID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubChain.TABLEID_INIT_VALUE;
+	public static final String S_PREVRELATIONID_INIT_VALUE = ICFBamPubChain.S_PREVRELATIONID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 PREVRELATIONID_INIT_VALUE = ICFBamPubChain.PREVRELATIONID_INIT_VALUE;
+	public static final String S_NEXTRELATIONID_INIT_VALUE = ICFBamPubChain.S_NEXTRELATIONID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 NEXTRELATIONID_INIT_VALUE = ICFBamPubChain.NEXTRELATIONID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa813;
 	public final static String S_CLASS_CODE = "a813";
 
@@ -92,8 +95,8 @@ public interface ICFBamProtChain
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getProtPKey();
-	public void setProtPKey(CFLibDbKeyHash256 requiredId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredId);
 	
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
@@ -106,12 +109,16 @@ public interface ICFBamProtChain
 	public ICFBamProtRelation getRequiredLookupNextRel();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public void setRequiredLookupPrevRel(ICFBamProtRelation argObj);
 	public void setRequiredLookupPrevRel(CFLibDbKeyHash256 argPrevRelationId);
+	public void setRequiredLookupPrevRel(ICFBamPubRelation argObj);
 	public void setRequiredLookupNextRel(ICFBamProtRelation argObj);
 	public void setRequiredLookupNextRel(CFLibDbKeyHash256 argNextRelationId);
+	public void setRequiredLookupNextRel(ICFBamPubRelation argObj);
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
@@ -138,9 +145,13 @@ public interface ICFBamProtChain
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtChain src );
-	public void setProtChain( ICFBamProtChain src );
+	public void setChain( ICFBamProtChain src );
+	public void set( ICFBamPubChain src );
 	public void set( ICFBamProtChainH src );
-	public void setProtChain( ICFBamProtChainH src );
+	public void setChain( ICFBamProtChainH src );
+	public void set( ICFBamPubChainH src );
+	public void setChain( ICFBamPubChainH src );
+
 
 	public String getXmlAttrFragment();
 

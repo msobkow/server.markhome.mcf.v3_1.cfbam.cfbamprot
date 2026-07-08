@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SchemaRef by PrevIdx index key object
+// Description: Java 25 protlic interface for a SchemaRef by PrevIdx index key object
 
 /*
  *	server.markhome.mcf.CFBam

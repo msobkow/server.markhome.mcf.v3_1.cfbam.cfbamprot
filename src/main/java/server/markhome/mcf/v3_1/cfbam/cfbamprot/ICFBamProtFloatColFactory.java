@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtFloatColFactory protected interface for FloatCol
  */
-public interface ICFBamProtFloatColFactory
-extends ICFBamPubFloatColFactory
+public interface ICFBamProtFloatColFactory extends ICFBamPubFloatColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public FloatCol instances.
+	 *	Allocate a protected TableIdx key over protected FloatCol instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtFloatColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubFloatColByTableIdxKey asPublic(ICFBamProtFloatColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected FloatCol interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubFloatColFactory
 	public ICFBamProtFloatCol newProtRec();
 
 	/**
+	 *	Allocate a public FloatCol interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubFloatCol asPublic(ICFBamProtFloatCol src);
+
+	/**
 	 *	Allocate a protected FloatCol history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtFloatColH newProtHRec();
+
+	/**
+	 *	Allocate a public FloatCol history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubFloatColH asPublic(ICFBamProtFloatColH src);
 
 }

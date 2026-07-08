@@ -59,50 +59,86 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtSchemaRefFactory protected interface for SchemaRef
  */
-public interface ICFBamProtSchemaRefFactory
-extends ICFBamPubSchemaRefFactory
+public interface ICFBamProtSchemaRefFactory extends ICFBamPubSchemaRefFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public SchemaRef instances.
+	 *	Allocate a protected SchemaIdx key over protected SchemaRef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRefBySchemaIdxKey newProtBySchemaIdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public SchemaRef instances.
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRefBySchemaIdxKey asPublic(ICFBamProtSchemaRefBySchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected SchemaRef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRefByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected RefSchemaIdx key over public SchemaRef instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRefByUNameIdxKey asPublic(ICFBamProtSchemaRefByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected RefSchemaIdx key over protected SchemaRef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRefByRefSchemaIdxKey newProtByRefSchemaIdxKey();
 
 	/**
-	 *	Allocate a protected PrevIdx key over public SchemaRef instances.
+	 *	Allocate a public RefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRefByRefSchemaIdxKey asPublic(ICFBamProtSchemaRefByRefSchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected PrevIdx key over protected SchemaRef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRefByPrevIdxKey newProtByPrevIdxKey();
 
 	/**
-	 *	Allocate a protected NextIdx key over public SchemaRef instances.
+	 *	Allocate a public PrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRefByPrevIdxKey asPublic(ICFBamProtSchemaRefByPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected NextIdx key over protected SchemaRef instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRefByNextIdxKey newProtByNextIdxKey();
+
+	/**
+	 *	Allocate a public NextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRefByNextIdxKey asPublic(ICFBamProtSchemaRefByNextIdxKey src);
 
 	/**
 	 *	Allocate a protected SchemaRef interface implementation.
@@ -112,10 +148,24 @@ extends ICFBamPubSchemaRefFactory
 	public ICFBamProtSchemaRef newProtRec();
 
 	/**
+	 *	Allocate a public SchemaRef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRef asPublic(ICFBamProtSchemaRef src);
+
+	/**
 	 *	Allocate a protected SchemaRef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtSchemaRefH newProtHRec();
+
+	/**
+	 *	Allocate a public SchemaRef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubSchemaRefH asPublic(ICFBamProtSchemaRefH src);
 
 }

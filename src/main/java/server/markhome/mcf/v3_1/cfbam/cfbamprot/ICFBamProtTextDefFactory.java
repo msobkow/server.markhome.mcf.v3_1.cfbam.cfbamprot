@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTextDefFactory protected interface for TextDef
  */
-public interface ICFBamProtTextDefFactory
-extends ICFBamPubTextDefFactory
+public interface ICFBamProtTextDefFactory extends ICFBamPubTextDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubTextDefFactory
 	public ICFBamProtTextDef newProtRec();
 
 	/**
+	 *	Allocate a public TextDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTextDef asPublic(ICFBamProtTextDef src);
+
+	/**
 	 *	Allocate a protected TextDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTextDefH newProtHRec();
+
+	/**
+	 *	Allocate a public TextDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTextDefH asPublic(ICFBamProtTextDefH src);
 
 }

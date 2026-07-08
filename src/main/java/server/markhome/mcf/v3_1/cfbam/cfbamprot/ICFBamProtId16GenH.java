@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a Id16Gen history object
+// Description: Java 25 protlic interface for a Id16Gen history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtId16GenH provides access to protected history records matching the CFBamProtId16Gen object change history.
+ *	ICFBamProtId16GenH provides access to protlic history records matching the CFBamProtId16Gen object change history.
  */
 public interface ICFBamProtId16GenH extends ICFBamProtInt16TypeH
 {

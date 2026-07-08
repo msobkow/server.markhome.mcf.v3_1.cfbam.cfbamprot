@@ -53,25 +53,29 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtPopTopDep persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtPopTopDep extends ICFBamProtPopDep
 {
-	public static final String S_CONTRELATIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 CONTRELATIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_CONTRELATIONID_INIT_VALUE );
-	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final String S_CONTRELATIONID_INIT_VALUE = ICFBamPubPopTopDep.S_CONTRELATIONID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 CONTRELATIONID_INIT_VALUE = ICFBamPubPopTopDep.CONTRELATIONID_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFBamPubPopTopDep.NAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa838;
 	public final static String S_CLASS_CODE = "a838";
 
 	public ICFBamProtRelation getRequiredContainerContRelation();
 	public void setRequiredContainerContRelation(ICFBamProtRelation argObj);
 	public void setRequiredContainerContRelation(CFLibDbKeyHash256 argContRelationId);
+	public void setRequiredContainerContRelation(ICFBamPubRelation argObj);
 	public CFLibDbKeyHash256 getRequiredContRelationId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
@@ -85,7 +89,11 @@ public interface ICFBamProtPopTopDep extends ICFBamProtPopDep
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
-	public void setProtPopTopDep( ICFBamProtPopTopDep src );
+	public void setPopTopDep( ICFBamProtPopTopDep src );
+	public void set( ICFBamPubScope src );
 	public void set( ICFBamProtScopeH src );
-	public void setProtPopTopDep( ICFBamProtPopTopDepH src );
+	public void setPopTopDep( ICFBamProtPopTopDepH src );
+	public void set( ICFBamPubScopeH src );
+	public void setPopTopDep( ICFBamPubPopTopDepH src );
+
 }

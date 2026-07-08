@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtBoolDefFactory protected interface for BoolDef
  */
-public interface ICFBamProtBoolDefFactory
-extends ICFBamPubBoolDefFactory
+public interface ICFBamProtBoolDefFactory extends ICFBamPubBoolDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubBoolDefFactory
 	public ICFBamProtBoolDef newProtRec();
 
 	/**
+	 *	Allocate a public BoolDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubBoolDef asPublic(ICFBamProtBoolDef src);
+
+	/**
 	 *	Allocate a protected BoolDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtBoolDefH newProtHRec();
+
+	/**
+	 *	Allocate a public BoolDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubBoolDefH asPublic(ICFBamProtBoolDefH src);
 
 }

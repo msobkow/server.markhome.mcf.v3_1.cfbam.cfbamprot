@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDateTypeFactory protected interface for DateType
  */
-public interface ICFBamProtDateTypeFactory
-extends ICFBamPubDateTypeFactory
+public interface ICFBamProtDateTypeFactory extends ICFBamPubDateTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public DateType instances.
+	 *	Allocate a protected SchemaIdx key over protected DateType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDateTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDateTypeBySchemaIdxKey asPublic(ICFBamProtDateTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected DateType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubDateTypeFactory
 	public ICFBamProtDateType newProtRec();
 
 	/**
+	 *	Allocate a public DateType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDateType asPublic(ICFBamProtDateType src);
+
+	/**
 	 *	Allocate a protected DateType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDateTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public DateType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDateTypeH asPublic(ICFBamProtDateTypeH src);
 
 }

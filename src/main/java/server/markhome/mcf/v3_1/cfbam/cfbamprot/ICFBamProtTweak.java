@@ -53,33 +53,36 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
-//import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfint.cfintpub.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /**
  *	ICFBamProtTweak persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFBamProtTweak
 {
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final String S_TENANTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 TENANTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TENANTID_INIT_VALUE );
-	public static final String S_SCOPEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 SCOPEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SCOPEID_INIT_VALUE );
-	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
-	public static final String S_DEFSCHEMATENANTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 DEFSCHEMATENANTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMATENANTID_INIT_VALUE );
-	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
-	public static final String NAME_INIT_VALUE = new String( "" );
-	public final static boolean REPLACESINHERITED_INIT_VALUE = false;
-	public static final String TWEAKGELTEXT_INIT_VALUE = new String( "" );
+	public static final String S_INIT_CREATED_BY = ICFBamPubTweak.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFBamPubTweak.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFBamPubTweak.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFBamPubTweak.INIT_UPDATED_BY;
+	public static final String S_TENANTID_INIT_VALUE = ICFBamPubTweak.S_TENANTID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 TENANTID_INIT_VALUE = ICFBamPubTweak.TENANTID_INIT_VALUE;
+	public static final String S_SCOPEID_INIT_VALUE = ICFBamPubTweak.S_SCOPEID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 SCOPEID_INIT_VALUE = ICFBamPubTweak.SCOPEID_INIT_VALUE;
+	public static final String S_ID_INIT_VALUE = ICFBamPubTweak.S_ID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFBamPubTweak.ID_INIT_VALUE;
+	public static final String S_DEFSCHEMATENANTID_INIT_VALUE = ICFBamPubTweak.S_DEFSCHEMATENANTID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 DEFSCHEMATENANTID_INIT_VALUE = ICFBamPubTweak.DEFSCHEMATENANTID_INIT_VALUE;
+	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubTweak.S_DEFSCHEMAID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubTweak.DEFSCHEMAID_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFBamPubTweak.NAME_INIT_VALUE;
+	public final static boolean REPLACESINHERITED_INIT_VALUE = ICFBamPubTweak.REPLACESINHERITED_INIT_VALUE;
+	public static final String TWEAKGELTEXT_INIT_VALUE = ICFBamPubTweak.TWEAKGELTEXT_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa808;
 	public final static String S_CLASS_CODE = "a808";
 
@@ -94,8 +97,8 @@ public interface ICFBamProtTweak
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getProtPKey();
-	public void setProtPKey(CFLibDbKeyHash256 requiredId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredId);
 	
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
@@ -106,8 +109,10 @@ public interface ICFBamProtTweak
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 	public void setRequiredContainerScopeDef(ICFBamProtScope argObj);
 	public void setRequiredContainerScopeDef(CFLibDbKeyHash256 argScopeId);
+	public void setRequiredContainerScopeDef(ICFBamPubScope argObj);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public CFLibDbKeyHash256 getRequiredTenantId();
 	public void setRequiredTenantId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getRequiredScopeId();
@@ -130,9 +135,13 @@ public interface ICFBamProtTweak
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtTweak src );
-	public void setProtTweak( ICFBamProtTweak src );
+	public void setTweak( ICFBamProtTweak src );
+	public void set( ICFBamPubTweak src );
 	public void set( ICFBamProtTweakH src );
-	public void setProtTweak( ICFBamProtTweakH src );
+	public void setTweak( ICFBamProtTweakH src );
+	public void set( ICFBamPubTweakH src );
+	public void setTweak( ICFBamPubTweakH src );
+
 
 	public String getXmlAttrFragment();
 

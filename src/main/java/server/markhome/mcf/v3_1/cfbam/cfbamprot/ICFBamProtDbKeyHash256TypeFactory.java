@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDbKeyHash256TypeFactory protected interface for DbKeyHash256Type
  */
-public interface ICFBamProtDbKeyHash256TypeFactory
-extends ICFBamPubDbKeyHash256TypeFactory
+public interface ICFBamProtDbKeyHash256TypeFactory extends ICFBamPubDbKeyHash256TypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public DbKeyHash256Type instances.
+	 *	Allocate a protected SchemaIdx key over protected DbKeyHash256Type instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash256TypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash256TypeBySchemaIdxKey asPublic(ICFBamProtDbKeyHash256TypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected DbKeyHash256Type interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubDbKeyHash256TypeFactory
 	public ICFBamProtDbKeyHash256Type newProtRec();
 
 	/**
+	 *	Allocate a public DbKeyHash256Type interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash256Type asPublic(ICFBamProtDbKeyHash256Type src);
+
+	/**
 	 *	Allocate a protected DbKeyHash256Type history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDbKeyHash256TypeH newProtHRec();
+
+	/**
+	 *	Allocate a public DbKeyHash256Type history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDbKeyHash256TypeH asPublic(ICFBamProtDbKeyHash256TypeH src);
 
 }

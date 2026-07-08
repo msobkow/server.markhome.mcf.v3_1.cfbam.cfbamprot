@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a DbKeyHash384Def history object
+// Description: Java 25 protlic interface for a DbKeyHash384Def history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtDbKeyHash384DefH provides access to protected history records matching the CFBamProtDbKeyHash384Def object change history.
+ *	ICFBamProtDbKeyHash384DefH provides access to protlic history records matching the CFBamProtDbKeyHash384Def object change history.
  */
 public interface ICFBamProtDbKeyHash384DefH extends ICFBamProtAtomH
 {

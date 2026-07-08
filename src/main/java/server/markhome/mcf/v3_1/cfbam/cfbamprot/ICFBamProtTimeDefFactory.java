@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtTimeDefFactory protected interface for TimeDef
  */
-public interface ICFBamProtTimeDefFactory
-extends ICFBamPubTimeDefFactory
+public interface ICFBamProtTimeDefFactory extends ICFBamPubTimeDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubTimeDefFactory
 	public ICFBamProtTimeDef newProtRec();
 
 	/**
+	 *	Allocate a public TimeDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimeDef asPublic(ICFBamProtTimeDef src);
+
+	/**
 	 *	Allocate a protected TimeDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtTimeDefH newProtHRec();
+
+	/**
+	 *	Allocate a public TimeDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubTimeDefH asPublic(ICFBamProtTimeDefH src);
 
 }

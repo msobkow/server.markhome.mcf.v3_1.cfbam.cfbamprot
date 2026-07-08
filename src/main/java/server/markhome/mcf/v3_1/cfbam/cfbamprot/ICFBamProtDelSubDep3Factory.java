@@ -59,29 +59,44 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDelSubDep3Factory protected interface for DelSubDep3
  */
-public interface ICFBamProtDelSubDep3Factory
-extends ICFBamPubDelSubDep3Factory
+public interface ICFBamProtDelSubDep3Factory extends ICFBamPubDelSubDep3Factory
 {
 
 	/**
-	 *	Allocate a protected DelSubDep2Idx key over public DelSubDep3 instances.
+	 *	Allocate a protected DelSubDep2Idx key over protected DelSubDep3 instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelSubDep3ByDelSubDep2IdxKey newProtByDelSubDep2IdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public DelSubDep3 instances.
+	 *	Allocate a public DelSubDep2Idx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelSubDep3ByDelSubDep2IdxKey asPublic(ICFBamProtDelSubDep3ByDelSubDep2IdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected DelSubDep3 instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelSubDep3ByUNameIdxKey newProtByUNameIdxKey();
+
+	/**
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelSubDep3ByUNameIdxKey asPublic(ICFBamProtDelSubDep3ByUNameIdxKey src);
 
 	/**
 	 *	Allocate a protected DelSubDep3 interface implementation.
@@ -91,10 +106,24 @@ extends ICFBamPubDelSubDep3Factory
 	public ICFBamProtDelSubDep3 newProtRec();
 
 	/**
+	 *	Allocate a public DelSubDep3 interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelSubDep3 asPublic(ICFBamProtDelSubDep3 src);
+
+	/**
 	 *	Allocate a protected DelSubDep3 history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelSubDep3H newProtHRec();
+
+	/**
+	 *	Allocate a public DelSubDep3 history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelSubDep3H asPublic(ICFBamProtDelSubDep3H src);
 
 }

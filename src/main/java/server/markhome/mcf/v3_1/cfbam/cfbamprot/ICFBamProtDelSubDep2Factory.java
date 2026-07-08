@@ -59,29 +59,44 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtDelSubDep2Factory protected interface for DelSubDep2
  */
-public interface ICFBamProtDelSubDep2Factory
-extends ICFBamPubDelSubDep2Factory
+public interface ICFBamProtDelSubDep2Factory extends ICFBamPubDelSubDep2Factory
 {
 
 	/**
-	 *	Allocate a protected ContDelDep1Idx key over public DelSubDep2 instances.
+	 *	Allocate a protected ContDelDep1Idx key over protected DelSubDep2 instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelSubDep2ByContDelDep1IdxKey newProtByContDelDep1IdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public DelSubDep2 instances.
+	 *	Allocate a public ContDelDep1Idx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelSubDep2ByContDelDep1IdxKey asPublic(ICFBamProtDelSubDep2ByContDelDep1IdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected DelSubDep2 instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelSubDep2ByUNameIdxKey newProtByUNameIdxKey();
+
+	/**
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelSubDep2ByUNameIdxKey asPublic(ICFBamProtDelSubDep2ByUNameIdxKey src);
 
 	/**
 	 *	Allocate a protected DelSubDep2 interface implementation.
@@ -91,10 +106,24 @@ extends ICFBamPubDelSubDep2Factory
 	public ICFBamProtDelSubDep2 newProtRec();
 
 	/**
+	 *	Allocate a public DelSubDep2 interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelSubDep2 asPublic(ICFBamProtDelSubDep2 src);
+
+	/**
 	 *	Allocate a protected DelSubDep2 history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtDelSubDep2H newProtHRec();
+
+	/**
+	 *	Allocate a public DelSubDep2 history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubDelSubDep2H asPublic(ICFBamProtDelSubDep2H src);
 
 }

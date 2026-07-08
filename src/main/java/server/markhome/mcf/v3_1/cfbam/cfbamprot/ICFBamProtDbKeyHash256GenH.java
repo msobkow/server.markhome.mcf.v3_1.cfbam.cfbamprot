@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a DbKeyHash256Gen history object
+// Description: Java 25 protlic interface for a DbKeyHash256Gen history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtDbKeyHash256GenH provides access to protected history records matching the CFBamProtDbKeyHash256Gen object change history.
+ *	ICFBamProtDbKeyHash256GenH provides access to protlic history records matching the CFBamProtDbKeyHash256Gen object change history.
  */
 public interface ICFBamProtDbKeyHash256GenH extends ICFBamProtDbKeyHash256TypeH
 {

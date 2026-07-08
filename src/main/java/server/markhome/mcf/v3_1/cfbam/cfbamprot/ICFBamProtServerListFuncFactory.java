@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtServerListFuncFactory protected interface for ServerListFunc
  */
-public interface ICFBamProtServerListFuncFactory
-extends ICFBamPubServerListFuncFactory
+public interface ICFBamProtServerListFuncFactory extends ICFBamPubServerListFuncFactory
 {
 
 	/**
-	 *	Allocate a protected RetTblIdx key over public ServerListFunc instances.
+	 *	Allocate a protected RetTblIdx key over protected ServerListFunc instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerListFuncByRetTblIdxKey newProtByRetTblIdxKey();
+
+	/**
+	 *	Allocate a public RetTblIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerListFuncByRetTblIdxKey asPublic(ICFBamProtServerListFuncByRetTblIdxKey src);
 
 	/**
 	 *	Allocate a protected ServerListFunc interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubServerListFuncFactory
 	public ICFBamProtServerListFunc newProtRec();
 
 	/**
+	 *	Allocate a public ServerListFunc interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerListFunc asPublic(ICFBamProtServerListFunc src);
+
+	/**
 	 *	Allocate a protected ServerListFunc history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtServerListFuncH newProtHRec();
+
+	/**
+	 *	Allocate a public ServerListFunc history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubServerListFuncH asPublic(ICFBamProtServerListFuncH src);
 
 }

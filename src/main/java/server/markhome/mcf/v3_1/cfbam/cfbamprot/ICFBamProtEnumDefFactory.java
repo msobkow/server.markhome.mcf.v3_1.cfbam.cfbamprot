@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtEnumDefFactory protected interface for EnumDef
  */
-public interface ICFBamProtEnumDefFactory
-extends ICFBamPubEnumDefFactory
+public interface ICFBamProtEnumDefFactory extends ICFBamPubEnumDefFactory
 {
 
 	/**
@@ -77,10 +78,24 @@ extends ICFBamPubEnumDefFactory
 	public ICFBamProtEnumDef newProtRec();
 
 	/**
+	 *	Allocate a public EnumDef interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumDef asPublic(ICFBamProtEnumDef src);
+
+	/**
 	 *	Allocate a protected EnumDef history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtEnumDefH newProtHRec();
+
+	/**
+	 *	Allocate a public EnumDef history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumDefH asPublic(ICFBamProtEnumDefH src);
 
 }

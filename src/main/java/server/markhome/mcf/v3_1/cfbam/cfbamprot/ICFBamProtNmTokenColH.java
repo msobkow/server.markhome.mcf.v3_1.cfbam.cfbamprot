@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a NmTokenCol history object
+// Description: Java 25 protlic interface for a NmTokenCol history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtNmTokenColH provides access to protected history records matching the CFBamProtNmTokenCol object change history.
+ *	ICFBamProtNmTokenColH provides access to protlic history records matching the CFBamProtNmTokenCol object change history.
  */
 public interface ICFBamProtNmTokenColH extends ICFBamProtNmTokenDefH
 {

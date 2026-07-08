@@ -59,14 +59,15 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtEnumTagFactory protected interface for EnumTag
  */
-public interface ICFBamProtEnumTagFactory
-extends ICFBamPubEnumTagFactory
+public interface ICFBamProtEnumTagFactory extends ICFBamPubEnumTagFactory
 {
 
 	/**
@@ -77,39 +78,81 @@ extends ICFBamPubEnumTagFactory
 	ICFBamProtEnumTagHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected EnumIdx key over public EnumTag instances.
+	 *	Allocate a public primary history key for EnumTag instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFBamPubEnumTagHPKey asPublic(ICFBamProtEnumTagHPKey src);
+
+	/**
+	 *	Allocate a protected EnumIdx key over protected EnumTag instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtEnumTagByEnumIdxKey newProtByEnumIdxKey();
 
 	/**
-	 *	Allocate a protected DefSchemaIdx key over public EnumTag instances.
+	 *	Allocate a public EnumIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumTagByEnumIdxKey asPublic(ICFBamProtEnumTagByEnumIdxKey src);
+
+	/**
+	 *	Allocate a protected DefSchemaIdx key over protected EnumTag instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtEnumTagByDefSchemaIdxKey newProtByDefSchemaIdxKey();
 
 	/**
-	 *	Allocate a protected EnumNameIdx key over public EnumTag instances.
+	 *	Allocate a public DefSchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumTagByDefSchemaIdxKey asPublic(ICFBamProtEnumTagByDefSchemaIdxKey src);
+
+	/**
+	 *	Allocate a protected EnumNameIdx key over protected EnumTag instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtEnumTagByEnumNameIdxKey newProtByEnumNameIdxKey();
 
 	/**
-	 *	Allocate a protected PrevIdx key over public EnumTag instances.
+	 *	Allocate a public EnumNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumTagByEnumNameIdxKey asPublic(ICFBamProtEnumTagByEnumNameIdxKey src);
+
+	/**
+	 *	Allocate a protected PrevIdx key over protected EnumTag instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtEnumTagByPrevIdxKey newProtByPrevIdxKey();
 
 	/**
-	 *	Allocate a protected NextIdx key over public EnumTag instances.
+	 *	Allocate a public PrevIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumTagByPrevIdxKey asPublic(ICFBamProtEnumTagByPrevIdxKey src);
+
+	/**
+	 *	Allocate a protected NextIdx key over protected EnumTag instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtEnumTagByNextIdxKey newProtByNextIdxKey();
+
+	/**
+	 *	Allocate a public NextIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumTagByNextIdxKey asPublic(ICFBamProtEnumTagByNextIdxKey src);
 
 	/**
 	 *	Allocate a protected EnumTag interface implementation.
@@ -119,10 +162,24 @@ extends ICFBamPubEnumTagFactory
 	public ICFBamProtEnumTag newProtRec();
 
 	/**
+	 *	Allocate a public EnumTag interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumTag asPublic(ICFBamProtEnumTag src);
+
+	/**
 	 *	Allocate a protected EnumTag history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtEnumTagH newProtHRec();
+
+	/**
+	 *	Allocate a public EnumTag history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubEnumTagH asPublic(ICFBamProtEnumTagH src);
 
 }

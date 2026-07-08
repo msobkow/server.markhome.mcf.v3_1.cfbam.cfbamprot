@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtStringTypeFactory protected interface for StringType
  */
-public interface ICFBamProtStringTypeFactory
-extends ICFBamPubStringTypeFactory
+public interface ICFBamProtStringTypeFactory extends ICFBamPubStringTypeFactory
 {
 
 	/**
-	 *	Allocate a protected SchemaIdx key over public StringType instances.
+	 *	Allocate a protected SchemaIdx key over protected StringType instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtStringTypeBySchemaIdxKey newProtBySchemaIdxKey();
+
+	/**
+	 *	Allocate a public SchemaIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubStringTypeBySchemaIdxKey asPublic(ICFBamProtStringTypeBySchemaIdxKey src);
 
 	/**
 	 *	Allocate a protected StringType interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubStringTypeFactory
 	public ICFBamProtStringType newProtRec();
 
 	/**
+	 *	Allocate a public StringType interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubStringType asPublic(ICFBamProtStringType src);
+
+	/**
 	 *	Allocate a protected StringType history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtStringTypeH newProtHRec();
+
+	/**
+	 *	Allocate a public StringType history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubStringTypeH asPublic(ICFBamProtStringTypeH src);
 
 }

@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a ClearTopDep history object
+// Description: Java 25 protlic interface for a ClearTopDep history object
 
 /*
  *	server.markhome.mcf.CFBam
@@ -59,7 +59,7 @@ import server.markhome.mcf.v3_1.cfint.cfintprot.*;
 //import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 
 /**
- *	ICFBamProtClearTopDepH provides access to protected history records matching the CFBamProtClearTopDep object change history.
+ *	ICFBamProtClearTopDepH provides access to protlic history records matching the CFBamProtClearTopDep object change history.
  */
 public interface ICFBamProtClearTopDepH extends ICFBamProtClearDepH
 {

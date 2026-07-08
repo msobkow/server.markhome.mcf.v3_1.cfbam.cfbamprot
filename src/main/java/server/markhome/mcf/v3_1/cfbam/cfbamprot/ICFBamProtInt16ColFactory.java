@@ -59,22 +59,30 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfint.cfintpub.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampub.*;
-import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
-import server.markhome.mcf.v3_1.cfint.cfintprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
+import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 /*
  *	ICFBamProtInt16ColFactory protected interface for Int16Col
  */
-public interface ICFBamProtInt16ColFactory
-extends ICFBamPubInt16ColFactory
+public interface ICFBamProtInt16ColFactory extends ICFBamPubInt16ColFactory
 {
 
 	/**
-	 *	Allocate a protected TableIdx key over public Int16Col instances.
+	 *	Allocate a protected TableIdx key over protected Int16Col instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtInt16ColByTableIdxKey newProtByTableIdxKey();
+
+	/**
+	 *	Allocate a public TableIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubInt16ColByTableIdxKey asPublic(ICFBamProtInt16ColByTableIdxKey src);
 
 	/**
 	 *	Allocate a protected Int16Col interface implementation.
@@ -84,10 +92,24 @@ extends ICFBamPubInt16ColFactory
 	public ICFBamProtInt16Col newProtRec();
 
 	/**
+	 *	Allocate a public Int16Col interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubInt16Col asPublic(ICFBamProtInt16Col src);
+
+	/**
 	 *	Allocate a protected Int16Col history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFBamProtInt16ColH newProtHRec();
+
+	/**
+	 *	Allocate a public Int16Col history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFBamPubInt16ColH asPublic(ICFBamProtInt16ColH src);
 
 }
