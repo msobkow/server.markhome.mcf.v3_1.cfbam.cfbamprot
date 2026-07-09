@@ -63,14 +63,14 @@ import server.markhome.mcf.v3_1.cfint.cfintpubobj.*;
 import server.markhome.mcf.v3_1.cfbam.cfbampubobj.*;
 
 public interface ICFBamProtSchemaObj
-	extends ICFSecProtSchemaObj,
-		ICFIntProtSchemaObj
+	extends ICFSecPubSchemaObj,
+		ICFIntPubSchemaObj
 {
-	public ICFSecProtSchema getCFSecProtBackingStore();
-	public void setCFSecProtBackingStore(ICFSecProtSchema cfsecprotBackingStore);
+	public ICFSecPubSchema getCFSecProtBackingStore();
+	public void setCFSecProtBackingStore(ICFSecPubSchema cfsecprotBackingStore);
 
-	public ICFIntProtSchema getCFIntProtBackingStore();
-	public void setCFIntProtBackingStore(ICFIntProtSchema cfintprotBackingStore);
+	public ICFIntPubSchema getCFIntProtBackingStore();
+	public void setCFIntProtBackingStore(ICFIntPubSchema cfintprotBackingStore);
 
 	public ICFBamProtSchema getCFBamProtBackingStore();
 	public void setCFBamProtBackingStore(ICFBamProtSchema cfbamprotBackingStore);
