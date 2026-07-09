@@ -68,16 +68,16 @@ public interface ICFBamProtSchemaRefObj
 	/**
 	 *	Move this object up in the chain and refresh the cache.
 	 *
-	 *	@return	ICFBamProtSchemaRefObj the reference to the moved and refreshed instance.
+	 *	@return	ICFBamProtScopeObj the reference to the moved and refreshed instance.
 	 */
-	ICFBamProtSchemaRefObj moveUp();
+	ICFBamProtScopeObj moveUp();
 
 	/**
 	 *	Move this object down in the chain and refresh the cache.
 	 *
 	 *	@return	ICFBamProtSchemaRefObj the reference to the moved and refreshed instance.
 	 */
-	ICFBamProtSchemaRefObj moveDown();
+	ICFBamProtScopeObj moveDown();
 
 	/**
 	 *	Get the current edition of this SchemaRef instance as a ICFBamProtSchemaRefEditObj.

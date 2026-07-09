@@ -460,22 +460,4 @@ public interface ICFBamProtTableObj
 	 */
 	ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
 
-	List<ICFBamRelationObj> getOnlyOwnerRelations();
-	List<ICFBamRelationObj> getContainerOwnerRelations();
-	ICFBamRelationObj getContainerRelation();
-	ICFBamRelationObj getInheritedContainerRelation();
-	ICFBamRelationObj getOwnerRelation();
-	ICFBamRelationObj getInheritedOwnerRelation();
-	List<ICFBamRelationObj> getOwnerLookupRelations();
-	List<ICFBamRelationObj> getOwnerContainerNamedLookupChainRelations();
-	List<ICFBamAtomObj> getChildrenAtoms();
-	ICFBamRelationObj getSuperClassRelation();
-	List<ICFBamRelationObj> getSubClassRelations();
-	ICFBamIndexObj getPrimaryKeyIndex();
-	List<ICFBamRelationObj> getFactoryOwnerRelations();
-	List<ICFBamIndexObj> getInheritedIndexes();
-	List<ICFBamIndexObj> getChildrenIndexes();
-	List<ICFBamRelationObj> getInheritedRelations();
-	List<ICFBamRelationObj> getChildrenRelations();
-
 }

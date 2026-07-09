@@ -442,11 +442,4 @@ public interface ICFBamProtValueObj
 	 */
 	void copyRecToPKey();
 
-	List<ICFBamIndexObj> getAffectedIndexes();
-	List<ICFBamRelationObj> getAffectedRelations();
-	List<ICFBamIndexObj> getAffectedUniqueIndexes();
-	List<ICFBamRelationObj> getColumnInMemberRelations();
-	List<ICFBamRelationObj> getColumnInComponentsRelations();
-	boolean getGenerateId();
-
 }

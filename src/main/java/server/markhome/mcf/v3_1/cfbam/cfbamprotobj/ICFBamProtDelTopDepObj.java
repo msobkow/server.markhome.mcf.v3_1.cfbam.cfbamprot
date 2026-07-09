@@ -68,16 +68,16 @@ public interface ICFBamProtDelTopDepObj
 	/**
 	 *	Move this object up in the chain and refresh the cache.
 	 *
-	 *	@return	ICFBamProtDelTopDepObj the reference to the moved and refreshed instance.
+	 *	@return	ICFBamProtScopeObj the reference to the moved and refreshed instance.
 	 */
-	ICFBamProtDelTopDepObj moveUp();
+	ICFBamProtScopeObj moveUp();
 
 	/**
 	 *	Move this object down in the chain and refresh the cache.
 	 *
 	 *	@return	ICFBamProtDelTopDepObj the reference to the moved and refreshed instance.
 	 */
-	ICFBamProtDelTopDepObj moveDown();
+	ICFBamProtScopeObj moveDown();
 
 	/**
 	 *	Get the current edition of this DelTopDep instance as a ICFBamProtDelTopDepEditObj.

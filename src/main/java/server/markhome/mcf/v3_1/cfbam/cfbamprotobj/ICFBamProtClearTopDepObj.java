@@ -68,16 +68,16 @@ public interface ICFBamProtClearTopDepObj
 	/**
 	 *	Move this object up in the chain and refresh the cache.
 	 *
-	 *	@return	ICFBamProtClearTopDepObj the reference to the moved and refreshed instance.
+	 *	@return	ICFBamProtScopeObj the reference to the moved and refreshed instance.
 	 */
-	ICFBamProtClearTopDepObj moveUp();
+	ICFBamProtScopeObj moveUp();
 
 	/**
 	 *	Move this object down in the chain and refresh the cache.
 	 *
 	 *	@return	ICFBamProtClearTopDepObj the reference to the moved and refreshed instance.
 	 */
-	ICFBamProtClearTopDepObj moveDown();
+	ICFBamProtScopeObj moveDown();
 
 	/**
 	 *	Get the current edition of this ClearTopDep instance as a ICFBamProtClearTopDepEditObj.
