@@ -74,6 +74,7 @@ public interface ICFBamProtTableTweak extends ICFBamProtTweak
 
 	public ICFBamProtTable getRequiredContainerTableDef();
 	public void setRequiredContainerTableDef(ICFBamProtTable argObj);
+	public void setRequiredContainerTableDef(ICFBamPubTable argObj);
 	public void setRequiredContainerTableDef(CFLibDbKeyHash256 argTableId);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	@Override

@@ -74,6 +74,7 @@ public interface ICFBamProtTZDateType extends ICFBamProtTZDateDef
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	@Override

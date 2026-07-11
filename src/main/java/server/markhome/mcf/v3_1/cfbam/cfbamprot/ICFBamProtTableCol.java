@@ -78,8 +78,10 @@ public interface ICFBamProtTableCol extends ICFBamProtValue
 	public ICFBamProtTable getRequiredContainerTable();
 	public ICFBamProtValue getRequiredParentDataType();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
 	public void setRequiredParentDataType(ICFBamProtValue argObj);
+	public void setRequiredParentDataType(ICFBamPubValue argObj);
 	public void setRequiredParentDataType(CFLibDbKeyHash256 argDataId);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public String getOptionalDbName();

@@ -109,12 +109,16 @@ public interface ICFBamProtChain
 	public ICFBamProtRelation getRequiredLookupPrevRel();
 	public ICFBamProtRelation getRequiredLookupNextRel();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 	public void setRequiredLookupPrevRel(ICFBamProtRelation argObj);
+	public void setRequiredLookupPrevRel(ICFBamPubRelation argObj);
 	public void setRequiredLookupPrevRel(CFLibDbKeyHash256 argPrevRelationId);
 	public void setRequiredLookupNextRel(ICFBamProtRelation argObj);
+	public void setRequiredLookupNextRel(ICFBamPubRelation argObj);
 	public void setRequiredLookupNextRel(CFLibDbKeyHash256 argNextRelationId);
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();

@@ -99,6 +99,7 @@ public interface ICFBamProtScope
 
 	public ICFSecPubTenant getRequiredOwnerTenant();
 	public void setRequiredOwnerTenant(ICFSecPubTenant argObj);
+	public void setRequiredOwnerTenant(ICFSecPubTenant argObj);
 	public void setRequiredOwnerTenant(CFLibDbKeyHash256 argTenantId);
 	public CFLibDbKeyHash256 getRequiredTenantId();
 	@Override

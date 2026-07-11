@@ -75,6 +75,7 @@ public interface ICFBamProtDelSubDep2 extends ICFBamProtDelDep
 
 	public ICFBamProtDelSubDep1 getRequiredContainerDelSubDep1();
 	public void setRequiredContainerDelSubDep1(ICFBamProtDelSubDep1 argObj);
+	public void setRequiredContainerDelSubDep1(ICFBamPubDelSubDep1 argObj);
 	public void setRequiredContainerDelSubDep1(CFLibDbKeyHash256 argDelSubDep1Id);
 	public CFLibDbKeyHash256 getRequiredDelSubDep1Id();
 	public String getRequiredName();

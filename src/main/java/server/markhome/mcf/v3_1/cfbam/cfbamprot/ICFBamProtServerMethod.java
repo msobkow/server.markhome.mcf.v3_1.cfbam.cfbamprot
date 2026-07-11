@@ -86,8 +86,10 @@ public interface ICFBamProtServerMethod extends ICFBamProtScope
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 	public ICFBamProtTable getRequiredContainerForTable();
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 	public void setRequiredContainerForTable(ICFBamProtTable argObj);
+	public void setRequiredContainerForTable(ICFBamPubTable argObj);
 	public void setRequiredContainerForTable(CFLibDbKeyHash256 argTableId);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();

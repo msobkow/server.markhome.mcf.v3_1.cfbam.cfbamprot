@@ -81,10 +81,13 @@ public interface ICFBamProtDelTopDep extends ICFBamProtDelDep
 	public ICFBamProtDelTopDep getOptionalLookupPrev();
 	public ICFBamProtDelTopDep getOptionalLookupNext();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
 	public void setOptionalLookupPrev(ICFBamProtDelTopDep argObj);
+	public void setOptionalLookupPrev(ICFBamPubDelTopDep argObj);
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
 	public void setOptionalLookupNext(ICFBamProtDelTopDep argObj);
+	public void setOptionalLookupNext(ICFBamPubDelTopDep argObj);
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
 	public String getRequiredName();
 	public void setRequiredName( String value );

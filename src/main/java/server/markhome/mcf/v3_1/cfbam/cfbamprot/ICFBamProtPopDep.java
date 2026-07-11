@@ -77,8 +77,10 @@ public interface ICFBamProtPopDep extends ICFBamProtScope
 	public ICFBamProtRelation getRequiredLookupRelation();
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 	public void setRequiredLookupRelation(ICFBamProtRelation argObj);
+	public void setRequiredLookupRelation(ICFBamPubRelation argObj);
 	public void setRequiredLookupRelation(CFLibDbKeyHash256 argRelationId);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public CFLibDbKeyHash256 getRequiredRelationId();

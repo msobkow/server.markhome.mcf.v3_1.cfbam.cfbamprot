@@ -74,6 +74,7 @@ public interface ICFBamProtTextCol extends ICFBamProtTextDef
 
 	public ICFBamProtTable getRequiredContainerTable();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	@Override

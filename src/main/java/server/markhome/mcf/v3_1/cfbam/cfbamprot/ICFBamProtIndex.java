@@ -83,8 +83,10 @@ public interface ICFBamProtIndex extends ICFBamProtScope
 	public ICFBamProtTable getRequiredContainerTable();
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();

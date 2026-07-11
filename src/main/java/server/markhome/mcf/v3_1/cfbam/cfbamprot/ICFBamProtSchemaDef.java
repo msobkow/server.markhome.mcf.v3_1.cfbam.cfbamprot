@@ -83,7 +83,9 @@ public interface ICFBamProtSchemaDef extends ICFBamProtScope
 	public ICFIntPubMinorVersion getRequiredContainerMinorVersion();
 	public ICFSecPubTenant getRequiredOwnerCTenant();
 	public void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj);
+	public void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj);
 	public void setRequiredContainerMinorVersion(CFLibDbKeyHash256 argMinorVersionId);
+	public void setRequiredOwnerCTenant(ICFSecPubTenant argObj);
 	public void setRequiredOwnerCTenant(ICFSecPubTenant argObj);
 	public void setRequiredOwnerCTenant(CFLibDbKeyHash256 argCTenantId);
 	public CFLibDbKeyHash256 getRequiredCTenantId();
