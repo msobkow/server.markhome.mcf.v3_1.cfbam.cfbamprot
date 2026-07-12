@@ -96,11 +96,4 @@ public interface ICFBamProtUuid6DefObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
-	/**
-	 *	Get the optional String attribute InitValue.
-	 *
-	 *	@return	The optional String attribute InitValue.
-	 */
-	String getOptionalInitValue();
-
 }

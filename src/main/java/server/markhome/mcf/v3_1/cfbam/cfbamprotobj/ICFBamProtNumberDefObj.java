@@ -96,39 +96,4 @@ public interface ICFBamProtNumberDefObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
-	/**
-	 *	Get the required short attribute Digits.
-	 *
-	 *	@return	The required short attribute Digits.
-	 */
-	short getRequiredDigits();
-
-	/**
-	 *	Get the required short attribute Precis.
-	 *
-	 *	@return	The required short attribute Precis.
-	 */
-	short getRequiredPrecis();
-
-	/**
-	 *	Get the optional BigDecimal attribute InitValue.
-	 *
-	 *	@return	The optional BigDecimal attribute InitValue.
-	 */
-	BigDecimal getOptionalInitValue();
-
-	/**
-	 *	Get the optional BigDecimal attribute MinValue.
-	 *
-	 *	@return	The optional BigDecimal attribute MinValue.
-	 */
-	BigDecimal getOptionalMinValue();
-
-	/**
-	 *	Get the optional BigDecimal attribute MaxValue.
-	 *
-	 *	@return	The optional BigDecimal attribute MaxValue.
-	 */
-	BigDecimal getOptionalMaxValue();
-
 }

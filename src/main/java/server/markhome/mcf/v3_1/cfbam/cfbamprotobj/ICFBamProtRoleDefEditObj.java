@@ -212,34 +212,6 @@ public interface ICFBamProtRoleDefEditObj
 	 */
 	void setRequiredName(String value);
 
-	/**
-	 *	Get the required String attribute Enables.
-	 *
-	 *	@return	The required String attribute Enables.
-	 */
-	String getRequiredEnables();
-
-	/**
-	 *	Set the required String attribute Enables.
-	 *
-	 *	@param value The required String attribute Enables value to be applied.
-	 */
-	void setRequiredEnables(String value);
-
-	/**
-	 *	Get the required String attribute Includes.
-	 *
-	 *	@return	The required String attribute Includes.
-	 */
-	String getRequiredIncludes();
-
-	/**
-	 *	Set the required String attribute Includes.
-	 *
-	 *	@param value The required String attribute Includes value to be applied.
-	 */
-	void setRequiredIncludes(String value);
-
 	public void copyRecToOrig();
 	public void copyOrigToRec();
 

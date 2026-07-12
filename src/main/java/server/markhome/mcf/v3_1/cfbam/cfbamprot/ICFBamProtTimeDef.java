@@ -70,8 +70,6 @@ public interface ICFBamProtTimeDef extends ICFBamProtAtom
 	public final static int CLASS_CODE = 0xa85f;
 	public final static String S_CLASS_CODE = "a85f";
 
-	public String getOptionalDummy();
-	public void setOptionalDummy( String value );
 	@Override
 	public boolean equals( Object obj );
 	

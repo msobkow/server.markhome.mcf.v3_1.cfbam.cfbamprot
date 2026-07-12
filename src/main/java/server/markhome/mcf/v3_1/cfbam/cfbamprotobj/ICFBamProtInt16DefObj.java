@@ -96,25 +96,4 @@ public interface ICFBamProtInt16DefObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
-	/**
-	 *	Get the optional Short attribute InitValue.
-	 *
-	 *	@return	The optional Short attribute InitValue.
-	 */
-	Short getOptionalInitValue();
-
-	/**
-	 *	Get the optional Short attribute MinValue.
-	 *
-	 *	@return	The optional Short attribute MinValue.
-	 */
-	Short getOptionalMinValue();
-
-	/**
-	 *	Get the optional Short attribute MaxValue.
-	 *
-	 *	@return	The optional Short attribute MaxValue.
-	 */
-	Short getOptionalMaxValue();
-
 }

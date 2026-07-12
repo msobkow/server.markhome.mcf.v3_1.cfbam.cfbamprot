@@ -113,48 +113,6 @@ public interface ICFBamProtSchemaDefFactory extends ICFBamPubSchemaDefFactory
 	public ICFBamPubSchemaDefByUNameIdxKey asPublic(ICFBamProtSchemaDefByUNameIdxKey src);
 
 	/**
-	 *	Allocate a protected AuthEMailIdx key over protected SchemaDef instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamProtSchemaDefByAuthEMailIdxKey newProtByAuthEMailIdxKey();
-
-	/**
-	 *	Allocate a public AuthEMailIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamPubSchemaDefByAuthEMailIdxKey asPublic(ICFBamProtSchemaDefByAuthEMailIdxKey src);
-
-	/**
-	 *	Allocate a protected ProjectURLIdx key over protected SchemaDef instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamProtSchemaDefByProjectURLIdxKey newProtByProjectURLIdxKey();
-
-	/**
-	 *	Allocate a public ProjectURLIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamPubSchemaDefByProjectURLIdxKey asPublic(ICFBamProtSchemaDefByProjectURLIdxKey src);
-
-	/**
-	 *	Allocate a protected PubURIIdx key over protected SchemaDef instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamProtSchemaDefByPubURIIdxKey newProtByPubURIIdxKey();
-
-	/**
-	 *	Allocate a public PubURIIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamPubSchemaDefByPubURIIdxKey asPublic(ICFBamProtSchemaDefByPubURIIdxKey src);
-
-	/**
 	 *	Allocate a protected SchemaDef interface implementation.
 	 *
 	 *	@return	The new instance.

@@ -113,20 +113,6 @@ public interface ICFBamProtEnumTagFactory extends ICFBamPubEnumTagFactory
 	public ICFBamPubEnumTagByDefSchemaIdxKey asPublic(ICFBamProtEnumTagByDefSchemaIdxKey src);
 
 	/**
-	 *	Allocate a protected EnumNameIdx key over protected EnumTag instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamProtEnumTagByEnumNameIdxKey newProtByEnumNameIdxKey();
-
-	/**
-	 *	Allocate a public EnumNameIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamPubEnumTagByEnumNameIdxKey asPublic(ICFBamProtEnumTagByEnumNameIdxKey src);
-
-	/**
 	 *	Allocate a protected PrevIdx key over protected EnumTag instances.
 	 *
 	 *	@return	The new instance.

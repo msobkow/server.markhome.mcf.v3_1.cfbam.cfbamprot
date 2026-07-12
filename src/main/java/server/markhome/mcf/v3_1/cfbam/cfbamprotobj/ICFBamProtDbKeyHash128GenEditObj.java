@@ -72,32 +72,4 @@ public interface ICFBamProtDbKeyHash128GenEditObj
 	 */
 	ICFBamProtDbKeyHash128GenObj getOrigAsDbKeyHash128Gen();
 
-	/**
-	 *	Get the required short attribute Slice.
-	 *
-	 *	@return	The required short attribute Slice.
-	 */
-	short getRequiredSlice();
-
-	/**
-	 *	Set the required short attribute Slice.
-	 *
-	 *	@param value The required short attribute Slice value to be applied.
-	 */
-	void setRequiredSlice(short value);
-
-	/**
-	 *	Get the required int attribute BlockSize.
-	 *
-	 *	@return	The required int attribute BlockSize.
-	 */
-	int getRequiredBlockSize();
-
-	/**
-	 *	Set the required int attribute BlockSize.
-	 *
-	 *	@param value The required int attribute BlockSize value to be applied.
-	 */
-	void setRequiredBlockSize(int value);
-
 }

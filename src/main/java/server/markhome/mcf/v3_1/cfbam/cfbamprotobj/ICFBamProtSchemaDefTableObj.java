@@ -274,87 +274,6 @@ public interface ICFBamProtSchemaDefTableObj
 		String Name,
 		boolean forceRead );
 
-	/**
-	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate AuthEMailIdx key.
-	 *
-	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@param	AuthorEMail	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate AuthEMailIdx key,
-	 *		which may be an empty set.
-	 */
-	List<ICFBamProtSchemaDefObj> readSchemaDefByAuthEMailIdx( CFLibDbKeyHash256 CTenantId,
-		String AuthorEMail );
-
-	/**
-	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate AuthEMailIdx key.
-	 *
-	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@param	AuthorEMail	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate AuthEMailIdx key,
-	 *		which may be an empty set.
-	 */
-	List<ICFBamProtSchemaDefObj> readSchemaDefByAuthEMailIdx( CFLibDbKeyHash256 CTenantId,
-		String AuthorEMail,
-		boolean forceRead );
-
-	/**
-	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate ProjectURLIdx key.
-	 *
-	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@param	ProjectURL	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate ProjectURLIdx key,
-	 *		which may be an empty set.
-	 */
-	List<ICFBamProtSchemaDefObj> readSchemaDefByProjectURLIdx( CFLibDbKeyHash256 CTenantId,
-		String ProjectURL );
-
-	/**
-	 *	Get the map of List<ICFBamProtSchemaDefObj> instances sorted by their primary keys for the duplicate ProjectURLIdx key.
-	 *
-	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@param	ProjectURL	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@return	List of List<ICFBamProtSchemaDefObj> cached instances sorted by their primary keys for the duplicate ProjectURLIdx key,
-	 *		which may be an empty set.
-	 */
-	List<ICFBamProtSchemaDefObj> readSchemaDefByProjectURLIdx( CFLibDbKeyHash256 CTenantId,
-		String ProjectURL,
-		boolean forceRead );
-
-	/**
-	 *	Get the ICFBamProtSchemaDefObj instance for the unique PubURIIdx key.
-	 *
-	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@param	PublishURI	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@return	ICFBamProtSchemaDefObj cached instance for the unique PubURIIdx key, or
-	 *		null if no such instance exists.
-	 */
-	ICFBamProtSchemaDefObj readSchemaDefByPubURIIdx(CFLibDbKeyHash256 CTenantId,
-		String PublishURI );
-
-	/**
-	 *	Get the ICFBamProtSchemaDefObj instance for the unique PubURIIdx key.
-	 *
-	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@param	PublishURI	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@return	ICFBamProtSchemaDefObj refreshed instance for the unique PubURIIdx key, or
-	 *		null if no such instance exists.
-	 */
-	ICFBamProtSchemaDefObj readSchemaDefByPubURIIdx(CFLibDbKeyHash256 CTenantId,
-		String PublishURI,
-		boolean forceRead );
-
 	ICFBamProtScopeObj readCachedSchemaDefByIdIdx( CFLibDbKeyHash256 Id );
 
 	List<List<ICFBamProtScopeObj>> readCachedSchemaDefByTenantIdx( CFLibDbKeyHash256 TenantId );
@@ -366,15 +285,6 @@ public interface ICFBamProtSchemaDefTableObj
 	ICFBamProtSchemaDefObj readCachedSchemaDefByUNameIdx( CFLibDbKeyHash256 MinorVersionId,
 		String Name );
 
-	List<List<ICFBamProtSchemaDefObj>> readCachedSchemaDefByAuthEMailIdx( CFLibDbKeyHash256 CTenantId,
-		String AuthorEMail );
-
-	List<List<ICFBamProtSchemaDefObj>> readCachedSchemaDefByProjectURLIdx( CFLibDbKeyHash256 CTenantId,
-		String ProjectURL );
-
-	ICFBamProtSchemaDefObj readCachedSchemaDefByPubURIIdx( CFLibDbKeyHash256 CTenantId,
-		String PublishURI );
-
 	void deepDisposeSchemaDefByIdIdx( CFLibDbKeyHash256 Id );
 
 	void deepDisposeSchemaDefByTenantIdx( CFLibDbKeyHash256 TenantId );
@@ -385,15 +295,6 @@ public interface ICFBamProtSchemaDefTableObj
 
 	void deepDisposeSchemaDefByUNameIdx( CFLibDbKeyHash256 MinorVersionId,
 		String Name );
-
-	void deepDisposeSchemaDefByAuthEMailIdx( CFLibDbKeyHash256 CTenantId,
-		String AuthorEMail );
-
-	void deepDisposeSchemaDefByProjectURLIdx( CFLibDbKeyHash256 CTenantId,
-		String ProjectURL );
-
-	void deepDisposeSchemaDefByPubURIIdx( CFLibDbKeyHash256 CTenantId,
-		String PublishURI );
 
 	/**
 	 *	Internal use only.
@@ -442,34 +343,4 @@ public interface ICFBamProtSchemaDefTableObj
 	 */
 	void deleteSchemaDefByUNameIdx(CFLibDbKeyHash256 MinorVersionId,
 		String Name );
-
-	/**
-	 *	Internal use only.
-	 *
-	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@param	AuthorEMail	The SchemaDef key attribute of the instance generating the id.
-	 */
-	void deleteSchemaDefByAuthEMailIdx( CFLibDbKeyHash256 CTenantId,
-		String AuthorEMail );
-
-	/**
-	 *	Internal use only.
-	 *
-	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@param	ProjectURL	The SchemaDef key attribute of the instance generating the id.
-	 */
-	void deleteSchemaDefByProjectURLIdx( CFLibDbKeyHash256 CTenantId,
-		String ProjectURL );
-
-	/**
-	 *	Internal use only.
-	 *
-	 *	@param	CTenantId	The SchemaDef key attribute of the instance generating the id.
-	 *
-	 *	@param	PublishURI	The SchemaDef key attribute of the instance generating the id.
-	 */
-	void deleteSchemaDefByPubURIIdx(CFLibDbKeyHash256 CTenantId,
-		String PublishURI );
 }

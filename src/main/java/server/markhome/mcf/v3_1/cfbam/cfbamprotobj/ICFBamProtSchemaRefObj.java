@@ -181,20 +181,6 @@ public interface ICFBamProtSchemaRefObj
 	String getRequiredName();
 
 	/**
-	 *	Get the required String attribute RefModelName.
-	 *
-	 *	@return	The required String attribute RefModelName.
-	 */
-	String getRequiredRefModelName();
-
-	/**
-	 *	Get the required String attribute IncludeRoot.
-	 *
-	 *	@return	The required String attribute IncludeRoot.
-	 */
-	String getRequiredIncludeRoot();
-
-	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute RefSchemaId.
 	 *
 	 *	@return	The optional CFLibDbKeyHash256 attribute RefSchemaId.

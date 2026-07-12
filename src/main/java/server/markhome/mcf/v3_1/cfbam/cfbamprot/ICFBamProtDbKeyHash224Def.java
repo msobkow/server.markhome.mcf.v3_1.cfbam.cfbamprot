@@ -70,8 +70,6 @@ public interface ICFBamProtDbKeyHash224Def extends ICFBamProtAtom
 	public final static int CLASS_CODE = 0xa844;
 	public final static String S_CLASS_CODE = "a844";
 
-	public String getOptionalInitValue();
-	public void setOptionalInitValue( String value );
 	@Override
 	public boolean equals( Object obj );
 	

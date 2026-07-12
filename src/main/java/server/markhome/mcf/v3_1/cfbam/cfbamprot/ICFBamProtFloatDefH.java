@@ -67,12 +67,6 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtFloatDefH extends ICFBamProtAtomH
 {
-	public Float getOptionalInitValue();
-	public void setOptionalInitValue( Float value );
-	public Float getOptionalMinValue();
-	public void setOptionalMinValue( Float value );
-	public Float getOptionalMaxValue();
-	public void setOptionalMaxValue( Float value );
 	@Override
 	public boolean equals( Object obj );
 

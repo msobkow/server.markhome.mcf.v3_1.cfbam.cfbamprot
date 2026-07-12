@@ -100,12 +100,6 @@ public interface ICFBamProtParamH
 	public void setOptionalDefSchemaId( CFLibDbKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	public String getOptionalShortDescription();
-	public void setOptionalShortDescription( String value );
-	public String getOptionalDescription();
-	public void setOptionalDescription( String value );
-	public boolean getRequiredIsNullable();
-	public void setRequiredIsNullable( boolean value );
 	public CFLibDbKeyHash256 getOptionalTypeId();
 	public void setOptionalTypeId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getOptionalPrevId();

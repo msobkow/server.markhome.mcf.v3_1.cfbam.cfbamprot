@@ -160,80 +160,10 @@ public interface ICFBamProtServerMethodObj
 	String getRequiredName();
 
 	/**
-	 *	Get the optional String attribute ShortName.
-	 *
-	 *	@return	The optional String attribute ShortName.
-	 */
-	String getOptionalShortName();
-
-	/**
-	 *	Get the optional String attribute Label.
-	 *
-	 *	@return	The optional String attribute Label.
-	 */
-	String getOptionalLabel();
-
-	/**
-	 *	Get the optional String attribute ShortDescription.
-	 *
-	 *	@return	The optional String attribute ShortDescription.
-	 */
-	String getOptionalShortDescription();
-
-	/**
-	 *	Get the optional String attribute Description.
-	 *
-	 *	@return	The optional String attribute Description.
-	 */
-	String getOptionalDescription();
-
-	/**
-	 *	Get the optional String attribute Suffix.
-	 *
-	 *	@return	The optional String attribute Suffix.
-	 */
-	String getOptionalSuffix();
-
-	/**
-	 *	Get the required boolean attribute IsInstanceMethod.
-	 *
-	 *	@return	The required boolean attribute IsInstanceMethod.
-	 */
-	boolean getRequiredIsInstanceMethod();
-
-	/**
-	 *	Get the required boolean attribute IsServerOnly.
-	 *
-	 *	@return	The required boolean attribute IsServerOnly.
-	 */
-	boolean getRequiredIsServerOnly();
-
-	/**
 	 *	Get the required ICFBamPubSchema.CodeVisibilityEnum attribute CodeVis.
 	 *
 	 *	@return	The required ICFBamPubSchema.CodeVisibilityEnum attribute CodeVis.
 	 */
 	ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
-
-	/**
-	 *	Get the required String attribute JMethodBody.
-	 *
-	 *	@return	The required String attribute JMethodBody.
-	 */
-	String getRequiredJMethodBody();
-
-	/**
-	 *	Get the required String attribute CppMethodBody.
-	 *
-	 *	@return	The required String attribute CppMethodBody.
-	 */
-	String getRequiredCppMethodBody();
-
-	/**
-	 *	Get the required String attribute CsMethodBody.
-	 *
-	 *	@return	The required String attribute CsMethodBody.
-	 */
-	String getRequiredCsMethodBody();
 
 }

@@ -293,20 +293,6 @@ public interface ICFBamProtRoleDefObj
 	String getRequiredName();
 
 	/**
-	 *	Get the required String attribute Enables.
-	 *
-	 *	@return	The required String attribute Enables.
-	 */
-	String getRequiredEnables();
-
-	/**
-	 *	Get the required String attribute Includes.
-	 *
-	 *	@return	The required String attribute Includes.
-	 */
-	String getRequiredIncludes();
-
-	/**
 	 *	Internal use only.
 	 */
 	void copyPKeyToRec();

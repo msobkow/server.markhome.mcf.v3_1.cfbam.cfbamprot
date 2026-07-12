@@ -82,8 +82,6 @@ public interface ICFBamProtTweak
 	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubTweak.S_DEFSCHEMAID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubTweak.DEFSCHEMAID_INIT_VALUE;
 	public static final String NAME_INIT_VALUE = ICFBamPubTweak.NAME_INIT_VALUE;
-	public final static boolean REPLACESINHERITED_INIT_VALUE = ICFBamPubTweak.REPLACESINHERITED_INIT_VALUE;
-	public static final String TWEAKGELTEXT_INIT_VALUE = ICFBamPubTweak.TWEAKGELTEXT_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa808;
 	public final static String S_CLASS_CODE = "a808";
 
@@ -122,10 +120,6 @@ public interface ICFBamProtTweak
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	public boolean getRequiredReplacesInherited();
-	public void setRequiredReplacesInherited( boolean value );
-	public String getRequiredTweakGelText();
-	public void setRequiredTweakGelText( String value );
 	@Override
 	public boolean equals( Object obj );
 	

@@ -70,8 +70,6 @@ public interface ICFBamProtDateDef extends ICFBamProtAtom
 	public final static int CLASS_CODE = 0xa819;
 	public final static String S_CLASS_CODE = "a819";
 
-	public String getOptionalDummy();
-	public void setOptionalDummy( String value );
 	@Override
 	public boolean equals( Object obj );
 	

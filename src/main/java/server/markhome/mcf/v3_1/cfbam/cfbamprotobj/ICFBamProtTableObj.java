@@ -328,60 +328,11 @@ public interface ICFBamProtTableObj
 	String getRequiredName();
 
 	/**
-	 *	Get the optional String attribute DbName.
-	 *
-	 *	@return	The optional String attribute DbName.
-	 */
-	String getOptionalDbName();
-
-	/**
-	 *	Get the optional String attribute ShortName.
-	 *
-	 *	@return	The optional String attribute ShortName.
-	 */
-	String getOptionalShortName();
-
-	/**
-	 *	Get the optional String attribute Label.
-	 *
-	 *	@return	The optional String attribute Label.
-	 */
-	String getOptionalLabel();
-
-	/**
-	 *	Get the optional String attribute ShortDescription.
-	 *
-	 *	@return	The optional String attribute ShortDescription.
-	 */
-	String getOptionalShortDescription();
-
-	/**
-	 *	Get the optional String attribute Description.
-	 *
-	 *	@return	The optional String attribute Description.
-	 */
-	String getOptionalDescription();
-
-	/**
-	 *	Get the required boolean attribute PageData.
-	 *
-	 *	@return	The required boolean attribute PageData.
-	 */
-	boolean getRequiredPageData();
-
-	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute PrimaryIndexId.
 	 *
 	 *	@return	The optional CFLibDbKeyHash256 attribute PrimaryIndexId.
 	 */
 	CFLibDbKeyHash256 getOptionalPrimaryIndexId();
-
-	/**
-	 *	Get the required String attribute TableClassCode.
-	 *
-	 *	@return	The required String attribute TableClassCode.
-	 */
-	String getRequiredTableClassCode();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute LookupIndexId.
@@ -403,41 +354,6 @@ public interface ICFBamProtTableObj
 	 *	@return	The optional CFLibDbKeyHash256 attribute QualifyingTableId.
 	 */
 	CFLibDbKeyHash256 getOptionalQualifyingTableId();
-
-	/**
-	 *	Get the required boolean attribute IsInstantiable.
-	 *
-	 *	@return	The required boolean attribute IsInstantiable.
-	 */
-	boolean getRequiredIsInstantiable();
-
-	/**
-	 *	Get the required boolean attribute HasHistory.
-	 *
-	 *	@return	The required boolean attribute HasHistory.
-	 */
-	boolean getRequiredHasHistory();
-
-	/**
-	 *	Get the required boolean attribute HasAuditColumns.
-	 *
-	 *	@return	The required boolean attribute HasAuditColumns.
-	 */
-	boolean getRequiredHasAuditColumns();
-
-	/**
-	 *	Get the required boolean attribute IsMutable.
-	 *
-	 *	@return	The required boolean attribute IsMutable.
-	 */
-	boolean getRequiredIsMutable();
-
-	/**
-	 *	Get the required boolean attribute IsServerOnly.
-	 *
-	 *	@return	The required boolean attribute IsServerOnly.
-	 */
-	boolean getRequiredIsServerOnly();
 
 	/**
 	 *	Get the required ICFBamPubSchema.LoaderBehaviourEnum attribute LoaderBehaviour.

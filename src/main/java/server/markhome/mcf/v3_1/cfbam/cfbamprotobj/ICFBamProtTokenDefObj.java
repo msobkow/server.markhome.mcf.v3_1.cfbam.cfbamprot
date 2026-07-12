@@ -96,18 +96,4 @@ public interface ICFBamProtTokenDefObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
-	/**
-	 *	Get the required int attribute MaxLen.
-	 *
-	 *	@return	The required int attribute MaxLen.
-	 */
-	int getRequiredMaxLen();
-
-	/**
-	 *	Get the optional String attribute InitValue.
-	 *
-	 *	@return	The optional String attribute InitValue.
-	 */
-	String getOptionalInitValue();
-
 }

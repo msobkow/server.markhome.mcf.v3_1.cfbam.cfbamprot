@@ -276,48 +276,6 @@ public interface ICFBamProtParamEditObj
 	void setRequiredName(String value);
 
 	/**
-	 *	Get the optional String attribute ShortDescription.
-	 *
-	 *	@return	The optional String attribute ShortDescription.
-	 */
-	String getOptionalShortDescription();
-
-	/**
-	 *	Set the optional String attribute ShortDescription.
-	 *
-	 *	@param value The optional String attribute ShortDescription value to be applied.
-	 */
-	void setOptionalShortDescription(String value);
-
-	/**
-	 *	Get the optional String attribute Description.
-	 *
-	 *	@return	The optional String attribute Description.
-	 */
-	String getOptionalDescription();
-
-	/**
-	 *	Set the optional String attribute Description.
-	 *
-	 *	@param value The optional String attribute Description value to be applied.
-	 */
-	void setOptionalDescription(String value);
-
-	/**
-	 *	Get the required boolean attribute IsNullable.
-	 *
-	 *	@return	The required boolean attribute IsNullable.
-	 */
-	boolean getRequiredIsNullable();
-
-	/**
-	 *	Set the required boolean attribute IsNullable.
-	 *
-	 *	@param value The required boolean attribute IsNullable value to be applied.
-	 */
-	void setRequiredIsNullable(boolean value);
-
-	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute TypeId.
 	 *
 	 *	@return	The optional CFLibDbKeyHash256 attribute TypeId.

@@ -72,46 +72,4 @@ public interface ICFBamProtFloatDefEditObj
 	 */
 	ICFBamProtFloatDefObj getOrigAsFloatDef();
 
-	/**
-	 *	Get the optional Float attribute InitValue.
-	 *
-	 *	@return	The optional Float attribute InitValue.
-	 */
-	Float getOptionalInitValue();
-
-	/**
-	 *	Set the optional Float attribute InitValue.
-	 *
-	 *	@param value The optional Float attribute InitValue value to be applied.
-	 */
-	void setOptionalInitValue(Float value);
-
-	/**
-	 *	Get the optional Float attribute MinValue.
-	 *
-	 *	@return	The optional Float attribute MinValue.
-	 */
-	Float getOptionalMinValue();
-
-	/**
-	 *	Set the optional Float attribute MinValue.
-	 *
-	 *	@param value The optional Float attribute MinValue value to be applied.
-	 */
-	void setOptionalMinValue(Float value);
-
-	/**
-	 *	Get the optional Float attribute MaxValue.
-	 *
-	 *	@return	The optional Float attribute MaxValue.
-	 */
-	Float getOptionalMaxValue();
-
-	/**
-	 *	Set the optional Float attribute MaxValue.
-	 *
-	 *	@param value The optional Float attribute MaxValue value to be applied.
-	 */
-	void setOptionalMaxValue(Float value);
-
 }

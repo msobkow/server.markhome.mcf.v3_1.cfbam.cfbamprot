@@ -67,21 +67,9 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtUInt64Def extends ICFBamProtAtom
 {
-	public static final BigDecimal INITVALUE_MIN_VALUE = CFLibBigDecimalUtil.parse( "CFBamProt.UInt64Def.InitValue", "CFBamProt.UInt64Def.InitValue", 19, 0, "0" );
-	public static final BigDecimal MINVALUE_MIN_VALUE = CFLibBigDecimalUtil.parse( "CFBamProt.UInt64Def.MinValue", "CFBamProt.UInt64Def.MinValue", 19, 0, "0" );
-	public static final BigDecimal MAXVALUE_MIN_VALUE = CFLibBigDecimalUtil.parse( "CFBamProt.UInt64Def.MaxValue", "CFBamProt.UInt64Def.MaxValue", 19, 0, "0" );
-	public static final BigDecimal INITVALUE_INIT_VALUE = ICFBamPubUInt64Def.INITVALUE_INIT_VALUE;
-	public static final BigDecimal MINVALUE_INIT_VALUE = ICFBamPubUInt64Def.MINVALUE_INIT_VALUE;
-	public static final BigDecimal MAXVALUE_INIT_VALUE = ICFBamPubUInt64Def.MAXVALUE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa869;
 	public final static String S_CLASS_CODE = "a869";
 
-	public BigDecimal getOptionalInitValue();
-	public void setOptionalInitValue( BigDecimal value );
-	public BigDecimal getOptionalMinValue();
-	public void setOptionalMinValue( BigDecimal value );
-	public BigDecimal getOptionalMaxValue();
-	public void setOptionalMaxValue( BigDecimal value );
 	@Override
 	public boolean equals( Object obj );
 	

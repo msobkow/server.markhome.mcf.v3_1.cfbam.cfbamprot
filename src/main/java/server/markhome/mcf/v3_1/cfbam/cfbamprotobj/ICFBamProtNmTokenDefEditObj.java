@@ -72,32 +72,4 @@ public interface ICFBamProtNmTokenDefEditObj
 	 */
 	ICFBamProtNmTokenDefObj getOrigAsNmTokenDef();
 
-	/**
-	 *	Get the required int attribute MaxLen.
-	 *
-	 *	@return	The required int attribute MaxLen.
-	 */
-	int getRequiredMaxLen();
-
-	/**
-	 *	Set the required int attribute MaxLen.
-	 *
-	 *	@param value The required int attribute MaxLen value to be applied.
-	 */
-	void setRequiredMaxLen(int value);
-
-	/**
-	 *	Get the optional String attribute InitValue.
-	 *
-	 *	@return	The optional String attribute InitValue.
-	 */
-	String getOptionalInitValue();
-
-	/**
-	 *	Set the optional String attribute InitValue.
-	 *
-	 *	@param value The optional String attribute InitValue value to be applied.
-	 */
-	void setOptionalInitValue(String value);
-
 }

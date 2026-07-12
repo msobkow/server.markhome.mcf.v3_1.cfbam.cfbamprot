@@ -96,25 +96,4 @@ public interface ICFBamProtStringDefObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
-	/**
-	 *	Get the required int attribute MaxLen.
-	 *
-	 *	@return	The required int attribute MaxLen.
-	 */
-	int getRequiredMaxLen();
-
-	/**
-	 *	Get the required boolean attribute IsPolymorph.
-	 *
-	 *	@return	The required boolean attribute IsPolymorph.
-	 */
-	boolean getRequiredIsPolymorph();
-
-	/**
-	 *	Get the optional String attribute InitValue.
-	 *
-	 *	@return	The optional String attribute InitValue.
-	 */
-	String getOptionalInitValue();
-
 }

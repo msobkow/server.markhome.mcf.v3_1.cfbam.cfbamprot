@@ -230,53 +230,11 @@ public interface ICFBamProtRelationObj
 	String getRequiredName();
 
 	/**
-	 *	Get the optional String attribute ShortName.
-	 *
-	 *	@return	The optional String attribute ShortName.
-	 */
-	String getOptionalShortName();
-
-	/**
-	 *	Get the optional String attribute Label.
-	 *
-	 *	@return	The optional String attribute Label.
-	 */
-	String getOptionalLabel();
-
-	/**
-	 *	Get the optional String attribute ShortDescription.
-	 *
-	 *	@return	The optional String attribute ShortDescription.
-	 */
-	String getOptionalShortDescription();
-
-	/**
-	 *	Get the optional String attribute Description.
-	 *
-	 *	@return	The optional String attribute Description.
-	 */
-	String getOptionalDescription();
-
-	/**
 	 *	Get the required ICFBamPubSchema.RelationTypeEnum attribute RelationType.
 	 *
 	 *	@return	The required ICFBamPubSchema.RelationTypeEnum attribute RelationType.
 	 */
 	ICFBamPubSchema.RelationTypeEnum getRequiredRelationType();
-
-	/**
-	 *	Get the optional String attribute DbName.
-	 *
-	 *	@return	The optional String attribute DbName.
-	 */
-	String getOptionalDbName();
-
-	/**
-	 *	Get the optional String attribute Suffix.
-	 *
-	 *	@return	The optional String attribute Suffix.
-	 */
-	String getOptionalSuffix();
 
 	/**
 	 *	Get the required CFLibDbKeyHash256 attribute FromIndexId.
@@ -298,34 +256,6 @@ public interface ICFBamProtRelationObj
 	 *	@return	The required CFLibDbKeyHash256 attribute ToIndexId.
 	 */
 	CFLibDbKeyHash256 getRequiredToIndexId();
-
-	/**
-	 *	Get the required boolean attribute IsRequired.
-	 *
-	 *	@return	The required boolean attribute IsRequired.
-	 */
-	boolean getRequiredIsRequired();
-
-	/**
-	 *	Get the required boolean attribute IsXsdContainer.
-	 *
-	 *	@return	The required boolean attribute IsXsdContainer.
-	 */
-	boolean getRequiredIsXsdContainer();
-
-	/**
-	 *	Get the required boolean attribute IsLateResolver.
-	 *
-	 *	@return	The required boolean attribute IsLateResolver.
-	 */
-	boolean getRequiredIsLateResolver();
-
-	/**
-	 *	Get the required boolean attribute AllowAddendum.
-	 *
-	 *	@return	The required boolean attribute AllowAddendum.
-	 */
-	boolean getRequiredAllowAddendum();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute NarrowedId.

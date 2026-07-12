@@ -104,10 +104,6 @@ public interface ICFBamProtTweakH
 	public void setOptionalDefSchemaId( CFLibDbKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	public boolean getRequiredReplacesInherited();
-	public void setRequiredReplacesInherited( boolean value );
-	public String getRequiredTweakGelText();
-	public void setRequiredTweakGelText( String value );
 	@Override
 	public boolean equals( Object obj );
 

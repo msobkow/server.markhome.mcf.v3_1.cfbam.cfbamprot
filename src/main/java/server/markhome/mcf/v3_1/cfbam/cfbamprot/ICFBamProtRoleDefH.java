@@ -100,10 +100,6 @@ public interface ICFBamProtRoleDefH
 	public void setOptionalDefSchemaId( CFLibDbKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	public String getRequiredEnables();
-	public void setRequiredEnables( String value );
-	public String getRequiredIncludes();
-	public void setRequiredIncludes( String value );
 	@Override
 	public boolean equals( Object obj );
 

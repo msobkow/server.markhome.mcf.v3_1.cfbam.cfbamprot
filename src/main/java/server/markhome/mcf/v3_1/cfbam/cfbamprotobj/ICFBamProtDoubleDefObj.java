@@ -96,25 +96,4 @@ public interface ICFBamProtDoubleDefObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
-	/**
-	 *	Get the optional Double attribute InitValue.
-	 *
-	 *	@return	The optional Double attribute InitValue.
-	 */
-	Double getOptionalInitValue();
-
-	/**
-	 *	Get the optional Double attribute MinValue.
-	 *
-	 *	@return	The optional Double attribute MinValue.
-	 */
-	Double getOptionalMinValue();
-
-	/**
-	 *	Get the optional Double attribute MaxValue.
-	 *
-	 *	@return	The optional Double attribute MaxValue.
-	 */
-	Double getOptionalMaxValue();
-
 }

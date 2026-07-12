@@ -349,27 +349,6 @@ public interface ICFBamProtParamObj
 	String getRequiredName();
 
 	/**
-	 *	Get the optional String attribute ShortDescription.
-	 *
-	 *	@return	The optional String attribute ShortDescription.
-	 */
-	String getOptionalShortDescription();
-
-	/**
-	 *	Get the optional String attribute Description.
-	 *
-	 *	@return	The optional String attribute Description.
-	 */
-	String getOptionalDescription();
-
-	/**
-	 *	Get the required boolean attribute IsNullable.
-	 *
-	 *	@return	The required boolean attribute IsNullable.
-	 */
-	boolean getRequiredIsNullable();
-
-	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute TypeId.
 	 *
 	 *	@return	The optional CFLibDbKeyHash256 attribute TypeId.

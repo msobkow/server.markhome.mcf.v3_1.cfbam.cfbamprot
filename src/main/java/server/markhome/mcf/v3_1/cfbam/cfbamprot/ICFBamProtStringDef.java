@@ -67,19 +67,9 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtStringDef extends ICFBamProtAtom
 {
-	public static final int MAXLEN_MIN_VALUE = 0;
-	public static final int MAXLEN_MAX_VALUE = 2147483647;
-	public static final int MAXLEN_INIT_VALUE = ICFBamPubStringDef.MAXLEN_INIT_VALUE;
-	public final static boolean ISPOLYMORPH_INIT_VALUE = ICFBamPubStringDef.ISPOLYMORPH_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa854;
 	public final static String S_CLASS_CODE = "a854";
 
-	public int getRequiredMaxLen();
-	public void setRequiredMaxLen( int value );
-	public boolean getRequiredIsPolymorph();
-	public void setRequiredIsPolymorph( boolean value );
-	public String getOptionalInitValue();
-	public void setOptionalInitValue( String value );
 	@Override
 	public boolean equals( Object obj );
 	

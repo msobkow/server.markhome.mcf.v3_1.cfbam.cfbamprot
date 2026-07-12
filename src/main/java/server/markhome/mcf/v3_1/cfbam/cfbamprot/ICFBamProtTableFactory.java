@@ -141,20 +141,6 @@ public interface ICFBamProtTableFactory extends ICFBamPubTableFactory
 	public ICFBamPubTableByUNameIdxKey asPublic(ICFBamProtTableByUNameIdxKey src);
 
 	/**
-	 *	Allocate a protected SchemaCdIdx key over protected Table instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamProtTableBySchemaCdIdxKey newProtBySchemaCdIdxKey();
-
-	/**
-	 *	Allocate a public SchemaCdIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFBamPubTableBySchemaCdIdxKey asPublic(ICFBamProtTableBySchemaCdIdxKey src);
-
-	/**
 	 *	Allocate a protected PrimaryIndexIdx key over protected Table instances.
 	 *
 	 *	@return	The new instance.

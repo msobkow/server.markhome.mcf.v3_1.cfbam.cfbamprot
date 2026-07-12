@@ -70,8 +70,6 @@ public interface ICFBamProtAtom extends ICFBamProtValue
 	public final static int CLASS_CODE = 0xa80e;
 	public final static String S_CLASS_CODE = "a80e";
 
-	public String getOptionalDbName();
-	public void setOptionalDbName( String value );
 	@Override
 	public boolean equals( Object obj );
 	

@@ -74,8 +74,6 @@ public interface ICFBamProtIndex extends ICFBamProtScope
 	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubIndex.S_DEFSCHEMAID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubIndex.DEFSCHEMAID_INIT_VALUE;
 	public static final String NAME_INIT_VALUE = ICFBamPubIndex.NAME_INIT_VALUE;
-	public final static boolean ISUNIQUE_INIT_VALUE = ICFBamPubIndex.ISUNIQUE_INIT_VALUE;
-	public final static boolean ISDBMAPPED_INIT_VALUE = ICFBamPubIndex.ISDBMAPPED_INIT_VALUE;
 	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubIndex.CODEVIS_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa825;
 	public final static String S_CLASS_CODE = "a825";
@@ -92,22 +90,6 @@ public interface ICFBamProtIndex extends ICFBamProtScope
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	public String getOptionalShortName();
-	public void setOptionalShortName( String value );
-	public String getOptionalLabel();
-	public void setOptionalLabel( String value );
-	public String getOptionalShortDescription();
-	public void setOptionalShortDescription( String value );
-	public String getOptionalDescription();
-	public void setOptionalDescription( String value );
-	public String getOptionalDbName();
-	public void setOptionalDbName( String value );
-	public String getOptionalSuffix();
-	public void setOptionalSuffix( String value );
-	public boolean getRequiredIsUnique();
-	public void setRequiredIsUnique( boolean value );
-	public boolean getRequiredIsDbMapped();
-	public void setRequiredIsDbMapped( boolean value );
 	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
 	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
 	@Override

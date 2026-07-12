@@ -67,19 +67,9 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtDbKeyHash512Gen extends ICFBamProtDbKeyHash512Type
 {
-	public static final short SLICE_MIN_VALUE = (short)0;
-	public static final int BLOCKSIZE_MIN_VALUE = 1;
-	public static final short SLICE_MAX_VALUE = (short)32767;
-	public static final int BLOCKSIZE_MAX_VALUE = 2147483647;
-	public static final short SLICE_INIT_VALUE = ICFBamPubDbKeyHash512Gen.SLICE_INIT_VALUE;
-	public static final int BLOCKSIZE_INIT_VALUE = ICFBamPubDbKeyHash512Gen.BLOCKSIZE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa853;
 	public final static String S_CLASS_CODE = "a853";
 
-	public short getRequiredSlice();
-	public void setRequiredSlice( short value );
-	public int getRequiredBlockSize();
-	public void setRequiredBlockSize( int value );
 	@Override
 	public boolean equals( Object obj );
 	

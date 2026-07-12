@@ -70,14 +70,6 @@ public interface ICFBamProtBoolDef extends ICFBamProtAtom
 	public final static int CLASS_CODE = 0xa811;
 	public final static String S_CLASS_CODE = "a811";
 
-	public Boolean getOptionalInitValue();
-	public void setOptionalInitValue( Boolean value );
-	public String getOptionalFalseString();
-	public void setOptionalFalseString( String value );
-	public String getOptionalTrueString();
-	public void setOptionalTrueString( String value );
-	public String getOptionalNullString();
-	public void setOptionalNullString( String value );
 	@Override
 	public boolean equals( Object obj );
 	

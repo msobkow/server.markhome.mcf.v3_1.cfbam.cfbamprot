@@ -67,14 +67,6 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtBoolDefH extends ICFBamProtAtomH
 {
-	public Boolean getOptionalInitValue();
-	public void setOptionalInitValue( Boolean value );
-	public String getOptionalFalseString();
-	public void setOptionalFalseString( String value );
-	public String getOptionalTrueString();
-	public void setOptionalTrueString( String value );
-	public String getOptionalNullString();
-	public void setOptionalNullString( String value );
 	@Override
 	public boolean equals( Object obj );
 

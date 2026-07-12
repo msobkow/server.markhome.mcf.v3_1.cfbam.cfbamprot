@@ -323,33 +323,6 @@ public interface ICFBamProtTableTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the ICFBamProtTableObj instance for the unique SchemaCdIdx key.
-	 *
-	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
-	 *
-	 *	@param	TableClassCode	The Table key attribute of the instance generating the id.
-	 *
-	 *	@return	ICFBamProtTableObj cached instance for the unique SchemaCdIdx key, or
-	 *		null if no such instance exists.
-	 */
-	ICFBamProtTableObj readTableBySchemaCdIdx(CFLibDbKeyHash256 SchemaDefId,
-		String TableClassCode );
-
-	/**
-	 *	Get the ICFBamProtTableObj instance for the unique SchemaCdIdx key.
-	 *
-	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
-	 *
-	 *	@param	TableClassCode	The Table key attribute of the instance generating the id.
-	 *
-	 *	@return	ICFBamProtTableObj refreshed instance for the unique SchemaCdIdx key, or
-	 *		null if no such instance exists.
-	 */
-	ICFBamProtTableObj readTableBySchemaCdIdx(CFLibDbKeyHash256 SchemaDefId,
-		String TableClassCode,
-		boolean forceRead );
-
-	/**
 	 *	Get the map of List<ICFBamProtTableObj> instances sorted by their primary keys for the duplicate PrimaryIndexIdx key.
 	 *
 	 *	@param	PrimaryIndexId	The Table key attribute of the instance generating the id.
@@ -449,9 +422,6 @@ public interface ICFBamProtTableTableObj
 	ICFBamProtTableObj readCachedTableByUNameIdx( CFLibDbKeyHash256 SchemaDefId,
 		String Name );
 
-	ICFBamProtTableObj readCachedTableBySchemaCdIdx( CFLibDbKeyHash256 SchemaDefId,
-		String TableClassCode );
-
 	List<List<ICFBamProtTableObj>> readCachedTableByPrimaryIndexIdx( CFLibDbKeyHash256 PrimaryIndexId );
 
 	List<List<ICFBamProtTableObj>> readCachedTableByLookupIndexIdx( CFLibDbKeyHash256 LookupIndexId );
@@ -475,9 +445,6 @@ public interface ICFBamProtTableTableObj
 
 	void deepDisposeTableByUNameIdx( CFLibDbKeyHash256 SchemaDefId,
 		String Name );
-
-	void deepDisposeTableBySchemaCdIdx( CFLibDbKeyHash256 SchemaDefId,
-		String TableClassCode );
 
 	void deepDisposeTableByPrimaryIndexIdx( CFLibDbKeyHash256 PrimaryIndexId );
 
@@ -551,16 +518,6 @@ public interface ICFBamProtTableTableObj
 	 */
 	void deleteTableByUNameIdx(CFLibDbKeyHash256 SchemaDefId,
 		String Name );
-
-	/**
-	 *	Internal use only.
-	 *
-	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
-	 *
-	 *	@param	TableClassCode	The Table key attribute of the instance generating the id.
-	 */
-	void deleteTableBySchemaCdIdx(CFLibDbKeyHash256 SchemaDefId,
-		String TableClassCode );
 
 	/**
 	 *	Internal use only.

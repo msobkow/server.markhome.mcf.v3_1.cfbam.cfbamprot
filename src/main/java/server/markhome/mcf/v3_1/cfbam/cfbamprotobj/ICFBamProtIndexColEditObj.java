@@ -290,81 +290,11 @@ public interface ICFBamProtIndexColEditObj
 	void setRequiredName(String value);
 
 	/**
-	 *	Get the optional String attribute ShortName.
-	 *
-	 *	@return	The optional String attribute ShortName.
-	 */
-	String getOptionalShortName();
-
-	/**
-	 *	Set the optional String attribute ShortName.
-	 *
-	 *	@param value The optional String attribute ShortName value to be applied.
-	 */
-	void setOptionalShortName(String value);
-
-	/**
-	 *	Get the optional String attribute Label.
-	 *
-	 *	@return	The optional String attribute Label.
-	 */
-	String getOptionalLabel();
-
-	/**
-	 *	Set the optional String attribute Label.
-	 *
-	 *	@param value The optional String attribute Label value to be applied.
-	 */
-	void setOptionalLabel(String value);
-
-	/**
-	 *	Get the optional String attribute ShortDescription.
-	 *
-	 *	@return	The optional String attribute ShortDescription.
-	 */
-	String getOptionalShortDescription();
-
-	/**
-	 *	Set the optional String attribute ShortDescription.
-	 *
-	 *	@param value The optional String attribute ShortDescription value to be applied.
-	 */
-	void setOptionalShortDescription(String value);
-
-	/**
-	 *	Get the optional String attribute Description.
-	 *
-	 *	@return	The optional String attribute Description.
-	 */
-	String getOptionalDescription();
-
-	/**
-	 *	Set the optional String attribute Description.
-	 *
-	 *	@param value The optional String attribute Description value to be applied.
-	 */
-	void setOptionalDescription(String value);
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute ColumnId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute ColumnId.
 	 */
 	CFLibDbKeyHash256 getRequiredColumnId();
-
-	/**
-	 *	Get the required boolean attribute IsAscending.
-	 *
-	 *	@return	The required boolean attribute IsAscending.
-	 */
-	boolean getRequiredIsAscending();
-
-	/**
-	 *	Set the required boolean attribute IsAscending.
-	 *
-	 *	@param value The required boolean attribute IsAscending value to be applied.
-	 */
-	void setRequiredIsAscending(boolean value);
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute PrevId.

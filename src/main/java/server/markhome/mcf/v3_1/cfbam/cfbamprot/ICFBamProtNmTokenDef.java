@@ -67,16 +67,9 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtNmTokenDef extends ICFBamProtAtom
 {
-	public static final int MAXLEN_MIN_VALUE = 0;
-	public static final int MAXLEN_MAX_VALUE = 2147483647;
-	public static final int MAXLEN_INIT_VALUE = ICFBamPubNmTokenDef.MAXLEN_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa82d;
 	public final static String S_CLASS_CODE = "a82d";
 
-	public int getRequiredMaxLen();
-	public void setRequiredMaxLen( int value );
-	public String getOptionalInitValue();
-	public void setOptionalInitValue( String value );
 	@Override
 	public boolean equals( Object obj );
 	

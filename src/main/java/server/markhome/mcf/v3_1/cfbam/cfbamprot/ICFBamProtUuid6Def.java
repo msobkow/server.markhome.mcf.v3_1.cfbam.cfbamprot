@@ -70,8 +70,6 @@ public interface ICFBamProtUuid6Def extends ICFBamProtAtom
 	public final static int CLASS_CODE = 0xa86c;
 	public final static String S_CLASS_CODE = "a86c";
 
-	public String getOptionalInitValue();
-	public void setOptionalInitValue( String value );
 	@Override
 	public boolean equals( Object obj );
 	

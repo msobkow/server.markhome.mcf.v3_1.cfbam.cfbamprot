@@ -73,26 +73,6 @@ public interface ICFBamProtSchemaDefH extends ICFBamProtScopeH
 	public void setRequiredMinorVersionId( CFLibDbKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	public String getOptionalDbName();
-	public void setOptionalDbName( String value );
-	public String getOptionalShortName();
-	public void setOptionalShortName( String value );
-	public String getOptionalLabel();
-	public void setOptionalLabel( String value );
-	public String getOptionalShortDescription();
-	public void setOptionalShortDescription( String value );
-	public String getOptionalDescription();
-	public void setOptionalDescription( String value );
-	public String getRequiredCopyrightPeriod();
-	public void setRequiredCopyrightPeriod( String value );
-	public String getRequiredCopyrightHolder();
-	public void setRequiredCopyrightHolder( String value );
-	public String getRequiredAuthorEMail();
-	public void setRequiredAuthorEMail( String value );
-	public String getRequiredProjectURL();
-	public void setRequiredProjectURL( String value );
-	public String getRequiredPublishURI();
-	public void setRequiredPublishURI( String value );
 	@Override
 	public boolean equals( Object obj );
 
