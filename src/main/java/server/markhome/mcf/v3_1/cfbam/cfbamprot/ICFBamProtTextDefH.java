@@ -67,6 +67,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTextDefH extends ICFBamProtAtomH
 {
+	public int getRequiredMaxLen();
+	public void setRequiredMaxLen( int value );
+	public String getOptionalInitValue();
+	public void setOptionalInitValue( String value );
 	public String getOptionalXmlElementName();
 	public void setOptionalXmlElementName( String value );
 	@Override

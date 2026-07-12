@@ -72,4 +72,74 @@ public interface ICFBamProtNumberDefEditObj
 	 */
 	ICFBamProtNumberDefObj getOrigAsNumberDef();
 
+	/**
+	 *	Get the required short attribute Digits.
+	 *
+	 *	@return	The required short attribute Digits.
+	 */
+	short getRequiredDigits();
+
+	/**
+	 *	Set the required short attribute Digits.
+	 *
+	 *	@param value The required short attribute Digits value to be applied.
+	 */
+	void setRequiredDigits(short value);
+
+	/**
+	 *	Get the required short attribute Precis.
+	 *
+	 *	@return	The required short attribute Precis.
+	 */
+	short getRequiredPrecis();
+
+	/**
+	 *	Set the required short attribute Precis.
+	 *
+	 *	@param value The required short attribute Precis value to be applied.
+	 */
+	void setRequiredPrecis(short value);
+
+	/**
+	 *	Get the optional BigDecimal attribute InitValue.
+	 *
+	 *	@return	The optional BigDecimal attribute InitValue.
+	 */
+	BigDecimal getOptionalInitValue();
+
+	/**
+	 *	Set the optional BigDecimal attribute InitValue.
+	 *
+	 *	@param value The optional BigDecimal attribute InitValue value to be applied.
+	 */
+	void setOptionalInitValue(BigDecimal value);
+
+	/**
+	 *	Get the optional BigDecimal attribute MinValue.
+	 *
+	 *	@return	The optional BigDecimal attribute MinValue.
+	 */
+	BigDecimal getOptionalMinValue();
+
+	/**
+	 *	Set the optional BigDecimal attribute MinValue.
+	 *
+	 *	@param value The optional BigDecimal attribute MinValue value to be applied.
+	 */
+	void setOptionalMinValue(BigDecimal value);
+
+	/**
+	 *	Get the optional BigDecimal attribute MaxValue.
+	 *
+	 *	@return	The optional BigDecimal attribute MaxValue.
+	 */
+	BigDecimal getOptionalMaxValue();
+
+	/**
+	 *	Set the optional BigDecimal attribute MaxValue.
+	 *
+	 *	@param value The optional BigDecimal attribute MaxValue value to be applied.
+	 */
+	void setOptionalMaxValue(BigDecimal value);
+
 }

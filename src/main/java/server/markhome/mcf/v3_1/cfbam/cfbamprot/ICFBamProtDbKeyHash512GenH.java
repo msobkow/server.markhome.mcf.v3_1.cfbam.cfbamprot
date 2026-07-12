@@ -67,6 +67,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtDbKeyHash512GenH extends ICFBamProtDbKeyHash512TypeH
 {
+	public short getRequiredSlice();
+	public void setRequiredSlice( short value );
+	public int getRequiredBlockSize();
+	public void setRequiredBlockSize( int value );
 	@Override
 	public boolean equals( Object obj );
 

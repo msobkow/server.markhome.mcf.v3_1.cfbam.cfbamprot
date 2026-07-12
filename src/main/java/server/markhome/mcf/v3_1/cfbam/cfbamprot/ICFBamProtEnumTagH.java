@@ -98,6 +98,10 @@ public interface ICFBamProtEnumTagH
 	public void setOptionalDefSchemaId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getRequiredEnumId();
 	public void setRequiredEnumId( CFLibDbKeyHash256 value );
+	public Short getOptionalEnumCode();
+	public void setOptionalEnumCode( Short value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public CFLibDbKeyHash256 getOptionalPrevId();
 	public void setOptionalPrevId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getOptionalNextId();

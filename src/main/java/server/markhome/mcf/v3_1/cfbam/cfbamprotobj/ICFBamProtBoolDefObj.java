@@ -96,4 +96,32 @@ public interface ICFBamProtBoolDefObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
+	/**
+	 *	Get the optional Boolean attribute InitValue.
+	 *
+	 *	@return	The optional Boolean attribute InitValue.
+	 */
+	Boolean getOptionalInitValue();
+
+	/**
+	 *	Get the optional String attribute FalseString.
+	 *
+	 *	@return	The optional String attribute FalseString.
+	 */
+	String getOptionalFalseString();
+
+	/**
+	 *	Get the optional String attribute TrueString.
+	 *
+	 *	@return	The optional String attribute TrueString.
+	 */
+	String getOptionalTrueString();
+
+	/**
+	 *	Get the optional String attribute NullString.
+	 *
+	 *	@return	The optional String attribute NullString.
+	 */
+	String getOptionalNullString();
+
 }

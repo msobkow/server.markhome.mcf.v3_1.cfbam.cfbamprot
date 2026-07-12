@@ -96,4 +96,18 @@ public interface ICFBamProtUuidGenObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
+	/**
+	 *	Get the required short attribute Slice.
+	 *
+	 *	@return	The required short attribute Slice.
+	 */
+	short getRequiredSlice();
+
+	/**
+	 *	Get the required int attribute BlockSize.
+	 *
+	 *	@return	The required int attribute BlockSize.
+	 */
+	int getRequiredBlockSize();
+
 }

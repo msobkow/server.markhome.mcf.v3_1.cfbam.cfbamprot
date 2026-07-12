@@ -241,6 +241,34 @@ public interface ICFBamProtEnumTagEditObj
 	CFLibDbKeyHash256 getRequiredEnumId();
 
 	/**
+	 *	Get the optional Short attribute EnumCode.
+	 *
+	 *	@return	The optional Short attribute EnumCode.
+	 */
+	Short getOptionalEnumCode();
+
+	/**
+	 *	Set the optional Short attribute EnumCode.
+	 *
+	 *	@param value The optional Short attribute EnumCode value to be applied.
+	 */
+	void setOptionalEnumCode(Short value);
+
+	/**
+	 *	Get the required String attribute Name.
+	 *
+	 *	@return	The required String attribute Name.
+	 */
+	String getRequiredName();
+
+	/**
+	 *	Set the required String attribute Name.
+	 *
+	 *	@param value The required String attribute Name value to be applied.
+	 */
+	void setRequiredName(String value);
+
+	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute PrevId.
 	 *
 	 *	@return	The optional CFLibDbKeyHash256 attribute PrevId.

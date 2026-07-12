@@ -73,8 +73,28 @@ public interface ICFBamProtServerMethodH extends ICFBamProtScopeH
 	public void setOptionalDefSchemaId( CFLibDbKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public String getOptionalSuffix();
+	public void setOptionalSuffix( String value );
+	public boolean getRequiredIsInstanceMethod();
+	public void setRequiredIsInstanceMethod( boolean value );
+	public boolean getRequiredIsServerOnly();
+	public void setRequiredIsServerOnly( boolean value );
 	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
 	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
+	public String getRequiredJMethodBody();
+	public void setRequiredJMethodBody( String value );
+	public String getRequiredCppMethodBody();
+	public void setRequiredCppMethodBody( String value );
+	public String getRequiredCsMethodBody();
+	public void setRequiredCsMethodBody( String value );
 	@Override
 	public boolean equals( Object obj );
 

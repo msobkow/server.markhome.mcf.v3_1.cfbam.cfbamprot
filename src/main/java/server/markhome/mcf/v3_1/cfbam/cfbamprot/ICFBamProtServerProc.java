@@ -70,6 +70,8 @@ public interface ICFBamProtServerProc extends ICFBamProtServerMethod
 	public final static int CLASS_CODE = 0xa806;
 	public final static String S_CLASS_CODE = "a806";
 
+	public String getOptionalDummy();
+	public void setOptionalDummy( String value );
 	@Override
 	public boolean equals( Object obj );
 	

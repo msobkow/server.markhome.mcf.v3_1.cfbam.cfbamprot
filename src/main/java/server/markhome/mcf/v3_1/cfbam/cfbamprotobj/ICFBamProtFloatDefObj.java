@@ -96,4 +96,25 @@ public interface ICFBamProtFloatDefObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
+	/**
+	 *	Get the optional Float attribute InitValue.
+	 *
+	 *	@return	The optional Float attribute InitValue.
+	 */
+	Float getOptionalInitValue();
+
+	/**
+	 *	Get the optional Float attribute MinValue.
+	 *
+	 *	@return	The optional Float attribute MinValue.
+	 */
+	Float getOptionalMinValue();
+
+	/**
+	 *	Get the optional Float attribute MaxValue.
+	 *
+	 *	@return	The optional Float attribute MaxValue.
+	 */
+	Float getOptionalMaxValue();
+
 }

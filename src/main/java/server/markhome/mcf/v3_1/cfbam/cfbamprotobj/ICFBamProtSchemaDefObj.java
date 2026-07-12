@@ -215,4 +215,74 @@ public interface ICFBamProtSchemaDefObj
 	 */
 	String getRequiredName();
 
+	/**
+	 *	Get the optional String attribute DbName.
+	 *
+	 *	@return	The optional String attribute DbName.
+	 */
+	String getOptionalDbName();
+
+	/**
+	 *	Get the optional String attribute ShortName.
+	 *
+	 *	@return	The optional String attribute ShortName.
+	 */
+	String getOptionalShortName();
+
+	/**
+	 *	Get the optional String attribute Label.
+	 *
+	 *	@return	The optional String attribute Label.
+	 */
+	String getOptionalLabel();
+
+	/**
+	 *	Get the optional String attribute ShortDescription.
+	 *
+	 *	@return	The optional String attribute ShortDescription.
+	 */
+	String getOptionalShortDescription();
+
+	/**
+	 *	Get the optional String attribute Description.
+	 *
+	 *	@return	The optional String attribute Description.
+	 */
+	String getOptionalDescription();
+
+	/**
+	 *	Get the required String attribute CopyrightPeriod.
+	 *
+	 *	@return	The required String attribute CopyrightPeriod.
+	 */
+	String getRequiredCopyrightPeriod();
+
+	/**
+	 *	Get the required String attribute CopyrightHolder.
+	 *
+	 *	@return	The required String attribute CopyrightHolder.
+	 */
+	String getRequiredCopyrightHolder();
+
+	/**
+	 *	Get the required String attribute AuthorEMail.
+	 *
+	 *	@return	The required String attribute AuthorEMail.
+	 */
+	String getRequiredAuthorEMail();
+
+	/**
+	 *	Get the required String attribute ProjectURL.
+	 *
+	 *	@return	The required String attribute ProjectURL.
+	 */
+	String getRequiredProjectURL();
+
+	/**
+	 *	Get the required String attribute PublishURI.
+	 *
+	 *	@return	The required String attribute PublishURI.
+	 */
+	String getRequiredPublishURI();
+
 }

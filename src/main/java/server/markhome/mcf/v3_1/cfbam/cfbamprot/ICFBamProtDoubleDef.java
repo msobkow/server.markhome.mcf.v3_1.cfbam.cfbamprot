@@ -67,9 +67,21 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtDoubleDef extends ICFBamProtAtom
 {
+	public static final double INITVALUE_MIN_VALUE = -2.225E307;
+	public static final double MINVALUE_MIN_VALUE = -2.225E307;
+	public static final double MAXVALUE_MIN_VALUE = -2.225E307;
+	public static final double INITVALUE_MAX_VALUE = 2.225E307;
+	public static final double MINVALUE_MAX_VALUE = 2.225E307;
+	public static final double MAXVALUE_MAX_VALUE = 2.225E307;
 	public final static int CLASS_CODE = 0xa820;
 	public final static String S_CLASS_CODE = "a820";
 
+	public Double getOptionalInitValue();
+	public void setOptionalInitValue( Double value );
+	public Double getOptionalMinValue();
+	public void setOptionalMinValue( Double value );
+	public Double getOptionalMaxValue();
+	public void setOptionalMaxValue( Double value );
 	@Override
 	public boolean equals( Object obj );
 	

@@ -67,9 +67,19 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtId16Gen extends ICFBamProtInt16Type
 {
+	public static final short SLICE_MIN_VALUE = (short)0;
+	public static final short BLOCKSIZE_MIN_VALUE = (short)1;
+	public static final short SLICE_MAX_VALUE = (short)32767;
+	public static final short BLOCKSIZE_MAX_VALUE = (short)32767;
+	public static final short SLICE_INIT_VALUE = ICFBamPubId16Gen.SLICE_INIT_VALUE;
+	public static final short BLOCKSIZE_INIT_VALUE = ICFBamPubId16Gen.BLOCKSIZE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa876;
 	public final static String S_CLASS_CODE = "a876";
 
+	public short getRequiredSlice();
+	public void setRequiredSlice( short value );
+	public short getRequiredBlockSize();
+	public void setRequiredBlockSize( short value );
 	@Override
 	public boolean equals( Object obj );
 	

@@ -70,6 +70,8 @@ public interface ICFBamProtTZTimestampDef extends ICFBamProtAtom
 	public final static int CLASS_CODE = 0xa85a;
 	public final static String S_CLASS_CODE = "a85a";
 
+	public String getOptionalDummy();
+	public void setOptionalDummy( String value );
 	@Override
 	public boolean equals( Object obj );
 	

@@ -72,4 +72,46 @@ public interface ICFBamProtUInt16DefEditObj
 	 */
 	ICFBamProtUInt16DefObj getOrigAsUInt16Def();
 
+	/**
+	 *	Get the optional Integer attribute InitValue.
+	 *
+	 *	@return	The optional Integer attribute InitValue.
+	 */
+	Integer getOptionalInitValue();
+
+	/**
+	 *	Set the optional Integer attribute InitValue.
+	 *
+	 *	@param value The optional Integer attribute InitValue value to be applied.
+	 */
+	void setOptionalInitValue(Integer value);
+
+	/**
+	 *	Get the optional Integer attribute MinValue.
+	 *
+	 *	@return	The optional Integer attribute MinValue.
+	 */
+	Integer getOptionalMinValue();
+
+	/**
+	 *	Set the optional Integer attribute MinValue.
+	 *
+	 *	@param value The optional Integer attribute MinValue value to be applied.
+	 */
+	void setOptionalMinValue(Integer value);
+
+	/**
+	 *	Get the optional Integer attribute MaxValue.
+	 *
+	 *	@return	The optional Integer attribute MaxValue.
+	 */
+	Integer getOptionalMaxValue();
+
+	/**
+	 *	Set the optional Integer attribute MaxValue.
+	 *
+	 *	@param value The optional Integer attribute MaxValue value to be applied.
+	 */
+	void setOptionalMaxValue(Integer value);
+
 }

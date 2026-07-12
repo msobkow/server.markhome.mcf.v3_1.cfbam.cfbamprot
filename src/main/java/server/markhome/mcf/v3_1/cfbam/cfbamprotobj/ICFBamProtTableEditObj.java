@@ -290,11 +290,109 @@ public interface ICFBamProtTableEditObj
 	void setRequiredName(String value);
 
 	/**
+	 *	Get the optional String attribute DbName.
+	 *
+	 *	@return	The optional String attribute DbName.
+	 */
+	String getOptionalDbName();
+
+	/**
+	 *	Set the optional String attribute DbName.
+	 *
+	 *	@param value The optional String attribute DbName value to be applied.
+	 */
+	void setOptionalDbName(String value);
+
+	/**
+	 *	Get the optional String attribute ShortName.
+	 *
+	 *	@return	The optional String attribute ShortName.
+	 */
+	String getOptionalShortName();
+
+	/**
+	 *	Set the optional String attribute ShortName.
+	 *
+	 *	@param value The optional String attribute ShortName value to be applied.
+	 */
+	void setOptionalShortName(String value);
+
+	/**
+	 *	Get the optional String attribute Label.
+	 *
+	 *	@return	The optional String attribute Label.
+	 */
+	String getOptionalLabel();
+
+	/**
+	 *	Set the optional String attribute Label.
+	 *
+	 *	@param value The optional String attribute Label value to be applied.
+	 */
+	void setOptionalLabel(String value);
+
+	/**
+	 *	Get the optional String attribute ShortDescription.
+	 *
+	 *	@return	The optional String attribute ShortDescription.
+	 */
+	String getOptionalShortDescription();
+
+	/**
+	 *	Set the optional String attribute ShortDescription.
+	 *
+	 *	@param value The optional String attribute ShortDescription value to be applied.
+	 */
+	void setOptionalShortDescription(String value);
+
+	/**
+	 *	Get the optional String attribute Description.
+	 *
+	 *	@return	The optional String attribute Description.
+	 */
+	String getOptionalDescription();
+
+	/**
+	 *	Set the optional String attribute Description.
+	 *
+	 *	@param value The optional String attribute Description value to be applied.
+	 */
+	void setOptionalDescription(String value);
+
+	/**
+	 *	Get the required boolean attribute PageData.
+	 *
+	 *	@return	The required boolean attribute PageData.
+	 */
+	boolean getRequiredPageData();
+
+	/**
+	 *	Set the required boolean attribute PageData.
+	 *
+	 *	@param value The required boolean attribute PageData value to be applied.
+	 */
+	void setRequiredPageData(boolean value);
+
+	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute PrimaryIndexId.
 	 *
 	 *	@return	The optional CFLibDbKeyHash256 attribute PrimaryIndexId.
 	 */
 	CFLibDbKeyHash256 getOptionalPrimaryIndexId();
+
+	/**
+	 *	Get the required String attribute TableClassCode.
+	 *
+	 *	@return	The required String attribute TableClassCode.
+	 */
+	String getRequiredTableClassCode();
+
+	/**
+	 *	Set the required String attribute TableClassCode.
+	 *
+	 *	@param value The required String attribute TableClassCode value to be applied.
+	 */
+	void setRequiredTableClassCode(String value);
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute LookupIndexId.
@@ -316,6 +414,76 @@ public interface ICFBamProtTableEditObj
 	 *	@return	The optional CFLibDbKeyHash256 attribute QualifyingTableId.
 	 */
 	CFLibDbKeyHash256 getOptionalQualifyingTableId();
+
+	/**
+	 *	Get the required boolean attribute IsInstantiable.
+	 *
+	 *	@return	The required boolean attribute IsInstantiable.
+	 */
+	boolean getRequiredIsInstantiable();
+
+	/**
+	 *	Set the required boolean attribute IsInstantiable.
+	 *
+	 *	@param value The required boolean attribute IsInstantiable value to be applied.
+	 */
+	void setRequiredIsInstantiable(boolean value);
+
+	/**
+	 *	Get the required boolean attribute HasHistory.
+	 *
+	 *	@return	The required boolean attribute HasHistory.
+	 */
+	boolean getRequiredHasHistory();
+
+	/**
+	 *	Set the required boolean attribute HasHistory.
+	 *
+	 *	@param value The required boolean attribute HasHistory value to be applied.
+	 */
+	void setRequiredHasHistory(boolean value);
+
+	/**
+	 *	Get the required boolean attribute HasAuditColumns.
+	 *
+	 *	@return	The required boolean attribute HasAuditColumns.
+	 */
+	boolean getRequiredHasAuditColumns();
+
+	/**
+	 *	Set the required boolean attribute HasAuditColumns.
+	 *
+	 *	@param value The required boolean attribute HasAuditColumns value to be applied.
+	 */
+	void setRequiredHasAuditColumns(boolean value);
+
+	/**
+	 *	Get the required boolean attribute IsMutable.
+	 *
+	 *	@return	The required boolean attribute IsMutable.
+	 */
+	boolean getRequiredIsMutable();
+
+	/**
+	 *	Set the required boolean attribute IsMutable.
+	 *
+	 *	@param value The required boolean attribute IsMutable value to be applied.
+	 */
+	void setRequiredIsMutable(boolean value);
+
+	/**
+	 *	Get the required boolean attribute IsServerOnly.
+	 *
+	 *	@return	The required boolean attribute IsServerOnly.
+	 */
+	boolean getRequiredIsServerOnly();
+
+	/**
+	 *	Set the required boolean attribute IsServerOnly.
+	 *
+	 *	@param value The required boolean attribute IsServerOnly value to be applied.
+	 */
+	void setRequiredIsServerOnly(boolean value);
 
 	/**
 	 *	Get the required ICFBamPubSchema.LoaderBehaviourEnum attribute LoaderBehaviour.

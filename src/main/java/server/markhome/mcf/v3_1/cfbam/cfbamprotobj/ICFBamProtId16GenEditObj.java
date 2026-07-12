@@ -72,4 +72,32 @@ public interface ICFBamProtId16GenEditObj
 	 */
 	ICFBamProtId16GenObj getOrigAsId16Gen();
 
+	/**
+	 *	Get the required short attribute Slice.
+	 *
+	 *	@return	The required short attribute Slice.
+	 */
+	short getRequiredSlice();
+
+	/**
+	 *	Set the required short attribute Slice.
+	 *
+	 *	@param value The required short attribute Slice value to be applied.
+	 */
+	void setRequiredSlice(short value);
+
+	/**
+	 *	Get the required short attribute BlockSize.
+	 *
+	 *	@return	The required short attribute BlockSize.
+	 */
+	short getRequiredBlockSize();
+
+	/**
+	 *	Set the required short attribute BlockSize.
+	 *
+	 *	@param value The required short attribute BlockSize value to be applied.
+	 */
+	void setRequiredBlockSize(short value);
+
 }

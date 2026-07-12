@@ -72,4 +72,46 @@ public interface ICFBamProtDoubleDefEditObj
 	 */
 	ICFBamProtDoubleDefObj getOrigAsDoubleDef();
 
+	/**
+	 *	Get the optional Double attribute InitValue.
+	 *
+	 *	@return	The optional Double attribute InitValue.
+	 */
+	Double getOptionalInitValue();
+
+	/**
+	 *	Set the optional Double attribute InitValue.
+	 *
+	 *	@param value The optional Double attribute InitValue value to be applied.
+	 */
+	void setOptionalInitValue(Double value);
+
+	/**
+	 *	Get the optional Double attribute MinValue.
+	 *
+	 *	@return	The optional Double attribute MinValue.
+	 */
+	Double getOptionalMinValue();
+
+	/**
+	 *	Set the optional Double attribute MinValue.
+	 *
+	 *	@param value The optional Double attribute MinValue value to be applied.
+	 */
+	void setOptionalMinValue(Double value);
+
+	/**
+	 *	Get the optional Double attribute MaxValue.
+	 *
+	 *	@return	The optional Double attribute MaxValue.
+	 */
+	Double getOptionalMaxValue();
+
+	/**
+	 *	Set the optional Double attribute MaxValue.
+	 *
+	 *	@param value The optional Double attribute MaxValue value to be applied.
+	 */
+	void setOptionalMaxValue(Double value);
+
 }

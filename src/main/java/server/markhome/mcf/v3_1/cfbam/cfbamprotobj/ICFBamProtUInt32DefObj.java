@@ -96,4 +96,25 @@ public interface ICFBamProtUInt32DefObj
 	 */
 	CFLibDbKeyHash256 getRequiredId();
 
+	/**
+	 *	Get the optional Long attribute InitValue.
+	 *
+	 *	@return	The optional Long attribute InitValue.
+	 */
+	Long getOptionalInitValue();
+
+	/**
+	 *	Get the optional Long attribute MinValue.
+	 *
+	 *	@return	The optional Long attribute MinValue.
+	 */
+	Long getOptionalMinValue();
+
+	/**
+	 *	Get the optional Long attribute MaxValue.
+	 *
+	 *	@return	The optional Long attribute MaxValue.
+	 */
+	Long getOptionalMaxValue();
+
 }

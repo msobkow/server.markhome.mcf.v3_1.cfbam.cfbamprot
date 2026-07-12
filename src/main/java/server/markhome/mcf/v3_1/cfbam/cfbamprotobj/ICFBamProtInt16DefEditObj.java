@@ -72,4 +72,46 @@ public interface ICFBamProtInt16DefEditObj
 	 */
 	ICFBamProtInt16DefObj getOrigAsInt16Def();
 
+	/**
+	 *	Get the optional Short attribute InitValue.
+	 *
+	 *	@return	The optional Short attribute InitValue.
+	 */
+	Short getOptionalInitValue();
+
+	/**
+	 *	Set the optional Short attribute InitValue.
+	 *
+	 *	@param value The optional Short attribute InitValue value to be applied.
+	 */
+	void setOptionalInitValue(Short value);
+
+	/**
+	 *	Get the optional Short attribute MinValue.
+	 *
+	 *	@return	The optional Short attribute MinValue.
+	 */
+	Short getOptionalMinValue();
+
+	/**
+	 *	Set the optional Short attribute MinValue.
+	 *
+	 *	@param value The optional Short attribute MinValue value to be applied.
+	 */
+	void setOptionalMinValue(Short value);
+
+	/**
+	 *	Get the optional Short attribute MaxValue.
+	 *
+	 *	@return	The optional Short attribute MaxValue.
+	 */
+	Short getOptionalMaxValue();
+
+	/**
+	 *	Set the optional Short attribute MaxValue.
+	 *
+	 *	@param value The optional Short attribute MaxValue value to be applied.
+	 */
+	void setOptionalMaxValue(Short value);
+
 }

@@ -363,6 +363,34 @@ public interface ICFBamProtRelationColObj
 	String getRequiredName();
 
 	/**
+	 *	Get the optional String attribute ShortName.
+	 *
+	 *	@return	The optional String attribute ShortName.
+	 */
+	String getOptionalShortName();
+
+	/**
+	 *	Get the optional String attribute Label.
+	 *
+	 *	@return	The optional String attribute Label.
+	 */
+	String getOptionalLabel();
+
+	/**
+	 *	Get the optional String attribute ShortDescription.
+	 *
+	 *	@return	The optional String attribute ShortDescription.
+	 */
+	String getOptionalShortDescription();
+
+	/**
+	 *	Get the optional String attribute Description.
+	 *
+	 *	@return	The optional String attribute Description.
+	 */
+	String getOptionalDescription();
+
+	/**
 	 *	Get the required CFLibDbKeyHash256 attribute FromColId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute FromColId.

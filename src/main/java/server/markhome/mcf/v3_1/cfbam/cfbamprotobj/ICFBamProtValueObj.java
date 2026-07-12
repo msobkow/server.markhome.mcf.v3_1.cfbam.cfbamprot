@@ -363,6 +363,62 @@ public interface ICFBamProtValueObj
 	String getRequiredName();
 
 	/**
+	 *	Get the optional String attribute ShortName.
+	 *
+	 *	@return	The optional String attribute ShortName.
+	 */
+	String getOptionalShortName();
+
+	/**
+	 *	Get the optional String attribute Label.
+	 *
+	 *	@return	The optional String attribute Label.
+	 */
+	String getOptionalLabel();
+
+	/**
+	 *	Get the optional String attribute ShortDescription.
+	 *
+	 *	@return	The optional String attribute ShortDescription.
+	 */
+	String getOptionalShortDescription();
+
+	/**
+	 *	Get the optional String attribute Description.
+	 *
+	 *	@return	The optional String attribute Description.
+	 */
+	String getOptionalDescription();
+
+	/**
+	 *	Get the optional String attribute DefaultXmlValue.
+	 *
+	 *	@return	The optional String attribute DefaultXmlValue.
+	 */
+	String getOptionalDefaultXmlValue();
+
+	/**
+	 *	Get the required boolean attribute IsNullable.
+	 *
+	 *	@return	The required boolean attribute IsNullable.
+	 */
+	boolean getRequiredIsNullable();
+
+	/**
+	 *	Get the optional Boolean attribute GenerateId.
+	 *
+	 *	@return	The optional Boolean attribute GenerateId.
+	 */
+	Boolean getOptionalGenerateId();
+
+	/**
+	 *	Get the required boolean attribute ImplementsPolymorph.
+	 *
+	 *	@return	The required boolean attribute ImplementsPolymorph.
+	 */
+	boolean getRequiredImplementsPolymorph();
+
+	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute PrevId.
 	 *
 	 *	@return	The optional CFLibDbKeyHash256 attribute PrevId.

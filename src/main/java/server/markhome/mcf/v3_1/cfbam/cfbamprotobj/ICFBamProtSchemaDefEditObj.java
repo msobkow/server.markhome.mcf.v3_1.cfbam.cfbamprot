@@ -177,4 +177,144 @@ public interface ICFBamProtSchemaDefEditObj
 	 */
 	void setRequiredName(String value);
 
+	/**
+	 *	Get the optional String attribute DbName.
+	 *
+	 *	@return	The optional String attribute DbName.
+	 */
+	String getOptionalDbName();
+
+	/**
+	 *	Set the optional String attribute DbName.
+	 *
+	 *	@param value The optional String attribute DbName value to be applied.
+	 */
+	void setOptionalDbName(String value);
+
+	/**
+	 *	Get the optional String attribute ShortName.
+	 *
+	 *	@return	The optional String attribute ShortName.
+	 */
+	String getOptionalShortName();
+
+	/**
+	 *	Set the optional String attribute ShortName.
+	 *
+	 *	@param value The optional String attribute ShortName value to be applied.
+	 */
+	void setOptionalShortName(String value);
+
+	/**
+	 *	Get the optional String attribute Label.
+	 *
+	 *	@return	The optional String attribute Label.
+	 */
+	String getOptionalLabel();
+
+	/**
+	 *	Set the optional String attribute Label.
+	 *
+	 *	@param value The optional String attribute Label value to be applied.
+	 */
+	void setOptionalLabel(String value);
+
+	/**
+	 *	Get the optional String attribute ShortDescription.
+	 *
+	 *	@return	The optional String attribute ShortDescription.
+	 */
+	String getOptionalShortDescription();
+
+	/**
+	 *	Set the optional String attribute ShortDescription.
+	 *
+	 *	@param value The optional String attribute ShortDescription value to be applied.
+	 */
+	void setOptionalShortDescription(String value);
+
+	/**
+	 *	Get the optional String attribute Description.
+	 *
+	 *	@return	The optional String attribute Description.
+	 */
+	String getOptionalDescription();
+
+	/**
+	 *	Set the optional String attribute Description.
+	 *
+	 *	@param value The optional String attribute Description value to be applied.
+	 */
+	void setOptionalDescription(String value);
+
+	/**
+	 *	Get the required String attribute CopyrightPeriod.
+	 *
+	 *	@return	The required String attribute CopyrightPeriod.
+	 */
+	String getRequiredCopyrightPeriod();
+
+	/**
+	 *	Set the required String attribute CopyrightPeriod.
+	 *
+	 *	@param value The required String attribute CopyrightPeriod value to be applied.
+	 */
+	void setRequiredCopyrightPeriod(String value);
+
+	/**
+	 *	Get the required String attribute CopyrightHolder.
+	 *
+	 *	@return	The required String attribute CopyrightHolder.
+	 */
+	String getRequiredCopyrightHolder();
+
+	/**
+	 *	Set the required String attribute CopyrightHolder.
+	 *
+	 *	@param value The required String attribute CopyrightHolder value to be applied.
+	 */
+	void setRequiredCopyrightHolder(String value);
+
+	/**
+	 *	Get the required String attribute AuthorEMail.
+	 *
+	 *	@return	The required String attribute AuthorEMail.
+	 */
+	String getRequiredAuthorEMail();
+
+	/**
+	 *	Set the required String attribute AuthorEMail.
+	 *
+	 *	@param value The required String attribute AuthorEMail value to be applied.
+	 */
+	void setRequiredAuthorEMail(String value);
+
+	/**
+	 *	Get the required String attribute ProjectURL.
+	 *
+	 *	@return	The required String attribute ProjectURL.
+	 */
+	String getRequiredProjectURL();
+
+	/**
+	 *	Set the required String attribute ProjectURL.
+	 *
+	 *	@param value The required String attribute ProjectURL value to be applied.
+	 */
+	void setRequiredProjectURL(String value);
+
+	/**
+	 *	Get the required String attribute PublishURI.
+	 *
+	 *	@return	The required String attribute PublishURI.
+	 */
+	String getRequiredPublishURI();
+
+	/**
+	 *	Set the required String attribute PublishURI.
+	 *
+	 *	@param value The required String attribute PublishURI value to be applied.
+	 */
+	void setRequiredPublishURI(String value);
+
 }

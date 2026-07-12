@@ -240,6 +240,34 @@ public interface ICFBamProtTweakEditObj
 	 */
 	void setRequiredName(String value);
 
+	/**
+	 *	Get the required boolean attribute ReplacesInherited.
+	 *
+	 *	@return	The required boolean attribute ReplacesInherited.
+	 */
+	boolean getRequiredReplacesInherited();
+
+	/**
+	 *	Set the required boolean attribute ReplacesInherited.
+	 *
+	 *	@param value The required boolean attribute ReplacesInherited value to be applied.
+	 */
+	void setRequiredReplacesInherited(boolean value);
+
+	/**
+	 *	Get the required String attribute TweakGelText.
+	 *
+	 *	@return	The required String attribute TweakGelText.
+	 */
+	String getRequiredTweakGelText();
+
+	/**
+	 *	Set the required String attribute TweakGelText.
+	 *
+	 *	@param value The required String attribute TweakGelText value to be applied.
+	 */
+	void setRequiredTweakGelText(String value);
+
 	public void copyRecToOrig();
 	public void copyOrigToRec();
 

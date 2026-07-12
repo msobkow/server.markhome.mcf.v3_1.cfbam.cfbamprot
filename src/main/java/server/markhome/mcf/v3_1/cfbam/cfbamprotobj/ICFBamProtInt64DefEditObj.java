@@ -72,4 +72,46 @@ public interface ICFBamProtInt64DefEditObj
 	 */
 	ICFBamProtInt64DefObj getOrigAsInt64Def();
 
+	/**
+	 *	Get the optional Long attribute InitValue.
+	 *
+	 *	@return	The optional Long attribute InitValue.
+	 */
+	Long getOptionalInitValue();
+
+	/**
+	 *	Set the optional Long attribute InitValue.
+	 *
+	 *	@param value The optional Long attribute InitValue value to be applied.
+	 */
+	void setOptionalInitValue(Long value);
+
+	/**
+	 *	Get the optional Long attribute MinValue.
+	 *
+	 *	@return	The optional Long attribute MinValue.
+	 */
+	Long getOptionalMinValue();
+
+	/**
+	 *	Set the optional Long attribute MinValue.
+	 *
+	 *	@param value The optional Long attribute MinValue value to be applied.
+	 */
+	void setOptionalMinValue(Long value);
+
+	/**
+	 *	Get the optional Long attribute MaxValue.
+	 *
+	 *	@return	The optional Long attribute MaxValue.
+	 */
+	Long getOptionalMaxValue();
+
+	/**
+	 *	Set the optional Long attribute MaxValue.
+	 *
+	 *	@param value The optional Long attribute MaxValue value to be applied.
+	 */
+	void setOptionalMaxValue(Long value);
+
 }

@@ -377,11 +377,46 @@ public interface ICFBamProtIndexColObj
 	String getRequiredName();
 
 	/**
+	 *	Get the optional String attribute ShortName.
+	 *
+	 *	@return	The optional String attribute ShortName.
+	 */
+	String getOptionalShortName();
+
+	/**
+	 *	Get the optional String attribute Label.
+	 *
+	 *	@return	The optional String attribute Label.
+	 */
+	String getOptionalLabel();
+
+	/**
+	 *	Get the optional String attribute ShortDescription.
+	 *
+	 *	@return	The optional String attribute ShortDescription.
+	 */
+	String getOptionalShortDescription();
+
+	/**
+	 *	Get the optional String attribute Description.
+	 *
+	 *	@return	The optional String attribute Description.
+	 */
+	String getOptionalDescription();
+
+	/**
 	 *	Get the required CFLibDbKeyHash256 attribute ColumnId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute ColumnId.
 	 */
 	CFLibDbKeyHash256 getRequiredColumnId();
+
+	/**
+	 *	Get the required boolean attribute IsAscending.
+	 *
+	 *	@return	The required boolean attribute IsAscending.
+	 */
+	boolean getRequiredIsAscending();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute PrevId.

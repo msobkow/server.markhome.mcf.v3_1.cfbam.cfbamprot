@@ -67,9 +67,28 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtNumberDef extends ICFBamProtAtom
 {
+	public static final short DIGITS_MIN_VALUE = (short)1;
+	public static final short PRECIS_MIN_VALUE = (short)0;
+	public static final short DIGITS_MAX_VALUE = (short)31;
+	public static final short PRECIS_MAX_VALUE = (short)30;
+	public static final short DIGITS_INIT_VALUE = ICFBamPubNumberDef.DIGITS_INIT_VALUE;
+	public static final short PRECIS_INIT_VALUE = ICFBamPubNumberDef.PRECIS_INIT_VALUE;
+	public static final BigDecimal INITVALUE_INIT_VALUE = ICFBamPubNumberDef.INITVALUE_INIT_VALUE;
+	public static final BigDecimal MINVALUE_INIT_VALUE = ICFBamPubNumberDef.MINVALUE_INIT_VALUE;
+	public static final BigDecimal MAXVALUE_INIT_VALUE = ICFBamPubNumberDef.MAXVALUE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa831;
 	public final static String S_CLASS_CODE = "a831";
 
+	public short getRequiredDigits();
+	public void setRequiredDigits( short value );
+	public short getRequiredPrecis();
+	public void setRequiredPrecis( short value );
+	public BigDecimal getOptionalInitValue();
+	public void setOptionalInitValue( BigDecimal value );
+	public BigDecimal getOptionalMinValue();
+	public void setOptionalMinValue( BigDecimal value );
+	public BigDecimal getOptionalMaxValue();
+	public void setOptionalMaxValue( BigDecimal value );
 	@Override
 	public boolean equals( Object obj );
 	

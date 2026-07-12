@@ -70,6 +70,8 @@ public interface ICFBamProtSchemaRef extends ICFBamProtScope
 	public static final String S_SCHEMAID_INIT_VALUE = ICFBamPubSchemaRef.S_SCHEMAID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 SCHEMAID_INIT_VALUE = ICFBamPubSchemaRef.SCHEMAID_INIT_VALUE;
 	public static final String NAME_INIT_VALUE = ICFBamPubSchemaRef.NAME_INIT_VALUE;
+	public static final String REFMODELNAME_INIT_VALUE = ICFBamPubSchemaRef.REFMODELNAME_INIT_VALUE;
+	public static final String INCLUDEROOT_INIT_VALUE = ICFBamPubSchemaRef.INCLUDEROOT_INIT_VALUE;
 	public static final String S_REFSCHEMAID_INIT_VALUE = ICFBamPubSchemaRef.S_REFSCHEMAID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 REFSCHEMAID_INIT_VALUE = ICFBamPubSchemaRef.REFSCHEMAID_INIT_VALUE;
 	public static final String S_PREVID_INIT_VALUE = ICFBamPubSchemaRef.S_PREVID_INIT_VALUE;
@@ -98,6 +100,10 @@ public interface ICFBamProtSchemaRef extends ICFBamProtScope
 	public CFLibDbKeyHash256 getRequiredSchemaId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
+	public String getRequiredRefModelName();
+	public void setRequiredRefModelName( String value );
+	public String getRequiredIncludeRoot();
+	public void setRequiredIncludeRoot( String value );
 	public CFLibDbKeyHash256 getOptionalRefSchemaId();
 	public CFLibDbKeyHash256 getOptionalPrevId();
 	public CFLibDbKeyHash256 getOptionalNextId();

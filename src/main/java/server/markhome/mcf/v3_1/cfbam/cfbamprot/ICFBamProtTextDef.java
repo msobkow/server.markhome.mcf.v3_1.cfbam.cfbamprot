@@ -67,10 +67,17 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTextDef extends ICFBamProtAtom
 {
+	public static final int MAXLEN_MIN_VALUE = 0;
+	public static final int MAXLEN_MAX_VALUE = 2147483647;
+	public static final int MAXLEN_INIT_VALUE = ICFBamPubTextDef.MAXLEN_INIT_VALUE;
 	public static final String XMLELEMENTNAME_INIT_VALUE = ICFBamPubTextDef.XMLELEMENTNAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa85d;
 	public final static String S_CLASS_CODE = "a85d";
 
+	public int getRequiredMaxLen();
+	public void setRequiredMaxLen( int value );
+	public String getOptionalInitValue();
+	public void setOptionalInitValue( String value );
 	public String getOptionalXmlElementName();
 	public void setOptionalXmlElementName( String value );
 	@Override

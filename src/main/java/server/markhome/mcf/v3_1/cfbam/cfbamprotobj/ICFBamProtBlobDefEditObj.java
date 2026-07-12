@@ -72,4 +72,32 @@ public interface ICFBamProtBlobDefEditObj
 	 */
 	ICFBamProtBlobDefObj getOrigAsBlobDef();
 
+	/**
+	 *	Get the required int attribute MaxLen.
+	 *
+	 *	@return	The required int attribute MaxLen.
+	 */
+	int getRequiredMaxLen();
+
+	/**
+	 *	Set the required int attribute MaxLen.
+	 *
+	 *	@param value The required int attribute MaxLen value to be applied.
+	 */
+	void setRequiredMaxLen(int value);
+
+	/**
+	 *	Get the optional byte[] attribute InitValue.
+	 *
+	 *	@return	The optional byte[] attribute InitValue.
+	 */
+	byte[] getOptionalInitValue();
+
+	/**
+	 *	Set the optional byte[] attribute InitValue.
+	 *
+	 *	@param value The optional byte[] attribute InitValue value to be applied.
+	 */
+	void setOptionalInitValue(byte[] value);
+
 }

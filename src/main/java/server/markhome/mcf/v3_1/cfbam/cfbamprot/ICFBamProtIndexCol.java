@@ -80,6 +80,7 @@ public interface ICFBamProtIndexCol
 	public static final String NAME_INIT_VALUE = ICFBamPubIndexCol.NAME_INIT_VALUE;
 	public static final String S_COLUMNID_INIT_VALUE = ICFBamPubIndexCol.S_COLUMNID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 COLUMNID_INIT_VALUE = ICFBamPubIndexCol.COLUMNID_INIT_VALUE;
+	public final static boolean ISASCENDING_INIT_VALUE = ICFBamPubIndexCol.ISASCENDING_INIT_VALUE;
 	public static final String S_PREVID_INIT_VALUE = ICFBamPubIndexCol.S_PREVID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = ICFBamPubIndexCol.PREVID_INIT_VALUE;
 	public static final String S_NEXTID_INIT_VALUE = ICFBamPubIndexCol.S_NEXTID_INIT_VALUE;
@@ -132,7 +133,17 @@ public interface ICFBamProtIndexCol
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
 	public CFLibDbKeyHash256 getRequiredColumnId();
+	public boolean getRequiredIsAscending();
+	public void setRequiredIsAscending( boolean value );
 	public CFLibDbKeyHash256 getOptionalPrevId();
 	public CFLibDbKeyHash256 getOptionalNextId();
 	@Override

@@ -72,4 +72,32 @@ public interface ICFBamProtId64GenEditObj
 	 */
 	ICFBamProtId64GenObj getOrigAsId64Gen();
 
+	/**
+	 *	Get the required short attribute Slice.
+	 *
+	 *	@return	The required short attribute Slice.
+	 */
+	short getRequiredSlice();
+
+	/**
+	 *	Set the required short attribute Slice.
+	 *
+	 *	@param value The required short attribute Slice value to be applied.
+	 */
+	void setRequiredSlice(short value);
+
+	/**
+	 *	Get the required long attribute BlockSize.
+	 *
+	 *	@return	The required long attribute BlockSize.
+	 */
+	long getRequiredBlockSize();
+
+	/**
+	 *	Set the required long attribute BlockSize.
+	 *
+	 *	@param value The required long attribute BlockSize value to be applied.
+	 */
+	void setRequiredBlockSize(long value);
+
 }

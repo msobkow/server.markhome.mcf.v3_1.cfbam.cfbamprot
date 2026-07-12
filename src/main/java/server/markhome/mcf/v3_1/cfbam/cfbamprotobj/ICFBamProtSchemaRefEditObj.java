@@ -178,6 +178,34 @@ public interface ICFBamProtSchemaRefEditObj
 	void setRequiredName(String value);
 
 	/**
+	 *	Get the required String attribute RefModelName.
+	 *
+	 *	@return	The required String attribute RefModelName.
+	 */
+	String getRequiredRefModelName();
+
+	/**
+	 *	Set the required String attribute RefModelName.
+	 *
+	 *	@param value The required String attribute RefModelName value to be applied.
+	 */
+	void setRequiredRefModelName(String value);
+
+	/**
+	 *	Get the required String attribute IncludeRoot.
+	 *
+	 *	@return	The required String attribute IncludeRoot.
+	 */
+	String getRequiredIncludeRoot();
+
+	/**
+	 *	Set the required String attribute IncludeRoot.
+	 *
+	 *	@param value The required String attribute IncludeRoot value to be applied.
+	 */
+	void setRequiredIncludeRoot(String value);
+
+	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute RefSchemaId.
 	 *
 	 *	@return	The optional CFLibDbKeyHash256 attribute RefSchemaId.

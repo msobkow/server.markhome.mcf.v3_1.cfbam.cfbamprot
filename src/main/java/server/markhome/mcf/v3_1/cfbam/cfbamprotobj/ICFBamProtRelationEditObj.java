@@ -241,6 +241,62 @@ public interface ICFBamProtRelationEditObj
 	void setRequiredName(String value);
 
 	/**
+	 *	Get the optional String attribute ShortName.
+	 *
+	 *	@return	The optional String attribute ShortName.
+	 */
+	String getOptionalShortName();
+
+	/**
+	 *	Set the optional String attribute ShortName.
+	 *
+	 *	@param value The optional String attribute ShortName value to be applied.
+	 */
+	void setOptionalShortName(String value);
+
+	/**
+	 *	Get the optional String attribute Label.
+	 *
+	 *	@return	The optional String attribute Label.
+	 */
+	String getOptionalLabel();
+
+	/**
+	 *	Set the optional String attribute Label.
+	 *
+	 *	@param value The optional String attribute Label value to be applied.
+	 */
+	void setOptionalLabel(String value);
+
+	/**
+	 *	Get the optional String attribute ShortDescription.
+	 *
+	 *	@return	The optional String attribute ShortDescription.
+	 */
+	String getOptionalShortDescription();
+
+	/**
+	 *	Set the optional String attribute ShortDescription.
+	 *
+	 *	@param value The optional String attribute ShortDescription value to be applied.
+	 */
+	void setOptionalShortDescription(String value);
+
+	/**
+	 *	Get the optional String attribute Description.
+	 *
+	 *	@return	The optional String attribute Description.
+	 */
+	String getOptionalDescription();
+
+	/**
+	 *	Set the optional String attribute Description.
+	 *
+	 *	@param value The optional String attribute Description value to be applied.
+	 */
+	void setOptionalDescription(String value);
+
+	/**
 	 *	Get the required ICFBamPubSchema.RelationTypeEnum attribute RelationType.
 	 *
 	 *	@return	The required ICFBamPubSchema.RelationTypeEnum attribute RelationType.
@@ -253,6 +309,34 @@ public interface ICFBamProtRelationEditObj
 	 *	@param value The required ICFBamPubSchema.RelationTypeEnum attribute RelationType value to be applied.
 	 */
 	void setRequiredRelationType(ICFBamPubSchema.RelationTypeEnum value);
+
+	/**
+	 *	Get the optional String attribute DbName.
+	 *
+	 *	@return	The optional String attribute DbName.
+	 */
+	String getOptionalDbName();
+
+	/**
+	 *	Set the optional String attribute DbName.
+	 *
+	 *	@param value The optional String attribute DbName value to be applied.
+	 */
+	void setOptionalDbName(String value);
+
+	/**
+	 *	Get the optional String attribute Suffix.
+	 *
+	 *	@return	The optional String attribute Suffix.
+	 */
+	String getOptionalSuffix();
+
+	/**
+	 *	Set the optional String attribute Suffix.
+	 *
+	 *	@param value The optional String attribute Suffix value to be applied.
+	 */
+	void setOptionalSuffix(String value);
 
 	/**
 	 *	Get the required CFLibDbKeyHash256 attribute FromIndexId.
@@ -274,6 +358,62 @@ public interface ICFBamProtRelationEditObj
 	 *	@return	The required CFLibDbKeyHash256 attribute ToIndexId.
 	 */
 	CFLibDbKeyHash256 getRequiredToIndexId();
+
+	/**
+	 *	Get the required boolean attribute IsRequired.
+	 *
+	 *	@return	The required boolean attribute IsRequired.
+	 */
+	boolean getRequiredIsRequired();
+
+	/**
+	 *	Set the required boolean attribute IsRequired.
+	 *
+	 *	@param value The required boolean attribute IsRequired value to be applied.
+	 */
+	void setRequiredIsRequired(boolean value);
+
+	/**
+	 *	Get the required boolean attribute IsXsdContainer.
+	 *
+	 *	@return	The required boolean attribute IsXsdContainer.
+	 */
+	boolean getRequiredIsXsdContainer();
+
+	/**
+	 *	Set the required boolean attribute IsXsdContainer.
+	 *
+	 *	@param value The required boolean attribute IsXsdContainer value to be applied.
+	 */
+	void setRequiredIsXsdContainer(boolean value);
+
+	/**
+	 *	Get the required boolean attribute IsLateResolver.
+	 *
+	 *	@return	The required boolean attribute IsLateResolver.
+	 */
+	boolean getRequiredIsLateResolver();
+
+	/**
+	 *	Set the required boolean attribute IsLateResolver.
+	 *
+	 *	@param value The required boolean attribute IsLateResolver value to be applied.
+	 */
+	void setRequiredIsLateResolver(boolean value);
+
+	/**
+	 *	Get the required boolean attribute AllowAddendum.
+	 *
+	 *	@return	The required boolean attribute AllowAddendum.
+	 */
+	boolean getRequiredAllowAddendum();
+
+	/**
+	 *	Set the required boolean attribute AllowAddendum.
+	 *
+	 *	@param value The required boolean attribute AllowAddendum value to be applied.
+	 */
+	void setRequiredAllowAddendum(boolean value);
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute NarrowedId.

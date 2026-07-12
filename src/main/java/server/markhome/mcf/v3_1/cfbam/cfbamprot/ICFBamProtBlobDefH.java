@@ -67,6 +67,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtBlobDefH extends ICFBamProtAtomH
 {
+	public int getRequiredMaxLen();
+	public void setRequiredMaxLen( int value );
+	public byte[] getOptionalInitValue();
+	public void setOptionalInitValue( byte[] value );
 	@Override
 	public boolean equals( Object obj );
 

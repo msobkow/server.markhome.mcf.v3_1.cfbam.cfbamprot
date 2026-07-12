@@ -74,7 +74,12 @@ public interface ICFBamProtServerMethod extends ICFBamProtScope
 	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubServerMethod.S_DEFSCHEMAID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubServerMethod.DEFSCHEMAID_INIT_VALUE;
 	public static final String NAME_INIT_VALUE = ICFBamPubServerMethod.NAME_INIT_VALUE;
+	public final static boolean ISINSTANCEMETHOD_INIT_VALUE = ICFBamPubServerMethod.ISINSTANCEMETHOD_INIT_VALUE;
+	public final static boolean ISSERVERONLY_INIT_VALUE = ICFBamPubServerMethod.ISSERVERONLY_INIT_VALUE;
 	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubServerMethod.CODEVIS_INIT_VALUE;
+	public static final String JMETHODBODY_INIT_VALUE = ICFBamPubServerMethod.JMETHODBODY_INIT_VALUE;
+	public static final String CPPMETHODBODY_INIT_VALUE = ICFBamPubServerMethod.CPPMETHODBODY_INIT_VALUE;
+	public static final String CSMETHODBODY_INIT_VALUE = ICFBamPubServerMethod.CSMETHODBODY_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa804;
 	public final static String S_CLASS_CODE = "a804";
 
@@ -90,8 +95,28 @@ public interface ICFBamProtServerMethod extends ICFBamProtScope
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public String getOptionalSuffix();
+	public void setOptionalSuffix( String value );
+	public boolean getRequiredIsInstanceMethod();
+	public void setRequiredIsInstanceMethod( boolean value );
+	public boolean getRequiredIsServerOnly();
+	public void setRequiredIsServerOnly( boolean value );
 	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
 	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
+	public String getRequiredJMethodBody();
+	public void setRequiredJMethodBody( String value );
+	public String getRequiredCppMethodBody();
+	public void setRequiredCppMethodBody( String value );
+	public String getRequiredCsMethodBody();
+	public void setRequiredCsMethodBody( String value );
 	@Override
 	public boolean equals( Object obj );
 	

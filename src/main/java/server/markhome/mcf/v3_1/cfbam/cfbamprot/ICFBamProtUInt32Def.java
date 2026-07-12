@@ -67,9 +67,21 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtUInt32Def extends ICFBamProtAtom
 {
+	public static final long INITVALUE_MIN_VALUE = 0L;
+	public static final long MINVALUE_MIN_VALUE = 0L;
+	public static final long MAXVALUE_MIN_VALUE = 0L;
+	public static final long INITVALUE_INIT_VALUE = ICFBamPubUInt32Def.INITVALUE_INIT_VALUE;
+	public static final long MINVALUE_INIT_VALUE = ICFBamPubUInt32Def.MINVALUE_INIT_VALUE;
+	public static final long MAXVALUE_INIT_VALUE = ICFBamPubUInt32Def.MAXVALUE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa867;
 	public final static String S_CLASS_CODE = "a867";
 
+	public Long getOptionalInitValue();
+	public void setOptionalInitValue( Long value );
+	public Long getOptionalMinValue();
+	public void setOptionalMinValue( Long value );
+	public Long getOptionalMaxValue();
+	public void setOptionalMaxValue( Long value );
 	@Override
 	public boolean equals( Object obj );
 	

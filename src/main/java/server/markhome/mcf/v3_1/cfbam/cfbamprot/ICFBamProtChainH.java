@@ -98,8 +98,18 @@ public interface ICFBamProtChainH
 	public void setOptionalDefSchemaId( CFLibDbKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public void setRequiredTableId( CFLibDbKeyHash256 value );
+	public String getOptionalSuffix();
+	public void setOptionalSuffix( String value );
 	public CFLibDbKeyHash256 getRequiredPrevRelationId();
 	public void setRequiredPrevRelationId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getRequiredNextRelationId();

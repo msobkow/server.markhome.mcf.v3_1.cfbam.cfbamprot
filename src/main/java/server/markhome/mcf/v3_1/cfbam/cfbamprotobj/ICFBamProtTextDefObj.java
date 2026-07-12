@@ -97,6 +97,20 @@ public interface ICFBamProtTextDefObj
 	CFLibDbKeyHash256 getRequiredId();
 
 	/**
+	 *	Get the required int attribute MaxLen.
+	 *
+	 *	@return	The required int attribute MaxLen.
+	 */
+	int getRequiredMaxLen();
+
+	/**
+	 *	Get the optional String attribute InitValue.
+	 *
+	 *	@return	The optional String attribute InitValue.
+	 */
+	String getOptionalInitValue();
+
+	/**
 	 *	Get the optional String attribute XmlElementName.
 	 *
 	 *	@return	The optional String attribute XmlElementName.

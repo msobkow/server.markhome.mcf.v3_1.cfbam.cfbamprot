@@ -307,6 +307,20 @@ public interface ICFBamProtTweakObj
 	String getRequiredName();
 
 	/**
+	 *	Get the required boolean attribute ReplacesInherited.
+	 *
+	 *	@return	The required boolean attribute ReplacesInherited.
+	 */
+	boolean getRequiredReplacesInherited();
+
+	/**
+	 *	Get the required String attribute TweakGelText.
+	 *
+	 *	@return	The required String attribute TweakGelText.
+	 */
+	String getRequiredTweakGelText();
+
+	/**
 	 *	Internal use only.
 	 */
 	void copyPKeyToRec();
