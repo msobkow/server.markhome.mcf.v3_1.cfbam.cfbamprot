@@ -74,7 +74,15 @@ public interface ICFBamProtDbKeyHash224Type extends ICFBamProtDbKeyHash224Def
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
-	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
+	public default void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj) {
+		if (argObj == null) {
+			setRequiredContainerSchemaDef((ICFBamProtSchemaDef)null);
+		}
+		else {
+			setRequiredContainerSchemaDef(argObj.getRequiredId());
+		}
+	}
+
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	@Override

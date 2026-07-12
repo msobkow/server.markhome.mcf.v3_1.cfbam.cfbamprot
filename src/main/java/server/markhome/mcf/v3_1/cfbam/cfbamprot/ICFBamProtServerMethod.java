@@ -67,8 +67,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtServerMethod extends ICFBamProtScope
 {
-	public static final ICFBamProtSchema.CodeVisibilityEnum CODEVIS_MIN_VALUE = ICFBamProtSchema.CodeVisibilityEnum.Public;
-	public static final ICFBamProtSchema.CodeVisibilityEnum CODEVIS_MAX_VALUE = ICFBamProtSchema.CodeVisibilityEnum.Private;
+	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_MIN_VALUE = ICFBamPubSchema.CodeVisibilityEnum.Public;
+	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_MAX_VALUE = ICFBamPubSchema.CodeVisibilityEnum.Private;
 	public static final String S_TABLEID_INIT_VALUE = ICFBamPubServerMethod.S_TABLEID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubServerMethod.TABLEID_INIT_VALUE;
 	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubServerMethod.S_DEFSCHEMAID_INIT_VALUE;
@@ -86,10 +86,26 @@ public interface ICFBamProtServerMethod extends ICFBamProtScope
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 	public ICFBamProtTable getRequiredContainerForTable();
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
+	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
+		if (argObj == null) {
+			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
+		}
+		else {
+			setOptionalLookupDefSchema(argObj.getRequiredId());
+		}
+	}
+
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 	public void setRequiredContainerForTable(ICFBamProtTable argObj);
-	public void setRequiredContainerForTable(ICFBamPubTable argObj);
+	public default void setRequiredContainerForTable(ICFBamPubTable argObj) {
+		if (argObj == null) {
+			setRequiredContainerForTable((ICFBamProtTable)null);
+		}
+		else {
+			setRequiredContainerForTable(argObj.getRequiredId());
+		}
+	}
+
 	public void setRequiredContainerForTable(CFLibDbKeyHash256 argTableId);
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();

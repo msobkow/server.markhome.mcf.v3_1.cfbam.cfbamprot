@@ -77,10 +77,26 @@ public interface ICFBamProtClearDep extends ICFBamProtScope
 	public ICFBamProtRelation getRequiredLookupRelation();
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 	public void setRequiredLookupRelation(ICFBamProtRelation argObj);
-	public void setRequiredLookupRelation(ICFBamPubRelation argObj);
+	public default void setRequiredLookupRelation(ICFBamPubRelation argObj) {
+		if (argObj == null) {
+			setRequiredLookupRelation((ICFBamProtRelation)null);
+		}
+		else {
+			setRequiredLookupRelation(argObj.getRequiredId());
+		}
+	}
+
 	public void setRequiredLookupRelation(CFLibDbKeyHash256 argRelationId);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
+	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
+		if (argObj == null) {
+			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
+		}
+		else {
+			setOptionalLookupDefSchema(argObj.getRequiredId());
+		}
+	}
+
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 	public CFLibDbKeyHash256 getRequiredRelationId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();

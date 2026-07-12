@@ -109,10 +109,26 @@ public interface ICFBamProtTweak
 	public ICFBamProtScope getRequiredContainerScopeDef();
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 	public void setRequiredContainerScopeDef(ICFBamProtScope argObj);
-	public void setRequiredContainerScopeDef(ICFBamPubScope argObj);
+	public default void setRequiredContainerScopeDef(ICFBamPubScope argObj) {
+		if (argObj == null) {
+			setRequiredContainerScopeDef((ICFBamProtScope)null);
+		}
+		else {
+			setRequiredContainerScopeDef(argObj.getRequiredId());
+		}
+	}
+
 	public void setRequiredContainerScopeDef(CFLibDbKeyHash256 argScopeId);
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
+	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
+		if (argObj == null) {
+			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
+		}
+		else {
+			setOptionalLookupDefSchema(argObj.getRequiredId());
+		}
+	}
+
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 	public CFLibDbKeyHash256 getRequiredTenantId();
 	public void setRequiredTenantId( CFLibDbKeyHash256 value );

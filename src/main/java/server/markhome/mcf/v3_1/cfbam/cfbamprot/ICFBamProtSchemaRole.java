@@ -67,8 +67,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtSchemaRole extends ICFBamProtRoleDef
 {
-	public static final ICFBamProtSchema.RoleScopeEnum ROLESCOPE_MIN_VALUE = ICFBamProtSchema.RoleScopeEnum.SysRole;
-	public static final ICFBamProtSchema.RoleScopeEnum ROLESCOPE_MAX_VALUE = ICFBamProtSchema.RoleScopeEnum.TentRole;
+	public static final ICFBamPubSchema.RoleScopeEnum ROLESCOPE_MIN_VALUE = ICFBamPubSchema.RoleScopeEnum.SysRole;
+	public static final ICFBamPubSchema.RoleScopeEnum ROLESCOPE_MAX_VALUE = ICFBamPubSchema.RoleScopeEnum.TentRole;
 	public static final String S_SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaRole.S_SCHEMADEFID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaRole.SCHEMADEFID_INIT_VALUE;
 	public static final ICFBamPubSchema.RoleScopeEnum ROLESCOPE_INIT_VALUE = ICFBamPubSchemaRole.ROLESCOPE_INIT_VALUE;
@@ -77,7 +77,15 @@ public interface ICFBamProtSchemaRole extends ICFBamProtRoleDef
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
-	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
+	public default void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj) {
+		if (argObj == null) {
+			setRequiredContainerSchemaDef((ICFBamProtSchemaDef)null);
+		}
+		else {
+			setRequiredContainerSchemaDef(argObj.getRequiredId());
+		}
+	}
+
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	public ICFBamPubSchema.RoleScopeEnum getRequiredRoleScope();

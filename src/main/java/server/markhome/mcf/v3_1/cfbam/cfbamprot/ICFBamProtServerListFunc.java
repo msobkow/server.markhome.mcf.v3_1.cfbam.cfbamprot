@@ -74,7 +74,15 @@ public interface ICFBamProtServerListFunc extends ICFBamProtServerMethod
 
 	public ICFBamProtTable getOptionalLookupRetTable();
 	public void setOptionalLookupRetTable(ICFBamProtTable argObj);
-	public void setOptionalLookupRetTable(ICFBamPubTable argObj);
+	public default void setOptionalLookupRetTable(ICFBamPubTable argObj) {
+		if (argObj == null) {
+			setOptionalLookupRetTable((ICFBamProtTable)null);
+		}
+		else {
+			setOptionalLookupRetTable(argObj.getRequiredId());
+		}
+	}
+
 	public void setOptionalLookupRetTable(CFLibDbKeyHash256 argRetTableId);
 	public CFLibDbKeyHash256 getOptionalRetTableId();
 	@Override

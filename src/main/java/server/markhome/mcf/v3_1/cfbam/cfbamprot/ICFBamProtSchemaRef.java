@@ -86,16 +86,48 @@ public interface ICFBamProtSchemaRef extends ICFBamProtScope
 	public ICFBamProtSchemaRef getOptionalLookupPrev();
 	public ICFBamProtSchemaRef getOptionalLookupNext();
 	public void setRequiredContainerSchema(ICFBamProtSchemaDef argObj);
-	public void setRequiredContainerSchema(ICFBamPubSchemaDef argObj);
+	public default void setRequiredContainerSchema(ICFBamPubSchemaDef argObj) {
+		if (argObj == null) {
+			setRequiredContainerSchema((ICFBamProtSchemaDef)null);
+		}
+		else {
+			setRequiredContainerSchema(argObj.getRequiredId());
+		}
+	}
+
 	public void setRequiredContainerSchema(CFLibDbKeyHash256 argSchemaId);
 	public void setOptionalLookupRefSchema(ICFBamProtSchemaDef argObj);
-	public void setOptionalLookupRefSchema(ICFBamPubSchemaDef argObj);
+	public default void setOptionalLookupRefSchema(ICFBamPubSchemaDef argObj) {
+		if (argObj == null) {
+			setOptionalLookupRefSchema((ICFBamProtSchemaDef)null);
+		}
+		else {
+			setOptionalLookupRefSchema(argObj.getRequiredId());
+		}
+	}
+
 	public void setOptionalLookupRefSchema(CFLibDbKeyHash256 argRefSchemaId);
 	public void setOptionalLookupPrev(ICFBamProtSchemaRef argObj);
-	public void setOptionalLookupPrev(ICFBamPubSchemaRef argObj);
+	public default void setOptionalLookupPrev(ICFBamPubSchemaRef argObj) {
+		if (argObj == null) {
+			setOptionalLookupPrev((ICFBamProtSchemaRef)null);
+		}
+		else {
+			setOptionalLookupPrev(argObj.getRequiredId());
+		}
+	}
+
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
 	public void setOptionalLookupNext(ICFBamProtSchemaRef argObj);
-	public void setOptionalLookupNext(ICFBamPubSchemaRef argObj);
+	public default void setOptionalLookupNext(ICFBamPubSchemaRef argObj) {
+		if (argObj == null) {
+			setOptionalLookupNext((ICFBamProtSchemaRef)null);
+		}
+		else {
+			setOptionalLookupNext(argObj.getRequiredId());
+		}
+	}
+
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
 	public CFLibDbKeyHash256 getRequiredSchemaId();
 	public String getRequiredName();
