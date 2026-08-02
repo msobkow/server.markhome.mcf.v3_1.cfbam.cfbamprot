@@ -79,6 +79,10 @@ public interface ICFBamProtPopSubDep3
 	public void setRequiredContainerPopSubDep2(CFLibDbKeyHash256 argPopSubDep2Id);
 
 
+	public void setRequiredContainerPopSubDep2(ICFBamProtPopSubDep2 argObj);
+
+	public void setRequiredContainerPopSubDep2(ICFBamPubPopSubDep2 argObj);
+
 	public CFLibDbKeyHash256 getRequiredPopSubDep2Id();
 	public String getRequiredName();
 	public void setRequiredName( String value );

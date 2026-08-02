@@ -78,6 +78,10 @@ public interface ICFBamProtServerObjFunc
 	public void setOptionalLookupRetTable(CFLibDbKeyHash256 argRetTableId);
 
 
+	public void setOptionalLookupRetTable(ICFBamProtTable argObj);
+
+	public void setOptionalLookupRetTable(ICFBamPubTable argObj);
+
 	public CFLibDbKeyHash256 getOptionalRetTableId();
 	public boolean equals( Object obj );
 

@@ -121,20 +121,36 @@ public interface ICFBamProtValue
 	public void setRequiredContainerScope(CFLibDbKeyHash256 argScopeId);
 
 
+	public void setRequiredContainerScope(ICFBamProtScope argObj);
+
+	public void setRequiredContainerScope(ICFBamPubScope argObj);
+
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 
+
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
 	public ICFBamProtValue getOptionalLookupPrev();
 
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
 
 
+	public void setOptionalLookupPrev(ICFBamProtValue argObj);
+
+	public void setOptionalLookupPrev(ICFBamPubValue argObj);
+
 	public ICFBamProtValue getOptionalLookupNext();
 
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
 
+
+	public void setOptionalLookupNext(ICFBamProtValue argObj);
+
+	public void setOptionalLookupNext(ICFBamPubValue argObj);
 
 	public CFLibDbKeyHash256 getRequiredScopeId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();

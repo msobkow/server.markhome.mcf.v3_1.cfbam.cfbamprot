@@ -81,6 +81,10 @@ public interface ICFBamProtSchemaRole
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
 
 
+	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
+
+	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
+
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	public ICFBamPubSchema.RoleScopeEnum getRequiredRoleScope();
 	public void setRequiredRoleScope( ICFBamPubSchema.RoleScopeEnum value );

@@ -80,10 +80,18 @@ public interface ICFBamProtClearDep
 	public void setRequiredLookupRelation(CFLibDbKeyHash256 argRelationId);
 
 
+	public void setRequiredLookupRelation(ICFBamProtRelation argObj);
+
+	public void setRequiredLookupRelation(ICFBamPubRelation argObj);
+
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 
+
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
 	public CFLibDbKeyHash256 getRequiredRelationId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();

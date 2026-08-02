@@ -105,30 +105,54 @@ public interface ICFBamProtTable
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
 
 
+	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
+
+	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
+
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 
+
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
 	public ICFBamProtIndex getOptionalLookupLookupIndex();
 
 	public void setOptionalLookupLookupIndex(CFLibDbKeyHash256 argLookupIndexId);
 
 
+	public void setOptionalLookupLookupIndex(ICFBamProtIndex argObj);
+
+	public void setOptionalLookupLookupIndex(ICFBamPubIndex argObj);
+
 	public ICFBamProtIndex getOptionalLookupAltIndex();
 
 	public void setOptionalLookupAltIndex(CFLibDbKeyHash256 argAltIndexId);
 
+
+	public void setOptionalLookupAltIndex(ICFBamProtIndex argObj);
+
+	public void setOptionalLookupAltIndex(ICFBamPubIndex argObj);
 
 	public ICFBamProtTable getOptionalLookupQualTable();
 
 	public void setOptionalLookupQualTable(CFLibDbKeyHash256 argQualifyingTableId);
 
 
+	public void setOptionalLookupQualTable(ICFBamProtTable argObj);
+
+	public void setOptionalLookupQualTable(ICFBamPubTable argObj);
+
 	public ICFBamProtIndex getOptionalLookupPrimaryIndex();
 
 	public void setOptionalLookupPrimaryIndex(CFLibDbKeyHash256 argPrimaryIndexId);
 
+
+	public void setOptionalLookupPrimaryIndex(ICFBamProtIndex argObj);
+
+	public void setOptionalLookupPrimaryIndex(ICFBamPubIndex argObj);
 
 	public List<ICFBamProtRelation> getOptionalComponentsRelation();
 

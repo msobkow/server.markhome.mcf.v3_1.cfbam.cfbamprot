@@ -113,10 +113,18 @@ public interface ICFBamProtRoleDef
 	public void setRequiredContainerScopeDef(CFLibDbKeyHash256 argScopeId);
 
 
+	public void setRequiredContainerScopeDef(ICFBamProtScope argObj);
+
+	public void setRequiredContainerScopeDef(ICFBamPubScope argObj);
+
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
 
+
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
 	public CFLibDbKeyHash256 getRequiredScopeId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();

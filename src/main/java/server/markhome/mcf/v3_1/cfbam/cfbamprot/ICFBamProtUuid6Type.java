@@ -78,6 +78,10 @@ public interface ICFBamProtUuid6Type
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
 
 
+	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
+
+	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
+
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	public boolean equals( Object obj );
 

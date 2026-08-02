@@ -78,6 +78,10 @@ public interface ICFBamProtUuid6Col
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
 
 
+	public void setRequiredContainerTable(ICFBamProtTable argObj);
+
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
+
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public boolean equals( Object obj );
 
