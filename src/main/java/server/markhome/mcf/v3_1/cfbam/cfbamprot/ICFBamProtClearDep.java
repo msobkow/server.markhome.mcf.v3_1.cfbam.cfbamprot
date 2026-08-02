@@ -65,56 +65,51 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtClearDep persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtClearDep extends ICFBamProtScope
+public interface ICFBamProtClearDep
+	extends ICFBamProtScope
 {
-	public static final String S_RELATIONID_INIT_VALUE = ICFBamPubClearDep.S_RELATIONID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 RELATIONID_INIT_VALUE = ICFBamPubClearDep.RELATIONID_INIT_VALUE;
-	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubClearDep.S_DEFSCHEMAID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubClearDep.DEFSCHEMAID_INIT_VALUE;
+	public static final String S_RELATIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 RELATIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_RELATIONID_INIT_VALUE );
+	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa814;
 	public final static String S_CLASS_CODE = "a814";
 
 	public ICFBamProtRelation getRequiredLookupRelation();
-	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
-	public void setRequiredLookupRelation(ICFBamProtRelation argObj);
-	public default void setRequiredLookupRelation(ICFBamPubRelation argObj) {
-		if (argObj == null) {
-			setRequiredLookupRelation((ICFBamProtRelation)null);
-		}
-		else {
-			setRequiredLookupRelation(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredLookupRelation(CFLibDbKeyHash256 argRelationId);
-	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setOptionalLookupDefSchema(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+
+
 	public CFLibDbKeyHash256 getRequiredRelationId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setClearDep( ICFBamProtClearDep src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setClearDep( ICFBamProtClearDepH src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setClearDep( ICFBamPubClearDep src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setClearDep( ICFBamPubClearDepH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

@@ -67,69 +67,61 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTweak
 {
-	public static final String S_INIT_CREATED_BY = ICFBamPubTweak.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFBamPubTweak.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFBamPubTweak.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFBamPubTweak.INIT_UPDATED_BY;
-	public static final String S_TENANTID_INIT_VALUE = ICFBamPubTweak.S_TENANTID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 TENANTID_INIT_VALUE = ICFBamPubTweak.TENANTID_INIT_VALUE;
-	public static final String S_SCOPEID_INIT_VALUE = ICFBamPubTweak.S_SCOPEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 SCOPEID_INIT_VALUE = ICFBamPubTweak.SCOPEID_INIT_VALUE;
-	public static final String S_ID_INIT_VALUE = ICFBamPubTweak.S_ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFBamPubTweak.ID_INIT_VALUE;
-	public static final String S_DEFSCHEMATENANTID_INIT_VALUE = ICFBamPubTweak.S_DEFSCHEMATENANTID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMATENANTID_INIT_VALUE = ICFBamPubTweak.DEFSCHEMATENANTID_INIT_VALUE;
-	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubTweak.S_DEFSCHEMAID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubTweak.DEFSCHEMAID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubTweak.NAME_INIT_VALUE;
-	public final static boolean REPLACESINHERITED_INIT_VALUE = ICFBamPubTweak.REPLACESINHERITED_INIT_VALUE;
-	public static final String TWEAKGELTEXT_INIT_VALUE = ICFBamPubTweak.TWEAKGELTEXT_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_TENANTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 TENANTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TENANTID_INIT_VALUE );
+	public static final String S_SCOPEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 SCOPEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SCOPEID_INIT_VALUE );
+	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
+	public static final String S_DEFSCHEMATENANTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMATENANTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMATENANTID_INIT_VALUE );
+	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public final static boolean REPLACESINHERITED_INIT_VALUE = false;
+	public static final String TWEAKGELTEXT_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa808;
 	public final static String S_CLASS_CODE = "a808";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFBamProtScope getRequiredContainerScopeDef();
-	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
-	public void setRequiredContainerScopeDef(ICFBamProtScope argObj);
-	public default void setRequiredContainerScopeDef(ICFBamPubScope argObj) {
-		if (argObj == null) {
-			setRequiredContainerScopeDef((ICFBamProtScope)null);
-		}
-		else {
-			setRequiredContainerScopeDef(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerScopeDef(CFLibDbKeyHash256 argScopeId);
-	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setOptionalLookupDefSchema(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+
+
 	public CFLibDbKeyHash256 getRequiredTenantId();
 	public void setRequiredTenantId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getRequiredScopeId();
@@ -142,26 +134,29 @@ public interface ICFBamProtTweak
 	public void setRequiredReplacesInherited( boolean value );
 	public String getRequiredTweakGelText();
 	public void setRequiredTweakGelText( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtTweak src );
-	public void setTweak( ICFBamProtTweak src );
-	public void set( ICFBamPubTweak src );
-	public void set( ICFBamProtTweakH src );
-	public void setTweak( ICFBamProtTweakH src );
-	public void set( ICFBamPubTweakH src );
-	public void setTweak( ICFBamPubTweakH src );
 
+	public void setTweak( ICFBamProtTweak src );
+
+	public void set( ICFBamProtTweakH src );
+
+	public void setTweak( ICFBamProtTweakH src );
+
+	public void set( ICFBamPubTweak src );
+
+	public void setTweak( ICFBamPubTweak src );
+
+	public void set( ICFBamPubTweakH src );
+
+	public void setTweak( ICFBamPubTweakH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

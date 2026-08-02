@@ -65,7 +65,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtTable persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtTable extends ICFBamProtScope
+public interface ICFBamProtTable
+	extends ICFBamProtScope
 {
 	public static final ICFBamPubSchema.LoaderBehaviourEnum LOADERBEHAVIOUR_MIN_VALUE = ICFBamPubSchema.LoaderBehaviourEnum.Insert;
 	public static final ICFBamPubSchema.SecScopeEnum SECSCOPE_MIN_VALUE = ICFBamPubSchema.SecScopeEnum.None;
@@ -73,113 +74,80 @@ public interface ICFBamProtTable extends ICFBamProtScope
 	public static final ICFBamPubSchema.LoaderBehaviourEnum LOADERBEHAVIOUR_MAX_VALUE = ICFBamPubSchema.LoaderBehaviourEnum.Replace;
 	public static final ICFBamPubSchema.SecScopeEnum SECSCOPE_MAX_VALUE = ICFBamPubSchema.SecScopeEnum.TenantGroup;
 	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_MAX_VALUE = ICFBamPubSchema.CodeVisibilityEnum.Private;
-	public static final String S_SCHEMADEFID_INIT_VALUE = ICFBamPubTable.S_SCHEMADEFID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = ICFBamPubTable.SCHEMADEFID_INIT_VALUE;
-	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubTable.S_DEFSCHEMAID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubTable.DEFSCHEMAID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubTable.NAME_INIT_VALUE;
-	public final static boolean PAGEDATA_INIT_VALUE = ICFBamPubTable.PAGEDATA_INIT_VALUE;
-	public static final String S_PRIMARYINDEXID_INIT_VALUE = ICFBamPubTable.S_PRIMARYINDEXID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 PRIMARYINDEXID_INIT_VALUE = ICFBamPubTable.PRIMARYINDEXID_INIT_VALUE;
-	public static final String TABLECLASSCODE_INIT_VALUE = ICFBamPubTable.TABLECLASSCODE_INIT_VALUE;
-	public static final String S_LOOKUPINDEXID_INIT_VALUE = ICFBamPubTable.S_LOOKUPINDEXID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 LOOKUPINDEXID_INIT_VALUE = ICFBamPubTable.LOOKUPINDEXID_INIT_VALUE;
-	public static final String S_ALTINDEXID_INIT_VALUE = ICFBamPubTable.S_ALTINDEXID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ALTINDEXID_INIT_VALUE = ICFBamPubTable.ALTINDEXID_INIT_VALUE;
-	public static final String S_QUALIFYINGTABLEID_INIT_VALUE = ICFBamPubTable.S_QUALIFYINGTABLEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 QUALIFYINGTABLEID_INIT_VALUE = ICFBamPubTable.QUALIFYINGTABLEID_INIT_VALUE;
-	public final static boolean ISINSTANTIABLE_INIT_VALUE = ICFBamPubTable.ISINSTANTIABLE_INIT_VALUE;
-	public final static boolean HASHISTORY_INIT_VALUE = ICFBamPubTable.HASHISTORY_INIT_VALUE;
-	public final static boolean HASAUDITCOLUMNS_INIT_VALUE = ICFBamPubTable.HASAUDITCOLUMNS_INIT_VALUE;
-	public final static boolean ISMUTABLE_INIT_VALUE = ICFBamPubTable.ISMUTABLE_INIT_VALUE;
-	public final static boolean ISSERVERONLY_INIT_VALUE = ICFBamPubTable.ISSERVERONLY_INIT_VALUE;
-	public static final ICFBamPubSchema.LoaderBehaviourEnum LOADERBEHAVIOUR_INIT_VALUE = ICFBamPubTable.LOADERBEHAVIOUR_INIT_VALUE;
-	public static final ICFBamPubSchema.SecScopeEnum SECSCOPE_INIT_VALUE = ICFBamPubTable.SECSCOPE_INIT_VALUE;
-	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubTable.CODEVIS_INIT_VALUE;
+	public static final String S_SCHEMADEFID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SCHEMADEFID_INIT_VALUE );
+	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public final static boolean PAGEDATA_INIT_VALUE = false;
+	public static final String S_PRIMARYINDEXID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 PRIMARYINDEXID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PRIMARYINDEXID_INIT_VALUE );
+	public static final String TABLECLASSCODE_INIT_VALUE = new String( "" );
+	public static final String S_LOOKUPINDEXID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 LOOKUPINDEXID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_LOOKUPINDEXID_INIT_VALUE );
+	public static final String S_ALTINDEXID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ALTINDEXID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ALTINDEXID_INIT_VALUE );
+	public static final String S_QUALIFYINGTABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 QUALIFYINGTABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_QUALIFYINGTABLEID_INIT_VALUE );
+	public final static boolean ISINSTANTIABLE_INIT_VALUE = true;
+	public final static boolean HASHISTORY_INIT_VALUE = false;
+	public final static boolean HASAUDITCOLUMNS_INIT_VALUE = false;
+	public final static boolean ISMUTABLE_INIT_VALUE = false;
+	public final static boolean ISSERVERONLY_INIT_VALUE = false;
+	public static final ICFBamPubSchema.LoaderBehaviourEnum LOADERBEHAVIOUR_INIT_VALUE = ICFBamPubSchema.ordinalToLoaderBehaviourEnum( 0 );
+	public static final ICFBamPubSchema.SecScopeEnum SECSCOPE_INIT_VALUE = ICFBamPubSchema.ordinalToSecScopeEnum( 0 );
+	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubSchema.ordinalToCodeVisibilityEnum( 0 );
 	public final static int CLASS_CODE = 0xa807;
 	public final static String S_CLASS_CODE = "a807";
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
-	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
-	public List<ICFBamProtRelation> getOptionalComponentsRelation();
-	public ICFBamProtIndex getOptionalLookupLookupIndex();
-	public ICFBamProtIndex getOptionalLookupAltIndex();
-	public ICFBamProtTable getOptionalLookupQualTable();
-	public List<ICFBamProtIndex> getOptionalComponentsIndex();
-	public ICFBamProtIndex getOptionalLookupPrimaryIndex();
-	public List<ICFBamProtValue> getOptionalComponentsColumns();
-	public List<ICFBamProtRelation> getOptionalChildrenReverseRelations();
-	public List<ICFBamProtChain> getOptionalComponentsChains();
-	public List<ICFBamProtDelTopDep> getOptionalComponentsDelDep();
-	public List<ICFBamProtClearTopDep> getOptionalComponentsClearDep();
-	public List<ICFBamProtServerMethod> getOptionalComponentsServerMethods();
-	public List<ICFBamProtTweak> getOptionalComponentsTweaks();
-	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
-	public default void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setRequiredContainerSchemaDef((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setRequiredContainerSchemaDef(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
-	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setOptionalLookupDefSchema(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
-	public void setOptionalLookupLookupIndex(ICFBamProtIndex argObj);
-	public default void setOptionalLookupLookupIndex(ICFBamPubIndex argObj) {
-		if (argObj == null) {
-			setOptionalLookupLookupIndex((ICFBamProtIndex)null);
-		}
-		else {
-			setOptionalLookupLookupIndex(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtIndex getOptionalLookupLookupIndex();
 
 	public void setOptionalLookupLookupIndex(CFLibDbKeyHash256 argLookupIndexId);
-	public void setOptionalLookupAltIndex(ICFBamProtIndex argObj);
-	public default void setOptionalLookupAltIndex(ICFBamPubIndex argObj) {
-		if (argObj == null) {
-			setOptionalLookupAltIndex((ICFBamProtIndex)null);
-		}
-		else {
-			setOptionalLookupAltIndex(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtIndex getOptionalLookupAltIndex();
 
 	public void setOptionalLookupAltIndex(CFLibDbKeyHash256 argAltIndexId);
-	public void setOptionalLookupQualTable(ICFBamProtTable argObj);
-	public default void setOptionalLookupQualTable(ICFBamPubTable argObj) {
-		if (argObj == null) {
-			setOptionalLookupQualTable((ICFBamProtTable)null);
-		}
-		else {
-			setOptionalLookupQualTable(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtTable getOptionalLookupQualTable();
 
 	public void setOptionalLookupQualTable(CFLibDbKeyHash256 argQualifyingTableId);
-	public void setOptionalLookupPrimaryIndex(ICFBamProtIndex argObj);
-	public default void setOptionalLookupPrimaryIndex(ICFBamPubIndex argObj) {
-		if (argObj == null) {
-			setOptionalLookupPrimaryIndex((ICFBamProtIndex)null);
-		}
-		else {
-			setOptionalLookupPrimaryIndex(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtIndex getOptionalLookupPrimaryIndex();
 
 	public void setOptionalLookupPrimaryIndex(CFLibDbKeyHash256 argPrimaryIndexId);
+
+
+	public List<ICFBamProtRelation> getOptionalComponentsRelation();
+
+	public List<ICFBamProtIndex> getOptionalComponentsIndex();
+
+	public List<ICFBamProtValue> getOptionalComponentsColumns();
+
+	public List<ICFBamProtRelation> getOptionalChildrenReverseRelations();
+
+	public List<ICFBamProtChain> getOptionalComponentsChains();
+
+	public List<ICFBamProtDelTopDep> getOptionalComponentsDelDep();
+
+	public List<ICFBamProtClearTopDep> getOptionalComponentsClearDep();
+
+	public List<ICFBamProtServerMethod> getOptionalComponentsServerMethods();
+
+	public List<ICFBamProtTweak> getOptionalComponentsTweaks();
+
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
@@ -218,21 +186,29 @@ public interface ICFBamProtTable extends ICFBamProtScope
 	public void setRequiredSecScope( ICFBamPubSchema.SecScopeEnum value );
 	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
 	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setTable( ICFBamProtTable src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setTable( ICFBamProtTableH src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setTable( ICFBamPubTable src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setTable( ICFBamPubTableH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

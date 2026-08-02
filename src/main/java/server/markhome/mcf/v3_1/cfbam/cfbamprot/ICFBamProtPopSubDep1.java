@@ -65,45 +65,48 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtPopSubDep1 persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtPopSubDep1 extends ICFBamProtPopDep
+public interface ICFBamProtPopSubDep1
+	extends ICFBamProtPopDep
 {
-	public static final String S_POPTOPDEPID_INIT_VALUE = ICFBamPubPopSubDep1.S_POPTOPDEPID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 POPTOPDEPID_INIT_VALUE = ICFBamPubPopSubDep1.POPTOPDEPID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubPopSubDep1.NAME_INIT_VALUE;
+	public static final String S_POPTOPDEPID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 POPTOPDEPID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_POPTOPDEPID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa835;
 	public final static String S_CLASS_CODE = "a835";
 
 	public ICFBamProtPopTopDep getRequiredContainerContPopTopDep();
-	public List<ICFBamProtPopSubDep2> getOptionalComponentsPopDep();
-	public void setRequiredContainerContPopTopDep(ICFBamProtPopTopDep argObj);
-	public default void setRequiredContainerContPopTopDep(ICFBamPubPopTopDep argObj) {
-		if (argObj == null) {
-			setRequiredContainerContPopTopDep((ICFBamProtPopTopDep)null);
-		}
-		else {
-			setRequiredContainerContPopTopDep(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerContPopTopDep(CFLibDbKeyHash256 argPopTopDepId);
+
+
+	public List<ICFBamProtPopSubDep2> getOptionalComponentsPopDep();
+
 	public CFLibDbKeyHash256 getRequiredPopTopDepId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setPopSubDep1( ICFBamProtPopSubDep1 src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setPopSubDep1( ICFBamProtPopSubDep1H src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setPopSubDep1( ICFBamPubPopSubDep1 src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setPopSubDep1( ICFBamPubPopSubDep1H src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

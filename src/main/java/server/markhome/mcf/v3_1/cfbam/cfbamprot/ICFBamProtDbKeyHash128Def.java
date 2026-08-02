@@ -65,28 +65,37 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtDbKeyHash128Def persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtDbKeyHash128Def extends ICFBamProtAtom
+public interface ICFBamProtDbKeyHash128Def
+	extends ICFBamProtAtom
 {
 	public final static int CLASS_CODE = 0xa83c;
 	public final static String S_CLASS_CODE = "a83c";
 
 	public String getOptionalInitValue();
 	public void setOptionalInitValue( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setDbKeyHash128Def( ICFBamProtDbKeyHash128Def src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setDbKeyHash128Def( ICFBamProtDbKeyHash128DefH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setDbKeyHash128Def( ICFBamPubDbKeyHash128Def src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setDbKeyHash128Def( ICFBamPubDbKeyHash128DefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

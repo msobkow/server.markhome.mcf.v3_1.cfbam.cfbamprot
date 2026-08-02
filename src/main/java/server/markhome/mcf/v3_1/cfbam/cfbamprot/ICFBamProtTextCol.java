@@ -65,41 +65,43 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtTextCol persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtTextCol extends ICFBamProtTextDef
+public interface ICFBamProtTextCol
+	extends ICFBamProtTextDef
 {
-	public static final String S_TABLEID_INIT_VALUE = ICFBamPubTextCol.S_TABLEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubTextCol.TABLEID_INIT_VALUE;
+	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa883;
 	public final static String S_CLASS_CODE = "a883";
 
 	public ICFBamProtTable getRequiredContainerTable();
-	public void setRequiredContainerTable(ICFBamProtTable argObj);
-	public default void setRequiredContainerTable(ICFBamPubTable argObj) {
-		if (argObj == null) {
-			setRequiredContainerTable((ICFBamProtTable)null);
-		}
-		else {
-			setRequiredContainerTable(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+
+
 	public CFLibDbKeyHash256 getRequiredTableId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setTextCol( ICFBamProtTextCol src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setTextCol( ICFBamProtTextColH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setTextCol( ICFBamPubTextCol src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setTextCol( ICFBamPubTextColH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

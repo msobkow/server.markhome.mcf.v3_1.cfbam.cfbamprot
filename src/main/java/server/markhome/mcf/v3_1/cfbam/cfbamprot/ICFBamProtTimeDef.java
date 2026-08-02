@@ -65,28 +65,37 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtTimeDef persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtTimeDef extends ICFBamProtAtom
+public interface ICFBamProtTimeDef
+	extends ICFBamProtAtom
 {
 	public final static int CLASS_CODE = 0xa85f;
 	public final static String S_CLASS_CODE = "a85f";
 
 	public String getOptionalDummy();
 	public void setOptionalDummy( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setTimeDef( ICFBamProtTimeDef src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setTimeDef( ICFBamProtTimeDefH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setTimeDef( ICFBamPubTimeDef src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setTimeDef( ICFBamPubTimeDefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

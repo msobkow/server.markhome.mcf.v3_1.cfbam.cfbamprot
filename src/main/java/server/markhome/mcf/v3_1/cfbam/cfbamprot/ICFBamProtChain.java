@@ -67,91 +67,69 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtChain
 {
-	public static final String S_INIT_CREATED_BY = ICFBamPubChain.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFBamPubChain.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFBamPubChain.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFBamPubChain.INIT_UPDATED_BY;
-	public static final String S_ID_INIT_VALUE = ICFBamPubChain.S_ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFBamPubChain.ID_INIT_VALUE;
-	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubChain.S_DEFSCHEMAID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubChain.DEFSCHEMAID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubChain.NAME_INIT_VALUE;
-	public static final String S_TABLEID_INIT_VALUE = ICFBamPubChain.S_TABLEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubChain.TABLEID_INIT_VALUE;
-	public static final String S_PREVRELATIONID_INIT_VALUE = ICFBamPubChain.S_PREVRELATIONID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 PREVRELATIONID_INIT_VALUE = ICFBamPubChain.PREVRELATIONID_INIT_VALUE;
-	public static final String S_NEXTRELATIONID_INIT_VALUE = ICFBamPubChain.S_NEXTRELATIONID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 NEXTRELATIONID_INIT_VALUE = ICFBamPubChain.NEXTRELATIONID_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
+	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
+	public static final String S_PREVRELATIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 PREVRELATIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVRELATIONID_INIT_VALUE );
+	public static final String S_NEXTRELATIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 NEXTRELATIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTRELATIONID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa813;
 	public final static String S_CLASS_CODE = "a813";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFBamProtTable getRequiredContainerTable();
-	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
-	public ICFBamProtRelation getRequiredLookupPrevRel();
-	public ICFBamProtRelation getRequiredLookupNextRel();
-	public void setRequiredContainerTable(ICFBamProtTable argObj);
-	public default void setRequiredContainerTable(ICFBamPubTable argObj) {
-		if (argObj == null) {
-			setRequiredContainerTable((ICFBamProtTable)null);
-		}
-		else {
-			setRequiredContainerTable(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
-	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setOptionalLookupDefSchema(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
-	public void setRequiredLookupPrevRel(ICFBamProtRelation argObj);
-	public default void setRequiredLookupPrevRel(ICFBamPubRelation argObj) {
-		if (argObj == null) {
-			setRequiredLookupPrevRel((ICFBamProtRelation)null);
-		}
-		else {
-			setRequiredLookupPrevRel(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtRelation getRequiredLookupPrevRel();
 
 	public void setRequiredLookupPrevRel(CFLibDbKeyHash256 argPrevRelationId);
-	public void setRequiredLookupNextRel(ICFBamProtRelation argObj);
-	public default void setRequiredLookupNextRel(ICFBamPubRelation argObj) {
-		if (argObj == null) {
-			setRequiredLookupNextRel((ICFBamProtRelation)null);
-		}
-		else {
-			setRequiredLookupNextRel(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtRelation getRequiredLookupNextRel();
 
 	public void setRequiredLookupNextRel(CFLibDbKeyHash256 argNextRelationId);
+
+
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
 	public void setRequiredName( String value );
@@ -168,26 +146,29 @@ public interface ICFBamProtChain
 	public void setOptionalSuffix( String value );
 	public CFLibDbKeyHash256 getRequiredPrevRelationId();
 	public CFLibDbKeyHash256 getRequiredNextRelationId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtChain src );
-	public void setChain( ICFBamProtChain src );
-	public void set( ICFBamPubChain src );
-	public void set( ICFBamProtChainH src );
-	public void setChain( ICFBamProtChainH src );
-	public void set( ICFBamPubChainH src );
-	public void setChain( ICFBamPubChainH src );
 
+	public void setChain( ICFBamProtChain src );
+
+	public void set( ICFBamProtChainH src );
+
+	public void setChain( ICFBamProtChainH src );
+
+	public void set( ICFBamPubChain src );
+
+	public void setChain( ICFBamPubChain src );
+
+	public void set( ICFBamPubChainH src );
+
+	public void setChain( ICFBamPubChainH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

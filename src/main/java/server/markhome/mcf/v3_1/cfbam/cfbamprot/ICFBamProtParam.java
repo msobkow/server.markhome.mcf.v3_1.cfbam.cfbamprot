@@ -67,106 +67,77 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtParam
 {
-	public static final String S_INIT_CREATED_BY = ICFBamPubParam.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFBamPubParam.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFBamPubParam.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFBamPubParam.INIT_UPDATED_BY;
-	public static final String S_SERVERMETHODID_INIT_VALUE = ICFBamPubParam.S_SERVERMETHODID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 SERVERMETHODID_INIT_VALUE = ICFBamPubParam.SERVERMETHODID_INIT_VALUE;
-	public static final String S_ID_INIT_VALUE = ICFBamPubParam.S_ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFBamPubParam.ID_INIT_VALUE;
-	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubParam.S_DEFSCHEMAID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubParam.DEFSCHEMAID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubParam.NAME_INIT_VALUE;
-	public final static boolean ISNULLABLE_INIT_VALUE = ICFBamPubParam.ISNULLABLE_INIT_VALUE;
-	public static final String S_TYPEID_INIT_VALUE = ICFBamPubParam.S_TYPEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 TYPEID_INIT_VALUE = ICFBamPubParam.TYPEID_INIT_VALUE;
-	public static final String S_PREVID_INIT_VALUE = ICFBamPubParam.S_PREVID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = ICFBamPubParam.PREVID_INIT_VALUE;
-	public static final String S_NEXTID_INIT_VALUE = ICFBamPubParam.S_NEXTID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = ICFBamPubParam.NEXTID_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_SERVERMETHODID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 SERVERMETHODID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SERVERMETHODID_INIT_VALUE );
+	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
+	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public final static boolean ISNULLABLE_INIT_VALUE = false;
+	public static final String S_TYPEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 TYPEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TYPEID_INIT_VALUE );
+	public static final String S_PREVID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVID_INIT_VALUE );
+	public static final String S_NEXTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa833;
 	public final static String S_CLASS_CODE = "a833";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFBamProtServerMethod getRequiredContainerServerMeth();
-	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
-	public ICFBamProtParam getOptionalLookupPrev();
-	public ICFBamProtParam getOptionalLookupNext();
-	public ICFBamProtValue getRequiredLookupType();
-	public void setRequiredContainerServerMeth(ICFBamProtServerMethod argObj);
-	public default void setRequiredContainerServerMeth(ICFBamPubServerMethod argObj) {
-		if (argObj == null) {
-			setRequiredContainerServerMeth((ICFBamProtServerMethod)null);
-		}
-		else {
-			setRequiredContainerServerMeth(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerServerMeth(CFLibDbKeyHash256 argServerMethodId);
-	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setOptionalLookupDefSchema(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
-	public void setOptionalLookupPrev(ICFBamProtParam argObj);
-	public default void setOptionalLookupPrev(ICFBamPubParam argObj) {
-		if (argObj == null) {
-			setOptionalLookupPrev((ICFBamProtParam)null);
-		}
-		else {
-			setOptionalLookupPrev(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtParam getOptionalLookupPrev();
 
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
-	public void setOptionalLookupNext(ICFBamProtParam argObj);
-	public default void setOptionalLookupNext(ICFBamPubParam argObj) {
-		if (argObj == null) {
-			setOptionalLookupNext((ICFBamProtParam)null);
-		}
-		else {
-			setOptionalLookupNext(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtParam getOptionalLookupNext();
 
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
-	public void setRequiredLookupType(ICFBamProtValue argObj);
-	public default void setRequiredLookupType(ICFBamPubValue argObj) {
-		if (argObj == null) {
-			setRequiredLookupType((ICFBamProtValue)null);
-		}
-		else {
-			setRequiredLookupType(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtValue getRequiredLookupType();
 
 	public void setRequiredLookupType(CFLibDbKeyHash256 argTypeId);
+
+
 	public CFLibDbKeyHash256 getRequiredServerMethodId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
@@ -180,26 +151,29 @@ public interface ICFBamProtParam
 	public CFLibDbKeyHash256 getOptionalTypeId();
 	public CFLibDbKeyHash256 getOptionalPrevId();
 	public CFLibDbKeyHash256 getOptionalNextId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtParam src );
-	public void setParam( ICFBamProtParam src );
-	public void set( ICFBamPubParam src );
-	public void set( ICFBamProtParamH src );
-	public void setParam( ICFBamProtParamH src );
-	public void set( ICFBamPubParamH src );
-	public void setParam( ICFBamPubParamH src );
 
+	public void setParam( ICFBamProtParam src );
+
+	public void set( ICFBamProtParamH src );
+
+	public void setParam( ICFBamProtParamH src );
+
+	public void set( ICFBamPubParam src );
+
+	public void setParam( ICFBamPubParam src );
+
+	public void set( ICFBamPubParamH src );
+
+	public void setParam( ICFBamPubParamH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

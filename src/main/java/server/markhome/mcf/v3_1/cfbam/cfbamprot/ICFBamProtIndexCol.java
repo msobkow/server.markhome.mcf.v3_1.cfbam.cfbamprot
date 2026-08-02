@@ -67,108 +67,81 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtIndexCol
 {
-	public static final String S_INIT_CREATED_BY = ICFBamPubIndexCol.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFBamPubIndexCol.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFBamPubIndexCol.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFBamPubIndexCol.INIT_UPDATED_BY;
-	public static final String S_INDEXID_INIT_VALUE = ICFBamPubIndexCol.S_INDEXID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 INDEXID_INIT_VALUE = ICFBamPubIndexCol.INDEXID_INIT_VALUE;
-	public static final String S_ID_INIT_VALUE = ICFBamPubIndexCol.S_ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFBamPubIndexCol.ID_INIT_VALUE;
-	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubIndexCol.S_DEFSCHEMAID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubIndexCol.DEFSCHEMAID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubIndexCol.NAME_INIT_VALUE;
-	public static final String S_COLUMNID_INIT_VALUE = ICFBamPubIndexCol.S_COLUMNID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 COLUMNID_INIT_VALUE = ICFBamPubIndexCol.COLUMNID_INIT_VALUE;
-	public final static boolean ISASCENDING_INIT_VALUE = ICFBamPubIndexCol.ISASCENDING_INIT_VALUE;
-	public static final String S_PREVID_INIT_VALUE = ICFBamPubIndexCol.S_PREVID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = ICFBamPubIndexCol.PREVID_INIT_VALUE;
-	public static final String S_NEXTID_INIT_VALUE = ICFBamPubIndexCol.S_NEXTID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = ICFBamPubIndexCol.NEXTID_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_INDEXID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INDEXID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_INDEXID_INIT_VALUE );
+	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
+	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final String S_COLUMNID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 COLUMNID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_COLUMNID_INIT_VALUE );
+	public final static boolean ISASCENDING_INIT_VALUE = true;
+	public static final String S_PREVID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVID_INIT_VALUE );
+	public static final String S_NEXTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa826;
 	public final static String S_CLASS_CODE = "a826";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	
 	public List<ICFBamProtRelationCol> getOptionalChildrenRefRelFromCol();
+
 	public List<ICFBamProtRelationCol> getOptionalChildrenRefRelToCol();
+
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFBamProtIndex getRequiredContainerIndex();
-	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
-	public ICFBamProtIndexCol getOptionalLookupPrev();
-	public ICFBamProtIndexCol getOptionalLookupNext();
-	public ICFBamProtValue getRequiredLookupColumn();
-	public void setRequiredContainerIndex(ICFBamProtIndex argObj);
-	public default void setRequiredContainerIndex(ICFBamPubIndex argObj) {
-		if (argObj == null) {
-			setRequiredContainerIndex((ICFBamProtIndex)null);
-		}
-		else {
-			setRequiredContainerIndex(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerIndex(CFLibDbKeyHash256 argIndexId);
-	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setOptionalLookupDefSchema(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
-	public void setOptionalLookupPrev(ICFBamProtIndexCol argObj);
-	public default void setOptionalLookupPrev(ICFBamPubIndexCol argObj) {
-		if (argObj == null) {
-			setOptionalLookupPrev((ICFBamProtIndexCol)null);
-		}
-		else {
-			setOptionalLookupPrev(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtIndexCol getOptionalLookupPrev();
 
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
-	public void setOptionalLookupNext(ICFBamProtIndexCol argObj);
-	public default void setOptionalLookupNext(ICFBamPubIndexCol argObj) {
-		if (argObj == null) {
-			setOptionalLookupNext((ICFBamProtIndexCol)null);
-		}
-		else {
-			setOptionalLookupNext(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtIndexCol getOptionalLookupNext();
 
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
-	public void setRequiredLookupColumn(ICFBamProtValue argObj);
-	public default void setRequiredLookupColumn(ICFBamPubValue argObj) {
-		if (argObj == null) {
-			setRequiredLookupColumn((ICFBamProtValue)null);
-		}
-		else {
-			setRequiredLookupColumn(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtValue getRequiredLookupColumn();
 
 	public void setRequiredLookupColumn(CFLibDbKeyHash256 argColumnId);
+
+
 	public CFLibDbKeyHash256 getRequiredIndexId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
@@ -186,26 +159,29 @@ public interface ICFBamProtIndexCol
 	public void setRequiredIsAscending( boolean value );
 	public CFLibDbKeyHash256 getOptionalPrevId();
 	public CFLibDbKeyHash256 getOptionalNextId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtIndexCol src );
-	public void setIndexCol( ICFBamProtIndexCol src );
-	public void set( ICFBamPubIndexCol src );
-	public void set( ICFBamProtIndexColH src );
-	public void setIndexCol( ICFBamProtIndexColH src );
-	public void set( ICFBamPubIndexColH src );
-	public void setIndexCol( ICFBamPubIndexColH src );
 
+	public void setIndexCol( ICFBamProtIndexCol src );
+
+	public void set( ICFBamProtIndexColH src );
+
+	public void setIndexCol( ICFBamProtIndexColH src );
+
+	public void set( ICFBamPubIndexCol src );
+
+	public void setIndexCol( ICFBamPubIndexCol src );
+
+	public void set( ICFBamPubIndexColH src );
+
+	public void setIndexCol( ICFBamPubIndexColH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

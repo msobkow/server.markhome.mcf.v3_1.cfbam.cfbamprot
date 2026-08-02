@@ -65,50 +65,44 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtSchemaDef persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtSchemaDef extends ICFBamProtScope
+public interface ICFBamProtSchemaDef
+	extends ICFBamProtScope
 {
-	public static final String S_CTENANTID_INIT_VALUE = ICFBamPubSchemaDef.S_CTENANTID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 CTENANTID_INIT_VALUE = ICFBamPubSchemaDef.CTENANTID_INIT_VALUE;
-	public static final String S_MINORVERSIONID_INIT_VALUE = ICFBamPubSchemaDef.S_MINORVERSIONID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 MINORVERSIONID_INIT_VALUE = ICFBamPubSchemaDef.MINORVERSIONID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubSchemaDef.NAME_INIT_VALUE;
-	public static final String COPYRIGHTPERIOD_INIT_VALUE = ICFBamPubSchemaDef.COPYRIGHTPERIOD_INIT_VALUE;
-	public static final String COPYRIGHTHOLDER_INIT_VALUE = ICFBamPubSchemaDef.COPYRIGHTHOLDER_INIT_VALUE;
-	public static final String AUTHOREMAIL_INIT_VALUE = ICFBamPubSchemaDef.AUTHOREMAIL_INIT_VALUE;
-	public static final String PROJECTURL_INIT_VALUE = ICFBamPubSchemaDef.PROJECTURL_INIT_VALUE;
-	public static final String PUBLISHURI_INIT_VALUE = ICFBamPubSchemaDef.PUBLISHURI_INIT_VALUE;
+	public static final String S_CTENANTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 CTENANTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_CTENANTID_INIT_VALUE );
+	public static final String S_MINORVERSIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 MINORVERSIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_MINORVERSIONID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final String COPYRIGHTPERIOD_INIT_VALUE = new String( "2020" );
+	public static final String COPYRIGHTHOLDER_INIT_VALUE = new String( "YourNameHere" );
+	public static final String AUTHOREMAIL_INIT_VALUE = new String( "" );
+	public static final String PROJECTURL_INIT_VALUE = new String( "" );
+	public static final String PUBLISHURI_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa802;
 	public final static String S_CLASS_CODE = "a802";
 
 	public ICFIntPubMinorVersion getRequiredContainerMinorVersion();
-	public List<ICFBamProtTable> getOptionalComponentsTables();
-	public List<ICFBamProtValue> getOptionalComponentsTypes();
-	public List<ICFBamProtSchemaRef> getOptionalComponentsSchemaRefs();
-	public List<ICFBamProtTweak> getOptionalComponentsTweaks();
-	public List<ICFBamProtSchemaRole> getOptionalComponentsRoles();
-	public ICFSecPubTenant getRequiredOwnerCTenant();
-	public void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj);
-	public default void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj) {
-		if (argObj == null) {
-			setRequiredContainerMinorVersion((ICFIntProtMinorVersion)null);
-		}
-		else {
-			setRequiredContainerMinorVersion(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerMinorVersion(CFLibDbKeyHash256 argMinorVersionId);
-	public void setRequiredOwnerCTenant(ICFSecPubTenant argObj);
-	public default void setRequiredOwnerCTenant(ICFSecPubTenant argObj) {
-		if (argObj == null) {
-			setRequiredOwnerCTenant((ICFSecProtTenant)null);
-		}
-		else {
-			setRequiredOwnerCTenant(argObj.getRequiredId());
-		}
-	}
+
+	public void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj);
+
+	public ICFSecPubTenant getRequiredOwnerCTenant();
 
 	public void setRequiredOwnerCTenant(CFLibDbKeyHash256 argCTenantId);
+
+	public void setRequiredOwnerCTenant(ICFSecPubTenant argObj);
+
+	public List<ICFBamProtTable> getOptionalComponentsTables();
+
+	public List<ICFBamProtValue> getOptionalComponentsTypes();
+
+	public List<ICFBamProtSchemaRef> getOptionalComponentsSchemaRefs();
+
+	public List<ICFBamProtTweak> getOptionalComponentsTweaks();
+
+	public List<ICFBamProtSchemaRole> getOptionalComponentsRoles();
+
 	public CFLibDbKeyHash256 getRequiredCTenantId();
 	public CFLibDbKeyHash256 getRequiredMinorVersionId();
 	public String getRequiredName();
@@ -133,21 +127,29 @@ public interface ICFBamProtSchemaDef extends ICFBamProtScope
 	public void setRequiredProjectURL( String value );
 	public String getRequiredPublishURI();
 	public void setRequiredPublishURI( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setSchemaDef( ICFBamProtSchemaDef src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setSchemaDef( ICFBamProtSchemaDefH src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setSchemaDef( ICFBamPubSchemaDef src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setSchemaDef( ICFBamPubSchemaDefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

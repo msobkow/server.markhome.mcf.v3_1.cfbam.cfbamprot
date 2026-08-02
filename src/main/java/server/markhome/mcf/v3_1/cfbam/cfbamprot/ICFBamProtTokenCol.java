@@ -65,41 +65,43 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtTokenCol persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtTokenCol extends ICFBamProtTokenDef
+public interface ICFBamProtTokenCol
+	extends ICFBamProtTokenDef
 {
-	public static final String S_TABLEID_INIT_VALUE = ICFBamPubTokenCol.S_TABLEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubTokenCol.TABLEID_INIT_VALUE;
+	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa886;
 	public final static String S_CLASS_CODE = "a886";
 
 	public ICFBamProtTable getRequiredContainerTable();
-	public void setRequiredContainerTable(ICFBamProtTable argObj);
-	public default void setRequiredContainerTable(ICFBamPubTable argObj) {
-		if (argObj == null) {
-			setRequiredContainerTable((ICFBamProtTable)null);
-		}
-		else {
-			setRequiredContainerTable(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+
+
 	public CFLibDbKeyHash256 getRequiredTableId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setTokenCol( ICFBamProtTokenCol src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setTokenCol( ICFBamProtTokenColH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setTokenCol( ICFBamPubTokenCol src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setTokenCol( ICFBamPubTokenColH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

@@ -65,12 +65,13 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtStringDef persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtStringDef extends ICFBamProtAtom
+public interface ICFBamProtStringDef
+	extends ICFBamProtAtom
 {
 	public static final int MAXLEN_MIN_VALUE = 0;
 	public static final int MAXLEN_MAX_VALUE = 2147483647;
-	public static final int MAXLEN_INIT_VALUE = ICFBamPubStringDef.MAXLEN_INIT_VALUE;
-	public final static boolean ISPOLYMORPH_INIT_VALUE = ICFBamPubStringDef.ISPOLYMORPH_INIT_VALUE;
+	public static final int MAXLEN_INIT_VALUE = 0;
+	public final static boolean ISPOLYMORPH_INIT_VALUE = false;
 	public final static int CLASS_CODE = 0xa854;
 	public final static String S_CLASS_CODE = "a854";
 
@@ -80,21 +81,29 @@ public interface ICFBamProtStringDef extends ICFBamProtAtom
 	public void setRequiredIsPolymorph( boolean value );
 	public String getOptionalInitValue();
 	public void setOptionalInitValue( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setStringDef( ICFBamProtStringDef src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setStringDef( ICFBamProtStringDefH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setStringDef( ICFBamPubStringDef src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setStringDef( ICFBamPubStringDefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

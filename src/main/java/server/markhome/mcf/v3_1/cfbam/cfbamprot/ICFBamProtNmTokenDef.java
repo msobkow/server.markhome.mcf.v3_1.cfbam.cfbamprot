@@ -65,11 +65,12 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtNmTokenDef persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtNmTokenDef extends ICFBamProtAtom
+public interface ICFBamProtNmTokenDef
+	extends ICFBamProtAtom
 {
 	public static final int MAXLEN_MIN_VALUE = 0;
 	public static final int MAXLEN_MAX_VALUE = 2147483647;
-	public static final int MAXLEN_INIT_VALUE = ICFBamPubNmTokenDef.MAXLEN_INIT_VALUE;
+	public static final int MAXLEN_INIT_VALUE = 0;
 	public final static int CLASS_CODE = 0xa82d;
 	public final static String S_CLASS_CODE = "a82d";
 
@@ -77,21 +78,29 @@ public interface ICFBamProtNmTokenDef extends ICFBamProtAtom
 	public void setRequiredMaxLen( int value );
 	public String getOptionalInitValue();
 	public void setOptionalInitValue( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setNmTokenDef( ICFBamProtNmTokenDef src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setNmTokenDef( ICFBamProtNmTokenDefH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setNmTokenDef( ICFBamPubNmTokenDef src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setNmTokenDef( ICFBamPubNmTokenDefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

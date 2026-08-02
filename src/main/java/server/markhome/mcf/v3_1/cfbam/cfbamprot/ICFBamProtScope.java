@@ -67,69 +67,72 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtScope
 {
-	public static final String S_INIT_CREATED_BY = ICFBamPubScope.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFBamPubScope.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFBamPubScope.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFBamPubScope.INIT_UPDATED_BY;
-	public static final String S_ID_INIT_VALUE = ICFBamPubScope.S_ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFBamPubScope.ID_INIT_VALUE;
-	public static final String S_TENANTID_INIT_VALUE = ICFBamPubScope.S_TENANTID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 TENANTID_INIT_VALUE = ICFBamPubScope.TENANTID_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
+	public static final String S_TENANTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 TENANTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TENANTID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa801;
 	public final static String S_CLASS_CODE = "a801";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFSecPubTenant getRequiredOwnerTenant();
-	public void setRequiredOwnerTenant(ICFSecPubTenant argObj);
-	public default void setRequiredOwnerTenant(ICFSecPubTenant argObj) {
-		if (argObj == null) {
-			setRequiredOwnerTenant((ICFSecProtTenant)null);
-		}
-		else {
-			setRequiredOwnerTenant(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredOwnerTenant(CFLibDbKeyHash256 argTenantId);
+
+	public void setRequiredOwnerTenant(ICFSecPubTenant argObj);
+
 	public CFLibDbKeyHash256 getRequiredTenantId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
-	public void setScope( ICFBamProtScope src );
-	public void set( ICFBamPubScope src );
-	public void set( ICFBamProtScopeH src );
-	public void setScope( ICFBamProtScopeH src );
-	public void set( ICFBamPubScopeH src );
-	public void setScope( ICFBamPubScopeH src );
 
+	public void setScope( ICFBamProtScope src );
+
+	public void set( ICFBamProtScopeH src );
+
+	public void setScope( ICFBamProtScopeH src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setScope( ICFBamPubScope src );
+
+	public void set( ICFBamPubScopeH src );
+
+	public void setScope( ICFBamPubScopeH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

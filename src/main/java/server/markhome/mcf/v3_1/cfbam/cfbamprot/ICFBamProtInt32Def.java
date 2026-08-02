@@ -65,7 +65,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtInt32Def persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtInt32Def extends ICFBamProtAtom
+public interface ICFBamProtInt32Def
+	extends ICFBamProtAtom
 {
 	public static final int INITVALUE_MIN_VALUE = -2147483648;
 	public static final int MINVALUE_MIN_VALUE = -2147483648;
@@ -73,9 +74,9 @@ public interface ICFBamProtInt32Def extends ICFBamProtAtom
 	public static final int INITVALUE_MAX_VALUE = 2147483647;
 	public static final int MINVALUE_MAX_VALUE = 2147483647;
 	public static final int MAXVALUE_MAX_VALUE = 2147483647;
-	public static final int INITVALUE_INIT_VALUE = ICFBamPubInt32Def.INITVALUE_INIT_VALUE;
-	public static final int MINVALUE_INIT_VALUE = ICFBamPubInt32Def.MINVALUE_INIT_VALUE;
-	public static final int MAXVALUE_INIT_VALUE = ICFBamPubInt32Def.MAXVALUE_INIT_VALUE;
+	public static final int INITVALUE_INIT_VALUE = 0;
+	public static final int MINVALUE_INIT_VALUE = 0;
+	public static final int MAXVALUE_INIT_VALUE = 0;
 	public final static int CLASS_CODE = 0xa829;
 	public final static String S_CLASS_CODE = "a829";
 
@@ -85,21 +86,29 @@ public interface ICFBamProtInt32Def extends ICFBamProtAtom
 	public void setOptionalMinValue( Integer value );
 	public Integer getOptionalMaxValue();
 	public void setOptionalMaxValue( Integer value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setInt32Def( ICFBamProtInt32Def src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setInt32Def( ICFBamProtInt32DefH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setInt32Def( ICFBamPubInt32Def src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setInt32Def( ICFBamPubInt32DefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

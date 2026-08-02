@@ -65,7 +65,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtInt16Def persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtInt16Def extends ICFBamProtAtom
+public interface ICFBamProtInt16Def
+	extends ICFBamProtAtom
 {
 	public static final short INITVALUE_MIN_VALUE = (short)-32768;
 	public static final short MINVALUE_MIN_VALUE = (short)-32768;
@@ -73,9 +74,9 @@ public interface ICFBamProtInt16Def extends ICFBamProtAtom
 	public static final short INITVALUE_MAX_VALUE = (short)32767;
 	public static final short MINVALUE_MAX_VALUE = (short)32767;
 	public static final short MAXVALUE_MAX_VALUE = (short)32767;
-	public static final short INITVALUE_INIT_VALUE = ICFBamPubInt16Def.INITVALUE_INIT_VALUE;
-	public static final short MINVALUE_INIT_VALUE = ICFBamPubInt16Def.MINVALUE_INIT_VALUE;
-	public static final short MAXVALUE_INIT_VALUE = ICFBamPubInt16Def.MAXVALUE_INIT_VALUE;
+	public static final short INITVALUE_INIT_VALUE = (short)0;
+	public static final short MINVALUE_INIT_VALUE = (short)0;
+	public static final short MAXVALUE_INIT_VALUE = (short)0;
 	public final static int CLASS_CODE = 0xa827;
 	public final static String S_CLASS_CODE = "a827";
 
@@ -85,21 +86,29 @@ public interface ICFBamProtInt16Def extends ICFBamProtAtom
 	public void setOptionalMinValue( Short value );
 	public Short getOptionalMaxValue();
 	public void setOptionalMaxValue( Short value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setInt16Def( ICFBamProtInt16Def src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setInt16Def( ICFBamProtInt16DefH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setInt16Def( ICFBamPubInt16Def src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setInt16Def( ICFBamPubInt16DefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

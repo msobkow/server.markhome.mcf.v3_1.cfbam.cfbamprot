@@ -65,41 +65,43 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtServerListFunc persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtServerListFunc extends ICFBamProtServerMethod
+public interface ICFBamProtServerListFunc
+	extends ICFBamProtServerMethod
 {
-	public static final String S_RETTABLEID_INIT_VALUE = ICFBamPubServerListFunc.S_RETTABLEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 RETTABLEID_INIT_VALUE = ICFBamPubServerListFunc.RETTABLEID_INIT_VALUE;
+	public static final String S_RETTABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 RETTABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_RETTABLEID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa83b;
 	public final static String S_CLASS_CODE = "a83b";
 
 	public ICFBamProtTable getOptionalLookupRetTable();
-	public void setOptionalLookupRetTable(ICFBamProtTable argObj);
-	public default void setOptionalLookupRetTable(ICFBamPubTable argObj) {
-		if (argObj == null) {
-			setOptionalLookupRetTable((ICFBamProtTable)null);
-		}
-		else {
-			setOptionalLookupRetTable(argObj.getRequiredId());
-		}
-	}
 
 	public void setOptionalLookupRetTable(CFLibDbKeyHash256 argRetTableId);
+
+
 	public CFLibDbKeyHash256 getOptionalRetTableId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setServerListFunc( ICFBamProtServerListFunc src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setServerListFunc( ICFBamProtServerListFuncH src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setServerListFunc( ICFBamPubServerListFunc src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setServerListFunc( ICFBamPubServerListFuncH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

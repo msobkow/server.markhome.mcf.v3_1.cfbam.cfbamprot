@@ -65,45 +65,48 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtClearSubDep2 persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtClearSubDep2 extends ICFBamProtClearDep
+public interface ICFBamProtClearSubDep2
+	extends ICFBamProtClearDep
 {
-	public static final String S_CLEARSUBDEP1ID_INIT_VALUE = ICFBamPubClearSubDep2.S_CLEARSUBDEP1ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 CLEARSUBDEP1ID_INIT_VALUE = ICFBamPubClearSubDep2.CLEARSUBDEP1ID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubClearSubDep2.NAME_INIT_VALUE;
+	public static final String S_CLEARSUBDEP1ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 CLEARSUBDEP1ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_CLEARSUBDEP1ID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa816;
 	public final static String S_CLASS_CODE = "a816";
 
 	public ICFBamProtClearSubDep1 getRequiredContainerClearSubDep1();
-	public List<ICFBamProtClearSubDep3> getOptionalComponentsClearDep();
-	public void setRequiredContainerClearSubDep1(ICFBamProtClearSubDep1 argObj);
-	public default void setRequiredContainerClearSubDep1(ICFBamPubClearSubDep1 argObj) {
-		if (argObj == null) {
-			setRequiredContainerClearSubDep1((ICFBamProtClearSubDep1)null);
-		}
-		else {
-			setRequiredContainerClearSubDep1(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerClearSubDep1(CFLibDbKeyHash256 argClearSubDep1Id);
+
+
+	public List<ICFBamProtClearSubDep3> getOptionalComponentsClearDep();
+
 	public CFLibDbKeyHash256 getRequiredClearSubDep1Id();
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setClearSubDep2( ICFBamProtClearSubDep2 src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setClearSubDep2( ICFBamProtClearSubDep2H src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setClearSubDep2( ICFBamPubClearSubDep2 src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setClearSubDep2( ICFBamPubClearSubDep2H src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

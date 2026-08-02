@@ -65,41 +65,43 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtSchemaTweak persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtSchemaTweak extends ICFBamProtTweak
+public interface ICFBamProtSchemaTweak
+	extends ICFBamProtTweak
 {
-	public static final String S_SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaTweak.S_SCHEMADEFID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaTweak.SCHEMADEFID_INIT_VALUE;
+	public static final String S_SCHEMADEFID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SCHEMADEFID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa80a;
 	public final static String S_CLASS_CODE = "a80a";
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
-	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
-	public default void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setRequiredContainerSchemaDef((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setRequiredContainerSchemaDef(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
+
+
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtTweak src );
+
 	public void setSchemaTweak( ICFBamProtSchemaTweak src );
-	public void set( ICFBamPubTweak src );
+
 	public void set( ICFBamProtTweakH src );
+
 	public void setSchemaTweak( ICFBamProtSchemaTweakH src );
+
+	public void set( ICFBamPubTweak src );
+
+	public void setSchemaTweak( ICFBamPubSchemaTweak src );
+
 	public void set( ICFBamPubTweakH src );
+
 	public void setSchemaTweak( ICFBamPubSchemaTweakH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

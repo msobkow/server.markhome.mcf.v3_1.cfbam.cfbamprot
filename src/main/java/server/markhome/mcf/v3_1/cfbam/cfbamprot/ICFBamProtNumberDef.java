@@ -65,17 +65,18 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtNumberDef persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtNumberDef extends ICFBamProtAtom
+public interface ICFBamProtNumberDef
+	extends ICFBamProtAtom
 {
 	public static final short DIGITS_MIN_VALUE = (short)1;
 	public static final short PRECIS_MIN_VALUE = (short)0;
 	public static final short DIGITS_MAX_VALUE = (short)31;
 	public static final short PRECIS_MAX_VALUE = (short)30;
-	public static final short DIGITS_INIT_VALUE = ICFBamPubNumberDef.DIGITS_INIT_VALUE;
-	public static final short PRECIS_INIT_VALUE = ICFBamPubNumberDef.PRECIS_INIT_VALUE;
-	public static final BigDecimal INITVALUE_INIT_VALUE = ICFBamPubNumberDef.INITVALUE_INIT_VALUE;
-	public static final BigDecimal MINVALUE_INIT_VALUE = ICFBamPubNumberDef.MINVALUE_INIT_VALUE;
-	public static final BigDecimal MAXVALUE_INIT_VALUE = ICFBamPubNumberDef.MAXVALUE_INIT_VALUE;
+	public static final short DIGITS_INIT_VALUE = (short)16;
+	public static final short PRECIS_INIT_VALUE = (short)0;
+	public static final BigDecimal INITVALUE_INIT_VALUE = CFLibBigDecimalUtil.parse( "CFBam.NumberDef.InitValue", "CFBam.NumberDef.InitValue", 31, 5, "0.00000" );
+	public static final BigDecimal MINVALUE_INIT_VALUE = CFLibBigDecimalUtil.parse( "CFBam.NumberDef.MinValue", "CFBam.NumberDef.MinValue", 31, 5, "0.00000" );
+	public static final BigDecimal MAXVALUE_INIT_VALUE = CFLibBigDecimalUtil.parse( "CFBam.NumberDef.MaxValue", "CFBam.NumberDef.MaxValue", 31, 5, "0.00000" );
 	public final static int CLASS_CODE = 0xa831;
 	public final static String S_CLASS_CODE = "a831";
 
@@ -89,21 +90,29 @@ public interface ICFBamProtNumberDef extends ICFBamProtAtom
 	public void setOptionalMinValue( BigDecimal value );
 	public BigDecimal getOptionalMaxValue();
 	public void setOptionalMaxValue( BigDecimal value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setNumberDef( ICFBamProtNumberDef src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setNumberDef( ICFBamProtNumberDefH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setNumberDef( ICFBamPubNumberDef src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setNumberDef( ICFBamPubNumberDefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

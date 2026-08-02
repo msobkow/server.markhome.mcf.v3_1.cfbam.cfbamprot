@@ -65,47 +65,36 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtIndex persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtIndex extends ICFBamProtScope
+public interface ICFBamProtIndex
+	extends ICFBamProtScope
 {
 	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_MIN_VALUE = ICFBamPubSchema.CodeVisibilityEnum.Public;
 	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_MAX_VALUE = ICFBamPubSchema.CodeVisibilityEnum.Private;
-	public static final String S_TABLEID_INIT_VALUE = ICFBamPubIndex.S_TABLEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubIndex.TABLEID_INIT_VALUE;
-	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubIndex.S_DEFSCHEMAID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubIndex.DEFSCHEMAID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubIndex.NAME_INIT_VALUE;
-	public final static boolean ISUNIQUE_INIT_VALUE = ICFBamPubIndex.ISUNIQUE_INIT_VALUE;
-	public final static boolean ISDBMAPPED_INIT_VALUE = ICFBamPubIndex.ISDBMAPPED_INIT_VALUE;
-	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubIndex.CODEVIS_INIT_VALUE;
+	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
+	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public final static boolean ISUNIQUE_INIT_VALUE = false;
+	public final static boolean ISDBMAPPED_INIT_VALUE = true;
+	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubSchema.ordinalToCodeVisibilityEnum( 0 );
 	public final static int CLASS_CODE = 0xa825;
 	public final static String S_CLASS_CODE = "a825";
 
 	public ICFBamProtTable getRequiredContainerTable();
-	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
-	public List<ICFBamProtIndexCol> getOptionalComponentsColumns();
-	public List<ICFBamProtIndexTweak> getOptionalComponentsTweaks();
-	public void setRequiredContainerTable(ICFBamProtTable argObj);
-	public default void setRequiredContainerTable(ICFBamPubTable argObj) {
-		if (argObj == null) {
-			setRequiredContainerTable((ICFBamProtTable)null);
-		}
-		else {
-			setRequiredContainerTable(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
-	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setOptionalLookupDefSchema(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+
+
+	public List<ICFBamProtIndexCol> getOptionalComponentsColumns();
+
+	public List<ICFBamProtIndexTweak> getOptionalComponentsTweaks();
+
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
@@ -128,21 +117,29 @@ public interface ICFBamProtIndex extends ICFBamProtScope
 	public void setRequiredIsDbMapped( boolean value );
 	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
 	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setIndex( ICFBamProtIndex src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setIndex( ICFBamProtIndexH src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setIndex( ICFBamPubIndex src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setIndex( ICFBamPubIndexH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

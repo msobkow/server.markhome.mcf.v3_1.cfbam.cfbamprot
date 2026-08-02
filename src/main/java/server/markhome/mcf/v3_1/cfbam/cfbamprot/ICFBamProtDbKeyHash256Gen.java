@@ -65,14 +65,15 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtDbKeyHash256Gen persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtDbKeyHash256Gen extends ICFBamProtDbKeyHash256Type
+public interface ICFBamProtDbKeyHash256Gen
+	extends ICFBamProtDbKeyHash256Type
 {
 	public static final short SLICE_MIN_VALUE = (short)0;
 	public static final int BLOCKSIZE_MIN_VALUE = 1;
 	public static final short SLICE_MAX_VALUE = (short)32767;
 	public static final int BLOCKSIZE_MAX_VALUE = 2147483647;
-	public static final short SLICE_INIT_VALUE = ICFBamPubDbKeyHash256Gen.SLICE_INIT_VALUE;
-	public static final int BLOCKSIZE_INIT_VALUE = ICFBamPubDbKeyHash256Gen.BLOCKSIZE_INIT_VALUE;
+	public static final short SLICE_INIT_VALUE = (short)0;
+	public static final int BLOCKSIZE_INIT_VALUE = 1;
 	public final static int CLASS_CODE = 0xa84b;
 	public final static String S_CLASS_CODE = "a84b";
 
@@ -80,21 +81,29 @@ public interface ICFBamProtDbKeyHash256Gen extends ICFBamProtDbKeyHash256Type
 	public void setRequiredSlice( short value );
 	public int getRequiredBlockSize();
 	public void setRequiredBlockSize( int value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setDbKeyHash256Gen( ICFBamProtDbKeyHash256Gen src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setDbKeyHash256Gen( ICFBamProtDbKeyHash256GenH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setDbKeyHash256Gen( ICFBamPubDbKeyHash256Gen src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setDbKeyHash256Gen( ICFBamPubDbKeyHash256GenH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

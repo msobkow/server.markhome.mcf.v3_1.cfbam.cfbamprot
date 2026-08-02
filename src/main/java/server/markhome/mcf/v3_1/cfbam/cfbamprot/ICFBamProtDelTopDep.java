@@ -65,75 +65,64 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtDelTopDep persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtDelTopDep extends ICFBamProtDelDep
+public interface ICFBamProtDelTopDep
+	extends ICFBamProtDelDep
 {
-	public static final String NAME_INIT_VALUE = ICFBamPubDelTopDep.NAME_INIT_VALUE;
-	public static final String S_TABLEID_INIT_VALUE = ICFBamPubDelTopDep.S_TABLEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubDelTopDep.TABLEID_INIT_VALUE;
-	public static final String S_PREVID_INIT_VALUE = ICFBamPubDelTopDep.S_PREVID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = ICFBamPubDelTopDep.PREVID_INIT_VALUE;
-	public static final String S_NEXTID_INIT_VALUE = ICFBamPubDelTopDep.S_NEXTID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = ICFBamPubDelTopDep.NEXTID_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
+	public static final String S_PREVID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVID_INIT_VALUE );
+	public static final String S_NEXTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa81f;
 	public final static String S_CLASS_CODE = "a81f";
 
 	public ICFBamProtTable getRequiredContainerTable();
-	public List<ICFBamProtDelSubDep1> getOptionalComponentsDelDep();
-	public ICFBamProtDelTopDep getOptionalLookupPrev();
-	public ICFBamProtDelTopDep getOptionalLookupNext();
-	public void setRequiredContainerTable(ICFBamProtTable argObj);
-	public default void setRequiredContainerTable(ICFBamPubTable argObj) {
-		if (argObj == null) {
-			setRequiredContainerTable((ICFBamProtTable)null);
-		}
-		else {
-			setRequiredContainerTable(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
-	public void setOptionalLookupPrev(ICFBamProtDelTopDep argObj);
-	public default void setOptionalLookupPrev(ICFBamPubDelTopDep argObj) {
-		if (argObj == null) {
-			setOptionalLookupPrev((ICFBamProtDelTopDep)null);
-		}
-		else {
-			setOptionalLookupPrev(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtDelTopDep getOptionalLookupPrev();
 
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
-	public void setOptionalLookupNext(ICFBamProtDelTopDep argObj);
-	public default void setOptionalLookupNext(ICFBamPubDelTopDep argObj) {
-		if (argObj == null) {
-			setOptionalLookupNext((ICFBamProtDelTopDep)null);
-		}
-		else {
-			setOptionalLookupNext(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtDelTopDep getOptionalLookupNext();
 
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
+
+
+	public List<ICFBamProtDelSubDep1> getOptionalComponentsDelDep();
+
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public CFLibDbKeyHash256 getOptionalPrevId();
 	public CFLibDbKeyHash256 getOptionalNextId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setDelTopDep( ICFBamProtDelTopDep src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setDelTopDep( ICFBamProtDelTopDepH src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setDelTopDep( ICFBamPubDelTopDep src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setDelTopDep( ICFBamPubDelTopDepH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

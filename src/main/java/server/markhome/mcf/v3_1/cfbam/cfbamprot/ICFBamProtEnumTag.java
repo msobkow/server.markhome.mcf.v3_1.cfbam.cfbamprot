@@ -69,92 +69,70 @@ public interface ICFBamProtEnumTag
 {
 	public static final short ENUMCODE_MIN_VALUE = (short)0;
 	public static final short ENUMCODE_MAX_VALUE = (short)32767;
-	public static final String S_INIT_CREATED_BY = ICFBamPubEnumTag.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFBamPubEnumTag.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFBamPubEnumTag.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFBamPubEnumTag.INIT_UPDATED_BY;
-	public static final String S_ID_INIT_VALUE = ICFBamPubEnumTag.S_ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFBamPubEnumTag.ID_INIT_VALUE;
-	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubEnumTag.S_DEFSCHEMAID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubEnumTag.DEFSCHEMAID_INIT_VALUE;
-	public static final String S_ENUMID_INIT_VALUE = ICFBamPubEnumTag.S_ENUMID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ENUMID_INIT_VALUE = ICFBamPubEnumTag.ENUMID_INIT_VALUE;
-	public static final short ENUMCODE_INIT_VALUE = ICFBamPubEnumTag.ENUMCODE_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubEnumTag.NAME_INIT_VALUE;
-	public static final String S_PREVID_INIT_VALUE = ICFBamPubEnumTag.S_PREVID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = ICFBamPubEnumTag.PREVID_INIT_VALUE;
-	public static final String S_NEXTID_INIT_VALUE = ICFBamPubEnumTag.S_NEXTID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = ICFBamPubEnumTag.NEXTID_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
+	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
+	public static final String S_ENUMID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ENUMID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ENUMID_INIT_VALUE );
+	public static final short ENUMCODE_INIT_VALUE = (short)0;
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final String S_PREVID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 PREVID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_PREVID_INIT_VALUE );
+	public static final String S_NEXTID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 NEXTID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_NEXTID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa822;
 	public final static String S_CLASS_CODE = "a822";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFBamProtEnumDef getRequiredContainerEnumDef();
-	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
-	public ICFBamProtEnumTag getOptionalLookupPrev();
-	public ICFBamProtEnumTag getOptionalLookupNext();
-	public void setRequiredContainerEnumDef(ICFBamProtEnumDef argObj);
-	public default void setRequiredContainerEnumDef(ICFBamPubEnumDef argObj) {
-		if (argObj == null) {
-			setRequiredContainerEnumDef((ICFBamProtEnumDef)null);
-		}
-		else {
-			setRequiredContainerEnumDef(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerEnumDef(CFLibDbKeyHash256 argEnumId);
-	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setOptionalLookupDefSchema(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
-	public void setOptionalLookupPrev(ICFBamProtEnumTag argObj);
-	public default void setOptionalLookupPrev(ICFBamPubEnumTag argObj) {
-		if (argObj == null) {
-			setOptionalLookupPrev((ICFBamProtEnumTag)null);
-		}
-		else {
-			setOptionalLookupPrev(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtEnumTag getOptionalLookupPrev();
 
 	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
-	public void setOptionalLookupNext(ICFBamProtEnumTag argObj);
-	public default void setOptionalLookupNext(ICFBamPubEnumTag argObj) {
-		if (argObj == null) {
-			setOptionalLookupNext((ICFBamProtEnumTag)null);
-		}
-		else {
-			setOptionalLookupNext(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtEnumTag getOptionalLookupNext();
 
 	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
+
+
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public CFLibDbKeyHash256 getRequiredEnumId();
 	public Short getOptionalEnumCode();
@@ -163,26 +141,29 @@ public interface ICFBamProtEnumTag
 	public void setRequiredName( String value );
 	public CFLibDbKeyHash256 getOptionalPrevId();
 	public CFLibDbKeyHash256 getOptionalNextId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtEnumTag src );
-	public void setEnumTag( ICFBamProtEnumTag src );
-	public void set( ICFBamPubEnumTag src );
-	public void set( ICFBamProtEnumTagH src );
-	public void setEnumTag( ICFBamProtEnumTagH src );
-	public void set( ICFBamPubEnumTagH src );
-	public void setEnumTag( ICFBamPubEnumTagH src );
 
+	public void setEnumTag( ICFBamProtEnumTag src );
+
+	public void set( ICFBamProtEnumTagH src );
+
+	public void setEnumTag( ICFBamProtEnumTagH src );
+
+	public void set( ICFBamPubEnumTag src );
+
+	public void setEnumTag( ICFBamPubEnumTag src );
+
+	public void set( ICFBamPubEnumTagH src );
+
+	public void setEnumTag( ICFBamPubEnumTagH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

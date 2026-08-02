@@ -65,49 +65,37 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtServerMethod persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtServerMethod extends ICFBamProtScope
+public interface ICFBamProtServerMethod
+	extends ICFBamProtScope
 {
 	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_MIN_VALUE = ICFBamPubSchema.CodeVisibilityEnum.Public;
 	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_MAX_VALUE = ICFBamPubSchema.CodeVisibilityEnum.Private;
-	public static final String S_TABLEID_INIT_VALUE = ICFBamPubServerMethod.S_TABLEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = ICFBamPubServerMethod.TABLEID_INIT_VALUE;
-	public static final String S_DEFSCHEMAID_INIT_VALUE = ICFBamPubServerMethod.S_DEFSCHEMAID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = ICFBamPubServerMethod.DEFSCHEMAID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubServerMethod.NAME_INIT_VALUE;
-	public final static boolean ISINSTANCEMETHOD_INIT_VALUE = ICFBamPubServerMethod.ISINSTANCEMETHOD_INIT_VALUE;
-	public final static boolean ISSERVERONLY_INIT_VALUE = ICFBamPubServerMethod.ISSERVERONLY_INIT_VALUE;
-	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubServerMethod.CODEVIS_INIT_VALUE;
-	public static final String JMETHODBODY_INIT_VALUE = ICFBamPubServerMethod.JMETHODBODY_INIT_VALUE;
-	public static final String CPPMETHODBODY_INIT_VALUE = ICFBamPubServerMethod.CPPMETHODBODY_INIT_VALUE;
-	public static final String CSMETHODBODY_INIT_VALUE = ICFBamPubServerMethod.CSMETHODBODY_INIT_VALUE;
+	public static final String S_TABLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 TABLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_TABLEID_INIT_VALUE );
+	public static final String S_DEFSCHEMAID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DEFSCHEMAID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DEFSCHEMAID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public final static boolean ISINSTANCEMETHOD_INIT_VALUE = true;
+	public final static boolean ISSERVERONLY_INIT_VALUE = false;
+	public static final ICFBamPubSchema.CodeVisibilityEnum CODEVIS_INIT_VALUE = ICFBamPubSchema.ordinalToCodeVisibilityEnum( 0 );
+	public static final String JMETHODBODY_INIT_VALUE = new String( "" );
+	public static final String CPPMETHODBODY_INIT_VALUE = new String( "" );
+	public static final String CSMETHODBODY_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa804;
 	public final static String S_CLASS_CODE = "a804";
 
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
-	public ICFBamProtTable getRequiredContainerForTable();
-	public List<ICFBamProtParam> getOptionalComponentsParams();
-	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
-	public default void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setOptionalLookupDefSchema((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setOptionalLookupDefSchema(argObj.getRequiredId());
-		}
-	}
 
 	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
-	public void setRequiredContainerForTable(ICFBamProtTable argObj);
-	public default void setRequiredContainerForTable(ICFBamPubTable argObj) {
-		if (argObj == null) {
-			setRequiredContainerForTable((ICFBamProtTable)null);
-		}
-		else {
-			setRequiredContainerForTable(argObj.getRequiredId());
-		}
-	}
+
+
+	public ICFBamProtTable getRequiredContainerForTable();
 
 	public void setRequiredContainerForTable(CFLibDbKeyHash256 argTableId);
+
+
+	public List<ICFBamProtParam> getOptionalComponentsParams();
+
 	public CFLibDbKeyHash256 getRequiredTableId();
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
 	public String getRequiredName();
@@ -134,21 +122,29 @@ public interface ICFBamProtServerMethod extends ICFBamProtScope
 	public void setRequiredCppMethodBody( String value );
 	public String getRequiredCsMethodBody();
 	public void setRequiredCsMethodBody( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setServerMethod( ICFBamProtServerMethod src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setServerMethod( ICFBamProtServerMethodH src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setServerMethod( ICFBamPubServerMethod src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setServerMethod( ICFBamPubServerMethodH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

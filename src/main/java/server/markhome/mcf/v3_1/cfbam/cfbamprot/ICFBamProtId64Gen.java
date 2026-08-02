@@ -65,14 +65,15 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtId64Gen persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtId64Gen extends ICFBamProtInt64Type
+public interface ICFBamProtId64Gen
+	extends ICFBamProtInt64Type
 {
 	public static final short SLICE_MIN_VALUE = (short)0;
 	public static final long BLOCKSIZE_MIN_VALUE = 1L;
 	public static final short SLICE_MAX_VALUE = (short)32767;
 	public static final long BLOCKSIZE_MAX_VALUE = 9223372036854775807L;
-	public static final short SLICE_INIT_VALUE = ICFBamPubId64Gen.SLICE_INIT_VALUE;
-	public static final long BLOCKSIZE_INIT_VALUE = ICFBamPubId64Gen.BLOCKSIZE_INIT_VALUE;
+	public static final short SLICE_INIT_VALUE = (short)0;
+	public static final long BLOCKSIZE_INIT_VALUE = 1L;
 	public final static int CLASS_CODE = 0xa878;
 	public final static String S_CLASS_CODE = "a878";
 
@@ -80,21 +81,29 @@ public interface ICFBamProtId64Gen extends ICFBamProtInt64Type
 	public void setRequiredSlice( short value );
 	public long getRequiredBlockSize();
 	public void setRequiredBlockSize( long value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setId64Gen( ICFBamProtId64Gen src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setId64Gen( ICFBamProtId64GenH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setId64Gen( ICFBamPubId64Gen src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setId64Gen( ICFBamPubId64GenH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

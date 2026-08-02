@@ -65,45 +65,48 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtDelSubDep2 persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtDelSubDep2 extends ICFBamProtDelDep
+public interface ICFBamProtDelSubDep2
+	extends ICFBamProtDelDep
 {
-	public static final String S_DELSUBDEP1ID_INIT_VALUE = ICFBamPubDelSubDep2.S_DELSUBDEP1ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 DELSUBDEP1ID_INIT_VALUE = ICFBamPubDelSubDep2.DELSUBDEP1ID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFBamPubDelSubDep2.NAME_INIT_VALUE;
+	public static final String S_DELSUBDEP1ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 DELSUBDEP1ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_DELSUBDEP1ID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa81d;
 	public final static String S_CLASS_CODE = "a81d";
 
 	public ICFBamProtDelSubDep1 getRequiredContainerDelSubDep1();
-	public List<ICFBamProtDelSubDep3> getOptionalComponentsDelDep();
-	public void setRequiredContainerDelSubDep1(ICFBamProtDelSubDep1 argObj);
-	public default void setRequiredContainerDelSubDep1(ICFBamPubDelSubDep1 argObj) {
-		if (argObj == null) {
-			setRequiredContainerDelSubDep1((ICFBamProtDelSubDep1)null);
-		}
-		else {
-			setRequiredContainerDelSubDep1(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerDelSubDep1(CFLibDbKeyHash256 argDelSubDep1Id);
+
+
+	public List<ICFBamProtDelSubDep3> getOptionalComponentsDelDep();
+
 	public CFLibDbKeyHash256 getRequiredDelSubDep1Id();
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtScope src );
+
 	public void setDelSubDep2( ICFBamProtDelSubDep2 src );
-	public void set( ICFBamPubScope src );
+
 	public void set( ICFBamProtScopeH src );
+
 	public void setDelSubDep2( ICFBamProtDelSubDep2H src );
+
+	public void set( ICFBamPubScope src );
+
+	public void setDelSubDep2( ICFBamPubDelSubDep2 src );
+
 	public void set( ICFBamPubScopeH src );
+
 	public void setDelSubDep2( ICFBamPubDelSubDep2H src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

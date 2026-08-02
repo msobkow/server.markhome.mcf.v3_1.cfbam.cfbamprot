@@ -65,14 +65,15 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtUInt16Def persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtUInt16Def extends ICFBamProtAtom
+public interface ICFBamProtUInt16Def
+	extends ICFBamProtAtom
 {
 	public static final int INITVALUE_MIN_VALUE = 0;
 	public static final int MINVALUE_MIN_VALUE = 0;
 	public static final int MAXVALUE_MIN_VALUE = 0;
-	public static final int INITVALUE_INIT_VALUE = ICFBamPubUInt16Def.INITVALUE_INIT_VALUE;
-	public static final int MINVALUE_INIT_VALUE = ICFBamPubUInt16Def.MINVALUE_INIT_VALUE;
-	public static final int MAXVALUE_INIT_VALUE = ICFBamPubUInt16Def.MAXVALUE_INIT_VALUE;
+	public static final int INITVALUE_INIT_VALUE = 0;
+	public static final int MINVALUE_INIT_VALUE = 0;
+	public static final int MAXVALUE_INIT_VALUE = 0;
 	public final static int CLASS_CODE = 0xa865;
 	public final static String S_CLASS_CODE = "a865";
 
@@ -82,21 +83,29 @@ public interface ICFBamProtUInt16Def extends ICFBamProtAtom
 	public void setOptionalMinValue( Integer value );
 	public Integer getOptionalMaxValue();
 	public void setOptionalMaxValue( Integer value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setUInt16Def( ICFBamProtUInt16Def src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setUInt16Def( ICFBamProtUInt16DefH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setUInt16Def( ICFBamPubUInt16Def src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setUInt16Def( ICFBamPubUInt16DefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

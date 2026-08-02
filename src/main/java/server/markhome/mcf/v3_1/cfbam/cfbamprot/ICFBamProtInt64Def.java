@@ -65,7 +65,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtInt64Def persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtInt64Def extends ICFBamProtAtom
+public interface ICFBamProtInt64Def
+	extends ICFBamProtAtom
 {
 	public static final long INITVALUE_MIN_VALUE = -9223372036854775807L;
 	public static final long MINVALUE_MIN_VALUE = -9223372036854775807L;
@@ -73,9 +74,9 @@ public interface ICFBamProtInt64Def extends ICFBamProtAtom
 	public static final long INITVALUE_MAX_VALUE = 9223372036854775807L;
 	public static final long MINVALUE_MAX_VALUE = 9223372036854775807L;
 	public static final long MAXVALUE_MAX_VALUE = 9223372036854775807L;
-	public static final long INITVALUE_INIT_VALUE = ICFBamPubInt64Def.INITVALUE_INIT_VALUE;
-	public static final long MINVALUE_INIT_VALUE = ICFBamPubInt64Def.MINVALUE_INIT_VALUE;
-	public static final long MAXVALUE_INIT_VALUE = ICFBamPubInt64Def.MAXVALUE_INIT_VALUE;
+	public static final long INITVALUE_INIT_VALUE = 0L;
+	public static final long MINVALUE_INIT_VALUE = 0L;
+	public static final long MAXVALUE_INIT_VALUE = 0L;
 	public final static int CLASS_CODE = 0xa82b;
 	public final static String S_CLASS_CODE = "a82b";
 
@@ -85,21 +86,29 @@ public interface ICFBamProtInt64Def extends ICFBamProtAtom
 	public void setOptionalMinValue( Long value );
 	public Long getOptionalMaxValue();
 	public void setOptionalMaxValue( Long value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setInt64Def( ICFBamProtInt64Def src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setInt64Def( ICFBamProtInt64DefH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setInt64Def( ICFBamPubInt64Def src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setInt64Def( ICFBamPubInt64DefH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

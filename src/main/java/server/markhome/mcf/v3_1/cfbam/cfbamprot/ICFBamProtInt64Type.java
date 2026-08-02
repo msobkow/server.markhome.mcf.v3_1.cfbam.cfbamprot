@@ -65,41 +65,43 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtInt64Type persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtInt64Type extends ICFBamProtInt64Def
+public interface ICFBamProtInt64Type
+	extends ICFBamProtInt64Def
 {
-	public static final String S_SCHEMADEFID_INIT_VALUE = ICFBamPubInt64Type.S_SCHEMADEFID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = ICFBamPubInt64Type.SCHEMADEFID_INIT_VALUE;
+	public static final String S_SCHEMADEFID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SCHEMADEFID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa82c;
 	public final static String S_CLASS_CODE = "a82c";
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
-	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
-	public default void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setRequiredContainerSchemaDef((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setRequiredContainerSchemaDef(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
+
+
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtValue src );
+
 	public void setInt64Type( ICFBamProtInt64Type src );
-	public void set( ICFBamPubValue src );
+
 	public void set( ICFBamProtValueH src );
+
 	public void setInt64Type( ICFBamProtInt64TypeH src );
+
+	public void set( ICFBamPubValue src );
+
+	public void setInt64Type( ICFBamPubInt64Type src );
+
 	public void set( ICFBamPubValueH src );
+
 	public void setInt64Type( ICFBamPubInt64TypeH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }

@@ -65,46 +65,48 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 /**
  *	ICFBamProtSchemaRole persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
-public interface ICFBamProtSchemaRole extends ICFBamProtRoleDef
+public interface ICFBamProtSchemaRole
+	extends ICFBamProtRoleDef
 {
 	public static final ICFBamPubSchema.RoleScopeEnum ROLESCOPE_MIN_VALUE = ICFBamPubSchema.RoleScopeEnum.SysRole;
 	public static final ICFBamPubSchema.RoleScopeEnum ROLESCOPE_MAX_VALUE = ICFBamPubSchema.RoleScopeEnum.TentRole;
-	public static final String S_SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaRole.S_SCHEMADEFID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = ICFBamPubSchemaRole.SCHEMADEFID_INIT_VALUE;
-	public static final ICFBamPubSchema.RoleScopeEnum ROLESCOPE_INIT_VALUE = ICFBamPubSchemaRole.ROLESCOPE_INIT_VALUE;
+	public static final String S_SCHEMADEFID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 SCHEMADEFID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SCHEMADEFID_INIT_VALUE );
+	public static final ICFBamPubSchema.RoleScopeEnum ROLESCOPE_INIT_VALUE = ICFBamPubSchema.ordinalToRoleScopeEnum( 0 );
 	public final static int CLASS_CODE = 0xa88f;
 	public final static String S_CLASS_CODE = "a88f";
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
-	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
-	public default void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj) {
-		if (argObj == null) {
-			setRequiredContainerSchemaDef((ICFBamProtSchemaDef)null);
-		}
-		else {
-			setRequiredContainerSchemaDef(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
+
+
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
 	public ICFBamPubSchema.RoleScopeEnum getRequiredRoleScope();
 	public void setRequiredRoleScope( ICFBamPubSchema.RoleScopeEnum value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFBamProtRoleDef src );
+
 	public void setSchemaRole( ICFBamProtSchemaRole src );
-	public void set( ICFBamPubRoleDef src );
+
 	public void set( ICFBamProtRoleDefH src );
+
 	public void setSchemaRole( ICFBamProtSchemaRoleH src );
+
+	public void set( ICFBamPubRoleDef src );
+
+	public void setSchemaRole( ICFBamPubSchemaRole src );
+
 	public void set( ICFBamPubRoleDefH src );
+
 	public void setSchemaRole( ICFBamPubSchemaRoleH src );
 
+	public String getXmlAttrFragment();
+
+	public String toString();
 }
