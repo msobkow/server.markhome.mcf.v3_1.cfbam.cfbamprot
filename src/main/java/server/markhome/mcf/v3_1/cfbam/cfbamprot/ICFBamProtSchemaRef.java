@@ -119,6 +119,7 @@ public interface ICFBamProtSchemaRef
 	public void setOptionalLookupNext(ICFBamPubSchemaRef argObj);
 
 	public CFLibDbKeyHash256 getRequiredSchemaId();
+	public void setRequiredSchemaId( CFLibDbKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public String getRequiredRefModelName();
@@ -126,8 +127,11 @@ public interface ICFBamProtSchemaRef
 	public String getRequiredIncludeRoot();
 	public void setRequiredIncludeRoot( String value );
 	public CFLibDbKeyHash256 getOptionalRefSchemaId();
+	public void setOptionalRefSchemaId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( CFLibDbKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

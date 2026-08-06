@@ -86,6 +86,7 @@ public interface ICFBamProtDelSubDep2
 	public List<ICFBamProtDelSubDep3> getOptionalComponentsDelDep();
 
 	public CFLibDbKeyHash256 getRequiredDelSubDep1Id();
+	public void setRequiredDelSubDep1Id( CFLibDbKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public boolean equals( Object obj );

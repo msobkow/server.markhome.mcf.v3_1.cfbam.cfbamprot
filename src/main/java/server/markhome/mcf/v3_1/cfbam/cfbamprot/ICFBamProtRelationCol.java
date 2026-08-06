@@ -169,7 +169,9 @@ public interface ICFBamProtRelationCol
 	public void setRequiredLookupToCol(ICFBamPubIndexCol argObj);
 
 	public CFLibDbKeyHash256 getRequiredRelationId();
+	public void setRequiredRelationId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( CFLibDbKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public String getOptionalShortName();
@@ -181,9 +183,13 @@ public interface ICFBamProtRelationCol
 	public String getOptionalDescription();
 	public void setOptionalDescription( String value );
 	public CFLibDbKeyHash256 getRequiredFromColId();
+	public void setRequiredFromColId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getRequiredToColId();
+	public void setRequiredToColId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( CFLibDbKeyHash256 value );
 	public CFLibDbKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( CFLibDbKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

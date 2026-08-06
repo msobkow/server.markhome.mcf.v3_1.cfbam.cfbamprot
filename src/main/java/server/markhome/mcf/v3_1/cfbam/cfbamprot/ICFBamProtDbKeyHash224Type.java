@@ -83,6 +83,7 @@ public interface ICFBamProtDbKeyHash224Type
 	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
 
 	public CFLibDbKeyHash256 getRequiredSchemaDefId();
+	public void setRequiredSchemaDefId( CFLibDbKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

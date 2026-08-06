@@ -95,9 +95,11 @@ public interface ICFBamProtTableCol
 	public void setRequiredParentDataType(ICFBamPubValue argObj);
 
 	public CFLibDbKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( CFLibDbKeyHash256 value );
 	public String getOptionalDbName();
 	public void setOptionalDbName( String value );
 	public CFLibDbKeyHash256 getOptionalDataId();
+	public void setOptionalDataId( CFLibDbKeyHash256 value );
 	public String getOptionalXmlElementName();
 	public void setOptionalXmlElementName( String value );
 	public boolean equals( Object obj );
