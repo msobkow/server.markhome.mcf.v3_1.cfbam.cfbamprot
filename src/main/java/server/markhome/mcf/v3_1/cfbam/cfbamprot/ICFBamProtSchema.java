@@ -290,17 +290,17 @@ extends ICFSecProtSchema,
 		final static ArrayList<ICFSecProtSchema.ClassMapEntry> entries = new ArrayList<>();
 		final static HashMap<Integer,ICFSecProtSchema.ClassMapEntry> mapBackingClassCodeToEntry = new HashMap<>();
 		final static HashMap<Integer,ICFSecProtSchema.ClassMapEntry> mapRuntimeClassCodeToEntry = new HashMap<>();
-		final static AtomicReference<ICFBamProtSchema> backingCFBamProtSchema = new AtomicReference<>();
-		public static ICFBamProtSchema getBackingCFBamProtSchema() {
-			return( ICFBamProtSchema.backingCFBamProtSchema.get() );
+		final static AtomicReference<ICFBamProtSchema> backingCFBam = new AtomicReference<>();
+		public static ICFBamProtSchema getBackingCFBam() {
+			return( ICFBamProtSchema.backingCFBam.get() );
 		}
 		
-		public static void setBackingCFBamProtSchema(ICFBamProtSchema backingSchema) {
-			ICFBamProtSchema.backingCFBamProtSchema.set(backingSchema);
+		public static void setBackingCFBam(ICFBamProtSchema backingSchema) {
+			ICFBamProtSchema.backingCFBam.set(backingSchema);
 		}
 		
-		public ICFBamProtSchema getCFBamProtSchema();
-		public void setCFBamProtSchema(ICFBamProtSchema schema);
+		public ICFBamProtSchema getCFBamSchema();
+		public void setCFBamSchema(ICFBamProtSchema schema);
 		
 		public static int doInitClassMapEntries(int value) {
 			value = ICFSecProtSchema.doInitClassMapEntries(value);
