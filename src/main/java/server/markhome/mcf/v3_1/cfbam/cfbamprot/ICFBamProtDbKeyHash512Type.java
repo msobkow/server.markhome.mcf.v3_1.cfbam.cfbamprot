@@ -75,7 +75,7 @@ public interface ICFBamProtDbKeyHash512Type
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 
-	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
+	public void setRequiredContainerSchemaDef(ICFLibKeyHash256 argSchemaDefId);
 
 
 	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);

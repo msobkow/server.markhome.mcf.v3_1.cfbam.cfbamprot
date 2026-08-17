@@ -102,7 +102,7 @@ public interface ICFBamProtTable
 
 	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 
-	public void setRequiredContainerSchemaDef(CFLibDbKeyHash256 argSchemaDefId);
+	public void setRequiredContainerSchemaDef(ICFLibKeyHash256 argSchemaDefId);
 
 
 	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
@@ -111,7 +111,7 @@ public interface ICFBamProtTable
 
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
@@ -120,7 +120,7 @@ public interface ICFBamProtTable
 
 	public ICFBamProtIndex getOptionalLookupLookupIndex();
 
-	public void setOptionalLookupLookupIndex(CFLibDbKeyHash256 argLookupIndexId);
+	public void setOptionalLookupLookupIndex(ICFLibKeyHash256 argLookupIndexId);
 
 
 	public void setOptionalLookupLookupIndex(ICFBamProtIndex argObj);
@@ -129,7 +129,7 @@ public interface ICFBamProtTable
 
 	public ICFBamProtIndex getOptionalLookupAltIndex();
 
-	public void setOptionalLookupAltIndex(CFLibDbKeyHash256 argAltIndexId);
+	public void setOptionalLookupAltIndex(ICFLibKeyHash256 argAltIndexId);
 
 
 	public void setOptionalLookupAltIndex(ICFBamProtIndex argObj);
@@ -138,7 +138,7 @@ public interface ICFBamProtTable
 
 	public ICFBamProtTable getOptionalLookupQualTable();
 
-	public void setOptionalLookupQualTable(CFLibDbKeyHash256 argQualifyingTableId);
+	public void setOptionalLookupQualTable(ICFLibKeyHash256 argQualifyingTableId);
 
 
 	public void setOptionalLookupQualTable(ICFBamProtTable argObj);
@@ -147,7 +147,7 @@ public interface ICFBamProtTable
 
 	public ICFBamProtIndex getOptionalLookupPrimaryIndex();
 
-	public void setOptionalLookupPrimaryIndex(CFLibDbKeyHash256 argPrimaryIndexId);
+	public void setOptionalLookupPrimaryIndex(ICFLibKeyHash256 argPrimaryIndexId);
 
 
 	public void setOptionalLookupPrimaryIndex(ICFBamProtIndex argObj);

@@ -78,7 +78,7 @@ public interface ICFBamProtTableCol
 
 	public ICFBamProtTable getRequiredContainerTable();
 
-	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerTable(ICFLibKeyHash256 argTableId);
 
 
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
@@ -87,7 +87,7 @@ public interface ICFBamProtTableCol
 
 	public ICFBamProtValue getRequiredParentDataType();
 
-	public void setRequiredParentDataType(CFLibDbKeyHash256 argDataId);
+	public void setRequiredParentDataType(ICFLibKeyHash256 argDataId);
 
 
 	public void setRequiredParentDataType(ICFBamProtValue argObj);

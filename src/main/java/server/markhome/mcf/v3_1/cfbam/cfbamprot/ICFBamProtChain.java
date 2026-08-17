@@ -103,8 +103,8 @@ public interface ICFBamProtChain
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getPKey();
-	public void setPKey(CFLibDbKeyHash256 requiredId);
+	public ICFLibKeyHash256 getPKey();
+	public void setPKey(ICFLibKeyHash256 requiredId);
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
@@ -112,7 +112,7 @@ public interface ICFBamProtChain
 
 	public ICFBamProtTable getRequiredContainerTable();
 
-	public void setRequiredContainerTable(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerTable(ICFLibKeyHash256 argTableId);
 
 
 	public void setRequiredContainerTable(ICFBamProtTable argObj);
@@ -121,7 +121,7 @@ public interface ICFBamProtChain
 
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
@@ -130,7 +130,7 @@ public interface ICFBamProtChain
 
 	public ICFBamProtRelation getRequiredLookupPrevRel();
 
-	public void setRequiredLookupPrevRel(CFLibDbKeyHash256 argPrevRelationId);
+	public void setRequiredLookupPrevRel(ICFLibKeyHash256 argPrevRelationId);
 
 
 	public void setRequiredLookupPrevRel(ICFBamProtRelation argObj);
@@ -139,7 +139,7 @@ public interface ICFBamProtChain
 
 	public ICFBamProtRelation getRequiredLookupNextRel();
 
-	public void setRequiredLookupNextRel(CFLibDbKeyHash256 argNextRelationId);
+	public void setRequiredLookupNextRel(ICFLibKeyHash256 argNextRelationId);
 
 
 	public void setRequiredLookupNextRel(ICFBamProtRelation argObj);

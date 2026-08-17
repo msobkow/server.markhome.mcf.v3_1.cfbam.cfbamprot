@@ -91,8 +91,8 @@ public interface ICFBamProtParamH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public CFLibDbKeyHash256 getRequiredId();
-	public void setRequiredId( CFLibDbKeyHash256 requiredId );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 requiredId );
 
 	public CFLibDbKeyHash256 getRequiredServerMethodId();
 	public void setRequiredServerMethodId( CFLibDbKeyHash256 value );

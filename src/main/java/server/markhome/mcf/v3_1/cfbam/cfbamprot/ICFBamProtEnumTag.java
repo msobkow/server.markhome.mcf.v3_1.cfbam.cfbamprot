@@ -106,8 +106,8 @@ public interface ICFBamProtEnumTag
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getPKey();
-	public void setPKey(CFLibDbKeyHash256 requiredId);
+	public ICFLibKeyHash256 getPKey();
+	public void setPKey(ICFLibKeyHash256 requiredId);
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
@@ -115,7 +115,7 @@ public interface ICFBamProtEnumTag
 
 	public ICFBamProtEnumDef getRequiredContainerEnumDef();
 
-	public void setRequiredContainerEnumDef(CFLibDbKeyHash256 argEnumId);
+	public void setRequiredContainerEnumDef(ICFLibKeyHash256 argEnumId);
 
 
 	public void setRequiredContainerEnumDef(ICFBamProtEnumDef argObj);
@@ -124,7 +124,7 @@ public interface ICFBamProtEnumTag
 
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
@@ -133,7 +133,7 @@ public interface ICFBamProtEnumTag
 
 	public ICFBamProtEnumTag getOptionalLookupPrev();
 
-	public void setOptionalLookupPrev(CFLibDbKeyHash256 argPrevId);
+	public void setOptionalLookupPrev(ICFLibKeyHash256 argPrevId);
 
 
 	public void setOptionalLookupPrev(ICFBamProtEnumTag argObj);
@@ -142,7 +142,7 @@ public interface ICFBamProtEnumTag
 
 	public ICFBamProtEnumTag getOptionalLookupNext();
 
-	public void setOptionalLookupNext(CFLibDbKeyHash256 argNextId);
+	public void setOptionalLookupNext(ICFLibKeyHash256 argNextId);
 
 
 	public void setOptionalLookupNext(ICFBamProtEnumTag argObj);

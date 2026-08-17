@@ -96,7 +96,7 @@ public interface ICFBamProtRelation
 
 	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void setOptionalLookupDefSchema(CFLibDbKeyHash256 argDefSchemaId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
 	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
@@ -105,7 +105,7 @@ public interface ICFBamProtRelation
 
 	public ICFBamProtTable getRequiredContainerFromTable();
 
-	public void setRequiredContainerFromTable(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerFromTable(ICFLibKeyHash256 argTableId);
 
 
 	public void setRequiredContainerFromTable(ICFBamProtTable argObj);
@@ -114,7 +114,7 @@ public interface ICFBamProtRelation
 
 	public ICFBamProtIndex getRequiredLookupFromIndex();
 
-	public void setRequiredLookupFromIndex(CFLibDbKeyHash256 argFromIndexId);
+	public void setRequiredLookupFromIndex(ICFLibKeyHash256 argFromIndexId);
 
 
 	public void setRequiredLookupFromIndex(ICFBamProtIndex argObj);
@@ -123,7 +123,7 @@ public interface ICFBamProtRelation
 
 	public ICFBamProtTable getRequiredLookupToTable();
 
-	public void setRequiredLookupToTable(CFLibDbKeyHash256 argToTableId);
+	public void setRequiredLookupToTable(ICFLibKeyHash256 argToTableId);
 
 
 	public void setRequiredLookupToTable(ICFBamProtTable argObj);
@@ -132,7 +132,7 @@ public interface ICFBamProtRelation
 
 	public ICFBamProtIndex getRequiredLookupToIndex();
 
-	public void setRequiredLookupToIndex(CFLibDbKeyHash256 argToIndexId);
+	public void setRequiredLookupToIndex(ICFLibKeyHash256 argToIndexId);
 
 
 	public void setRequiredLookupToIndex(ICFBamProtIndex argObj);
@@ -141,7 +141,7 @@ public interface ICFBamProtRelation
 
 	public ICFBamProtRelation getOptionalLookupNarrowed();
 
-	public void setOptionalLookupNarrowed(CFLibDbKeyHash256 argNarrowedId);
+	public void setOptionalLookupNarrowed(ICFLibKeyHash256 argNarrowedId);
 
 
 	public void setOptionalLookupNarrowed(ICFBamProtRelation argObj);

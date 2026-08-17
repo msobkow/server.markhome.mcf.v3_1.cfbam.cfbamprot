@@ -656,6 +656,6 @@ extends ICFBamProtDelDepTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtDelTopDep protmoveRecDown( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 }

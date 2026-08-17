@@ -728,6 +728,6 @@ extends ICFBamProtTokenDefTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtTokenCol protmoveRecDown( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 }

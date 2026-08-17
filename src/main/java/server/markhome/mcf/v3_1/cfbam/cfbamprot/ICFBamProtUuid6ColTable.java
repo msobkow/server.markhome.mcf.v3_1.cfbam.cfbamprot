@@ -728,6 +728,6 @@ extends ICFBamProtUuid6DefTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtUuid6Col protmoveRecDown( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 }

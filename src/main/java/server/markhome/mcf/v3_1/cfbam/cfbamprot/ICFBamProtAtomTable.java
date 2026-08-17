@@ -674,6 +674,6 @@ extends ICFBamProtValueTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtAtom protmoveRecDown( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 }

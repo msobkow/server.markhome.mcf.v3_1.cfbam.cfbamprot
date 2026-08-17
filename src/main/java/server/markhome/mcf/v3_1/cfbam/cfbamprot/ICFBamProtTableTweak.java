@@ -75,7 +75,7 @@ public interface ICFBamProtTableTweak
 
 	public ICFBamProtTable getRequiredContainerTableDef();
 
-	public void setRequiredContainerTableDef(CFLibDbKeyHash256 argTableId);
+	public void setRequiredContainerTableDef(ICFLibKeyHash256 argTableId);
 
 
 	public void setRequiredContainerTableDef(ICFBamProtTable argObj);

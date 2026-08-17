@@ -83,13 +83,13 @@ public interface ICFBamProtSchemaDef
 
 	public ICFIntPubMinorVersion getRequiredContainerMinorVersion();
 
-	public void setRequiredContainerMinorVersion(CFLibDbKeyHash256 argMinorVersionId);
+	public void setRequiredContainerMinorVersion(ICFLibKeyHash256 argMinorVersionId);
 
 	public void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj);
 
 	public ICFSecPubTenant getRequiredOwnerCTenant();
 
-	public void setRequiredOwnerCTenant(CFLibDbKeyHash256 argCTenantId);
+	public void setRequiredOwnerCTenant(ICFLibKeyHash256 argCTenantId);
 
 	public void setRequiredOwnerCTenant(ICFSecPubTenant argObj);
 
