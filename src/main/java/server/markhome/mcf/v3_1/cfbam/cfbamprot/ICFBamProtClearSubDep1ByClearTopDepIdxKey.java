@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtClearSubDep1ByClearTopDepIdxKey
 {
-	public CFLibDbKeyHash256 getRequiredClearTopDepId();
-	public void setRequiredClearTopDepId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredClearTopDepId();
+	public void setRequiredClearTopDepId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

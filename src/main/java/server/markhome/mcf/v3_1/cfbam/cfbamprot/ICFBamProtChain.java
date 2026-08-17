@@ -106,8 +106,8 @@ public interface ICFBamProtChain
 
 	public ICFLibKeyHash256 getPKey();
 	public void setPKey(ICFLibKeyHash256 requiredId);
-	public CFLibDbKeyHash256 getRequiredId();
-	public void setRequiredId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
@@ -147,8 +147,8 @@ public interface ICFBamProtChain
 
 	public void setRequiredLookupNextRel(ICFBamPubRelation argObj);
 
-	public CFLibDbKeyHash256 getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public String getOptionalShortName();
@@ -159,14 +159,14 @@ public interface ICFBamProtChain
 	public void setOptionalShortDescription( String value );
 	public String getOptionalDescription();
 	public void setOptionalDescription( String value );
-	public CFLibDbKeyHash256 getRequiredTableId();
-	public void setRequiredTableId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
 	public String getOptionalSuffix();
 	public void setOptionalSuffix( String value );
-	public CFLibDbKeyHash256 getRequiredPrevRelationId();
-	public void setRequiredPrevRelationId( CFLibDbKeyHash256 value );
-	public CFLibDbKeyHash256 getRequiredNextRelationId();
-	public void setRequiredNextRelationId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredPrevRelationId();
+	public void setRequiredPrevRelationId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredNextRelationId();
+	public void setRequiredNextRelationId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

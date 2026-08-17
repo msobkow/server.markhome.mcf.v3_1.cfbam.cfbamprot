@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtSchemaDefByAuthEMailIdxKey
 {
-	public CFLibDbKeyHash256 getRequiredCTenantId();
-	public void setRequiredCTenantId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredCTenantId();
+	public void setRequiredCTenantId( ICFLibKeyHash256 value );
 	public String getRequiredAuthorEMail();
 	public void setRequiredAuthorEMail( String value );
 	@Override

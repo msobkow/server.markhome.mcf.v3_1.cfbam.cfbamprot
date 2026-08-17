@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtPopSubDep1ByUNameIdxKey
 {
-	public CFLibDbKeyHash256 getRequiredPopTopDepId();
-	public void setRequiredPopTopDepId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredPopTopDepId();
+	public void setRequiredPopTopDepId( ICFLibKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	@Override

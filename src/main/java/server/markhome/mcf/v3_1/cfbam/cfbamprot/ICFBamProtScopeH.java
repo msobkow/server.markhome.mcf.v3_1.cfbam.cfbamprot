@@ -95,8 +95,8 @@ public interface ICFBamProtScopeH
 	public ICFLibKeyHash256 getRequiredId();
 	public void setRequiredId( ICFLibKeyHash256 requiredId );
 
-	public CFLibDbKeyHash256 getRequiredTenantId();
-	public void setRequiredTenantId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

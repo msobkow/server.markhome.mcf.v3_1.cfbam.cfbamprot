@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTableColByDataIdxKey
 {
-	public CFLibDbKeyHash256 getOptionalDataId();
-	public void setOptionalDataId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDataId();
+	public void setOptionalDataId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

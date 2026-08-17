@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtDbKeyHash224TypeH extends ICFBamProtDbKeyHash224DefH
 {
-	public CFLibDbKeyHash256 getRequiredSchemaDefId();
-	public void setRequiredSchemaDefId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSchemaDefId();
+	public void setRequiredSchemaDefId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

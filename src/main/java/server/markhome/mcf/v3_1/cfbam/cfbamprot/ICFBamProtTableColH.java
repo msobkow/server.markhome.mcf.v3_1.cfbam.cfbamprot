@@ -68,12 +68,12 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTableColH extends ICFBamProtValueH
 {
-	public CFLibDbKeyHash256 getRequiredTableId();
-	public void setRequiredTableId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
 	public String getOptionalDbName();
 	public void setOptionalDbName( String value );
-	public CFLibDbKeyHash256 getOptionalDataId();
-	public void setOptionalDataId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDataId();
+	public void setOptionalDataId( ICFLibKeyHash256 value );
 	public String getOptionalXmlElementName();
 	public void setOptionalXmlElementName( String value );
 	@Override

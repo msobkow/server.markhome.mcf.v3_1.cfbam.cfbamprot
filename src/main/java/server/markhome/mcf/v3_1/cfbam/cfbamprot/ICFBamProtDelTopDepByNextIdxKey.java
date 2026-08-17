@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtDelTopDepByNextIdxKey
 {
-	public CFLibDbKeyHash256 getOptionalNextId();
-	public void setOptionalNextId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

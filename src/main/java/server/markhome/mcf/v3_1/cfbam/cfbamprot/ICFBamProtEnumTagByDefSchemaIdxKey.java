@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtEnumTagByDefSchemaIdxKey
 {
-	public CFLibDbKeyHash256 getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

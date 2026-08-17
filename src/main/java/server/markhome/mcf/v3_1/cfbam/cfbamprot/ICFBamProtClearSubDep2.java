@@ -86,8 +86,8 @@ public interface ICFBamProtClearSubDep2
 
 	public List<ICFBamProtClearSubDep3> getOptionalComponentsClearDep();
 
-	public CFLibDbKeyHash256 getRequiredClearSubDep1Id();
-	public void setRequiredClearSubDep1Id( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredClearSubDep1Id();
+	public void setRequiredClearSubDep1Id( ICFLibKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public boolean equals( Object obj );

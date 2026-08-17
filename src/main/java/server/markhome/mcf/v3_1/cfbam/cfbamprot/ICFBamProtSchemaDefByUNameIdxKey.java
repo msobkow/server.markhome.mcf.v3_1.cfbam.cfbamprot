@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtSchemaDefByUNameIdxKey
 {
-	public CFLibDbKeyHash256 getRequiredMinorVersionId();
-	public void setRequiredMinorVersionId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredMinorVersionId();
+	public void setRequiredMinorVersionId( ICFLibKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	@Override

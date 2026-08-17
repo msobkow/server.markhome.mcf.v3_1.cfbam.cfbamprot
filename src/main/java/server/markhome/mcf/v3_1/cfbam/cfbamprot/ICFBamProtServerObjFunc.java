@@ -83,8 +83,8 @@ public interface ICFBamProtServerObjFunc
 
 	public void setOptionalLookupRetTable(ICFBamPubTable argObj);
 
-	public CFLibDbKeyHash256 getOptionalRetTableId();
-	public void setOptionalRetTableId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalRetTableId();
+	public void setOptionalRetTableId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTableByAltIndexIdxKey
 {
-	public CFLibDbKeyHash256 getOptionalAltIndexId();
-	public void setOptionalAltIndexId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalAltIndexId();
+	public void setOptionalAltIndexId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

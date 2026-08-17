@@ -68,10 +68,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtParamByContPrevIdxKey
 {
-	public CFLibDbKeyHash256 getRequiredServerMethodId();
-	public void setRequiredServerMethodId( CFLibDbKeyHash256 value );
-	public CFLibDbKeyHash256 getOptionalPrevId();
-	public void setOptionalPrevId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredServerMethodId();
+	public void setRequiredServerMethodId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 
