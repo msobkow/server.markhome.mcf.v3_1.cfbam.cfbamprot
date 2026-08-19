@@ -149,7 +149,7 @@ extends ICFBamProtAtomTable,
 	 *	@param	Name	The BoolDef key attribute of the instance generating the id.
 	 */
 	public void protdeleteBoolDefByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		String argName );
 
 	/**
@@ -178,7 +178,7 @@ extends ICFBamProtAtomTable,
 	 *	@param	ScopeId	The BoolDef key attribute of the instance generating the id.
 	 */
 	public void protdeleteBoolDefByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId );
+		ICFLibKeyHash256 argScopeId );
 
 	/**
 	 *	Delete the BoolDef instances identified by the key ScopeIdx.
@@ -292,7 +292,7 @@ extends ICFBamProtAtomTable,
 	 *	@param	PrevId	The BoolDef key attribute of the instance generating the id.
 	 */
 	public void protdeleteBoolDefByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -323,7 +323,7 @@ extends ICFBamProtAtomTable,
 	 *	@param	NextId	The BoolDef key attribute of the instance generating the id.
 	 */
 	public void protdeleteBoolDefByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -402,7 +402,7 @@ extends ICFBamProtAtomTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtBoolDef protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived BoolDef record instance identified by the unique key UNameIdx.
@@ -417,7 +417,7 @@ extends ICFBamProtAtomTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtBoolDef protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -430,7 +430,7 @@ extends ICFBamProtAtomTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtBoolDef[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the derived BoolDef record instances identified by the duplicate key DefSchemaIdx.
@@ -480,7 +480,7 @@ extends ICFBamProtAtomTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtBoolDef[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -495,7 +495,7 @@ extends ICFBamProtAtomTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtBoolDef[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -550,7 +550,7 @@ extends ICFBamProtAtomTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtBoolDef protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific BoolDef record instance identified by the unique key UNameIdx.
@@ -567,7 +567,7 @@ extends ICFBamProtAtomTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtBoolDef protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -582,7 +582,7 @@ extends ICFBamProtAtomTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtBoolDef[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the specific BoolDef record instances identified by the duplicate key DefSchemaIdx.
@@ -640,7 +640,7 @@ extends ICFBamProtAtomTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtBoolDef[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -657,7 +657,7 @@ extends ICFBamProtAtomTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtBoolDef[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -666,7 +666,7 @@ extends ICFBamProtAtomTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtBoolDef protmoveRecUp( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 
 	/**

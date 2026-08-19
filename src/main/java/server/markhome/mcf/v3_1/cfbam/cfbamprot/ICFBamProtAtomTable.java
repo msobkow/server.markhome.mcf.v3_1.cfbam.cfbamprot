@@ -149,7 +149,7 @@ extends ICFBamProtValueTable,
 	 *	@param	Name	The Atom key attribute of the instance generating the id.
 	 */
 	public void protdeleteAtomByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		String argName );
 
 	/**
@@ -178,7 +178,7 @@ extends ICFBamProtValueTable,
 	 *	@param	ScopeId	The Atom key attribute of the instance generating the id.
 	 */
 	public void protdeleteAtomByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId );
+		ICFLibKeyHash256 argScopeId );
 
 	/**
 	 *	Delete the Atom instances identified by the key ScopeIdx.
@@ -292,7 +292,7 @@ extends ICFBamProtValueTable,
 	 *	@param	PrevId	The Atom key attribute of the instance generating the id.
 	 */
 	public void protdeleteAtomByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -323,7 +323,7 @@ extends ICFBamProtValueTable,
 	 *	@param	NextId	The Atom key attribute of the instance generating the id.
 	 */
 	public void protdeleteAtomByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -402,7 +402,7 @@ extends ICFBamProtValueTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtAtom protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived Atom record instance identified by the unique key UNameIdx.
@@ -417,7 +417,7 @@ extends ICFBamProtValueTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtAtom protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -430,7 +430,7 @@ extends ICFBamProtValueTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtAtom[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the derived Atom record instances identified by the duplicate key DefSchemaIdx.
@@ -480,7 +480,7 @@ extends ICFBamProtValueTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtAtom[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -495,7 +495,7 @@ extends ICFBamProtValueTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtAtom[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -550,7 +550,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtAtom protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific Atom record instance identified by the unique key UNameIdx.
@@ -567,7 +567,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtAtom protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -582,7 +582,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtAtom[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the specific Atom record instances identified by the duplicate key DefSchemaIdx.
@@ -640,7 +640,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtAtom[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -657,7 +657,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtAtom[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -666,7 +666,7 @@ extends ICFBamProtValueTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtAtom protmoveRecUp( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 
 	/**

@@ -146,7 +146,7 @@ extends ICFBamPubScopeTable
 	 *	@param	TenantId	The Scope key attribute of the instance generating the id.
 	 */
 	public void protdeleteScopeByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTenantId );
+		ICFLibKeyHash256 argTenantId );
 
 	/**
 	 *	Delete the Scope instances identified by the key TenantIdx.
@@ -224,7 +224,7 @@ extends ICFBamPubScopeTable
 	 *		no such existing key value.
 	 */
 	public ICFBamProtScope protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the derived Scope record instances identified by the duplicate key TenantIdx.
@@ -236,7 +236,7 @@ extends ICFBamPubScopeTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtScope[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read the specific Scope record instance identified by the primary key.
@@ -290,7 +290,7 @@ extends ICFBamPubScopeTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtScope protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the specific Scope record instances identified by the duplicate key TenantIdx.
@@ -304,5 +304,5 @@ extends ICFBamPubScopeTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtScope[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 }

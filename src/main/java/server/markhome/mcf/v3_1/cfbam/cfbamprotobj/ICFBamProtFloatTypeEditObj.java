@@ -96,10 +96,10 @@ public interface ICFBamProtFloatTypeEditObj
 	void setRequiredContainerSchemaDef( ICFBamProtSchemaDefObj value );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute SchemaDefId.
+	 *	Get the required ICFLibKeyHash256 attribute SchemaDefId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute SchemaDefId.
+	 *	@return	The required ICFLibKeyHash256 attribute SchemaDefId.
 	 */
-	CFLibDbKeyHash256 getRequiredSchemaDefId();
+	ICFLibKeyHash256 getRequiredSchemaDefId();
 
 }

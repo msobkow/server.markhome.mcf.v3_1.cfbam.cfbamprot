@@ -323,18 +323,18 @@ public interface ICFBamProtParamObj
 	ICFBamProtValueObj getRequiredLookupType( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute ServerMethodId.
+	 *	Get the required ICFLibKeyHash256 attribute ServerMethodId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute ServerMethodId.
+	 *	@return	The required ICFLibKeyHash256 attribute ServerMethodId.
 	 */
-	CFLibDbKeyHash256 getRequiredServerMethodId();
+	ICFLibKeyHash256 getRequiredServerMethodId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.

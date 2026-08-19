@@ -138,7 +138,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@param	SchemaDefId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
 	public void protdeleteDbKeyHash384GenBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaDefId );
+		ICFLibKeyHash256 argSchemaDefId );
 
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key SchemaIdx.
@@ -177,7 +177,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@param	Name	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
 	public void protdeleteDbKeyHash384GenByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		String argName );
 
 	/**
@@ -206,7 +206,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@param	ScopeId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
 	public void protdeleteDbKeyHash384GenByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId );
+		ICFLibKeyHash256 argScopeId );
 
 	/**
 	 *	Delete the DbKeyHash384Gen instances identified by the key ScopeIdx.
@@ -320,7 +320,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@param	PrevId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
 	public void protdeleteDbKeyHash384GenByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -351,7 +351,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@param	NextId	The DbKeyHash384Gen key attribute of the instance generating the id.
 	 */
 	public void protdeleteDbKeyHash384GenByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -430,7 +430,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtDbKeyHash384Gen protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived DbKeyHash384Gen record instance identified by the unique key UNameIdx.
@@ -445,7 +445,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtDbKeyHash384Gen protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -458,7 +458,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtDbKeyHash384Gen[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the derived DbKeyHash384Gen record instances identified by the duplicate key DefSchemaIdx.
@@ -508,7 +508,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtDbKeyHash384Gen[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -523,7 +523,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtDbKeyHash384Gen[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -536,7 +536,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtDbKeyHash384Gen[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Read the specific DbKeyHash384Gen record instance identified by the primary key.
@@ -590,7 +590,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDbKeyHash384Gen protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific DbKeyHash384Gen record instance identified by the unique key UNameIdx.
@@ -607,7 +607,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDbKeyHash384Gen protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -622,7 +622,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDbKeyHash384Gen[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the specific DbKeyHash384Gen record instances identified by the duplicate key DefSchemaIdx.
@@ -680,7 +680,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDbKeyHash384Gen[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -697,7 +697,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDbKeyHash384Gen[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -712,7 +712,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDbKeyHash384Gen[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Move the specified record up in the chain (i.e. to the previous position.)
@@ -720,7 +720,7 @@ extends ICFBamProtDbKeyHash384TypeTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtDbKeyHash384Gen protmoveRecUp( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 
 	/**

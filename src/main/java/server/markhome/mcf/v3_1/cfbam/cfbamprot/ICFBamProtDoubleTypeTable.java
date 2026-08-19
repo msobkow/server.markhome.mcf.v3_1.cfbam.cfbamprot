@@ -138,7 +138,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@param	SchemaDefId	The DoubleType key attribute of the instance generating the id.
 	 */
 	public void protdeleteDoubleTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaDefId );
+		ICFLibKeyHash256 argSchemaDefId );
 
 	/**
 	 *	Delete the DoubleType instances identified by the key SchemaIdx.
@@ -177,7 +177,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@param	Name	The DoubleType key attribute of the instance generating the id.
 	 */
 	public void protdeleteDoubleTypeByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		String argName );
 
 	/**
@@ -206,7 +206,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@param	ScopeId	The DoubleType key attribute of the instance generating the id.
 	 */
 	public void protdeleteDoubleTypeByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId );
+		ICFLibKeyHash256 argScopeId );
 
 	/**
 	 *	Delete the DoubleType instances identified by the key ScopeIdx.
@@ -320,7 +320,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@param	PrevId	The DoubleType key attribute of the instance generating the id.
 	 */
 	public void protdeleteDoubleTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -351,7 +351,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@param	NextId	The DoubleType key attribute of the instance generating the id.
 	 */
 	public void protdeleteDoubleTypeByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -430,7 +430,7 @@ extends ICFBamProtDoubleDefTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtDoubleType protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived DoubleType record instance identified by the unique key UNameIdx.
@@ -445,7 +445,7 @@ extends ICFBamProtDoubleDefTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtDoubleType protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -458,7 +458,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtDoubleType[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the derived DoubleType record instances identified by the duplicate key DefSchemaIdx.
@@ -508,7 +508,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtDoubleType[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -523,7 +523,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtDoubleType[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -536,7 +536,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtDoubleType[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Read the specific DoubleType record instance identified by the primary key.
@@ -590,7 +590,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDoubleType protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific DoubleType record instance identified by the unique key UNameIdx.
@@ -607,7 +607,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDoubleType protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -622,7 +622,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDoubleType[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the specific DoubleType record instances identified by the duplicate key DefSchemaIdx.
@@ -680,7 +680,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDoubleType[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -697,7 +697,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDoubleType[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -712,7 +712,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtDoubleType[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Move the specified record up in the chain (i.e. to the previous position.)
@@ -720,7 +720,7 @@ extends ICFBamProtDoubleDefTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtDoubleType protmoveRecUp( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 
 	/**

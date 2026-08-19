@@ -171,7 +171,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	ICFBamProtRoleDefObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtSchemaRoleObj readSchemaRoleByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtSchemaRoleObj readSchemaRoleByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtRoleDefObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	ICFBamProtRoleDefObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtSchemaRoleObj readSchemaRoleByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtSchemaRoleObj readSchemaRoleByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -194,7 +194,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	ICFBamProtRoleDefObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtSchemaRoleObj readSchemaRoleByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtSchemaRoleObj readSchemaRoleByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -207,7 +207,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	ICFBamProtRoleDefObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtSchemaRoleObj readSchemaRoleByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtSchemaRoleObj readSchemaRoleByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name,
 		boolean forceRead );
 
@@ -219,7 +219,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	List of ICFBamProtSchemaRoleObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtSchemaRoleObj> readSchemaRoleByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<ICFBamProtSchemaRoleObj> readSchemaRoleByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Get the map of ICFBamProtSchemaRoleObj instances sorted by their primary keys for the duplicate ScopeIdx key.
@@ -229,7 +229,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	List of ICFBamProtSchemaRoleObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtSchemaRoleObj> readSchemaRoleByScopeIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtSchemaRoleObj> readSchemaRoleByScopeIdx( ICFLibKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
@@ -265,7 +265,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	ICFBamProtRoleDefObj cached instance for the unique UDefIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtSchemaRoleObj readSchemaRoleByUDefIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtSchemaRoleObj readSchemaRoleByUDefIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
@@ -281,7 +281,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	ICFBamProtRoleDefObj refreshed instance for the unique UDefIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtSchemaRoleObj readSchemaRoleByUDefIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtSchemaRoleObj readSchemaRoleByUDefIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name,
 		boolean forceRead );
@@ -294,7 +294,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	List of List<ICFBamProtSchemaRoleObj> cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtSchemaRoleObj> readSchemaRoleBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	List<ICFBamProtSchemaRoleObj> readSchemaRoleBySchemaIdx( ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Get the map of List<ICFBamProtSchemaRoleObj> instances sorted by their primary keys for the duplicate SchemaIdx key.
@@ -304,7 +304,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	List of List<ICFBamProtSchemaRoleObj> cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtSchemaRoleObj> readSchemaRoleBySchemaIdx( CFLibDbKeyHash256 SchemaDefId,
+	List<ICFBamProtSchemaRoleObj> readSchemaRoleBySchemaIdx( ICFLibKeyHash256 SchemaDefId,
 		boolean forceRead );
 
 	/**
@@ -338,7 +338,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	List of List<ICFBamProtSchemaRoleObj> cached instances sorted by their primary keys for the duplicate SchRoleScpIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtSchemaRoleObj> readSchemaRoleBySchRoleScpIdx( CFLibDbKeyHash256 SchemaDefId,
+	List<ICFBamProtSchemaRoleObj> readSchemaRoleBySchRoleScpIdx( ICFLibKeyHash256 SchemaDefId,
 		ICFBamPubSchema.RoleScopeEnum RoleScope );
 
 	/**
@@ -351,48 +351,48 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *	@return	List of List<ICFBamProtSchemaRoleObj> cached instances sorted by their primary keys for the duplicate SchRoleScpIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtSchemaRoleObj> readSchemaRoleBySchRoleScpIdx( CFLibDbKeyHash256 SchemaDefId,
+	List<ICFBamProtSchemaRoleObj> readSchemaRoleBySchRoleScpIdx( ICFLibKeyHash256 SchemaDefId,
 		ICFBamPubSchema.RoleScopeEnum RoleScope,
 		boolean forceRead );
 
-	ICFBamProtRoleDefObj readCachedSchemaRoleByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtRoleDefObj readCachedSchemaRoleByIdIdx( ICFLibKeyHash256 Id );
 
-	ICFBamProtRoleDefObj readCachedSchemaRoleByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtRoleDefObj readCachedSchemaRoleByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	List<List<ICFBamProtRoleDefObj>> readCachedSchemaRoleByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtRoleDefObj>> readCachedSchemaRoleByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	List<List<ICFBamProtRoleDefObj>> readCachedSchemaRoleByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	ICFBamProtRoleDefObj readCachedSchemaRoleByUDefIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtRoleDefObj readCachedSchemaRoleByUDefIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
-	List<List<ICFBamProtSchemaRoleObj>> readCachedSchemaRoleBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	List<List<ICFBamProtSchemaRoleObj>> readCachedSchemaRoleBySchemaIdx( ICFLibKeyHash256 SchemaDefId );
 
 	List<List<ICFBamProtSchemaRoleObj>> readCachedSchemaRoleByRoleScopeIdx( ICFBamPubSchema.RoleScopeEnum RoleScope );
 
-	List<List<ICFBamProtSchemaRoleObj>> readCachedSchemaRoleBySchRoleScpIdx( CFLibDbKeyHash256 SchemaDefId,
+	List<List<ICFBamProtSchemaRoleObj>> readCachedSchemaRoleBySchRoleScpIdx( ICFLibKeyHash256 SchemaDefId,
 		ICFBamPubSchema.RoleScopeEnum RoleScope );
 
-	void deepDisposeSchemaRoleByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeSchemaRoleByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeSchemaRoleByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeSchemaRoleByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	void deepDisposeSchemaRoleByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deepDisposeSchemaRoleByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	void deepDisposeSchemaRoleByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	void deepDisposeSchemaRoleByUDefIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeSchemaRoleByUDefIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
-	void deepDisposeSchemaRoleBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	void deepDisposeSchemaRoleBySchemaIdx( ICFLibKeyHash256 SchemaDefId );
 
 	void deepDisposeSchemaRoleByRoleScopeIdx( ICFBamPubSchema.RoleScopeEnum RoleScope );
 
-	void deepDisposeSchemaRoleBySchRoleScpIdx( CFLibDbKeyHash256 SchemaDefId,
+	void deepDisposeSchemaRoleBySchRoleScpIdx( ICFLibKeyHash256 SchemaDefId,
 		ICFBamPubSchema.RoleScopeEnum RoleScope );
 
 	/**
@@ -410,7 +410,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *
 	 *	@param	Id	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteSchemaRoleByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
@@ -419,7 +419,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *
 	 *	@param	Name	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteSchemaRoleByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -427,7 +427,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *
 	 *	@param	ScopeId	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deleteSchemaRoleByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Internal use only.
@@ -445,7 +445,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *
 	 *	@param	Name	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleByUDefIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteSchemaRoleByUDefIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
@@ -454,7 +454,7 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *
 	 *	@param	SchemaDefId	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	void deleteSchemaRoleBySchemaIdx( ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Internal use only.
@@ -470,6 +470,6 @@ public interface ICFBamProtSchemaRoleTableObj
 	 *
 	 *	@param	RoleScope	The SchemaRole key attribute of the instance generating the id.
 	 */
-	void deleteSchemaRoleBySchRoleScpIdx( CFLibDbKeyHash256 SchemaDefId,
+	void deleteSchemaRoleBySchRoleScpIdx( ICFLibKeyHash256 SchemaDefId,
 		ICFBamPubSchema.RoleScopeEnum RoleScope );
 }

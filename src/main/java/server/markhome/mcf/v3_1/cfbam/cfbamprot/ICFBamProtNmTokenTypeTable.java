@@ -138,7 +138,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@param	SchemaDefId	The NmTokenType key attribute of the instance generating the id.
 	 */
 	public void protdeleteNmTokenTypeBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaDefId );
+		ICFLibKeyHash256 argSchemaDefId );
 
 	/**
 	 *	Delete the NmTokenType instances identified by the key SchemaIdx.
@@ -177,7 +177,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@param	Name	The NmTokenType key attribute of the instance generating the id.
 	 */
 	public void protdeleteNmTokenTypeByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		String argName );
 
 	/**
@@ -206,7 +206,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@param	ScopeId	The NmTokenType key attribute of the instance generating the id.
 	 */
 	public void protdeleteNmTokenTypeByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId );
+		ICFLibKeyHash256 argScopeId );
 
 	/**
 	 *	Delete the NmTokenType instances identified by the key ScopeIdx.
@@ -320,7 +320,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@param	PrevId	The NmTokenType key attribute of the instance generating the id.
 	 */
 	public void protdeleteNmTokenTypeByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -351,7 +351,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@param	NextId	The NmTokenType key attribute of the instance generating the id.
 	 */
 	public void protdeleteNmTokenTypeByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -430,7 +430,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtNmTokenType protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived NmTokenType record instance identified by the unique key UNameIdx.
@@ -445,7 +445,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtNmTokenType protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -458,7 +458,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtNmTokenType[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the derived NmTokenType record instances identified by the duplicate key DefSchemaIdx.
@@ -508,7 +508,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtNmTokenType[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -523,7 +523,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtNmTokenType[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -536,7 +536,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtNmTokenType[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Read the specific NmTokenType record instance identified by the primary key.
@@ -590,7 +590,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtNmTokenType protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific NmTokenType record instance identified by the unique key UNameIdx.
@@ -607,7 +607,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtNmTokenType protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -622,7 +622,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtNmTokenType[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the specific NmTokenType record instances identified by the duplicate key DefSchemaIdx.
@@ -680,7 +680,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtNmTokenType[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -697,7 +697,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtNmTokenType[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -712,7 +712,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtNmTokenType[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Move the specified record up in the chain (i.e. to the previous position.)
@@ -720,7 +720,7 @@ extends ICFBamProtNmTokenDefTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtNmTokenType protmoveRecUp( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 
 	/**

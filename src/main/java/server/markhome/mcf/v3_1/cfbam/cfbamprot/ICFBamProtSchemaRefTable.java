@@ -138,7 +138,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	SchemaId	The SchemaRef key attribute of the instance generating the id.
 	 */
 	public void protdeleteSchemaRefBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaId );
+		ICFLibKeyHash256 argSchemaId );
 
 	/**
 	 *	Delete the SchemaRef instances identified by the key SchemaIdx.
@@ -168,7 +168,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	Name	The SchemaRef key attribute of the instance generating the id.
 	 */
 	public void protdeleteSchemaRefByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaId,
+		ICFLibKeyHash256 argSchemaId,
 		String argName );
 
 	/**
@@ -290,7 +290,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	TenantId	The SchemaRef key attribute of the instance generating the id.
 	 */
 	public void protdeleteSchemaRefByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTenantId );
+		ICFLibKeyHash256 argTenantId );
 
 	/**
 	 *	Delete the SchemaRef instances identified by the key TenantIdx.
@@ -368,7 +368,7 @@ extends ICFBamProtScopeTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtSchemaRef protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the derived SchemaRef record instances identified by the duplicate key TenantIdx.
@@ -380,7 +380,7 @@ extends ICFBamProtScopeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtSchemaRef[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the derived SchemaRef record instances identified by the duplicate key SchemaIdx.
@@ -392,7 +392,7 @@ extends ICFBamProtScopeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtSchemaRef[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaId );
+		ICFLibKeyHash256 SchemaId );
 
 	/**
 	 *	Read the derived SchemaRef record instance identified by the unique key UNameIdx.
@@ -407,7 +407,7 @@ extends ICFBamProtScopeTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtSchemaRef protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaId,
+		ICFLibKeyHash256 SchemaId,
 		String Name );
 
 	/**
@@ -498,7 +498,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRef protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the specific SchemaRef record instances identified by the duplicate key TenantIdx.
@@ -512,7 +512,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRef[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the specific SchemaRef record instances identified by the duplicate key SchemaIdx.
@@ -526,7 +526,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRef[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaId );
+		ICFLibKeyHash256 SchemaId );
 
 	/**
 	 *	Read the specific SchemaRef record instance identified by the unique key UNameIdx.
@@ -543,7 +543,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRef protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaId,
+		ICFLibKeyHash256 SchemaId,
 		String Name );
 
 	/**
@@ -594,7 +594,7 @@ extends ICFBamProtScopeTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtSchemaRef protmoveRecUp( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 
 	/**

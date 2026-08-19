@@ -138,7 +138,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	SchemaDefId	The Table key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableBySchemaDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaDefId );
+		ICFLibKeyHash256 argSchemaDefId );
 
 	/**
 	 *	Delete the Table instances identified by the key SchemaDefIdx.
@@ -196,7 +196,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	CodeVis	The Table key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableBySchemaCodeVisIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaDefId,
+		ICFLibKeyHash256 argSchemaDefId,
 		ICFBamPubSchema.CodeVisibilityEnum argCodeVis );
 
 	/**
@@ -255,7 +255,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	Name	The Table key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaDefId,
+		ICFLibKeyHash256 argSchemaDefId,
 		String argName );
 
 	/**
@@ -286,7 +286,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	TableClassCode	The Table key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableBySchemaCdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaDefId,
+		ICFLibKeyHash256 argSchemaDefId,
 		String argTableClassCode );
 
 	/**
@@ -436,7 +436,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	TenantId	The Table key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTenantId );
+		ICFLibKeyHash256 argTenantId );
 
 	/**
 	 *	Delete the Table instances identified by the key TenantIdx.
@@ -514,7 +514,7 @@ extends ICFBamProtScopeTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtTable protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the derived Table record instances identified by the duplicate key TenantIdx.
@@ -526,7 +526,7 @@ extends ICFBamProtScopeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtTable[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the derived Table record instances identified by the duplicate key SchemaDefIdx.
@@ -538,7 +538,7 @@ extends ICFBamProtScopeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtTable[] protreadDerivedBySchemaDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Read an array of the derived Table record instances identified by the duplicate key CodeVisIdx.
@@ -564,7 +564,7 @@ extends ICFBamProtScopeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtTable[] protreadDerivedBySchemaCodeVisIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId,
+		ICFLibKeyHash256 SchemaDefId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
@@ -592,7 +592,7 @@ extends ICFBamProtScopeTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtTable protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId,
+		ICFLibKeyHash256 SchemaDefId,
 		String Name );
 
 	/**
@@ -608,7 +608,7 @@ extends ICFBamProtScopeTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtTable protreadDerivedBySchemaCdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId,
+		ICFLibKeyHash256 SchemaDefId,
 		String TableClassCode );
 
 	/**
@@ -711,7 +711,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTable protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the specific Table record instances identified by the duplicate key TenantIdx.
@@ -725,7 +725,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTable[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the specific Table record instances identified by the duplicate key SchemaDefIdx.
@@ -739,7 +739,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTable[] protreadRecBySchemaDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Read an array of the specific Table record instances identified by the duplicate key CodeVisIdx.
@@ -769,7 +769,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTable[] protreadRecBySchemaCodeVisIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId,
+		ICFLibKeyHash256 SchemaDefId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
@@ -801,7 +801,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTable protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId,
+		ICFLibKeyHash256 SchemaDefId,
 		String Name );
 
 	/**
@@ -819,7 +819,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTable protreadRecBySchemaCdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId,
+		ICFLibKeyHash256 SchemaDefId,
 		String TableClassCode );
 
 	/**

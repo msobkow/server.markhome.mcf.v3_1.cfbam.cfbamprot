@@ -138,7 +138,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@param	SchemaDefId	The SchemaRole key attribute of the instance generating the id.
 	 */
 	public void protdeleteSchemaRoleBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaDefId );
+		ICFLibKeyHash256 argSchemaDefId );
 
 	/**
 	 *	Delete the SchemaRole instances identified by the key SchemaIdx.
@@ -196,7 +196,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@param	RoleScope	The SchemaRole key attribute of the instance generating the id.
 	 */
 	public void protdeleteSchemaRoleBySchRoleScpIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSchemaDefId,
+		ICFLibKeyHash256 argSchemaDefId,
 		ICFBamPubSchema.RoleScopeEnum argRoleScope );
 
 	/**
@@ -236,7 +236,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@param	Name	The SchemaRole key attribute of the instance generating the id.
 	 */
 	public void protdeleteSchemaRoleByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		String argName );
 
 	/**
@@ -265,7 +265,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@param	ScopeId	The SchemaRole key attribute of the instance generating the id.
 	 */
 	public void protdeleteSchemaRoleByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId );
+		ICFLibKeyHash256 argScopeId );
 
 	/**
 	 *	Delete the SchemaRole instances identified by the key ScopeIdx.
@@ -325,7 +325,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@param	Name	The SchemaRole key attribute of the instance generating the id.
 	 */
 	public void protdeleteSchemaRoleByUDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argDefSchemaId,
 		String argName );
 
@@ -405,7 +405,7 @@ extends ICFBamProtRoleDefTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtSchemaRole protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived SchemaRole record instance identified by the unique key UNameIdx.
@@ -420,7 +420,7 @@ extends ICFBamProtRoleDefTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtSchemaRole protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -433,7 +433,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtSchemaRole[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the derived SchemaRole record instances identified by the duplicate key DefSchemaIdx.
@@ -462,7 +462,7 @@ extends ICFBamProtRoleDefTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtSchemaRole protreadDerivedByUDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
@@ -476,7 +476,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtSchemaRole[] protreadDerivedBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Read an array of the derived SchemaRole record instances identified by the duplicate key RoleScopeIdx.
@@ -502,7 +502,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtSchemaRole[] protreadDerivedBySchRoleScpIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId,
+		ICFLibKeyHash256 SchemaDefId,
 		ICFBamPubSchema.RoleScopeEnum RoleScope );
 
 	/**
@@ -557,7 +557,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRole protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific SchemaRole record instance identified by the unique key UNameIdx.
@@ -574,7 +574,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRole protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -589,7 +589,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRole[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the specific SchemaRole record instances identified by the duplicate key DefSchemaIdx.
@@ -622,7 +622,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRole protreadRecByUDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
@@ -638,7 +638,7 @@ extends ICFBamProtRoleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRole[] protreadRecBySchemaIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId );
+		ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Read an array of the specific SchemaRole record instances identified by the duplicate key RoleScopeIdx.
@@ -668,6 +668,6 @@ extends ICFBamProtRoleDefTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtSchemaRole[] protreadRecBySchRoleScpIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SchemaDefId,
+		ICFLibKeyHash256 SchemaDefId,
 		ICFBamPubSchema.RoleScopeEnum RoleScope );
 }

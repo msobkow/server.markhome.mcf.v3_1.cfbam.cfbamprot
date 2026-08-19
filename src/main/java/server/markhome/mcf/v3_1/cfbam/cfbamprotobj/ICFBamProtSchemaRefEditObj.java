@@ -159,11 +159,11 @@ public interface ICFBamProtSchemaRefEditObj
 	void setOptionalLookupNext( ICFBamProtSchemaRefObj value );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute SchemaId.
+	 *	Get the required ICFLibKeyHash256 attribute SchemaId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute SchemaId.
+	 *	@return	The required ICFLibKeyHash256 attribute SchemaId.
 	 */
-	CFLibDbKeyHash256 getRequiredSchemaId();
+	ICFLibKeyHash256 getRequiredSchemaId();
 
 	/**
 	 *	Get the required String attribute Name.

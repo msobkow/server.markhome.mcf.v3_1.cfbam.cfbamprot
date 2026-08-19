@@ -148,7 +148,7 @@ extends ICFBamPubRelationColTable
 	 *	@param	Name	The RelationCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteRelationColByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argRelationId,
+		ICFLibKeyHash256 argRelationId,
 		String argName );
 
 	/**
@@ -177,7 +177,7 @@ extends ICFBamPubRelationColTable
 	 *	@param	RelationId	The RelationCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteRelationColByRelationIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argRelationId );
+		ICFLibKeyHash256 argRelationId );
 
 	/**
 	 *	Delete the RelationCol instances identified by the key RelationIdx.
@@ -233,7 +233,7 @@ extends ICFBamPubRelationColTable
 	 *	@param	FromColId	The RelationCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteRelationColByFromColIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argFromColId );
+		ICFLibKeyHash256 argFromColId );
 
 	/**
 	 *	Delete the RelationCol instances identified by the key FromColIdx.
@@ -261,7 +261,7 @@ extends ICFBamPubRelationColTable
 	 *	@param	ToColId	The RelationCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteRelationColByToColIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argToColId );
+		ICFLibKeyHash256 argToColId );
 
 	/**
 	 *	Delete the RelationCol instances identified by the key ToColIdx.
@@ -347,7 +347,7 @@ extends ICFBamPubRelationColTable
 	 *	@param	PrevId	The RelationCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteRelationColByRelPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argRelationId,
+		ICFLibKeyHash256 argRelationId,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -378,7 +378,7 @@ extends ICFBamPubRelationColTable
 	 *	@param	NextId	The RelationCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteRelationColByRelNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argRelationId,
+		ICFLibKeyHash256 argRelationId,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -457,7 +457,7 @@ extends ICFBamPubRelationColTable
 	 *		no such existing key value.
 	 */
 	public ICFBamProtRelationCol protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived RelationCol record instance identified by the unique key UNameIdx.
@@ -472,7 +472,7 @@ extends ICFBamPubRelationColTable
 	 *		no such existing key value.
 	 */
 	public ICFBamProtRelationCol protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId,
+		ICFLibKeyHash256 RelationId,
 		String Name );
 
 	/**
@@ -485,7 +485,7 @@ extends ICFBamPubRelationColTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtRelationCol[] protreadDerivedByRelationIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId );
+		ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Read an array of the derived RelationCol record instances identified by the duplicate key DefSchemaIdx.
@@ -509,7 +509,7 @@ extends ICFBamPubRelationColTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtRelationCol[] protreadDerivedByFromColIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 FromColId );
+		ICFLibKeyHash256 FromColId );
 
 	/**
 	 *	Read an array of the derived RelationCol record instances identified by the duplicate key ToColIdx.
@@ -521,7 +521,7 @@ extends ICFBamPubRelationColTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtRelationCol[] protreadDerivedByToColIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ToColId );
+		ICFLibKeyHash256 ToColId );
 
 	/**
 	 *	Read an array of the derived RelationCol record instances identified by the duplicate key PrevIdx.
@@ -559,7 +559,7 @@ extends ICFBamPubRelationColTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtRelationCol[] protreadDerivedByRelPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId,
+		ICFLibKeyHash256 RelationId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -574,7 +574,7 @@ extends ICFBamPubRelationColTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtRelationCol[] protreadDerivedByRelNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId,
+		ICFLibKeyHash256 RelationId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -629,7 +629,7 @@ extends ICFBamPubRelationColTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRelationCol protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific RelationCol record instance identified by the unique key UNameIdx.
@@ -646,7 +646,7 @@ extends ICFBamPubRelationColTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRelationCol protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId,
+		ICFLibKeyHash256 RelationId,
 		String Name );
 
 	/**
@@ -661,7 +661,7 @@ extends ICFBamPubRelationColTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRelationCol[] protreadRecByRelationIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId );
+		ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Read an array of the specific RelationCol record instances identified by the duplicate key DefSchemaIdx.
@@ -689,7 +689,7 @@ extends ICFBamPubRelationColTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRelationCol[] protreadRecByFromColIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 FromColId );
+		ICFLibKeyHash256 FromColId );
 
 	/**
 	 *	Read an array of the specific RelationCol record instances identified by the duplicate key ToColIdx.
@@ -703,7 +703,7 @@ extends ICFBamPubRelationColTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRelationCol[] protreadRecByToColIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ToColId );
+		ICFLibKeyHash256 ToColId );
 
 	/**
 	 *	Read an array of the specific RelationCol record instances identified by the duplicate key PrevIdx.
@@ -747,7 +747,7 @@ extends ICFBamPubRelationColTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRelationCol[] protreadRecByRelPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId,
+		ICFLibKeyHash256 RelationId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -764,7 +764,7 @@ extends ICFBamPubRelationColTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRelationCol[] protreadRecByRelNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId,
+		ICFLibKeyHash256 RelationId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -773,7 +773,7 @@ extends ICFBamPubRelationColTable
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtRelationCol protmoveRecUp( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 
 	/**

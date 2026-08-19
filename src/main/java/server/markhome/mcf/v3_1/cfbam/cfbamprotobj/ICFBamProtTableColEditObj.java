@@ -117,11 +117,11 @@ public interface ICFBamProtTableColEditObj
 	void setRequiredParentDataType( ICFBamProtValueObj value );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute TableId.
+	 *	Get the required ICFLibKeyHash256 attribute TableId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute TableId.
+	 *	@return	The required ICFLibKeyHash256 attribute TableId.
 	 */
-	CFLibDbKeyHash256 getRequiredTableId();
+	ICFLibKeyHash256 getRequiredTableId();
 
 	/**
 	 *	Get the optional String attribute DbName.

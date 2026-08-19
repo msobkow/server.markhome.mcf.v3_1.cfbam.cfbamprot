@@ -140,7 +140,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	Name	The Index key attribute of the instance generating the id.
 	 */
 	public void protdeleteIndexByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTableId,
+		ICFLibKeyHash256 argTableId,
 		String argName );
 
 	/**
@@ -169,7 +169,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	TableId	The Index key attribute of the instance generating the id.
 	 */
 	public void protdeleteIndexByIdxTableIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTableId );
+		ICFLibKeyHash256 argTableId );
 
 	/**
 	 *	Delete the Index instances identified by the key IdxTableIdx.
@@ -227,7 +227,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	CodeVis	The Index key attribute of the instance generating the id.
 	 */
 	public void protdeleteIndexByIdxTblCdVisX( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTableId,
+		ICFLibKeyHash256 argTableId,
 		ICFBamPubSchema.CodeVisibilityEnum argCodeVis );
 
 	/**
@@ -293,7 +293,7 @@ extends ICFBamProtScopeTable,
 	 *	@param	TenantId	The Index key attribute of the instance generating the id.
 	 */
 	public void protdeleteIndexByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTenantId );
+		ICFLibKeyHash256 argTenantId );
 
 	/**
 	 *	Delete the Index instances identified by the key TenantIdx.
@@ -371,7 +371,7 @@ extends ICFBamProtScopeTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtIndex protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the derived Index record instances identified by the duplicate key TenantIdx.
@@ -383,7 +383,7 @@ extends ICFBamProtScopeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtIndex[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read the derived Index record instance identified by the unique key UNameIdx.
@@ -398,7 +398,7 @@ extends ICFBamProtScopeTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtIndex protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId,
+		ICFLibKeyHash256 TableId,
 		String Name );
 
 	/**
@@ -411,7 +411,7 @@ extends ICFBamProtScopeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtIndex[] protreadDerivedByIdxTableIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId );
+		ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Read an array of the derived Index record instances identified by the duplicate key IdxCodeVisIdx.
@@ -437,7 +437,7 @@ extends ICFBamProtScopeTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtIndex[] protreadDerivedByIdxTblCdVisX( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId,
+		ICFLibKeyHash256 TableId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
@@ -504,7 +504,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndex protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the specific Index record instances identified by the duplicate key TenantIdx.
@@ -518,7 +518,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndex[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read the specific Index record instance identified by the unique key UNameIdx.
@@ -535,7 +535,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndex protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId,
+		ICFLibKeyHash256 TableId,
 		String Name );
 
 	/**
@@ -550,7 +550,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndex[] protreadRecByIdxTableIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId );
+		ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Read an array of the specific Index record instances identified by the duplicate key IdxCodeVisIdx.
@@ -580,7 +580,7 @@ extends ICFBamProtScopeTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndex[] protreadRecByIdxTblCdVisX( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId,
+		ICFLibKeyHash256 TableId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**

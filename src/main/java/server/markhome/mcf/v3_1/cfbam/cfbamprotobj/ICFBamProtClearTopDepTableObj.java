@@ -171,7 +171,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	ICFBamProtScopeObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtClearTopDepObj readClearTopDepByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtClearTopDepObj readClearTopDepByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	ICFBamProtScopeObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtClearTopDepObj readClearTopDepByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtClearTopDepObj readClearTopDepByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -192,7 +192,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	List of ICFBamProtClearTopDepObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearTopDepObj> readClearTopDepByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<ICFBamProtClearTopDepObj> readClearTopDepByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Get the map of ICFBamProtClearTopDepObj instances sorted by their primary keys for the duplicate TenantIdx key.
@@ -202,7 +202,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	List of ICFBamProtClearTopDepObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearTopDepObj> readClearTopDepByTenantIdx( CFLibDbKeyHash256 TenantId,
+	List<ICFBamProtClearTopDepObj> readClearTopDepByTenantIdx( ICFLibKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
@@ -213,7 +213,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	List of ICFBamProtClearTopDepObj cached instances sorted by their primary keys for the duplicate ClearDepIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearTopDepObj> readClearTopDepByClearDepIdx( CFLibDbKeyHash256 RelationId );
+	List<ICFBamProtClearTopDepObj> readClearTopDepByClearDepIdx( ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Get the map of ICFBamProtClearTopDepObj instances sorted by their primary keys for the duplicate ClearDepIdx key.
@@ -223,7 +223,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	List of ICFBamProtClearTopDepObj cached instances sorted by their primary keys for the duplicate ClearDepIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearTopDepObj> readClearTopDepByClearDepIdx( CFLibDbKeyHash256 RelationId,
+	List<ICFBamProtClearTopDepObj> readClearTopDepByClearDepIdx( ICFLibKeyHash256 RelationId,
 		boolean forceRead );
 
 	/**
@@ -255,7 +255,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	List of List<ICFBamProtClearTopDepObj> cached instances sorted by their primary keys for the duplicate ClrTopDepTblIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearTopDepObj> readClearTopDepByClrTopDepTblIdx( CFLibDbKeyHash256 TableId );
+	List<ICFBamProtClearTopDepObj> readClearTopDepByClrTopDepTblIdx( ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Get the map of List<ICFBamProtClearTopDepObj> instances sorted by their primary keys for the duplicate ClrTopDepTblIdx key.
@@ -265,7 +265,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	List of List<ICFBamProtClearTopDepObj> cached instances sorted by their primary keys for the duplicate ClrTopDepTblIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearTopDepObj> readClearTopDepByClrTopDepTblIdx( CFLibDbKeyHash256 TableId,
+	List<ICFBamProtClearTopDepObj> readClearTopDepByClrTopDepTblIdx( ICFLibKeyHash256 TableId,
 		boolean forceRead );
 
 	/**
@@ -278,7 +278,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	ICFBamProtClearTopDepObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtClearTopDepObj readClearTopDepByUNameIdx(CFLibDbKeyHash256 TableId,
+	ICFBamProtClearTopDepObj readClearTopDepByUNameIdx(ICFLibKeyHash256 TableId,
 		String Name );
 
 	/**
@@ -291,7 +291,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *	@return	ICFBamProtClearTopDepObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtClearTopDepObj readClearTopDepByUNameIdx(CFLibDbKeyHash256 TableId,
+	ICFBamProtClearTopDepObj readClearTopDepByUNameIdx(ICFLibKeyHash256 TableId,
 		String Name,
 		boolean forceRead );
 
@@ -337,34 +337,34 @@ public interface ICFBamProtClearTopDepTableObj
 	List<ICFBamProtClearTopDepObj> readClearTopDepByNextIdx( CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
-	ICFBamProtScopeObj readCachedClearTopDepByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtScopeObj readCachedClearTopDepByIdIdx( ICFLibKeyHash256 Id );
 
-	List<List<ICFBamProtScopeObj>> readCachedClearTopDepByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtScopeObj>> readCachedClearTopDepByTenantIdx( ICFLibKeyHash256 TenantId );
 
-	List<List<ICFBamProtClearDepObj>> readCachedClearTopDepByClearDepIdx( CFLibDbKeyHash256 RelationId );
+	List<List<ICFBamProtClearDepObj>> readCachedClearTopDepByClearDepIdx( ICFLibKeyHash256 RelationId );
 
 	List<List<ICFBamProtClearDepObj>> readCachedClearTopDepByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<List<ICFBamProtClearTopDepObj>> readCachedClearTopDepByClrTopDepTblIdx( CFLibDbKeyHash256 TableId );
+	List<List<ICFBamProtClearTopDepObj>> readCachedClearTopDepByClrTopDepTblIdx( ICFLibKeyHash256 TableId );
 
-	ICFBamProtClearTopDepObj readCachedClearTopDepByUNameIdx( CFLibDbKeyHash256 TableId,
+	ICFBamProtClearTopDepObj readCachedClearTopDepByUNameIdx( ICFLibKeyHash256 TableId,
 		String Name );
 
 	List<List<ICFBamProtClearTopDepObj>> readCachedClearTopDepByPrevIdx( CFLibDbKeyHash256 PrevId );
 
 	List<List<ICFBamProtClearTopDepObj>> readCachedClearTopDepByNextIdx( CFLibDbKeyHash256 NextId );
 
-	void deepDisposeClearTopDepByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeClearTopDepByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeClearTopDepByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deepDisposeClearTopDepByTenantIdx( ICFLibKeyHash256 TenantId );
 
-	void deepDisposeClearTopDepByClearDepIdx( CFLibDbKeyHash256 RelationId );
+	void deepDisposeClearTopDepByClearDepIdx( ICFLibKeyHash256 RelationId );
 
 	void deepDisposeClearTopDepByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	void deepDisposeClearTopDepByClrTopDepTblIdx( CFLibDbKeyHash256 TableId );
+	void deepDisposeClearTopDepByClrTopDepTblIdx( ICFLibKeyHash256 TableId );
 
-	void deepDisposeClearTopDepByUNameIdx( CFLibDbKeyHash256 TableId,
+	void deepDisposeClearTopDepByUNameIdx( ICFLibKeyHash256 TableId,
 		String Name );
 
 	void deepDisposeClearTopDepByPrevIdx( CFLibDbKeyHash256 PrevId );
@@ -386,21 +386,21 @@ public interface ICFBamProtClearTopDepTableObj
 	 *
 	 *	@param	Id	The ClearTopDep key attribute of the instance generating the id.
 	 */
-	void deleteClearTopDepByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteClearTopDepByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
 	 *
 	 *	@param	TenantId	The ClearTopDep key attribute of the instance generating the id.
 	 */
-	void deleteClearTopDepByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deleteClearTopDepByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Internal use only.
 	 *
 	 *	@param	RelationId	The ClearTopDep key attribute of the instance generating the id.
 	 */
-	void deleteClearTopDepByClearDepIdx( CFLibDbKeyHash256 RelationId );
+	void deleteClearTopDepByClearDepIdx( ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Internal use only.
@@ -414,7 +414,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *
 	 *	@param	TableId	The ClearTopDep key attribute of the instance generating the id.
 	 */
-	void deleteClearTopDepByClrTopDepTblIdx( CFLibDbKeyHash256 TableId );
+	void deleteClearTopDepByClrTopDepTblIdx( ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Internal use only.
@@ -423,7 +423,7 @@ public interface ICFBamProtClearTopDepTableObj
 	 *
 	 *	@param	Name	The ClearTopDep key attribute of the instance generating the id.
 	 */
-	void deleteClearTopDepByUNameIdx(CFLibDbKeyHash256 TableId,
+	void deleteClearTopDepByUNameIdx(ICFLibKeyHash256 TableId,
 		String Name );
 
 	/**

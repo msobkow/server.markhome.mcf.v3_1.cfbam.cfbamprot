@@ -162,18 +162,18 @@ public interface ICFBamProtClearTopDepObj
 	ICFBamProtClearTopDepObj getOptionalLookupNext( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute TableId.
+	 *	Get the required ICFLibKeyHash256 attribute TableId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute TableId.
+	 *	@return	The required ICFLibKeyHash256 attribute TableId.
 	 */
-	CFLibDbKeyHash256 getRequiredTableId();
+	ICFLibKeyHash256 getRequiredTableId();
 
 	/**
 	 *	Get the required String attribute Name.

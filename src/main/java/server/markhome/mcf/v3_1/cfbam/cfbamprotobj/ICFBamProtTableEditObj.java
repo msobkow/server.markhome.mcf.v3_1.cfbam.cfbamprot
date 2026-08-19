@@ -264,11 +264,11 @@ public interface ICFBamProtTableEditObj
 	List<ICFBamProtTweakObj> getOptionalComponentsTweaks();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute SchemaDefId.
+	 *	Get the required ICFLibKeyHash256 attribute SchemaDefId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute SchemaDefId.
+	 *	@return	The required ICFLibKeyHash256 attribute SchemaDefId.
 	 */
-	CFLibDbKeyHash256 getRequiredSchemaDefId();
+	ICFLibKeyHash256 getRequiredSchemaDefId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.

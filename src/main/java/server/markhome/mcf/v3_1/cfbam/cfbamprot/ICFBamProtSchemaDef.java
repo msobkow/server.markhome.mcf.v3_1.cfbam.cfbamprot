@@ -82,13 +82,13 @@ public interface ICFBamProtSchemaDef
 	public final static int CLASS_CODE = 0xa802;
 	public final static String S_CLASS_CODE = "a802";
 
-	public ICFIntPubMinorVersion getRequiredContainerMinorVersion();
+	public ICFIntProtMinorVersion getRequiredContainerMinorVersion();
 
 	public void setRequiredContainerMinorVersion(ICFLibKeyHash256 argMinorVersionId);
 
 	public void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj);
 
-	public ICFSecPubTenant getRequiredOwnerCTenant();
+	public ICFSecProtTenant getRequiredOwnerCTenant();
 
 	public void setRequiredOwnerCTenant(ICFLibKeyHash256 argCTenantId);
 

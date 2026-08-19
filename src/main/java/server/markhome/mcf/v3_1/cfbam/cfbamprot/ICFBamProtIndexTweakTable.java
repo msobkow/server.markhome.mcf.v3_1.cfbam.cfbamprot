@@ -138,7 +138,7 @@ extends ICFBamProtTweakTable,
 	 *	@param	IndexId	The IndexTweak key attribute of the instance generating the id.
 	 */
 	public void protdeleteIndexTweakByIndexIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argIndexId );
+		ICFLibKeyHash256 argIndexId );
 
 	/**
 	 *	Delete the IndexTweak instances identified by the key IndexIdx.
@@ -177,7 +177,7 @@ extends ICFBamProtTweakTable,
 	 *	@param	Name	The IndexTweak key attribute of the instance generating the id.
 	 */
 	public void protdeleteIndexTweakByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		String argName );
 
 	/**
@@ -206,7 +206,7 @@ extends ICFBamProtTweakTable,
 	 *	@param	TenantId	The IndexTweak key attribute of the instance generating the id.
 	 */
 	public void protdeleteIndexTweakByValTentIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTenantId );
+		ICFLibKeyHash256 argTenantId );
 
 	/**
 	 *	Delete the IndexTweak instances identified by the key ValTentIdx.
@@ -234,7 +234,7 @@ extends ICFBamProtTweakTable,
 	 *	@param	ScopeId	The IndexTweak key attribute of the instance generating the id.
 	 */
 	public void protdeleteIndexTweakByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId );
+		ICFLibKeyHash256 argScopeId );
 
 	/**
 	 *	Delete the IndexTweak instances identified by the key ScopeIdx.
@@ -298,8 +298,8 @@ extends ICFBamProtTweakTable,
 	 *	@param	Name	The IndexTweak key attribute of the instance generating the id.
 	 */
 	public void protdeleteIndexTweakByUDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTenantId,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argTenantId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argDefSchemaTenantId,
 		CFLibDbKeyHash256 argDefSchemaId,
 		String argName );
@@ -380,7 +380,7 @@ extends ICFBamProtTweakTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtIndexTweak protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived IndexTweak record instance identified by the unique key UNameIdx.
@@ -395,7 +395,7 @@ extends ICFBamProtTweakTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtIndexTweak protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -408,7 +408,7 @@ extends ICFBamProtTweakTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtIndexTweak[] protreadDerivedByValTentIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the derived IndexTweak record instances identified by the duplicate key ScopeIdx.
@@ -420,7 +420,7 @@ extends ICFBamProtTweakTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtIndexTweak[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the derived IndexTweak record instances identified by the duplicate key DefSchemaIdx.
@@ -453,8 +453,8 @@ extends ICFBamProtTweakTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtIndexTweak protreadDerivedByUDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 TenantId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
@@ -469,7 +469,7 @@ extends ICFBamProtTweakTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtIndexTweak[] protreadDerivedByIndexIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 IndexId );
+		ICFLibKeyHash256 IndexId );
 
 	/**
 	 *	Read the specific IndexTweak record instance identified by the primary key.
@@ -523,7 +523,7 @@ extends ICFBamProtTweakTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndexTweak protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific IndexTweak record instance identified by the unique key UNameIdx.
@@ -540,7 +540,7 @@ extends ICFBamProtTweakTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndexTweak protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -555,7 +555,7 @@ extends ICFBamProtTweakTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndexTweak[] protreadRecByValTentIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the specific IndexTweak record instances identified by the duplicate key ScopeIdx.
@@ -569,7 +569,7 @@ extends ICFBamProtTweakTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndexTweak[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the specific IndexTweak record instances identified by the duplicate key DefSchemaIdx.
@@ -606,8 +606,8 @@ extends ICFBamProtTweakTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndexTweak protreadRecByUDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 TenantId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
@@ -624,5 +624,5 @@ extends ICFBamProtTweakTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtIndexTweak[] protreadRecByIndexIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 IndexId );
+		ICFLibKeyHash256 IndexId );
 }

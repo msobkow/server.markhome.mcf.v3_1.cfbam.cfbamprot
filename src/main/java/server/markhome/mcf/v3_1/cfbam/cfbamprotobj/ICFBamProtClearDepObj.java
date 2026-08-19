@@ -120,18 +120,18 @@ public interface ICFBamProtClearDepObj
 	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute RelationId.
+	 *	Get the required ICFLibKeyHash256 attribute RelationId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute RelationId.
+	 *	@return	The required ICFLibKeyHash256 attribute RelationId.
 	 */
-	CFLibDbKeyHash256 getRequiredRelationId();
+	ICFLibKeyHash256 getRequiredRelationId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.

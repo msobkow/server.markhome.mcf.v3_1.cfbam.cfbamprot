@@ -138,7 +138,7 @@ extends ICFBamProtValueTable,
 	 *	@param	TableId	The TableCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableColByTableIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTableId );
+		ICFLibKeyHash256 argTableId );
 
 	/**
 	 *	Delete the TableCol instances identified by the key TableIdx.
@@ -205,7 +205,7 @@ extends ICFBamProtValueTable,
 	 *	@param	Name	The TableCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableColByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		String argName );
 
 	/**
@@ -234,7 +234,7 @@ extends ICFBamProtValueTable,
 	 *	@param	ScopeId	The TableCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableColByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId );
+		ICFLibKeyHash256 argScopeId );
 
 	/**
 	 *	Delete the TableCol instances identified by the key ScopeIdx.
@@ -348,7 +348,7 @@ extends ICFBamProtValueTable,
 	 *	@param	PrevId	The TableCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableColByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argPrevId );
 
 	/**
@@ -379,7 +379,7 @@ extends ICFBamProtValueTable,
 	 *	@param	NextId	The TableCol key attribute of the instance generating the id.
 	 */
 	public void protdeleteTableColByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argNextId );
 
 	/**
@@ -458,7 +458,7 @@ extends ICFBamProtValueTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtTableCol protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived TableCol record instance identified by the unique key UNameIdx.
@@ -473,7 +473,7 @@ extends ICFBamProtValueTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtTableCol protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -486,7 +486,7 @@ extends ICFBamProtValueTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtTableCol[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the derived TableCol record instances identified by the duplicate key DefSchemaIdx.
@@ -536,7 +536,7 @@ extends ICFBamProtValueTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtTableCol[] protreadDerivedByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -551,7 +551,7 @@ extends ICFBamProtValueTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtTableCol[] protreadDerivedByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -564,7 +564,7 @@ extends ICFBamProtValueTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtTableCol[] protreadDerivedByTableIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId );
+		ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Read an array of the derived TableCol record instances identified by the duplicate key DataIdx.
@@ -630,7 +630,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTableCol protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific TableCol record instance identified by the unique key UNameIdx.
@@ -647,7 +647,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTableCol protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -662,7 +662,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTableCol[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the specific TableCol record instances identified by the duplicate key DefSchemaIdx.
@@ -720,7 +720,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTableCol[] protreadRecByContPrevIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -737,7 +737,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTableCol[] protreadRecByContNextIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -752,7 +752,7 @@ extends ICFBamProtValueTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtTableCol[] protreadRecByTableIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId );
+		ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Read an array of the specific TableCol record instances identified by the duplicate key DataIdx.
@@ -774,7 +774,7 @@ extends ICFBamProtValueTable,
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtTableCol protmoveRecUp( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 
 	/**

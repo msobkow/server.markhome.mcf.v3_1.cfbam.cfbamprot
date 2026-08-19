@@ -215,18 +215,18 @@ public interface ICFBamProtChainEditObj
 	void setRequiredLookupNextRel( ICFBamProtRelationObj value );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
-	 *	Set the required CFLibDbKeyHash256 attribute Id.
+	 *	Set the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@param value The required CFLibDbKeyHash256 attribute Id value to be applied.
+	 *	@param value The required ICFLibKeyHash256 attribute Id value to be applied.
 	 */
-	void setRequiredId(CFLibDbKeyHash256 value);
+	void setRequiredId(ICFLibKeyHash256 value);
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.
@@ -306,11 +306,11 @@ public interface ICFBamProtChainEditObj
 	void setOptionalDescription(String value);
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute TableId.
+	 *	Get the required ICFLibKeyHash256 attribute TableId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute TableId.
+	 *	@return	The required ICFLibKeyHash256 attribute TableId.
 	 */
-	CFLibDbKeyHash256 getRequiredTableId();
+	ICFLibKeyHash256 getRequiredTableId();
 
 	/**
 	 *	Get the optional String attribute Suffix.
@@ -327,18 +327,18 @@ public interface ICFBamProtChainEditObj
 	void setOptionalSuffix(String value);
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute PrevRelationId.
+	 *	Get the required ICFLibKeyHash256 attribute PrevRelationId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute PrevRelationId.
+	 *	@return	The required ICFLibKeyHash256 attribute PrevRelationId.
 	 */
-	CFLibDbKeyHash256 getRequiredPrevRelationId();
+	ICFLibKeyHash256 getRequiredPrevRelationId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute NextRelationId.
+	 *	Get the required ICFLibKeyHash256 attribute NextRelationId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute NextRelationId.
+	 *	@return	The required ICFLibKeyHash256 attribute NextRelationId.
 	 */
-	CFLibDbKeyHash256 getRequiredNextRelationId();
+	ICFLibKeyHash256 getRequiredNextRelationId();
 
 	public void copyRecToOrig();
 	public void copyOrigToRec();

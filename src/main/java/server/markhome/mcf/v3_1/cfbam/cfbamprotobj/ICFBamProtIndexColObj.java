@@ -351,18 +351,18 @@ public interface ICFBamProtIndexColObj
 	ICFBamProtValueObj getRequiredLookupColumn( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute IndexId.
+	 *	Get the required ICFLibKeyHash256 attribute IndexId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute IndexId.
+	 *	@return	The required ICFLibKeyHash256 attribute IndexId.
 	 */
-	CFLibDbKeyHash256 getRequiredIndexId();
+	ICFLibKeyHash256 getRequiredIndexId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.
@@ -407,11 +407,11 @@ public interface ICFBamProtIndexColObj
 	String getOptionalDescription();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute ColumnId.
+	 *	Get the required ICFLibKeyHash256 attribute ColumnId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute ColumnId.
+	 *	@return	The required ICFLibKeyHash256 attribute ColumnId.
 	 */
-	CFLibDbKeyHash256 getRequiredColumnId();
+	ICFLibKeyHash256 getRequiredColumnId();
 
 	/**
 	 *	Get the required boolean attribute IsAscending.

@@ -171,7 +171,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	ICFBamProtValueObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtInt16TypeObj readInt16TypeByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtInt16TypeObj readInt16TypeByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	ICFBamProtValueObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtInt16TypeObj readInt16TypeByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtInt16TypeObj readInt16TypeByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -194,7 +194,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	ICFBamProtValueObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtInt16TypeObj readInt16TypeByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtInt16TypeObj readInt16TypeByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -207,7 +207,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	ICFBamProtValueObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtInt16TypeObj readInt16TypeByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtInt16TypeObj readInt16TypeByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name,
 		boolean forceRead );
 
@@ -219,7 +219,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	List of ICFBamProtInt16TypeObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtInt16TypeObj> readInt16TypeByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<ICFBamProtInt16TypeObj> readInt16TypeByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Get the map of ICFBamProtInt16TypeObj instances sorted by their primary keys for the duplicate ScopeIdx key.
@@ -229,7 +229,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	List of ICFBamProtInt16TypeObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtInt16TypeObj> readInt16TypeByScopeIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtInt16TypeObj> readInt16TypeByScopeIdx( ICFLibKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
@@ -305,7 +305,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	List of ICFBamProtInt16TypeObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtInt16TypeObj> readInt16TypeByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtInt16TypeObj> readInt16TypeByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -318,7 +318,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	List of ICFBamProtInt16TypeObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtInt16TypeObj> readInt16TypeByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtInt16TypeObj> readInt16TypeByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
@@ -332,7 +332,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	List of ICFBamProtInt16TypeObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtInt16TypeObj> readInt16TypeByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtInt16TypeObj> readInt16TypeByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -345,7 +345,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	List of ICFBamProtInt16TypeObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtInt16TypeObj> readInt16TypeByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtInt16TypeObj> readInt16TypeByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
@@ -357,7 +357,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	List of List<ICFBamProtInt16TypeObj> cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtInt16TypeObj> readInt16TypeBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	List<ICFBamProtInt16TypeObj> readInt16TypeBySchemaIdx( ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Get the map of List<ICFBamProtInt16TypeObj> instances sorted by their primary keys for the duplicate SchemaIdx key.
@@ -367,15 +367,15 @@ public interface ICFBamProtInt16TypeTableObj
 	 *	@return	List of List<ICFBamProtInt16TypeObj> cached instances sorted by their primary keys for the duplicate SchemaIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtInt16TypeObj> readInt16TypeBySchemaIdx( CFLibDbKeyHash256 SchemaDefId,
+	List<ICFBamProtInt16TypeObj> readInt16TypeBySchemaIdx( ICFLibKeyHash256 SchemaDefId,
 		boolean forceRead );
 
-	ICFBamProtValueObj readCachedInt16TypeByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtValueObj readCachedInt16TypeByIdIdx( ICFLibKeyHash256 Id );
 
-	ICFBamProtValueObj readCachedInt16TypeByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtValueObj readCachedInt16TypeByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	List<List<ICFBamProtValueObj>> readCachedInt16TypeByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtValueObj>> readCachedInt16TypeByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	List<List<ICFBamProtValueObj>> readCachedInt16TypeByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
@@ -383,20 +383,20 @@ public interface ICFBamProtInt16TypeTableObj
 
 	List<List<ICFBamProtValueObj>> readCachedInt16TypeByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<List<ICFBamProtValueObj>> readCachedInt16TypeByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedInt16TypeByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<List<ICFBamProtValueObj>> readCachedInt16TypeByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedInt16TypeByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
-	List<List<ICFBamProtInt16TypeObj>> readCachedInt16TypeBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	List<List<ICFBamProtInt16TypeObj>> readCachedInt16TypeBySchemaIdx( ICFLibKeyHash256 SchemaDefId );
 
-	void deepDisposeInt16TypeByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeInt16TypeByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeInt16TypeByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeInt16TypeByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	void deepDisposeInt16TypeByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deepDisposeInt16TypeByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	void deepDisposeInt16TypeByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
@@ -404,13 +404,13 @@ public interface ICFBamProtInt16TypeTableObj
 
 	void deepDisposeInt16TypeByNextIdx( CFLibDbKeyHash256 NextId );
 
-	void deepDisposeInt16TypeByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeInt16TypeByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	void deepDisposeInt16TypeByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeInt16TypeByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
-	void deepDisposeInt16TypeBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	void deepDisposeInt16TypeBySchemaIdx( ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Internal use only.
@@ -427,7 +427,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *
 	 *	@param	Id	The Int16Type key attribute of the instance generating the id.
 	 */
-	void deleteInt16TypeByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteInt16TypeByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
@@ -436,7 +436,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *
 	 *	@param	Name	The Int16Type key attribute of the instance generating the id.
 	 */
-	void deleteInt16TypeByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteInt16TypeByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -444,7 +444,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *
 	 *	@param	ScopeId	The Int16Type key attribute of the instance generating the id.
 	 */
-	void deleteInt16TypeByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deleteInt16TypeByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Internal use only.
@@ -474,7 +474,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *
 	 *	@param	PrevId	The Int16Type key attribute of the instance generating the id.
 	 */
-	void deleteInt16TypeByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteInt16TypeByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -484,7 +484,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *
 	 *	@param	NextId	The Int16Type key attribute of the instance generating the id.
 	 */
-	void deleteInt16TypeByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteInt16TypeByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -492,7 +492,7 @@ public interface ICFBamProtInt16TypeTableObj
 	 *
 	 *	@param	SchemaDefId	The Int16Type key attribute of the instance generating the id.
 	 */
-	void deleteInt16TypeBySchemaIdx( CFLibDbKeyHash256 SchemaDefId );
+	void deleteInt16TypeBySchemaIdx( ICFLibKeyHash256 SchemaDefId );
 
 	/**
 	 *	Move the ICFBamProtInt16TypeObj instance up in the chain.  The instance is always refreshed.

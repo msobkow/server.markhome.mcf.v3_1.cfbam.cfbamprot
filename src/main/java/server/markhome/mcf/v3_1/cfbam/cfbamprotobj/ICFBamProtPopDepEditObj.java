@@ -124,10 +124,10 @@ public interface ICFBamProtPopDepEditObj
 	CFLibDbKeyHash256 getOptionalDefSchemaId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute RelationId.
+	 *	Get the required ICFLibKeyHash256 attribute RelationId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute RelationId.
+	 *	@return	The required ICFLibKeyHash256 attribute RelationId.
 	 */
-	CFLibDbKeyHash256 getRequiredRelationId();
+	ICFLibKeyHash256 getRequiredRelationId();
 
 }

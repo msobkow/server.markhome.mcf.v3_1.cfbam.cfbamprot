@@ -124,11 +124,11 @@ public interface ICFBamProtServerMethodEditObj
 	List<ICFBamProtParamObj> getOptionalComponentsParams();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute TableId.
+	 *	Get the required ICFLibKeyHash256 attribute TableId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute TableId.
+	 *	@return	The required ICFLibKeyHash256 attribute TableId.
 	 */
-	CFLibDbKeyHash256 getRequiredTableId();
+	ICFLibKeyHash256 getRequiredTableId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.

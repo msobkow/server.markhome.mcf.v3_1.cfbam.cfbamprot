@@ -257,25 +257,25 @@ public interface ICFBamProtRelationColEditObj
 	void setRequiredLookupToCol( ICFBamProtIndexColObj value );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute RelationId.
+	 *	Get the required ICFLibKeyHash256 attribute RelationId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute RelationId.
+	 *	@return	The required ICFLibKeyHash256 attribute RelationId.
 	 */
-	CFLibDbKeyHash256 getRequiredRelationId();
+	ICFLibKeyHash256 getRequiredRelationId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
-	 *	Set the required CFLibDbKeyHash256 attribute Id.
+	 *	Set the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@param value The required CFLibDbKeyHash256 attribute Id value to be applied.
+	 *	@param value The required ICFLibKeyHash256 attribute Id value to be applied.
 	 */
-	void setRequiredId(CFLibDbKeyHash256 value);
+	void setRequiredId(ICFLibKeyHash256 value);
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.
@@ -355,18 +355,18 @@ public interface ICFBamProtRelationColEditObj
 	void setOptionalDescription(String value);
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute FromColId.
+	 *	Get the required ICFLibKeyHash256 attribute FromColId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute FromColId.
+	 *	@return	The required ICFLibKeyHash256 attribute FromColId.
 	 */
-	CFLibDbKeyHash256 getRequiredFromColId();
+	ICFLibKeyHash256 getRequiredFromColId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute ToColId.
+	 *	Get the required ICFLibKeyHash256 attribute ToColId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute ToColId.
+	 *	@return	The required ICFLibKeyHash256 attribute ToColId.
 	 */
-	CFLibDbKeyHash256 getRequiredToColId();
+	ICFLibKeyHash256 getRequiredToColId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute PrevId.

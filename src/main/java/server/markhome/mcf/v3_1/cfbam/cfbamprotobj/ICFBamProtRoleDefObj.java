@@ -267,18 +267,18 @@ public interface ICFBamProtRoleDefObj
 	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute ScopeId.
+	 *	Get the required ICFLibKeyHash256 attribute ScopeId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute ScopeId.
+	 *	@return	The required ICFLibKeyHash256 attribute ScopeId.
 	 */
-	CFLibDbKeyHash256 getRequiredScopeId();
+	ICFLibKeyHash256 getRequiredScopeId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.

@@ -138,7 +138,7 @@ extends ICFBamProtPopDepTable,
 	 *	@param	ContRelationId	The PopTopDep key attribute of the instance generating the id.
 	 */
 	public void protdeletePopTopDepByContRelIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argContRelationId );
+		ICFLibKeyHash256 argContRelationId );
 
 	/**
 	 *	Delete the PopTopDep instances identified by the key ContRelIdx.
@@ -168,7 +168,7 @@ extends ICFBamProtPopDepTable,
 	 *	@param	Name	The PopTopDep key attribute of the instance generating the id.
 	 */
 	public void protdeletePopTopDepByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argContRelationId,
+		ICFLibKeyHash256 argContRelationId,
 		String argName );
 
 	/**
@@ -197,7 +197,7 @@ extends ICFBamProtPopDepTable,
 	 *	@param	RelationId	The PopTopDep key attribute of the instance generating the id.
 	 */
 	public void protdeletePopTopDepByRelationIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argRelationId );
+		ICFLibKeyHash256 argRelationId );
 
 	/**
 	 *	Delete the PopTopDep instances identified by the key RelationIdx.
@@ -262,7 +262,7 @@ extends ICFBamProtPopDepTable,
 	 *	@param	TenantId	The PopTopDep key attribute of the instance generating the id.
 	 */
 	public void protdeletePopTopDepByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTenantId );
+		ICFLibKeyHash256 argTenantId );
 
 	/**
 	 *	Delete the PopTopDep instances identified by the key TenantIdx.
@@ -340,7 +340,7 @@ extends ICFBamProtPopDepTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtPopTopDep protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the derived PopTopDep record instances identified by the duplicate key TenantIdx.
@@ -352,7 +352,7 @@ extends ICFBamProtPopDepTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtPopTopDep[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the derived PopTopDep record instances identified by the duplicate key RelationIdx.
@@ -364,7 +364,7 @@ extends ICFBamProtPopDepTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtPopTopDep[] protreadDerivedByRelationIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId );
+		ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Read an array of the derived PopTopDep record instances identified by the duplicate key DefSchemaIdx.
@@ -388,7 +388,7 @@ extends ICFBamProtPopDepTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtPopTopDep[] protreadDerivedByContRelIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ContRelationId );
+		ICFLibKeyHash256 ContRelationId );
 
 	/**
 	 *	Read the derived PopTopDep record instance identified by the unique key UNameIdx.
@@ -403,7 +403,7 @@ extends ICFBamProtPopDepTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtPopTopDep protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ContRelationId,
+		ICFLibKeyHash256 ContRelationId,
 		String Name );
 
 	/**
@@ -458,7 +458,7 @@ extends ICFBamProtPopDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtPopTopDep protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the specific PopTopDep record instances identified by the duplicate key TenantIdx.
@@ -472,7 +472,7 @@ extends ICFBamProtPopDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtPopTopDep[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the specific PopTopDep record instances identified by the duplicate key RelationIdx.
@@ -486,7 +486,7 @@ extends ICFBamProtPopDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtPopTopDep[] protreadRecByRelationIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId );
+		ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Read an array of the specific PopTopDep record instances identified by the duplicate key DefSchemaIdx.
@@ -514,7 +514,7 @@ extends ICFBamProtPopDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtPopTopDep[] protreadRecByContRelIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ContRelationId );
+		ICFLibKeyHash256 ContRelationId );
 
 	/**
 	 *	Read the specific PopTopDep record instance identified by the unique key UNameIdx.
@@ -531,6 +531,6 @@ extends ICFBamProtPopDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtPopTopDep protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ContRelationId,
+		ICFLibKeyHash256 ContRelationId,
 		String Name );
 }

@@ -309,11 +309,11 @@ public interface ICFBamProtEnumTagObj
 	ICFBamProtEnumTagObj getOptionalLookupNext( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.
@@ -323,11 +323,11 @@ public interface ICFBamProtEnumTagObj
 	CFLibDbKeyHash256 getOptionalDefSchemaId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute EnumId.
+	 *	Get the required ICFLibKeyHash256 attribute EnumId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute EnumId.
+	 *	@return	The required ICFLibKeyHash256 attribute EnumId.
 	 */
-	CFLibDbKeyHash256 getRequiredEnumId();
+	ICFLibKeyHash256 getRequiredEnumId();
 
 	/**
 	 *	Get the optional Short attribute EnumCode.

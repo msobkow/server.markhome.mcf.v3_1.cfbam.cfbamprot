@@ -171,7 +171,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	ICFBamProtValueObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtDbKeyHash224ColObj readDbKeyHash224ColByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtDbKeyHash224ColObj readDbKeyHash224ColByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	ICFBamProtValueObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtDbKeyHash224ColObj readDbKeyHash224ColByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtDbKeyHash224ColObj readDbKeyHash224ColByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -194,7 +194,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	ICFBamProtValueObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtDbKeyHash224ColObj readDbKeyHash224ColByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtDbKeyHash224ColObj readDbKeyHash224ColByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -207,7 +207,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	ICFBamProtValueObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtDbKeyHash224ColObj readDbKeyHash224ColByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtDbKeyHash224ColObj readDbKeyHash224ColByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name,
 		boolean forceRead );
 
@@ -219,7 +219,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	List of ICFBamProtDbKeyHash224ColObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Get the map of ICFBamProtDbKeyHash224ColObj instances sorted by their primary keys for the duplicate ScopeIdx key.
@@ -229,7 +229,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	List of ICFBamProtDbKeyHash224ColObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByScopeIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByScopeIdx( ICFLibKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
@@ -305,7 +305,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	List of ICFBamProtDbKeyHash224ColObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -318,7 +318,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	List of ICFBamProtDbKeyHash224ColObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
@@ -332,7 +332,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	List of ICFBamProtDbKeyHash224ColObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -345,7 +345,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	List of ICFBamProtDbKeyHash224ColObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
@@ -357,7 +357,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	List of List<ICFBamProtDbKeyHash224ColObj> cached instances sorted by their primary keys for the duplicate TableIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByTableIdx( CFLibDbKeyHash256 TableId );
+	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByTableIdx( ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Get the map of List<ICFBamProtDbKeyHash224ColObj> instances sorted by their primary keys for the duplicate TableIdx key.
@@ -367,15 +367,15 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *	@return	List of List<ICFBamProtDbKeyHash224ColObj> cached instances sorted by their primary keys for the duplicate TableIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByTableIdx( CFLibDbKeyHash256 TableId,
+	List<ICFBamProtDbKeyHash224ColObj> readDbKeyHash224ColByTableIdx( ICFLibKeyHash256 TableId,
 		boolean forceRead );
 
-	ICFBamProtValueObj readCachedDbKeyHash224ColByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtValueObj readCachedDbKeyHash224ColByIdIdx( ICFLibKeyHash256 Id );
 
-	ICFBamProtValueObj readCachedDbKeyHash224ColByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtValueObj readCachedDbKeyHash224ColByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	List<List<ICFBamProtValueObj>> readCachedDbKeyHash224ColByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtValueObj>> readCachedDbKeyHash224ColByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	List<List<ICFBamProtValueObj>> readCachedDbKeyHash224ColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
@@ -383,20 +383,20 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 
 	List<List<ICFBamProtValueObj>> readCachedDbKeyHash224ColByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<List<ICFBamProtValueObj>> readCachedDbKeyHash224ColByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedDbKeyHash224ColByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<List<ICFBamProtValueObj>> readCachedDbKeyHash224ColByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedDbKeyHash224ColByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
-	List<List<ICFBamProtDbKeyHash224ColObj>> readCachedDbKeyHash224ColByTableIdx( CFLibDbKeyHash256 TableId );
+	List<List<ICFBamProtDbKeyHash224ColObj>> readCachedDbKeyHash224ColByTableIdx( ICFLibKeyHash256 TableId );
 
-	void deepDisposeDbKeyHash224ColByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeDbKeyHash224ColByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeDbKeyHash224ColByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeDbKeyHash224ColByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	void deepDisposeDbKeyHash224ColByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deepDisposeDbKeyHash224ColByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	void deepDisposeDbKeyHash224ColByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
@@ -404,13 +404,13 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 
 	void deepDisposeDbKeyHash224ColByNextIdx( CFLibDbKeyHash256 NextId );
 
-	void deepDisposeDbKeyHash224ColByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeDbKeyHash224ColByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	void deepDisposeDbKeyHash224ColByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeDbKeyHash224ColByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
-	void deepDisposeDbKeyHash224ColByTableIdx( CFLibDbKeyHash256 TableId );
+	void deepDisposeDbKeyHash224ColByTableIdx( ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Internal use only.
@@ -427,7 +427,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *
 	 *	@param	Id	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224ColByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteDbKeyHash224ColByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
@@ -436,7 +436,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *
 	 *	@param	Name	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224ColByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteDbKeyHash224ColByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -444,7 +444,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *
 	 *	@param	ScopeId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224ColByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deleteDbKeyHash224ColByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Internal use only.
@@ -474,7 +474,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *
 	 *	@param	PrevId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224ColByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteDbKeyHash224ColByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -484,7 +484,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *
 	 *	@param	NextId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224ColByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteDbKeyHash224ColByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -492,7 +492,7 @@ public interface ICFBamProtDbKeyHash224ColTableObj
 	 *
 	 *	@param	TableId	The DbKeyHash224Col key attribute of the instance generating the id.
 	 */
-	void deleteDbKeyHash224ColByTableIdx( CFLibDbKeyHash256 TableId );
+	void deleteDbKeyHash224ColByTableIdx( ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Move the ICFBamProtDbKeyHash224ColObj instance up in the chain.  The instance is always refreshed.

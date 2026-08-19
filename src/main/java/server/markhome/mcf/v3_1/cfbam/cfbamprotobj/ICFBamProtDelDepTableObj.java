@@ -171,7 +171,7 @@ public interface ICFBamProtDelDepTableObj
 	 *	@return	ICFBamProtScopeObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtDelDepObj readDelDepByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtDelDepObj readDelDepByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtDelDepTableObj
 	 *	@return	ICFBamProtScopeObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtDelDepObj readDelDepByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtDelDepObj readDelDepByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -192,7 +192,7 @@ public interface ICFBamProtDelDepTableObj
 	 *	@return	List of ICFBamProtDelDepObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDelDepObj> readDelDepByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<ICFBamProtDelDepObj> readDelDepByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Get the map of ICFBamProtDelDepObj instances sorted by their primary keys for the duplicate TenantIdx key.
@@ -202,7 +202,7 @@ public interface ICFBamProtDelDepTableObj
 	 *	@return	List of ICFBamProtDelDepObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDelDepObj> readDelDepByTenantIdx( CFLibDbKeyHash256 TenantId,
+	List<ICFBamProtDelDepObj> readDelDepByTenantIdx( ICFLibKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
@@ -234,7 +234,7 @@ public interface ICFBamProtDelDepTableObj
 	 *	@return	List of List<ICFBamProtDelDepObj> cached instances sorted by their primary keys for the duplicate DelDepIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDelDepObj> readDelDepByDelDepIdx( CFLibDbKeyHash256 RelationId );
+	List<ICFBamProtDelDepObj> readDelDepByDelDepIdx( ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Get the map of List<ICFBamProtDelDepObj> instances sorted by their primary keys for the duplicate DelDepIdx key.
@@ -244,24 +244,24 @@ public interface ICFBamProtDelDepTableObj
 	 *	@return	List of List<ICFBamProtDelDepObj> cached instances sorted by their primary keys for the duplicate DelDepIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtDelDepObj> readDelDepByDelDepIdx( CFLibDbKeyHash256 RelationId,
+	List<ICFBamProtDelDepObj> readDelDepByDelDepIdx( ICFLibKeyHash256 RelationId,
 		boolean forceRead );
 
-	ICFBamProtScopeObj readCachedDelDepByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtScopeObj readCachedDelDepByIdIdx( ICFLibKeyHash256 Id );
 
-	List<List<ICFBamProtScopeObj>> readCachedDelDepByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtScopeObj>> readCachedDelDepByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	List<List<ICFBamProtDelDepObj>> readCachedDelDepByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<List<ICFBamProtDelDepObj>> readCachedDelDepByDelDepIdx( CFLibDbKeyHash256 RelationId );
+	List<List<ICFBamProtDelDepObj>> readCachedDelDepByDelDepIdx( ICFLibKeyHash256 RelationId );
 
-	void deepDisposeDelDepByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeDelDepByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeDelDepByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deepDisposeDelDepByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	void deepDisposeDelDepByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	void deepDisposeDelDepByDelDepIdx( CFLibDbKeyHash256 RelationId );
+	void deepDisposeDelDepByDelDepIdx( ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Internal use only.
@@ -278,14 +278,14 @@ public interface ICFBamProtDelDepTableObj
 	 *
 	 *	@param	Id	The DelDep key attribute of the instance generating the id.
 	 */
-	void deleteDelDepByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteDelDepByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
 	 *
 	 *	@param	TenantId	The DelDep key attribute of the instance generating the id.
 	 */
-	void deleteDelDepByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deleteDelDepByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Internal use only.
@@ -299,5 +299,5 @@ public interface ICFBamProtDelDepTableObj
 	 *
 	 *	@param	RelationId	The DelDep key attribute of the instance generating the id.
 	 */
-	void deleteDelDepByDelDepIdx( CFLibDbKeyHash256 RelationId );
+	void deleteDelDepByDelDepIdx( ICFLibKeyHash256 RelationId );
 }

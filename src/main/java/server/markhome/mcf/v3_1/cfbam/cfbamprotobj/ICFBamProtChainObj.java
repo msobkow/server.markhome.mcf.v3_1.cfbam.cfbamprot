@@ -295,11 +295,11 @@ public interface ICFBamProtChainObj
 	ICFBamProtRelationObj getRequiredLookupNextRel( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.
@@ -344,11 +344,11 @@ public interface ICFBamProtChainObj
 	String getOptionalDescription();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute TableId.
+	 *	Get the required ICFLibKeyHash256 attribute TableId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute TableId.
+	 *	@return	The required ICFLibKeyHash256 attribute TableId.
 	 */
-	CFLibDbKeyHash256 getRequiredTableId();
+	ICFLibKeyHash256 getRequiredTableId();
 
 	/**
 	 *	Get the optional String attribute Suffix.
@@ -358,18 +358,18 @@ public interface ICFBamProtChainObj
 	String getOptionalSuffix();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute PrevRelationId.
+	 *	Get the required ICFLibKeyHash256 attribute PrevRelationId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute PrevRelationId.
+	 *	@return	The required ICFLibKeyHash256 attribute PrevRelationId.
 	 */
-	CFLibDbKeyHash256 getRequiredPrevRelationId();
+	ICFLibKeyHash256 getRequiredPrevRelationId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute NextRelationId.
+	 *	Get the required ICFLibKeyHash256 attribute NextRelationId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute NextRelationId.
+	 *	@return	The required ICFLibKeyHash256 attribute NextRelationId.
 	 */
-	CFLibDbKeyHash256 getRequiredNextRelationId();
+	ICFLibKeyHash256 getRequiredNextRelationId();
 
 	/**
 	 *	Internal use only.

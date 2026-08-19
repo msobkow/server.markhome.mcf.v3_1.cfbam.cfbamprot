@@ -171,7 +171,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	ICFBamProtValueObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtNmTokensDefObj readNmTokensDefByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtNmTokensDefObj readNmTokensDefByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	ICFBamProtValueObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtNmTokensDefObj readNmTokensDefByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtNmTokensDefObj readNmTokensDefByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -194,7 +194,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	ICFBamProtValueObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtNmTokensDefObj readNmTokensDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtNmTokensDefObj readNmTokensDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -207,7 +207,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	ICFBamProtValueObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtNmTokensDefObj readNmTokensDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtNmTokensDefObj readNmTokensDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name,
 		boolean forceRead );
 
@@ -219,7 +219,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	List of ICFBamProtNmTokensDefObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtNmTokensDefObj> readNmTokensDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<ICFBamProtNmTokensDefObj> readNmTokensDefByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Get the map of ICFBamProtNmTokensDefObj instances sorted by their primary keys for the duplicate ScopeIdx key.
@@ -229,7 +229,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	List of ICFBamProtNmTokensDefObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtNmTokensDefObj> readNmTokensDefByScopeIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtNmTokensDefObj> readNmTokensDefByScopeIdx( ICFLibKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
@@ -305,7 +305,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	List of ICFBamProtNmTokensDefObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtNmTokensDefObj> readNmTokensDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtNmTokensDefObj> readNmTokensDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -318,7 +318,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	List of ICFBamProtNmTokensDefObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtNmTokensDefObj> readNmTokensDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtNmTokensDefObj> readNmTokensDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
@@ -332,7 +332,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	List of ICFBamProtNmTokensDefObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtNmTokensDefObj> readNmTokensDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtNmTokensDefObj> readNmTokensDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -345,16 +345,16 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *	@return	List of ICFBamProtNmTokensDefObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtNmTokensDefObj> readNmTokensDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtNmTokensDefObj> readNmTokensDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
-	ICFBamProtValueObj readCachedNmTokensDefByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtValueObj readCachedNmTokensDefByIdIdx( ICFLibKeyHash256 Id );
 
-	ICFBamProtValueObj readCachedNmTokensDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtValueObj readCachedNmTokensDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	List<List<ICFBamProtValueObj>> readCachedNmTokensDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtValueObj>> readCachedNmTokensDefByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	List<List<ICFBamProtValueObj>> readCachedNmTokensDefByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
@@ -362,18 +362,18 @@ public interface ICFBamProtNmTokensDefTableObj
 
 	List<List<ICFBamProtValueObj>> readCachedNmTokensDefByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<List<ICFBamProtValueObj>> readCachedNmTokensDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedNmTokensDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<List<ICFBamProtValueObj>> readCachedNmTokensDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedNmTokensDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
-	void deepDisposeNmTokensDefByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeNmTokensDefByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeNmTokensDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeNmTokensDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	void deepDisposeNmTokensDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deepDisposeNmTokensDefByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	void deepDisposeNmTokensDefByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
@@ -381,10 +381,10 @@ public interface ICFBamProtNmTokensDefTableObj
 
 	void deepDisposeNmTokensDefByNextIdx( CFLibDbKeyHash256 NextId );
 
-	void deepDisposeNmTokensDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeNmTokensDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	void deepDisposeNmTokensDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeNmTokensDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -402,7 +402,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *
 	 *	@param	Id	The NmTokensDef key attribute of the instance generating the id.
 	 */
-	void deleteNmTokensDefByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteNmTokensDefByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
@@ -411,7 +411,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *
 	 *	@param	Name	The NmTokensDef key attribute of the instance generating the id.
 	 */
-	void deleteNmTokensDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteNmTokensDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -419,7 +419,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *
 	 *	@param	ScopeId	The NmTokensDef key attribute of the instance generating the id.
 	 */
-	void deleteNmTokensDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deleteNmTokensDefByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Internal use only.
@@ -449,7 +449,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *
 	 *	@param	PrevId	The NmTokensDef key attribute of the instance generating the id.
 	 */
-	void deleteNmTokensDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteNmTokensDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -459,7 +459,7 @@ public interface ICFBamProtNmTokensDefTableObj
 	 *
 	 *	@param	NextId	The NmTokensDef key attribute of the instance generating the id.
 	 */
-	void deleteNmTokensDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteNmTokensDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**

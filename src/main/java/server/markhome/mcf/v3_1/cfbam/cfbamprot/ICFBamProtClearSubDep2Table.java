@@ -138,7 +138,7 @@ extends ICFBamProtClearDepTable,
 	 *	@param	ClearSubDep1Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
 	public void protdeleteClearSubDep2ByClearSubDep1Idx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argClearSubDep1Id );
+		ICFLibKeyHash256 argClearSubDep1Id );
 
 	/**
 	 *	Delete the ClearSubDep2 instances identified by the key ClearSubDep1Idx.
@@ -168,7 +168,7 @@ extends ICFBamProtClearDepTable,
 	 *	@param	Name	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
 	public void protdeleteClearSubDep2ByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argClearSubDep1Id,
+		ICFLibKeyHash256 argClearSubDep1Id,
 		String argName );
 
 	/**
@@ -197,7 +197,7 @@ extends ICFBamProtClearDepTable,
 	 *	@param	RelationId	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
 	public void protdeleteClearSubDep2ByClearDepIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argRelationId );
+		ICFLibKeyHash256 argRelationId );
 
 	/**
 	 *	Delete the ClearSubDep2 instances identified by the key ClearDepIdx.
@@ -262,7 +262,7 @@ extends ICFBamProtClearDepTable,
 	 *	@param	TenantId	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
 	public void protdeleteClearSubDep2ByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTenantId );
+		ICFLibKeyHash256 argTenantId );
 
 	/**
 	 *	Delete the ClearSubDep2 instances identified by the key TenantIdx.
@@ -340,7 +340,7 @@ extends ICFBamProtClearDepTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtClearSubDep2 protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the derived ClearSubDep2 record instances identified by the duplicate key TenantIdx.
@@ -352,7 +352,7 @@ extends ICFBamProtClearDepTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtClearSubDep2[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the derived ClearSubDep2 record instances identified by the duplicate key ClearDepIdx.
@@ -364,7 +364,7 @@ extends ICFBamProtClearDepTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtClearSubDep2[] protreadDerivedByClearDepIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId );
+		ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Read an array of the derived ClearSubDep2 record instances identified by the duplicate key DefSchemaIdx.
@@ -388,7 +388,7 @@ extends ICFBamProtClearDepTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtClearSubDep2[] protreadDerivedByClearSubDep1Idx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClearSubDep1Id );
+		ICFLibKeyHash256 ClearSubDep1Id );
 
 	/**
 	 *	Read the derived ClearSubDep2 record instance identified by the unique key UNameIdx.
@@ -403,7 +403,7 @@ extends ICFBamProtClearDepTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtClearSubDep2 protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClearSubDep1Id,
+		ICFLibKeyHash256 ClearSubDep1Id,
 		String Name );
 
 	/**
@@ -458,7 +458,7 @@ extends ICFBamProtClearDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtClearSubDep2 protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the specific ClearSubDep2 record instances identified by the duplicate key TenantIdx.
@@ -472,7 +472,7 @@ extends ICFBamProtClearDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtClearSubDep2[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read an array of the specific ClearSubDep2 record instances identified by the duplicate key ClearDepIdx.
@@ -486,7 +486,7 @@ extends ICFBamProtClearDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtClearSubDep2[] protreadRecByClearDepIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 RelationId );
+		ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Read an array of the specific ClearSubDep2 record instances identified by the duplicate key DefSchemaIdx.
@@ -514,7 +514,7 @@ extends ICFBamProtClearDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtClearSubDep2[] protreadRecByClearSubDep1Idx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClearSubDep1Id );
+		ICFLibKeyHash256 ClearSubDep1Id );
 
 	/**
 	 *	Read the specific ClearSubDep2 record instance identified by the unique key UNameIdx.
@@ -531,6 +531,6 @@ extends ICFBamProtClearDepTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtClearSubDep2 protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClearSubDep1Id,
+		ICFLibKeyHash256 ClearSubDep1Id,
 		String Name );
 }

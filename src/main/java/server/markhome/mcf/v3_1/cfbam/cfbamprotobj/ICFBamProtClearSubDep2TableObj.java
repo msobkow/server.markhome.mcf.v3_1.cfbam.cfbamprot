@@ -171,7 +171,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	ICFBamProtScopeObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtClearSubDep2Obj readClearSubDep2ByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtClearSubDep2Obj readClearSubDep2ByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	ICFBamProtScopeObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtClearSubDep2Obj readClearSubDep2ByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtClearSubDep2Obj readClearSubDep2ByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -192,7 +192,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Get the map of ICFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate TenantIdx key.
@@ -202,7 +202,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByTenantIdx( CFLibDbKeyHash256 TenantId,
+	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByTenantIdx( ICFLibKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
@@ -213,7 +213,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate ClearDepIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearDepIdx( CFLibDbKeyHash256 RelationId );
+	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearDepIdx( ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Get the map of ICFBamProtClearSubDep2Obj instances sorted by their primary keys for the duplicate ClearDepIdx key.
@@ -223,7 +223,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	List of ICFBamProtClearSubDep2Obj cached instances sorted by their primary keys for the duplicate ClearDepIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearDepIdx( CFLibDbKeyHash256 RelationId,
+	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearDepIdx( ICFLibKeyHash256 RelationId,
 		boolean forceRead );
 
 	/**
@@ -255,7 +255,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	List of List<ICFBamProtClearSubDep2Obj> cached instances sorted by their primary keys for the duplicate ClearSubDep1Idx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearSubDep1Idx( CFLibDbKeyHash256 ClearSubDep1Id );
+	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearSubDep1Idx( ICFLibKeyHash256 ClearSubDep1Id );
 
 	/**
 	 *	Get the map of List<ICFBamProtClearSubDep2Obj> instances sorted by their primary keys for the duplicate ClearSubDep1Idx key.
@@ -265,7 +265,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	List of List<ICFBamProtClearSubDep2Obj> cached instances sorted by their primary keys for the duplicate ClearSubDep1Idx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearSubDep1Idx( CFLibDbKeyHash256 ClearSubDep1Id,
+	List<ICFBamProtClearSubDep2Obj> readClearSubDep2ByClearSubDep1Idx( ICFLibKeyHash256 ClearSubDep1Id,
 		boolean forceRead );
 
 	/**
@@ -278,7 +278,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	ICFBamProtClearSubDep2Obj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtClearSubDep2Obj readClearSubDep2ByUNameIdx(CFLibDbKeyHash256 ClearSubDep1Id,
+	ICFBamProtClearSubDep2Obj readClearSubDep2ByUNameIdx(ICFLibKeyHash256 ClearSubDep1Id,
 		String Name );
 
 	/**
@@ -291,34 +291,34 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *	@return	ICFBamProtClearSubDep2Obj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtClearSubDep2Obj readClearSubDep2ByUNameIdx(CFLibDbKeyHash256 ClearSubDep1Id,
+	ICFBamProtClearSubDep2Obj readClearSubDep2ByUNameIdx(ICFLibKeyHash256 ClearSubDep1Id,
 		String Name,
 		boolean forceRead );
 
-	ICFBamProtScopeObj readCachedClearSubDep2ByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtScopeObj readCachedClearSubDep2ByIdIdx( ICFLibKeyHash256 Id );
 
-	List<List<ICFBamProtScopeObj>> readCachedClearSubDep2ByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtScopeObj>> readCachedClearSubDep2ByTenantIdx( ICFLibKeyHash256 TenantId );
 
-	List<List<ICFBamProtClearDepObj>> readCachedClearSubDep2ByClearDepIdx( CFLibDbKeyHash256 RelationId );
+	List<List<ICFBamProtClearDepObj>> readCachedClearSubDep2ByClearDepIdx( ICFLibKeyHash256 RelationId );
 
 	List<List<ICFBamProtClearDepObj>> readCachedClearSubDep2ByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	List<List<ICFBamProtClearSubDep2Obj>> readCachedClearSubDep2ByClearSubDep1Idx( CFLibDbKeyHash256 ClearSubDep1Id );
+	List<List<ICFBamProtClearSubDep2Obj>> readCachedClearSubDep2ByClearSubDep1Idx( ICFLibKeyHash256 ClearSubDep1Id );
 
-	ICFBamProtClearSubDep2Obj readCachedClearSubDep2ByUNameIdx( CFLibDbKeyHash256 ClearSubDep1Id,
+	ICFBamProtClearSubDep2Obj readCachedClearSubDep2ByUNameIdx( ICFLibKeyHash256 ClearSubDep1Id,
 		String Name );
 
-	void deepDisposeClearSubDep2ByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeClearSubDep2ByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeClearSubDep2ByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deepDisposeClearSubDep2ByTenantIdx( ICFLibKeyHash256 TenantId );
 
-	void deepDisposeClearSubDep2ByClearDepIdx( CFLibDbKeyHash256 RelationId );
+	void deepDisposeClearSubDep2ByClearDepIdx( ICFLibKeyHash256 RelationId );
 
 	void deepDisposeClearSubDep2ByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	void deepDisposeClearSubDep2ByClearSubDep1Idx( CFLibDbKeyHash256 ClearSubDep1Id );
+	void deepDisposeClearSubDep2ByClearSubDep1Idx( ICFLibKeyHash256 ClearSubDep1Id );
 
-	void deepDisposeClearSubDep2ByUNameIdx( CFLibDbKeyHash256 ClearSubDep1Id,
+	void deepDisposeClearSubDep2ByUNameIdx( ICFLibKeyHash256 ClearSubDep1Id,
 		String Name );
 
 	/**
@@ -336,21 +336,21 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *
 	 *	@param	Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteClearSubDep2ByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
 	 *
 	 *	@param	TenantId	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deleteClearSubDep2ByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Internal use only.
 	 *
 	 *	@param	RelationId	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByClearDepIdx( CFLibDbKeyHash256 RelationId );
+	void deleteClearSubDep2ByClearDepIdx( ICFLibKeyHash256 RelationId );
 
 	/**
 	 *	Internal use only.
@@ -364,7 +364,7 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *
 	 *	@param	ClearSubDep1Id	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByClearSubDep1Idx( CFLibDbKeyHash256 ClearSubDep1Id );
+	void deleteClearSubDep2ByClearSubDep1Idx( ICFLibKeyHash256 ClearSubDep1Id );
 
 	/**
 	 *	Internal use only.
@@ -373,6 +373,6 @@ public interface ICFBamProtClearSubDep2TableObj
 	 *
 	 *	@param	Name	The ClearSubDep2 key attribute of the instance generating the id.
 	 */
-	void deleteClearSubDep2ByUNameIdx(CFLibDbKeyHash256 ClearSubDep1Id,
+	void deleteClearSubDep2ByUNameIdx(ICFLibKeyHash256 ClearSubDep1Id,
 		String Name );
 }

@@ -204,18 +204,18 @@ public interface ICFBamProtRelationObj
 	ICFBamProtRelationObj getOptionalLookupNarrowed( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute TableId.
+	 *	Get the required ICFLibKeyHash256 attribute TableId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute TableId.
+	 *	@return	The required ICFLibKeyHash256 attribute TableId.
 	 */
-	CFLibDbKeyHash256 getRequiredTableId();
+	ICFLibKeyHash256 getRequiredTableId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.
@@ -281,25 +281,25 @@ public interface ICFBamProtRelationObj
 	String getOptionalSuffix();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute FromIndexId.
+	 *	Get the required ICFLibKeyHash256 attribute FromIndexId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute FromIndexId.
+	 *	@return	The required ICFLibKeyHash256 attribute FromIndexId.
 	 */
-	CFLibDbKeyHash256 getRequiredFromIndexId();
+	ICFLibKeyHash256 getRequiredFromIndexId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute ToTableId.
+	 *	Get the required ICFLibKeyHash256 attribute ToTableId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute ToTableId.
+	 *	@return	The required ICFLibKeyHash256 attribute ToTableId.
 	 */
-	CFLibDbKeyHash256 getRequiredToTableId();
+	ICFLibKeyHash256 getRequiredToTableId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute ToIndexId.
+	 *	Get the required ICFLibKeyHash256 attribute ToIndexId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute ToIndexId.
+	 *	@return	The required ICFLibKeyHash256 attribute ToIndexId.
 	 */
-	CFLibDbKeyHash256 getRequiredToIndexId();
+	ICFLibKeyHash256 getRequiredToIndexId();
 
 	/**
 	 *	Get the required boolean attribute IsRequired.

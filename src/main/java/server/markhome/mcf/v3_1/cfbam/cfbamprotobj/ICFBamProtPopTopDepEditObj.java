@@ -103,11 +103,11 @@ public interface ICFBamProtPopTopDepEditObj
 	List<ICFBamProtPopSubDep1Obj> getOptionalComponentsPopDep();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute ContRelationId.
+	 *	Get the required ICFLibKeyHash256 attribute ContRelationId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute ContRelationId.
+	 *	@return	The required ICFLibKeyHash256 attribute ContRelationId.
 	 */
-	CFLibDbKeyHash256 getRequiredContRelationId();
+	ICFLibKeyHash256 getRequiredContRelationId();
 
 	/**
 	 *	Get the required String attribute Name.

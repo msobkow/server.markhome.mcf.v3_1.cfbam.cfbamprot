@@ -171,7 +171,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	ICFBamProtScopeObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtServerMethodObj readServerMethodByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtServerMethodObj readServerMethodByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtScopeObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	ICFBamProtScopeObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtServerMethodObj readServerMethodByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtServerMethodObj readServerMethodByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -192,7 +192,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	List of ICFBamProtServerMethodObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtServerMethodObj> readServerMethodByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<ICFBamProtServerMethodObj> readServerMethodByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Get the map of ICFBamProtServerMethodObj instances sorted by their primary keys for the duplicate TenantIdx key.
@@ -202,7 +202,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	List of ICFBamProtServerMethodObj cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtServerMethodObj> readServerMethodByTenantIdx( CFLibDbKeyHash256 TenantId,
+	List<ICFBamProtServerMethodObj> readServerMethodByTenantIdx( ICFLibKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
@@ -215,7 +215,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	ICFBamProtServerMethodObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtServerMethodObj readServerMethodByUNameIdx(CFLibDbKeyHash256 TableId,
+	ICFBamProtServerMethodObj readServerMethodByUNameIdx(ICFLibKeyHash256 TableId,
 		String Name );
 
 	/**
@@ -228,7 +228,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	ICFBamProtServerMethodObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtServerMethodObj readServerMethodByUNameIdx(CFLibDbKeyHash256 TableId,
+	ICFBamProtServerMethodObj readServerMethodByUNameIdx(ICFLibKeyHash256 TableId,
 		String Name,
 		boolean forceRead );
 
@@ -240,7 +240,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	List of List<ICFBamProtServerMethodObj> cached instances sorted by their primary keys for the duplicate MethTableIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtServerMethodObj> readServerMethodByMethTableIdx( CFLibDbKeyHash256 TableId );
+	List<ICFBamProtServerMethodObj> readServerMethodByMethTableIdx( ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Get the map of List<ICFBamProtServerMethodObj> instances sorted by their primary keys for the duplicate MethTableIdx key.
@@ -250,7 +250,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	List of List<ICFBamProtServerMethodObj> cached instances sorted by their primary keys for the duplicate MethTableIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtServerMethodObj> readServerMethodByMethTableIdx( CFLibDbKeyHash256 TableId,
+	List<ICFBamProtServerMethodObj> readServerMethodByMethTableIdx( ICFLibKeyHash256 TableId,
 		boolean forceRead );
 
 	/**
@@ -284,7 +284,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	List of List<ICFBamProtServerMethodObj> cached instances sorted by their primary keys for the duplicate MethTableVisIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtServerMethodObj> readServerMethodByMethTableVisIdx( CFLibDbKeyHash256 TableId,
+	List<ICFBamProtServerMethodObj> readServerMethodByMethTableVisIdx( ICFLibKeyHash256 TableId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
@@ -297,7 +297,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *	@return	List of List<ICFBamProtServerMethodObj> cached instances sorted by their primary keys for the duplicate MethTableVisIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtServerMethodObj> readServerMethodByMethTableVisIdx( CFLibDbKeyHash256 TableId,
+	List<ICFBamProtServerMethodObj> readServerMethodByMethTableVisIdx( ICFLibKeyHash256 TableId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis,
 		boolean forceRead );
 
@@ -322,34 +322,34 @@ public interface ICFBamProtServerMethodTableObj
 	List<ICFBamProtServerMethodObj> readServerMethodByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId,
 		boolean forceRead );
 
-	ICFBamProtScopeObj readCachedServerMethodByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtScopeObj readCachedServerMethodByIdIdx( ICFLibKeyHash256 Id );
 
-	List<List<ICFBamProtScopeObj>> readCachedServerMethodByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtScopeObj>> readCachedServerMethodByTenantIdx( ICFLibKeyHash256 TenantId );
 
-	ICFBamProtServerMethodObj readCachedServerMethodByUNameIdx( CFLibDbKeyHash256 TableId,
+	ICFBamProtServerMethodObj readCachedServerMethodByUNameIdx( ICFLibKeyHash256 TableId,
 		String Name );
 
-	List<List<ICFBamProtServerMethodObj>> readCachedServerMethodByMethTableIdx( CFLibDbKeyHash256 TableId );
+	List<List<ICFBamProtServerMethodObj>> readCachedServerMethodByMethTableIdx( ICFLibKeyHash256 TableId );
 
 	List<List<ICFBamProtServerMethodObj>> readCachedServerMethodByMethCodeVisIdx( ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
-	List<List<ICFBamProtServerMethodObj>> readCachedServerMethodByMethTableVisIdx( CFLibDbKeyHash256 TableId,
+	List<List<ICFBamProtServerMethodObj>> readCachedServerMethodByMethTableVisIdx( ICFLibKeyHash256 TableId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	List<List<ICFBamProtServerMethodObj>> readCachedServerMethodByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	void deepDisposeServerMethodByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeServerMethodByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeServerMethodByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deepDisposeServerMethodByTenantIdx( ICFLibKeyHash256 TenantId );
 
-	void deepDisposeServerMethodByUNameIdx( CFLibDbKeyHash256 TableId,
+	void deepDisposeServerMethodByUNameIdx( ICFLibKeyHash256 TableId,
 		String Name );
 
-	void deepDisposeServerMethodByMethTableIdx( CFLibDbKeyHash256 TableId );
+	void deepDisposeServerMethodByMethTableIdx( ICFLibKeyHash256 TableId );
 
 	void deepDisposeServerMethodByMethCodeVisIdx( ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
-	void deepDisposeServerMethodByMethTableVisIdx( CFLibDbKeyHash256 TableId,
+	void deepDisposeServerMethodByMethTableVisIdx( ICFLibKeyHash256 TableId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	void deepDisposeServerMethodByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
@@ -369,14 +369,14 @@ public interface ICFBamProtServerMethodTableObj
 	 *
 	 *	@param	Id	The ServerMethod key attribute of the instance generating the id.
 	 */
-	void deleteServerMethodByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteServerMethodByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
 	 *
 	 *	@param	TenantId	The ServerMethod key attribute of the instance generating the id.
 	 */
-	void deleteServerMethodByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deleteServerMethodByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Internal use only.
@@ -385,7 +385,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *
 	 *	@param	Name	The ServerMethod key attribute of the instance generating the id.
 	 */
-	void deleteServerMethodByUNameIdx(CFLibDbKeyHash256 TableId,
+	void deleteServerMethodByUNameIdx(ICFLibKeyHash256 TableId,
 		String Name );
 
 	/**
@@ -393,7 +393,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *
 	 *	@param	TableId	The ServerMethod key attribute of the instance generating the id.
 	 */
-	void deleteServerMethodByMethTableIdx( CFLibDbKeyHash256 TableId );
+	void deleteServerMethodByMethTableIdx( ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Internal use only.
@@ -409,7 +409,7 @@ public interface ICFBamProtServerMethodTableObj
 	 *
 	 *	@param	CodeVis	The ServerMethod key attribute of the instance generating the id.
 	 */
-	void deleteServerMethodByMethTableVisIdx( CFLibDbKeyHash256 TableId,
+	void deleteServerMethodByMethTableVisIdx( ICFLibKeyHash256 TableId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**

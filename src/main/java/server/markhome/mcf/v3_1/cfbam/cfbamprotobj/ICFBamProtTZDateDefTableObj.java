@@ -171,7 +171,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	ICFBamProtValueObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtTZDateDefObj readTZDateDefByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtTZDateDefObj readTZDateDefByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtValueObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	ICFBamProtValueObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtTZDateDefObj readTZDateDefByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtTZDateDefObj readTZDateDefByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -194,7 +194,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	ICFBamProtValueObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtTZDateDefObj readTZDateDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtTZDateDefObj readTZDateDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -207,7 +207,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	ICFBamProtValueObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtTZDateDefObj readTZDateDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtTZDateDefObj readTZDateDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name,
 		boolean forceRead );
 
@@ -219,7 +219,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	List of ICFBamProtTZDateDefObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtTZDateDefObj> readTZDateDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<ICFBamProtTZDateDefObj> readTZDateDefByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Get the map of ICFBamProtTZDateDefObj instances sorted by their primary keys for the duplicate ScopeIdx key.
@@ -229,7 +229,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	List of ICFBamProtTZDateDefObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtTZDateDefObj> readTZDateDefByScopeIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtTZDateDefObj> readTZDateDefByScopeIdx( ICFLibKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
@@ -305,7 +305,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	List of ICFBamProtTZDateDefObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtTZDateDefObj> readTZDateDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtTZDateDefObj> readTZDateDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -318,7 +318,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	List of ICFBamProtTZDateDefObj cached instances sorted by their primary keys for the duplicate ContPrevIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtTZDateDefObj> readTZDateDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtTZDateDefObj> readTZDateDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId,
 		boolean forceRead );
 
@@ -332,7 +332,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	List of ICFBamProtTZDateDefObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtTZDateDefObj> readTZDateDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtTZDateDefObj> readTZDateDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -345,16 +345,16 @@ public interface ICFBamProtTZDateDefTableObj
 	 *	@return	List of ICFBamProtTZDateDefObj cached instances sorted by their primary keys for the duplicate ContNextIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtTZDateDefObj> readTZDateDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtTZDateDefObj> readTZDateDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId,
 		boolean forceRead );
 
-	ICFBamProtValueObj readCachedTZDateDefByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtValueObj readCachedTZDateDefByIdIdx( ICFLibKeyHash256 Id );
 
-	ICFBamProtValueObj readCachedTZDateDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtValueObj readCachedTZDateDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	List<List<ICFBamProtValueObj>> readCachedTZDateDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtValueObj>> readCachedTZDateDefByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	List<List<ICFBamProtValueObj>> readCachedTZDateDefByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
@@ -362,18 +362,18 @@ public interface ICFBamProtTZDateDefTableObj
 
 	List<List<ICFBamProtValueObj>> readCachedTZDateDefByNextIdx( CFLibDbKeyHash256 NextId );
 
-	List<List<ICFBamProtValueObj>> readCachedTZDateDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedTZDateDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	List<List<ICFBamProtValueObj>> readCachedTZDateDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	List<List<ICFBamProtValueObj>> readCachedTZDateDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
-	void deepDisposeTZDateDefByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeTZDateDefByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeTZDateDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeTZDateDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	void deepDisposeTZDateDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deepDisposeTZDateDefByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	void deepDisposeTZDateDefByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
@@ -381,10 +381,10 @@ public interface ICFBamProtTZDateDefTableObj
 
 	void deepDisposeTZDateDefByNextIdx( CFLibDbKeyHash256 NextId );
 
-	void deepDisposeTZDateDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeTZDateDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
-	void deepDisposeTZDateDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeTZDateDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**
@@ -402,7 +402,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *
 	 *	@param	Id	The TZDateDef key attribute of the instance generating the id.
 	 */
-	void deleteTZDateDefByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteTZDateDefByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
@@ -411,7 +411,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *
 	 *	@param	Name	The TZDateDef key attribute of the instance generating the id.
 	 */
-	void deleteTZDateDefByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteTZDateDefByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -419,7 +419,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *
 	 *	@param	ScopeId	The TZDateDef key attribute of the instance generating the id.
 	 */
-	void deleteTZDateDefByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deleteTZDateDefByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Internal use only.
@@ -449,7 +449,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *
 	 *	@param	PrevId	The TZDateDef key attribute of the instance generating the id.
 	 */
-	void deleteTZDateDefByContPrevIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteTZDateDefByContPrevIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 PrevId );
 
 	/**
@@ -459,7 +459,7 @@ public interface ICFBamProtTZDateDefTableObj
 	 *
 	 *	@param	NextId	The TZDateDef key attribute of the instance generating the id.
 	 */
-	void deleteTZDateDefByContNextIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteTZDateDefByContNextIdx( ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 NextId );
 
 	/**

@@ -171,7 +171,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	ICFBamProtTweakObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtIndexTweakObj readIndexTweakByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtIndexTweakObj readIndexTweakByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFBamProtTweakObj instance for the primary key attributes.
@@ -181,7 +181,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	ICFBamProtTweakObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtIndexTweakObj readIndexTweakByIdIdx( CFLibDbKeyHash256 Id,
+	ICFBamProtIndexTweakObj readIndexTweakByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -194,7 +194,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	ICFBamProtTweakObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtIndexTweakObj readIndexTweakByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtIndexTweakObj readIndexTweakByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -207,7 +207,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	ICFBamProtTweakObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtIndexTweakObj readIndexTweakByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtIndexTweakObj readIndexTweakByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name,
 		boolean forceRead );
 
@@ -219,7 +219,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	List of ICFBamProtIndexTweakObj cached instances sorted by their primary keys for the duplicate ValTentIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtIndexTweakObj> readIndexTweakByValTentIdx( CFLibDbKeyHash256 TenantId );
+	List<ICFBamProtIndexTweakObj> readIndexTweakByValTentIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Get the map of ICFBamProtIndexTweakObj instances sorted by their primary keys for the duplicate ValTentIdx key.
@@ -229,7 +229,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	List of ICFBamProtIndexTweakObj cached instances sorted by their primary keys for the duplicate ValTentIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtIndexTweakObj> readIndexTweakByValTentIdx( CFLibDbKeyHash256 TenantId,
+	List<ICFBamProtIndexTweakObj> readIndexTweakByValTentIdx( ICFLibKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
@@ -240,7 +240,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	List of ICFBamProtIndexTweakObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtIndexTweakObj> readIndexTweakByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<ICFBamProtIndexTweakObj> readIndexTweakByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Get the map of ICFBamProtIndexTweakObj instances sorted by their primary keys for the duplicate ScopeIdx key.
@@ -250,7 +250,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	List of ICFBamProtIndexTweakObj cached instances sorted by their primary keys for the duplicate ScopeIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtIndexTweakObj> readIndexTweakByScopeIdx( CFLibDbKeyHash256 ScopeId,
+	List<ICFBamProtIndexTweakObj> readIndexTweakByScopeIdx( ICFLibKeyHash256 ScopeId,
 		boolean forceRead );
 
 	/**
@@ -290,8 +290,8 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	ICFBamProtTweakObj cached instance for the unique UDefIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtIndexTweakObj readIndexTweakByUDefIdx( CFLibDbKeyHash256 TenantId,
-		CFLibDbKeyHash256 ScopeId,
+	ICFBamProtIndexTweakObj readIndexTweakByUDefIdx( ICFLibKeyHash256 TenantId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
@@ -312,8 +312,8 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	ICFBamProtTweakObj refreshed instance for the unique UDefIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFBamProtIndexTweakObj readIndexTweakByUDefIdx( CFLibDbKeyHash256 TenantId,
-		CFLibDbKeyHash256 ScopeId,
+	ICFBamProtIndexTweakObj readIndexTweakByUDefIdx( ICFLibKeyHash256 TenantId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name,
@@ -327,7 +327,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	List of List<ICFBamProtIndexTweakObj> cached instances sorted by their primary keys for the duplicate IndexIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtIndexTweakObj> readIndexTweakByIndexIdx( CFLibDbKeyHash256 IndexId );
+	List<ICFBamProtIndexTweakObj> readIndexTweakByIndexIdx( ICFLibKeyHash256 IndexId );
 
 	/**
 	 *	Get the map of List<ICFBamProtIndexTweakObj> instances sorted by their primary keys for the duplicate IndexIdx key.
@@ -337,46 +337,46 @@ public interface ICFBamProtIndexTweakTableObj
 	 *	@return	List of List<ICFBamProtIndexTweakObj> cached instances sorted by their primary keys for the duplicate IndexIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFBamProtIndexTweakObj> readIndexTweakByIndexIdx( CFLibDbKeyHash256 IndexId,
+	List<ICFBamProtIndexTweakObj> readIndexTweakByIndexIdx( ICFLibKeyHash256 IndexId,
 		boolean forceRead );
 
-	ICFBamProtTweakObj readCachedIndexTweakByIdIdx( CFLibDbKeyHash256 Id );
+	ICFBamProtTweakObj readCachedIndexTweakByIdIdx( ICFLibKeyHash256 Id );
 
-	ICFBamProtTweakObj readCachedIndexTweakByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	ICFBamProtTweakObj readCachedIndexTweakByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	List<List<ICFBamProtTweakObj>> readCachedIndexTweakByValTentIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFBamProtTweakObj>> readCachedIndexTweakByValTentIdx( ICFLibKeyHash256 TenantId );
 
-	List<List<ICFBamProtTweakObj>> readCachedIndexTweakByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	List<List<ICFBamProtTweakObj>> readCachedIndexTweakByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	List<List<ICFBamProtTweakObj>> readCachedIndexTweakByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	ICFBamProtTweakObj readCachedIndexTweakByUDefIdx( CFLibDbKeyHash256 TenantId,
-		CFLibDbKeyHash256 ScopeId,
+	ICFBamProtTweakObj readCachedIndexTweakByUDefIdx( ICFLibKeyHash256 TenantId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
-	List<List<ICFBamProtIndexTweakObj>> readCachedIndexTweakByIndexIdx( CFLibDbKeyHash256 IndexId );
+	List<List<ICFBamProtIndexTweakObj>> readCachedIndexTweakByIndexIdx( ICFLibKeyHash256 IndexId );
 
-	void deepDisposeIndexTweakByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeIndexTweakByIdIdx( ICFLibKeyHash256 Id );
 
-	void deepDisposeIndexTweakByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deepDisposeIndexTweakByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
-	void deepDisposeIndexTweakByValTentIdx( CFLibDbKeyHash256 TenantId );
+	void deepDisposeIndexTweakByValTentIdx( ICFLibKeyHash256 TenantId );
 
-	void deepDisposeIndexTweakByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deepDisposeIndexTweakByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	void deepDisposeIndexTweakByDefSchemaIdx( CFLibDbKeyHash256 DefSchemaId );
 
-	void deepDisposeIndexTweakByUDefIdx( CFLibDbKeyHash256 TenantId,
-		CFLibDbKeyHash256 ScopeId,
+	void deepDisposeIndexTweakByUDefIdx( ICFLibKeyHash256 TenantId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
-	void deepDisposeIndexTweakByIndexIdx( CFLibDbKeyHash256 IndexId );
+	void deepDisposeIndexTweakByIndexIdx( ICFLibKeyHash256 IndexId );
 
 	/**
 	 *	Internal use only.
@@ -393,7 +393,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *
 	 *	@param	Id	The IndexTweak key attribute of the instance generating the id.
 	 */
-	void deleteIndexTweakByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteIndexTweakByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.
@@ -402,7 +402,7 @@ public interface ICFBamProtIndexTweakTableObj
 	 *
 	 *	@param	Name	The IndexTweak key attribute of the instance generating the id.
 	 */
-	void deleteIndexTweakByUNameIdx( CFLibDbKeyHash256 ScopeId,
+	void deleteIndexTweakByUNameIdx( ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -410,14 +410,14 @@ public interface ICFBamProtIndexTweakTableObj
 	 *
 	 *	@param	TenantId	The IndexTweak key attribute of the instance generating the id.
 	 */
-	void deleteIndexTweakByValTentIdx( CFLibDbKeyHash256 TenantId );
+	void deleteIndexTweakByValTentIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Internal use only.
 	 *
 	 *	@param	ScopeId	The IndexTweak key attribute of the instance generating the id.
 	 */
-	void deleteIndexTweakByScopeIdx( CFLibDbKeyHash256 ScopeId );
+	void deleteIndexTweakByScopeIdx( ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Internal use only.
@@ -439,8 +439,8 @@ public interface ICFBamProtIndexTweakTableObj
 	 *
 	 *	@param	Name	The IndexTweak key attribute of the instance generating the id.
 	 */
-	void deleteIndexTweakByUDefIdx( CFLibDbKeyHash256 TenantId,
-		CFLibDbKeyHash256 ScopeId,
+	void deleteIndexTweakByUDefIdx( ICFLibKeyHash256 TenantId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaTenantId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
@@ -450,5 +450,5 @@ public interface ICFBamProtIndexTweakTableObj
 	 *
 	 *	@param	IndexId	The IndexTweak key attribute of the instance generating the id.
 	 */
-	void deleteIndexTweakByIndexIdx( CFLibDbKeyHash256 IndexId );
+	void deleteIndexTweakByIndexIdx( ICFLibKeyHash256 IndexId );
 }

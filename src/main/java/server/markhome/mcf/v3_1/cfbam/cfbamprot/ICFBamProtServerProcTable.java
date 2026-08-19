@@ -140,7 +140,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@param	Name	The ServerProc key attribute of the instance generating the id.
 	 */
 	public void protdeleteServerProcByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTableId,
+		ICFLibKeyHash256 argTableId,
 		String argName );
 
 	/**
@@ -169,7 +169,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@param	TableId	The ServerProc key attribute of the instance generating the id.
 	 */
 	public void protdeleteServerProcByMethTableIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTableId );
+		ICFLibKeyHash256 argTableId );
 
 	/**
 	 *	Delete the ServerProc instances identified by the key MethTableIdx.
@@ -227,7 +227,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@param	CodeVis	The ServerProc key attribute of the instance generating the id.
 	 */
 	public void protdeleteServerProcByMethTableVisIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTableId,
+		ICFLibKeyHash256 argTableId,
 		ICFBamPubSchema.CodeVisibilityEnum argCodeVis );
 
 	/**
@@ -293,7 +293,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@param	TenantId	The ServerProc key attribute of the instance generating the id.
 	 */
 	public void protdeleteServerProcByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argTenantId );
+		ICFLibKeyHash256 argTenantId );
 
 	/**
 	 *	Delete the ServerProc instances identified by the key TenantIdx.
@@ -371,7 +371,7 @@ extends ICFBamProtServerMethodTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtServerProc protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the derived ServerProc record instances identified by the duplicate key TenantIdx.
@@ -383,7 +383,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtServerProc[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read the derived ServerProc record instance identified by the unique key UNameIdx.
@@ -398,7 +398,7 @@ extends ICFBamProtServerMethodTable,
 	 *		no such existing key value.
 	 */
 	public ICFBamProtServerProc protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId,
+		ICFLibKeyHash256 TableId,
 		String Name );
 
 	/**
@@ -411,7 +411,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtServerProc[] protreadDerivedByMethTableIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId );
+		ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Read an array of the derived ServerProc record instances identified by the duplicate key MethCodeVisIdx.
@@ -437,7 +437,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtServerProc[] protreadDerivedByMethTableVisIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId,
+		ICFLibKeyHash256 TableId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**
@@ -504,7 +504,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtServerProc protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the specific ServerProc record instances identified by the duplicate key TenantIdx.
@@ -518,7 +518,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtServerProc[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TenantId );
+		ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Read the specific ServerProc record instance identified by the unique key UNameIdx.
@@ -535,7 +535,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtServerProc protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId,
+		ICFLibKeyHash256 TableId,
 		String Name );
 
 	/**
@@ -550,7 +550,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtServerProc[] protreadRecByMethTableIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId );
+		ICFLibKeyHash256 TableId );
 
 	/**
 	 *	Read an array of the specific ServerProc record instances identified by the duplicate key MethCodeVisIdx.
@@ -580,7 +580,7 @@ extends ICFBamProtServerMethodTable,
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtServerProc[] protreadRecByMethTableVisIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 TableId,
+		ICFLibKeyHash256 TableId,
 		ICFBamPubSchema.CodeVisibilityEnum CodeVis );
 
 	/**

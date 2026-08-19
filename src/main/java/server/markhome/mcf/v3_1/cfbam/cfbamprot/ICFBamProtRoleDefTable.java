@@ -148,7 +148,7 @@ extends ICFBamPubRoleDefTable
 	 *	@param	Name	The RoleDef key attribute of the instance generating the id.
 	 */
 	public void protdeleteRoleDefByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		String argName );
 
 	/**
@@ -177,7 +177,7 @@ extends ICFBamPubRoleDefTable
 	 *	@param	ScopeId	The RoleDef key attribute of the instance generating the id.
 	 */
 	public void protdeleteRoleDefByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId );
+		ICFLibKeyHash256 argScopeId );
 
 	/**
 	 *	Delete the RoleDef instances identified by the key ScopeIdx.
@@ -237,7 +237,7 @@ extends ICFBamPubRoleDefTable
 	 *	@param	Name	The RoleDef key attribute of the instance generating the id.
 	 */
 	public void protdeleteRoleDefByUDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argScopeId,
+		ICFLibKeyHash256 argScopeId,
 		CFLibDbKeyHash256 argDefSchemaId,
 		String argName );
 
@@ -317,7 +317,7 @@ extends ICFBamPubRoleDefTable
 	 *		no such existing key value.
 	 */
 	public ICFBamProtRoleDef protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived RoleDef record instance identified by the unique key UNameIdx.
@@ -332,7 +332,7 @@ extends ICFBamPubRoleDefTable
 	 *		no such existing key value.
 	 */
 	public ICFBamProtRoleDef protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -345,7 +345,7 @@ extends ICFBamPubRoleDefTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtRoleDef[] protreadDerivedByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the derived RoleDef record instances identified by the duplicate key DefSchemaIdx.
@@ -374,7 +374,7 @@ extends ICFBamPubRoleDefTable
 	 *		no such existing key value.
 	 */
 	public ICFBamProtRoleDef protreadDerivedByUDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 
@@ -430,7 +430,7 @@ extends ICFBamPubRoleDefTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRoleDef protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific RoleDef record instance identified by the unique key UNameIdx.
@@ -447,7 +447,7 @@ extends ICFBamPubRoleDefTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRoleDef protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		String Name );
 
 	/**
@@ -462,7 +462,7 @@ extends ICFBamPubRoleDefTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRoleDef[] protreadRecByScopeIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId );
+		ICFLibKeyHash256 ScopeId );
 
 	/**
 	 *	Read an array of the specific RoleDef record instances identified by the duplicate key DefSchemaIdx.
@@ -495,7 +495,7 @@ extends ICFBamPubRoleDefTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtRoleDef protreadRecByUDefIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ScopeId,
+		ICFLibKeyHash256 ScopeId,
 		CFLibDbKeyHash256 DefSchemaId,
 		String Name );
 }

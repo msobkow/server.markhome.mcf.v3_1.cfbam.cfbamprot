@@ -146,7 +146,7 @@ extends ICFBamPubEnumTagTable
 	 *	@param	EnumId	The EnumTag key attribute of the instance generating the id.
 	 */
 	public void protdeleteEnumTagByEnumIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argEnumId );
+		ICFLibKeyHash256 argEnumId );
 
 	/**
 	 *	Delete the EnumTag instances identified by the key EnumIdx.
@@ -204,7 +204,7 @@ extends ICFBamPubEnumTagTable
 	 *	@param	Name	The EnumTag key attribute of the instance generating the id.
 	 */
 	public void protdeleteEnumTagByEnumNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argEnumId,
+		ICFLibKeyHash256 argEnumId,
 		String argName );
 
 	/**
@@ -339,7 +339,7 @@ extends ICFBamPubEnumTagTable
 	 *		no such existing key value.
 	 */
 	public ICFBamProtEnumTag protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the derived EnumTag record instances identified by the duplicate key EnumIdx.
@@ -351,7 +351,7 @@ extends ICFBamPubEnumTagTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFBamProtEnumTag[] protreadDerivedByEnumIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 EnumId );
+		ICFLibKeyHash256 EnumId );
 
 	/**
 	 *	Read an array of the derived EnumTag record instances identified by the duplicate key DefSchemaIdx.
@@ -378,7 +378,7 @@ extends ICFBamPubEnumTagTable
 	 *		no such existing key value.
 	 */
 	public ICFBamProtEnumTag protreadDerivedByEnumNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 EnumId,
+		ICFLibKeyHash256 EnumId,
 		String Name );
 
 	/**
@@ -457,7 +457,7 @@ extends ICFBamPubEnumTagTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtEnumTag protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the specific EnumTag record instances identified by the duplicate key EnumIdx.
@@ -471,7 +471,7 @@ extends ICFBamPubEnumTagTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtEnumTag[] protreadRecByEnumIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 EnumId );
+		ICFLibKeyHash256 EnumId );
 
 	/**
 	 *	Read an array of the specific EnumTag record instances identified by the duplicate key DefSchemaIdx.
@@ -502,7 +502,7 @@ extends ICFBamPubEnumTagTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFBamProtEnumTag protreadRecByEnumNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 EnumId,
+		ICFLibKeyHash256 EnumId,
 		String Name );
 
 	/**
@@ -539,7 +539,7 @@ extends ICFBamPubEnumTagTable
 	 *	@return	The refreshed record after it has been moved
 	 */
 	public ICFBamProtEnumTag protmoveRecUp( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id,
+		ICFLibKeyHash256 Id,
 		int revision );
 
 	/**

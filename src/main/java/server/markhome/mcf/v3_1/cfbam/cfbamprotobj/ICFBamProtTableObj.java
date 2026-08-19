@@ -302,11 +302,11 @@ public interface ICFBamProtTableObj
 	List<ICFBamProtTweakObj> getOptionalComponentsTweaks( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute SchemaDefId.
+	 *	Get the required ICFLibKeyHash256 attribute SchemaDefId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute SchemaDefId.
+	 *	@return	The required ICFLibKeyHash256 attribute SchemaDefId.
 	 */
-	CFLibDbKeyHash256 getRequiredSchemaDefId();
+	ICFLibKeyHash256 getRequiredSchemaDefId();
 
 	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute DefSchemaId.
@@ -316,11 +316,11 @@ public interface ICFBamProtTableObj
 	CFLibDbKeyHash256 getOptionalDefSchemaId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute Id.
+	 *	Get the required ICFLibKeyHash256 attribute Id.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute Id.
+	 *	@return	The required ICFLibKeyHash256 attribute Id.
 	 */
-	CFLibDbKeyHash256 getRequiredId();
+	ICFLibKeyHash256 getRequiredId();
 
 	/**
 	 *	Get the required String attribute Name.
