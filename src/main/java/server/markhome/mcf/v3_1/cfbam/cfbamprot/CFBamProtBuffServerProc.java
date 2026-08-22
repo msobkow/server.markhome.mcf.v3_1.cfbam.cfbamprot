@@ -82,7 +82,7 @@ public class CFBamProtBuffServerProc
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamServerProc.CLASS_CODE );
+		return( ICFBamProtServerProc.CLASS_CODE );
 	}
 
 	@Override
@@ -173,8 +173,8 @@ public class CFBamProtBuffServerProc
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamScopeHPKey ) {
-			ICFBamProtScopeHPKey rhs = (ICFBamScopeHPKey)obj;
+		else if( obj instanceof ICFBamProtScopeHPKey ) {
+			ICFBamProtScopeHPKey rhs = (ICFBamProtScopeHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -526,7 +526,7 @@ public class CFBamProtBuffServerProc
 	}
 
 	@Override
-	public void setJustProt( ICFBamScope src ) {
+	public void set( ICFBamProtScope src ) {
 		if( src instanceof CFBamProtBuffServerProc ) {
 			setJustProtServerProc( (CFBamProtBuffServerProc)src );
 		}
@@ -540,13 +540,13 @@ public class CFBamProtBuffServerProc
 	}
 
 	@Override
-	public void setJustProtServerProc( ICFBamServerProc src ) {
-		super.setJustProtServerMethod( src );
+	public void setServerProc( ICFBamProtServerProc src ) {
+		super.setServerMethod( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamScopeH src ) {
+	public void set( ICFBamProtScopeH src ) {
 		if( src instanceof ICFBamProtServerProcH ) {
 			setServerProc( (ICFBamProtServerProcH)src );
 		}
@@ -555,18 +555,18 @@ public class CFBamProtBuffServerProc
 					"set",
 					"src",
 					src,
-					"ICFBamServerProcH" );
+					"ICFBamProtServerProcH" );
 		}
 	}
 
 	@Override
-	public void setJustProtServerProc( ICFBamServerProcH src ) {
-		super.setJustProtServerMethod( src );
+	public void setServerProc( ICFBamProtServerProcH src ) {
+		super.setServerMethod( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtScope src ) {
+	public void set( ICFBamProtScope src ) {
 		if( src instanceof CFBamProtBuffServerProc ) {
 			setJustProtServerProc( (CFBamProtBuffServerProc)src );
 		}
@@ -580,13 +580,13 @@ public class CFBamProtBuffServerProc
 	}
 
 	@Override
-	public void setJustProtServerProc( ICFBamProtServerProc src ) {
-		super.setJustProtServerMethod( src );
+	public void setServerProc( ICFBamProtServerProc src ) {
+		super.setServerMethod( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtScopeH src ) {
+	public void set( ICFBamProtScopeH src ) {
 		if( src instanceof ICFBamProtServerProcH ) {
 			setServerProc( (ICFBamProtServerProcH)src );
 		}
@@ -595,18 +595,18 @@ public class CFBamProtBuffServerProc
 					"set",
 					"src",
 					src,
-					"ICFBamServerProcH" );
+					"ICFBamProtServerProcH" );
 		}
 	}
 
 	@Override
-	public void setJustProtServerProc( ICFBamProtServerProcH src ) {
-		super.setJustProtServerMethod( src );
+	public void setServerProc( ICFBamProtServerProcH src ) {
+		super.setServerMethod( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubScope src ) {
+	public void set( ICFBamPubScope src ) {
 		if( src instanceof CFBamPubProtBuffServerProc ) {
 			setJustProtServerProc( (CFBamPubProtBuffServerProc)src );
 		}
@@ -620,13 +620,13 @@ public class CFBamProtBuffServerProc
 	}
 
 	@Override
-	public void setJustProtServerProc( ICFBamPubServerProc src ) {
-		super.setJustProtServerMethod( src );
+	public void setServerProc( ICFBamPubServerProc src ) {
+		super.setServerMethod( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubScopeH src ) {
+	public void set( ICFBamPubScopeH src ) {
 		if( src instanceof ICFBamPubServerProcH ) {
 			setServerProc( (ICFBamPubServerProcH)src );
 		}
@@ -635,13 +635,13 @@ public class CFBamProtBuffServerProc
 					"set",
 					"src",
 					src,
-					"ICFBamServerProcH" );
+					"ICFBamProtServerProcH" );
 		}
 	}
 
 	@Override
-	public void setJustProtServerProc( ICFBamPubServerProcH src ) {
-		super.setJustProtServerMethod( src );
+	public void setServerProc( ICFBamPubServerProcH src ) {
+		super.setServerMethod( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 

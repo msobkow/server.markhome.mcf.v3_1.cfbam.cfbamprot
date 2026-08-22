@@ -86,7 +86,7 @@ public class CFBamProtBuffTextDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamTextDef.CLASS_CODE );
+		return( ICFBamProtTextDef.CLASS_CODE );
 	}
 
 	@Override
@@ -256,8 +256,8 @@ public class CFBamProtBuffTextDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -773,7 +773,7 @@ public class CFBamProtBuffTextDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffTextDef ) {
 			setJustProtTextDef( (CFBamProtBuffTextDef)src );
 		}
@@ -787,15 +787,15 @@ public class CFBamProtBuffTextDef
 	}
 
 	@Override
-	public void setJustProtTextDef( ICFBamTextDef src ) {
-		super.setJustProtAtom( src );
+	public void setTextDef( ICFBamProtTextDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalXmlElementName(src.getOptionalXmlElementName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtTextDefH ) {
 			setTextDef( (ICFBamProtTextDefH)src );
 		}
@@ -804,20 +804,20 @@ public class CFBamProtBuffTextDef
 					"set",
 					"src",
 					src,
-					"ICFBamTextDefH" );
+					"ICFBamProtTextDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTextDef( ICFBamTextDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTextDef( ICFBamProtTextDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalXmlElementName(src.getOptionalXmlElementName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffTextDef ) {
 			setJustProtTextDef( (CFBamProtBuffTextDef)src );
 		}
@@ -831,15 +831,15 @@ public class CFBamProtBuffTextDef
 	}
 
 	@Override
-	public void setJustProtTextDef( ICFBamProtTextDef src ) {
-		super.setJustProtAtom( src );
+	public void setTextDef( ICFBamProtTextDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalXmlElementName(src.getOptionalXmlElementName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtTextDefH ) {
 			setTextDef( (ICFBamProtTextDefH)src );
 		}
@@ -848,20 +848,20 @@ public class CFBamProtBuffTextDef
 					"set",
 					"src",
 					src,
-					"ICFBamTextDefH" );
+					"ICFBamProtTextDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTextDef( ICFBamProtTextDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTextDef( ICFBamProtTextDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalXmlElementName(src.getOptionalXmlElementName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffTextDef ) {
 			setJustProtTextDef( (CFBamPubProtBuffTextDef)src );
 		}
@@ -875,15 +875,15 @@ public class CFBamProtBuffTextDef
 	}
 
 	@Override
-	public void setJustProtTextDef( ICFBamPubTextDef src ) {
-		super.setJustProtAtom( src );
+	public void setTextDef( ICFBamPubTextDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalXmlElementName(src.getOptionalXmlElementName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubTextDefH ) {
 			setTextDef( (ICFBamPubTextDefH)src );
 		}
@@ -892,13 +892,13 @@ public class CFBamProtBuffTextDef
 					"set",
 					"src",
 					src,
-					"ICFBamTextDefH" );
+					"ICFBamProtTextDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTextDef( ICFBamPubTextDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTextDef( ICFBamPubTextDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalXmlElementName(src.getOptionalXmlElementName());

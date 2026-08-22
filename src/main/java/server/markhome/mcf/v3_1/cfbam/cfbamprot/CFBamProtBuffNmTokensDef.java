@@ -84,7 +84,7 @@ public class CFBamProtBuffNmTokensDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamNmTokensDef.CLASS_CODE );
+		return( ICFBamProtNmTokensDef.CLASS_CODE );
 	}
 
 	@Override
@@ -207,8 +207,8 @@ public class CFBamProtBuffNmTokensDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -597,7 +597,7 @@ public class CFBamProtBuffNmTokensDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffNmTokensDef ) {
 			setJustProtNmTokensDef( (CFBamProtBuffNmTokensDef)src );
 		}
@@ -611,14 +611,14 @@ public class CFBamProtBuffNmTokensDef
 	}
 
 	@Override
-	public void setJustProtNmTokensDef( ICFBamNmTokensDef src ) {
-		super.setJustProtAtom( src );
+	public void setNmTokensDef( ICFBamProtNmTokensDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtNmTokensDefH ) {
 			setNmTokensDef( (ICFBamProtNmTokensDefH)src );
 		}
@@ -627,19 +627,19 @@ public class CFBamProtBuffNmTokensDef
 					"set",
 					"src",
 					src,
-					"ICFBamNmTokensDefH" );
+					"ICFBamProtNmTokensDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtNmTokensDef( ICFBamNmTokensDefH src ) {
-		super.setJustProtAtom( src );
+	public void setNmTokensDef( ICFBamProtNmTokensDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffNmTokensDef ) {
 			setJustProtNmTokensDef( (CFBamProtBuffNmTokensDef)src );
 		}
@@ -653,14 +653,14 @@ public class CFBamProtBuffNmTokensDef
 	}
 
 	@Override
-	public void setJustProtNmTokensDef( ICFBamProtNmTokensDef src ) {
-		super.setJustProtAtom( src );
+	public void setNmTokensDef( ICFBamProtNmTokensDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtNmTokensDefH ) {
 			setNmTokensDef( (ICFBamProtNmTokensDefH)src );
 		}
@@ -669,19 +669,19 @@ public class CFBamProtBuffNmTokensDef
 					"set",
 					"src",
 					src,
-					"ICFBamNmTokensDefH" );
+					"ICFBamProtNmTokensDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtNmTokensDef( ICFBamProtNmTokensDefH src ) {
-		super.setJustProtAtom( src );
+	public void setNmTokensDef( ICFBamProtNmTokensDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffNmTokensDef ) {
 			setJustProtNmTokensDef( (CFBamPubProtBuffNmTokensDef)src );
 		}
@@ -695,14 +695,14 @@ public class CFBamProtBuffNmTokensDef
 	}
 
 	@Override
-	public void setJustProtNmTokensDef( ICFBamPubNmTokensDef src ) {
-		super.setJustProtAtom( src );
+	public void setNmTokensDef( ICFBamPubNmTokensDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubNmTokensDefH ) {
 			setNmTokensDef( (ICFBamPubNmTokensDefH)src );
 		}
@@ -711,13 +711,13 @@ public class CFBamProtBuffNmTokensDef
 					"set",
 					"src",
 					src,
-					"ICFBamNmTokensDefH" );
+					"ICFBamProtNmTokensDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtNmTokensDef( ICFBamPubNmTokensDefH src ) {
-		super.setJustProtAtom( src );
+	public void setNmTokensDef( ICFBamPubNmTokensDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}

@@ -86,7 +86,7 @@ public class CFBamProtBuffUInt32Def
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamUInt32Def.CLASS_CODE );
+		return( ICFBamProtUInt32Def.CLASS_CODE );
 	}
 
 	@Override
@@ -274,8 +274,8 @@ public class CFBamProtBuffUInt32Def
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -905,7 +905,7 @@ public class CFBamProtBuffUInt32Def
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffUInt32Def ) {
 			setJustProtUInt32Def( (CFBamProtBuffUInt32Def)src );
 		}
@@ -919,15 +919,15 @@ public class CFBamProtBuffUInt32Def
 	}
 
 	@Override
-	public void setJustProtUInt32Def( ICFBamUInt32Def src ) {
-		super.setJustProtAtom( src );
+	public void setUInt32Def( ICFBamProtUInt32Def src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtUInt32DefH ) {
 			setUInt32Def( (ICFBamProtUInt32DefH)src );
 		}
@@ -936,20 +936,20 @@ public class CFBamProtBuffUInt32Def
 					"set",
 					"src",
 					src,
-					"ICFBamUInt32DefH" );
+					"ICFBamProtUInt32DefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtUInt32Def( ICFBamUInt32DefH src ) {
-		super.setJustProtAtom( src );
+	public void setUInt32Def( ICFBamProtUInt32DefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffUInt32Def ) {
 			setJustProtUInt32Def( (CFBamProtBuffUInt32Def)src );
 		}
@@ -963,15 +963,15 @@ public class CFBamProtBuffUInt32Def
 	}
 
 	@Override
-	public void setJustProtUInt32Def( ICFBamProtUInt32Def src ) {
-		super.setJustProtAtom( src );
+	public void setUInt32Def( ICFBamProtUInt32Def src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtUInt32DefH ) {
 			setUInt32Def( (ICFBamProtUInt32DefH)src );
 		}
@@ -980,20 +980,20 @@ public class CFBamProtBuffUInt32Def
 					"set",
 					"src",
 					src,
-					"ICFBamUInt32DefH" );
+					"ICFBamProtUInt32DefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtUInt32Def( ICFBamProtUInt32DefH src ) {
-		super.setJustProtAtom( src );
+	public void setUInt32Def( ICFBamProtUInt32DefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffUInt32Def ) {
 			setJustProtUInt32Def( (CFBamPubProtBuffUInt32Def)src );
 		}
@@ -1007,15 +1007,15 @@ public class CFBamProtBuffUInt32Def
 	}
 
 	@Override
-	public void setJustProtUInt32Def( ICFBamPubUInt32Def src ) {
-		super.setJustProtAtom( src );
+	public void setUInt32Def( ICFBamPubUInt32Def src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubUInt32DefH ) {
 			setUInt32Def( (ICFBamPubUInt32DefH)src );
 		}
@@ -1024,13 +1024,13 @@ public class CFBamProtBuffUInt32Def
 					"set",
 					"src",
 					src,
-					"ICFBamUInt32DefH" );
+					"ICFBamProtUInt32DefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtUInt32Def( ICFBamPubUInt32DefH src ) {
-		super.setJustProtAtom( src );
+	public void setUInt32Def( ICFBamPubUInt32DefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());

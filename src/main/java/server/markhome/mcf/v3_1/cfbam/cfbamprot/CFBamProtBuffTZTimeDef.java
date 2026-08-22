@@ -82,7 +82,7 @@ public class CFBamProtBuffTZTimeDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamTZTimeDef.CLASS_CODE );
+		return( ICFBamProtTZTimeDef.CLASS_CODE );
 	}
 
 	@Override
@@ -173,8 +173,8 @@ public class CFBamProtBuffTZTimeDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -526,7 +526,7 @@ public class CFBamProtBuffTZTimeDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffTZTimeDef ) {
 			setJustProtTZTimeDef( (CFBamProtBuffTZTimeDef)src );
 		}
@@ -540,13 +540,13 @@ public class CFBamProtBuffTZTimeDef
 	}
 
 	@Override
-	public void setJustProtTZTimeDef( ICFBamTZTimeDef src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimeDef( ICFBamProtTZTimeDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtTZTimeDefH ) {
 			setTZTimeDef( (ICFBamProtTZTimeDefH)src );
 		}
@@ -555,18 +555,18 @@ public class CFBamProtBuffTZTimeDef
 					"set",
 					"src",
 					src,
-					"ICFBamTZTimeDefH" );
+					"ICFBamProtTZTimeDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTZTimeDef( ICFBamTZTimeDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimeDef( ICFBamProtTZTimeDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffTZTimeDef ) {
 			setJustProtTZTimeDef( (CFBamProtBuffTZTimeDef)src );
 		}
@@ -580,13 +580,13 @@ public class CFBamProtBuffTZTimeDef
 	}
 
 	@Override
-	public void setJustProtTZTimeDef( ICFBamProtTZTimeDef src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimeDef( ICFBamProtTZTimeDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtTZTimeDefH ) {
 			setTZTimeDef( (ICFBamProtTZTimeDefH)src );
 		}
@@ -595,18 +595,18 @@ public class CFBamProtBuffTZTimeDef
 					"set",
 					"src",
 					src,
-					"ICFBamTZTimeDefH" );
+					"ICFBamProtTZTimeDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTZTimeDef( ICFBamProtTZTimeDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimeDef( ICFBamProtTZTimeDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffTZTimeDef ) {
 			setJustProtTZTimeDef( (CFBamPubProtBuffTZTimeDef)src );
 		}
@@ -620,13 +620,13 @@ public class CFBamProtBuffTZTimeDef
 	}
 
 	@Override
-	public void setJustProtTZTimeDef( ICFBamPubTZTimeDef src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimeDef( ICFBamPubTZTimeDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubTZTimeDefH ) {
 			setTZTimeDef( (ICFBamPubTZTimeDefH)src );
 		}
@@ -635,13 +635,13 @@ public class CFBamProtBuffTZTimeDef
 					"set",
 					"src",
 					src,
-					"ICFBamTZTimeDefH" );
+					"ICFBamProtTZTimeDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTZTimeDef( ICFBamPubTZTimeDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimeDef( ICFBamPubTZTimeDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 

@@ -84,7 +84,7 @@ public class CFBamProtBuffUuidGen
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamUuidGen.CLASS_CODE );
+		return( ICFBamProtUuidGen.CLASS_CODE );
 	}
 
 	@Override
@@ -192,8 +192,8 @@ public class CFBamProtBuffUuidGen
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -492,7 +492,7 @@ public class CFBamProtBuffUuidGen
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffUuidGen ) {
 			setJustProtUuidGen( (CFBamProtBuffUuidGen)src );
 		}
@@ -506,14 +506,14 @@ public class CFBamProtBuffUuidGen
 	}
 
 	@Override
-	public void setJustProtUuidGen( ICFBamUuidGen src ) {
-		super.setJustProtUuidType( src );
+	public void setUuidGen( ICFBamProtUuidGen src ) {
+		super.setUuidType( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtUuidGenH ) {
 			setUuidGen( (ICFBamProtUuidGenH)src );
 		}
@@ -522,19 +522,19 @@ public class CFBamProtBuffUuidGen
 					"set",
 					"src",
 					src,
-					"ICFBamUuidGenH" );
+					"ICFBamProtUuidGenH" );
 		}
 	}
 
 	@Override
-	public void setJustProtUuidGen( ICFBamUuidGenH src ) {
-		super.setJustProtUuidType( src );
+	public void setUuidGen( ICFBamProtUuidGenH src ) {
+		super.setUuidType( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffUuidGen ) {
 			setJustProtUuidGen( (CFBamProtBuffUuidGen)src );
 		}
@@ -548,14 +548,14 @@ public class CFBamProtBuffUuidGen
 	}
 
 	@Override
-	public void setJustProtUuidGen( ICFBamProtUuidGen src ) {
-		super.setJustProtUuidType( src );
+	public void setUuidGen( ICFBamProtUuidGen src ) {
+		super.setUuidType( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtUuidGenH ) {
 			setUuidGen( (ICFBamProtUuidGenH)src );
 		}
@@ -564,19 +564,19 @@ public class CFBamProtBuffUuidGen
 					"set",
 					"src",
 					src,
-					"ICFBamUuidGenH" );
+					"ICFBamProtUuidGenH" );
 		}
 	}
 
 	@Override
-	public void setJustProtUuidGen( ICFBamProtUuidGenH src ) {
-		super.setJustProtUuidType( src );
+	public void setUuidGen( ICFBamProtUuidGenH src ) {
+		super.setUuidType( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffUuidGen ) {
 			setJustProtUuidGen( (CFBamPubProtBuffUuidGen)src );
 		}
@@ -590,14 +590,14 @@ public class CFBamProtBuffUuidGen
 	}
 
 	@Override
-	public void setJustProtUuidGen( ICFBamPubUuidGen src ) {
-		super.setJustProtUuidType( src );
+	public void setUuidGen( ICFBamPubUuidGen src ) {
+		super.setUuidType( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubUuidGenH ) {
 			setUuidGen( (ICFBamPubUuidGenH)src );
 		}
@@ -606,13 +606,13 @@ public class CFBamProtBuffUuidGen
 					"set",
 					"src",
 					src,
-					"ICFBamUuidGenH" );
+					"ICFBamProtUuidGenH" );
 		}
 	}
 
 	@Override
-	public void setJustProtUuidGen( ICFBamPubUuidGenH src ) {
-		super.setJustProtUuidType( src );
+	public void setUuidGen( ICFBamPubUuidGenH src ) {
+		super.setUuidType( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}

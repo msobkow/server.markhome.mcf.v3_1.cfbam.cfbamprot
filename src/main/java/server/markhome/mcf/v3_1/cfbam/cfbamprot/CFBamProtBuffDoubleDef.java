@@ -86,7 +86,7 @@ public class CFBamProtBuffDoubleDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamDoubleDef.CLASS_CODE );
+		return( ICFBamProtDoubleDef.CLASS_CODE );
 	}
 
 	@Override
@@ -295,8 +295,8 @@ public class CFBamProtBuffDoubleDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -926,7 +926,7 @@ public class CFBamProtBuffDoubleDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffDoubleDef ) {
 			setJustProtDoubleDef( (CFBamProtBuffDoubleDef)src );
 		}
@@ -940,15 +940,15 @@ public class CFBamProtBuffDoubleDef
 	}
 
 	@Override
-	public void setJustProtDoubleDef( ICFBamDoubleDef src ) {
-		super.setJustProtAtom( src );
+	public void setDoubleDef( ICFBamProtDoubleDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtDoubleDefH ) {
 			setDoubleDef( (ICFBamProtDoubleDefH)src );
 		}
@@ -957,20 +957,20 @@ public class CFBamProtBuffDoubleDef
 					"set",
 					"src",
 					src,
-					"ICFBamDoubleDefH" );
+					"ICFBamProtDoubleDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtDoubleDef( ICFBamDoubleDefH src ) {
-		super.setJustProtAtom( src );
+	public void setDoubleDef( ICFBamProtDoubleDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffDoubleDef ) {
 			setJustProtDoubleDef( (CFBamProtBuffDoubleDef)src );
 		}
@@ -984,15 +984,15 @@ public class CFBamProtBuffDoubleDef
 	}
 
 	@Override
-	public void setJustProtDoubleDef( ICFBamProtDoubleDef src ) {
-		super.setJustProtAtom( src );
+	public void setDoubleDef( ICFBamProtDoubleDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtDoubleDefH ) {
 			setDoubleDef( (ICFBamProtDoubleDefH)src );
 		}
@@ -1001,20 +1001,20 @@ public class CFBamProtBuffDoubleDef
 					"set",
 					"src",
 					src,
-					"ICFBamDoubleDefH" );
+					"ICFBamProtDoubleDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtDoubleDef( ICFBamProtDoubleDefH src ) {
-		super.setJustProtAtom( src );
+	public void setDoubleDef( ICFBamProtDoubleDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffDoubleDef ) {
 			setJustProtDoubleDef( (CFBamPubProtBuffDoubleDef)src );
 		}
@@ -1028,15 +1028,15 @@ public class CFBamProtBuffDoubleDef
 	}
 
 	@Override
-	public void setJustProtDoubleDef( ICFBamPubDoubleDef src ) {
-		super.setJustProtAtom( src );
+	public void setDoubleDef( ICFBamPubDoubleDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubDoubleDefH ) {
 			setDoubleDef( (ICFBamPubDoubleDefH)src );
 		}
@@ -1045,13 +1045,13 @@ public class CFBamProtBuffDoubleDef
 					"set",
 					"src",
 					src,
-					"ICFBamDoubleDefH" );
+					"ICFBamProtDoubleDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtDoubleDef( ICFBamPubDoubleDefH src ) {
-		super.setJustProtAtom( src );
+	public void setDoubleDef( ICFBamPubDoubleDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalMinValue(src.getOptionalMinValue());
 		setJustProtOptionalMaxValue(src.getOptionalMaxValue());

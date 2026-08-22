@@ -82,107 +82,107 @@ public class CFBamProtBuffSchemaTweak
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamSchemaTweak.CLASS_CODE );
+		return( ICFBamProtSchemaTweak.CLASS_CODE );
 	}
 
 	@Override
-	public void setJustProtRequiredContainerScopeDef(ICFLibKeyHash256 argSchemaDefId) {
+	public void setRequiredContainerScopeDef(ICFLibKeyHash256 argSchemaDefId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerSchemaDef-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerSchemaDef-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamScopeTable targetTable = targetBackingCFBam.getTableScope();
+		ICFBamProtScopeTable targetTable = targetBackingCFBam.getTableScope();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerScopeDef", 0, "ICFBamSchema.getBackingCFBam().getTableScope()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerScopeDef", 0, "ICFBamSchema.getBackingCFBam().getTableScope()");
 		}
-		ICFBamScope found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argSchemaDefId);
+		ICFBamProtScope found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argSchemaDefId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerScopeDef-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerScopeDef-args", 0, "found");
 		}
-		else if (found instanceof ICFBamSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)) {
-			super.setJustProtRequiredContainerScopeDef(argSchemaDefId);
+		else if (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)) {
+			super.setRequiredContainerScopeDef(argSchemaDefId);
 		requiredSchemaDefId = argSchemaDefId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredContainerScopeDef-args", "found", found, "ICFBamSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredContainerScopeDef-args", "found", found, "ICFBamProtSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerScopeDef(ICFBamSchemaDef argObj) {
+	public void setRequiredContainerScopeDef(ICFBamSchemaDef argObj) {
 
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerSchemaDef", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerSchemaDef", 1, "argObj");
 		}
-		else if ((argObj instanceof ICFBamSchemaDef) || (argObj instanceof ICFBamProtSchemaDef) || (argObj instanceof ICFBamPubSchemaDef)) {
+		else if ((argObj instanceof ICFBamProtSchemaDef) || (argObj instanceof ICFBamProtSchemaDef) || (argObj instanceof ICFBamPubSchemaDef)) {
 			setJustProtRequiredSchemaDefId(argObj.getRequiredId());
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtContainerSchemaDef", "argObj", argObj, "ICFBamSchemaDef, ICFBamProtSchemaDef), ICFBamPubSchemaDef)");
+			throw new CFLibUnsupportedClassException(getClass(), "setContainerSchemaDef", "argObj", argObj, "ICFBamProtSchemaDef, ICFBamProtSchemaDef), ICFBamPubSchemaDef)");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerScopeDef(ICFBamProtSchemaDef argObj) {
+	public void setRequiredContainerScopeDef(ICFBamProtSchemaDef argObj) {
 
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerSchemaDef", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerSchemaDef", 1, "argObj");
 		}
 		else if ((argObj instanceof ICFBamProtSchemaDef) || (argObj instanceof ICFBamPubSchemaDef)) {
 			setJustProtRequiredSchemaDefId(argObj.getRequiredId());
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtContainerSchemaDef", "argObj", argObj, "ICFBamProtSchemaDef, ICFBamPubSchemaDef)");
+			throw new CFLibUnsupportedClassException(getClass(), "setContainerSchemaDef", "argObj", argObj, "ICFBamProtSchemaDef, ICFBamPubSchemaDef)");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerScopeDef(ICFBamPubSchemaDef argObj) {
+	public void setRequiredContainerScopeDef(ICFBamPubSchemaDef argObj) {
 
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerSchemaDef", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerSchemaDef", 1, "argObj");
 		}
 		else if (argObj instanceof ICFBamPubSchemaDef) {
 			setJustProtRequiredSchemaDefId(argObj.getRequiredId());
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtContainerSchemaDef", "argObj", argObj, "ICFBamPubSchemaDef");
+			throw new CFLibUnsupportedClassException(getClass(), "setContainerSchemaDef", "argObj", argObj, "ICFBamPubSchemaDef");
 		}
 	}
 
 	@Override
-	public ICFBamSchemaDef getRequiredContainerSchemaDef() {
+	public ICFBamProtSchemaDef getRequiredContainerSchemaDef() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
-		ICFBamSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSchemaDefId());
+		ICFBamProtSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSchemaDefId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamSchemaDef getRequiredContainerSchemaDef() {
+	public ICFBamProtSchemaDef getRequiredContainerSchemaDef() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
-		ICFBamSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSchemaDefId());
+		ICFBamProtSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSchemaDefId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamSchemaDef getRequiredContainerSchemaDef() {
+	public ICFBamProtSchemaDef getRequiredContainerSchemaDef() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
@@ -191,55 +191,55 @@ public class CFBamProtBuffSchemaTweak
 	}
 
 	@Override
-	public void setJustProtRequiredContainerScopeDef(ICFLibKeyHash256 argSchemaDefId) {
+	public void setRequiredContainerScopeDef(ICFLibKeyHash256 argSchemaDefId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerSchemaDef-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerSchemaDef-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamScopeTable targetTable = targetBackingCFBam.getTableScope();
+		ICFBamProtScopeTable targetTable = targetBackingCFBam.getTableScope();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerScopeDef", 0, "ICFBamSchema.getBackingCFBam().getTableScope()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerScopeDef", 0, "ICFBamSchema.getBackingCFBam().getTableScope()");
 		}
-		ICFBamScope found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argSchemaDefId);
+		ICFBamProtScope found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argSchemaDefId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerScopeDef-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerScopeDef-args", 0, "found");
 		}
-		else if (found instanceof ICFBamSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)) {
-			super.setJustProtRequiredContainerScopeDef(argSchemaDefId);
+		else if (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)) {
+			super.setRequiredContainerScopeDef(argSchemaDefId);
 		requiredSchemaDefId = argSchemaDefId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredContainerScopeDef-args", "found", found, "ICFBamSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredContainerScopeDef-args", "found", found, "ICFBamProtSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerSchemaDef(ICFLibKeyHash256 argSchemaDefId) {
+	public void setRequiredContainerSchemaDef(ICFLibKeyHash256 argSchemaDefId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerSchemaDef-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerSchemaDef-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamScopeTable targetTable = targetBackingCFBam.getTableScope();
+		ICFBamProtScopeTable targetTable = targetBackingCFBam.getTableScope();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerScopeDef", 0, "ICFBamSchema.getBackingCFBam().getTableScope()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerScopeDef", 0, "ICFBamSchema.getBackingCFBam().getTableScope()");
 		}
-		ICFBamScope found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argSchemaDefId);
+		ICFBamProtScope found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argSchemaDefId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerScopeDef-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerScopeDef-args", 0, "found");
 		}
-		else if (found instanceof ICFBamSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)) {
-			super.setJustProtRequiredContainerScopeDef(argSchemaDefId);
+		else if (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)) {
+			super.setRequiredContainerScopeDef(argSchemaDefId);
 		requiredSchemaDefId = argSchemaDefId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredContainerScopeDef-args", "found", found, "ICFBamSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredContainerScopeDef-args", "found", found, "ICFBamProtSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerSchemaDef(ICFBamSchemaDef argObj) {
+	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerSchemaDef", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerSchemaDef", 1, "argObj");
 		}
 		else {
 			setJustProtRequiredSchemaDefId(argObj.getRequiredId());
@@ -332,8 +332,8 @@ public class CFBamProtBuffSchemaTweak
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamTweakHPKey ) {
-			ICFBamProtTweakHPKey rhs = (ICFBamTweakHPKey)obj;
+		else if( obj instanceof ICFBamProtTweakHPKey ) {
+			ICFBamProtTweakHPKey rhs = (ICFBamProtTweakHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -657,7 +657,7 @@ public class CFBamProtBuffSchemaTweak
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFBamSchemaTweakBySchemaIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtSchemaTweakBySchemaIdxKey rhs ) {
 			if (getRequiredSchemaDefId() != null) {
 				if (rhs.getRequiredSchemaDefId() != null) {
 					cmp = getRequiredSchemaDefId().compareTo( rhs.getRequiredSchemaDefId() );
@@ -761,7 +761,7 @@ public class CFBamProtBuffSchemaTweak
 	}
 
 	@Override
-	public void setJustProt( ICFBamTweak src ) {
+	public void set( ICFBamProtTweak src ) {
 		if( src instanceof CFBamProtBuffSchemaTweak ) {
 			setJustProtSchemaTweak( (CFBamProtBuffSchemaTweak)src );
 		}
@@ -775,14 +775,14 @@ public class CFBamProtBuffSchemaTweak
 	}
 
 	@Override
-	public void setJustProtSchemaTweak( ICFBamSchemaTweak src ) {
-		super.setJustProtTweak( src );
+	public void setSchemaTweak( ICFBamProtSchemaTweak src ) {
+		super.setTweak( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtRequiredSchemaDefId(src.getRequiredSchemaDefId());
 	}
 
 	@Override
-	public void setJustProt( ICFBamTweakH src ) {
+	public void set( ICFBamProtTweakH src ) {
 		if( src instanceof ICFBamProtSchemaTweakH ) {
 			setSchemaTweak( (ICFBamProtSchemaTweakH)src );
 		}
@@ -791,19 +791,19 @@ public class CFBamProtBuffSchemaTweak
 					"set",
 					"src",
 					src,
-					"ICFBamSchemaTweakH" );
+					"ICFBamProtSchemaTweakH" );
 		}
 	}
 
 	@Override
-	public void setJustProtSchemaTweak( ICFBamSchemaTweakH src ) {
-		super.setJustProtTweak( src );
+	public void setSchemaTweak( ICFBamProtSchemaTweakH src ) {
+		super.setTweak( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtRequiredSchemaDefId(src.getRequiredSchemaDefId());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtTweak src ) {
+	public void set( ICFBamProtTweak src ) {
 		if( src instanceof CFBamProtBuffSchemaTweak ) {
 			setJustProtSchemaTweak( (CFBamProtBuffSchemaTweak)src );
 		}
@@ -817,14 +817,14 @@ public class CFBamProtBuffSchemaTweak
 	}
 
 	@Override
-	public void setJustProtSchemaTweak( ICFBamProtSchemaTweak src ) {
-		super.setJustProtTweak( src );
+	public void setSchemaTweak( ICFBamProtSchemaTweak src ) {
+		super.setTweak( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtRequiredSchemaDefId(src.getRequiredSchemaDefId());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtTweakH src ) {
+	public void set( ICFBamProtTweakH src ) {
 		if( src instanceof ICFBamProtSchemaTweakH ) {
 			setSchemaTweak( (ICFBamProtSchemaTweakH)src );
 		}
@@ -833,19 +833,19 @@ public class CFBamProtBuffSchemaTweak
 					"set",
 					"src",
 					src,
-					"ICFBamSchemaTweakH" );
+					"ICFBamProtSchemaTweakH" );
 		}
 	}
 
 	@Override
-	public void setJustProtSchemaTweak( ICFBamProtSchemaTweakH src ) {
-		super.setJustProtTweak( src );
+	public void setSchemaTweak( ICFBamProtSchemaTweakH src ) {
+		super.setTweak( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtRequiredSchemaDefId(src.getRequiredSchemaDefId());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubTweak src ) {
+	public void set( ICFBamPubTweak src ) {
 		if( src instanceof CFBamPubProtBuffSchemaTweak ) {
 			setJustProtSchemaTweak( (CFBamPubProtBuffSchemaTweak)src );
 		}
@@ -859,14 +859,14 @@ public class CFBamProtBuffSchemaTweak
 	}
 
 	@Override
-	public void setJustProtSchemaTweak( ICFBamPubSchemaTweak src ) {
-		super.setJustProtTweak( src );
+	public void setSchemaTweak( ICFBamPubSchemaTweak src ) {
+		super.setTweak( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtRequiredSchemaDefId(src.getRequiredSchemaDefId());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubTweakH src ) {
+	public void set( ICFBamPubTweakH src ) {
 		if( src instanceof ICFBamPubSchemaTweakH ) {
 			setSchemaTweak( (ICFBamPubSchemaTweakH)src );
 		}
@@ -875,13 +875,13 @@ public class CFBamProtBuffSchemaTweak
 					"set",
 					"src",
 					src,
-					"ICFBamSchemaTweakH" );
+					"ICFBamProtSchemaTweakH" );
 		}
 	}
 
 	@Override
-	public void setJustProtSchemaTweak( ICFBamPubSchemaTweakH src ) {
-		super.setJustProtTweak( src );
+	public void setSchemaTweak( ICFBamPubSchemaTweakH src ) {
+		super.setTweak( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtRequiredSchemaDefId(src.getRequiredSchemaDefId());
 	}

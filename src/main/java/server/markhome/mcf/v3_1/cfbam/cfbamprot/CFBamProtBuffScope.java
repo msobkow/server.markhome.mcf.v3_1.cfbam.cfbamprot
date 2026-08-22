@@ -70,7 +70,7 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public class CFBamProtBuffScope
-	implements ICFBamScope, Comparable<Object>, Serializable
+	implements ICFBamProtScope, Comparable<Object>, Serializable
 {
 	protected ICFLibKeyHash256 requiredId;
 	protected int requiredRevision;
@@ -93,7 +93,7 @@ public class CFBamProtBuffScope
 	}
 
 	@Override
-	public void setJustProtPKey(ICFLibKeyHash256 requiredId) {
+	public void setPKey(ICFLibKeyHash256 requiredId) {
 		if(requiredId != null) {
 			this.requiredId = requiredId;
 		}
@@ -166,16 +166,16 @@ public class CFBamProtBuffScope
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamScope.CLASS_CODE );
+		return( ICFBamProtScope.CLASS_CODE );
 	}
 
 	@Override
-	public ICFSecTenant getRequiredOwnerTenant() {
+	public ICFSecProtTenant getRequiredOwnerTenant() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredOwnerTenant", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecTenantTable targetTable = targetBackingCFSec.getTableTenant();
+		ICFSecProtTenantTable targetTable = targetBackingCFSec.getTableTenant();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredOwnerTenant", 0, "ICFSecSchema.getBackingCFSec().getTableTenant()");
 		}
@@ -184,24 +184,24 @@ public class CFBamProtBuffScope
 	}
 
 	@Override
-	public void setJustProtRequiredOwnerTenant(ICFLibKeyHash256 argTenantId) {
+	public void setRequiredOwnerTenant(ICFLibKeyHash256 argTenantId) {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredOwnerTenant-args", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredOwnerTenant-args", 0, "ICFSecSchema.getBackingCFSec()");
 		}
 		ICFSecProtTenantTable targetTable = targetBackingCFSec.getTableTenant();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredOwnerTenant", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredOwnerTenant", 0, "ICFSecSchema.getBackingCFSec()");
 		}
 		ICFSecProtTenant found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argTenantId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredOwnerTenant-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredOwnerTenant-args", 0, "found");
 		}
-		else if ((found instanceof ICFSecTenant) || (found instanceof ICFSecProtTenant) || (found instanceof ICFSecPubTenant)) {
+		else if ((found instanceof ICFSecProtTenant) || (found instanceof ICFSecProtTenant) || (found instanceof ICFSecPubTenant)) {
 		requiredTenantId = argTenantId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredOwnerTenant-args", "found", found, "ICFSecTenantICFSecProtTenantICFSecPubTenant");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredOwnerTenant-args", "found", found, "ICFSecProtTenantICFSecProtTenantICFSecPubTenant");
 		}
 	}
 
@@ -303,8 +303,8 @@ public class CFBamProtBuffScope
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamScopeHPKey ) {
-			ICFBamProtScopeHPKey rhs = (ICFBamScopeHPKey)obj;
+		else if( obj instanceof ICFBamProtScopeHPKey ) {
+			ICFBamProtScopeHPKey rhs = (ICFBamProtScopeHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -699,7 +699,7 @@ public class CFBamProtBuffScope
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFBamScopeByTenantIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtScopeByTenantIdxKey rhs ) {
 			if (getRequiredTenantId() != null) {
 				if (rhs.getRequiredTenantId() != null) {
 					cmp = getRequiredTenantId().compareTo( rhs.getRequiredTenantId() );
@@ -849,12 +849,12 @@ public class CFBamProtBuffScope
 	}
 
 	@Override
-	public void setJustProt( ICFBamScope src ) {
+	public void set( ICFBamProtScope src ) {
 		setJustProtScope( src );
 	}
 
 	@Override
-	public void setJustProtScope( ICFBamScope src ) {
+	public void setScope( ICFBamProtScope src ) {
 		setJustProtRequiredId(src.getRequiredId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -866,53 +866,24 @@ public class CFBamProtBuffScope
 	}
 
 	@Override
-	public void setJustProt( ICFBamScopeH src ) {
+	public void set( ICFBamProtScopeH src ) {
 		setJustProtScope( src );
 	}
 
 	@Override
-	public void setJustProtScope( ICFBamScopeH src ) {
+	public void setScope( ICFBamProtScopeH src ) {
 		setJustProtRequiredId(src.getRequiredId());
 		setJustProtRequiredOwnerTenant(src.getRequiredOwnerTenant());
 		setJustProtRequiredTenantId(src.getRequiredTenantId());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtScope src ) {
+	public void set( ICFBamProtScope src ) {
 		setJustProtScope( src );
 	}
 
 	@Override
-	public void setJustProtScope( ICFBamProtScope src ) {
-		setJustProtRequiredId(src.getRequiredId());
-		setJustProtRequiredRevision( src.getRequiredRevision() );
-		setJustProtCreatedByUserId( src.getCreatedByUserId() );
-		setJustProtCreatedAt( src.getCreatedAt() );
-		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
-		setJustProtUpdatedAt( src.getUpdatedAt() );
-		setJustProtRequiredOwnerTenant(src.getRequiredOwnerTenant());
-		setJustProtRequiredTenantId(src.getRequiredTenantId());
-	}
-
-	@Override
-	public void setJustProt( ICFBamProtScopeH src ) {
-		setJustProtScope( src );
-	}
-
-	@Override
-	public void setJustProtScope( ICFBamProtScopeH src ) {
-		setJustProtRequiredId(src.getRequiredId());
-		setJustProtRequiredOwnerTenant(src.getRequiredOwnerTenant());
-		setJustProtRequiredTenantId(src.getRequiredTenantId());
-	}
-
-	@Override
-	public void setJustProt( ICFBamPubScope src ) {
-		setJustProtScope( src );
-	}
-
-	@Override
-	public void setJustProtScope( ICFBamPubScope src ) {
+	public void setScope( ICFBamProtScope src ) {
 		setJustProtRequiredId(src.getRequiredId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -924,12 +895,41 @@ public class CFBamProtBuffScope
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubScopeH src ) {
+	public void set( ICFBamProtScopeH src ) {
 		setJustProtScope( src );
 	}
 
 	@Override
-	public void setJustProtScope( ICFBamPubScopeH src ) {
+	public void setScope( ICFBamProtScopeH src ) {
+		setJustProtRequiredId(src.getRequiredId());
+		setJustProtRequiredOwnerTenant(src.getRequiredOwnerTenant());
+		setJustProtRequiredTenantId(src.getRequiredTenantId());
+	}
+
+	@Override
+	public void set( ICFBamPubScope src ) {
+		setJustProtScope( src );
+	}
+
+	@Override
+	public void setScope( ICFBamPubScope src ) {
+		setJustProtRequiredId(src.getRequiredId());
+		setJustProtRequiredRevision( src.getRequiredRevision() );
+		setJustProtCreatedByUserId( src.getCreatedByUserId() );
+		setJustProtCreatedAt( src.getCreatedAt() );
+		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
+		setJustProtUpdatedAt( src.getUpdatedAt() );
+		setJustProtRequiredOwnerTenant(src.getRequiredOwnerTenant());
+		setJustProtRequiredTenantId(src.getRequiredTenantId());
+	}
+
+	@Override
+	public void set( ICFBamPubScopeH src ) {
+		setJustProtScope( src );
+	}
+
+	@Override
+	public void setScope( ICFBamPubScopeH src ) {
 		setJustProtRequiredId(src.getRequiredId());
 		setJustProtRequiredOwnerTenant(src.getRequiredOwnerTenant());
 		setJustProtRequiredTenantId(src.getRequiredTenantId());

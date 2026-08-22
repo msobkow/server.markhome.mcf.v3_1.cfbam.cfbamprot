@@ -82,7 +82,7 @@ public class CFBamProtBuffTimeDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamTimeDef.CLASS_CODE );
+		return( ICFBamProtTimeDef.CLASS_CODE );
 	}
 
 	@Override
@@ -173,8 +173,8 @@ public class CFBamProtBuffTimeDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -526,7 +526,7 @@ public class CFBamProtBuffTimeDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffTimeDef ) {
 			setJustProtTimeDef( (CFBamProtBuffTimeDef)src );
 		}
@@ -540,13 +540,13 @@ public class CFBamProtBuffTimeDef
 	}
 
 	@Override
-	public void setJustProtTimeDef( ICFBamTimeDef src ) {
-		super.setJustProtAtom( src );
+	public void setTimeDef( ICFBamProtTimeDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtTimeDefH ) {
 			setTimeDef( (ICFBamProtTimeDefH)src );
 		}
@@ -555,18 +555,18 @@ public class CFBamProtBuffTimeDef
 					"set",
 					"src",
 					src,
-					"ICFBamTimeDefH" );
+					"ICFBamProtTimeDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTimeDef( ICFBamTimeDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTimeDef( ICFBamProtTimeDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffTimeDef ) {
 			setJustProtTimeDef( (CFBamProtBuffTimeDef)src );
 		}
@@ -580,13 +580,13 @@ public class CFBamProtBuffTimeDef
 	}
 
 	@Override
-	public void setJustProtTimeDef( ICFBamProtTimeDef src ) {
-		super.setJustProtAtom( src );
+	public void setTimeDef( ICFBamProtTimeDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtTimeDefH ) {
 			setTimeDef( (ICFBamProtTimeDefH)src );
 		}
@@ -595,18 +595,18 @@ public class CFBamProtBuffTimeDef
 					"set",
 					"src",
 					src,
-					"ICFBamTimeDefH" );
+					"ICFBamProtTimeDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTimeDef( ICFBamProtTimeDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTimeDef( ICFBamProtTimeDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffTimeDef ) {
 			setJustProtTimeDef( (CFBamPubProtBuffTimeDef)src );
 		}
@@ -620,13 +620,13 @@ public class CFBamProtBuffTimeDef
 	}
 
 	@Override
-	public void setJustProtTimeDef( ICFBamPubTimeDef src ) {
-		super.setJustProtAtom( src );
+	public void setTimeDef( ICFBamPubTimeDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubTimeDefH ) {
 			setTimeDef( (ICFBamPubTimeDefH)src );
 		}
@@ -635,13 +635,13 @@ public class CFBamProtBuffTimeDef
 					"set",
 					"src",
 					src,
-					"ICFBamTimeDefH" );
+					"ICFBamProtTimeDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTimeDef( ICFBamPubTimeDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTimeDef( ICFBamPubTimeDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 

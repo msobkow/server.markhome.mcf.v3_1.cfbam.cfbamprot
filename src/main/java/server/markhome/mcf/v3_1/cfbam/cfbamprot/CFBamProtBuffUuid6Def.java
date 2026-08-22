@@ -82,7 +82,7 @@ public class CFBamProtBuffUuid6Def
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamUuid6Def.CLASS_CODE );
+		return( ICFBamProtUuid6Def.CLASS_CODE );
 	}
 
 	@Override
@@ -173,8 +173,8 @@ public class CFBamProtBuffUuid6Def
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -526,7 +526,7 @@ public class CFBamProtBuffUuid6Def
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffUuid6Def ) {
 			setJustProtUuid6Def( (CFBamProtBuffUuid6Def)src );
 		}
@@ -540,13 +540,13 @@ public class CFBamProtBuffUuid6Def
 	}
 
 	@Override
-	public void setJustProtUuid6Def( ICFBamUuid6Def src ) {
-		super.setJustProtAtom( src );
+	public void setUuid6Def( ICFBamProtUuid6Def src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtUuid6DefH ) {
 			setUuid6Def( (ICFBamProtUuid6DefH)src );
 		}
@@ -555,18 +555,18 @@ public class CFBamProtBuffUuid6Def
 					"set",
 					"src",
 					src,
-					"ICFBamUuid6DefH" );
+					"ICFBamProtUuid6DefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtUuid6Def( ICFBamUuid6DefH src ) {
-		super.setJustProtAtom( src );
+	public void setUuid6Def( ICFBamProtUuid6DefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffUuid6Def ) {
 			setJustProtUuid6Def( (CFBamProtBuffUuid6Def)src );
 		}
@@ -580,13 +580,13 @@ public class CFBamProtBuffUuid6Def
 	}
 
 	@Override
-	public void setJustProtUuid6Def( ICFBamProtUuid6Def src ) {
-		super.setJustProtAtom( src );
+	public void setUuid6Def( ICFBamProtUuid6Def src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtUuid6DefH ) {
 			setUuid6Def( (ICFBamProtUuid6DefH)src );
 		}
@@ -595,18 +595,18 @@ public class CFBamProtBuffUuid6Def
 					"set",
 					"src",
 					src,
-					"ICFBamUuid6DefH" );
+					"ICFBamProtUuid6DefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtUuid6Def( ICFBamProtUuid6DefH src ) {
-		super.setJustProtAtom( src );
+	public void setUuid6Def( ICFBamProtUuid6DefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffUuid6Def ) {
 			setJustProtUuid6Def( (CFBamPubProtBuffUuid6Def)src );
 		}
@@ -620,13 +620,13 @@ public class CFBamProtBuffUuid6Def
 	}
 
 	@Override
-	public void setJustProtUuid6Def( ICFBamPubUuid6Def src ) {
-		super.setJustProtAtom( src );
+	public void setUuid6Def( ICFBamPubUuid6Def src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubUuid6DefH ) {
 			setUuid6Def( (ICFBamPubUuid6DefH)src );
 		}
@@ -635,13 +635,13 @@ public class CFBamProtBuffUuid6Def
 					"set",
 					"src",
 					src,
-					"ICFBamUuid6DefH" );
+					"ICFBamProtUuid6DefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtUuid6Def( ICFBamPubUuid6DefH src ) {
-		super.setJustProtAtom( src );
+	public void setUuid6Def( ICFBamPubUuid6DefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 

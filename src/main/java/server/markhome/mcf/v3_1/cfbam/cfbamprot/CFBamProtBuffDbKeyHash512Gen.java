@@ -84,7 +84,7 @@ public class CFBamProtBuffDbKeyHash512Gen
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamDbKeyHash512Gen.CLASS_CODE );
+		return( ICFBamProtDbKeyHash512Gen.CLASS_CODE );
 	}
 
 	@Override
@@ -192,8 +192,8 @@ public class CFBamProtBuffDbKeyHash512Gen
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -492,7 +492,7 @@ public class CFBamProtBuffDbKeyHash512Gen
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffDbKeyHash512Gen ) {
 			setJustProtDbKeyHash512Gen( (CFBamProtBuffDbKeyHash512Gen)src );
 		}
@@ -506,14 +506,14 @@ public class CFBamProtBuffDbKeyHash512Gen
 	}
 
 	@Override
-	public void setJustProtDbKeyHash512Gen( ICFBamDbKeyHash512Gen src ) {
-		super.setJustProtDbKeyHash512Type( src );
+	public void setDbKeyHash512Gen( ICFBamProtDbKeyHash512Gen src ) {
+		super.setDbKeyHash512Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtDbKeyHash512GenH ) {
 			setDbKeyHash512Gen( (ICFBamProtDbKeyHash512GenH)src );
 		}
@@ -522,19 +522,19 @@ public class CFBamProtBuffDbKeyHash512Gen
 					"set",
 					"src",
 					src,
-					"ICFBamDbKeyHash512GenH" );
+					"ICFBamProtDbKeyHash512GenH" );
 		}
 	}
 
 	@Override
-	public void setJustProtDbKeyHash512Gen( ICFBamDbKeyHash512GenH src ) {
-		super.setJustProtDbKeyHash512Type( src );
+	public void setDbKeyHash512Gen( ICFBamProtDbKeyHash512GenH src ) {
+		super.setDbKeyHash512Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffDbKeyHash512Gen ) {
 			setJustProtDbKeyHash512Gen( (CFBamProtBuffDbKeyHash512Gen)src );
 		}
@@ -548,14 +548,14 @@ public class CFBamProtBuffDbKeyHash512Gen
 	}
 
 	@Override
-	public void setJustProtDbKeyHash512Gen( ICFBamProtDbKeyHash512Gen src ) {
-		super.setJustProtDbKeyHash512Type( src );
+	public void setDbKeyHash512Gen( ICFBamProtDbKeyHash512Gen src ) {
+		super.setDbKeyHash512Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtDbKeyHash512GenH ) {
 			setDbKeyHash512Gen( (ICFBamProtDbKeyHash512GenH)src );
 		}
@@ -564,19 +564,19 @@ public class CFBamProtBuffDbKeyHash512Gen
 					"set",
 					"src",
 					src,
-					"ICFBamDbKeyHash512GenH" );
+					"ICFBamProtDbKeyHash512GenH" );
 		}
 	}
 
 	@Override
-	public void setJustProtDbKeyHash512Gen( ICFBamProtDbKeyHash512GenH src ) {
-		super.setJustProtDbKeyHash512Type( src );
+	public void setDbKeyHash512Gen( ICFBamProtDbKeyHash512GenH src ) {
+		super.setDbKeyHash512Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffDbKeyHash512Gen ) {
 			setJustProtDbKeyHash512Gen( (CFBamPubProtBuffDbKeyHash512Gen)src );
 		}
@@ -590,14 +590,14 @@ public class CFBamProtBuffDbKeyHash512Gen
 	}
 
 	@Override
-	public void setJustProtDbKeyHash512Gen( ICFBamPubDbKeyHash512Gen src ) {
-		super.setJustProtDbKeyHash512Type( src );
+	public void setDbKeyHash512Gen( ICFBamPubDbKeyHash512Gen src ) {
+		super.setDbKeyHash512Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubDbKeyHash512GenH ) {
 			setDbKeyHash512Gen( (ICFBamPubDbKeyHash512GenH)src );
 		}
@@ -606,13 +606,13 @@ public class CFBamProtBuffDbKeyHash512Gen
 					"set",
 					"src",
 					src,
-					"ICFBamDbKeyHash512GenH" );
+					"ICFBamProtDbKeyHash512GenH" );
 		}
 	}
 
 	@Override
-	public void setJustProtDbKeyHash512Gen( ICFBamPubDbKeyHash512GenH src ) {
-		super.setJustProtDbKeyHash512Type( src );
+	public void setDbKeyHash512Gen( ICFBamPubDbKeyHash512GenH src ) {
+		super.setDbKeyHash512Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}

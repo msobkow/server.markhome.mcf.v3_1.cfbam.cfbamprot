@@ -124,44 +124,44 @@ public class CFBamProtBuffTable
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamTable.CLASS_CODE );
+		return( ICFBamProtTable.CLASS_CODE );
 	}
 
 	@Override
-	public ICFBamSchemaDef getRequiredContainerSchemaDef() {
+	public ICFBamProtSchemaDef getRequiredContainerSchemaDef() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
-		ICFBamSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSchemaDefId());
+		ICFBamProtSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSchemaDefId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamSchemaDef getRequiredContainerSchemaDef() {
+	public ICFBamProtSchemaDef getRequiredContainerSchemaDef() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
-		ICFBamSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSchemaDefId());
+		ICFBamProtSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSchemaDefId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamSchemaDef getRequiredContainerSchemaDef() {
+	public ICFBamProtSchemaDef getRequiredContainerSchemaDef() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
@@ -170,31 +170,31 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProtRequiredContainerSchemaDef(ICFLibKeyHash256 argSchemaDefId) {
+	public void setRequiredContainerSchemaDef(ICFLibKeyHash256 argSchemaDefId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerSchemaDef-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerSchemaDef-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerSchemaDef", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtSchemaDef found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argSchemaDefId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerSchemaDef-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerSchemaDef-args", 0, "found");
 		}
 		else if ((found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)) {
 		requiredSchemaDefId = argSchemaDefId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredContainerSchemaDef-args", "found", found, "ICFBamProtSchemaDefICFBamPubSchemaDef");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredContainerSchemaDef-args", "found", found, "ICFBamProtSchemaDefICFBamPubSchemaDef");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerSchemaDef(ICFBamSchemaDef argObj) {
+	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerSchemaDef", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerSchemaDef", 1, "argObj");
 		}
 		else {
 			setJustProtRequiredSchemaDefId(argObj.getRequiredId());
@@ -202,40 +202,40 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public ICFBamSchemaDef getOptionalLookupDefSchema() {
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
-		ICFBamSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalDefSchemaId());
+		ICFBamProtSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalDefSchemaId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamSchemaDef getOptionalLookupDefSchema() {
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
-		ICFBamSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalDefSchemaId());
+		ICFBamProtSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalDefSchemaId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamSchemaDef getOptionalLookupDefSchema() {
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
@@ -244,26 +244,26 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProtOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId) {
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupDefSchema-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupDefSchema-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtSchemaDef found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argDefSchemaId);
-		if (found == null || (found != null && ((found instanceof ICFBamSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)))) {
+		if (found == null || (found != null && ((found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)))) {
 		optionalDefSchemaId = argDefSchemaId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtOptionalLookupDefSchema-args", "found", found, "ICFBamSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
+			throw new CFLibUnsupportedClassException(getClass(), "setOptionalLookupDefSchema-args", "found", found, "ICFBamProtSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
 		}
 	}
 
 	@Override
-	public void setJustProtOptionalLookupDefSchema(ICFBamSchemaDef argObj) {
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj) {
 		if(argObj == null) {
 			setJustProtOptionalDefSchemaId(null);
 		}
@@ -273,40 +273,40 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public ICFBamIndex getOptionalLookupLookupIndex() {
+	public ICFBamProtIndex getOptionalLookupLookupIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupLookupIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupLookupIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
-		ICFBamIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalLookupIndexId());
+		ICFBamProtIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalLookupIndexId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamIndex getOptionalLookupLookupIndex() {
+	public ICFBamProtIndex getOptionalLookupLookupIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupLookupIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupLookupIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
-		ICFBamIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalLookupIndexId());
+		ICFBamProtIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalLookupIndexId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamIndex getOptionalLookupLookupIndex() {
+	public ICFBamProtIndex getOptionalLookupLookupIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupLookupIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupLookupIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
@@ -315,26 +315,26 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProtOptionalLookupLookupIndex(ICFLibKeyHash256 argLookupIndexId) {
+	public void setOptionalLookupLookupIndex(ICFLibKeyHash256 argLookupIndexId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupLookupIndex-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupLookupIndex-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupLookupIndex", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupLookupIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtIndex found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argLookupIndexId);
-		if (found == null || (found != null && ((found instanceof ICFBamIndex) || (found instanceof ICFBamProtIndex) || (found instanceof ICFBamPubIndex)))) {
+		if (found == null || (found != null && ((found instanceof ICFBamProtIndex) || (found instanceof ICFBamProtIndex) || (found instanceof ICFBamPubIndex)))) {
 		optionalLookupIndexId = argLookupIndexId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtOptionalLookupLookupIndex-args", "found", found, "ICFBamIndexICFBamProtIndexICFBamPubIndex");
+			throw new CFLibUnsupportedClassException(getClass(), "setOptionalLookupLookupIndex-args", "found", found, "ICFBamProtIndexICFBamProtIndexICFBamPubIndex");
 		}
 	}
 
 	@Override
-	public void setJustProtOptionalLookupLookupIndex(ICFBamIndex argObj) {
+	public void setOptionalLookupLookupIndex(ICFBamProtIndex argObj) {
 		if(argObj == null) {
 			setJustProtOptionalLookupIndexId(null);
 		}
@@ -344,40 +344,40 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public ICFBamIndex getOptionalLookupAltIndex() {
+	public ICFBamProtIndex getOptionalLookupAltIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupAltIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupAltIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
-		ICFBamIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalAltIndexId());
+		ICFBamProtIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalAltIndexId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamIndex getOptionalLookupAltIndex() {
+	public ICFBamProtIndex getOptionalLookupAltIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupAltIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupAltIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
-		ICFBamIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalAltIndexId());
+		ICFBamProtIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalAltIndexId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamIndex getOptionalLookupAltIndex() {
+	public ICFBamProtIndex getOptionalLookupAltIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupAltIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupAltIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
@@ -386,26 +386,26 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProtOptionalLookupAltIndex(ICFLibKeyHash256 argAltIndexId) {
+	public void setOptionalLookupAltIndex(ICFLibKeyHash256 argAltIndexId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupAltIndex-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupAltIndex-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupAltIndex", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupAltIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtIndex found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argAltIndexId);
-		if (found == null || (found != null && ((found instanceof ICFBamIndex) || (found instanceof ICFBamProtIndex) || (found instanceof ICFBamPubIndex)))) {
+		if (found == null || (found != null && ((found instanceof ICFBamProtIndex) || (found instanceof ICFBamProtIndex) || (found instanceof ICFBamPubIndex)))) {
 		optionalAltIndexId = argAltIndexId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtOptionalLookupAltIndex-args", "found", found, "ICFBamIndexICFBamProtIndexICFBamPubIndex");
+			throw new CFLibUnsupportedClassException(getClass(), "setOptionalLookupAltIndex-args", "found", found, "ICFBamProtIndexICFBamProtIndexICFBamPubIndex");
 		}
 	}
 
 	@Override
-	public void setJustProtOptionalLookupAltIndex(ICFBamIndex argObj) {
+	public void setOptionalLookupAltIndex(ICFBamProtIndex argObj) {
 		if(argObj == null) {
 			setJustProtOptionalAltIndexId(null);
 		}
@@ -415,40 +415,40 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public ICFBamTable getOptionalLookupQualTable() {
+	public ICFBamProtTable getOptionalLookupQualTable() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupQualTable", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamTableTable targetTable = targetBackingCFBam.getTableTable();
+		ICFBamProtTableTable targetTable = targetBackingCFBam.getTableTable();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupQualTable", 0, "ICFBamSchema.getBackingCFBam().getTableTable()");
 		}
-		ICFBamTable targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalQualifyingTableId());
+		ICFBamProtTable targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalQualifyingTableId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamTable getOptionalLookupQualTable() {
+	public ICFBamProtTable getOptionalLookupQualTable() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupQualTable", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamTableTable targetTable = targetBackingCFBam.getTableTable();
+		ICFBamProtTableTable targetTable = targetBackingCFBam.getTableTable();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupQualTable", 0, "ICFBamSchema.getBackingCFBam().getTableTable()");
 		}
-		ICFBamTable targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalQualifyingTableId());
+		ICFBamProtTable targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalQualifyingTableId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamTable getOptionalLookupQualTable() {
+	public ICFBamProtTable getOptionalLookupQualTable() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupQualTable", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamTableTable targetTable = targetBackingCFBam.getTableTable();
+		ICFBamProtTableTable targetTable = targetBackingCFBam.getTableTable();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupQualTable", 0, "ICFBamSchema.getBackingCFBam().getTableTable()");
 		}
@@ -457,26 +457,26 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProtOptionalLookupQualTable(ICFLibKeyHash256 argQualifyingTableId) {
+	public void setOptionalLookupQualTable(ICFLibKeyHash256 argQualifyingTableId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupQualTable-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupQualTable-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtTableTable targetTable = targetBackingCFBam.getTableTable();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupQualTable", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupQualTable", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtTable found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argQualifyingTableId);
-		if (found == null || (found != null && ((found instanceof ICFBamTable) || (found instanceof ICFBamProtTable) || (found instanceof ICFBamPubTable)))) {
+		if (found == null || (found != null && ((found instanceof ICFBamProtTable) || (found instanceof ICFBamProtTable) || (found instanceof ICFBamPubTable)))) {
 		optionalQualifyingTableId = argQualifyingTableId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtOptionalLookupQualTable-args", "found", found, "ICFBamTableICFBamProtTableICFBamPubTable");
+			throw new CFLibUnsupportedClassException(getClass(), "setOptionalLookupQualTable-args", "found", found, "ICFBamProtTableICFBamProtTableICFBamPubTable");
 		}
 	}
 
 	@Override
-	public void setJustProtOptionalLookupQualTable(ICFBamTable argObj) {
+	public void setOptionalLookupQualTable(ICFBamProtTable argObj) {
 		if(argObj == null) {
 			setJustProtOptionalQualifyingTableId(null);
 		}
@@ -486,40 +486,40 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public ICFBamIndex getOptionalLookupPrimaryIndex() {
+	public ICFBamProtIndex getOptionalLookupPrimaryIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrimaryIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrimaryIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
-		ICFBamIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalPrimaryIndexId());
+		ICFBamProtIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalPrimaryIndexId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamIndex getOptionalLookupPrimaryIndex() {
+	public ICFBamProtIndex getOptionalLookupPrimaryIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrimaryIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrimaryIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
-		ICFBamIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalPrimaryIndexId());
+		ICFBamProtIndex targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalPrimaryIndexId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamIndex getOptionalLookupPrimaryIndex() {
+	public ICFBamProtIndex getOptionalLookupPrimaryIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrimaryIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrimaryIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
@@ -528,26 +528,26 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProtOptionalLookupPrimaryIndex(ICFLibKeyHash256 argPrimaryIndexId) {
+	public void setOptionalLookupPrimaryIndex(ICFLibKeyHash256 argPrimaryIndexId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupPrimaryIndex-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupPrimaryIndex-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupPrimaryIndex", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupPrimaryIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtIndex found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argPrimaryIndexId);
-		if (found == null || (found != null && ((found instanceof ICFBamIndex) || (found instanceof ICFBamProtIndex) || (found instanceof ICFBamPubIndex)))) {
+		if (found == null || (found != null && ((found instanceof ICFBamProtIndex) || (found instanceof ICFBamProtIndex) || (found instanceof ICFBamPubIndex)))) {
 		optionalPrimaryIndexId = argPrimaryIndexId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtOptionalLookupPrimaryIndex-args", "found", found, "ICFBamIndexICFBamProtIndexICFBamPubIndex");
+			throw new CFLibUnsupportedClassException(getClass(), "setOptionalLookupPrimaryIndex-args", "found", found, "ICFBamProtIndexICFBamProtIndexICFBamPubIndex");
 		}
 	}
 
 	@Override
-	public void setJustProtOptionalLookupPrimaryIndex(ICFBamIndex argObj) {
+	public void setOptionalLookupPrimaryIndex(ICFBamProtIndex argObj) {
 		if(argObj == null) {
 			setJustProtOptionalPrimaryIndexId(null);
 		}
@@ -557,60 +557,60 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public List<ICFBamRelation> getOptionalComponentsRelation() {
+	public List<ICFBamProtRelation> getOptionalComponentsRelation() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsRelation", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamRelationTable targetTable = targetBackingCFBam.getTableRelation();
+		ICFBamProtRelationTable targetTable = targetBackingCFBam.getTableRelation();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsRelation", 0, "ICFBamSchema.getBackingCFBam().getTableRelation()");
 		}
-		ICFBamRelation[] targetArr = targetTable.readDerivedByRelTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtRelation[] targetArr = targetTable.readDerivedByRelTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamRelation> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtRelation> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamRelation> results = new ArrayList<>();
+			List<ICFBamProtRelation> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamRelation> getOptionalComponentsRelation() {
+	public List<ICFBamProtRelation> getOptionalComponentsRelation() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsRelation", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamRelationTable targetTable = targetBackingCFBam.getTableRelation();
+		ICFBamProtRelationTable targetTable = targetBackingCFBam.getTableRelation();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsRelation", 0, "ICFBamSchema.getBackingCFBam().getTableRelation()");
 		}
-		ICFBamRelation[] targetArr = targetTable.readDerivedByRelTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtRelation[] targetArr = targetTable.readDerivedByRelTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamRelation> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtRelation> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamRelation> results = new ArrayList<>();
+			List<ICFBamProtRelation> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamRelation> getOptionalComponentsRelation() {
+	public List<ICFBamProtRelation> getOptionalComponentsRelation() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsRelation", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamRelationTable targetTable = targetBackingCFBam.getTableRelation();
+		ICFBamProtRelationTable targetTable = targetBackingCFBam.getTableRelation();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsRelation", 0, "ICFBamSchema.getBackingCFBam().getTableRelation()");
 		}
@@ -629,60 +629,60 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public List<ICFBamIndex> getOptionalComponentsIndex() {
+	public List<ICFBamProtIndex> getOptionalComponentsIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
-		ICFBamIndex[] targetArr = targetTable.readDerivedByIdxTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtIndex[] targetArr = targetTable.readDerivedByIdxTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamIndex> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtIndex> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamIndex> results = new ArrayList<>();
+			List<ICFBamProtIndex> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamIndex> getOptionalComponentsIndex() {
+	public List<ICFBamProtIndex> getOptionalComponentsIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
-		ICFBamIndex[] targetArr = targetTable.readDerivedByIdxTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtIndex[] targetArr = targetTable.readDerivedByIdxTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamIndex> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtIndex> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamIndex> results = new ArrayList<>();
+			List<ICFBamProtIndex> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamIndex> getOptionalComponentsIndex() {
+	public List<ICFBamProtIndex> getOptionalComponentsIndex() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsIndex", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamIndexTable targetTable = targetBackingCFBam.getTableIndex();
+		ICFBamProtIndexTable targetTable = targetBackingCFBam.getTableIndex();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsIndex", 0, "ICFBamSchema.getBackingCFBam().getTableIndex()");
 		}
@@ -701,60 +701,60 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public List<ICFBamValue> getOptionalComponentsColumns() {
+	public List<ICFBamProtValue> getOptionalComponentsColumns() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsColumns", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamValueTable targetTable = targetBackingCFBam.getTableValue();
+		ICFBamProtValueTable targetTable = targetBackingCFBam.getTableValue();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsColumns", 0, "ICFBamSchema.getBackingCFBam().getTableValue()");
 		}
-		ICFBamValue[] targetArr = targetTable.readDerivedByScopeIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtValue[] targetArr = targetTable.readDerivedByScopeIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamValue> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtValue> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamValue> results = new ArrayList<>();
+			List<ICFBamProtValue> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamValue> getOptionalComponentsColumns() {
+	public List<ICFBamProtValue> getOptionalComponentsColumns() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsColumns", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamValueTable targetTable = targetBackingCFBam.getTableValue();
+		ICFBamProtValueTable targetTable = targetBackingCFBam.getTableValue();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsColumns", 0, "ICFBamSchema.getBackingCFBam().getTableValue()");
 		}
-		ICFBamValue[] targetArr = targetTable.readDerivedByScopeIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtValue[] targetArr = targetTable.readDerivedByScopeIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamValue> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtValue> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamValue> results = new ArrayList<>();
+			List<ICFBamProtValue> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamValue> getOptionalComponentsColumns() {
+	public List<ICFBamProtValue> getOptionalComponentsColumns() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsColumns", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamValueTable targetTable = targetBackingCFBam.getTableValue();
+		ICFBamProtValueTable targetTable = targetBackingCFBam.getTableValue();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsColumns", 0, "ICFBamSchema.getBackingCFBam().getTableValue()");
 		}
@@ -773,60 +773,60 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public List<ICFBamRelation> getOptionalChildrenReverseRelations() {
+	public List<ICFBamProtRelation> getOptionalChildrenReverseRelations() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenReverseRelations", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamRelationTable targetTable = targetBackingCFBam.getTableRelation();
+		ICFBamProtRelationTable targetTable = targetBackingCFBam.getTableRelation();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenReverseRelations", 0, "ICFBamSchema.getBackingCFBam().getTableRelation()");
 		}
-		ICFBamRelation[] targetArr = targetTable.readDerivedByToTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtRelation[] targetArr = targetTable.readDerivedByToTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamRelation> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtRelation> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamRelation> results = new ArrayList<>();
+			List<ICFBamProtRelation> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamRelation> getOptionalChildrenReverseRelations() {
+	public List<ICFBamProtRelation> getOptionalChildrenReverseRelations() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenReverseRelations", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamRelationTable targetTable = targetBackingCFBam.getTableRelation();
+		ICFBamProtRelationTable targetTable = targetBackingCFBam.getTableRelation();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenReverseRelations", 0, "ICFBamSchema.getBackingCFBam().getTableRelation()");
 		}
-		ICFBamRelation[] targetArr = targetTable.readDerivedByToTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtRelation[] targetArr = targetTable.readDerivedByToTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamRelation> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtRelation> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamRelation> results = new ArrayList<>();
+			List<ICFBamProtRelation> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamRelation> getOptionalChildrenReverseRelations() {
+	public List<ICFBamProtRelation> getOptionalChildrenReverseRelations() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenReverseRelations", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamRelationTable targetTable = targetBackingCFBam.getTableRelation();
+		ICFBamProtRelationTable targetTable = targetBackingCFBam.getTableRelation();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenReverseRelations", 0, "ICFBamSchema.getBackingCFBam().getTableRelation()");
 		}
@@ -845,60 +845,60 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public List<ICFBamChain> getOptionalComponentsChains() {
+	public List<ICFBamProtChain> getOptionalComponentsChains() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsChains", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamChainTable targetTable = targetBackingCFBam.getTableChain();
+		ICFBamProtChainTable targetTable = targetBackingCFBam.getTableChain();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsChains", 0, "ICFBamSchema.getBackingCFBam().getTableChain()");
 		}
-		ICFBamChain[] targetArr = targetTable.readDerivedByChainTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtChain[] targetArr = targetTable.readDerivedByChainTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamChain> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtChain> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamChain> results = new ArrayList<>();
+			List<ICFBamProtChain> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamChain> getOptionalComponentsChains() {
+	public List<ICFBamProtChain> getOptionalComponentsChains() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsChains", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamChainTable targetTable = targetBackingCFBam.getTableChain();
+		ICFBamProtChainTable targetTable = targetBackingCFBam.getTableChain();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsChains", 0, "ICFBamSchema.getBackingCFBam().getTableChain()");
 		}
-		ICFBamChain[] targetArr = targetTable.readDerivedByChainTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtChain[] targetArr = targetTable.readDerivedByChainTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamChain> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtChain> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamChain> results = new ArrayList<>();
+			List<ICFBamProtChain> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamChain> getOptionalComponentsChains() {
+	public List<ICFBamProtChain> getOptionalComponentsChains() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsChains", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamChainTable targetTable = targetBackingCFBam.getTableChain();
+		ICFBamProtChainTable targetTable = targetBackingCFBam.getTableChain();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsChains", 0, "ICFBamSchema.getBackingCFBam().getTableChain()");
 		}
@@ -917,60 +917,60 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public List<ICFBamDelTopDep> getOptionalComponentsDelDep() {
+	public List<ICFBamProtDelTopDep> getOptionalComponentsDelDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsDelDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamDelTopDepTable targetTable = targetBackingCFBam.getTableDelTopDep();
+		ICFBamProtDelTopDepTable targetTable = targetBackingCFBam.getTableDelTopDep();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsDelDep", 0, "ICFBamSchema.getBackingCFBam().getTableDelTopDep()");
 		}
-		ICFBamDelTopDep[] targetArr = targetTable.readDerivedByDelTopDepTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtDelTopDep[] targetArr = targetTable.readDerivedByDelTopDepTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamDelTopDep> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtDelTopDep> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamDelTopDep> results = new ArrayList<>();
+			List<ICFBamProtDelTopDep> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamDelTopDep> getOptionalComponentsDelDep() {
+	public List<ICFBamProtDelTopDep> getOptionalComponentsDelDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsDelDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamDelTopDepTable targetTable = targetBackingCFBam.getTableDelTopDep();
+		ICFBamProtDelTopDepTable targetTable = targetBackingCFBam.getTableDelTopDep();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsDelDep", 0, "ICFBamSchema.getBackingCFBam().getTableDelTopDep()");
 		}
-		ICFBamDelTopDep[] targetArr = targetTable.readDerivedByDelTopDepTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtDelTopDep[] targetArr = targetTable.readDerivedByDelTopDepTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamDelTopDep> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtDelTopDep> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamDelTopDep> results = new ArrayList<>();
+			List<ICFBamProtDelTopDep> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamDelTopDep> getOptionalComponentsDelDep() {
+	public List<ICFBamProtDelTopDep> getOptionalComponentsDelDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsDelDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamDelTopDepTable targetTable = targetBackingCFBam.getTableDelTopDep();
+		ICFBamProtDelTopDepTable targetTable = targetBackingCFBam.getTableDelTopDep();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsDelDep", 0, "ICFBamSchema.getBackingCFBam().getTableDelTopDep()");
 		}
@@ -989,60 +989,60 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public List<ICFBamClearTopDep> getOptionalComponentsClearDep() {
+	public List<ICFBamProtClearTopDep> getOptionalComponentsClearDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsClearDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamClearTopDepTable targetTable = targetBackingCFBam.getTableClearTopDep();
+		ICFBamProtClearTopDepTable targetTable = targetBackingCFBam.getTableClearTopDep();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsClearDep", 0, "ICFBamSchema.getBackingCFBam().getTableClearTopDep()");
 		}
-		ICFBamClearTopDep[] targetArr = targetTable.readDerivedByClrTopDepTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtClearTopDep[] targetArr = targetTable.readDerivedByClrTopDepTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamClearTopDep> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtClearTopDep> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamClearTopDep> results = new ArrayList<>();
+			List<ICFBamProtClearTopDep> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamClearTopDep> getOptionalComponentsClearDep() {
+	public List<ICFBamProtClearTopDep> getOptionalComponentsClearDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsClearDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamClearTopDepTable targetTable = targetBackingCFBam.getTableClearTopDep();
+		ICFBamProtClearTopDepTable targetTable = targetBackingCFBam.getTableClearTopDep();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsClearDep", 0, "ICFBamSchema.getBackingCFBam().getTableClearTopDep()");
 		}
-		ICFBamClearTopDep[] targetArr = targetTable.readDerivedByClrTopDepTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtClearTopDep[] targetArr = targetTable.readDerivedByClrTopDepTblIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamClearTopDep> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtClearTopDep> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamClearTopDep> results = new ArrayList<>();
+			List<ICFBamProtClearTopDep> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamClearTopDep> getOptionalComponentsClearDep() {
+	public List<ICFBamProtClearTopDep> getOptionalComponentsClearDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsClearDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamClearTopDepTable targetTable = targetBackingCFBam.getTableClearTopDep();
+		ICFBamProtClearTopDepTable targetTable = targetBackingCFBam.getTableClearTopDep();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsClearDep", 0, "ICFBamSchema.getBackingCFBam().getTableClearTopDep()");
 		}
@@ -1061,60 +1061,60 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public List<ICFBamServerMethod> getOptionalComponentsServerMethods() {
+	public List<ICFBamProtServerMethod> getOptionalComponentsServerMethods() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsServerMethods", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
+		ICFBamProtServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsServerMethods", 0, "ICFBamSchema.getBackingCFBam().getTableServerMethod()");
 		}
-		ICFBamServerMethod[] targetArr = targetTable.readDerivedByMethTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtServerMethod[] targetArr = targetTable.readDerivedByMethTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamServerMethod> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtServerMethod> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamServerMethod> results = new ArrayList<>();
+			List<ICFBamProtServerMethod> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamServerMethod> getOptionalComponentsServerMethods() {
+	public List<ICFBamProtServerMethod> getOptionalComponentsServerMethods() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsServerMethods", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
+		ICFBamProtServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsServerMethods", 0, "ICFBamSchema.getBackingCFBam().getTableServerMethod()");
 		}
-		ICFBamServerMethod[] targetArr = targetTable.readDerivedByMethTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtServerMethod[] targetArr = targetTable.readDerivedByMethTableIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamServerMethod> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtServerMethod> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamServerMethod> results = new ArrayList<>();
+			List<ICFBamProtServerMethod> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamServerMethod> getOptionalComponentsServerMethods() {
+	public List<ICFBamProtServerMethod> getOptionalComponentsServerMethods() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsServerMethods", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
+		ICFBamProtServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsServerMethods", 0, "ICFBamSchema.getBackingCFBam().getTableServerMethod()");
 		}
@@ -1133,60 +1133,60 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public List<ICFBamTweak> getOptionalComponentsTweaks() {
+	public List<ICFBamProtTweak> getOptionalComponentsTweaks() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsTweaks", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamTweakTable targetTable = targetBackingCFBam.getTableTweak();
+		ICFBamProtTweakTable targetTable = targetBackingCFBam.getTableTweak();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsTweaks", 0, "ICFBamSchema.getBackingCFBam().getTableTweak()");
 		}
-		ICFBamTweak[] targetArr = targetTable.readDerivedByScopeIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtTweak[] targetArr = targetTable.readDerivedByScopeIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamTweak> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtTweak> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamTweak> results = new ArrayList<>();
+			List<ICFBamProtTweak> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamTweak> getOptionalComponentsTweaks() {
+	public List<ICFBamProtTweak> getOptionalComponentsTweaks() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsTweaks", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamTweakTable targetTable = targetBackingCFBam.getTableTweak();
+		ICFBamProtTweakTable targetTable = targetBackingCFBam.getTableTweak();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsTweaks", 0, "ICFBamSchema.getBackingCFBam().getTableTweak()");
 		}
-		ICFBamTweak[] targetArr = targetTable.readDerivedByScopeIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtTweak[] targetArr = targetTable.readDerivedByScopeIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamTweak> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtTweak> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamTweak> results = new ArrayList<>();
+			List<ICFBamProtTweak> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamTweak> getOptionalComponentsTweaks() {
+	public List<ICFBamProtTweak> getOptionalComponentsTweaks() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsTweaks", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamTweakTable targetTable = targetBackingCFBam.getTableTweak();
+		ICFBamProtTweakTable targetTable = targetBackingCFBam.getTableTweak();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsTweaks", 0, "ICFBamSchema.getBackingCFBam().getTableTweak()");
 		}
@@ -2051,8 +2051,8 @@ public class CFBamProtBuffTable
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamScopeHPKey ) {
-			ICFBamProtScopeHPKey rhs = (ICFBamScopeHPKey)obj;
+		else if( obj instanceof ICFBamProtScopeHPKey ) {
+			ICFBamProtScopeHPKey rhs = (ICFBamProtScopeHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -4624,7 +4624,7 @@ public class CFBamProtBuffTable
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableBySchemaDefIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableBySchemaDefIdxKey rhs ) {
 			if (getRequiredSchemaDefId() != null) {
 				if (rhs.getRequiredSchemaDefId() != null) {
 					cmp = getRequiredSchemaDefId().compareTo( rhs.getRequiredSchemaDefId() );
@@ -4640,7 +4640,7 @@ public class CFBamProtBuffTable
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableByCodeVisIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableByCodeVisIdxKey rhs ) {
 			if (getRequiredCodeVis() != null) {
 				if (rhs.getRequiredCodeVis() != null) {
 					cmp = getRequiredCodeVis().compareTo( rhs.getRequiredCodeVis() );
@@ -4656,7 +4656,7 @@ public class CFBamProtBuffTable
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableBySchemaCodeVisIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableBySchemaCodeVisIdxKey rhs ) {
 			if (getRequiredSchemaDefId() != null) {
 				if (rhs.getRequiredSchemaDefId() != null) {
 					cmp = getRequiredSchemaDefId().compareTo( rhs.getRequiredSchemaDefId() );
@@ -4686,7 +4686,7 @@ public class CFBamProtBuffTable
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableByDefSchemaIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableByDefSchemaIdxKey rhs ) {
 			if( getOptionalDefSchemaId() != null ) {
 				if( rhs.getOptionalDefSchemaId() != null ) {
 					cmp = getOptionalDefSchemaId().compareTo( rhs.getOptionalDefSchemaId() );
@@ -4704,7 +4704,7 @@ public class CFBamProtBuffTable
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableByUNameIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableByUNameIdxKey rhs ) {
 			if (getRequiredSchemaDefId() != null) {
 				if (rhs.getRequiredSchemaDefId() != null) {
 					cmp = getRequiredSchemaDefId().compareTo( rhs.getRequiredSchemaDefId() );
@@ -4734,7 +4734,7 @@ public class CFBamProtBuffTable
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableBySchemaCdIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableBySchemaCdIdxKey rhs ) {
 			if (getRequiredSchemaDefId() != null) {
 				if (rhs.getRequiredSchemaDefId() != null) {
 					cmp = getRequiredSchemaDefId().compareTo( rhs.getRequiredSchemaDefId() );
@@ -4764,7 +4764,7 @@ public class CFBamProtBuffTable
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableByPrimaryIndexIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableByPrimaryIndexIdxKey rhs ) {
 			if( getOptionalPrimaryIndexId() != null ) {
 				if( rhs.getOptionalPrimaryIndexId() != null ) {
 					cmp = getOptionalPrimaryIndexId().compareTo( rhs.getOptionalPrimaryIndexId() );
@@ -4782,7 +4782,7 @@ public class CFBamProtBuffTable
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableByLookupIndexIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableByLookupIndexIdxKey rhs ) {
 			if( getOptionalLookupIndexId() != null ) {
 				if( rhs.getOptionalLookupIndexId() != null ) {
 					cmp = getOptionalLookupIndexId().compareTo( rhs.getOptionalLookupIndexId() );
@@ -4800,7 +4800,7 @@ public class CFBamProtBuffTable
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableByAltIndexIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableByAltIndexIdxKey rhs ) {
 			if( getOptionalAltIndexId() != null ) {
 				if( rhs.getOptionalAltIndexId() != null ) {
 					cmp = getOptionalAltIndexId().compareTo( rhs.getOptionalAltIndexId() );
@@ -4818,7 +4818,7 @@ public class CFBamProtBuffTable
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamTableByQualTableIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtTableByQualTableIdxKey rhs ) {
 			if( getOptionalQualifyingTableId() != null ) {
 				if( rhs.getOptionalQualifyingTableId() != null ) {
 					cmp = getOptionalQualifyingTableId().compareTo( rhs.getOptionalQualifyingTableId() );
@@ -5700,7 +5700,7 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProt( ICFBamScope src ) {
+	public void set( ICFBamProtScope src ) {
 		if( src instanceof CFBamProtBuffTable ) {
 			setJustProtTable( (CFBamProtBuffTable)src );
 		}
@@ -5714,8 +5714,8 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProtTable( ICFBamTable src ) {
-		super.setJustProtScope( src );
+	public void setTable( ICFBamProtTable src ) {
+		super.setScope( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
 		setJustProtOptionalLookupLookupIndex(src.getOptionalLookupLookupIndex());
@@ -5747,7 +5747,7 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProt( ICFBamScopeH src ) {
+	public void set( ICFBamProtScopeH src ) {
 		if( src instanceof ICFBamProtTableH ) {
 			setTable( (ICFBamProtTableH)src );
 		}
@@ -5756,13 +5756,13 @@ public class CFBamProtBuffTable
 					"set",
 					"src",
 					src,
-					"ICFBamTableH" );
+					"ICFBamProtTableH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTable( ICFBamTableH src ) {
-		super.setJustProtScope( src );
+	public void setTable( ICFBamProtTableH src ) {
+		super.setScope( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
 		setJustProtOptionalLookupLookupIndex(src.getOptionalLookupLookupIndex());
@@ -5794,7 +5794,7 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtScope src ) {
+	public void set( ICFBamProtScope src ) {
 		if( src instanceof CFBamProtBuffTable ) {
 			setJustProtTable( (CFBamProtBuffTable)src );
 		}
@@ -5808,8 +5808,8 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProtTable( ICFBamProtTable src ) {
-		super.setJustProtScope( src );
+	public void setTable( ICFBamProtTable src ) {
+		super.setScope( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
 		setJustProtOptionalLookupLookupIndex(src.getOptionalLookupLookupIndex());
@@ -5841,7 +5841,7 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtScopeH src ) {
+	public void set( ICFBamProtScopeH src ) {
 		if( src instanceof ICFBamProtTableH ) {
 			setTable( (ICFBamProtTableH)src );
 		}
@@ -5850,13 +5850,13 @@ public class CFBamProtBuffTable
 					"set",
 					"src",
 					src,
-					"ICFBamTableH" );
+					"ICFBamProtTableH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTable( ICFBamProtTableH src ) {
-		super.setJustProtScope( src );
+	public void setTable( ICFBamProtTableH src ) {
+		super.setScope( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
 		setJustProtOptionalLookupLookupIndex(src.getOptionalLookupLookupIndex());
@@ -5888,7 +5888,7 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubScope src ) {
+	public void set( ICFBamPubScope src ) {
 		if( src instanceof CFBamPubProtBuffTable ) {
 			setJustProtTable( (CFBamPubProtBuffTable)src );
 		}
@@ -5902,8 +5902,8 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProtTable( ICFBamPubTable src ) {
-		super.setJustProtScope( src );
+	public void setTable( ICFBamPubTable src ) {
+		super.setScope( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
 		setJustProtOptionalLookupLookupIndex(src.getOptionalLookupLookupIndex());
@@ -5935,7 +5935,7 @@ public class CFBamProtBuffTable
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubScopeH src ) {
+	public void set( ICFBamPubScopeH src ) {
 		if( src instanceof ICFBamPubTableH ) {
 			setTable( (ICFBamPubTableH)src );
 		}
@@ -5944,13 +5944,13 @@ public class CFBamProtBuffTable
 					"set",
 					"src",
 					src,
-					"ICFBamTableH" );
+					"ICFBamProtTableH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTable( ICFBamPubTableH src ) {
-		super.setJustProtScope( src );
+	public void setTable( ICFBamPubTableH src ) {
+		super.setScope( src );
 		setJustProtRequiredContainerSchemaDef(src.getRequiredContainerSchemaDef());
 		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
 		setJustProtOptionalLookupLookupIndex(src.getOptionalLookupLookupIndex());

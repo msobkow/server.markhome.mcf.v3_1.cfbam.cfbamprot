@@ -88,7 +88,7 @@ public class CFBamProtBuffBoolDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamBoolDef.CLASS_CODE );
+		return( ICFBamProtBoolDef.CLASS_CODE );
 	}
 
 	@Override
@@ -312,8 +312,8 @@ public class CFBamProtBuffBoolDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -1086,7 +1086,7 @@ public class CFBamProtBuffBoolDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffBoolDef ) {
 			setJustProtBoolDef( (CFBamProtBuffBoolDef)src );
 		}
@@ -1100,8 +1100,8 @@ public class CFBamProtBuffBoolDef
 	}
 
 	@Override
-	public void setJustProtBoolDef( ICFBamBoolDef src ) {
-		super.setJustProtAtom( src );
+	public void setBoolDef( ICFBamProtBoolDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalFalseString(src.getOptionalFalseString());
 		setJustProtOptionalTrueString(src.getOptionalTrueString());
@@ -1109,7 +1109,7 @@ public class CFBamProtBuffBoolDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtBoolDefH ) {
 			setBoolDef( (ICFBamProtBoolDefH)src );
 		}
@@ -1118,13 +1118,13 @@ public class CFBamProtBuffBoolDef
 					"set",
 					"src",
 					src,
-					"ICFBamBoolDefH" );
+					"ICFBamProtBoolDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtBoolDef( ICFBamBoolDefH src ) {
-		super.setJustProtAtom( src );
+	public void setBoolDef( ICFBamProtBoolDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalFalseString(src.getOptionalFalseString());
 		setJustProtOptionalTrueString(src.getOptionalTrueString());
@@ -1132,7 +1132,7 @@ public class CFBamProtBuffBoolDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffBoolDef ) {
 			setJustProtBoolDef( (CFBamProtBuffBoolDef)src );
 		}
@@ -1146,8 +1146,8 @@ public class CFBamProtBuffBoolDef
 	}
 
 	@Override
-	public void setJustProtBoolDef( ICFBamProtBoolDef src ) {
-		super.setJustProtAtom( src );
+	public void setBoolDef( ICFBamProtBoolDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalFalseString(src.getOptionalFalseString());
 		setJustProtOptionalTrueString(src.getOptionalTrueString());
@@ -1155,7 +1155,7 @@ public class CFBamProtBuffBoolDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtBoolDefH ) {
 			setBoolDef( (ICFBamProtBoolDefH)src );
 		}
@@ -1164,13 +1164,13 @@ public class CFBamProtBuffBoolDef
 					"set",
 					"src",
 					src,
-					"ICFBamBoolDefH" );
+					"ICFBamProtBoolDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtBoolDef( ICFBamProtBoolDefH src ) {
-		super.setJustProtAtom( src );
+	public void setBoolDef( ICFBamProtBoolDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalFalseString(src.getOptionalFalseString());
 		setJustProtOptionalTrueString(src.getOptionalTrueString());
@@ -1178,7 +1178,7 @@ public class CFBamProtBuffBoolDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffBoolDef ) {
 			setJustProtBoolDef( (CFBamPubProtBuffBoolDef)src );
 		}
@@ -1192,8 +1192,8 @@ public class CFBamProtBuffBoolDef
 	}
 
 	@Override
-	public void setJustProtBoolDef( ICFBamPubBoolDef src ) {
-		super.setJustProtAtom( src );
+	public void setBoolDef( ICFBamPubBoolDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalFalseString(src.getOptionalFalseString());
 		setJustProtOptionalTrueString(src.getOptionalTrueString());
@@ -1201,7 +1201,7 @@ public class CFBamProtBuffBoolDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubBoolDefH ) {
 			setBoolDef( (ICFBamPubBoolDefH)src );
 		}
@@ -1210,13 +1210,13 @@ public class CFBamProtBuffBoolDef
 					"set",
 					"src",
 					src,
-					"ICFBamBoolDefH" );
+					"ICFBamProtBoolDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtBoolDef( ICFBamPubBoolDefH src ) {
-		super.setJustProtAtom( src );
+	public void setBoolDef( ICFBamPubBoolDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 		setJustProtOptionalFalseString(src.getOptionalFalseString());
 		setJustProtOptionalTrueString(src.getOptionalTrueString());

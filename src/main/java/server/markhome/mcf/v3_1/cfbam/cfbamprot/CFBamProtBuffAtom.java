@@ -82,7 +82,7 @@ public class CFBamProtBuffAtom
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamAtom.CLASS_CODE );
+		return( ICFBamProtAtom.CLASS_CODE );
 	}
 
 	@Override
@@ -173,8 +173,8 @@ public class CFBamProtBuffAtom
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -526,7 +526,7 @@ public class CFBamProtBuffAtom
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffAtom ) {
 			setJustProtAtom( (CFBamProtBuffAtom)src );
 		}
@@ -540,13 +540,13 @@ public class CFBamProtBuffAtom
 	}
 
 	@Override
-	public void setJustProtAtom( ICFBamAtom src ) {
-		super.setJustProtValue( src );
+	public void setAtom( ICFBamProtAtom src ) {
+		super.setValue( src );
 		setJustProtOptionalDbName(src.getOptionalDbName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtAtomH ) {
 			setAtom( (ICFBamProtAtomH)src );
 		}
@@ -555,18 +555,18 @@ public class CFBamProtBuffAtom
 					"set",
 					"src",
 					src,
-					"ICFBamAtomH" );
+					"ICFBamProtAtomH" );
 		}
 	}
 
 	@Override
-	public void setJustProtAtom( ICFBamAtomH src ) {
-		super.setJustProtValue( src );
+	public void setAtom( ICFBamProtAtomH src ) {
+		super.setValue( src );
 		setJustProtOptionalDbName(src.getOptionalDbName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffAtom ) {
 			setJustProtAtom( (CFBamProtBuffAtom)src );
 		}
@@ -580,13 +580,13 @@ public class CFBamProtBuffAtom
 	}
 
 	@Override
-	public void setJustProtAtom( ICFBamProtAtom src ) {
-		super.setJustProtValue( src );
+	public void setAtom( ICFBamProtAtom src ) {
+		super.setValue( src );
 		setJustProtOptionalDbName(src.getOptionalDbName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtAtomH ) {
 			setAtom( (ICFBamProtAtomH)src );
 		}
@@ -595,18 +595,18 @@ public class CFBamProtBuffAtom
 					"set",
 					"src",
 					src,
-					"ICFBamAtomH" );
+					"ICFBamProtAtomH" );
 		}
 	}
 
 	@Override
-	public void setJustProtAtom( ICFBamProtAtomH src ) {
-		super.setJustProtValue( src );
+	public void setAtom( ICFBamProtAtomH src ) {
+		super.setValue( src );
 		setJustProtOptionalDbName(src.getOptionalDbName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffAtom ) {
 			setJustProtAtom( (CFBamPubProtBuffAtom)src );
 		}
@@ -620,13 +620,13 @@ public class CFBamProtBuffAtom
 	}
 
 	@Override
-	public void setJustProtAtom( ICFBamPubAtom src ) {
-		super.setJustProtValue( src );
+	public void setAtom( ICFBamPubAtom src ) {
+		super.setValue( src );
 		setJustProtOptionalDbName(src.getOptionalDbName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubAtomH ) {
 			setAtom( (ICFBamPubAtomH)src );
 		}
@@ -635,13 +635,13 @@ public class CFBamProtBuffAtom
 					"set",
 					"src",
 					src,
-					"ICFBamAtomH" );
+					"ICFBamProtAtomH" );
 		}
 	}
 
 	@Override
-	public void setJustProtAtom( ICFBamPubAtomH src ) {
-		super.setJustProtValue( src );
+	public void setAtom( ICFBamPubAtomH src ) {
+		super.setValue( src );
 		setJustProtOptionalDbName(src.getOptionalDbName());
 	}
 

@@ -82,7 +82,7 @@ public class CFBamProtBuffDbKeyHash224Def
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamDbKeyHash224Def.CLASS_CODE );
+		return( ICFBamProtDbKeyHash224Def.CLASS_CODE );
 	}
 
 	@Override
@@ -173,8 +173,8 @@ public class CFBamProtBuffDbKeyHash224Def
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -526,7 +526,7 @@ public class CFBamProtBuffDbKeyHash224Def
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffDbKeyHash224Def ) {
 			setJustProtDbKeyHash224Def( (CFBamProtBuffDbKeyHash224Def)src );
 		}
@@ -540,13 +540,13 @@ public class CFBamProtBuffDbKeyHash224Def
 	}
 
 	@Override
-	public void setJustProtDbKeyHash224Def( ICFBamDbKeyHash224Def src ) {
-		super.setJustProtAtom( src );
+	public void setDbKeyHash224Def( ICFBamProtDbKeyHash224Def src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtDbKeyHash224DefH ) {
 			setDbKeyHash224Def( (ICFBamProtDbKeyHash224DefH)src );
 		}
@@ -555,18 +555,18 @@ public class CFBamProtBuffDbKeyHash224Def
 					"set",
 					"src",
 					src,
-					"ICFBamDbKeyHash224DefH" );
+					"ICFBamProtDbKeyHash224DefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtDbKeyHash224Def( ICFBamDbKeyHash224DefH src ) {
-		super.setJustProtAtom( src );
+	public void setDbKeyHash224Def( ICFBamProtDbKeyHash224DefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffDbKeyHash224Def ) {
 			setJustProtDbKeyHash224Def( (CFBamProtBuffDbKeyHash224Def)src );
 		}
@@ -580,13 +580,13 @@ public class CFBamProtBuffDbKeyHash224Def
 	}
 
 	@Override
-	public void setJustProtDbKeyHash224Def( ICFBamProtDbKeyHash224Def src ) {
-		super.setJustProtAtom( src );
+	public void setDbKeyHash224Def( ICFBamProtDbKeyHash224Def src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtDbKeyHash224DefH ) {
 			setDbKeyHash224Def( (ICFBamProtDbKeyHash224DefH)src );
 		}
@@ -595,18 +595,18 @@ public class CFBamProtBuffDbKeyHash224Def
 					"set",
 					"src",
 					src,
-					"ICFBamDbKeyHash224DefH" );
+					"ICFBamProtDbKeyHash224DefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtDbKeyHash224Def( ICFBamProtDbKeyHash224DefH src ) {
-		super.setJustProtAtom( src );
+	public void setDbKeyHash224Def( ICFBamProtDbKeyHash224DefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffDbKeyHash224Def ) {
 			setJustProtDbKeyHash224Def( (CFBamPubProtBuffDbKeyHash224Def)src );
 		}
@@ -620,13 +620,13 @@ public class CFBamProtBuffDbKeyHash224Def
 	}
 
 	@Override
-	public void setJustProtDbKeyHash224Def( ICFBamPubDbKeyHash224Def src ) {
-		super.setJustProtAtom( src );
+	public void setDbKeyHash224Def( ICFBamPubDbKeyHash224Def src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubDbKeyHash224DefH ) {
 			setDbKeyHash224Def( (ICFBamPubDbKeyHash224DefH)src );
 		}
@@ -635,13 +635,13 @@ public class CFBamProtBuffDbKeyHash224Def
 					"set",
 					"src",
 					src,
-					"ICFBamDbKeyHash224DefH" );
+					"ICFBamProtDbKeyHash224DefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtDbKeyHash224Def( ICFBamPubDbKeyHash224DefH src ) {
-		super.setJustProtAtom( src );
+	public void setDbKeyHash224Def( ICFBamPubDbKeyHash224DefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 

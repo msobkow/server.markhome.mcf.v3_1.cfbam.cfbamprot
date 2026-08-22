@@ -84,44 +84,44 @@ public class CFBamProtBuffPopSubDep1
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamPopSubDep1.CLASS_CODE );
+		return( ICFBamProtPopSubDep1.CLASS_CODE );
 	}
 
 	@Override
-	public ICFBamPopTopDep getRequiredContainerContPopTopDep() {
+	public ICFBamProtPopTopDep getRequiredContainerContPopTopDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerContPopTopDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamPopTopDepTable targetTable = targetBackingCFBam.getTablePopTopDep();
+		ICFBamProtPopTopDepTable targetTable = targetBackingCFBam.getTablePopTopDep();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerContPopTopDep", 0, "ICFBamSchema.getBackingCFBam().getTablePopTopDep()");
 		}
-		ICFBamPopTopDep targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredPopTopDepId());
+		ICFBamProtPopTopDep targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredPopTopDepId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamPopTopDep getRequiredContainerContPopTopDep() {
+	public ICFBamProtPopTopDep getRequiredContainerContPopTopDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerContPopTopDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamPopTopDepTable targetTable = targetBackingCFBam.getTablePopTopDep();
+		ICFBamProtPopTopDepTable targetTable = targetBackingCFBam.getTablePopTopDep();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerContPopTopDep", 0, "ICFBamSchema.getBackingCFBam().getTablePopTopDep()");
 		}
-		ICFBamPopTopDep targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredPopTopDepId());
+		ICFBamProtPopTopDep targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredPopTopDepId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamPopTopDep getRequiredContainerContPopTopDep() {
+	public ICFBamProtPopTopDep getRequiredContainerContPopTopDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerContPopTopDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamPopTopDepTable targetTable = targetBackingCFBam.getTablePopTopDep();
+		ICFBamProtPopTopDepTable targetTable = targetBackingCFBam.getTablePopTopDep();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerContPopTopDep", 0, "ICFBamSchema.getBackingCFBam().getTablePopTopDep()");
 		}
@@ -130,31 +130,31 @@ public class CFBamProtBuffPopSubDep1
 	}
 
 	@Override
-	public void setJustProtRequiredContainerContPopTopDep(ICFLibKeyHash256 argPopTopDepId) {
+	public void setRequiredContainerContPopTopDep(ICFLibKeyHash256 argPopTopDepId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerContPopTopDep-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerContPopTopDep-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtPopTopDepTable targetTable = targetBackingCFBam.getTablePopTopDep();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerContPopTopDep", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerContPopTopDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtPopTopDep found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argPopTopDepId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerContPopTopDep-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerContPopTopDep-args", 0, "found");
 		}
 		else if ((found instanceof ICFBamProtPopTopDep) || (found instanceof ICFBamPubPopTopDep)) {
 		requiredPopTopDepId = argPopTopDepId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredContainerContPopTopDep-args", "found", found, "ICFBamProtPopTopDepICFBamPubPopTopDep");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredContainerContPopTopDep-args", "found", found, "ICFBamProtPopTopDepICFBamPubPopTopDep");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerContPopTopDep(ICFBamPopTopDep argObj) {
+	public void setRequiredContainerContPopTopDep(ICFBamProtPopTopDep argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerContPopTopDep", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerContPopTopDep", 1, "argObj");
 		}
 		else {
 			setJustProtRequiredPopTopDepId(argObj.getRequiredId());
@@ -162,60 +162,60 @@ public class CFBamProtBuffPopSubDep1
 	}
 
 	@Override
-	public List<ICFBamPopSubDep2> getOptionalComponentsPopDep() {
+	public List<ICFBamProtPopSubDep2> getOptionalComponentsPopDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsPopDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamPopSubDep2Table targetTable = targetBackingCFBam.getTablePopSubDep2();
+		ICFBamProtPopSubDep2Table targetTable = targetBackingCFBam.getTablePopSubDep2();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsPopDep", 0, "ICFBamSchema.getBackingCFBam().getTablePopSubDep2()");
 		}
-		ICFBamPopSubDep2[] targetArr = targetTable.readDerivedByPopSubDep1Idx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtPopSubDep2[] targetArr = targetTable.readDerivedByPopSubDep1Idx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamPopSubDep2> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtPopSubDep2> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamPopSubDep2> results = new ArrayList<>();
+			List<ICFBamProtPopSubDep2> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamPopSubDep2> getOptionalComponentsPopDep() {
+	public List<ICFBamProtPopSubDep2> getOptionalComponentsPopDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsPopDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamPopSubDep2Table targetTable = targetBackingCFBam.getTablePopSubDep2();
+		ICFBamProtPopSubDep2Table targetTable = targetBackingCFBam.getTablePopSubDep2();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsPopDep", 0, "ICFBamSchema.getBackingCFBam().getTablePopSubDep2()");
 		}
-		ICFBamPopSubDep2[] targetArr = targetTable.readDerivedByPopSubDep1Idx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		ICFBamProtPopSubDep2[] targetArr = targetTable.readDerivedByPopSubDep1Idx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
 		if( targetArr != null ) {
-			List<ICFBamPopSubDep2> results = new ArrayList<>(targetArr.length);
+			List<ICFBamProtPopSubDep2> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFBamPopSubDep2> results = new ArrayList<>();
+			List<ICFBamProtPopSubDep2> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFBamPopSubDep2> getOptionalComponentsPopDep() {
+	public List<ICFBamProtPopSubDep2> getOptionalComponentsPopDep() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsPopDep", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamPopSubDep2Table targetTable = targetBackingCFBam.getTablePopSubDep2();
+		ICFBamProtPopSubDep2Table targetTable = targetBackingCFBam.getTablePopSubDep2();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsPopDep", 0, "ICFBamSchema.getBackingCFBam().getTablePopSubDep2()");
 		}
@@ -372,8 +372,8 @@ public class CFBamProtBuffPopSubDep1
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamScopeHPKey ) {
-			ICFBamProtScopeHPKey rhs = (ICFBamScopeHPKey)obj;
+		else if( obj instanceof ICFBamProtScopeHPKey ) {
+			ICFBamProtScopeHPKey rhs = (ICFBamProtScopeHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -887,7 +887,7 @@ public class CFBamProtBuffPopSubDep1
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFBamPopSubDep1ByPopTopDepIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtPopSubDep1ByPopTopDepIdxKey rhs ) {
 			if (getRequiredPopTopDepId() != null) {
 				if (rhs.getRequiredPopTopDepId() != null) {
 					cmp = getRequiredPopTopDepId().compareTo( rhs.getRequiredPopTopDepId() );
@@ -903,7 +903,7 @@ public class CFBamProtBuffPopSubDep1
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamPopSubDep1ByUNameIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtPopSubDep1ByUNameIdxKey rhs ) {
 			if (getRequiredPopTopDepId() != null) {
 				if (rhs.getRequiredPopTopDepId() != null) {
 					cmp = getRequiredPopTopDepId().compareTo( rhs.getRequiredPopTopDepId() );
@@ -1079,7 +1079,7 @@ public class CFBamProtBuffPopSubDep1
 	}
 
 	@Override
-	public void setJustProt( ICFBamScope src ) {
+	public void set( ICFBamProtScope src ) {
 		if( src instanceof CFBamProtBuffPopSubDep1 ) {
 			setJustProtPopSubDep1( (CFBamProtBuffPopSubDep1)src );
 		}
@@ -1093,15 +1093,15 @@ public class CFBamProtBuffPopSubDep1
 	}
 
 	@Override
-	public void setJustProtPopSubDep1( ICFBamPopSubDep1 src ) {
-		super.setJustProtPopDep( src );
+	public void setPopSubDep1( ICFBamProtPopSubDep1 src ) {
+		super.setPopDep( src );
 		setJustProtRequiredContainerContPopTopDep(src.getRequiredContainerContPopTopDep());
 		setJustProtRequiredPopTopDepId(src.getRequiredPopTopDepId());
 		setJustProtRequiredName(src.getRequiredName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamScopeH src ) {
+	public void set( ICFBamProtScopeH src ) {
 		if( src instanceof ICFBamProtPopSubDep1H ) {
 			setPopSubDep1( (ICFBamProtPopSubDep1H)src );
 		}
@@ -1110,20 +1110,20 @@ public class CFBamProtBuffPopSubDep1
 					"set",
 					"src",
 					src,
-					"ICFBamPopSubDep1H" );
+					"ICFBamProtPopSubDep1H" );
 		}
 	}
 
 	@Override
-	public void setJustProtPopSubDep1( ICFBamPopSubDep1H src ) {
-		super.setJustProtPopDep( src );
+	public void setPopSubDep1( ICFBamProtPopSubDep1H src ) {
+		super.setPopDep( src );
 		setJustProtRequiredContainerContPopTopDep(src.getRequiredContainerContPopTopDep());
 		setJustProtRequiredPopTopDepId(src.getRequiredPopTopDepId());
 		setJustProtRequiredName(src.getRequiredName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtScope src ) {
+	public void set( ICFBamProtScope src ) {
 		if( src instanceof CFBamProtBuffPopSubDep1 ) {
 			setJustProtPopSubDep1( (CFBamProtBuffPopSubDep1)src );
 		}
@@ -1137,15 +1137,15 @@ public class CFBamProtBuffPopSubDep1
 	}
 
 	@Override
-	public void setJustProtPopSubDep1( ICFBamProtPopSubDep1 src ) {
-		super.setJustProtPopDep( src );
+	public void setPopSubDep1( ICFBamProtPopSubDep1 src ) {
+		super.setPopDep( src );
 		setJustProtRequiredContainerContPopTopDep(src.getRequiredContainerContPopTopDep());
 		setJustProtRequiredPopTopDepId(src.getRequiredPopTopDepId());
 		setJustProtRequiredName(src.getRequiredName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtScopeH src ) {
+	public void set( ICFBamProtScopeH src ) {
 		if( src instanceof ICFBamProtPopSubDep1H ) {
 			setPopSubDep1( (ICFBamProtPopSubDep1H)src );
 		}
@@ -1154,20 +1154,20 @@ public class CFBamProtBuffPopSubDep1
 					"set",
 					"src",
 					src,
-					"ICFBamPopSubDep1H" );
+					"ICFBamProtPopSubDep1H" );
 		}
 	}
 
 	@Override
-	public void setJustProtPopSubDep1( ICFBamProtPopSubDep1H src ) {
-		super.setJustProtPopDep( src );
+	public void setPopSubDep1( ICFBamProtPopSubDep1H src ) {
+		super.setPopDep( src );
 		setJustProtRequiredContainerContPopTopDep(src.getRequiredContainerContPopTopDep());
 		setJustProtRequiredPopTopDepId(src.getRequiredPopTopDepId());
 		setJustProtRequiredName(src.getRequiredName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubScope src ) {
+	public void set( ICFBamPubScope src ) {
 		if( src instanceof CFBamPubProtBuffPopSubDep1 ) {
 			setJustProtPopSubDep1( (CFBamPubProtBuffPopSubDep1)src );
 		}
@@ -1181,15 +1181,15 @@ public class CFBamProtBuffPopSubDep1
 	}
 
 	@Override
-	public void setJustProtPopSubDep1( ICFBamPubPopSubDep1 src ) {
-		super.setJustProtPopDep( src );
+	public void setPopSubDep1( ICFBamPubPopSubDep1 src ) {
+		super.setPopDep( src );
 		setJustProtRequiredContainerContPopTopDep(src.getRequiredContainerContPopTopDep());
 		setJustProtRequiredPopTopDepId(src.getRequiredPopTopDepId());
 		setJustProtRequiredName(src.getRequiredName());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubScopeH src ) {
+	public void set( ICFBamPubScopeH src ) {
 		if( src instanceof ICFBamPubPopSubDep1H ) {
 			setPopSubDep1( (ICFBamPubPopSubDep1H)src );
 		}
@@ -1198,13 +1198,13 @@ public class CFBamProtBuffPopSubDep1
 					"set",
 					"src",
 					src,
-					"ICFBamPopSubDep1H" );
+					"ICFBamProtPopSubDep1H" );
 		}
 	}
 
 	@Override
-	public void setJustProtPopSubDep1( ICFBamPubPopSubDep1H src ) {
-		super.setJustProtPopDep( src );
+	public void setPopSubDep1( ICFBamPubPopSubDep1H src ) {
+		super.setPopDep( src );
 		setJustProtRequiredContainerContPopTopDep(src.getRequiredContainerContPopTopDep());
 		setJustProtRequiredPopTopDepId(src.getRequiredPopTopDepId());
 		setJustProtRequiredName(src.getRequiredName());

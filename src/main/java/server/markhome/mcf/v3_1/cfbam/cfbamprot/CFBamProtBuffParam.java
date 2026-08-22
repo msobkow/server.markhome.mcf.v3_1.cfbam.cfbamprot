@@ -70,7 +70,7 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprot.*;
 import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
 
 public class CFBamProtBuffParam
-	implements ICFBamParam, Comparable<Object>, Serializable
+	implements ICFBamProtParam, Comparable<Object>, Serializable
 {
 	protected ICFLibKeyHash256 requiredId;
 	protected int requiredRevision;
@@ -109,7 +109,7 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProtPKey(ICFLibKeyHash256 requiredId) {
+	public void setPKey(ICFLibKeyHash256 requiredId) {
 		if(requiredId != null) {
 			this.requiredId = requiredId;
 		}
@@ -182,44 +182,44 @@ public class CFBamProtBuffParam
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamParam.CLASS_CODE );
+		return( ICFBamProtParam.CLASS_CODE );
 	}
 
 	@Override
-	public ICFBamServerMethod getRequiredContainerServerMeth() {
+	public ICFBamProtServerMethod getRequiredContainerServerMeth() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerServerMeth", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
+		ICFBamProtServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerServerMeth", 0, "ICFBamSchema.getBackingCFBam().getTableServerMethod()");
 		}
-		ICFBamServerMethod targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredServerMethodId());
+		ICFBamProtServerMethod targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredServerMethodId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamServerMethod getRequiredContainerServerMeth() {
+	public ICFBamProtServerMethod getRequiredContainerServerMeth() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerServerMeth", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
+		ICFBamProtServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerServerMeth", 0, "ICFBamSchema.getBackingCFBam().getTableServerMethod()");
 		}
-		ICFBamServerMethod targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredServerMethodId());
+		ICFBamProtServerMethod targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredServerMethodId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamServerMethod getRequiredContainerServerMeth() {
+	public ICFBamProtServerMethod getRequiredContainerServerMeth() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerServerMeth", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
+		ICFBamProtServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerServerMeth", 0, "ICFBamSchema.getBackingCFBam().getTableServerMethod()");
 		}
@@ -228,31 +228,31 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProtRequiredContainerServerMeth(ICFLibKeyHash256 argServerMethodId) {
+	public void setRequiredContainerServerMeth(ICFLibKeyHash256 argServerMethodId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerServerMeth-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerServerMeth-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtServerMethodTable targetTable = targetBackingCFBam.getTableServerMethod();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerServerMeth", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerServerMeth", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtServerMethod found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argServerMethodId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerServerMeth-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerServerMeth-args", 0, "found");
 		}
 		else if ((found instanceof ICFBamProtServerMethod) || (found instanceof ICFBamPubServerMethod)) {
 		requiredServerMethodId = argServerMethodId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredContainerServerMeth-args", "found", found, "ICFBamProtServerMethodICFBamPubServerMethod");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredContainerServerMeth-args", "found", found, "ICFBamProtServerMethodICFBamPubServerMethod");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerServerMeth(ICFBamServerMethod argObj) {
+	public void setRequiredContainerServerMeth(ICFBamProtServerMethod argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerServerMeth", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerServerMeth", 1, "argObj");
 		}
 		else {
 			setJustProtRequiredServerMethodId(argObj.getRequiredId());
@@ -260,40 +260,40 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public ICFBamSchemaDef getOptionalLookupDefSchema() {
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
-		ICFBamSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalDefSchemaId());
+		ICFBamProtSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalDefSchemaId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamSchemaDef getOptionalLookupDefSchema() {
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
-		ICFBamSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalDefSchemaId());
+		ICFBamProtSchemaDef targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalDefSchemaId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamSchemaDef getOptionalLookupDefSchema() {
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
+		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam().getTableSchemaDef()");
 		}
@@ -302,26 +302,26 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProtOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId) {
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupDefSchema-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupDefSchema-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtSchemaDefTable targetTable = targetBackingCFBam.getTableSchemaDef();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupDefSchema", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtSchemaDef found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argDefSchemaId);
-		if (found == null || (found != null && ((found instanceof ICFBamSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)))) {
+		if (found == null || (found != null && ((found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamProtSchemaDef) || (found instanceof ICFBamPubSchemaDef)))) {
 		optionalDefSchemaId = argDefSchemaId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtOptionalLookupDefSchema-args", "found", found, "ICFBamSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
+			throw new CFLibUnsupportedClassException(getClass(), "setOptionalLookupDefSchema-args", "found", found, "ICFBamProtSchemaDefICFBamProtSchemaDefICFBamPubSchemaDef");
 		}
 	}
 
 	@Override
-	public void setJustProtOptionalLookupDefSchema(ICFBamSchemaDef argObj) {
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj) {
 		if(argObj == null) {
 			setJustProtOptionalDefSchemaId(null);
 		}
@@ -331,40 +331,40 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public ICFBamParam getOptionalLookupPrev() {
+	public ICFBamProtParam getOptionalLookupPrev() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrev", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamParamTable targetTable = targetBackingCFBam.getTableParam();
+		ICFBamProtParamTable targetTable = targetBackingCFBam.getTableParam();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrev", 0, "ICFBamSchema.getBackingCFBam().getTableParam()");
 		}
-		ICFBamParam targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalPrevId());
+		ICFBamProtParam targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalPrevId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamParam getOptionalLookupPrev() {
+	public ICFBamProtParam getOptionalLookupPrev() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrev", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamParamTable targetTable = targetBackingCFBam.getTableParam();
+		ICFBamProtParamTable targetTable = targetBackingCFBam.getTableParam();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrev", 0, "ICFBamSchema.getBackingCFBam().getTableParam()");
 		}
-		ICFBamParam targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalPrevId());
+		ICFBamProtParam targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalPrevId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamParam getOptionalLookupPrev() {
+	public ICFBamProtParam getOptionalLookupPrev() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrev", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamParamTable targetTable = targetBackingCFBam.getTableParam();
+		ICFBamProtParamTable targetTable = targetBackingCFBam.getTableParam();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupPrev", 0, "ICFBamSchema.getBackingCFBam().getTableParam()");
 		}
@@ -373,26 +373,26 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProtOptionalLookupPrev(ICFLibKeyHash256 argPrevId) {
+	public void setOptionalLookupPrev(ICFLibKeyHash256 argPrevId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupPrev-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupPrev-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtParamTable targetTable = targetBackingCFBam.getTableParam();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupPrev", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupPrev", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtParam found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argPrevId);
-		if (found == null || (found != null && ((found instanceof ICFBamParam) || (found instanceof ICFBamProtParam) || (found instanceof ICFBamPubParam)))) {
+		if (found == null || (found != null && ((found instanceof ICFBamProtParam) || (found instanceof ICFBamProtParam) || (found instanceof ICFBamPubParam)))) {
 		optionalPrevId = argPrevId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtOptionalLookupPrev-args", "found", found, "ICFBamParamICFBamProtParamICFBamPubParam");
+			throw new CFLibUnsupportedClassException(getClass(), "setOptionalLookupPrev-args", "found", found, "ICFBamProtParamICFBamProtParamICFBamPubParam");
 		}
 	}
 
 	@Override
-	public void setJustProtOptionalLookupPrev(ICFBamParam argObj) {
+	public void setOptionalLookupPrev(ICFBamProtParam argObj) {
 		if(argObj == null) {
 			setJustProtOptionalPrevId(null);
 		}
@@ -402,40 +402,40 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public ICFBamParam getOptionalLookupNext() {
+	public ICFBamProtParam getOptionalLookupNext() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupNext", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamParamTable targetTable = targetBackingCFBam.getTableParam();
+		ICFBamProtParamTable targetTable = targetBackingCFBam.getTableParam();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupNext", 0, "ICFBamSchema.getBackingCFBam().getTableParam()");
 		}
-		ICFBamParam targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalNextId());
+		ICFBamProtParam targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalNextId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamParam getOptionalLookupNext() {
+	public ICFBamProtParam getOptionalLookupNext() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupNext", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamParamTable targetTable = targetBackingCFBam.getTableParam();
+		ICFBamProtParamTable targetTable = targetBackingCFBam.getTableParam();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupNext", 0, "ICFBamSchema.getBackingCFBam().getTableParam()");
 		}
-		ICFBamParam targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalNextId());
+		ICFBamProtParam targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalNextId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamParam getOptionalLookupNext() {
+	public ICFBamProtParam getOptionalLookupNext() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupNext", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamParamTable targetTable = targetBackingCFBam.getTableParam();
+		ICFBamProtParamTable targetTable = targetBackingCFBam.getTableParam();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalLookupNext", 0, "ICFBamSchema.getBackingCFBam().getTableParam()");
 		}
@@ -444,26 +444,26 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProtOptionalLookupNext(ICFLibKeyHash256 argNextId) {
+	public void setOptionalLookupNext(ICFLibKeyHash256 argNextId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupNext-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupNext-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtParamTable targetTable = targetBackingCFBam.getTableParam();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtOptionalLookupNext", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalLookupNext", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtParam found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argNextId);
-		if (found == null || (found != null && ((found instanceof ICFBamParam) || (found instanceof ICFBamProtParam) || (found instanceof ICFBamPubParam)))) {
+		if (found == null || (found != null && ((found instanceof ICFBamProtParam) || (found instanceof ICFBamProtParam) || (found instanceof ICFBamPubParam)))) {
 		optionalNextId = argNextId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtOptionalLookupNext-args", "found", found, "ICFBamParamICFBamProtParamICFBamPubParam");
+			throw new CFLibUnsupportedClassException(getClass(), "setOptionalLookupNext-args", "found", found, "ICFBamProtParamICFBamProtParamICFBamPubParam");
 		}
 	}
 
 	@Override
-	public void setJustProtOptionalLookupNext(ICFBamParam argObj) {
+	public void setOptionalLookupNext(ICFBamProtParam argObj) {
 		if(argObj == null) {
 			setJustProtOptionalNextId(null);
 		}
@@ -473,40 +473,40 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public ICFBamValue getRequiredLookupType() {
+	public ICFBamProtValue getRequiredLookupType() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredLookupType", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamValueTable targetTable = targetBackingCFBam.getTableValue();
+		ICFBamProtValueTable targetTable = targetBackingCFBam.getTableValue();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredLookupType", 0, "ICFBamSchema.getBackingCFBam().getTableValue()");
 		}
-		ICFBamValue targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalTypeId());
+		ICFBamProtValue targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalTypeId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamValue getRequiredLookupType() {
+	public ICFBamProtValue getRequiredLookupType() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredLookupType", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamValueTable targetTable = targetBackingCFBam.getTableValue();
+		ICFBamProtValueTable targetTable = targetBackingCFBam.getTableValue();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredLookupType", 0, "ICFBamSchema.getBackingCFBam().getTableValue()");
 		}
-		ICFBamValue targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalTypeId());
+		ICFBamProtValue targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalTypeId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFBamValue getRequiredLookupType() {
+	public ICFBamProtValue getRequiredLookupType() {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredLookupType", 0, "ICFBamSchema.getBackingCFBam()");
 		}
-		ICFBamValueTable targetTable = targetBackingCFBam.getTableValue();
+		ICFBamProtValueTable targetTable = targetBackingCFBam.getTableValue();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredLookupType", 0, "ICFBamSchema.getBackingCFBam().getTableValue()");
 		}
@@ -515,31 +515,31 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProtRequiredLookupType(ICFLibKeyHash256 argTypeId) {
+	public void setRequiredLookupType(ICFLibKeyHash256 argTypeId) {
 		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredLookupType-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredLookupType-args", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtValueTable targetTable = targetBackingCFBam.getTableValue();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredLookupType", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredLookupType", 0, "ICFBamSchema.getBackingCFBam()");
 		}
 		ICFBamProtValue found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argTypeId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredLookupType-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredLookupType-args", 0, "found");
 		}
 		else if ((found instanceof ICFBamProtValue) || (found instanceof ICFBamPubValue)) {
 		optionalTypeId = argTypeId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredLookupType-args", "found", found, "ICFBamProtValueICFBamPubValue");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredLookupType-args", "found", found, "ICFBamProtValueICFBamPubValue");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredLookupType(ICFBamValue argObj) {
+	public void setRequiredLookupType(ICFBamProtValue argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtLookupType", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setLookupType", 1, "argObj");
 		}
 		else {
 			setJustProtOptionalTypeId(argObj.getRequiredId());
@@ -962,8 +962,8 @@ public class CFBamProtBuffParam
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamParamHPKey ) {
-			ICFBamProtParamHPKey rhs = (ICFBamParamHPKey)obj;
+		else if( obj instanceof ICFBamProtParamHPKey ) {
+			ICFBamProtParamHPKey rhs = (ICFBamProtParamHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -2571,7 +2571,7 @@ public class CFBamProtBuffParam
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFBamParamByUNameIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtParamByUNameIdxKey rhs ) {
 			if (getRequiredServerMethodId() != null) {
 				if (rhs.getRequiredServerMethodId() != null) {
 					cmp = getRequiredServerMethodId().compareTo( rhs.getRequiredServerMethodId() );
@@ -2601,7 +2601,7 @@ public class CFBamProtBuffParam
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamParamByServerMethodIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtParamByServerMethodIdxKey rhs ) {
 			if (getRequiredServerMethodId() != null) {
 				if (rhs.getRequiredServerMethodId() != null) {
 					cmp = getRequiredServerMethodId().compareTo( rhs.getRequiredServerMethodId() );
@@ -2617,7 +2617,7 @@ public class CFBamProtBuffParam
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamParamByDefSchemaIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtParamByDefSchemaIdxKey rhs ) {
 			if( getOptionalDefSchemaId() != null ) {
 				if( rhs.getOptionalDefSchemaId() != null ) {
 					cmp = getOptionalDefSchemaId().compareTo( rhs.getOptionalDefSchemaId() );
@@ -2635,7 +2635,7 @@ public class CFBamProtBuffParam
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamParamByServerTypeIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtParamByServerTypeIdxKey rhs ) {
 			if( getOptionalTypeId() != null ) {
 				if( rhs.getOptionalTypeId() != null ) {
 					cmp = getOptionalTypeId().compareTo( rhs.getOptionalTypeId() );
@@ -2653,7 +2653,7 @@ public class CFBamProtBuffParam
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamParamByPrevIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtParamByPrevIdxKey rhs ) {
 			if( getOptionalPrevId() != null ) {
 				if( rhs.getOptionalPrevId() != null ) {
 					cmp = getOptionalPrevId().compareTo( rhs.getOptionalPrevId() );
@@ -2671,7 +2671,7 @@ public class CFBamProtBuffParam
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamParamByNextIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtParamByNextIdxKey rhs ) {
 			if( getOptionalNextId() != null ) {
 				if( rhs.getOptionalNextId() != null ) {
 					cmp = getOptionalNextId().compareTo( rhs.getOptionalNextId() );
@@ -2689,7 +2689,7 @@ public class CFBamProtBuffParam
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamParamByContPrevIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtParamByContPrevIdxKey rhs ) {
 			if (getRequiredServerMethodId() != null) {
 				if (rhs.getRequiredServerMethodId() != null) {
 					cmp = getRequiredServerMethodId().compareTo( rhs.getRequiredServerMethodId() );
@@ -2721,7 +2721,7 @@ public class CFBamProtBuffParam
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFBamParamByContNextIdxKey rhs ) {
+		else if( obj instanceof ICFBamProtParamByContNextIdxKey rhs ) {
 			if (getRequiredServerMethodId() != null) {
 				if (rhs.getRequiredServerMethodId() != null) {
 					cmp = getRequiredServerMethodId().compareTo( rhs.getRequiredServerMethodId() );
@@ -3293,12 +3293,12 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProt( ICFBamParam src ) {
+	public void set( ICFBamProtParam src ) {
 		setJustProtParam( src );
 	}
 
 	@Override
-	public void setJustProtParam( ICFBamParam src ) {
+	public void setParam( ICFBamProtParam src ) {
 		setJustProtRequiredId(src.getRequiredId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -3322,12 +3322,12 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProt( ICFBamParamH src ) {
+	public void set( ICFBamProtParamH src ) {
 		setJustProtParam( src );
 	}
 
 	@Override
-	public void setJustProtParam( ICFBamParamH src ) {
+	public void setParam( ICFBamProtParamH src ) {
 		setJustProtRequiredId(src.getRequiredId());
 		setJustProtRequiredContainerServerMeth(src.getRequiredContainerServerMeth());
 		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
@@ -3346,65 +3346,12 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtParam src ) {
+	public void set( ICFBamProtParam src ) {
 		setJustProtParam( src );
 	}
 
 	@Override
-	public void setJustProtParam( ICFBamProtParam src ) {
-		setJustProtRequiredId(src.getRequiredId());
-		setJustProtRequiredRevision( src.getRequiredRevision() );
-		setJustProtCreatedByUserId( src.getCreatedByUserId() );
-		setJustProtCreatedAt( src.getCreatedAt() );
-		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
-		setJustProtUpdatedAt( src.getUpdatedAt() );
-		setJustProtRequiredContainerServerMeth(src.getRequiredContainerServerMeth());
-		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
-		setJustProtOptionalLookupPrev(src.getOptionalLookupPrev());
-		setJustProtOptionalLookupNext(src.getOptionalLookupNext());
-		setJustProtRequiredLookupType(src.getRequiredLookupType());
-		setJustProtRequiredServerMethodId(src.getRequiredServerMethodId());
-		setJustProtOptionalDefSchemaId(src.getOptionalDefSchemaId());
-		setJustProtRequiredName(src.getRequiredName());
-		setJustProtOptionalShortDescription(src.getOptionalShortDescription());
-		setJustProtOptionalDescription(src.getOptionalDescription());
-		setJustProtRequiredIsNullable(src.getRequiredIsNullable());
-		setJustProtOptionalTypeId(src.getOptionalTypeId());
-		setJustProtOptionalPrevId(src.getOptionalPrevId());
-		setJustProtOptionalNextId(src.getOptionalNextId());
-	}
-
-	@Override
-	public void setJustProt( ICFBamProtParamH src ) {
-		setJustProtParam( src );
-	}
-
-	@Override
-	public void setJustProtParam( ICFBamProtParamH src ) {
-		setJustProtRequiredId(src.getRequiredId());
-		setJustProtRequiredContainerServerMeth(src.getRequiredContainerServerMeth());
-		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
-		setJustProtOptionalLookupPrev(src.getOptionalLookupPrev());
-		setJustProtOptionalLookupNext(src.getOptionalLookupNext());
-		setJustProtRequiredLookupType(src.getRequiredLookupType());
-		setJustProtRequiredServerMethodId(src.getRequiredServerMethodId());
-		setJustProtOptionalDefSchemaId(src.getOptionalDefSchemaId());
-		setJustProtRequiredName(src.getRequiredName());
-		setJustProtOptionalShortDescription(src.getOptionalShortDescription());
-		setJustProtOptionalDescription(src.getOptionalDescription());
-		setJustProtRequiredIsNullable(src.getRequiredIsNullable());
-		setJustProtOptionalTypeId(src.getOptionalTypeId());
-		setJustProtOptionalPrevId(src.getOptionalPrevId());
-		setJustProtOptionalNextId(src.getOptionalNextId());
-	}
-
-	@Override
-	public void setJustProt( ICFBamPubParam src ) {
-		setJustProtParam( src );
-	}
-
-	@Override
-	public void setJustProtParam( ICFBamPubParam src ) {
+	public void setParam( ICFBamProtParam src ) {
 		setJustProtRequiredId(src.getRequiredId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -3428,12 +3375,65 @@ public class CFBamProtBuffParam
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubParamH src ) {
+	public void set( ICFBamProtParamH src ) {
 		setJustProtParam( src );
 	}
 
 	@Override
-	public void setJustProtParam( ICFBamPubParamH src ) {
+	public void setParam( ICFBamProtParamH src ) {
+		setJustProtRequiredId(src.getRequiredId());
+		setJustProtRequiredContainerServerMeth(src.getRequiredContainerServerMeth());
+		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
+		setJustProtOptionalLookupPrev(src.getOptionalLookupPrev());
+		setJustProtOptionalLookupNext(src.getOptionalLookupNext());
+		setJustProtRequiredLookupType(src.getRequiredLookupType());
+		setJustProtRequiredServerMethodId(src.getRequiredServerMethodId());
+		setJustProtOptionalDefSchemaId(src.getOptionalDefSchemaId());
+		setJustProtRequiredName(src.getRequiredName());
+		setJustProtOptionalShortDescription(src.getOptionalShortDescription());
+		setJustProtOptionalDescription(src.getOptionalDescription());
+		setJustProtRequiredIsNullable(src.getRequiredIsNullable());
+		setJustProtOptionalTypeId(src.getOptionalTypeId());
+		setJustProtOptionalPrevId(src.getOptionalPrevId());
+		setJustProtOptionalNextId(src.getOptionalNextId());
+	}
+
+	@Override
+	public void set( ICFBamPubParam src ) {
+		setJustProtParam( src );
+	}
+
+	@Override
+	public void setParam( ICFBamPubParam src ) {
+		setJustProtRequiredId(src.getRequiredId());
+		setJustProtRequiredRevision( src.getRequiredRevision() );
+		setJustProtCreatedByUserId( src.getCreatedByUserId() );
+		setJustProtCreatedAt( src.getCreatedAt() );
+		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
+		setJustProtUpdatedAt( src.getUpdatedAt() );
+		setJustProtRequiredContainerServerMeth(src.getRequiredContainerServerMeth());
+		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());
+		setJustProtOptionalLookupPrev(src.getOptionalLookupPrev());
+		setJustProtOptionalLookupNext(src.getOptionalLookupNext());
+		setJustProtRequiredLookupType(src.getRequiredLookupType());
+		setJustProtRequiredServerMethodId(src.getRequiredServerMethodId());
+		setJustProtOptionalDefSchemaId(src.getOptionalDefSchemaId());
+		setJustProtRequiredName(src.getRequiredName());
+		setJustProtOptionalShortDescription(src.getOptionalShortDescription());
+		setJustProtOptionalDescription(src.getOptionalDescription());
+		setJustProtRequiredIsNullable(src.getRequiredIsNullable());
+		setJustProtOptionalTypeId(src.getOptionalTypeId());
+		setJustProtOptionalPrevId(src.getOptionalPrevId());
+		setJustProtOptionalNextId(src.getOptionalNextId());
+	}
+
+	@Override
+	public void set( ICFBamPubParamH src ) {
+		setJustProtParam( src );
+	}
+
+	@Override
+	public void setParam( ICFBamPubParamH src ) {
 		setJustProtRequiredId(src.getRequiredId());
 		setJustProtRequiredContainerServerMeth(src.getRequiredContainerServerMeth());
 		setJustProtOptionalLookupDefSchema(src.getOptionalLookupDefSchema());

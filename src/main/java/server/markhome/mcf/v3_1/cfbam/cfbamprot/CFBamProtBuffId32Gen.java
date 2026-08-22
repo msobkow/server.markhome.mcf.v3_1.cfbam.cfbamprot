@@ -84,7 +84,7 @@ public class CFBamProtBuffId32Gen
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamId32Gen.CLASS_CODE );
+		return( ICFBamProtId32Gen.CLASS_CODE );
 	}
 
 	@Override
@@ -192,8 +192,8 @@ public class CFBamProtBuffId32Gen
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -492,7 +492,7 @@ public class CFBamProtBuffId32Gen
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffId32Gen ) {
 			setJustProtId32Gen( (CFBamProtBuffId32Gen)src );
 		}
@@ -506,14 +506,14 @@ public class CFBamProtBuffId32Gen
 	}
 
 	@Override
-	public void setJustProtId32Gen( ICFBamId32Gen src ) {
-		super.setJustProtInt32Type( src );
+	public void setId32Gen( ICFBamProtId32Gen src ) {
+		super.setInt32Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtId32GenH ) {
 			setId32Gen( (ICFBamProtId32GenH)src );
 		}
@@ -522,19 +522,19 @@ public class CFBamProtBuffId32Gen
 					"set",
 					"src",
 					src,
-					"ICFBamId32GenH" );
+					"ICFBamProtId32GenH" );
 		}
 	}
 
 	@Override
-	public void setJustProtId32Gen( ICFBamId32GenH src ) {
-		super.setJustProtInt32Type( src );
+	public void setId32Gen( ICFBamProtId32GenH src ) {
+		super.setInt32Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffId32Gen ) {
 			setJustProtId32Gen( (CFBamProtBuffId32Gen)src );
 		}
@@ -548,14 +548,14 @@ public class CFBamProtBuffId32Gen
 	}
 
 	@Override
-	public void setJustProtId32Gen( ICFBamProtId32Gen src ) {
-		super.setJustProtInt32Type( src );
+	public void setId32Gen( ICFBamProtId32Gen src ) {
+		super.setInt32Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtId32GenH ) {
 			setId32Gen( (ICFBamProtId32GenH)src );
 		}
@@ -564,19 +564,19 @@ public class CFBamProtBuffId32Gen
 					"set",
 					"src",
 					src,
-					"ICFBamId32GenH" );
+					"ICFBamProtId32GenH" );
 		}
 	}
 
 	@Override
-	public void setJustProtId32Gen( ICFBamProtId32GenH src ) {
-		super.setJustProtInt32Type( src );
+	public void setId32Gen( ICFBamProtId32GenH src ) {
+		super.setInt32Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffId32Gen ) {
 			setJustProtId32Gen( (CFBamPubProtBuffId32Gen)src );
 		}
@@ -590,14 +590,14 @@ public class CFBamProtBuffId32Gen
 	}
 
 	@Override
-	public void setJustProtId32Gen( ICFBamPubId32Gen src ) {
-		super.setJustProtInt32Type( src );
+	public void setId32Gen( ICFBamPubId32Gen src ) {
+		super.setInt32Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubId32GenH ) {
 			setId32Gen( (ICFBamPubId32GenH)src );
 		}
@@ -606,13 +606,13 @@ public class CFBamProtBuffId32Gen
 					"set",
 					"src",
 					src,
-					"ICFBamId32GenH" );
+					"ICFBamProtId32GenH" );
 		}
 	}
 
 	@Override
-	public void setJustProtId32Gen( ICFBamPubId32GenH src ) {
-		super.setJustProtInt32Type( src );
+	public void setId32Gen( ICFBamPubId32GenH src ) {
+		super.setInt32Type( src );
 		setJustProtRequiredSlice(src.getRequiredSlice());
 		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
 	}

@@ -86,7 +86,7 @@ public class CFBamProtBuffStringDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamStringDef.CLASS_CODE );
+		return( ICFBamProtStringDef.CLASS_CODE );
 	}
 
 	@Override
@@ -224,8 +224,8 @@ public class CFBamProtBuffStringDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -672,7 +672,7 @@ public class CFBamProtBuffStringDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffStringDef ) {
 			setJustProtStringDef( (CFBamProtBuffStringDef)src );
 		}
@@ -686,15 +686,15 @@ public class CFBamProtBuffStringDef
 	}
 
 	@Override
-	public void setJustProtStringDef( ICFBamStringDef src ) {
-		super.setJustProtAtom( src );
+	public void setStringDef( ICFBamProtStringDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtRequiredIsPolymorph(src.getRequiredIsPolymorph());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtStringDefH ) {
 			setStringDef( (ICFBamProtStringDefH)src );
 		}
@@ -703,20 +703,20 @@ public class CFBamProtBuffStringDef
 					"set",
 					"src",
 					src,
-					"ICFBamStringDefH" );
+					"ICFBamProtStringDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtStringDef( ICFBamStringDefH src ) {
-		super.setJustProtAtom( src );
+	public void setStringDef( ICFBamProtStringDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtRequiredIsPolymorph(src.getRequiredIsPolymorph());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffStringDef ) {
 			setJustProtStringDef( (CFBamProtBuffStringDef)src );
 		}
@@ -730,15 +730,15 @@ public class CFBamProtBuffStringDef
 	}
 
 	@Override
-	public void setJustProtStringDef( ICFBamProtStringDef src ) {
-		super.setJustProtAtom( src );
+	public void setStringDef( ICFBamProtStringDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtRequiredIsPolymorph(src.getRequiredIsPolymorph());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtStringDefH ) {
 			setStringDef( (ICFBamProtStringDefH)src );
 		}
@@ -747,20 +747,20 @@ public class CFBamProtBuffStringDef
 					"set",
 					"src",
 					src,
-					"ICFBamStringDefH" );
+					"ICFBamProtStringDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtStringDef( ICFBamProtStringDefH src ) {
-		super.setJustProtAtom( src );
+	public void setStringDef( ICFBamProtStringDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtRequiredIsPolymorph(src.getRequiredIsPolymorph());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffStringDef ) {
 			setJustProtStringDef( (CFBamPubProtBuffStringDef)src );
 		}
@@ -774,15 +774,15 @@ public class CFBamProtBuffStringDef
 	}
 
 	@Override
-	public void setJustProtStringDef( ICFBamPubStringDef src ) {
-		super.setJustProtAtom( src );
+	public void setStringDef( ICFBamPubStringDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtRequiredIsPolymorph(src.getRequiredIsPolymorph());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubStringDefH ) {
 			setStringDef( (ICFBamPubStringDefH)src );
 		}
@@ -791,13 +791,13 @@ public class CFBamProtBuffStringDef
 					"set",
 					"src",
 					src,
-					"ICFBamStringDefH" );
+					"ICFBamProtStringDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtStringDef( ICFBamPubStringDefH src ) {
-		super.setJustProtAtom( src );
+	public void setStringDef( ICFBamPubStringDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtRequiredIsPolymorph(src.getRequiredIsPolymorph());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());

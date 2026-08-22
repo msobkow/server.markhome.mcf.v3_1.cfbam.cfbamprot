@@ -84,7 +84,7 @@ public class CFBamProtBuffBlobDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamBlobDef.CLASS_CODE );
+		return( ICFBamProtBlobDef.CLASS_CODE );
 	}
 
 	@Override
@@ -207,8 +207,8 @@ public class CFBamProtBuffBlobDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -677,7 +677,7 @@ public class CFBamProtBuffBlobDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffBlobDef ) {
 			setJustProtBlobDef( (CFBamProtBuffBlobDef)src );
 		}
@@ -691,14 +691,14 @@ public class CFBamProtBuffBlobDef
 	}
 
 	@Override
-	public void setJustProtBlobDef( ICFBamBlobDef src ) {
-		super.setJustProtAtom( src );
+	public void setBlobDef( ICFBamProtBlobDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtBlobDefH ) {
 			setBlobDef( (ICFBamProtBlobDefH)src );
 		}
@@ -707,19 +707,19 @@ public class CFBamProtBuffBlobDef
 					"set",
 					"src",
 					src,
-					"ICFBamBlobDefH" );
+					"ICFBamProtBlobDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtBlobDef( ICFBamBlobDefH src ) {
-		super.setJustProtAtom( src );
+	public void setBlobDef( ICFBamProtBlobDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffBlobDef ) {
 			setJustProtBlobDef( (CFBamProtBuffBlobDef)src );
 		}
@@ -733,14 +733,14 @@ public class CFBamProtBuffBlobDef
 	}
 
 	@Override
-	public void setJustProtBlobDef( ICFBamProtBlobDef src ) {
-		super.setJustProtAtom( src );
+	public void setBlobDef( ICFBamProtBlobDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtBlobDefH ) {
 			setBlobDef( (ICFBamProtBlobDefH)src );
 		}
@@ -749,19 +749,19 @@ public class CFBamProtBuffBlobDef
 					"set",
 					"src",
 					src,
-					"ICFBamBlobDefH" );
+					"ICFBamProtBlobDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtBlobDef( ICFBamProtBlobDefH src ) {
-		super.setJustProtAtom( src );
+	public void setBlobDef( ICFBamProtBlobDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffBlobDef ) {
 			setJustProtBlobDef( (CFBamPubProtBuffBlobDef)src );
 		}
@@ -775,14 +775,14 @@ public class CFBamProtBuffBlobDef
 	}
 
 	@Override
-	public void setJustProtBlobDef( ICFBamPubBlobDef src ) {
-		super.setJustProtAtom( src );
+	public void setBlobDef( ICFBamPubBlobDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubBlobDefH ) {
 			setBlobDef( (ICFBamPubBlobDefH)src );
 		}
@@ -791,13 +791,13 @@ public class CFBamProtBuffBlobDef
 					"set",
 					"src",
 					src,
-					"ICFBamBlobDefH" );
+					"ICFBamProtBlobDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtBlobDef( ICFBamPubBlobDefH src ) {
-		super.setJustProtAtom( src );
+	public void setBlobDef( ICFBamPubBlobDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
 	}

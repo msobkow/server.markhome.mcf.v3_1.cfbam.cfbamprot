@@ -82,7 +82,7 @@ public class CFBamProtBuffTZTimestampDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamTZTimestampDef.CLASS_CODE );
+		return( ICFBamProtTZTimestampDef.CLASS_CODE );
 	}
 
 	@Override
@@ -173,8 +173,8 @@ public class CFBamProtBuffTZTimestampDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -526,7 +526,7 @@ public class CFBamProtBuffTZTimestampDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffTZTimestampDef ) {
 			setJustProtTZTimestampDef( (CFBamProtBuffTZTimestampDef)src );
 		}
@@ -540,13 +540,13 @@ public class CFBamProtBuffTZTimestampDef
 	}
 
 	@Override
-	public void setJustProtTZTimestampDef( ICFBamTZTimestampDef src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimestampDef( ICFBamProtTZTimestampDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtTZTimestampDefH ) {
 			setTZTimestampDef( (ICFBamProtTZTimestampDefH)src );
 		}
@@ -555,18 +555,18 @@ public class CFBamProtBuffTZTimestampDef
 					"set",
 					"src",
 					src,
-					"ICFBamTZTimestampDefH" );
+					"ICFBamProtTZTimestampDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTZTimestampDef( ICFBamTZTimestampDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimestampDef( ICFBamProtTZTimestampDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffTZTimestampDef ) {
 			setJustProtTZTimestampDef( (CFBamProtBuffTZTimestampDef)src );
 		}
@@ -580,13 +580,13 @@ public class CFBamProtBuffTZTimestampDef
 	}
 
 	@Override
-	public void setJustProtTZTimestampDef( ICFBamProtTZTimestampDef src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimestampDef( ICFBamProtTZTimestampDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtTZTimestampDefH ) {
 			setTZTimestampDef( (ICFBamProtTZTimestampDefH)src );
 		}
@@ -595,18 +595,18 @@ public class CFBamProtBuffTZTimestampDef
 					"set",
 					"src",
 					src,
-					"ICFBamTZTimestampDefH" );
+					"ICFBamProtTZTimestampDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTZTimestampDef( ICFBamProtTZTimestampDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimestampDef( ICFBamProtTZTimestampDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffTZTimestampDef ) {
 			setJustProtTZTimestampDef( (CFBamPubProtBuffTZTimestampDef)src );
 		}
@@ -620,13 +620,13 @@ public class CFBamProtBuffTZTimestampDef
 	}
 
 	@Override
-	public void setJustProtTZTimestampDef( ICFBamPubTZTimestampDef src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimestampDef( ICFBamPubTZTimestampDef src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubTZTimestampDefH ) {
 			setTZTimestampDef( (ICFBamPubTZTimestampDefH)src );
 		}
@@ -635,13 +635,13 @@ public class CFBamProtBuffTZTimestampDef
 					"set",
 					"src",
 					src,
-					"ICFBamTZTimestampDefH" );
+					"ICFBamProtTZTimestampDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtTZTimestampDef( ICFBamPubTZTimestampDefH src ) {
-		super.setJustProtAtom( src );
+	public void setTZTimestampDef( ICFBamPubTZTimestampDefH src ) {
+		super.setAtom( src );
 		setJustProtOptionalDummy(src.getOptionalDummy());
 	}
 

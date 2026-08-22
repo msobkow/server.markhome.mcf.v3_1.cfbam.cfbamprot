@@ -90,7 +90,7 @@ public class CFBamProtBuffNumberDef
 
 	@Override
 	public int getClassCode() {
-		return( ICFBamNumberDef.CLASS_CODE );
+		return( ICFBamProtNumberDef.CLASS_CODE );
 	}
 
 	@Override
@@ -318,8 +318,8 @@ public class CFBamProtBuffNumberDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamValueHPKey ) {
-			ICFBamProtValueHPKey rhs = (ICFBamValueHPKey)obj;
+		else if( obj instanceof ICFBamProtValueHPKey ) {
+			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -999,7 +999,7 @@ public class CFBamProtBuffNumberDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffNumberDef ) {
 			setJustProtNumberDef( (CFBamProtBuffNumberDef)src );
 		}
@@ -1013,8 +1013,8 @@ public class CFBamProtBuffNumberDef
 	}
 
 	@Override
-	public void setJustProtNumberDef( ICFBamNumberDef src ) {
-		super.setJustProtAtom( src );
+	public void setNumberDef( ICFBamProtNumberDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredDigits(src.getRequiredDigits());
 		setJustProtRequiredPrecis(src.getRequiredPrecis());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
@@ -1023,7 +1023,7 @@ public class CFBamProtBuffNumberDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtNumberDefH ) {
 			setNumberDef( (ICFBamProtNumberDefH)src );
 		}
@@ -1032,13 +1032,13 @@ public class CFBamProtBuffNumberDef
 					"set",
 					"src",
 					src,
-					"ICFBamNumberDefH" );
+					"ICFBamProtNumberDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtNumberDef( ICFBamNumberDefH src ) {
-		super.setJustProtAtom( src );
+	public void setNumberDef( ICFBamProtNumberDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredDigits(src.getRequiredDigits());
 		setJustProtRequiredPrecis(src.getRequiredPrecis());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
@@ -1047,7 +1047,7 @@ public class CFBamProtBuffNumberDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValue src ) {
+	public void set( ICFBamProtValue src ) {
 		if( src instanceof CFBamProtBuffNumberDef ) {
 			setJustProtNumberDef( (CFBamProtBuffNumberDef)src );
 		}
@@ -1061,8 +1061,8 @@ public class CFBamProtBuffNumberDef
 	}
 
 	@Override
-	public void setJustProtNumberDef( ICFBamProtNumberDef src ) {
-		super.setJustProtAtom( src );
+	public void setNumberDef( ICFBamProtNumberDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredDigits(src.getRequiredDigits());
 		setJustProtRequiredPrecis(src.getRequiredPrecis());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
@@ -1071,7 +1071,7 @@ public class CFBamProtBuffNumberDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamProtValueH src ) {
+	public void set( ICFBamProtValueH src ) {
 		if( src instanceof ICFBamProtNumberDefH ) {
 			setNumberDef( (ICFBamProtNumberDefH)src );
 		}
@@ -1080,13 +1080,13 @@ public class CFBamProtBuffNumberDef
 					"set",
 					"src",
 					src,
-					"ICFBamNumberDefH" );
+					"ICFBamProtNumberDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtNumberDef( ICFBamProtNumberDefH src ) {
-		super.setJustProtAtom( src );
+	public void setNumberDef( ICFBamProtNumberDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredDigits(src.getRequiredDigits());
 		setJustProtRequiredPrecis(src.getRequiredPrecis());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
@@ -1095,7 +1095,7 @@ public class CFBamProtBuffNumberDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValue src ) {
+	public void set( ICFBamPubValue src ) {
 		if( src instanceof CFBamPubProtBuffNumberDef ) {
 			setJustProtNumberDef( (CFBamPubProtBuffNumberDef)src );
 		}
@@ -1109,8 +1109,8 @@ public class CFBamProtBuffNumberDef
 	}
 
 	@Override
-	public void setJustProtNumberDef( ICFBamPubNumberDef src ) {
-		super.setJustProtAtom( src );
+	public void setNumberDef( ICFBamPubNumberDef src ) {
+		super.setAtom( src );
 		setJustProtRequiredDigits(src.getRequiredDigits());
 		setJustProtRequiredPrecis(src.getRequiredPrecis());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
@@ -1119,7 +1119,7 @@ public class CFBamProtBuffNumberDef
 	}
 
 	@Override
-	public void setJustProt( ICFBamPubValueH src ) {
+	public void set( ICFBamPubValueH src ) {
 		if( src instanceof ICFBamPubNumberDefH ) {
 			setNumberDef( (ICFBamPubNumberDefH)src );
 		}
@@ -1128,13 +1128,13 @@ public class CFBamProtBuffNumberDef
 					"set",
 					"src",
 					src,
-					"ICFBamNumberDefH" );
+					"ICFBamProtNumberDefH" );
 		}
 	}
 
 	@Override
-	public void setJustProtNumberDef( ICFBamPubNumberDefH src ) {
-		super.setJustProtAtom( src );
+	public void setNumberDef( ICFBamPubNumberDefH src ) {
+		super.setAtom( src );
 		setJustProtRequiredDigits(src.getRequiredDigits());
 		setJustProtRequiredPrecis(src.getRequiredPrecis());
 		setJustProtOptionalInitValue(src.getOptionalInitValue());
