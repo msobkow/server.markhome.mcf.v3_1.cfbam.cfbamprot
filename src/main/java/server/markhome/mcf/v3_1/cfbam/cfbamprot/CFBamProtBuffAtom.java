@@ -192,90 +192,6 @@ public class CFBamProtBuffAtom
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtAtom rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalDbName() != null ) {
-				if( rhs.getOptionalDbName() != null ) {
-					if( ! getOptionalDbName().equals( rhs.getOptionalDbName() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalDbName() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtAtomH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalDbName() != null ) {
-				if( rhs.getOptionalDbName() != null ) {
-					if( ! getOptionalDbName().equals( rhs.getOptionalDbName() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalDbName() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubAtom rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -547,48 +463,8 @@ public class CFBamProtBuffAtom
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtAtomH ) {
-			setAtom( (ICFBamProtAtomH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtAtomH" );
-		}
-	}
-
-	@Override
-	public void setAtom( ICFBamProtAtomH src ) {
-		super.setValue( src );
-		setJustProtOptionalDbName(src.getOptionalDbName());
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffAtom ) {
-			setJustProtAtom( (CFBamProtBuffAtom)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffAtom" );
-		}
-	}
-
-	@Override
-	public void setAtom( ICFBamProtAtom src ) {
-		super.setValue( src );
-		setJustProtOptionalDbName(src.getOptionalDbName());
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtAtomH ) {
-			setAtom( (ICFBamProtAtomH)src );
+		if( src instanceof ICFBamPubAtomH ) {
+			setAtom( (ICFBamPubAtomH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),
