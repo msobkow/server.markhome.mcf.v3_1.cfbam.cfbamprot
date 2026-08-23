@@ -211,72 +211,6 @@ public class CFBamProtBuffDbKeyHash160Gen
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtDbKeyHash160Gen rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredSlice() != rhs.getRequiredSlice() ) {
-				return( false );
-			}
-			if( getRequiredBlockSize() != rhs.getRequiredBlockSize() ) {
-				return( false );
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtDbKeyHash160GenH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredSlice() != rhs.getRequiredSlice() ) {
-				return( false );
-			}
-			if( getRequiredBlockSize() != rhs.getRequiredBlockSize() ) {
-				return( false );
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubDbKeyHash160Gen rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -514,50 +448,8 @@ public class CFBamProtBuffDbKeyHash160Gen
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtDbKeyHash160GenH ) {
-			setDbKeyHash160Gen( (ICFBamProtDbKeyHash160GenH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtDbKeyHash160GenH" );
-		}
-	}
-
-	@Override
-	public void setDbKeyHash160Gen( ICFBamProtDbKeyHash160GenH src ) {
-		super.setDbKeyHash160Type( src );
-		setJustProtRequiredSlice(src.getRequiredSlice());
-		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffDbKeyHash160Gen ) {
-			setJustProtDbKeyHash160Gen( (CFBamProtBuffDbKeyHash160Gen)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffDbKeyHash160Gen" );
-		}
-	}
-
-	@Override
-	public void setDbKeyHash160Gen( ICFBamProtDbKeyHash160Gen src ) {
-		super.setDbKeyHash160Type( src );
-		setJustProtRequiredSlice(src.getRequiredSlice());
-		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtDbKeyHash160GenH ) {
-			setDbKeyHash160Gen( (ICFBamProtDbKeyHash160GenH)src );
+		if( src instanceof ICFBamPubDbKeyHash160GenH ) {
+			setDbKeyHash160Gen( (ICFBamPubDbKeyHash160GenH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),

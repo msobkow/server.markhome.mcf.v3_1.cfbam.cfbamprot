@@ -211,72 +211,6 @@ public class CFBamProtBuffUuid6Gen
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtUuid6Gen rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredSlice() != rhs.getRequiredSlice() ) {
-				return( false );
-			}
-			if( getRequiredBlockSize() != rhs.getRequiredBlockSize() ) {
-				return( false );
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtUuid6GenH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredSlice() != rhs.getRequiredSlice() ) {
-				return( false );
-			}
-			if( getRequiredBlockSize() != rhs.getRequiredBlockSize() ) {
-				return( false );
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubUuid6Gen rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -514,50 +448,8 @@ public class CFBamProtBuffUuid6Gen
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtUuid6GenH ) {
-			setUuid6Gen( (ICFBamProtUuid6GenH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtUuid6GenH" );
-		}
-	}
-
-	@Override
-	public void setUuid6Gen( ICFBamProtUuid6GenH src ) {
-		super.setUuid6Type( src );
-		setJustProtRequiredSlice(src.getRequiredSlice());
-		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffUuid6Gen ) {
-			setJustProtUuid6Gen( (CFBamProtBuffUuid6Gen)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffUuid6Gen" );
-		}
-	}
-
-	@Override
-	public void setUuid6Gen( ICFBamProtUuid6Gen src ) {
-		super.setUuid6Type( src );
-		setJustProtRequiredSlice(src.getRequiredSlice());
-		setJustProtRequiredBlockSize(src.getRequiredBlockSize());
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtUuid6GenH ) {
-			setUuid6Gen( (ICFBamProtUuid6GenH)src );
+		if( src instanceof ICFBamPubUuid6GenH ) {
+			setUuid6Gen( (ICFBamPubUuid6GenH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),

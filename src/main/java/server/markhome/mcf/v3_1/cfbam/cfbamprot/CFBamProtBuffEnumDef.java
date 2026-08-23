@@ -82,79 +82,7 @@ public class CFBamProtBuffEnumDef
 	public int getClassCode() {
 		return( ICFBamProtEnumDef.CLASS_CODE );
 	}
-
-	@Override
-	public List<ICFBamProtEnumTag> getRequiredComponentsTag() {
-		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
-		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "getRequiredComponentsTag", 0, "ICFBamSchema.getBackingCFBam()");
-		}
-		ICFBamProtEnumTagTable targetTable = targetBackingCFBam.getTableEnumTag();
-		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getRequiredComponentsTag", 0, "ICFBamSchema.getBackingCFBam().getTableEnumTag()");
-		}
-		ICFBamProtEnumTag[] targetArr = targetTable.readDerivedByEnumIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
-		if( targetArr != null ) {
-			List<ICFBamProtEnumTag> results = new ArrayList<>(targetArr.length);
-			for (int idx = 0; idx < targetArr.length; idx++) {
-				results.add(targetArr[idx]);
-			}
-			return( results );
-		}
-		else {
-			List<ICFBamProtEnumTag> results = new ArrayList<>();
-			return( results );
-		}
-	}
-
-	@Override
-	public List<ICFBamProtEnumTag> getRequiredComponentsTag() {
-		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
-		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "getRequiredComponentsTag", 0, "ICFBamSchema.getBackingCFBam()");
-		}
-		ICFBamProtEnumTagTable targetTable = targetBackingCFBam.getTableEnumTag();
-		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getRequiredComponentsTag", 0, "ICFBamSchema.getBackingCFBam().getTableEnumTag()");
-		}
-		ICFBamProtEnumTag[] targetArr = targetTable.readDerivedByEnumIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
-		if( targetArr != null ) {
-			List<ICFBamProtEnumTag> results = new ArrayList<>(targetArr.length);
-			for (int idx = 0; idx < targetArr.length; idx++) {
-				results.add(targetArr[idx]);
-			}
-			return( results );
-		}
-		else {
-			List<ICFBamProtEnumTag> results = new ArrayList<>();
-			return( results );
-		}
-	}
-
-	@Override
-	public List<ICFBamProtEnumTag> getRequiredComponentsTag() {
-		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
-		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "getRequiredComponentsTag", 0, "ICFBamSchema.getBackingCFBam()");
-		}
-		ICFBamProtEnumTagTable targetTable = targetBackingCFBam.getTableEnumTag();
-		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getRequiredComponentsTag", 0, "ICFBamSchema.getBackingCFBam().getTableEnumTag()");
-		}
-		ICFBamPubEnumTag[] targetArr = targetTable.readDerivedByEnumIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
-		if( targetArr != null ) {
-			List<ICFBamPubEnumTag> results = new ArrayList<>(targetArr.length);
-			for (int idx = 0; idx < targetArr.length; idx++) {
-				results.add(targetArr[idx]);
-			}
-			return( results );
-		}
-		else {
-			List<ICFBamPubEnumTag> results = new ArrayList<>();
-			return( results );
-		}
-	}
-
+$implJustProtSchemaProtBuffTableProtRelationProtGetterWithArgs$
 	@Override
 	public boolean equals( Object obj ) {
 		if( obj == null ) {
@@ -198,60 +126,6 @@ public class CFBamProtBuffEnumDef
 		}
 		else if( obj instanceof ICFBamProtValueHPKey ) {
 			ICFBamProtValueHPKey rhs = (ICFBamProtValueHPKey)obj;
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtEnumDef rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtEnumDefH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
 					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
@@ -442,46 +316,8 @@ public class CFBamProtBuffEnumDef
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtEnumDefH ) {
-			setEnumDef( (ICFBamProtEnumDefH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtEnumDefH" );
-		}
-	}
-
-	@Override
-	public void setEnumDef( ICFBamProtEnumDefH src ) {
-		super.setInt16Def( src );
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffEnumDef ) {
-			setJustProtEnumDef( (CFBamProtBuffEnumDef)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffEnumDef" );
-		}
-	}
-
-	@Override
-	public void setEnumDef( ICFBamProtEnumDef src ) {
-		super.setInt16Def( src );
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtEnumDefH ) {
-			setEnumDef( (ICFBamProtEnumDefH)src );
+		if( src instanceof ICFBamPubEnumDefH ) {
+			setEnumDef( (ICFBamPubEnumDefH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),

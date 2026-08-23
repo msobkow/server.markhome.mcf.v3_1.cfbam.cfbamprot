@@ -184,90 +184,6 @@ public class CFBamProtBuffUuidDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtUuidDef rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalInitValue() != null ) {
-				if( rhs.getOptionalInitValue() != null ) {
-					if( ! getOptionalInitValue().equals( rhs.getOptionalInitValue() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalInitValue() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtUuidDefH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalInitValue() != null ) {
-				if( rhs.getOptionalInitValue() != null ) {
-					if( ! getOptionalInitValue().equals( rhs.getOptionalInitValue() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalInitValue() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubUuidDef rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -539,48 +455,8 @@ public class CFBamProtBuffUuidDef
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtUuidDefH ) {
-			setUuidDef( (ICFBamProtUuidDefH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtUuidDefH" );
-		}
-	}
-
-	@Override
-	public void setUuidDef( ICFBamProtUuidDefH src ) {
-		super.setAtom( src );
-		setJustProtOptionalInitValue(src.getOptionalInitValue());
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffUuidDef ) {
-			setJustProtUuidDef( (CFBamProtBuffUuidDef)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffUuidDef" );
-		}
-	}
-
-	@Override
-	public void setUuidDef( ICFBamProtUuidDef src ) {
-		super.setAtom( src );
-		setJustProtOptionalInitValue(src.getOptionalInitValue());
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtUuidDefH ) {
-			setUuidDef( (ICFBamProtUuidDefH)src );
+		if( src instanceof ICFBamPubUuidDefH ) {
+			setUuidDef( (ICFBamPubUuidDefH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),

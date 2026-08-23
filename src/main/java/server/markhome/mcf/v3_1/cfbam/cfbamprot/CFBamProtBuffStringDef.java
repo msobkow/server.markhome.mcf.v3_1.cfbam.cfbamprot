@@ -243,102 +243,6 @@ public class CFBamProtBuffStringDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtStringDef rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredMaxLen() != rhs.getRequiredMaxLen() ) {
-				return( false );
-			}
-			if( getRequiredIsPolymorph() != rhs.getRequiredIsPolymorph() ) {
-				return( false );
-			}
-			if( getOptionalInitValue() != null ) {
-				if( rhs.getOptionalInitValue() != null ) {
-					if( ! getOptionalInitValue().equals( rhs.getOptionalInitValue() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalInitValue() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtStringDefH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredMaxLen() != rhs.getRequiredMaxLen() ) {
-				return( false );
-			}
-			if( getRequiredIsPolymorph() != rhs.getRequiredIsPolymorph() ) {
-				return( false );
-			}
-			if( getOptionalInitValue() != null ) {
-				if( rhs.getOptionalInitValue() != null ) {
-					if( ! getOptionalInitValue().equals( rhs.getOptionalInitValue() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalInitValue() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubStringDef rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -695,52 +599,8 @@ public class CFBamProtBuffStringDef
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtStringDefH ) {
-			setStringDef( (ICFBamProtStringDefH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtStringDefH" );
-		}
-	}
-
-	@Override
-	public void setStringDef( ICFBamProtStringDefH src ) {
-		super.setAtom( src );
-		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
-		setJustProtRequiredIsPolymorph(src.getRequiredIsPolymorph());
-		setJustProtOptionalInitValue(src.getOptionalInitValue());
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffStringDef ) {
-			setJustProtStringDef( (CFBamProtBuffStringDef)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffStringDef" );
-		}
-	}
-
-	@Override
-	public void setStringDef( ICFBamProtStringDef src ) {
-		super.setAtom( src );
-		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
-		setJustProtRequiredIsPolymorph(src.getRequiredIsPolymorph());
-		setJustProtOptionalInitValue(src.getOptionalInitValue());
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtStringDefH ) {
-			setStringDef( (ICFBamProtStringDefH)src );
+		if( src instanceof ICFBamPubStringDefH ) {
+			setStringDef( (ICFBamPubStringDefH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),

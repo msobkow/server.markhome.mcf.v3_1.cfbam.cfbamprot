@@ -192,90 +192,6 @@ public class CFBamProtBuffDbKeyHash512Def
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtDbKeyHash512Def rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalInitValue() != null ) {
-				if( rhs.getOptionalInitValue() != null ) {
-					if( ! getOptionalInitValue().equals( rhs.getOptionalInitValue() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalInitValue() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtDbKeyHash512DefH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalInitValue() != null ) {
-				if( rhs.getOptionalInitValue() != null ) {
-					if( ! getOptionalInitValue().equals( rhs.getOptionalInitValue() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalInitValue() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubDbKeyHash512Def rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -547,48 +463,8 @@ public class CFBamProtBuffDbKeyHash512Def
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtDbKeyHash512DefH ) {
-			setDbKeyHash512Def( (ICFBamProtDbKeyHash512DefH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtDbKeyHash512DefH" );
-		}
-	}
-
-	@Override
-	public void setDbKeyHash512Def( ICFBamProtDbKeyHash512DefH src ) {
-		super.setAtom( src );
-		setJustProtOptionalInitValue(src.getOptionalInitValue());
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffDbKeyHash512Def ) {
-			setJustProtDbKeyHash512Def( (CFBamProtBuffDbKeyHash512Def)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffDbKeyHash512Def" );
-		}
-	}
-
-	@Override
-	public void setDbKeyHash512Def( ICFBamProtDbKeyHash512Def src ) {
-		super.setAtom( src );
-		setJustProtOptionalInitValue(src.getOptionalInitValue());
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtDbKeyHash512DefH ) {
-			setDbKeyHash512Def( (ICFBamProtDbKeyHash512DefH)src );
+		if( src instanceof ICFBamPubDbKeyHash512DefH ) {
+			setDbKeyHash512Def( (ICFBamPubDbKeyHash512DefH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),

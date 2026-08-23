@@ -192,90 +192,6 @@ public class CFBamProtBuffTZTimestampDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtTZTimestampDef rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalDummy() != null ) {
-				if( rhs.getOptionalDummy() != null ) {
-					if( ! getOptionalDummy().equals( rhs.getOptionalDummy() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalDummy() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtTZTimestampDefH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalDummy() != null ) {
-				if( rhs.getOptionalDummy() != null ) {
-					if( ! getOptionalDummy().equals( rhs.getOptionalDummy() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalDummy() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubTZTimestampDef rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -547,48 +463,8 @@ public class CFBamProtBuffTZTimestampDef
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtTZTimestampDefH ) {
-			setTZTimestampDef( (ICFBamProtTZTimestampDefH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtTZTimestampDefH" );
-		}
-	}
-
-	@Override
-	public void setTZTimestampDef( ICFBamProtTZTimestampDefH src ) {
-		super.setAtom( src );
-		setJustProtOptionalDummy(src.getOptionalDummy());
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffTZTimestampDef ) {
-			setJustProtTZTimestampDef( (CFBamProtBuffTZTimestampDef)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffTZTimestampDef" );
-		}
-	}
-
-	@Override
-	public void setTZTimestampDef( ICFBamProtTZTimestampDef src ) {
-		super.setAtom( src );
-		setJustProtOptionalDummy(src.getOptionalDummy());
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtTZTimestampDefH ) {
-			setTZTimestampDef( (ICFBamProtTZTimestampDefH)src );
+		if( src instanceof ICFBamPubTZTimestampDefH ) {
+			setTZTimestampDef( (ICFBamPubTZTimestampDefH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),

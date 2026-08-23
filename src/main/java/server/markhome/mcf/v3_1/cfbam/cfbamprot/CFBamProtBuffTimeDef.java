@@ -192,90 +192,6 @@ public class CFBamProtBuffTimeDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtTimeDef rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalDummy() != null ) {
-				if( rhs.getOptionalDummy() != null ) {
-					if( ! getOptionalDummy().equals( rhs.getOptionalDummy() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalDummy() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtTimeDefH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalDummy() != null ) {
-				if( rhs.getOptionalDummy() != null ) {
-					if( ! getOptionalDummy().equals( rhs.getOptionalDummy() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalDummy() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubTimeDef rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -547,48 +463,8 @@ public class CFBamProtBuffTimeDef
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtTimeDefH ) {
-			setTimeDef( (ICFBamProtTimeDefH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtTimeDefH" );
-		}
-	}
-
-	@Override
-	public void setTimeDef( ICFBamProtTimeDefH src ) {
-		super.setAtom( src );
-		setJustProtOptionalDummy(src.getOptionalDummy());
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffTimeDef ) {
-			setJustProtTimeDef( (CFBamProtBuffTimeDef)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffTimeDef" );
-		}
-	}
-
-	@Override
-	public void setTimeDef( ICFBamProtTimeDef src ) {
-		super.setAtom( src );
-		setJustProtOptionalDummy(src.getOptionalDummy());
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtTimeDefH ) {
-			setTimeDef( (ICFBamProtTimeDefH)src );
+		if( src instanceof ICFBamPubTimeDefH ) {
+			setTimeDef( (ICFBamPubTimeDefH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),

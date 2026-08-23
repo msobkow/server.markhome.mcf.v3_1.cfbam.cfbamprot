@@ -192,90 +192,6 @@ public class CFBamProtBuffServerProc
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtServerProc rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalDummy() != null ) {
-				if( rhs.getOptionalDummy() != null ) {
-					if( ! getOptionalDummy().equals( rhs.getOptionalDummy() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalDummy() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtServerProcH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalDummy() != null ) {
-				if( rhs.getOptionalDummy() != null ) {
-					if( ! getOptionalDummy().equals( rhs.getOptionalDummy() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalDummy() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtScopeHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubServerProc rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -547,48 +463,8 @@ public class CFBamProtBuffServerProc
 
 	@Override
 	public void set( ICFBamProtScopeH src ) {
-		if( src instanceof ICFBamProtServerProcH ) {
-			setServerProc( (ICFBamProtServerProcH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtServerProcH" );
-		}
-	}
-
-	@Override
-	public void setServerProc( ICFBamProtServerProcH src ) {
-		super.setServerMethod( src );
-		setJustProtOptionalDummy(src.getOptionalDummy());
-	}
-
-	@Override
-	public void set( ICFBamProtScope src ) {
-		if( src instanceof CFBamProtBuffServerProc ) {
-			setJustProtServerProc( (CFBamProtBuffServerProc)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffServerProc" );
-		}
-	}
-
-	@Override
-	public void setServerProc( ICFBamProtServerProc src ) {
-		super.setServerMethod( src );
-		setJustProtOptionalDummy(src.getOptionalDummy());
-	}
-
-	@Override
-	public void set( ICFBamProtScopeH src ) {
-		if( src instanceof ICFBamProtServerProcH ) {
-			setServerProc( (ICFBamProtServerProcH)src );
+		if( src instanceof ICFBamPubServerProcH ) {
+			setServerProc( (ICFBamPubServerProcH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),

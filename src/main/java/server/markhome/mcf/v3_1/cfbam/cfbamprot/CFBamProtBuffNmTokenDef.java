@@ -226,96 +226,6 @@ public class CFBamProtBuffNmTokenDef
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFBamProtNmTokenDef rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredMaxLen() != rhs.getRequiredMaxLen() ) {
-				return( false );
-			}
-			if( getOptionalInitValue() != null ) {
-				if( rhs.getOptionalInitValue() != null ) {
-					if( ! getOptionalInitValue().equals( rhs.getOptionalInitValue() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalInitValue() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtNmTokenDefH rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredMaxLen() != rhs.getRequiredMaxLen() ) {
-				return( false );
-			}
-			if( getOptionalInitValue() != null ) {
-				if( rhs.getOptionalInitValue() != null ) {
-					if( ! getOptionalInitValue().equals( rhs.getOptionalInitValue() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalInitValue() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFBamProtValueHPKey rhs ) {
-			if( getRequiredId() != null ) {
-				if( rhs.getRequiredId() != null ) {
-					if( ! getRequiredId().equals( rhs.getRequiredId() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredId() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
 		else if( obj instanceof ICFBamPubNmTokenDef rhs ) {
 			if( getRequiredId() != null ) {
 				if( rhs.getRequiredId() != null ) {
@@ -619,50 +529,8 @@ public class CFBamProtBuffNmTokenDef
 
 	@Override
 	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtNmTokenDefH ) {
-			setNmTokenDef( (ICFBamProtNmTokenDefH)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-					"set",
-					"src",
-					src,
-					"ICFBamProtNmTokenDefH" );
-		}
-	}
-
-	@Override
-	public void setNmTokenDef( ICFBamProtNmTokenDefH src ) {
-		super.setAtom( src );
-		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
-		setJustProtOptionalInitValue(src.getOptionalInitValue());
-	}
-
-	@Override
-	public void set( ICFBamProtValue src ) {
-		if( src instanceof CFBamProtBuffNmTokenDef ) {
-			setJustProtNmTokenDef( (CFBamProtBuffNmTokenDef)src );
-		}
-		else {
-			throw new CFLibUnsupportedClassException( getClass(),
-				"compareTo",
-				"src",
-				src,
-				"CFBamProtBuffNmTokenDef" );
-		}
-	}
-
-	@Override
-	public void setNmTokenDef( ICFBamProtNmTokenDef src ) {
-		super.setAtom( src );
-		setJustProtRequiredMaxLen(src.getRequiredMaxLen());
-		setJustProtOptionalInitValue(src.getOptionalInitValue());
-	}
-
-	@Override
-	public void set( ICFBamProtValueH src ) {
-		if( src instanceof ICFBamProtNmTokenDefH ) {
-			setNmTokenDef( (ICFBamProtNmTokenDefH)src );
+		if( src instanceof ICFBamPubNmTokenDefH ) {
+			setNmTokenDef( (ICFBamPubNmTokenDefH)src );
 		}
 		else {
 			throw new CFLibUnsupportedClassException( getClass(),
