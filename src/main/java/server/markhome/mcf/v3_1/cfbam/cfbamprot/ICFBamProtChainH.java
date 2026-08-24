@@ -92,7 +92,7 @@ public interface ICFBamProtChainH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public ICFLibKeyHash256 getRequiredId();
+	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredId();
 	public void setRequiredId( ICFLibKeyHash256 requiredId );
 
 	public ICFLibKeyHash256 getOptionalDefSchemaId();
