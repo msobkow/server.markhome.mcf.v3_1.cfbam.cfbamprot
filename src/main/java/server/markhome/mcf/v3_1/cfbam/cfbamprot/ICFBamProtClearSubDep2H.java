@@ -68,10 +68,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtClearSubDep2H extends ICFBamProtClearDepH
 {
-	public $implIJavaAtomType$ getRequiredClearSubDep1Id();
-	public void setRequiredClearSubDep1Id( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredClearSubDep1Id();
+	public void setRequiredClearSubDep1Id( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	@Override
 	public boolean equals( Object obj );
 

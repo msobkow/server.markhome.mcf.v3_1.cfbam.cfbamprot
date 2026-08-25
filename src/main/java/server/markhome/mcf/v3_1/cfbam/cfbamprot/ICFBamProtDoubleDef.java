@@ -78,12 +78,12 @@ public interface ICFBamProtDoubleDef
 	public final static int CLASS_CODE = 0xa820;
 	public final static String S_CLASS_CODE = "a820";
 
-	public $implIJavaAtomType$ getOptionalInitValue();
-	public void setOptionalInitValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalMinValue();
-	public void setOptionalMinValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalMaxValue();
-	public void setOptionalMaxValue( $implIJavaAtomType$ value );
+	public Double getOptionalInitValue();
+	public void setOptionalInitValue( Double value );
+	public Double getOptionalMinValue();
+	public void setOptionalMinValue( Double value );
+	public Double getOptionalMaxValue();
+	public void setOptionalMaxValue( Double value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

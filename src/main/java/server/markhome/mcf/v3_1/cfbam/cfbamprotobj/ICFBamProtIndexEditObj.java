@@ -79,56 +79,56 @@ public interface ICFBamProtIndexEditObj
 	 *
 	 *	@return	The ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
+	ICFBamProtTableObj getRequiredContainerTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtTableObj instance referenced by the Table key.
 	 *
 	 *	@param	value	the ICFBamProtTableObj instance to be referenced by the Table key.
 	 */
-	void set$OptionalOrRequired$ContainerTable( ICFBamProtTableObj value );
+	void setRequiredContainerTable( ICFBamProtTableObj value );
 
 	/**
 	 *	Get the ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
 	 *	@return	The ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema();
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaDefObj instance to be referenced by the DefSchema key.
 	 */
-	void set$OptionalOrRequired$LookupDefSchema( ICFBamProtSchemaDefObj value );
+	void setOptionalLookupDefSchema( ICFBamProtSchemaDefObj value );
 
 	/**
 	 *	Get a list ICFBamProtIndexColObj instances referenced by the Columns key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtIndexColObj instances referenced by the Columns key.
 	 */
-	List<ICFBamProtIndexColObj> get$OptionalOrRequired$ComponentsColumns();
+	List<ICFBamProtIndexColObj> getOptionalComponentsColumns();
 
 	/**
 	 *	Get a list ICFBamProtIndexTweakObj instances referenced by the Tweaks key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtIndexTweakObj instances referenced by the Tweaks key.
 	 */
-	List<ICFBamProtIndexTweakObj> get$OptionalOrRequired$ComponentsTweaks();
+	List<ICFBamProtIndexTweakObj> getOptionalComponentsTweaks();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute TableId.

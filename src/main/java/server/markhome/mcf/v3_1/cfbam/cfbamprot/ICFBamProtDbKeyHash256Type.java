@@ -74,17 +74,17 @@ public interface ICFBamProtDbKeyHash256Type
 	public final static int CLASS_CODE = 0xa84a;
 	public final static String S_CLASS_CODE = "a84a";
 
-	public ICFBamProtSchemaDef get$OptionalOrRequired$ContainerSchemaDef();
+	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 
-	public void set$OptionalOrRequired$ContainerSchemaDef($implIJavaAtomType$ argSchemaDefId);
+	public void setRequiredContainerSchemaDef(ICFLibKeyHash256 argSchemaDefId);
 
 
-	public void set$OptionalOrRequired$ContainerSchemaDef(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$ContainerSchemaDef(ICFBamPubSchemaDef argObj);
+	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
 
-	public $implIJavaAtomType$ getRequiredSchemaDefId();
-	public void setRequiredSchemaDefId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSchemaDefId();
+	public void setRequiredSchemaDefId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

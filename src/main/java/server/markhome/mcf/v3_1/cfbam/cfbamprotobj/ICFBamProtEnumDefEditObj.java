@@ -79,6 +79,6 @@ public interface ICFBamProtEnumDefEditObj
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtEnumTagObj instances referenced by the Tag key.
 	 */
-	List<ICFBamProtEnumTagObj> get$OptionalOrRequired$ComponentsTag();
+	List<ICFBamProtEnumTagObj> getRequiredComponentsTag();
 
 }

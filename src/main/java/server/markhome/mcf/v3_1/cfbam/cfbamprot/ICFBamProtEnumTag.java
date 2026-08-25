@@ -109,59 +109,59 @@ public interface ICFBamProtEnumTag
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	public $implIJavaAtomType$ getRequiredId();
-	public void setRequiredId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFBamProtEnumDef get$OptionalOrRequired$ContainerEnumDef();
+	public ICFBamProtEnumDef getRequiredContainerEnumDef();
 
-	public void set$OptionalOrRequired$ContainerEnumDef($implIJavaAtomType$ argEnumId);
-
-
-	public void set$OptionalOrRequired$ContainerEnumDef(ICFBamProtEnumDef argObj);
-
-	public void set$OptionalOrRequired$ContainerEnumDef(ICFBamPubEnumDef argObj);
-
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupDefSchema();
-
-	public void set$OptionalOrRequired$LookupDefSchema($implIJavaAtomType$ argDefSchemaId);
+	public void setRequiredContainerEnumDef(ICFLibKeyHash256 argEnumId);
 
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerEnumDef(ICFBamProtEnumDef argObj);
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamPubSchemaDef argObj);
+	public void setRequiredContainerEnumDef(ICFBamPubEnumDef argObj);
 
-	public ICFBamProtEnumTag get$OptionalOrRequired$LookupPrev();
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void set$OptionalOrRequired$LookupPrev($implIJavaAtomType$ argPrevId);
-
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamProtEnumTag argObj);
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamPubEnumTag argObj);
-
-	public ICFBamProtEnumTag get$OptionalOrRequired$LookupNext();
-
-	public void set$OptionalOrRequired$LookupNext($implIJavaAtomType$ argNextId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamProtEnumTag argObj);
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamPubEnumTag argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredEnumId();
-	public void setRequiredEnumId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalEnumCode();
-	public void setOptionalEnumCode( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalPrevId();
-	public void setOptionalPrevId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalNextId();
-	public void setOptionalNextId( $implIJavaAtomType$ value );
+	public ICFBamProtEnumTag getOptionalLookupPrev();
+
+	public void setOptionalLookupPrev(ICFLibKeyHash256 argPrevId);
+
+
+	public void setOptionalLookupPrev(ICFBamProtEnumTag argObj);
+
+	public void setOptionalLookupPrev(ICFBamPubEnumTag argObj);
+
+	public ICFBamProtEnumTag getOptionalLookupNext();
+
+	public void setOptionalLookupNext(ICFLibKeyHash256 argNextId);
+
+
+	public void setOptionalLookupNext(ICFBamProtEnumTag argObj);
+
+	public void setOptionalLookupNext(ICFBamPubEnumTag argObj);
+
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredEnumId();
+	public void setRequiredEnumId( ICFLibKeyHash256 value );
+	public Short getOptionalEnumCode();
+	public void setOptionalEnumCode( Short value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public ICFLibKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

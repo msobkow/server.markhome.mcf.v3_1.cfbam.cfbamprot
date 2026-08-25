@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtClearSubDep2ByClearSubDep1IdxKey
 {
-	public $implIJavaAtomType$ getRequiredClearSubDep1Id();
-	public void setRequiredClearSubDep1Id( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredClearSubDep1Id();
+	public void setRequiredClearSubDep1Id( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

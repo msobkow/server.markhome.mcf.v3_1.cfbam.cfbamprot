@@ -135,84 +135,84 @@ public interface ICFBamProtEnumTagEditObj
 	 *
 	 *	@return	The ICFBamProtEnumDefObj instance referenced by the EnumDef key.
 	 */
-	ICFBamProtEnumDefObj get$OptionalOrRequired$ContainerEnumDef();
+	ICFBamProtEnumDefObj getRequiredContainerEnumDef();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtEnumDefObj instance referenced by the EnumDef key.
+	 *	Get the required ICFBamProtEnumDefObj instance referenced by the EnumDef key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtEnumDefObj instance referenced by the EnumDef key.
+	 *	@return	The required ICFBamProtEnumDefObj instance referenced by the EnumDef key.
 	 */
-	ICFBamProtEnumDefObj get$OptionalOrRequired$ContainerEnumDef( boolean forceRead );
+	ICFBamProtEnumDefObj getRequiredContainerEnumDef( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtEnumDefObj instance referenced by the EnumDef key.
 	 *
 	 *	@param	value	the ICFBamProtEnumDefObj instance to be referenced by the EnumDef key.
 	 */
-	void set$OptionalOrRequired$ContainerEnumDef( ICFBamProtEnumDefObj value );
+	void setRequiredContainerEnumDef( ICFBamProtEnumDefObj value );
 
 	/**
 	 *	Get the ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
 	 *	@return	The ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema();
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaDefObj instance to be referenced by the DefSchema key.
 	 */
-	void set$OptionalOrRequired$LookupDefSchema( ICFBamProtSchemaDefObj value );
+	void setOptionalLookupDefSchema( ICFBamProtSchemaDefObj value );
 
 	/**
 	 *	Get the ICFBamProtEnumTagObj instance referenced by the Prev key.
 	 *
 	 *	@return	The ICFBamProtEnumTagObj instance referenced by the Prev key.
 	 */
-	ICFBamProtEnumTagObj get$OptionalOrRequired$LookupPrev();
+	ICFBamProtEnumTagObj getOptionalLookupPrev();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtEnumTagObj instance referenced by the Prev key.
+	 *	Get the optional ICFBamProtEnumTagObj instance referenced by the Prev key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtEnumTagObj instance referenced by the Prev key.
+	 *	@return	The optional ICFBamProtEnumTagObj instance referenced by the Prev key.
 	 */
-	ICFBamProtEnumTagObj get$OptionalOrRequired$LookupPrev( boolean forceRead );
+	ICFBamProtEnumTagObj getOptionalLookupPrev( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtEnumTagObj instance referenced by the Prev key.
 	 *
 	 *	@param	value	the ICFBamProtEnumTagObj instance to be referenced by the Prev key.
 	 */
-	void set$OptionalOrRequired$LookupPrev( ICFBamProtEnumTagObj value );
+	void setOptionalLookupPrev( ICFBamProtEnumTagObj value );
 
 	/**
 	 *	Get the ICFBamProtEnumTagObj instance referenced by the Next key.
 	 *
 	 *	@return	The ICFBamProtEnumTagObj instance referenced by the Next key.
 	 */
-	ICFBamProtEnumTagObj get$OptionalOrRequired$LookupNext();
+	ICFBamProtEnumTagObj getOptionalLookupNext();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtEnumTagObj instance referenced by the Next key.
+	 *	Get the optional ICFBamProtEnumTagObj instance referenced by the Next key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtEnumTagObj instance referenced by the Next key.
+	 *	@return	The optional ICFBamProtEnumTagObj instance referenced by the Next key.
 	 */
-	ICFBamProtEnumTagObj get$OptionalOrRequired$LookupNext( boolean forceRead );
+	ICFBamProtEnumTagObj getOptionalLookupNext( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtEnumTagObj instance referenced by the Next key.
 	 *
 	 *	@param	value	the ICFBamProtEnumTagObj instance to be referenced by the Next key.
 	 */
-	void set$OptionalOrRequired$LookupNext( ICFBamProtEnumTagObj value );
+	void setOptionalLookupNext( ICFBamProtEnumTagObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

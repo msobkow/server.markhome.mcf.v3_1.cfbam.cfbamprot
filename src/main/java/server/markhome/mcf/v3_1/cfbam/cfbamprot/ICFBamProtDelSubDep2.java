@@ -75,21 +75,21 @@ public interface ICFBamProtDelSubDep2
 	public final static int CLASS_CODE = 0xa81d;
 	public final static String S_CLASS_CODE = "a81d";
 
-	public ICFBamProtDelSubDep1 get$OptionalOrRequired$ContainerDelSubDep1();
+	public ICFBamProtDelSubDep1 getRequiredContainerDelSubDep1();
 
-	public void set$OptionalOrRequired$ContainerDelSubDep1($implIJavaAtomType$ argDelSubDep1Id);
+	public void setRequiredContainerDelSubDep1(ICFLibKeyHash256 argDelSubDep1Id);
 
 
-	public void set$OptionalOrRequired$ContainerDelSubDep1(ICFBamProtDelSubDep1 argObj);
+	public void setRequiredContainerDelSubDep1(ICFBamProtDelSubDep1 argObj);
 
-	public void set$OptionalOrRequired$ContainerDelSubDep1(ICFBamPubDelSubDep1 argObj);
+	public void setRequiredContainerDelSubDep1(ICFBamPubDelSubDep1 argObj);
 
-	public List<ICFBamProtDelSubDep3> get$OptionalOrRequired$ComponentsDelDep();
+	public List<ICFBamProtDelSubDep3> getOptionalComponentsDelDep();
 
-	public $implIJavaAtomType$ getRequiredDelSubDep1Id();
-	public void setRequiredDelSubDep1Id( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredDelSubDep1Id();
+	public void setRequiredDelSubDep1Id( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

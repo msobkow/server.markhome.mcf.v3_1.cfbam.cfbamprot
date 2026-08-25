@@ -92,29 +92,29 @@ public interface ICFBamProtChainH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredId();
+	public ICFLibKeyHash256 getRequiredId();
 	public void setRequiredId( ICFLibKeyHash256 requiredId );
 
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortName();
-	public void setOptionalShortName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalLabel();
-	public void setOptionalLabel( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortDescription();
-	public void setOptionalShortDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDescription();
-	public void setOptionalDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalSuffix();
-	public void setOptionalSuffix( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredPrevRelationId();
-	public void setRequiredPrevRelationId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredNextRelationId();
-	public void setRequiredNextRelationId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
+	public String getOptionalSuffix();
+	public void setOptionalSuffix( String value );
+	public ICFLibKeyHash256 getRequiredPrevRelationId();
+	public void setRequiredPrevRelationId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredNextRelationId();
+	public void setRequiredNextRelationId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

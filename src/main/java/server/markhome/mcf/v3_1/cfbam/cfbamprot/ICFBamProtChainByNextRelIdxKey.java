@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtChainByNextRelIdxKey
 {
-	public $implIJavaAtomType$ getRequiredNextRelationId();
-	public void setRequiredNextRelationId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredNextRelationId();
+	public void setRequiredNextRelationId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

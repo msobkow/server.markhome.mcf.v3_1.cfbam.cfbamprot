@@ -72,7 +72,7 @@ public interface ICFBamProtEnumDef
 	public final static int CLASS_CODE = 0xa873;
 	public final static String S_CLASS_CODE = "a873";
 
-	public List<ICFBamProtEnumTag> get$OptionalOrRequired$ComponentsTag();
+	public List<ICFBamProtEnumTag> getRequiredComponentsTag();
 
 	public boolean equals( Object obj );
 

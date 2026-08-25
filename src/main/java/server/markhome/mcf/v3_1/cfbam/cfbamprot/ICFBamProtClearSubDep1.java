@@ -75,21 +75,21 @@ public interface ICFBamProtClearSubDep1
 	public final static int CLASS_CODE = 0xa815;
 	public final static String S_CLASS_CODE = "a815";
 
-	public ICFBamProtClearTopDep get$OptionalOrRequired$ContainerClearTopDep();
+	public ICFBamProtClearTopDep getRequiredContainerClearTopDep();
 
-	public void set$OptionalOrRequired$ContainerClearTopDep($implIJavaAtomType$ argClearTopDepId);
+	public void setRequiredContainerClearTopDep(ICFLibKeyHash256 argClearTopDepId);
 
 
-	public void set$OptionalOrRequired$ContainerClearTopDep(ICFBamProtClearTopDep argObj);
+	public void setRequiredContainerClearTopDep(ICFBamProtClearTopDep argObj);
 
-	public void set$OptionalOrRequired$ContainerClearTopDep(ICFBamPubClearTopDep argObj);
+	public void setRequiredContainerClearTopDep(ICFBamPubClearTopDep argObj);
 
-	public List<ICFBamProtClearSubDep2> get$OptionalOrRequired$ComponentsClearDep();
+	public List<ICFBamProtClearSubDep2> getOptionalComponentsClearDep();
 
-	public $implIJavaAtomType$ getRequiredClearTopDepId();
-	public void setRequiredClearTopDepId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredClearTopDepId();
+	public void setRequiredClearTopDepId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

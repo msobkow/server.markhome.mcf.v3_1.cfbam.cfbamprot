@@ -75,21 +75,21 @@ public interface ICFBamProtDelSubDep1
 	public final static int CLASS_CODE = 0xa81c;
 	public final static String S_CLASS_CODE = "a81c";
 
-	public ICFBamProtDelTopDep get$OptionalOrRequired$ContainerDelTopDep();
+	public ICFBamProtDelTopDep getRequiredContainerDelTopDep();
 
-	public void set$OptionalOrRequired$ContainerDelTopDep($implIJavaAtomType$ argDelTopDepId);
+	public void setRequiredContainerDelTopDep(ICFLibKeyHash256 argDelTopDepId);
 
 
-	public void set$OptionalOrRequired$ContainerDelTopDep(ICFBamProtDelTopDep argObj);
+	public void setRequiredContainerDelTopDep(ICFBamProtDelTopDep argObj);
 
-	public void set$OptionalOrRequired$ContainerDelTopDep(ICFBamPubDelTopDep argObj);
+	public void setRequiredContainerDelTopDep(ICFBamPubDelTopDep argObj);
 
-	public List<ICFBamProtDelSubDep2> get$OptionalOrRequired$ComponentsDelDep();
+	public List<ICFBamProtDelSubDep2> getOptionalComponentsDelDep();
 
-	public $implIJavaAtomType$ getRequiredDelTopDepId();
-	public void setRequiredDelTopDepId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredDelTopDepId();
+	public void setRequiredDelTopDepId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

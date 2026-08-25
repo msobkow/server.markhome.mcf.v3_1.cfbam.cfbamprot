@@ -106,60 +106,60 @@ public interface ICFBamProtDelTopDepObj
 	ICFBamProtDelTopDep getDelTopDepRec();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
+	ICFBamProtTableObj getRequiredContainerTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtDelSubDep1Obj array of instances referenced by the DelDep key.
+	 *	Get the array of optional ICFBamProtDelSubDep1Obj array of instances referenced by the DelDep key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelSubDep1Obj[] array of instances referenced by the DelDep key.
+	 *	@return	The optional ICFBamProtDelSubDep1Obj[] array of instances referenced by the DelDep key.
 	 */
-	List<ICFBamProtDelSubDep1Obj> get$OptionalOrRequired$ComponentsDelDep();
+	List<ICFBamProtDelSubDep1Obj> getOptionalComponentsDelDep();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtDelSubDep1Obj array of instances referenced by the DelDep key.
+	 *	Get the array of optional ICFBamProtDelSubDep1Obj array of instances referenced by the DelDep key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelSubDep1Obj[] array of instances referenced by the DelDep key.
+	 *	@return	The optional ICFBamProtDelSubDep1Obj[] array of instances referenced by the DelDep key.
 	 */
-	List<ICFBamProtDelSubDep1Obj> get$OptionalOrRequired$ComponentsDelDep( boolean forceRead );
+	List<ICFBamProtDelSubDep1Obj> getOptionalComponentsDelDep( boolean forceRead );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtDelTopDepObj instance referenced by the Prev key.
+	 *	Get the optional ICFBamProtDelTopDepObj instance referenced by the Prev key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelTopDepObj instance referenced by the Prev key.
+	 *	@return	The optional ICFBamProtDelTopDepObj instance referenced by the Prev key.
 	 */
-	ICFBamProtDelTopDepObj get$OptionalOrRequired$LookupPrev();
+	ICFBamProtDelTopDepObj getOptionalLookupPrev();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtDelTopDepObj instance referenced by the Prev key.
+	 *	Get the optional ICFBamProtDelTopDepObj instance referenced by the Prev key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelTopDepObj instance referenced by the Prev key.
+	 *	@return	The optional ICFBamProtDelTopDepObj instance referenced by the Prev key.
 	 */
-	ICFBamProtDelTopDepObj get$OptionalOrRequired$LookupPrev( boolean forceRead );
+	ICFBamProtDelTopDepObj getOptionalLookupPrev( boolean forceRead );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtDelTopDepObj instance referenced by the Next key.
+	 *	Get the optional ICFBamProtDelTopDepObj instance referenced by the Next key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelTopDepObj instance referenced by the Next key.
+	 *	@return	The optional ICFBamProtDelTopDepObj instance referenced by the Next key.
 	 */
-	ICFBamProtDelTopDepObj get$OptionalOrRequired$LookupNext();
+	ICFBamProtDelTopDepObj getOptionalLookupNext();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtDelTopDepObj instance referenced by the Next key.
+	 *	Get the optional ICFBamProtDelTopDepObj instance referenced by the Next key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelTopDepObj instance referenced by the Next key.
+	 *	@return	The optional ICFBamProtDelTopDepObj instance referenced by the Next key.
 	 */
-	ICFBamProtDelTopDepObj get$OptionalOrRequired$LookupNext( boolean forceRead );
+	ICFBamProtDelTopDepObj getOptionalLookupNext( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

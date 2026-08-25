@@ -79,43 +79,43 @@ public interface ICFBamProtClearTopDep
 	public final static int CLASS_CODE = 0xa818;
 	public final static String S_CLASS_CODE = "a818";
 
-	public ICFBamProtTable get$OptionalOrRequired$ContainerTable();
+	public ICFBamProtTable getRequiredContainerTable();
 
-	public void set$OptionalOrRequired$ContainerTable($implIJavaAtomType$ argTableId);
-
-
-	public void set$OptionalOrRequired$ContainerTable(ICFBamProtTable argObj);
-
-	public void set$OptionalOrRequired$ContainerTable(ICFBamPubTable argObj);
-
-	public ICFBamProtClearTopDep get$OptionalOrRequired$LookupPrev();
-
-	public void set$OptionalOrRequired$LookupPrev($implIJavaAtomType$ argPrevId);
+	public void setRequiredContainerTable(ICFLibKeyHash256 argTableId);
 
 
-	public void set$OptionalOrRequired$LookupPrev(ICFBamProtClearTopDep argObj);
+	public void setRequiredContainerTable(ICFBamProtTable argObj);
 
-	public void set$OptionalOrRequired$LookupPrev(ICFBamPubClearTopDep argObj);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 
-	public ICFBamProtClearTopDep get$OptionalOrRequired$LookupNext();
+	public ICFBamProtClearTopDep getOptionalLookupPrev();
 
-	public void set$OptionalOrRequired$LookupNext($implIJavaAtomType$ argNextId);
+	public void setOptionalLookupPrev(ICFLibKeyHash256 argPrevId);
 
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamProtClearTopDep argObj);
+	public void setOptionalLookupPrev(ICFBamProtClearTopDep argObj);
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamPubClearTopDep argObj);
+	public void setOptionalLookupPrev(ICFBamPubClearTopDep argObj);
 
-	public List<ICFBamProtClearSubDep1> get$OptionalOrRequired$ComponentsClearDep();
+	public ICFBamProtClearTopDep getOptionalLookupNext();
 
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalPrevId();
-	public void setOptionalPrevId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalNextId();
-	public void setOptionalNextId( $implIJavaAtomType$ value );
+	public void setOptionalLookupNext(ICFLibKeyHash256 argNextId);
+
+
+	public void setOptionalLookupNext(ICFBamProtClearTopDep argObj);
+
+	public void setOptionalLookupNext(ICFBamPubClearTopDep argObj);
+
+	public List<ICFBamProtClearSubDep1> getOptionalComponentsClearDep();
+
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public ICFLibKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

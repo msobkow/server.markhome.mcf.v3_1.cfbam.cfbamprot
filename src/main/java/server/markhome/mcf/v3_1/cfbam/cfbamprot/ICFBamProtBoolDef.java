@@ -72,14 +72,14 @@ public interface ICFBamProtBoolDef
 	public final static int CLASS_CODE = 0xa811;
 	public final static String S_CLASS_CODE = "a811";
 
-	public $implIJavaAtomType$ getOptionalInitValue();
-	public void setOptionalInitValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalFalseString();
-	public void setOptionalFalseString( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalTrueString();
-	public void setOptionalTrueString( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalNullString();
-	public void setOptionalNullString( $implIJavaAtomType$ value );
+	public Boolean getOptionalInitValue();
+	public void setOptionalInitValue( Boolean value );
+	public String getOptionalFalseString();
+	public void setOptionalFalseString( String value );
+	public String getOptionalTrueString();
+	public void setOptionalTrueString( String value );
+	public String getOptionalNullString();
+	public void setOptionalNullString( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

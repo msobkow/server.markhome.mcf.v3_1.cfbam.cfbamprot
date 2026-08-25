@@ -76,28 +76,28 @@ public interface ICFBamProtDelDep
 	public final static int CLASS_CODE = 0xa81b;
 	public final static String S_CLASS_CODE = "a81b";
 
-	public ICFBamProtRelation get$OptionalOrRequired$LookupRelation();
+	public ICFBamProtRelation getRequiredLookupRelation();
 
-	public void set$OptionalOrRequired$LookupRelation($implIJavaAtomType$ argRelationId);
-
-
-	public void set$OptionalOrRequired$LookupRelation(ICFBamProtRelation argObj);
-
-	public void set$OptionalOrRequired$LookupRelation(ICFBamPubRelation argObj);
-
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupDefSchema();
-
-	public void set$OptionalOrRequired$LookupDefSchema($implIJavaAtomType$ argDefSchemaId);
+	public void setRequiredLookupRelation(ICFLibKeyHash256 argRelationId);
 
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setRequiredLookupRelation(ICFBamProtRelation argObj);
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamPubSchemaDef argObj);
+	public void setRequiredLookupRelation(ICFBamPubRelation argObj);
 
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredRelationId();
-	public void setRequiredRelationId( $implIJavaAtomType$ value );
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
+
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
+
+
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
+
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredRelationId();
+	public void setRequiredRelationId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

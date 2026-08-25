@@ -75,19 +75,19 @@ public interface ICFBamProtDelSubDep3
 	public final static int CLASS_CODE = 0xa81e;
 	public final static String S_CLASS_CODE = "a81e";
 
-	public ICFBamProtDelSubDep2 get$OptionalOrRequired$ContainerDelSubDep2();
+	public ICFBamProtDelSubDep2 getRequiredContainerDelSubDep2();
 
-	public void set$OptionalOrRequired$ContainerDelSubDep2($implIJavaAtomType$ argDelSubDep2Id);
+	public void setRequiredContainerDelSubDep2(ICFLibKeyHash256 argDelSubDep2Id);
 
 
-	public void set$OptionalOrRequired$ContainerDelSubDep2(ICFBamProtDelSubDep2 argObj);
+	public void setRequiredContainerDelSubDep2(ICFBamProtDelSubDep2 argObj);
 
-	public void set$OptionalOrRequired$ContainerDelSubDep2(ICFBamPubDelSubDep2 argObj);
+	public void setRequiredContainerDelSubDep2(ICFBamPubDelSubDep2 argObj);
 
-	public $implIJavaAtomType$ getRequiredDelSubDep2Id();
-	public void setRequiredDelSubDep2Id( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredDelSubDep2Id();
+	public void setRequiredDelSubDep2Id( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

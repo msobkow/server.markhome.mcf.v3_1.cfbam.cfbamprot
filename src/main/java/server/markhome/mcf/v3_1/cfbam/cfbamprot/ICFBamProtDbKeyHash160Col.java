@@ -74,17 +74,17 @@ public interface ICFBamProtDbKeyHash160Col
 	public final static int CLASS_CODE = 0xa841;
 	public final static String S_CLASS_CODE = "a841";
 
-	public ICFBamProtTable get$OptionalOrRequired$ContainerTable();
+	public ICFBamProtTable getRequiredContainerTable();
 
-	public void set$OptionalOrRequired$ContainerTable($implIJavaAtomType$ argTableId);
+	public void setRequiredContainerTable(ICFLibKeyHash256 argTableId);
 
 
-	public void set$OptionalOrRequired$ContainerTable(ICFBamProtTable argObj);
+	public void setRequiredContainerTable(ICFBamProtTable argObj);
 
-	public void set$OptionalOrRequired$ContainerTable(ICFBamPubTable argObj);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

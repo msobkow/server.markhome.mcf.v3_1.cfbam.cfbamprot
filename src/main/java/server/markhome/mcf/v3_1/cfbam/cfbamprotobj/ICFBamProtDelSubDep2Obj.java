@@ -92,32 +92,32 @@ public interface ICFBamProtDelSubDep2Obj
 	ICFBamProtDelSubDep2 getDelSubDep2Rec();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtDelSubDep1Obj instance referenced by the DelSubDep1 key.
+	 *	Get the required ICFBamProtDelSubDep1Obj instance referenced by the DelSubDep1 key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelSubDep1Obj instance referenced by the DelSubDep1 key.
+	 *	@return	The required ICFBamProtDelSubDep1Obj instance referenced by the DelSubDep1 key.
 	 */
-	ICFBamProtDelSubDep1Obj get$OptionalOrRequired$ContainerDelSubDep1();
+	ICFBamProtDelSubDep1Obj getRequiredContainerDelSubDep1();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtDelSubDep1Obj instance referenced by the DelSubDep1 key.
+	 *	Get the required ICFBamProtDelSubDep1Obj instance referenced by the DelSubDep1 key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelSubDep1Obj instance referenced by the DelSubDep1 key.
+	 *	@return	The required ICFBamProtDelSubDep1Obj instance referenced by the DelSubDep1 key.
 	 */
-	ICFBamProtDelSubDep1Obj get$OptionalOrRequired$ContainerDelSubDep1( boolean forceRead );
+	ICFBamProtDelSubDep1Obj getRequiredContainerDelSubDep1( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtDelSubDep3Obj array of instances referenced by the DelDep key.
+	 *	Get the array of optional ICFBamProtDelSubDep3Obj array of instances referenced by the DelDep key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelSubDep3Obj[] array of instances referenced by the DelDep key.
+	 *	@return	The optional ICFBamProtDelSubDep3Obj[] array of instances referenced by the DelDep key.
 	 */
-	List<ICFBamProtDelSubDep3Obj> get$OptionalOrRequired$ComponentsDelDep();
+	List<ICFBamProtDelSubDep3Obj> getOptionalComponentsDelDep();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtDelSubDep3Obj array of instances referenced by the DelDep key.
+	 *	Get the array of optional ICFBamProtDelSubDep3Obj array of instances referenced by the DelDep key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelSubDep3Obj[] array of instances referenced by the DelDep key.
+	 *	@return	The optional ICFBamProtDelSubDep3Obj[] array of instances referenced by the DelDep key.
 	 */
-	List<ICFBamProtDelSubDep3Obj> get$OptionalOrRequired$ComponentsDelDep( boolean forceRead );
+	List<ICFBamProtDelSubDep3Obj> getOptionalComponentsDelDep( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

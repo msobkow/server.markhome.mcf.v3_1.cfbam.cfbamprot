@@ -135,84 +135,84 @@ public interface ICFBamProtChainEditObj
 	 *
 	 *	@return	The ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
+	ICFBamProtTableObj getRequiredContainerTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtTableObj instance referenced by the Table key.
 	 *
 	 *	@param	value	the ICFBamProtTableObj instance to be referenced by the Table key.
 	 */
-	void set$OptionalOrRequired$ContainerTable( ICFBamProtTableObj value );
+	void setRequiredContainerTable( ICFBamProtTableObj value );
 
 	/**
 	 *	Get the ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
 	 *	@return	The ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema();
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaDefObj instance to be referenced by the DefSchema key.
 	 */
-	void set$OptionalOrRequired$LookupDefSchema( ICFBamProtSchemaDefObj value );
+	void setOptionalLookupDefSchema( ICFBamProtSchemaDefObj value );
 
 	/**
 	 *	Get the ICFBamProtRelationObj instance referenced by the PrevRel key.
 	 *
 	 *	@return	The ICFBamProtRelationObj instance referenced by the PrevRel key.
 	 */
-	ICFBamProtRelationObj get$OptionalOrRequired$LookupPrevRel();
+	ICFBamProtRelationObj getRequiredLookupPrevRel();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtRelationObj instance referenced by the PrevRel key.
+	 *	Get the required ICFBamProtRelationObj instance referenced by the PrevRel key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj instance referenced by the PrevRel key.
+	 *	@return	The required ICFBamProtRelationObj instance referenced by the PrevRel key.
 	 */
-	ICFBamProtRelationObj get$OptionalOrRequired$LookupPrevRel( boolean forceRead );
+	ICFBamProtRelationObj getRequiredLookupPrevRel( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtRelationObj instance referenced by the PrevRel key.
 	 *
 	 *	@param	value	the ICFBamProtRelationObj instance to be referenced by the PrevRel key.
 	 */
-	void set$OptionalOrRequired$LookupPrevRel( ICFBamProtRelationObj value );
+	void setRequiredLookupPrevRel( ICFBamProtRelationObj value );
 
 	/**
 	 *	Get the ICFBamProtRelationObj instance referenced by the NextRel key.
 	 *
 	 *	@return	The ICFBamProtRelationObj instance referenced by the NextRel key.
 	 */
-	ICFBamProtRelationObj get$OptionalOrRequired$LookupNextRel();
+	ICFBamProtRelationObj getRequiredLookupNextRel();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtRelationObj instance referenced by the NextRel key.
+	 *	Get the required ICFBamProtRelationObj instance referenced by the NextRel key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj instance referenced by the NextRel key.
+	 *	@return	The required ICFBamProtRelationObj instance referenced by the NextRel key.
 	 */
-	ICFBamProtRelationObj get$OptionalOrRequired$LookupNextRel( boolean forceRead );
+	ICFBamProtRelationObj getRequiredLookupNextRel( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtRelationObj instance referenced by the NextRel key.
 	 *
 	 *	@param	value	the ICFBamProtRelationObj instance to be referenced by the NextRel key.
 	 */
-	void set$OptionalOrRequired$LookupNextRel( ICFBamProtRelationObj value );
+	void setRequiredLookupNextRel( ICFBamProtRelationObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

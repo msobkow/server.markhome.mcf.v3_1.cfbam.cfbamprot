@@ -106,67 +106,67 @@ public interface ICFBamProtChain
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	public $implIJavaAtomType$ getRequiredId();
-	public void setRequiredId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFBamProtTable get$OptionalOrRequired$ContainerTable();
+	public ICFBamProtTable getRequiredContainerTable();
 
-	public void set$OptionalOrRequired$ContainerTable($implIJavaAtomType$ argTableId);
-
-
-	public void set$OptionalOrRequired$ContainerTable(ICFBamProtTable argObj);
-
-	public void set$OptionalOrRequired$ContainerTable(ICFBamPubTable argObj);
-
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupDefSchema();
-
-	public void set$OptionalOrRequired$LookupDefSchema($implIJavaAtomType$ argDefSchemaId);
+	public void setRequiredContainerTable(ICFLibKeyHash256 argTableId);
 
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerTable(ICFBamProtTable argObj);
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamPubSchemaDef argObj);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 
-	public ICFBamProtRelation get$OptionalOrRequired$LookupPrevRel();
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void set$OptionalOrRequired$LookupPrevRel($implIJavaAtomType$ argPrevRelationId);
-
-
-	public void set$OptionalOrRequired$LookupPrevRel(ICFBamProtRelation argObj);
-
-	public void set$OptionalOrRequired$LookupPrevRel(ICFBamPubRelation argObj);
-
-	public ICFBamProtRelation get$OptionalOrRequired$LookupNextRel();
-
-	public void set$OptionalOrRequired$LookupNextRel($implIJavaAtomType$ argNextRelationId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
-	public void set$OptionalOrRequired$LookupNextRel(ICFBamProtRelation argObj);
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$LookupNextRel(ICFBamPubRelation argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortName();
-	public void setOptionalShortName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalLabel();
-	public void setOptionalLabel( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortDescription();
-	public void setOptionalShortDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDescription();
-	public void setOptionalDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalSuffix();
-	public void setOptionalSuffix( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredPrevRelationId();
-	public void setRequiredPrevRelationId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredNextRelationId();
-	public void setRequiredNextRelationId( $implIJavaAtomType$ value );
+	public ICFBamProtRelation getRequiredLookupPrevRel();
+
+	public void setRequiredLookupPrevRel(ICFLibKeyHash256 argPrevRelationId);
+
+
+	public void setRequiredLookupPrevRel(ICFBamProtRelation argObj);
+
+	public void setRequiredLookupPrevRel(ICFBamPubRelation argObj);
+
+	public ICFBamProtRelation getRequiredLookupNextRel();
+
+	public void setRequiredLookupNextRel(ICFLibKeyHash256 argNextRelationId);
+
+
+	public void setRequiredLookupNextRel(ICFBamProtRelation argObj);
+
+	public void setRequiredLookupNextRel(ICFBamPubRelation argObj);
+
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
+	public String getOptionalSuffix();
+	public void setOptionalSuffix( String value );
+	public ICFLibKeyHash256 getRequiredPrevRelationId();
+	public void setRequiredPrevRelationId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredNextRelationId();
+	public void setRequiredNextRelationId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

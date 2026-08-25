@@ -75,19 +75,19 @@ public interface ICFBamProtClearSubDep3
 	public final static int CLASS_CODE = 0xa817;
 	public final static String S_CLASS_CODE = "a817";
 
-	public ICFBamProtClearSubDep2 get$OptionalOrRequired$ContainerClearSubDep2();
+	public ICFBamProtClearSubDep2 getRequiredContainerClearSubDep2();
 
-	public void set$OptionalOrRequired$ContainerClearSubDep2($implIJavaAtomType$ argClearSubDep2Id);
+	public void setRequiredContainerClearSubDep2(ICFLibKeyHash256 argClearSubDep2Id);
 
 
-	public void set$OptionalOrRequired$ContainerClearSubDep2(ICFBamProtClearSubDep2 argObj);
+	public void setRequiredContainerClearSubDep2(ICFBamProtClearSubDep2 argObj);
 
-	public void set$OptionalOrRequired$ContainerClearSubDep2(ICFBamPubClearSubDep2 argObj);
+	public void setRequiredContainerClearSubDep2(ICFBamPubClearSubDep2 argObj);
 
-	public $implIJavaAtomType$ getRequiredClearSubDep2Id();
-	public void setRequiredClearSubDep2Id( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredClearSubDep2Id();
+	public void setRequiredClearSubDep2Id( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

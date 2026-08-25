@@ -72,8 +72,8 @@ public interface ICFBamProtAtom
 	public final static int CLASS_CODE = 0xa80e;
 	public final static String S_CLASS_CODE = "a80e";
 
-	public $implIJavaAtomType$ getOptionalDbName();
-	public void setOptionalDbName( $implIJavaAtomType$ value );
+	public String getOptionalDbName();
+	public void setOptionalDbName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

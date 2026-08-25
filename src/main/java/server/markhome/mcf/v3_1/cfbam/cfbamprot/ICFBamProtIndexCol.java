@@ -109,82 +109,82 @@ public interface ICFBamProtIndexCol
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	public List<ICFBamProtRelationCol> get$OptionalOrRequired$ChildrenRefRelFromCol();
+	public List<ICFBamProtRelationCol> getOptionalChildrenRefRelFromCol();
 
-	public List<ICFBamProtRelationCol> get$OptionalOrRequired$ChildrenRefRelToCol();
+	public List<ICFBamProtRelationCol> getOptionalChildrenRefRelToCol();
 
-	public $implIJavaAtomType$ getRequiredId();
-	public void setRequiredId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFBamProtIndex get$OptionalOrRequired$ContainerIndex();
+	public ICFBamProtIndex getRequiredContainerIndex();
 
-	public void set$OptionalOrRequired$ContainerIndex($implIJavaAtomType$ argIndexId);
-
-
-	public void set$OptionalOrRequired$ContainerIndex(ICFBamProtIndex argObj);
-
-	public void set$OptionalOrRequired$ContainerIndex(ICFBamPubIndex argObj);
-
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupDefSchema();
-
-	public void set$OptionalOrRequired$LookupDefSchema($implIJavaAtomType$ argDefSchemaId);
+	public void setRequiredContainerIndex(ICFLibKeyHash256 argIndexId);
 
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerIndex(ICFBamProtIndex argObj);
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamPubSchemaDef argObj);
+	public void setRequiredContainerIndex(ICFBamPubIndex argObj);
 
-	public ICFBamProtIndexCol get$OptionalOrRequired$LookupPrev();
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void set$OptionalOrRequired$LookupPrev($implIJavaAtomType$ argPrevId);
-
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamProtIndexCol argObj);
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamPubIndexCol argObj);
-
-	public ICFBamProtIndexCol get$OptionalOrRequired$LookupNext();
-
-	public void set$OptionalOrRequired$LookupNext($implIJavaAtomType$ argNextId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamProtIndexCol argObj);
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamPubIndexCol argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
-	public ICFBamProtValue get$OptionalOrRequired$LookupColumn();
+	public ICFBamProtIndexCol getOptionalLookupPrev();
 
-	public void set$OptionalOrRequired$LookupColumn($implIJavaAtomType$ argColumnId);
+	public void setOptionalLookupPrev(ICFLibKeyHash256 argPrevId);
 
 
-	public void set$OptionalOrRequired$LookupColumn(ICFBamProtValue argObj);
+	public void setOptionalLookupPrev(ICFBamProtIndexCol argObj);
 
-	public void set$OptionalOrRequired$LookupColumn(ICFBamPubValue argObj);
+	public void setOptionalLookupPrev(ICFBamPubIndexCol argObj);
 
-	public $implIJavaAtomType$ getRequiredIndexId();
-	public void setRequiredIndexId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortName();
-	public void setOptionalShortName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalLabel();
-	public void setOptionalLabel( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortDescription();
-	public void setOptionalShortDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDescription();
-	public void setOptionalDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredColumnId();
-	public void setRequiredColumnId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIsAscending();
-	public void setRequiredIsAscending( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalPrevId();
-	public void setOptionalPrevId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalNextId();
-	public void setOptionalNextId( $implIJavaAtomType$ value );
+	public ICFBamProtIndexCol getOptionalLookupNext();
+
+	public void setOptionalLookupNext(ICFLibKeyHash256 argNextId);
+
+
+	public void setOptionalLookupNext(ICFBamProtIndexCol argObj);
+
+	public void setOptionalLookupNext(ICFBamPubIndexCol argObj);
+
+	public ICFBamProtValue getRequiredLookupColumn();
+
+	public void setRequiredLookupColumn(ICFLibKeyHash256 argColumnId);
+
+
+	public void setRequiredLookupColumn(ICFBamProtValue argObj);
+
+	public void setRequiredLookupColumn(ICFBamPubValue argObj);
+
+	public ICFLibKeyHash256 getRequiredIndexId();
+	public void setRequiredIndexId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public ICFLibKeyHash256 getRequiredColumnId();
+	public void setRequiredColumnId( ICFLibKeyHash256 value );
+	public boolean getRequiredIsAscending();
+	public void setRequiredIsAscending( boolean value );
+	public ICFLibKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

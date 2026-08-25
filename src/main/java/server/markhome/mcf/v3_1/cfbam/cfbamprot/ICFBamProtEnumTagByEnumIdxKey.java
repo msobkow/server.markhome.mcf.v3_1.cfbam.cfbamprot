@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtEnumTagByEnumIdxKey
 {
-	public $implIJavaAtomType$ getRequiredEnumId();
-	public void setRequiredEnumId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredEnumId();
+	public void setRequiredEnumId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 
