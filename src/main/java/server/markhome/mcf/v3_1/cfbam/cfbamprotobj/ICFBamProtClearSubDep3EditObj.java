@@ -79,21 +79,21 @@ public interface ICFBamProtClearSubDep3EditObj
 	 *
 	 *	@return	The ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
 	 */
-	ICFBamProtClearSubDep2Obj getRequiredContainerClearSubDep2();
+	ICFBamProtClearSubDep2Obj get$OptionalOrRequired$ContainerClearSubDep2();
 
 	/**
-	 *	Get the required ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
+	 *	Get the $optionalorrequired$ ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
 	 *
-	 *	@return	The required ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
+	 *	@return	The $optionalorrequired$ ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
 	 */
-	ICFBamProtClearSubDep2Obj getRequiredContainerClearSubDep2( boolean forceRead );
+	ICFBamProtClearSubDep2Obj get$OptionalOrRequired$ContainerClearSubDep2( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
 	 *
 	 *	@param	value	the ICFBamProtClearSubDep2Obj instance to be referenced by the ClearSubDep2 key.
 	 */
-	void setRequiredContainerClearSubDep2( ICFBamProtClearSubDep2Obj value );
+	void set$OptionalOrRequired$ContainerClearSubDep2( ICFBamProtClearSubDep2Obj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute ClearSubDep2Id.

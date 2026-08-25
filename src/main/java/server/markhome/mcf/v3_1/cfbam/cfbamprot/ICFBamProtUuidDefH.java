@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtUuidDefH extends ICFBamProtAtomH
 {
-	public UUID getOptionalInitValue();
-	public void setOptionalInitValue( UUID value );
+	public $implIJavaAtomType$ getOptionalInitValue();
+	public void setOptionalInitValue( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

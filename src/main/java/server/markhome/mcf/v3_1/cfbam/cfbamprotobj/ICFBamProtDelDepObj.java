@@ -92,32 +92,32 @@ public interface ICFBamProtDelDepObj
 	ICFBamProtDelDep getDelDepRec();
 
 	/**
-	 *	Get the required ICFBamProtRelationObj instance referenced by the Relation key.
+	 *	Get the $optionalorrequired$ ICFBamProtRelationObj instance referenced by the Relation key.
 	 *
-	 *	@return	The required ICFBamProtRelationObj instance referenced by the Relation key.
+	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj instance referenced by the Relation key.
 	 */
-	ICFBamProtRelationObj getRequiredLookupRelation();
+	ICFBamProtRelationObj get$OptionalOrRequired$LookupRelation();
 
 	/**
-	 *	Get the required ICFBamProtRelationObj instance referenced by the Relation key.
+	 *	Get the $optionalorrequired$ ICFBamProtRelationObj instance referenced by the Relation key.
 	 *
-	 *	@return	The required ICFBamProtRelationObj instance referenced by the Relation key.
+	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj instance referenced by the Relation key.
 	 */
-	ICFBamProtRelationObj getRequiredLookupRelation( boolean forceRead );
+	ICFBamProtRelationObj get$OptionalOrRequired$LookupRelation( boolean forceRead );
 
 	/**
-	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj getOptionalLookupDefSchema();
+	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema();
 
 	/**
-	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

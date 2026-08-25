@@ -92,32 +92,32 @@ public interface ICFBamProtPopTopDepObj
 	ICFBamProtPopTopDep getPopTopDepRec();
 
 	/**
-	 *	Get the required ICFBamProtRelationObj instance referenced by the ContRelation key.
+	 *	Get the $optionalorrequired$ ICFBamProtRelationObj instance referenced by the ContRelation key.
 	 *
-	 *	@return	The required ICFBamProtRelationObj instance referenced by the ContRelation key.
+	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj instance referenced by the ContRelation key.
 	 */
-	ICFBamProtRelationObj getRequiredContainerContRelation();
+	ICFBamProtRelationObj get$OptionalOrRequired$ContainerContRelation();
 
 	/**
-	 *	Get the required ICFBamProtRelationObj instance referenced by the ContRelation key.
+	 *	Get the $optionalorrequired$ ICFBamProtRelationObj instance referenced by the ContRelation key.
 	 *
-	 *	@return	The required ICFBamProtRelationObj instance referenced by the ContRelation key.
+	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj instance referenced by the ContRelation key.
 	 */
-	ICFBamProtRelationObj getRequiredContainerContRelation( boolean forceRead );
+	ICFBamProtRelationObj get$OptionalOrRequired$ContainerContRelation( boolean forceRead );
 
 	/**
-	 *	Get the array of optional ICFBamProtPopSubDep1Obj array of instances referenced by the PopDep key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtPopSubDep1Obj array of instances referenced by the PopDep key.
 	 *
-	 *	@return	The optional ICFBamProtPopSubDep1Obj[] array of instances referenced by the PopDep key.
+	 *	@return	The $optionalorrequired$ ICFBamProtPopSubDep1Obj[] array of instances referenced by the PopDep key.
 	 */
-	List<ICFBamProtPopSubDep1Obj> getOptionalComponentsPopDep();
+	List<ICFBamProtPopSubDep1Obj> get$OptionalOrRequired$ComponentsPopDep();
 
 	/**
-	 *	Get the array of optional ICFBamProtPopSubDep1Obj array of instances referenced by the PopDep key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtPopSubDep1Obj array of instances referenced by the PopDep key.
 	 *
-	 *	@return	The optional ICFBamProtPopSubDep1Obj[] array of instances referenced by the PopDep key.
+	 *	@return	The $optionalorrequired$ ICFBamProtPopSubDep1Obj[] array of instances referenced by the PopDep key.
 	 */
-	List<ICFBamProtPopSubDep1Obj> getOptionalComponentsPopDep( boolean forceRead );
+	List<ICFBamProtPopSubDep1Obj> get$OptionalOrRequired$ComponentsPopDep( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

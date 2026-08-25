@@ -239,18 +239,18 @@ public interface ICFBamProtScopeObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFBamProtTenantObj instance referenced by the Tenant key.
+	 *	Get the $optionalorrequired$ ICFBamProtTenantObj instance referenced by the Tenant key.
 	 *
-	 *	@return	The required ICFBamProtTenantObj instance referenced by the Tenant key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTenantObj instance referenced by the Tenant key.
 	 */
-	ICFSecPubTenantObj getRequiredOwnerTenant();
+	ICFSecPubTenantObj get$OptionalOrRequired$OwnerTenant();
 
 	/**
-	 *	Get the required ICFSecProtTenantObj instance referenced by the Tenant key.
+	 *	Get the $optionalorrequired$ ICFSecProtTenantObj instance referenced by the Tenant key.
 	 *
-	 *	@return	The required ICFSecProtTenantObj instance referenced by the Tenant key.
+	 *	@return	The $optionalorrequired$ ICFSecProtTenantObj instance referenced by the Tenant key.
 	 */
-	ICFSecPubTenantObj getRequiredOwnerTenant( boolean forceRead );
+	ICFSecPubTenantObj get$OptionalOrRequired$OwnerTenant( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

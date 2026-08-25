@@ -75,10 +75,10 @@ public interface ICFBamProtBlobDef
 	public final static int CLASS_CODE = 0xa80f;
 	public final static String S_CLASS_CODE = "a80f";
 
-	public int getRequiredMaxLen();
-	public void setRequiredMaxLen( int value );
-	public byte[] getOptionalInitValue();
-	public void setOptionalInitValue( byte[] value );
+	public $implIJavaAtomType$ getRequiredMaxLen();
+	public void setRequiredMaxLen( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getOptionalInitValue();
+	public void setOptionalInitValue( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

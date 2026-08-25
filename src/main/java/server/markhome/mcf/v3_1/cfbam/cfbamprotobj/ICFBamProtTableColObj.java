@@ -92,32 +92,32 @@ public interface ICFBamProtTableColObj
 	ICFBamProtTableCol getTableColRec();
 
 	/**
-	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTable();
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
 
 	/**
-	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
 
 	/**
-	 *	Get the required ICFBamProtValueObj instance referenced by the DataType key.
+	 *	Get the $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
 	 *
-	 *	@return	The required ICFBamProtValueObj instance referenced by the DataType key.
+	 *	@return	The $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
 	 */
-	ICFBamProtValueObj getRequiredParentDataType();
+	ICFBamProtValueObj get$OptionalOrRequired$ParentDataType();
 
 	/**
-	 *	Get the required ICFBamProtValueObj instance referenced by the DataType key.
+	 *	Get the $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
 	 *
-	 *	@return	The required ICFBamProtValueObj instance referenced by the DataType key.
+	 *	@return	The $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
 	 */
-	ICFBamProtValueObj getRequiredParentDataType( boolean forceRead );
+	ICFBamProtValueObj get$OptionalOrRequired$ParentDataType( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

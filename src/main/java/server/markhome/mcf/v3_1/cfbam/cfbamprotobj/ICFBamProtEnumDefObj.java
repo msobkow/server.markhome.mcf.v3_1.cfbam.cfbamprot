@@ -92,18 +92,18 @@ public interface ICFBamProtEnumDefObj
 	ICFBamProtEnumDef getEnumDefRec();
 
 	/**
-	 *	Get the array of required ICFBamProtEnumTagObj array of instances referenced by the Tag key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtEnumTagObj array of instances referenced by the Tag key.
 	 *
-	 *	@return	The required ICFBamProtEnumTagObj[] array of instances referenced by the Tag key.
+	 *	@return	The $optionalorrequired$ ICFBamProtEnumTagObj[] array of instances referenced by the Tag key.
 	 */
-	List<ICFBamProtEnumTagObj> getRequiredComponentsTag();
+	List<ICFBamProtEnumTagObj> get$OptionalOrRequired$ComponentsTag();
 
 	/**
-	 *	Get the array of required ICFBamProtEnumTagObj array of instances referenced by the Tag key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtEnumTagObj array of instances referenced by the Tag key.
 	 *
-	 *	@return	The required ICFBamProtEnumTagObj[] array of instances referenced by the Tag key.
+	 *	@return	The $optionalorrequired$ ICFBamProtEnumTagObj[] array of instances referenced by the Tag key.
 	 */
-	List<ICFBamProtEnumTagObj> getRequiredComponentsTag( boolean forceRead );
+	List<ICFBamProtEnumTagObj> get$OptionalOrRequired$ComponentsTag( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

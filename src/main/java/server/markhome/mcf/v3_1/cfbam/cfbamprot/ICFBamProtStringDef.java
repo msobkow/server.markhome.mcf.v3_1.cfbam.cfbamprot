@@ -76,12 +76,12 @@ public interface ICFBamProtStringDef
 	public final static int CLASS_CODE = 0xa854;
 	public final static String S_CLASS_CODE = "a854";
 
-	public int getRequiredMaxLen();
-	public void setRequiredMaxLen( int value );
-	public boolean getRequiredIsPolymorph();
-	public void setRequiredIsPolymorph( boolean value );
-	public String getOptionalInitValue();
-	public void setOptionalInitValue( String value );
+	public $implIJavaAtomType$ getRequiredMaxLen();
+	public void setRequiredMaxLen( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredIsPolymorph();
+	public void setRequiredIsPolymorph( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getOptionalInitValue();
+	public void setOptionalInitValue( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

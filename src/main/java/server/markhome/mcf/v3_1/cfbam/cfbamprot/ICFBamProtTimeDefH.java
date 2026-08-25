@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTimeDefH extends ICFBamProtAtomH
 {
-	public String getOptionalDummy();
-	public void setOptionalDummy( String value );
+	public $implIJavaAtomType$ getOptionalDummy();
+	public void setOptionalDummy( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

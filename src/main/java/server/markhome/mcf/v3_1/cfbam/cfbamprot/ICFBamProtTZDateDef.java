@@ -72,8 +72,8 @@ public interface ICFBamProtTZDateDef
 	public final static int CLASS_CODE = 0xa856;
 	public final static String S_CLASS_CODE = "a856";
 
-	public String getOptionalDummy();
-	public void setOptionalDummy( String value );
+	public $implIJavaAtomType$ getOptionalDummy();
+	public void setOptionalDummy( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

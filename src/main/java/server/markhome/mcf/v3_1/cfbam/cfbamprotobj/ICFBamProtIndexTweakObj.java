@@ -92,18 +92,18 @@ public interface ICFBamProtIndexTweakObj
 	ICFBamProtIndexTweak getIndexTweakRec();
 
 	/**
-	 *	Get the required ICFBamProtIndexObj instance referenced by the IndexDef key.
+	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the IndexDef key.
 	 *
-	 *	@return	The required ICFBamProtIndexObj instance referenced by the IndexDef key.
+	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the IndexDef key.
 	 */
-	ICFBamProtIndexObj getRequiredContainerIndexDef();
+	ICFBamProtIndexObj get$OptionalOrRequired$ContainerIndexDef();
 
 	/**
-	 *	Get the required ICFBamProtIndexObj instance referenced by the IndexDef key.
+	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the IndexDef key.
 	 *
-	 *	@return	The required ICFBamProtIndexObj instance referenced by the IndexDef key.
+	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the IndexDef key.
 	 */
-	ICFBamProtIndexObj getRequiredContainerIndexDef( boolean forceRead );
+	ICFBamProtIndexObj get$OptionalOrRequired$ContainerIndexDef( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

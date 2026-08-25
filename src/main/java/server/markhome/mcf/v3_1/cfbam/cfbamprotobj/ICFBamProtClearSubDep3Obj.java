@@ -92,18 +92,18 @@ public interface ICFBamProtClearSubDep3Obj
 	ICFBamProtClearSubDep3 getClearSubDep3Rec();
 
 	/**
-	 *	Get the required ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
+	 *	Get the $optionalorrequired$ ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
 	 *
-	 *	@return	The required ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
+	 *	@return	The $optionalorrequired$ ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
 	 */
-	ICFBamProtClearSubDep2Obj getRequiredContainerClearSubDep2();
+	ICFBamProtClearSubDep2Obj get$OptionalOrRequired$ContainerClearSubDep2();
 
 	/**
-	 *	Get the required ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
+	 *	Get the $optionalorrequired$ ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
 	 *
-	 *	@return	The required ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
+	 *	@return	The $optionalorrequired$ ICFBamProtClearSubDep2Obj instance referenced by the ClearSubDep2 key.
 	 */
-	ICFBamProtClearSubDep2Obj getRequiredContainerClearSubDep2( boolean forceRead );
+	ICFBamProtClearSubDep2Obj get$OptionalOrRequired$ContainerClearSubDep2( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

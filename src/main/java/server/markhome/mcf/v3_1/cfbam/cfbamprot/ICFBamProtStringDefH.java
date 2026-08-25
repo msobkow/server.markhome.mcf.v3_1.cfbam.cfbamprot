@@ -68,12 +68,12 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtStringDefH extends ICFBamProtAtomH
 {
-	public int getRequiredMaxLen();
-	public void setRequiredMaxLen( int value );
-	public boolean getRequiredIsPolymorph();
-	public void setRequiredIsPolymorph( boolean value );
-	public String getOptionalInitValue();
-	public void setOptionalInitValue( String value );
+	public $implIJavaAtomType$ getRequiredMaxLen();
+	public void setRequiredMaxLen( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredIsPolymorph();
+	public void setRequiredIsPolymorph( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getOptionalInitValue();
+	public void setOptionalInitValue( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

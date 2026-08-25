@@ -72,8 +72,8 @@ public interface ICFBamProtUuid6Def
 	public final static int CLASS_CODE = 0xa86c;
 	public final static String S_CLASS_CODE = "a86c";
 
-	public String getOptionalInitValue();
-	public void setOptionalInitValue( String value );
+	public $implIJavaAtomType$ getOptionalInitValue();
+	public void setOptionalInitValue( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

@@ -92,18 +92,18 @@ public interface ICFBamProtNumberColObj
 	ICFBamProtNumberCol getNumberColRec();
 
 	/**
-	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTable();
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
 
 	/**
-	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

@@ -72,8 +72,8 @@ public interface ICFBamProtDbKeyHash512Def
 	public final static int CLASS_CODE = 0xa850;
 	public final static String S_CLASS_CODE = "a850";
 
-	public String getOptionalInitValue();
-	public void setOptionalInitValue( String value );
+	public $implIJavaAtomType$ getOptionalInitValue();
+	public void setOptionalInitValue( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

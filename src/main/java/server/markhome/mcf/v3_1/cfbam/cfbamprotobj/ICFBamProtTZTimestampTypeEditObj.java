@@ -79,21 +79,21 @@ public interface ICFBamProtTZTimestampTypeEditObj
 	 *
 	 *	@return	The ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 */
-	ICFBamProtSchemaDefObj getRequiredContainerSchemaDef();
+	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchemaDef();
 
 	/**
-	 *	Get the required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 *
-	 *	@return	The required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 */
-	ICFBamProtSchemaDefObj getRequiredContainerSchemaDef( boolean forceRead );
+	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchemaDef( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaDefObj instance to be referenced by the SchemaDef key.
 	 */
-	void setRequiredContainerSchemaDef( ICFBamProtSchemaDefObj value );
+	void set$OptionalOrRequired$ContainerSchemaDef( ICFBamProtSchemaDefObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SchemaDefId.

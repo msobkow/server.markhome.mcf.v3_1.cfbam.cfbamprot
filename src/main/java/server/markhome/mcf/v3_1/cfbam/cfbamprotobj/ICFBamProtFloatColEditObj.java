@@ -79,21 +79,21 @@ public interface ICFBamProtFloatColEditObj
 	 *
 	 *	@return	The ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTable();
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
 
 	/**
-	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtTableObj instance referenced by the Table key.
 	 *
 	 *	@param	value	the ICFBamProtTableObj instance to be referenced by the Table key.
 	 */
-	void setRequiredContainerTable( ICFBamProtTableObj value );
+	void set$OptionalOrRequired$ContainerTable( ICFBamProtTableObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute TableId.

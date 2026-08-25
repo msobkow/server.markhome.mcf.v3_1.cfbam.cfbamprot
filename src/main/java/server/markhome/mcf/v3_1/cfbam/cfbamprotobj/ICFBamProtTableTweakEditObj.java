@@ -79,21 +79,21 @@ public interface ICFBamProtTableTweakEditObj
 	 *
 	 *	@return	The ICFBamProtTableObj instance referenced by the TableDef key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTableDef();
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTableDef();
 
 	/**
-	 *	Get the required ICFBamProtTableObj instance referenced by the TableDef key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the TableDef key.
 	 *
-	 *	@return	The required ICFBamProtTableObj instance referenced by the TableDef key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the TableDef key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTableDef( boolean forceRead );
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTableDef( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtTableObj instance referenced by the TableDef key.
 	 *
 	 *	@param	value	the ICFBamProtTableObj instance to be referenced by the TableDef key.
 	 */
-	void setRequiredContainerTableDef( ICFBamProtTableObj value );
+	void set$OptionalOrRequired$ContainerTableDef( ICFBamProtTableObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute TableId.

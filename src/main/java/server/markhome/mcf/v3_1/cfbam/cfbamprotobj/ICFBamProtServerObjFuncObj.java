@@ -92,18 +92,18 @@ public interface ICFBamProtServerObjFuncObj
 	ICFBamProtServerObjFunc getServerObjFuncRec();
 
 	/**
-	 *	Get the optional ICFBamProtTableObj instance referenced by the RetTable key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the RetTable key.
 	 *
-	 *	@return	The optional ICFBamProtTableObj instance referenced by the RetTable key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the RetTable key.
 	 */
-	ICFBamProtTableObj getOptionalLookupRetTable();
+	ICFBamProtTableObj get$OptionalOrRequired$LookupRetTable();
 
 	/**
-	 *	Get the optional ICFBamProtTableObj instance referenced by the RetTable key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the RetTable key.
 	 *
-	 *	@return	The optional ICFBamProtTableObj instance referenced by the RetTable key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the RetTable key.
 	 */
-	ICFBamProtTableObj getOptionalLookupRetTable( boolean forceRead );
+	ICFBamProtTableObj get$OptionalOrRequired$LookupRetTable( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

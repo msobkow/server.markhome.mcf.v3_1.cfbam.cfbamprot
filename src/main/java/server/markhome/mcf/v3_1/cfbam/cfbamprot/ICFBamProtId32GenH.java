@@ -68,10 +68,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtId32GenH extends ICFBamProtInt32TypeH
 {
-	public short getRequiredSlice();
-	public void setRequiredSlice( short value );
-	public int getRequiredBlockSize();
-	public void setRequiredBlockSize( int value );
+	public $implIJavaAtomType$ getRequiredSlice();
+	public void setRequiredSlice( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredBlockSize();
+	public void setRequiredBlockSize( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

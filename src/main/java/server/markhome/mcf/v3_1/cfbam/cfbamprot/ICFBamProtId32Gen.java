@@ -78,10 +78,10 @@ public interface ICFBamProtId32Gen
 	public final static int CLASS_CODE = 0xa877;
 	public final static String S_CLASS_CODE = "a877";
 
-	public short getRequiredSlice();
-	public void setRequiredSlice( short value );
-	public int getRequiredBlockSize();
-	public void setRequiredBlockSize( int value );
+	public $implIJavaAtomType$ getRequiredSlice();
+	public void setRequiredSlice( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredBlockSize();
+	public void setRequiredBlockSize( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

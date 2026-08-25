@@ -253,88 +253,88 @@ public interface ICFBamProtValueObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFBamProtScopeObj instance referenced by the Scope key.
+	 *	Get the $optionalorrequired$ ICFBamProtScopeObj instance referenced by the Scope key.
 	 *
-	 *	@return	The required ICFBamProtScopeObj instance referenced by the Scope key.
+	 *	@return	The $optionalorrequired$ ICFBamProtScopeObj instance referenced by the Scope key.
 	 */
-	ICFBamProtScopeObj getRequiredContainerScope();
+	ICFBamProtScopeObj get$OptionalOrRequired$ContainerScope();
 
 	/**
-	 *	Get the required ICFBamProtScopeObj instance referenced by the Scope key.
+	 *	Get the $optionalorrequired$ ICFBamProtScopeObj instance referenced by the Scope key.
 	 *
-	 *	@return	The required ICFBamProtScopeObj instance referenced by the Scope key.
+	 *	@return	The $optionalorrequired$ ICFBamProtScopeObj instance referenced by the Scope key.
 	 */
-	ICFBamProtScopeObj getRequiredContainerScope( boolean forceRead );
+	ICFBamProtScopeObj get$OptionalOrRequired$ContainerScope( boolean forceRead );
 
 	/**
-	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj getOptionalLookupDefSchema();
+	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema();
 
 	/**
-	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema( boolean forceRead );
 
 	/**
-	 *	Get the array of optional ICFBamProtTableColObj array of instances referenced by the RefTableCol key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtTableColObj array of instances referenced by the RefTableCol key.
 	 *
-	 *	@return	The optional ICFBamProtTableColObj[] array of instances referenced by the RefTableCol key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableColObj[] array of instances referenced by the RefTableCol key.
 	 */
-	List<ICFBamProtTableColObj> getOptionalChildrenRefTableCol();
+	List<ICFBamProtTableColObj> get$OptionalOrRequired$ChildrenRefTableCol();
 
 	/**
-	 *	Get the array of optional ICFBamProtTableColObj array of instances referenced by the RefTableCol key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtTableColObj array of instances referenced by the RefTableCol key.
 	 *
-	 *	@return	The optional ICFBamProtTableColObj[] array of instances referenced by the RefTableCol key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableColObj[] array of instances referenced by the RefTableCol key.
 	 */
-	List<ICFBamProtTableColObj> getOptionalChildrenRefTableCol( boolean forceRead );
+	List<ICFBamProtTableColObj> get$OptionalOrRequired$ChildrenRefTableCol( boolean forceRead );
 
 	/**
-	 *	Get the array of optional ICFBamProtIndexColObj array of instances referenced by the RefIndexCol key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtIndexColObj array of instances referenced by the RefIndexCol key.
 	 *
-	 *	@return	The optional ICFBamProtIndexColObj[] array of instances referenced by the RefIndexCol key.
+	 *	@return	The $optionalorrequired$ ICFBamProtIndexColObj[] array of instances referenced by the RefIndexCol key.
 	 */
-	List<ICFBamProtIndexColObj> getOptionalChildrenRefIndexCol();
+	List<ICFBamProtIndexColObj> get$OptionalOrRequired$ChildrenRefIndexCol();
 
 	/**
-	 *	Get the array of optional ICFBamProtIndexColObj array of instances referenced by the RefIndexCol key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtIndexColObj array of instances referenced by the RefIndexCol key.
 	 *
-	 *	@return	The optional ICFBamProtIndexColObj[] array of instances referenced by the RefIndexCol key.
+	 *	@return	The $optionalorrequired$ ICFBamProtIndexColObj[] array of instances referenced by the RefIndexCol key.
 	 */
-	List<ICFBamProtIndexColObj> getOptionalChildrenRefIndexCol( boolean forceRead );
+	List<ICFBamProtIndexColObj> get$OptionalOrRequired$ChildrenRefIndexCol( boolean forceRead );
 
 	/**
-	 *	Get the optional ICFBamProtValueObj instance referenced by the Prev key.
+	 *	Get the $optionalorrequired$ ICFBamProtValueObj instance referenced by the Prev key.
 	 *
-	 *	@return	The optional ICFBamProtValueObj instance referenced by the Prev key.
+	 *	@return	The $optionalorrequired$ ICFBamProtValueObj instance referenced by the Prev key.
 	 */
-	ICFBamProtValueObj getOptionalLookupPrev();
+	ICFBamProtValueObj get$OptionalOrRequired$LookupPrev();
 
 	/**
-	 *	Get the optional ICFBamProtValueObj instance referenced by the Prev key.
+	 *	Get the $optionalorrequired$ ICFBamProtValueObj instance referenced by the Prev key.
 	 *
-	 *	@return	The optional ICFBamProtValueObj instance referenced by the Prev key.
+	 *	@return	The $optionalorrequired$ ICFBamProtValueObj instance referenced by the Prev key.
 	 */
-	ICFBamProtValueObj getOptionalLookupPrev( boolean forceRead );
+	ICFBamProtValueObj get$OptionalOrRequired$LookupPrev( boolean forceRead );
 
 	/**
-	 *	Get the optional ICFBamProtValueObj instance referenced by the Next key.
+	 *	Get the $optionalorrequired$ ICFBamProtValueObj instance referenced by the Next key.
 	 *
-	 *	@return	The optional ICFBamProtValueObj instance referenced by the Next key.
+	 *	@return	The $optionalorrequired$ ICFBamProtValueObj instance referenced by the Next key.
 	 */
-	ICFBamProtValueObj getOptionalLookupNext();
+	ICFBamProtValueObj get$OptionalOrRequired$LookupNext();
 
 	/**
-	 *	Get the optional ICFBamProtValueObj instance referenced by the Next key.
+	 *	Get the $optionalorrequired$ ICFBamProtValueObj instance referenced by the Next key.
 	 *
-	 *	@return	The optional ICFBamProtValueObj instance referenced by the Next key.
+	 *	@return	The $optionalorrequired$ ICFBamProtValueObj instance referenced by the Next key.
 	 */
-	ICFBamProtValueObj getOptionalLookupNext( boolean forceRead );
+	ICFBamProtValueObj get$OptionalOrRequired$LookupNext( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute ScopeId.

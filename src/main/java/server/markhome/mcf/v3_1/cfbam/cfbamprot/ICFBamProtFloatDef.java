@@ -78,12 +78,12 @@ public interface ICFBamProtFloatDef
 	public final static int CLASS_CODE = 0xa823;
 	public final static String S_CLASS_CODE = "a823";
 
-	public Float getOptionalInitValue();
-	public void setOptionalInitValue( Float value );
-	public Float getOptionalMinValue();
-	public void setOptionalMinValue( Float value );
-	public Float getOptionalMaxValue();
-	public void setOptionalMaxValue( Float value );
+	public $implIJavaAtomType$ getOptionalInitValue();
+	public void setOptionalInitValue( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getOptionalMinValue();
+	public void setOptionalMinValue( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getOptionalMaxValue();
+	public void setOptionalMaxValue( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

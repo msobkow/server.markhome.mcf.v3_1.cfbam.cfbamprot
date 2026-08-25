@@ -92,18 +92,18 @@ public interface ICFBamProtNumberTypeObj
 	ICFBamProtNumberType getNumberTypeRec();
 
 	/**
-	 *	Get the required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 *
-	 *	@return	The required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 */
-	ICFBamProtSchemaDefObj getRequiredContainerSchemaDef();
+	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchemaDef();
 
 	/**
-	 *	Get the required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 *
-	 *	@return	The required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 */
-	ICFBamProtSchemaDefObj getRequiredContainerSchemaDef( boolean forceRead );
+	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchemaDef( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

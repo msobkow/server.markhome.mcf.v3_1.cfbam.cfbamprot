@@ -106,60 +106,60 @@ public interface ICFBamProtClearTopDepObj
 	ICFBamProtClearTopDep getClearTopDepRec();
 
 	/**
-	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTable();
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
 
 	/**
-	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
+	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
 
 	/**
-	 *	Get the array of optional ICFBamProtClearSubDep1Obj array of instances referenced by the ClearDep key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtClearSubDep1Obj array of instances referenced by the ClearDep key.
 	 *
-	 *	@return	The optional ICFBamProtClearSubDep1Obj[] array of instances referenced by the ClearDep key.
+	 *	@return	The $optionalorrequired$ ICFBamProtClearSubDep1Obj[] array of instances referenced by the ClearDep key.
 	 */
-	List<ICFBamProtClearSubDep1Obj> getOptionalComponentsClearDep();
+	List<ICFBamProtClearSubDep1Obj> get$OptionalOrRequired$ComponentsClearDep();
 
 	/**
-	 *	Get the array of optional ICFBamProtClearSubDep1Obj array of instances referenced by the ClearDep key.
+	 *	Get the array of $optionalorrequired$ ICFBamProtClearSubDep1Obj array of instances referenced by the ClearDep key.
 	 *
-	 *	@return	The optional ICFBamProtClearSubDep1Obj[] array of instances referenced by the ClearDep key.
+	 *	@return	The $optionalorrequired$ ICFBamProtClearSubDep1Obj[] array of instances referenced by the ClearDep key.
 	 */
-	List<ICFBamProtClearSubDep1Obj> getOptionalComponentsClearDep( boolean forceRead );
+	List<ICFBamProtClearSubDep1Obj> get$OptionalOrRequired$ComponentsClearDep( boolean forceRead );
 
 	/**
-	 *	Get the optional ICFBamProtClearTopDepObj instance referenced by the Prev key.
+	 *	Get the $optionalorrequired$ ICFBamProtClearTopDepObj instance referenced by the Prev key.
 	 *
-	 *	@return	The optional ICFBamProtClearTopDepObj instance referenced by the Prev key.
+	 *	@return	The $optionalorrequired$ ICFBamProtClearTopDepObj instance referenced by the Prev key.
 	 */
-	ICFBamProtClearTopDepObj getOptionalLookupPrev();
+	ICFBamProtClearTopDepObj get$OptionalOrRequired$LookupPrev();
 
 	/**
-	 *	Get the optional ICFBamProtClearTopDepObj instance referenced by the Prev key.
+	 *	Get the $optionalorrequired$ ICFBamProtClearTopDepObj instance referenced by the Prev key.
 	 *
-	 *	@return	The optional ICFBamProtClearTopDepObj instance referenced by the Prev key.
+	 *	@return	The $optionalorrequired$ ICFBamProtClearTopDepObj instance referenced by the Prev key.
 	 */
-	ICFBamProtClearTopDepObj getOptionalLookupPrev( boolean forceRead );
+	ICFBamProtClearTopDepObj get$OptionalOrRequired$LookupPrev( boolean forceRead );
 
 	/**
-	 *	Get the optional ICFBamProtClearTopDepObj instance referenced by the Next key.
+	 *	Get the $optionalorrequired$ ICFBamProtClearTopDepObj instance referenced by the Next key.
 	 *
-	 *	@return	The optional ICFBamProtClearTopDepObj instance referenced by the Next key.
+	 *	@return	The $optionalorrequired$ ICFBamProtClearTopDepObj instance referenced by the Next key.
 	 */
-	ICFBamProtClearTopDepObj getOptionalLookupNext();
+	ICFBamProtClearTopDepObj get$OptionalOrRequired$LookupNext();
 
 	/**
-	 *	Get the optional ICFBamProtClearTopDepObj instance referenced by the Next key.
+	 *	Get the $optionalorrequired$ ICFBamProtClearTopDepObj instance referenced by the Next key.
 	 *
-	 *	@return	The optional ICFBamProtClearTopDepObj instance referenced by the Next key.
+	 *	@return	The $optionalorrequired$ ICFBamProtClearTopDepObj instance referenced by the Next key.
 	 */
-	ICFBamProtClearTopDepObj getOptionalLookupNext( boolean forceRead );
+	ICFBamProtClearTopDepObj get$OptionalOrRequired$LookupNext( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

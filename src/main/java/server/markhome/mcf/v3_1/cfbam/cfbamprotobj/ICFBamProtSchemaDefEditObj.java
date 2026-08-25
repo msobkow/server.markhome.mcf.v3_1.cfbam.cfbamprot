@@ -79,77 +79,77 @@ public interface ICFBamProtSchemaDefEditObj
 	 *
 	 *	@return	The ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
 	 */
-	ICFIntPubMinorVersionObj getRequiredContainerMinorVersion();
+	ICFIntPubMinorVersionObj get$OptionalOrRequired$ContainerMinorVersion();
 
 	/**
-	 *	Get the required ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
+	 *	Get the $optionalorrequired$ ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
 	 *
-	 *	@return	The required ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
+	 *	@return	The $optionalorrequired$ ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
 	 */
-	ICFIntPubMinorVersionObj getRequiredContainerMinorVersion( boolean forceRead );
+	ICFIntPubMinorVersionObj get$OptionalOrRequired$ContainerMinorVersion( boolean forceRead );
 
 	/**
 	 *	Set the ICFIntPubMinorVersionObj instance referenced by the MinorVersion key.
 	 *
 	 *	@param	value	the ICFIntPubMinorVersionObj instance to be referenced by the MinorVersion key.
 	 */
-	void setRequiredContainerMinorVersion( ICFIntPubMinorVersionObj value );
+	void set$OptionalOrRequired$ContainerMinorVersion( ICFIntPubMinorVersionObj value );
 
 	/**
 	 *	Get a list ICFBamProtTableObj instances referenced by the Tables key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtTableObj instances referenced by the Tables key.
 	 */
-	List<ICFBamProtTableObj> getOptionalComponentsTables();
+	List<ICFBamProtTableObj> get$OptionalOrRequired$ComponentsTables();
 
 	/**
 	 *	Get a list ICFBamProtValueObj instances referenced by the Types key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtValueObj instances referenced by the Types key.
 	 */
-	List<ICFBamProtValueObj> getOptionalComponentsTypes();
+	List<ICFBamProtValueObj> get$OptionalOrRequired$ComponentsTypes();
 
 	/**
 	 *	Get a list ICFBamProtSchemaRefObj instances referenced by the SchemaRefs key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtSchemaRefObj instances referenced by the SchemaRefs key.
 	 */
-	List<ICFBamProtSchemaRefObj> getOptionalComponentsSchemaRefs();
+	List<ICFBamProtSchemaRefObj> get$OptionalOrRequired$ComponentsSchemaRefs();
 
 	/**
 	 *	Get a list ICFBamProtTweakObj instances referenced by the Tweaks key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtTweakObj instances referenced by the Tweaks key.
 	 */
-	List<ICFBamProtTweakObj> getOptionalComponentsTweaks();
+	List<ICFBamProtTweakObj> get$OptionalOrRequired$ComponentsTweaks();
 
 	/**
 	 *	Get a list ICFBamProtSchemaRoleObj instances referenced by the Roles key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtSchemaRoleObj instances referenced by the Roles key.
 	 */
-	List<ICFBamProtSchemaRoleObj> getOptionalComponentsRoles();
+	List<ICFBamProtSchemaRoleObj> get$OptionalOrRequired$ComponentsRoles();
 
 	/**
 	 *	Get the ICFSecPubTenantObj instance referenced by the CTenant key.
 	 *
 	 *	@return	The ICFSecPubTenantObj instance referenced by the CTenant key.
 	 */
-	ICFSecPubTenantObj getRequiredOwnerCTenant();
+	ICFSecPubTenantObj get$OptionalOrRequired$OwnerCTenant();
 
 	/**
-	 *	Get the required ICFSecPubTenantObj instance referenced by the CTenant key.
+	 *	Get the $optionalorrequired$ ICFSecPubTenantObj instance referenced by the CTenant key.
 	 *
-	 *	@return	The required ICFSecPubTenantObj instance referenced by the CTenant key.
+	 *	@return	The $optionalorrequired$ ICFSecPubTenantObj instance referenced by the CTenant key.
 	 */
-	ICFSecPubTenantObj getRequiredOwnerCTenant( boolean forceRead );
+	ICFSecPubTenantObj get$OptionalOrRequired$OwnerCTenant( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecPubTenantObj instance referenced by the CTenant key.
 	 *
 	 *	@param	value	the ICFSecPubTenantObj instance to be referenced by the CTenant key.
 	 */
-	void setRequiredOwnerCTenant( ICFSecPubTenantObj value );
+	void set$OptionalOrRequired$OwnerCTenant( ICFSecPubTenantObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute CTenantId.

@@ -75,10 +75,10 @@ public interface ICFBamProtTokenDef
 	public final static int CLASS_CODE = 0xa863;
 	public final static String S_CLASS_CODE = "a863";
 
-	public int getRequiredMaxLen();
-	public void setRequiredMaxLen( int value );
-	public String getOptionalInitValue();
-	public void setOptionalInitValue( String value );
+	public $implIJavaAtomType$ getRequiredMaxLen();
+	public void setRequiredMaxLen( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getOptionalInitValue();
+	public void setOptionalInitValue( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();
