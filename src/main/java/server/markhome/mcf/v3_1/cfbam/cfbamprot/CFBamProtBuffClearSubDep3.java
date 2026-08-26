@@ -89,22 +89,22 @@ public class CFBamProtBuffClearSubDep3
 
 	@Override
 	public ICFBamProtClearSubDep2 getRequiredContainerClearSubDep2(ICFLibKeyHash256 argClearSubDep2Id) {
-		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
+		ICFBamProtSchema targetBackingCFBam = ICFBamProtSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerClearSubDep2", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerClearSubDep2", 0, "ICFBamProtSchema.getBackingCFBam()");
 		}
 		ICFBamProtClearSubDep2Table targetTable = targetBackingCFBam.getTableClearSubDep2();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerClearSubDep2", 0, "ICFBamSchema.getBackingCFBam().getTableClearSubDep2()");
+			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerClearSubDep2", 0, "ICFBamProtSchema.getBackingCFBam().getTableClearSubDep2()");
 		}
 		return(targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredClearSubDep2Id()));
 	}
 
 	@Override
 	public void setRequiredContainerClearSubDep2(ICFLibKeyHash256 argClearSubDep2Id) {
-		ICFBamSchema targetBackingCFBam = ICFBamSchema.getBackingCFBam();
+		ICFBamProtSchema targetBackingCFBam = ICFBamProtSchema.getBackingCFBam();
 		if (targetBackingCFBam == null) {
-			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerClearSubDep2-args", 0, "ICFBamSchema.getBackingCFBam()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerClearSubDep2-args", 0, "ICFBamProtSchema.getBackingCFBam()");
 		}
 		ICFBamProtClearSubDep2Table targetTable = targetBackingCFBam.getTableClearSubDep2();
 		if (targetTable == null) {
