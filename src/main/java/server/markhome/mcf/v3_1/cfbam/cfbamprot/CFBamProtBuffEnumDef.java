@@ -82,7 +82,31 @@ public class CFBamProtBuffEnumDef
 	public int getClassCode() {
 		return( ICFBamProtEnumDef.CLASS_CODE );
 	}
-$implJustProtSchemaProtBuffTableProtRelationProtGetterWithArgs$
+
+	@Override
+	public List<ICFBamProtEnumTag> getRequiredComponentsTag(ICFLibKeyHash256 argId) {
+		ICFBamProtSchema targetBackingCFBam = ICFBamProtSchema.getBackingCFBam();
+		if (targetBackingCFBam == null) {
+			throw new CFLibNullArgumentException(getClass(), "getRequiredComponentsTag", 0, "ICFBamProtSchema.getBackingCFBam()");
+		}
+		ICFBamProtEnumTagTable targetTable = targetBackingCFBam.getTableEnumTag();
+		if (targetTable == null) {
+			throw new CFLibNullArgumentException(getClass(), "getRequiredComponentsTag", 0, "ICFBamProtSchema.getBackingCFBam().getTableEnumTag()");
+		}
+		ICFBamProtEnumTag[] targetArr = targetTable.readDerivedByEnumIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredId());
+		if( targetArr != null ) {
+			List<ICFBamProtEnumTag> results = new ArrayList<>(targetArr.length);
+			for (int idx = 0; idx < targetArr.length; idx++) {
+				results.add(targetArr[idx]);
+			}
+			return(results);
+		}
+		else {
+			List<ICFBamProtEnumTag> results = new ArrayList<>();
+			return(results);
+		}
+	}
+
 	@Override
 	public boolean equals( Object obj ) {
 		if( obj == null ) {
