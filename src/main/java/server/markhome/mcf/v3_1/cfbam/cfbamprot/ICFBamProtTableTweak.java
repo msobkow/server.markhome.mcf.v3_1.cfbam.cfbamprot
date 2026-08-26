@@ -74,17 +74,17 @@ public interface ICFBamProtTableTweak
 	public final static int CLASS_CODE = 0xa809;
 	public final static String S_CLASS_CODE = "a809";
 
-	public ICFBamProtTable get$OptionalOrRequired$ContainerTableDef();
+	public ICFBamProtTable getRequiredContainerTableDef();
 
-	public void set$OptionalOrRequired$ContainerTableDef($implIJavaAtomType$ argTableId);
+	public void setRequiredContainerTableDef(ICFLibKeyHash256 argTableId);
 
 
-	public void set$OptionalOrRequired$ContainerTableDef(ICFBamProtTable argObj);
+	public void setRequiredContainerTableDef(ICFBamProtTable argObj);
 
-	public void set$OptionalOrRequired$ContainerTableDef(ICFBamPubTable argObj);
+	public void setRequiredContainerTableDef(ICFBamPubTable argObj);
 
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

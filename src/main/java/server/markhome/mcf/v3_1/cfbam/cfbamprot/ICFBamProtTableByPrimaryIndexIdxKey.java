@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTableByPrimaryIndexIdxKey
 {
-	public $implIJavaAtomType$ getOptionalPrimaryIndexId();
-	public void setOptionalPrimaryIndexId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getOptionalPrimaryIndexId();
+	public void setOptionalPrimaryIndexId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

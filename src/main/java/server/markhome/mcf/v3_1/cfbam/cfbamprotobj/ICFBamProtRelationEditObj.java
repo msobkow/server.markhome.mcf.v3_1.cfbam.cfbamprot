@@ -79,140 +79,140 @@ public interface ICFBamProtRelationEditObj
 	 *
 	 *	@return	The ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema();
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaDefObj instance to be referenced by the DefSchema key.
 	 */
-	void set$OptionalOrRequired$LookupDefSchema( ICFBamProtSchemaDefObj value );
+	void setOptionalLookupDefSchema( ICFBamProtSchemaDefObj value );
 
 	/**
 	 *	Get the ICFBamProtTableObj instance referenced by the FromTable key.
 	 *
 	 *	@return	The ICFBamProtTableObj instance referenced by the FromTable key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerFromTable();
+	ICFBamProtTableObj getRequiredContainerFromTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the FromTable key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the FromTable key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the FromTable key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the FromTable key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerFromTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerFromTable( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtTableObj instance referenced by the FromTable key.
 	 *
 	 *	@param	value	the ICFBamProtTableObj instance to be referenced by the FromTable key.
 	 */
-	void set$OptionalOrRequired$ContainerFromTable( ICFBamProtTableObj value );
+	void setRequiredContainerFromTable( ICFBamProtTableObj value );
 
 	/**
 	 *	Get a list ICFBamProtRelationColObj instances referenced by the Columns key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtRelationColObj instances referenced by the Columns key.
 	 */
-	List<ICFBamProtRelationColObj> get$OptionalOrRequired$ComponentsColumns();
+	List<ICFBamProtRelationColObj> getOptionalComponentsColumns();
 
 	/**
 	 *	Get a list ICFBamProtPopTopDepObj instances referenced by the PopDep key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtPopTopDepObj instances referenced by the PopDep key.
 	 */
-	List<ICFBamProtPopTopDepObj> get$OptionalOrRequired$ComponentsPopDep();
+	List<ICFBamProtPopTopDepObj> getOptionalComponentsPopDep();
 
 	/**
 	 *	Get the ICFBamProtIndexObj instance referenced by the FromIndex key.
 	 *
 	 *	@return	The ICFBamProtIndexObj instance referenced by the FromIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupFromIndex();
+	ICFBamProtIndexObj getRequiredLookupFromIndex();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the FromIndex key.
+	 *	Get the required ICFBamProtIndexObj instance referenced by the FromIndex key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the FromIndex key.
+	 *	@return	The required ICFBamProtIndexObj instance referenced by the FromIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupFromIndex( boolean forceRead );
+	ICFBamProtIndexObj getRequiredLookupFromIndex( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtIndexObj instance referenced by the FromIndex key.
 	 *
 	 *	@param	value	the ICFBamProtIndexObj instance to be referenced by the FromIndex key.
 	 */
-	void set$OptionalOrRequired$LookupFromIndex( ICFBamProtIndexObj value );
+	void setRequiredLookupFromIndex( ICFBamProtIndexObj value );
 
 	/**
 	 *	Get the ICFBamProtTableObj instance referenced by the ToTable key.
 	 *
 	 *	@return	The ICFBamProtTableObj instance referenced by the ToTable key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$LookupToTable();
+	ICFBamProtTableObj getRequiredLookupToTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the ToTable key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the ToTable key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the ToTable key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the ToTable key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$LookupToTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredLookupToTable( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtTableObj instance referenced by the ToTable key.
 	 *
 	 *	@param	value	the ICFBamProtTableObj instance to be referenced by the ToTable key.
 	 */
-	void set$OptionalOrRequired$LookupToTable( ICFBamProtTableObj value );
+	void setRequiredLookupToTable( ICFBamProtTableObj value );
 
 	/**
 	 *	Get the ICFBamProtIndexObj instance referenced by the ToIndex key.
 	 *
 	 *	@return	The ICFBamProtIndexObj instance referenced by the ToIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupToIndex();
+	ICFBamProtIndexObj getRequiredLookupToIndex();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the ToIndex key.
+	 *	Get the required ICFBamProtIndexObj instance referenced by the ToIndex key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the ToIndex key.
+	 *	@return	The required ICFBamProtIndexObj instance referenced by the ToIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupToIndex( boolean forceRead );
+	ICFBamProtIndexObj getRequiredLookupToIndex( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtIndexObj instance referenced by the ToIndex key.
 	 *
 	 *	@param	value	the ICFBamProtIndexObj instance to be referenced by the ToIndex key.
 	 */
-	void set$OptionalOrRequired$LookupToIndex( ICFBamProtIndexObj value );
+	void setRequiredLookupToIndex( ICFBamProtIndexObj value );
 
 	/**
 	 *	Get the ICFBamProtRelationObj instance referenced by the Narrowed key.
 	 *
 	 *	@return	The ICFBamProtRelationObj instance referenced by the Narrowed key.
 	 */
-	ICFBamProtRelationObj get$OptionalOrRequired$LookupNarrowed();
+	ICFBamProtRelationObj getOptionalLookupNarrowed();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtRelationObj instance referenced by the Narrowed key.
+	 *	Get the optional ICFBamProtRelationObj instance referenced by the Narrowed key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj instance referenced by the Narrowed key.
+	 *	@return	The optional ICFBamProtRelationObj instance referenced by the Narrowed key.
 	 */
-	ICFBamProtRelationObj get$OptionalOrRequired$LookupNarrowed( boolean forceRead );
+	ICFBamProtRelationObj getOptionalLookupNarrowed( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtRelationObj instance referenced by the Narrowed key.
 	 *
 	 *	@param	value	the ICFBamProtRelationObj instance to be referenced by the Narrowed key.
 	 */
-	void set$OptionalOrRequired$LookupNarrowed( ICFBamProtRelationObj value );
+	void setOptionalLookupNarrowed( ICFBamProtRelationObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute TableId.

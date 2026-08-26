@@ -74,17 +74,17 @@ public interface ICFBamProtIndexTweak
 	public final static int CLASS_CODE = 0xa80b;
 	public final static String S_CLASS_CODE = "a80b";
 
-	public ICFBamProtIndex get$OptionalOrRequired$ContainerIndexDef();
+	public ICFBamProtIndex getRequiredContainerIndexDef();
 
-	public void set$OptionalOrRequired$ContainerIndexDef($implIJavaAtomType$ argIndexId);
+	public void setRequiredContainerIndexDef(ICFLibKeyHash256 argIndexId);
 
 
-	public void set$OptionalOrRequired$ContainerIndexDef(ICFBamProtIndex argObj);
+	public void setRequiredContainerIndexDef(ICFBamProtIndex argObj);
 
-	public void set$OptionalOrRequired$ContainerIndexDef(ICFBamPubIndex argObj);
+	public void setRequiredContainerIndexDef(ICFBamPubIndex argObj);
 
-	public $implIJavaAtomType$ getRequiredIndexId();
-	public void setRequiredIndexId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredIndexId();
+	public void setRequiredIndexId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

@@ -68,10 +68,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtPopSubDep2H extends ICFBamProtPopDepH
 {
-	public $implIJavaAtomType$ getRequiredPopSubDep1Id();
-	public void setRequiredPopSubDep1Id( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredPopSubDep1Id();
+	public void setRequiredPopSubDep1Id( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -68,10 +68,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtPopDepH extends ICFBamProtScopeH
 {
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredRelationId();
-	public void setRequiredRelationId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredRelationId();
+	public void setRequiredRelationId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

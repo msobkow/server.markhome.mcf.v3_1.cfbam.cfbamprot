@@ -83,56 +83,56 @@ public interface ICFBamProtSchemaRef
 	public final static int CLASS_CODE = 0xa803;
 	public final static String S_CLASS_CODE = "a803";
 
-	public ICFBamProtSchemaDef get$OptionalOrRequired$ContainerSchema();
+	public ICFBamProtSchemaDef getRequiredContainerSchema();
 
-	public void set$OptionalOrRequired$ContainerSchema($implIJavaAtomType$ argSchemaId);
-
-
-	public void set$OptionalOrRequired$ContainerSchema(ICFBamProtSchemaDef argObj);
-
-	public void set$OptionalOrRequired$ContainerSchema(ICFBamPubSchemaDef argObj);
-
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupRefSchema();
-
-	public void set$OptionalOrRequired$LookupRefSchema($implIJavaAtomType$ argRefSchemaId);
+	public void setRequiredContainerSchema(ICFLibKeyHash256 argSchemaId);
 
 
-	public void set$OptionalOrRequired$LookupRefSchema(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerSchema(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$LookupRefSchema(ICFBamPubSchemaDef argObj);
+	public void setRequiredContainerSchema(ICFBamPubSchemaDef argObj);
 
-	public ICFBamProtSchemaRef get$OptionalOrRequired$LookupPrev();
+	public ICFBamProtSchemaDef getOptionalLookupRefSchema();
 
-	public void set$OptionalOrRequired$LookupPrev($implIJavaAtomType$ argPrevId);
-
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamProtSchemaRef argObj);
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamPubSchemaRef argObj);
-
-	public ICFBamProtSchemaRef get$OptionalOrRequired$LookupNext();
-
-	public void set$OptionalOrRequired$LookupNext($implIJavaAtomType$ argNextId);
+	public void setOptionalLookupRefSchema(ICFLibKeyHash256 argRefSchemaId);
 
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamProtSchemaRef argObj);
+	public void setOptionalLookupRefSchema(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamPubSchemaRef argObj);
+	public void setOptionalLookupRefSchema(ICFBamPubSchemaDef argObj);
 
-	public $implIJavaAtomType$ getRequiredSchemaId();
-	public void setRequiredSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredRefModelName();
-	public void setRequiredRefModelName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIncludeRoot();
-	public void setRequiredIncludeRoot( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalRefSchemaId();
-	public void setOptionalRefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalPrevId();
-	public void setOptionalPrevId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalNextId();
-	public void setOptionalNextId( $implIJavaAtomType$ value );
+	public ICFBamProtSchemaRef getOptionalLookupPrev();
+
+	public void setOptionalLookupPrev(ICFLibKeyHash256 argPrevId);
+
+
+	public void setOptionalLookupPrev(ICFBamProtSchemaRef argObj);
+
+	public void setOptionalLookupPrev(ICFBamPubSchemaRef argObj);
+
+	public ICFBamProtSchemaRef getOptionalLookupNext();
+
+	public void setOptionalLookupNext(ICFLibKeyHash256 argNextId);
+
+
+	public void setOptionalLookupNext(ICFBamProtSchemaRef argObj);
+
+	public void setOptionalLookupNext(ICFBamPubSchemaRef argObj);
+
+	public ICFLibKeyHash256 getRequiredSchemaId();
+	public void setRequiredSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getRequiredRefModelName();
+	public void setRequiredRefModelName( String value );
+	public String getRequiredIncludeRoot();
+	public void setRequiredIncludeRoot( String value );
+	public ICFLibKeyHash256 getOptionalRefSchemaId();
+	public void setOptionalRefSchemaId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

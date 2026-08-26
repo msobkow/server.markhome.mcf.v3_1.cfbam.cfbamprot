@@ -77,19 +77,19 @@ public interface ICFBamProtSchemaRole
 	public final static int CLASS_CODE = 0xa88f;
 	public final static String S_CLASS_CODE = "a88f";
 
-	public ICFBamProtSchemaDef get$OptionalOrRequired$ContainerSchemaDef();
+	public ICFBamProtSchemaDef getRequiredContainerSchemaDef();
 
-	public void set$OptionalOrRequired$ContainerSchemaDef($implIJavaAtomType$ argSchemaDefId);
+	public void setRequiredContainerSchemaDef(ICFLibKeyHash256 argSchemaDefId);
 
 
-	public void set$OptionalOrRequired$ContainerSchemaDef(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerSchemaDef(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$ContainerSchemaDef(ICFBamPubSchemaDef argObj);
+	public void setRequiredContainerSchemaDef(ICFBamPubSchemaDef argObj);
 
-	public $implIJavaAtomType$ getRequiredSchemaDefId();
-	public void setRequiredSchemaDefId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredRoleScope();
-	public void setRequiredRoleScope( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSchemaDefId();
+	public void setRequiredSchemaDefId( ICFLibKeyHash256 value );
+	public ICFBamPubSchema.RoleScopeEnum getRequiredRoleScope();
+	public void setRequiredRoleScope( ICFBamPubSchema.RoleScopeEnum value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

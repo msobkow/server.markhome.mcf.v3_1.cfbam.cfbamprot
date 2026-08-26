@@ -68,12 +68,12 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtUInt16DefH extends ICFBamProtAtomH
 {
-	public $implIJavaAtomType$ getOptionalInitValue();
-	public void setOptionalInitValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalMinValue();
-	public void setOptionalMinValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalMaxValue();
-	public void setOptionalMaxValue( $implIJavaAtomType$ value );
+	public Integer getOptionalInitValue();
+	public void setOptionalInitValue( Integer value );
+	public Integer getOptionalMinValue();
+	public void setOptionalMinValue( Integer value );
+	public Integer getOptionalMaxValue();
+	public void setOptionalMaxValue( Integer value );
 	@Override
 	public boolean equals( Object obj );
 

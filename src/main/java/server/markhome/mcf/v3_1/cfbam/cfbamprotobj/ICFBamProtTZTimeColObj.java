@@ -92,18 +92,18 @@ public interface ICFBamProtTZTimeColObj
 	ICFBamProtTZTimeCol getTZTimeColRec();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
+	ICFBamProtTableObj getRequiredContainerTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

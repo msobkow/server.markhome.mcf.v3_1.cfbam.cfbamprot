@@ -68,10 +68,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtParamByContNextIdxKey
 {
-	public $implIJavaAtomType$ getRequiredServerMethodId();
-	public void setRequiredServerMethodId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalNextId();
-	public void setOptionalNextId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredServerMethodId();
+	public void setRequiredServerMethodId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

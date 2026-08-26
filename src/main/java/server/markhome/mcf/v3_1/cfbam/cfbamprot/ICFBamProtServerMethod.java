@@ -85,54 +85,54 @@ public interface ICFBamProtServerMethod
 	public final static int CLASS_CODE = 0xa804;
 	public final static String S_CLASS_CODE = "a804";
 
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupDefSchema();
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void set$OptionalOrRequired$LookupDefSchema($implIJavaAtomType$ argDefSchemaId);
-
-
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamProtSchemaDef argObj);
-
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamPubSchemaDef argObj);
-
-	public ICFBamProtTable get$OptionalOrRequired$ContainerForTable();
-
-	public void set$OptionalOrRequired$ContainerForTable($implIJavaAtomType$ argTableId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
-	public void set$OptionalOrRequired$ContainerForTable(ICFBamProtTable argObj);
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$ContainerForTable(ICFBamPubTable argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
-	public List<ICFBamProtParam> get$OptionalOrRequired$ComponentsParams();
+	public ICFBamProtTable getRequiredContainerForTable();
 
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortName();
-	public void setOptionalShortName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalLabel();
-	public void setOptionalLabel( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortDescription();
-	public void setOptionalShortDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDescription();
-	public void setOptionalDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalSuffix();
-	public void setOptionalSuffix( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIsInstanceMethod();
-	public void setRequiredIsInstanceMethod( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIsServerOnly();
-	public void setRequiredIsServerOnly( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCodeVis();
-	public void setRequiredCodeVis( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredJMethodBody();
-	public void setRequiredJMethodBody( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCppMethodBody();
-	public void setRequiredCppMethodBody( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCsMethodBody();
-	public void setRequiredCsMethodBody( $implIJavaAtomType$ value );
+	public void setRequiredContainerForTable(ICFLibKeyHash256 argTableId);
+
+
+	public void setRequiredContainerForTable(ICFBamProtTable argObj);
+
+	public void setRequiredContainerForTable(ICFBamPubTable argObj);
+
+	public List<ICFBamProtParam> getOptionalComponentsParams();
+
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public String getOptionalSuffix();
+	public void setOptionalSuffix( String value );
+	public boolean getRequiredIsInstanceMethod();
+	public void setRequiredIsInstanceMethod( boolean value );
+	public boolean getRequiredIsServerOnly();
+	public void setRequiredIsServerOnly( boolean value );
+	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
+	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
+	public String getRequiredJMethodBody();
+	public void setRequiredJMethodBody( String value );
+	public String getRequiredCppMethodBody();
+	public void setRequiredCppMethodBody( String value );
+	public String getRequiredCsMethodBody();
+	public void setRequiredCsMethodBody( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

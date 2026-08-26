@@ -75,19 +75,19 @@ public interface ICFBamProtPopSubDep3
 	public final static int CLASS_CODE = 0xa837;
 	public final static String S_CLASS_CODE = "a837";
 
-	public ICFBamProtPopSubDep2 get$OptionalOrRequired$ContainerPopSubDep2();
+	public ICFBamProtPopSubDep2 getRequiredContainerPopSubDep2();
 
-	public void set$OptionalOrRequired$ContainerPopSubDep2($implIJavaAtomType$ argPopSubDep2Id);
+	public void setRequiredContainerPopSubDep2(ICFLibKeyHash256 argPopSubDep2Id);
 
 
-	public void set$OptionalOrRequired$ContainerPopSubDep2(ICFBamProtPopSubDep2 argObj);
+	public void setRequiredContainerPopSubDep2(ICFBamProtPopSubDep2 argObj);
 
-	public void set$OptionalOrRequired$ContainerPopSubDep2(ICFBamPubPopSubDep2 argObj);
+	public void setRequiredContainerPopSubDep2(ICFBamPubPopSubDep2 argObj);
 
-	public $implIJavaAtomType$ getRequiredPopSubDep2Id();
-	public void setRequiredPopSubDep2Id( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredPopSubDep2Id();
+	public void setRequiredPopSubDep2Id( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

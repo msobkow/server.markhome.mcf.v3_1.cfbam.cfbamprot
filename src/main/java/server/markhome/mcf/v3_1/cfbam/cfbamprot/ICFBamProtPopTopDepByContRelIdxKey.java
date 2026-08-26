@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtPopTopDepByContRelIdxKey
 {
-	public $implIJavaAtomType$ getRequiredContRelationId();
-	public void setRequiredContRelationId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredContRelationId();
+	public void setRequiredContRelationId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

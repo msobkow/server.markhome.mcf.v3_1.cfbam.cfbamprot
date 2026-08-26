@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTableByLookupIndexIdxKey
 {
-	public $implIJavaAtomType$ getOptionalLookupIndexId();
-	public void setOptionalLookupIndexId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getOptionalLookupIndexId();
+	public void setOptionalLookupIndexId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

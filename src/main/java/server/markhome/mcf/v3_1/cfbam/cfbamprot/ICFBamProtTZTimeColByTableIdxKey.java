@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTZTimeColByTableIdxKey
 {
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

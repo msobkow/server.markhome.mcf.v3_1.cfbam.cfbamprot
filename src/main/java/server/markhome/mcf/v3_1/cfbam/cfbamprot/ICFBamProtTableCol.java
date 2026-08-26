@@ -77,32 +77,32 @@ public interface ICFBamProtTableCol
 	public final static int CLASS_CODE = 0xa85c;
 	public final static String S_CLASS_CODE = "a85c";
 
-	public ICFBamProtTable get$OptionalOrRequired$ContainerTable();
+	public ICFBamProtTable getRequiredContainerTable();
 
-	public void set$OptionalOrRequired$ContainerTable($implIJavaAtomType$ argTableId);
-
-
-	public void set$OptionalOrRequired$ContainerTable(ICFBamProtTable argObj);
-
-	public void set$OptionalOrRequired$ContainerTable(ICFBamPubTable argObj);
-
-	public ICFBamProtValue get$OptionalOrRequired$ParentDataType();
-
-	public void set$OptionalOrRequired$ParentDataType($implIJavaAtomType$ argDataId);
+	public void setRequiredContainerTable(ICFLibKeyHash256 argTableId);
 
 
-	public void set$OptionalOrRequired$ParentDataType(ICFBamProtValue argObj);
+	public void setRequiredContainerTable(ICFBamProtTable argObj);
 
-	public void set$OptionalOrRequired$ParentDataType(ICFBamPubValue argObj);
+	public void setRequiredContainerTable(ICFBamPubTable argObj);
 
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDbName();
-	public void setOptionalDbName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDataId();
-	public void setOptionalDataId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalXmlElementName();
-	public void setOptionalXmlElementName( $implIJavaAtomType$ value );
+	public ICFBamProtValue getRequiredParentDataType();
+
+	public void setRequiredParentDataType(ICFLibKeyHash256 argDataId);
+
+
+	public void setRequiredParentDataType(ICFBamProtValue argObj);
+
+	public void setRequiredParentDataType(ICFBamPubValue argObj);
+
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
+	public String getOptionalDbName();
+	public void setOptionalDbName( String value );
+	public ICFLibKeyHash256 getOptionalDataId();
+	public void setOptionalDataId( ICFLibKeyHash256 value );
+	public String getOptionalXmlElementName();
+	public void setOptionalXmlElementName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

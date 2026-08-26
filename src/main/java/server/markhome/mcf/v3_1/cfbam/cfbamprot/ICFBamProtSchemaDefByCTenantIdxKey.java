@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtSchemaDefByCTenantIdxKey
 {
-	public $implIJavaAtomType$ getRequiredCTenantId();
-	public void setRequiredCTenantId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredCTenantId();
+	public void setRequiredCTenantId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

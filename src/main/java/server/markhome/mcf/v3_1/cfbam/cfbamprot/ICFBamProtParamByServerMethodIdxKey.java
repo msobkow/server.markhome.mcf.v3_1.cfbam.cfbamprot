@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtParamByServerMethodIdxKey
 {
-	public $implIJavaAtomType$ getRequiredServerMethodId();
-	public void setRequiredServerMethodId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredServerMethodId();
+	public void setRequiredServerMethodId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

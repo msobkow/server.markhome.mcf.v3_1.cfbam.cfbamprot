@@ -92,18 +92,18 @@ public interface ICFBamProtSchemaRoleObj
 	ICFBamProtSchemaRole getSchemaRoleRec();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	Get the required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	@return	The required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchemaDef();
+	ICFBamProtSchemaDefObj getRequiredContainerSchemaDef();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	Get the required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	@return	The required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchemaDef( boolean forceRead );
+	ICFBamProtSchemaDefObj getRequiredContainerSchemaDef( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

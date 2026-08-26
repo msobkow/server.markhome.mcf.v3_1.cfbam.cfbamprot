@@ -92,11 +92,11 @@ public interface ICFBamProtScopeH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredId();
+	public ICFLibKeyHash256 getRequiredId();
 	public void setRequiredId( ICFLibKeyHash256 requiredId );
 
-	public $implIJavaAtomType$ getRequiredTenantId();
-	public void setRequiredTenantId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

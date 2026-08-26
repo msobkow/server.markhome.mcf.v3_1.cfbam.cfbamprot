@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtSchemaRefByPrevIdxKey
 {
-	public $implIJavaAtomType$ getOptionalPrevId();
-	public void setOptionalPrevId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

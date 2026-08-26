@@ -68,10 +68,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtServerMethodByMethTableVisIdxKey
 {
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCodeVis();
-	public void setRequiredCodeVis( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
+	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
+	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
 	@Override
 	public boolean equals( Object obj );
 

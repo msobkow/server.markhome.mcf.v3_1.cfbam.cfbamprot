@@ -108,77 +108,77 @@ public interface ICFBamProtValue
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	public List<ICFBamProtTableCol> get$OptionalOrRequired$ChildrenRefTableCol();
+	public List<ICFBamProtTableCol> getOptionalChildrenRefTableCol();
 
-	public List<ICFBamProtIndexCol> get$OptionalOrRequired$ChildrenRefIndexCol();
+	public List<ICFBamProtIndexCol> getOptionalChildrenRefIndexCol();
 
-	public $implIJavaAtomType$ getRequiredId();
-	public void setRequiredId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFBamProtScope get$OptionalOrRequired$ContainerScope();
+	public ICFBamProtScope getRequiredContainerScope();
 
-	public void set$OptionalOrRequired$ContainerScope($implIJavaAtomType$ argScopeId);
-
-
-	public void set$OptionalOrRequired$ContainerScope(ICFBamProtScope argObj);
-
-	public void set$OptionalOrRequired$ContainerScope(ICFBamPubScope argObj);
-
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupDefSchema();
-
-	public void set$OptionalOrRequired$LookupDefSchema($implIJavaAtomType$ argDefSchemaId);
+	public void setRequiredContainerScope(ICFLibKeyHash256 argScopeId);
 
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerScope(ICFBamProtScope argObj);
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamPubSchemaDef argObj);
+	public void setRequiredContainerScope(ICFBamPubScope argObj);
 
-	public ICFBamProtValue get$OptionalOrRequired$LookupPrev();
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void set$OptionalOrRequired$LookupPrev($implIJavaAtomType$ argPrevId);
-
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamProtValue argObj);
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamPubValue argObj);
-
-	public ICFBamProtValue get$OptionalOrRequired$LookupNext();
-
-	public void set$OptionalOrRequired$LookupNext($implIJavaAtomType$ argNextId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamProtValue argObj);
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamPubValue argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
-	public $implIJavaAtomType$ getRequiredScopeId();
-	public void setRequiredScopeId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortName();
-	public void setOptionalShortName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalLabel();
-	public void setOptionalLabel( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortDescription();
-	public void setOptionalShortDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDescription();
-	public void setOptionalDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefaultXmlValue();
-	public void setOptionalDefaultXmlValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIsNullable();
-	public void setRequiredIsNullable( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalGenerateId();
-	public void setOptionalGenerateId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredImplementsPolymorph();
-	public void setRequiredImplementsPolymorph( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalPrevId();
-	public void setOptionalPrevId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalNextId();
-	public void setOptionalNextId( $implIJavaAtomType$ value );
+	public ICFBamProtValue getOptionalLookupPrev();
+
+	public void setOptionalLookupPrev(ICFLibKeyHash256 argPrevId);
+
+
+	public void setOptionalLookupPrev(ICFBamProtValue argObj);
+
+	public void setOptionalLookupPrev(ICFBamPubValue argObj);
+
+	public ICFBamProtValue getOptionalLookupNext();
+
+	public void setOptionalLookupNext(ICFLibKeyHash256 argNextId);
+
+
+	public void setOptionalLookupNext(ICFBamProtValue argObj);
+
+	public void setOptionalLookupNext(ICFBamPubValue argObj);
+
+	public ICFLibKeyHash256 getRequiredScopeId();
+	public void setRequiredScopeId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public String getOptionalDefaultXmlValue();
+	public void setOptionalDefaultXmlValue( String value );
+	public boolean getRequiredIsNullable();
+	public void setRequiredIsNullable( boolean value );
+	public Boolean getOptionalGenerateId();
+	public void setOptionalGenerateId( Boolean value );
+	public boolean getRequiredImplementsPolymorph();
+	public void setRequiredImplementsPolymorph( boolean value );
+	public ICFLibKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

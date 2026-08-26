@@ -79,84 +79,84 @@ public interface ICFBamProtSchemaRefEditObj
 	 *
 	 *	@return	The ICFBamProtSchemaDefObj instance referenced by the Schema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchema();
+	ICFBamProtSchemaDefObj getRequiredContainerSchema();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the Schema key.
+	 *	Get the required ICFBamProtSchemaDefObj instance referenced by the Schema key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the Schema key.
+	 *	@return	The required ICFBamProtSchemaDefObj instance referenced by the Schema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj getRequiredContainerSchema( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaDefObj instance referenced by the Schema key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaDefObj instance to be referenced by the Schema key.
 	 */
-	void set$OptionalOrRequired$ContainerSchema( ICFBamProtSchemaDefObj value );
+	void setRequiredContainerSchema( ICFBamProtSchemaDefObj value );
 
 	/**
 	 *	Get the ICFBamProtSchemaDefObj instance referenced by the RefSchema key.
 	 *
 	 *	@return	The ICFBamProtSchemaDefObj instance referenced by the RefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupRefSchema();
+	ICFBamProtSchemaDefObj getOptionalLookupRefSchema();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the RefSchema key.
+	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the RefSchema key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the RefSchema key.
+	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the RefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupRefSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj getOptionalLookupRefSchema( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaDefObj instance referenced by the RefSchema key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaDefObj instance to be referenced by the RefSchema key.
 	 */
-	void set$OptionalOrRequired$LookupRefSchema( ICFBamProtSchemaDefObj value );
+	void setOptionalLookupRefSchema( ICFBamProtSchemaDefObj value );
 
 	/**
 	 *	Get the ICFBamProtSchemaRefObj instance referenced by the Prev key.
 	 *
 	 *	@return	The ICFBamProtSchemaRefObj instance referenced by the Prev key.
 	 */
-	ICFBamProtSchemaRefObj get$OptionalOrRequired$LookupPrev();
+	ICFBamProtSchemaRefObj getOptionalLookupPrev();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaRefObj instance referenced by the Prev key.
+	 *	Get the optional ICFBamProtSchemaRefObj instance referenced by the Prev key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaRefObj instance referenced by the Prev key.
+	 *	@return	The optional ICFBamProtSchemaRefObj instance referenced by the Prev key.
 	 */
-	ICFBamProtSchemaRefObj get$OptionalOrRequired$LookupPrev( boolean forceRead );
+	ICFBamProtSchemaRefObj getOptionalLookupPrev( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaRefObj instance referenced by the Prev key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaRefObj instance to be referenced by the Prev key.
 	 */
-	void set$OptionalOrRequired$LookupPrev( ICFBamProtSchemaRefObj value );
+	void setOptionalLookupPrev( ICFBamProtSchemaRefObj value );
 
 	/**
 	 *	Get the ICFBamProtSchemaRefObj instance referenced by the Next key.
 	 *
 	 *	@return	The ICFBamProtSchemaRefObj instance referenced by the Next key.
 	 */
-	ICFBamProtSchemaRefObj get$OptionalOrRequired$LookupNext();
+	ICFBamProtSchemaRefObj getOptionalLookupNext();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaRefObj instance referenced by the Next key.
+	 *	Get the optional ICFBamProtSchemaRefObj instance referenced by the Next key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaRefObj instance referenced by the Next key.
+	 *	@return	The optional ICFBamProtSchemaRefObj instance referenced by the Next key.
 	 */
-	ICFBamProtSchemaRefObj get$OptionalOrRequired$LookupNext( boolean forceRead );
+	ICFBamProtSchemaRefObj getOptionalLookupNext( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaRefObj instance referenced by the Next key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaRefObj instance to be referenced by the Next key.
 	 */
-	void set$OptionalOrRequired$LookupNext( ICFBamProtSchemaRefObj value );
+	void setOptionalLookupNext( ICFBamProtSchemaRefObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SchemaId.

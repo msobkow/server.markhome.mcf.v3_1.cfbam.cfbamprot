@@ -82,54 +82,54 @@ public interface ICFBamProtSchemaDef
 	public final static int CLASS_CODE = 0xa802;
 	public final static String S_CLASS_CODE = "a802";
 
-	public ICFIntProtMinorVersion get$OptionalOrRequired$ContainerMinorVersion();
+	public ICFIntProtMinorVersion getRequiredContainerMinorVersion();
 
-	public void set$OptionalOrRequired$ContainerMinorVersion($implIJavaAtomType$ argMinorVersionId);
+	public void setRequiredContainerMinorVersion(ICFLibKeyHash256 argMinorVersionId);
 
-	public void set$OptionalOrRequired$ContainerMinorVersion(ICFIntPubMinorVersion argObj);
+	public void setRequiredContainerMinorVersion(ICFIntPubMinorVersion argObj);
 
-	public ICFSecProtTenant get$OptionalOrRequired$OwnerCTenant();
+	public ICFSecProtTenant getRequiredOwnerCTenant();
 
-	public void set$OptionalOrRequired$OwnerCTenant($implIJavaAtomType$ argCTenantId);
+	public void setRequiredOwnerCTenant(ICFLibKeyHash256 argCTenantId);
 
-	public void set$OptionalOrRequired$OwnerCTenant(ICFSecPubTenant argObj);
+	public void setRequiredOwnerCTenant(ICFSecPubTenant argObj);
 
-	public List<ICFBamProtTable> get$OptionalOrRequired$ComponentsTables();
+	public List<ICFBamProtTable> getOptionalComponentsTables();
 
-	public List<ICFBamProtValue> get$OptionalOrRequired$ComponentsTypes();
+	public List<ICFBamProtValue> getOptionalComponentsTypes();
 
-	public List<ICFBamProtSchemaRef> get$OptionalOrRequired$ComponentsSchemaRefs();
+	public List<ICFBamProtSchemaRef> getOptionalComponentsSchemaRefs();
 
-	public List<ICFBamProtTweak> get$OptionalOrRequired$ComponentsTweaks();
+	public List<ICFBamProtTweak> getOptionalComponentsTweaks();
 
-	public List<ICFBamProtSchemaRole> get$OptionalOrRequired$ComponentsRoles();
+	public List<ICFBamProtSchemaRole> getOptionalComponentsRoles();
 
-	public $implIJavaAtomType$ getRequiredCTenantId();
-	public void setRequiredCTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredMinorVersionId();
-	public void setRequiredMinorVersionId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDbName();
-	public void setOptionalDbName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortName();
-	public void setOptionalShortName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalLabel();
-	public void setOptionalLabel( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortDescription();
-	public void setOptionalShortDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDescription();
-	public void setOptionalDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCopyrightPeriod();
-	public void setRequiredCopyrightPeriod( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCopyrightHolder();
-	public void setRequiredCopyrightHolder( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredAuthorEMail();
-	public void setRequiredAuthorEMail( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredProjectURL();
-	public void setRequiredProjectURL( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredPublishURI();
-	public void setRequiredPublishURI( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredCTenantId();
+	public void setRequiredCTenantId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredMinorVersionId();
+	public void setRequiredMinorVersionId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalDbName();
+	public void setOptionalDbName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public String getRequiredCopyrightPeriod();
+	public void setRequiredCopyrightPeriod( String value );
+	public String getRequiredCopyrightHolder();
+	public void setRequiredCopyrightHolder( String value );
+	public String getRequiredAuthorEMail();
+	public void setRequiredAuthorEMail( String value );
+	public String getRequiredProjectURL();
+	public void setRequiredProjectURL( String value );
+	public String getRequiredPublishURI();
+	public void setRequiredPublishURI( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

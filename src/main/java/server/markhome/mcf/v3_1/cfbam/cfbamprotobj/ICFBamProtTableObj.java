@@ -92,214 +92,214 @@ public interface ICFBamProtTableObj
 	ICFBamProtTable getTableRec();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	Get the required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	@return	The required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchemaDef();
+	ICFBamProtSchemaDefObj getRequiredContainerSchemaDef();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	Get the required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
+	 *	@return	The required ICFBamProtSchemaDefObj instance referenced by the SchemaDef key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$ContainerSchemaDef( boolean forceRead );
+	ICFBamProtSchemaDefObj getRequiredContainerSchemaDef( boolean forceRead );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema();
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtRelationObj array of instances referenced by the Relation key.
+	 *	Get the array of optional ICFBamProtRelationObj array of instances referenced by the Relation key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj[] array of instances referenced by the Relation key.
+	 *	@return	The optional ICFBamProtRelationObj[] array of instances referenced by the Relation key.
 	 */
-	List<ICFBamProtRelationObj> get$OptionalOrRequired$ComponentsRelation();
+	List<ICFBamProtRelationObj> getOptionalComponentsRelation();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtRelationObj array of instances referenced by the Relation key.
+	 *	Get the array of optional ICFBamProtRelationObj array of instances referenced by the Relation key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj[] array of instances referenced by the Relation key.
+	 *	@return	The optional ICFBamProtRelationObj[] array of instances referenced by the Relation key.
 	 */
-	List<ICFBamProtRelationObj> get$OptionalOrRequired$ComponentsRelation( boolean forceRead );
+	List<ICFBamProtRelationObj> getOptionalComponentsRelation( boolean forceRead );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the LookupIndex key.
+	 *	Get the optional ICFBamProtIndexObj instance referenced by the LookupIndex key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the LookupIndex key.
+	 *	@return	The optional ICFBamProtIndexObj instance referenced by the LookupIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupLookupIndex();
+	ICFBamProtIndexObj getOptionalLookupLookupIndex();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the LookupIndex key.
+	 *	Get the optional ICFBamProtIndexObj instance referenced by the LookupIndex key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the LookupIndex key.
+	 *	@return	The optional ICFBamProtIndexObj instance referenced by the LookupIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupLookupIndex( boolean forceRead );
+	ICFBamProtIndexObj getOptionalLookupLookupIndex( boolean forceRead );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the AltIndex key.
+	 *	Get the optional ICFBamProtIndexObj instance referenced by the AltIndex key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the AltIndex key.
+	 *	@return	The optional ICFBamProtIndexObj instance referenced by the AltIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupAltIndex();
+	ICFBamProtIndexObj getOptionalLookupAltIndex();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the AltIndex key.
+	 *	Get the optional ICFBamProtIndexObj instance referenced by the AltIndex key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the AltIndex key.
+	 *	@return	The optional ICFBamProtIndexObj instance referenced by the AltIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupAltIndex( boolean forceRead );
+	ICFBamProtIndexObj getOptionalLookupAltIndex( boolean forceRead );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the QualTable key.
+	 *	Get the optional ICFBamProtTableObj instance referenced by the QualTable key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the QualTable key.
+	 *	@return	The optional ICFBamProtTableObj instance referenced by the QualTable key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$LookupQualTable();
+	ICFBamProtTableObj getOptionalLookupQualTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the QualTable key.
+	 *	Get the optional ICFBamProtTableObj instance referenced by the QualTable key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the QualTable key.
+	 *	@return	The optional ICFBamProtTableObj instance referenced by the QualTable key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$LookupQualTable( boolean forceRead );
+	ICFBamProtTableObj getOptionalLookupQualTable( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtIndexObj array of instances referenced by the Index key.
+	 *	Get the array of optional ICFBamProtIndexObj array of instances referenced by the Index key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj[] array of instances referenced by the Index key.
+	 *	@return	The optional ICFBamProtIndexObj[] array of instances referenced by the Index key.
 	 */
-	List<ICFBamProtIndexObj> get$OptionalOrRequired$ComponentsIndex();
+	List<ICFBamProtIndexObj> getOptionalComponentsIndex();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtIndexObj array of instances referenced by the Index key.
+	 *	Get the array of optional ICFBamProtIndexObj array of instances referenced by the Index key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj[] array of instances referenced by the Index key.
+	 *	@return	The optional ICFBamProtIndexObj[] array of instances referenced by the Index key.
 	 */
-	List<ICFBamProtIndexObj> get$OptionalOrRequired$ComponentsIndex( boolean forceRead );
+	List<ICFBamProtIndexObj> getOptionalComponentsIndex( boolean forceRead );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the PrimaryIndex key.
+	 *	Get the optional ICFBamProtIndexObj instance referenced by the PrimaryIndex key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the PrimaryIndex key.
+	 *	@return	The optional ICFBamProtIndexObj instance referenced by the PrimaryIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupPrimaryIndex();
+	ICFBamProtIndexObj getOptionalLookupPrimaryIndex();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtIndexObj instance referenced by the PrimaryIndex key.
+	 *	Get the optional ICFBamProtIndexObj instance referenced by the PrimaryIndex key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtIndexObj instance referenced by the PrimaryIndex key.
+	 *	@return	The optional ICFBamProtIndexObj instance referenced by the PrimaryIndex key.
 	 */
-	ICFBamProtIndexObj get$OptionalOrRequired$LookupPrimaryIndex( boolean forceRead );
+	ICFBamProtIndexObj getOptionalLookupPrimaryIndex( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtValueObj array of instances referenced by the Columns key.
+	 *	Get the array of optional ICFBamProtValueObj array of instances referenced by the Columns key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtValueObj[] array of instances referenced by the Columns key.
+	 *	@return	The optional ICFBamProtValueObj[] array of instances referenced by the Columns key.
 	 */
-	List<ICFBamProtValueObj> get$OptionalOrRequired$ComponentsColumns();
+	List<ICFBamProtValueObj> getOptionalComponentsColumns();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtValueObj array of instances referenced by the Columns key.
+	 *	Get the array of optional ICFBamProtValueObj array of instances referenced by the Columns key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtValueObj[] array of instances referenced by the Columns key.
+	 *	@return	The optional ICFBamProtValueObj[] array of instances referenced by the Columns key.
 	 */
-	List<ICFBamProtValueObj> get$OptionalOrRequired$ComponentsColumns( boolean forceRead );
+	List<ICFBamProtValueObj> getOptionalComponentsColumns( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtRelationObj array of instances referenced by the ReverseRelations key.
+	 *	Get the array of optional ICFBamProtRelationObj array of instances referenced by the ReverseRelations key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj[] array of instances referenced by the ReverseRelations key.
+	 *	@return	The optional ICFBamProtRelationObj[] array of instances referenced by the ReverseRelations key.
 	 */
-	List<ICFBamProtRelationObj> get$OptionalOrRequired$ChildrenReverseRelations();
+	List<ICFBamProtRelationObj> getOptionalChildrenReverseRelations();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtRelationObj array of instances referenced by the ReverseRelations key.
+	 *	Get the array of optional ICFBamProtRelationObj array of instances referenced by the ReverseRelations key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtRelationObj[] array of instances referenced by the ReverseRelations key.
+	 *	@return	The optional ICFBamProtRelationObj[] array of instances referenced by the ReverseRelations key.
 	 */
-	List<ICFBamProtRelationObj> get$OptionalOrRequired$ChildrenReverseRelations( boolean forceRead );
+	List<ICFBamProtRelationObj> getOptionalChildrenReverseRelations( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtChainObj array of instances referenced by the Chains key.
+	 *	Get the array of optional ICFBamProtChainObj array of instances referenced by the Chains key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtChainObj[] array of instances referenced by the Chains key.
+	 *	@return	The optional ICFBamProtChainObj[] array of instances referenced by the Chains key.
 	 */
-	List<ICFBamProtChainObj> get$OptionalOrRequired$ComponentsChains();
+	List<ICFBamProtChainObj> getOptionalComponentsChains();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtChainObj array of instances referenced by the Chains key.
+	 *	Get the array of optional ICFBamProtChainObj array of instances referenced by the Chains key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtChainObj[] array of instances referenced by the Chains key.
+	 *	@return	The optional ICFBamProtChainObj[] array of instances referenced by the Chains key.
 	 */
-	List<ICFBamProtChainObj> get$OptionalOrRequired$ComponentsChains( boolean forceRead );
+	List<ICFBamProtChainObj> getOptionalComponentsChains( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtDelTopDepObj array of instances referenced by the DelDep key.
+	 *	Get the array of optional ICFBamProtDelTopDepObj array of instances referenced by the DelDep key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelTopDepObj[] array of instances referenced by the DelDep key.
+	 *	@return	The optional ICFBamProtDelTopDepObj[] array of instances referenced by the DelDep key.
 	 */
-	List<ICFBamProtDelTopDepObj> get$OptionalOrRequired$ComponentsDelDep();
+	List<ICFBamProtDelTopDepObj> getOptionalComponentsDelDep();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtDelTopDepObj array of instances referenced by the DelDep key.
+	 *	Get the array of optional ICFBamProtDelTopDepObj array of instances referenced by the DelDep key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtDelTopDepObj[] array of instances referenced by the DelDep key.
+	 *	@return	The optional ICFBamProtDelTopDepObj[] array of instances referenced by the DelDep key.
 	 */
-	List<ICFBamProtDelTopDepObj> get$OptionalOrRequired$ComponentsDelDep( boolean forceRead );
+	List<ICFBamProtDelTopDepObj> getOptionalComponentsDelDep( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtClearTopDepObj array of instances referenced by the ClearDep key.
+	 *	Get the array of optional ICFBamProtClearTopDepObj array of instances referenced by the ClearDep key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtClearTopDepObj[] array of instances referenced by the ClearDep key.
+	 *	@return	The optional ICFBamProtClearTopDepObj[] array of instances referenced by the ClearDep key.
 	 */
-	List<ICFBamProtClearTopDepObj> get$OptionalOrRequired$ComponentsClearDep();
+	List<ICFBamProtClearTopDepObj> getOptionalComponentsClearDep();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtClearTopDepObj array of instances referenced by the ClearDep key.
+	 *	Get the array of optional ICFBamProtClearTopDepObj array of instances referenced by the ClearDep key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtClearTopDepObj[] array of instances referenced by the ClearDep key.
+	 *	@return	The optional ICFBamProtClearTopDepObj[] array of instances referenced by the ClearDep key.
 	 */
-	List<ICFBamProtClearTopDepObj> get$OptionalOrRequired$ComponentsClearDep( boolean forceRead );
+	List<ICFBamProtClearTopDepObj> getOptionalComponentsClearDep( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtServerMethodObj array of instances referenced by the ServerMethods key.
+	 *	Get the array of optional ICFBamProtServerMethodObj array of instances referenced by the ServerMethods key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtServerMethodObj[] array of instances referenced by the ServerMethods key.
+	 *	@return	The optional ICFBamProtServerMethodObj[] array of instances referenced by the ServerMethods key.
 	 */
-	List<ICFBamProtServerMethodObj> get$OptionalOrRequired$ComponentsServerMethods();
+	List<ICFBamProtServerMethodObj> getOptionalComponentsServerMethods();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtServerMethodObj array of instances referenced by the ServerMethods key.
+	 *	Get the array of optional ICFBamProtServerMethodObj array of instances referenced by the ServerMethods key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtServerMethodObj[] array of instances referenced by the ServerMethods key.
+	 *	@return	The optional ICFBamProtServerMethodObj[] array of instances referenced by the ServerMethods key.
 	 */
-	List<ICFBamProtServerMethodObj> get$OptionalOrRequired$ComponentsServerMethods( boolean forceRead );
+	List<ICFBamProtServerMethodObj> getOptionalComponentsServerMethods( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtTweakObj array of instances referenced by the Tweaks key.
+	 *	Get the array of optional ICFBamProtTweakObj array of instances referenced by the Tweaks key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTweakObj[] array of instances referenced by the Tweaks key.
+	 *	@return	The optional ICFBamProtTweakObj[] array of instances referenced by the Tweaks key.
 	 */
-	List<ICFBamProtTweakObj> get$OptionalOrRequired$ComponentsTweaks();
+	List<ICFBamProtTweakObj> getOptionalComponentsTweaks();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtTweakObj array of instances referenced by the Tweaks key.
+	 *	Get the array of optional ICFBamProtTweakObj array of instances referenced by the Tweaks key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTweakObj[] array of instances referenced by the Tweaks key.
+	 *	@return	The optional ICFBamProtTweakObj[] array of instances referenced by the Tweaks key.
 	 */
-	List<ICFBamProtTweakObj> get$OptionalOrRequired$ComponentsTweaks( boolean forceRead );
+	List<ICFBamProtTweakObj> getOptionalComponentsTweaks( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SchemaDefId.

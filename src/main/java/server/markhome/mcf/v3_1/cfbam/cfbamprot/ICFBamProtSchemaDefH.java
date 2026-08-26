@@ -68,32 +68,32 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtSchemaDefH extends ICFBamProtScopeH
 {
-	public $implIJavaAtomType$ getRequiredCTenantId();
-	public void setRequiredCTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredMinorVersionId();
-	public void setRequiredMinorVersionId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDbName();
-	public void setOptionalDbName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortName();
-	public void setOptionalShortName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalLabel();
-	public void setOptionalLabel( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortDescription();
-	public void setOptionalShortDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDescription();
-	public void setOptionalDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCopyrightPeriod();
-	public void setRequiredCopyrightPeriod( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCopyrightHolder();
-	public void setRequiredCopyrightHolder( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredAuthorEMail();
-	public void setRequiredAuthorEMail( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredProjectURL();
-	public void setRequiredProjectURL( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredPublishURI();
-	public void setRequiredPublishURI( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredCTenantId();
+	public void setRequiredCTenantId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredMinorVersionId();
+	public void setRequiredMinorVersionId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalDbName();
+	public void setOptionalDbName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public String getRequiredCopyrightPeriod();
+	public void setRequiredCopyrightPeriod( String value );
+	public String getRequiredCopyrightHolder();
+	public void setRequiredCopyrightHolder( String value );
+	public String getRequiredAuthorEMail();
+	public void setRequiredAuthorEMail( String value );
+	public String getRequiredProjectURL();
+	public void setRequiredProjectURL( String value );
+	public String getRequiredPublishURI();
+	public void setRequiredPublishURI( String value );
 	@Override
 	public boolean equals( Object obj );
 

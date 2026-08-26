@@ -68,16 +68,16 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTweakByUDefIdxKey
 {
-	public $implIJavaAtomType$ getRequiredTenantId();
-	public void setRequiredTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredScopeId();
-	public void setRequiredScopeId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaTenantId();
-	public void setOptionalDefSchemaTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredScopeId();
+	public void setRequiredScopeId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaTenantId();
+	public void setOptionalDefSchemaTenantId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -92,18 +92,18 @@ public interface ICFBamProtTableTweakObj
 	ICFBamProtTableTweak getTableTweakRec();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the TableDef key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the TableDef key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the TableDef key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the TableDef key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTableDef();
+	ICFBamProtTableObj getRequiredContainerTableDef();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the TableDef key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the TableDef key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the TableDef key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the TableDef key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTableDef( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerTableDef( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtParamByServerTypeIdxKey
 {
-	public $implIJavaAtomType$ getOptionalTypeId();
-	public void setOptionalTypeId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getOptionalTypeId();
+	public void setOptionalTypeId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

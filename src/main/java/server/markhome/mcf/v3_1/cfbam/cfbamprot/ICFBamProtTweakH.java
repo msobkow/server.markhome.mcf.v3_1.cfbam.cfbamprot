@@ -92,23 +92,23 @@ public interface ICFBamProtTweakH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredId();
+	public ICFLibKeyHash256 getRequiredId();
 	public void setRequiredId( ICFLibKeyHash256 requiredId );
 
-	public $implIJavaAtomType$ getRequiredTenantId();
-	public void setRequiredTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredScopeId();
-	public void setRequiredScopeId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaTenantId();
-	public void setOptionalDefSchemaTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredReplacesInherited();
-	public void setRequiredReplacesInherited( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTweakGelText();
-	public void setRequiredTweakGelText( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredScopeId();
+	public void setRequiredScopeId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaTenantId();
+	public void setOptionalDefSchemaTenantId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public boolean getRequiredReplacesInherited();
+	public void setRequiredReplacesInherited( boolean value );
+	public String getRequiredTweakGelText();
+	public void setRequiredTweakGelText( String value );
 	@Override
 	public boolean equals( Object obj );
 

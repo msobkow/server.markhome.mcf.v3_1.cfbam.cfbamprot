@@ -109,74 +109,74 @@ public interface ICFBamProtParam
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	public $implIJavaAtomType$ getRequiredId();
-	public void setRequiredId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFBamProtServerMethod get$OptionalOrRequired$ContainerServerMeth();
+	public ICFBamProtServerMethod getRequiredContainerServerMeth();
 
-	public void set$OptionalOrRequired$ContainerServerMeth($implIJavaAtomType$ argServerMethodId);
-
-
-	public void set$OptionalOrRequired$ContainerServerMeth(ICFBamProtServerMethod argObj);
-
-	public void set$OptionalOrRequired$ContainerServerMeth(ICFBamPubServerMethod argObj);
-
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupDefSchema();
-
-	public void set$OptionalOrRequired$LookupDefSchema($implIJavaAtomType$ argDefSchemaId);
+	public void setRequiredContainerServerMeth(ICFLibKeyHash256 argServerMethodId);
 
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerServerMeth(ICFBamProtServerMethod argObj);
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamPubSchemaDef argObj);
+	public void setRequiredContainerServerMeth(ICFBamPubServerMethod argObj);
 
-	public ICFBamProtParam get$OptionalOrRequired$LookupPrev();
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void set$OptionalOrRequired$LookupPrev($implIJavaAtomType$ argPrevId);
-
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamProtParam argObj);
-
-	public void set$OptionalOrRequired$LookupPrev(ICFBamPubParam argObj);
-
-	public ICFBamProtParam get$OptionalOrRequired$LookupNext();
-
-	public void set$OptionalOrRequired$LookupNext($implIJavaAtomType$ argNextId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamProtParam argObj);
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$LookupNext(ICFBamPubParam argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
-	public ICFBamProtValue get$OptionalOrRequired$LookupType();
+	public ICFBamProtParam getOptionalLookupPrev();
 
-	public void set$OptionalOrRequired$LookupType($implIJavaAtomType$ argTypeId);
+	public void setOptionalLookupPrev(ICFLibKeyHash256 argPrevId);
 
 
-	public void set$OptionalOrRequired$LookupType(ICFBamProtValue argObj);
+	public void setOptionalLookupPrev(ICFBamProtParam argObj);
 
-	public void set$OptionalOrRequired$LookupType(ICFBamPubValue argObj);
+	public void setOptionalLookupPrev(ICFBamPubParam argObj);
 
-	public $implIJavaAtomType$ getRequiredServerMethodId();
-	public void setRequiredServerMethodId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortDescription();
-	public void setOptionalShortDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDescription();
-	public void setOptionalDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIsNullable();
-	public void setRequiredIsNullable( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalTypeId();
-	public void setOptionalTypeId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalPrevId();
-	public void setOptionalPrevId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalNextId();
-	public void setOptionalNextId( $implIJavaAtomType$ value );
+	public ICFBamProtParam getOptionalLookupNext();
+
+	public void setOptionalLookupNext(ICFLibKeyHash256 argNextId);
+
+
+	public void setOptionalLookupNext(ICFBamProtParam argObj);
+
+	public void setOptionalLookupNext(ICFBamPubParam argObj);
+
+	public ICFBamProtValue getRequiredLookupType();
+
+	public void setRequiredLookupType(ICFLibKeyHash256 argTypeId);
+
+
+	public void setRequiredLookupType(ICFBamProtValue argObj);
+
+	public void setRequiredLookupType(ICFBamPubValue argObj);
+
+	public ICFLibKeyHash256 getRequiredServerMethodId();
+	public void setRequiredServerMethodId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public boolean getRequiredIsNullable();
+	public void setRequiredIsNullable( boolean value );
+	public ICFLibKeyHash256 getOptionalTypeId();
+	public void setOptionalTypeId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalPrevId();
+	public void setOptionalPrevId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalNextId();
+	public void setOptionalNextId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

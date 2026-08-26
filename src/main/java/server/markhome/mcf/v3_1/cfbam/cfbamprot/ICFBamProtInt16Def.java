@@ -81,12 +81,12 @@ public interface ICFBamProtInt16Def
 	public final static int CLASS_CODE = 0xa827;
 	public final static String S_CLASS_CODE = "a827";
 
-	public $implIJavaAtomType$ getOptionalInitValue();
-	public void setOptionalInitValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalMinValue();
-	public void setOptionalMinValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalMaxValue();
-	public void setOptionalMaxValue( $implIJavaAtomType$ value );
+	public Short getOptionalInitValue();
+	public void setOptionalInitValue( Short value );
+	public Short getOptionalMinValue();
+	public void setOptionalMinValue( Short value );
+	public Short getOptionalMaxValue();
+	public void setOptionalMaxValue( Short value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

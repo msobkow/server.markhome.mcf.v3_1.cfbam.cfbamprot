@@ -79,21 +79,21 @@ public interface ICFBamProtTZTimestampColEditObj
 	 *
 	 *	@return	The ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
+	ICFBamProtTableObj getRequiredContainerTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtTableObj instance referenced by the Table key.
 	 *
 	 *	@param	value	the ICFBamProtTableObj instance to be referenced by the Table key.
 	 */
-	void set$OptionalOrRequired$ContainerTable( ICFBamProtTableObj value );
+	void setRequiredContainerTable( ICFBamProtTableObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute TableId.

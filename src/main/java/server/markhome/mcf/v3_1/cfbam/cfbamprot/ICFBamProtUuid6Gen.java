@@ -78,10 +78,10 @@ public interface ICFBamProtUuid6Gen
 	public final static int CLASS_CODE = 0xa88d;
 	public final static String S_CLASS_CODE = "a88d";
 
-	public $implIJavaAtomType$ getRequiredSlice();
-	public void setRequiredSlice( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredBlockSize();
-	public void setRequiredBlockSize( $implIJavaAtomType$ value );
+	public short getRequiredSlice();
+	public void setRequiredSlice( short value );
+	public int getRequiredBlockSize();
+	public void setRequiredBlockSize( int value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

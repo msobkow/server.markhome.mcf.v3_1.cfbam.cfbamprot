@@ -79,42 +79,42 @@ public interface ICFBamProtTableColEditObj
 	 *
 	 *	@return	The ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
+	ICFBamProtTableObj getRequiredContainerTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtTableObj instance referenced by the Table key.
 	 *
 	 *	@param	value	the ICFBamProtTableObj instance to be referenced by the Table key.
 	 */
-	void set$OptionalOrRequired$ContainerTable( ICFBamProtTableObj value );
+	void setRequiredContainerTable( ICFBamProtTableObj value );
 
 	/**
 	 *	Get the ICFBamProtValueObj instance referenced by the DataType key.
 	 *
 	 *	@return	The ICFBamProtValueObj instance referenced by the DataType key.
 	 */
-	ICFBamProtValueObj get$OptionalOrRequired$ParentDataType();
+	ICFBamProtValueObj getRequiredParentDataType();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
+	 *	Get the required ICFBamProtValueObj instance referenced by the DataType key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
+	 *	@return	The required ICFBamProtValueObj instance referenced by the DataType key.
 	 */
-	ICFBamProtValueObj get$OptionalOrRequired$ParentDataType( boolean forceRead );
+	ICFBamProtValueObj getRequiredParentDataType( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtValueObj instance referenced by the DataType key.
 	 *
 	 *	@param	value	the ICFBamProtValueObj instance to be referenced by the DataType key.
 	 */
-	void set$OptionalOrRequired$ParentDataType( ICFBamProtValueObj value );
+	void setRequiredParentDataType( ICFBamProtValueObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute TableId.

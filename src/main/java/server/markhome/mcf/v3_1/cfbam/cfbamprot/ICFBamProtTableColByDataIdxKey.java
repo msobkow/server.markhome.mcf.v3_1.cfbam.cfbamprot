@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTableColByDataIdxKey
 {
-	public $implIJavaAtomType$ getOptionalDataId();
-	public void setOptionalDataId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getOptionalDataId();
+	public void setOptionalDataId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

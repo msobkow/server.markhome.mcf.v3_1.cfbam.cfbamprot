@@ -68,10 +68,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtSchemaDefByPubURIIdxKey
 {
-	public $implIJavaAtomType$ getRequiredCTenantId();
-	public void setRequiredCTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredPublishURI();
-	public void setRequiredPublishURI( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredCTenantId();
+	public void setRequiredCTenantId( ICFLibKeyHash256 value );
+	public String getRequiredPublishURI();
+	public void setRequiredPublishURI( String value );
 	@Override
 	public boolean equals( Object obj );
 

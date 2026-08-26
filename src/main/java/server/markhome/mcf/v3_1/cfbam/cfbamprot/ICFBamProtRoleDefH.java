@@ -92,19 +92,19 @@ public interface ICFBamProtRoleDefH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredId();
+	public ICFLibKeyHash256 getRequiredId();
 	public void setRequiredId( ICFLibKeyHash256 requiredId );
 
-	public $implIJavaAtomType$ getRequiredScopeId();
-	public void setRequiredScopeId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredEnables();
-	public void setRequiredEnables( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIncludes();
-	public void setRequiredIncludes( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredScopeId();
+	public void setRequiredScopeId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getRequiredEnables();
+	public void setRequiredEnables( String value );
+	public String getRequiredIncludes();
+	public void setRequiredIncludes( String value );
 	@Override
 	public boolean equals( Object obj );
 

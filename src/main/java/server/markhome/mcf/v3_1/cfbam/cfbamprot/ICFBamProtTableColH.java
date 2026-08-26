@@ -68,14 +68,14 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTableColH extends ICFBamProtValueH
 {
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDbName();
-	public void setOptionalDbName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDataId();
-	public void setOptionalDataId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalXmlElementName();
-	public void setOptionalXmlElementName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
+	public String getOptionalDbName();
+	public void setOptionalDbName( String value );
+	public ICFLibKeyHash256 getOptionalDataId();
+	public void setOptionalDataId( ICFLibKeyHash256 value );
+	public String getOptionalXmlElementName();
+	public void setOptionalXmlElementName( String value );
 	@Override
 	public boolean equals( Object obj );
 

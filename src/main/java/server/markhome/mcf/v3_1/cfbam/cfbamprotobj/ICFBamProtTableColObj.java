@@ -92,32 +92,32 @@ public interface ICFBamProtTableColObj
 	ICFBamProtTableCol getTableColRec();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable();
+	ICFBamProtTableObj getRequiredContainerTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the Table key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the Table key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the Table key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerTable( boolean forceRead );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
+	 *	Get the required ICFBamProtValueObj instance referenced by the DataType key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
+	 *	@return	The required ICFBamProtValueObj instance referenced by the DataType key.
 	 */
-	ICFBamProtValueObj get$OptionalOrRequired$ParentDataType();
+	ICFBamProtValueObj getRequiredParentDataType();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
+	 *	Get the required ICFBamProtValueObj instance referenced by the DataType key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtValueObj instance referenced by the DataType key.
+	 *	@return	The required ICFBamProtValueObj instance referenced by the DataType key.
 	 */
-	ICFBamProtValueObj get$OptionalOrRequired$ParentDataType( boolean forceRead );
+	ICFBamProtValueObj getRequiredParentDataType( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

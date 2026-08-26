@@ -79,49 +79,49 @@ public interface ICFBamProtServerMethodEditObj
 	 *
 	 *	@return	The ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema();
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	Get the optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
+	 *	@return	The optional ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 */
-	ICFBamProtSchemaDefObj get$OptionalOrRequired$LookupDefSchema( boolean forceRead );
+	ICFBamProtSchemaDefObj getOptionalLookupDefSchema( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtSchemaDefObj instance referenced by the DefSchema key.
 	 *
 	 *	@param	value	the ICFBamProtSchemaDefObj instance to be referenced by the DefSchema key.
 	 */
-	void set$OptionalOrRequired$LookupDefSchema( ICFBamProtSchemaDefObj value );
+	void setOptionalLookupDefSchema( ICFBamProtSchemaDefObj value );
 
 	/**
 	 *	Get the ICFBamProtTableObj instance referenced by the ForTable key.
 	 *
 	 *	@return	The ICFBamProtTableObj instance referenced by the ForTable key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerForTable();
+	ICFBamProtTableObj getRequiredContainerForTable();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTableObj instance referenced by the ForTable key.
+	 *	Get the required ICFBamProtTableObj instance referenced by the ForTable key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj instance referenced by the ForTable key.
+	 *	@return	The required ICFBamProtTableObj instance referenced by the ForTable key.
 	 */
-	ICFBamProtTableObj get$OptionalOrRequired$ContainerForTable( boolean forceRead );
+	ICFBamProtTableObj getRequiredContainerForTable( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtTableObj instance referenced by the ForTable key.
 	 *
 	 *	@param	value	the ICFBamProtTableObj instance to be referenced by the ForTable key.
 	 */
-	void set$OptionalOrRequired$ContainerForTable( ICFBamProtTableObj value );
+	void setRequiredContainerForTable( ICFBamProtTableObj value );
 
 	/**
 	 *	Get a list ICFBamProtParamObj instances referenced by the Params key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtParamObj instances referenced by the Params key.
 	 */
-	List<ICFBamProtParamObj> get$OptionalOrRequired$ComponentsParams();
+	List<ICFBamProtParamObj> getOptionalComponentsParams();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute TableId.

@@ -95,102 +95,102 @@ public interface ICFBamProtRelation
 	public final static int CLASS_CODE = 0xa839;
 	public final static String S_CLASS_CODE = "a839";
 
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupDefSchema();
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
 
-	public void set$OptionalOrRequired$LookupDefSchema($implIJavaAtomType$ argDefSchemaId);
-
-
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamProtSchemaDef argObj);
-
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamPubSchemaDef argObj);
-
-	public ICFBamProtTable get$OptionalOrRequired$ContainerFromTable();
-
-	public void set$OptionalOrRequired$ContainerFromTable($implIJavaAtomType$ argTableId);
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
 
 
-	public void set$OptionalOrRequired$ContainerFromTable(ICFBamProtTable argObj);
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
 
-	public void set$OptionalOrRequired$ContainerFromTable(ICFBamPubTable argObj);
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
 
-	public ICFBamProtIndex get$OptionalOrRequired$LookupFromIndex();
+	public ICFBamProtTable getRequiredContainerFromTable();
 
-	public void set$OptionalOrRequired$LookupFromIndex($implIJavaAtomType$ argFromIndexId);
-
-
-	public void set$OptionalOrRequired$LookupFromIndex(ICFBamProtIndex argObj);
-
-	public void set$OptionalOrRequired$LookupFromIndex(ICFBamPubIndex argObj);
-
-	public ICFBamProtTable get$OptionalOrRequired$LookupToTable();
-
-	public void set$OptionalOrRequired$LookupToTable($implIJavaAtomType$ argToTableId);
+	public void setRequiredContainerFromTable(ICFLibKeyHash256 argTableId);
 
 
-	public void set$OptionalOrRequired$LookupToTable(ICFBamProtTable argObj);
+	public void setRequiredContainerFromTable(ICFBamProtTable argObj);
 
-	public void set$OptionalOrRequired$LookupToTable(ICFBamPubTable argObj);
+	public void setRequiredContainerFromTable(ICFBamPubTable argObj);
 
-	public ICFBamProtIndex get$OptionalOrRequired$LookupToIndex();
+	public ICFBamProtIndex getRequiredLookupFromIndex();
 
-	public void set$OptionalOrRequired$LookupToIndex($implIJavaAtomType$ argToIndexId);
-
-
-	public void set$OptionalOrRequired$LookupToIndex(ICFBamProtIndex argObj);
-
-	public void set$OptionalOrRequired$LookupToIndex(ICFBamPubIndex argObj);
-
-	public ICFBamProtRelation get$OptionalOrRequired$LookupNarrowed();
-
-	public void set$OptionalOrRequired$LookupNarrowed($implIJavaAtomType$ argNarrowedId);
+	public void setRequiredLookupFromIndex(ICFLibKeyHash256 argFromIndexId);
 
 
-	public void set$OptionalOrRequired$LookupNarrowed(ICFBamProtRelation argObj);
+	public void setRequiredLookupFromIndex(ICFBamProtIndex argObj);
 
-	public void set$OptionalOrRequired$LookupNarrowed(ICFBamPubRelation argObj);
+	public void setRequiredLookupFromIndex(ICFBamPubIndex argObj);
 
-	public List<ICFBamProtRelationCol> get$OptionalOrRequired$ComponentsColumns();
+	public ICFBamProtTable getRequiredLookupToTable();
 
-	public List<ICFBamProtPopTopDep> get$OptionalOrRequired$ComponentsPopDep();
+	public void setRequiredLookupToTable(ICFLibKeyHash256 argToTableId);
 
-	public $implIJavaAtomType$ getRequiredTableId();
-	public void setRequiredTableId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortName();
-	public void setOptionalShortName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalLabel();
-	public void setOptionalLabel( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalShortDescription();
-	public void setOptionalShortDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDescription();
-	public void setOptionalDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredRelationType();
-	public void setRequiredRelationType( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDbName();
-	public void setOptionalDbName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalSuffix();
-	public void setOptionalSuffix( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredFromIndexId();
-	public void setRequiredFromIndexId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredToTableId();
-	public void setRequiredToTableId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredToIndexId();
-	public void setRequiredToIndexId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIsRequired();
-	public void setRequiredIsRequired( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIsXsdContainer();
-	public void setRequiredIsXsdContainer( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIsLateResolver();
-	public void setRequiredIsLateResolver( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredAllowAddendum();
-	public void setRequiredAllowAddendum( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalNarrowedId();
-	public void setOptionalNarrowedId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCodeVis();
-	public void setRequiredCodeVis( $implIJavaAtomType$ value );
+
+	public void setRequiredLookupToTable(ICFBamProtTable argObj);
+
+	public void setRequiredLookupToTable(ICFBamPubTable argObj);
+
+	public ICFBamProtIndex getRequiredLookupToIndex();
+
+	public void setRequiredLookupToIndex(ICFLibKeyHash256 argToIndexId);
+
+
+	public void setRequiredLookupToIndex(ICFBamProtIndex argObj);
+
+	public void setRequiredLookupToIndex(ICFBamPubIndex argObj);
+
+	public ICFBamProtRelation getOptionalLookupNarrowed();
+
+	public void setOptionalLookupNarrowed(ICFLibKeyHash256 argNarrowedId);
+
+
+	public void setOptionalLookupNarrowed(ICFBamProtRelation argObj);
+
+	public void setOptionalLookupNarrowed(ICFBamPubRelation argObj);
+
+	public List<ICFBamProtRelationCol> getOptionalComponentsColumns();
+
+	public List<ICFBamProtPopTopDep> getOptionalComponentsPopDep();
+
+	public ICFLibKeyHash256 getRequiredTableId();
+	public void setRequiredTableId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalShortName();
+	public void setOptionalShortName( String value );
+	public String getOptionalLabel();
+	public void setOptionalLabel( String value );
+	public String getOptionalShortDescription();
+	public void setOptionalShortDescription( String value );
+	public String getOptionalDescription();
+	public void setOptionalDescription( String value );
+	public ICFBamPubSchema.RelationTypeEnum getRequiredRelationType();
+	public void setRequiredRelationType( ICFBamPubSchema.RelationTypeEnum value );
+	public String getOptionalDbName();
+	public void setOptionalDbName( String value );
+	public String getOptionalSuffix();
+	public void setOptionalSuffix( String value );
+	public ICFLibKeyHash256 getRequiredFromIndexId();
+	public void setRequiredFromIndexId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredToTableId();
+	public void setRequiredToTableId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredToIndexId();
+	public void setRequiredToIndexId( ICFLibKeyHash256 value );
+	public boolean getRequiredIsRequired();
+	public void setRequiredIsRequired( boolean value );
+	public boolean getRequiredIsXsdContainer();
+	public void setRequiredIsXsdContainer( boolean value );
+	public boolean getRequiredIsLateResolver();
+	public void setRequiredIsLateResolver( boolean value );
+	public boolean getRequiredAllowAddendum();
+	public void setRequiredAllowAddendum( boolean value );
+	public ICFLibKeyHash256 getOptionalNarrowedId();
+	public void setOptionalNarrowedId( ICFLibKeyHash256 value );
+	public ICFBamPubSchema.CodeVisibilityEnum getRequiredCodeVis();
+	public void setRequiredCodeVis( ICFBamPubSchema.CodeVisibilityEnum value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

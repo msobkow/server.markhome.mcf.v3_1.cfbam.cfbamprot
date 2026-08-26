@@ -74,17 +74,17 @@ public interface ICFBamProtServerListFunc
 	public final static int CLASS_CODE = 0xa83b;
 	public final static String S_CLASS_CODE = "a83b";
 
-	public ICFBamProtTable get$OptionalOrRequired$LookupRetTable();
+	public ICFBamProtTable getOptionalLookupRetTable();
 
-	public void set$OptionalOrRequired$LookupRetTable($implIJavaAtomType$ argRetTableId);
+	public void setOptionalLookupRetTable(ICFLibKeyHash256 argRetTableId);
 
 
-	public void set$OptionalOrRequired$LookupRetTable(ICFBamProtTable argObj);
+	public void setOptionalLookupRetTable(ICFBamProtTable argObj);
 
-	public void set$OptionalOrRequired$LookupRetTable(ICFBamPubTable argObj);
+	public void setOptionalLookupRetTable(ICFBamPubTable argObj);
 
-	public $implIJavaAtomType$ getOptionalRetTableId();
-	public void setOptionalRetTableId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getOptionalRetTableId();
+	public void setOptionalRetTableId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

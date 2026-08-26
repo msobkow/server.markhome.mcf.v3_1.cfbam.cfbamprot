@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtRelationByNarrowedIdxKey
 {
-	public $implIJavaAtomType$ getOptionalNarrowedId();
-	public void setOptionalNarrowedId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getOptionalNarrowedId();
+	public void setOptionalNarrowedId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

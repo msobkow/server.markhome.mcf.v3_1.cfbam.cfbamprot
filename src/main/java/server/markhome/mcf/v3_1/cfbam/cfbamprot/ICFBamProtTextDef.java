@@ -76,12 +76,12 @@ public interface ICFBamProtTextDef
 	public final static int CLASS_CODE = 0xa85d;
 	public final static String S_CLASS_CODE = "a85d";
 
-	public $implIJavaAtomType$ getRequiredMaxLen();
-	public void setRequiredMaxLen( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalInitValue();
-	public void setOptionalInitValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalXmlElementName();
-	public void setOptionalXmlElementName( $implIJavaAtomType$ value );
+	public int getRequiredMaxLen();
+	public void setRequiredMaxLen( int value );
+	public String getOptionalInitValue();
+	public void setOptionalInitValue( String value );
+	public String getOptionalXmlElementName();
+	public void setOptionalXmlElementName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

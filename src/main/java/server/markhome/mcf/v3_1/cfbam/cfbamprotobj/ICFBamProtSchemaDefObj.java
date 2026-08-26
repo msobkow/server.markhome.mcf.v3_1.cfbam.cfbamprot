@@ -92,102 +92,102 @@ public interface ICFBamProtSchemaDefObj
 	ICFBamProtSchemaDef getSchemaDefRec();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtMinorVersionObj instance referenced by the MinorVersion key.
+	 *	Get the required ICFBamProtMinorVersionObj instance referenced by the MinorVersion key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtMinorVersionObj instance referenced by the MinorVersion key.
+	 *	@return	The required ICFBamProtMinorVersionObj instance referenced by the MinorVersion key.
 	 */
-	ICFIntPubMinorVersionObj get$OptionalOrRequired$ContainerMinorVersion();
+	ICFIntPubMinorVersionObj getRequiredContainerMinorVersion();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
+	 *	Get the required ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
+	 *	@return	The required ICFIntProtMinorVersionObj instance referenced by the MinorVersion key.
 	 */
-	ICFIntPubMinorVersionObj get$OptionalOrRequired$ContainerMinorVersion( boolean forceRead );
+	ICFIntPubMinorVersionObj getRequiredContainerMinorVersion( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtTableObj array of instances referenced by the Tables key.
+	 *	Get the array of optional ICFBamProtTableObj array of instances referenced by the Tables key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj[] array of instances referenced by the Tables key.
+	 *	@return	The optional ICFBamProtTableObj[] array of instances referenced by the Tables key.
 	 */
-	List<ICFBamProtTableObj> get$OptionalOrRequired$ComponentsTables();
+	List<ICFBamProtTableObj> getOptionalComponentsTables();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtTableObj array of instances referenced by the Tables key.
+	 *	Get the array of optional ICFBamProtTableObj array of instances referenced by the Tables key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTableObj[] array of instances referenced by the Tables key.
+	 *	@return	The optional ICFBamProtTableObj[] array of instances referenced by the Tables key.
 	 */
-	List<ICFBamProtTableObj> get$OptionalOrRequired$ComponentsTables( boolean forceRead );
+	List<ICFBamProtTableObj> getOptionalComponentsTables( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtValueObj array of instances referenced by the Types key.
+	 *	Get the array of optional ICFBamProtValueObj array of instances referenced by the Types key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtValueObj[] array of instances referenced by the Types key.
+	 *	@return	The optional ICFBamProtValueObj[] array of instances referenced by the Types key.
 	 */
-	List<ICFBamProtValueObj> get$OptionalOrRequired$ComponentsTypes();
+	List<ICFBamProtValueObj> getOptionalComponentsTypes();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtValueObj array of instances referenced by the Types key.
+	 *	Get the array of optional ICFBamProtValueObj array of instances referenced by the Types key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtValueObj[] array of instances referenced by the Types key.
+	 *	@return	The optional ICFBamProtValueObj[] array of instances referenced by the Types key.
 	 */
-	List<ICFBamProtValueObj> get$OptionalOrRequired$ComponentsTypes( boolean forceRead );
+	List<ICFBamProtValueObj> getOptionalComponentsTypes( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtSchemaRefObj array of instances referenced by the SchemaRefs key.
+	 *	Get the array of optional ICFBamProtSchemaRefObj array of instances referenced by the SchemaRefs key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaRefObj[] array of instances referenced by the SchemaRefs key.
+	 *	@return	The optional ICFBamProtSchemaRefObj[] array of instances referenced by the SchemaRefs key.
 	 */
-	List<ICFBamProtSchemaRefObj> get$OptionalOrRequired$ComponentsSchemaRefs();
+	List<ICFBamProtSchemaRefObj> getOptionalComponentsSchemaRefs();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtSchemaRefObj array of instances referenced by the SchemaRefs key.
+	 *	Get the array of optional ICFBamProtSchemaRefObj array of instances referenced by the SchemaRefs key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaRefObj[] array of instances referenced by the SchemaRefs key.
+	 *	@return	The optional ICFBamProtSchemaRefObj[] array of instances referenced by the SchemaRefs key.
 	 */
-	List<ICFBamProtSchemaRefObj> get$OptionalOrRequired$ComponentsSchemaRefs( boolean forceRead );
+	List<ICFBamProtSchemaRefObj> getOptionalComponentsSchemaRefs( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtTweakObj array of instances referenced by the Tweaks key.
+	 *	Get the array of optional ICFBamProtTweakObj array of instances referenced by the Tweaks key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTweakObj[] array of instances referenced by the Tweaks key.
+	 *	@return	The optional ICFBamProtTweakObj[] array of instances referenced by the Tweaks key.
 	 */
-	List<ICFBamProtTweakObj> get$OptionalOrRequired$ComponentsTweaks();
+	List<ICFBamProtTweakObj> getOptionalComponentsTweaks();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtTweakObj array of instances referenced by the Tweaks key.
+	 *	Get the array of optional ICFBamProtTweakObj array of instances referenced by the Tweaks key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTweakObj[] array of instances referenced by the Tweaks key.
+	 *	@return	The optional ICFBamProtTweakObj[] array of instances referenced by the Tweaks key.
 	 */
-	List<ICFBamProtTweakObj> get$OptionalOrRequired$ComponentsTweaks( boolean forceRead );
+	List<ICFBamProtTweakObj> getOptionalComponentsTweaks( boolean forceRead );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtSchemaRoleObj array of instances referenced by the Roles key.
+	 *	Get the array of optional ICFBamProtSchemaRoleObj array of instances referenced by the Roles key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaRoleObj[] array of instances referenced by the Roles key.
+	 *	@return	The optional ICFBamProtSchemaRoleObj[] array of instances referenced by the Roles key.
 	 */
-	List<ICFBamProtSchemaRoleObj> get$OptionalOrRequired$ComponentsRoles();
+	List<ICFBamProtSchemaRoleObj> getOptionalComponentsRoles();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFBamProtSchemaRoleObj array of instances referenced by the Roles key.
+	 *	Get the array of optional ICFBamProtSchemaRoleObj array of instances referenced by the Roles key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtSchemaRoleObj[] array of instances referenced by the Roles key.
+	 *	@return	The optional ICFBamProtSchemaRoleObj[] array of instances referenced by the Roles key.
 	 */
-	List<ICFBamProtSchemaRoleObj> get$OptionalOrRequired$ComponentsRoles( boolean forceRead );
+	List<ICFBamProtSchemaRoleObj> getOptionalComponentsRoles( boolean forceRead );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtTenantObj instance referenced by the CTenant key.
+	 *	Get the required ICFBamProtTenantObj instance referenced by the CTenant key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtTenantObj instance referenced by the CTenant key.
+	 *	@return	The required ICFBamProtTenantObj instance referenced by the CTenant key.
 	 */
-	ICFSecPubTenantObj get$OptionalOrRequired$OwnerCTenant();
+	ICFSecPubTenantObj getRequiredOwnerCTenant();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtTenantObj instance referenced by the CTenant key.
+	 *	Get the required ICFSecProtTenantObj instance referenced by the CTenant key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtTenantObj instance referenced by the CTenant key.
+	 *	@return	The required ICFSecProtTenantObj instance referenced by the CTenant key.
 	 */
-	ICFSecPubTenantObj get$OptionalOrRequired$OwnerCTenant( boolean forceRead );
+	ICFSecPubTenantObj getRequiredOwnerCTenant( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

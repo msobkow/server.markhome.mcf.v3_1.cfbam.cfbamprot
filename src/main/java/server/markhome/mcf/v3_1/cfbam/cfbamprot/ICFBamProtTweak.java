@@ -108,43 +108,43 @@ public interface ICFBamProtTweak
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	public $implIJavaAtomType$ getRequiredId();
-	public void setRequiredId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFBamProtScope get$OptionalOrRequired$ContainerScopeDef();
+	public ICFBamProtScope getRequiredContainerScopeDef();
 
-	public void set$OptionalOrRequired$ContainerScopeDef($implIJavaAtomType$ argScopeId);
-
-
-	public void set$OptionalOrRequired$ContainerScopeDef(ICFBamProtScope argObj);
-
-	public void set$OptionalOrRequired$ContainerScopeDef(ICFBamPubScope argObj);
-
-	public ICFBamProtSchemaDef get$OptionalOrRequired$LookupDefSchema();
-
-	public void set$OptionalOrRequired$LookupDefSchema($implIJavaAtomType$ argDefSchemaId);
+	public void setRequiredContainerScopeDef(ICFLibKeyHash256 argScopeId);
 
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamProtSchemaDef argObj);
+	public void setRequiredContainerScopeDef(ICFBamProtScope argObj);
 
-	public void set$OptionalOrRequired$LookupDefSchema(ICFBamPubSchemaDef argObj);
+	public void setRequiredContainerScopeDef(ICFBamPubScope argObj);
 
-	public $implIJavaAtomType$ getRequiredTenantId();
-	public void setRequiredTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredScopeId();
-	public void setRequiredScopeId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaTenantId();
-	public void setOptionalDefSchemaTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDefSchemaId();
-	public void setOptionalDefSchemaId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredReplacesInherited();
-	public void setRequiredReplacesInherited( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTweakGelText();
-	public void setRequiredTweakGelText( $implIJavaAtomType$ value );
+	public ICFBamProtSchemaDef getOptionalLookupDefSchema();
+
+	public void setOptionalLookupDefSchema(ICFLibKeyHash256 argDefSchemaId);
+
+
+	public void setOptionalLookupDefSchema(ICFBamProtSchemaDef argObj);
+
+	public void setOptionalLookupDefSchema(ICFBamPubSchemaDef argObj);
+
+	public ICFLibKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredScopeId();
+	public void setRequiredScopeId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaTenantId();
+	public void setOptionalDefSchemaTenantId( ICFLibKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalDefSchemaId();
+	public void setOptionalDefSchemaId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public boolean getRequiredReplacesInherited();
+	public void setRequiredReplacesInherited( boolean value );
+	public String getRequiredTweakGelText();
+	public void setRequiredTweakGelText( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

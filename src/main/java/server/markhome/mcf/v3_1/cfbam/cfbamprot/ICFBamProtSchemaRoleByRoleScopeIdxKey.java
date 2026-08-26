@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtSchemaRoleByRoleScopeIdxKey
 {
-	public $implIJavaAtomType$ getRequiredRoleScope();
-	public void setRequiredRoleScope( $implIJavaAtomType$ value );
+	public ICFBamPubSchema.RoleScopeEnum getRequiredRoleScope();
+	public void setRequiredRoleScope( ICFBamPubSchema.RoleScopeEnum value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -78,12 +78,12 @@ public interface ICFBamProtUInt64Def
 	public final static int CLASS_CODE = 0xa869;
 	public final static String S_CLASS_CODE = "a869";
 
-	public $implIJavaAtomType$ getOptionalInitValue();
-	public void setOptionalInitValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalMinValue();
-	public void setOptionalMinValue( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalMaxValue();
-	public void setOptionalMaxValue( $implIJavaAtomType$ value );
+	public BigDecimal getOptionalInitValue();
+	public void setOptionalInitValue( BigDecimal value );
+	public BigDecimal getOptionalMinValue();
+	public void setOptionalMinValue( BigDecimal value );
+	public BigDecimal getOptionalMaxValue();
+	public void setOptionalMaxValue( BigDecimal value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

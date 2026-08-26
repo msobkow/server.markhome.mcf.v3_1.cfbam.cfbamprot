@@ -75,21 +75,21 @@ public interface ICFBamProtPopSubDep1
 	public final static int CLASS_CODE = 0xa835;
 	public final static String S_CLASS_CODE = "a835";
 
-	public ICFBamProtPopTopDep get$OptionalOrRequired$ContainerContPopTopDep();
+	public ICFBamProtPopTopDep getRequiredContainerContPopTopDep();
 
-	public void set$OptionalOrRequired$ContainerContPopTopDep($implIJavaAtomType$ argPopTopDepId);
+	public void setRequiredContainerContPopTopDep(ICFLibKeyHash256 argPopTopDepId);
 
 
-	public void set$OptionalOrRequired$ContainerContPopTopDep(ICFBamProtPopTopDep argObj);
+	public void setRequiredContainerContPopTopDep(ICFBamProtPopTopDep argObj);
 
-	public void set$OptionalOrRequired$ContainerContPopTopDep(ICFBamPubPopTopDep argObj);
+	public void setRequiredContainerContPopTopDep(ICFBamPubPopTopDep argObj);
 
-	public List<ICFBamProtPopSubDep2> get$OptionalOrRequired$ComponentsPopDep();
+	public List<ICFBamProtPopSubDep2> getOptionalComponentsPopDep();
 
-	public $implIJavaAtomType$ getRequiredPopTopDepId();
-	public void setRequiredPopTopDepId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredPopTopDepId();
+	public void setRequiredPopTopDepId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

@@ -68,8 +68,8 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtSchemaDefByMinorVersionIdxKey
 {
-	public $implIJavaAtomType$ getRequiredMinorVersionId();
-	public void setRequiredMinorVersionId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredMinorVersionId();
+	public void setRequiredMinorVersionId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -68,10 +68,10 @@ import server.markhome.mcf.v3_1.cfbam.cfbamprotobj.*;
  */
 public interface ICFBamProtTableBySchemaCdIdxKey
 {
-	public $implIJavaAtomType$ getRequiredSchemaDefId();
-	public void setRequiredSchemaDefId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTableClassCode();
-	public void setRequiredTableClassCode( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSchemaDefId();
+	public void setRequiredSchemaDefId( ICFLibKeyHash256 value );
+	public String getRequiredTableClassCode();
+	public void setRequiredTableClassCode( String value );
 	@Override
 	public boolean equals( Object obj );
 

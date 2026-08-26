@@ -72,8 +72,8 @@ public interface ICFBamProtTimeDef
 	public final static int CLASS_CODE = 0xa85f;
 	public final static String S_CLASS_CODE = "a85f";
 
-	public $implIJavaAtomType$ getOptionalDummy();
-	public void setOptionalDummy( $implIJavaAtomType$ value );
+	public String getOptionalDummy();
+	public void setOptionalDummy( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

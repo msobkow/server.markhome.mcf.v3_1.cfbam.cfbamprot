@@ -79,28 +79,28 @@ public interface ICFBamProtPopSubDep2EditObj
 	 *
 	 *	@return	The ICFBamProtPopSubDep1Obj instance referenced by the PopSubDep1 key.
 	 */
-	ICFBamProtPopSubDep1Obj get$OptionalOrRequired$ContainerPopSubDep1();
+	ICFBamProtPopSubDep1Obj getRequiredContainerPopSubDep1();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFBamProtPopSubDep1Obj instance referenced by the PopSubDep1 key.
+	 *	Get the required ICFBamProtPopSubDep1Obj instance referenced by the PopSubDep1 key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFBamProtPopSubDep1Obj instance referenced by the PopSubDep1 key.
+	 *	@return	The required ICFBamProtPopSubDep1Obj instance referenced by the PopSubDep1 key.
 	 */
-	ICFBamProtPopSubDep1Obj get$OptionalOrRequired$ContainerPopSubDep1( boolean forceRead );
+	ICFBamProtPopSubDep1Obj getRequiredContainerPopSubDep1( boolean forceRead );
 
 	/**
 	 *	Set the ICFBamProtPopSubDep1Obj instance referenced by the PopSubDep1 key.
 	 *
 	 *	@param	value	the ICFBamProtPopSubDep1Obj instance to be referenced by the PopSubDep1 key.
 	 */
-	void set$OptionalOrRequired$ContainerPopSubDep1( ICFBamProtPopSubDep1Obj value );
+	void setRequiredContainerPopSubDep1( ICFBamProtPopSubDep1Obj value );
 
 	/**
 	 *	Get a list ICFBamProtPopSubDep3Obj instances referenced by the PopDep key.
 	 *
 	 *	@return	The (potentially empty) list of ICFBamProtPopSubDep3Obj instances referenced by the PopDep key.
 	 */
-	List<ICFBamProtPopSubDep3Obj> get$OptionalOrRequired$ComponentsPopDep();
+	List<ICFBamProtPopSubDep3Obj> getOptionalComponentsPopDep();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute PopSubDep1Id.
