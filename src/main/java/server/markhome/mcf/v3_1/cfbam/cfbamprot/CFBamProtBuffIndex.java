@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a Index buffer
+// Description: Java 17 implJustProtementation of a Index buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -2614,20 +2614,7 @@ public class CFBamProtBuffIndex
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredTableId=" + "\"" + getRequiredTableId().toString() + "\""
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " OptionalDefSchemaId=" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" )
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\""
-			+ " OptionalShortName=" + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" )
-			+ " OptionalLabel=" + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" )
-			+ " OptionalShortDescription=" + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" )
-			+ " OptionalDescription=" + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" )
-			+ " OptionalDbName=" + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" )
-			+ " OptionalSuffix=" + ( ( getOptionalSuffix() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalSuffix() ) + "\"" )
-			+ " RequiredIsUnique=" + (( getRequiredIsUnique() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredIsDbMapped=" + (( getRequiredIsDbMapped() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredCodeVis=" + "\"" + getRequiredCodeVis().toString() + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredTableId().toString() + "\"" + "\"" + getRequiredId().toString() + "\"" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" ) + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"" + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" ) + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" ) + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" ) + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" ) + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" ) + ( ( getOptionalSuffix() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalSuffix() ) + "\"" ) + (( getRequiredIsUnique() ) ? "\"true\"" : "\"false\"" ) + (( getRequiredIsDbMapped() ) ? "\"true\"" : "\"false\"" ) + "\"" + getRequiredCodeVis().toString() + "\"";
 		return( ret );
 	}
 

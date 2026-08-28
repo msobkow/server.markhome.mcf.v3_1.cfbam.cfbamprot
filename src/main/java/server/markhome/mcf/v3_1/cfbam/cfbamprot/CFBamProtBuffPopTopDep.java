@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a PopTopDep buffer
+// Description: Java 17 implJustProtementation of a PopTopDep buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -939,10 +939,7 @@ public class CFBamProtBuffPopTopDep
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredContRelationId=" + "\"" + getRequiredContRelationId().toString() + "\""
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + getRequiredContRelationId().toString() + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"";
 		return( ret );
 	}
 

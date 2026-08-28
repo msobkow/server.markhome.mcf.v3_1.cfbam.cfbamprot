@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a TimeDef buffer
+// Description: Java 17 implJustProtementation of a TimeDef buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -523,9 +523,7 @@ public class CFBamProtBuffTimeDef
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " OptionalDummy=" + ( ( getOptionalDummy() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDummy() ) + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + ( ( getOptionalDummy() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDummy() ) + "\"" );
 		return( ret );
 	}
 

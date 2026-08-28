@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a StringDef buffer
+// Description: Java 17 implJustProtementation of a StringDef buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -665,11 +665,7 @@ public class CFBamProtBuffStringDef
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredMaxLen=" + "\"" + Integer.toString( getRequiredMaxLen() ) + "\""
-			+ " RequiredIsPolymorph=" + (( getRequiredIsPolymorph() ) ? "\"true\"" : "\"false\"" )
-			+ " OptionalInitValue=" + ( ( getOptionalInitValue() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalInitValue() ) + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + Integer.toString( getRequiredMaxLen() ) + "\"" + (( getRequiredIsPolymorph() ) ? "\"true\"" : "\"false\"" ) + ( ( getOptionalInitValue() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalInitValue() ) + "\"" );
 		return( ret );
 	}
 

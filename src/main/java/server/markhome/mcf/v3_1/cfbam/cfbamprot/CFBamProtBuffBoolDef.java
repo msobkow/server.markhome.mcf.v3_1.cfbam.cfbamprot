@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a BoolDef buffer
+// Description: Java 17 implJustProtementation of a BoolDef buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -1005,12 +1005,7 @@ public class CFBamProtBuffBoolDef
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " OptionalInitValue=" + ( ( getOptionalInitValue() == null ) ? "null" : ( ( getOptionalInitValue() ) ? "\"true\"" : "\"false\"" ) )
-			+ " OptionalFalseString=" + ( ( getOptionalFalseString() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalFalseString() ) + "\"" )
-			+ " OptionalTrueString=" + ( ( getOptionalTrueString() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalTrueString() ) + "\"" )
-			+ " OptionalNullString=" + ( ( getOptionalNullString() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalNullString() ) + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + ( ( getOptionalInitValue() == null ) ? "null" : ( ( getOptionalInitValue() ) ? "\"true\"" : "\"false\"" ) ) + ( ( getOptionalFalseString() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalFalseString() ) + "\"" ) + ( ( getOptionalTrueString() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalTrueString() ) + "\"" ) + ( ( getOptionalNullString() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalNullString() ) + "\"" );
 		return( ret );
 	}
 

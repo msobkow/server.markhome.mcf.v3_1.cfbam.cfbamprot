@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a EnumDef buffer
+// Description: Java 17 implJustProtementation of a EnumDef buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -397,8 +397,7 @@ public class CFBamProtBuffEnumDef
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"";
 		return( ret );
 	}
 

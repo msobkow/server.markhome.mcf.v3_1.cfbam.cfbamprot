@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a Id64Gen buffer
+// Description: Java 17 implJustProtementation of a Id64Gen buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -511,10 +511,7 @@ public class CFBamProtBuffId64Gen
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredSlice=" + "\"" + Short.toString( getRequiredSlice() ) + "\""
-			+ " RequiredBlockSize=" + "\"" + Long.toString( getRequiredBlockSize() ) + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + Short.toString( getRequiredSlice() ) + "\"" + "\"" + Long.toString( getRequiredBlockSize() ) + "\"";
 		return( ret );
 	}
 

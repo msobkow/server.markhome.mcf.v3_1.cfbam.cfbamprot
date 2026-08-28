@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a Relation buffer
+// Description: Java 17 implJustProtementation of a Relation buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -3975,27 +3975,7 @@ public class CFBamProtBuffRelation
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredTableId=" + "\"" + getRequiredTableId().toString() + "\""
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " OptionalDefSchemaId=" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" )
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\""
-			+ " OptionalShortName=" + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" )
-			+ " OptionalLabel=" + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" )
-			+ " OptionalShortDescription=" + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" )
-			+ " OptionalDescription=" + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" )
-			+ " RequiredRelationType=" + "\"" + getRequiredRelationType().toString() + "\""
-			+ " OptionalDbName=" + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" )
-			+ " OptionalSuffix=" + ( ( getOptionalSuffix() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalSuffix() ) + "\"" )
-			+ " RequiredFromIndexId=" + "\"" + getRequiredFromIndexId().toString() + "\""
-			+ " RequiredToTableId=" + "\"" + getRequiredToTableId().toString() + "\""
-			+ " RequiredToIndexId=" + "\"" + getRequiredToIndexId().toString() + "\""
-			+ " RequiredIsRequired=" + (( getRequiredIsRequired() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredIsXsdContainer=" + (( getRequiredIsXsdContainer() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredIsLateResolver=" + (( getRequiredIsLateResolver() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredAllowAddendum=" + (( getRequiredAllowAddendum() ) ? "\"true\"" : "\"false\"" )
-			+ " OptionalNarrowedId=" + ( ( getOptionalNarrowedId() == null ) ? "null" : "\"" + getOptionalNarrowedId().toString() + "\"" )
-			+ " RequiredCodeVis=" + "\"" + getRequiredCodeVis().toString() + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredTableId().toString() + "\"" + "\"" + getRequiredId().toString() + "\"" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" ) + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"" + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" ) + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" ) + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" ) + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" ) + "\"" + getRequiredRelationType().toString() + "\"" + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" ) + ( ( getOptionalSuffix() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalSuffix() ) + "\"" ) + "\"" + getRequiredFromIndexId().toString() + "\"" + "\"" + getRequiredToTableId().toString() + "\"" + "\"" + getRequiredToIndexId().toString() + "\"" + (( getRequiredIsRequired() ) ? "\"true\"" : "\"false\"" ) + (( getRequiredIsXsdContainer() ) ? "\"true\"" : "\"false\"" ) + (( getRequiredIsLateResolver() ) ? "\"true\"" : "\"false\"" ) + (( getRequiredAllowAddendum() ) ? "\"true\"" : "\"false\"" ) + ( ( getOptionalNarrowedId() == null ) ? "null" : "\"" + getOptionalNarrowedId().toString() + "\"" ) + "\"" + getRequiredCodeVis().toString() + "\"";
 		return( ret );
 	}
 

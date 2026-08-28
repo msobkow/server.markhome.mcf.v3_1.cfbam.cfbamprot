@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a DbKeyHash512Def buffer
+// Description: Java 17 implJustProtementation of a DbKeyHash512Def buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -523,9 +523,7 @@ public class CFBamProtBuffDbKeyHash512Def
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " OptionalInitValue=" + ( ( getOptionalInitValue() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalInitValue() ) + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + ( ( getOptionalInitValue() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalInitValue() ) + "\"" );
 		return( ret );
 	}
 

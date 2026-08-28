@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a NumberDef buffer
+// Description: Java 17 implJustProtementation of a NumberDef buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -940,13 +940,7 @@ public class CFBamProtBuffNumberDef
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredDigits=" + "\"" + Short.toString( getRequiredDigits() ) + "\""
-			+ " RequiredPrecis=" + "\"" + Short.toString( getRequiredPrecis() ) + "\""
-			+ " OptionalInitValue=" + ( ( getOptionalInitValue() == null ) ? "null" : "\"" + getOptionalInitValue().toString() + "\"" )
-			+ " OptionalMinValue=" + ( ( getOptionalMinValue() == null ) ? "null" : "\"" + getOptionalMinValue().toString() + "\"" )
-			+ " OptionalMaxValue=" + ( ( getOptionalMaxValue() == null ) ? "null" : "\"" + getOptionalMaxValue().toString() + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + Short.toString( getRequiredDigits() ) + "\"" + "\"" + Short.toString( getRequiredPrecis() ) + "\"" + ( ( getOptionalInitValue() == null ) ? "null" : "\"" + getOptionalInitValue().toString() + "\"" ) + ( ( getOptionalMinValue() == null ) ? "null" : "\"" + getOptionalMinValue().toString() + "\"" ) + ( ( getOptionalMaxValue() == null ) ? "null" : "\"" + getOptionalMaxValue().toString() + "\"" );
 		return( ret );
 	}
 

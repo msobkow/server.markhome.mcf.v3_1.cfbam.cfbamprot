@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a ClearSubDep1 buffer
+// Description: Java 17 implJustProtementation of a ClearSubDep1 buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -939,10 +939,7 @@ public class CFBamProtBuffClearSubDep1
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredClearTopDepId=" + "\"" + getRequiredClearTopDepId().toString() + "\""
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + getRequiredClearTopDepId().toString() + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"";
 		return( ret );
 	}
 

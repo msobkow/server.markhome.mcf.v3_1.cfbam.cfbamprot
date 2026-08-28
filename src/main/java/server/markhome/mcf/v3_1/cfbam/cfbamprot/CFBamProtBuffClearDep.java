@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a ClearDep buffer
+// Description: Java 17 implJustProtementation of a ClearDep buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -914,10 +914,7 @@ public class CFBamProtBuffClearDep
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredRelationId=" + "\"" + getRequiredRelationId().toString() + "\""
-			+ " OptionalDefSchemaId=" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + getRequiredRelationId().toString() + "\"" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" );
 		return( ret );
 	}
 

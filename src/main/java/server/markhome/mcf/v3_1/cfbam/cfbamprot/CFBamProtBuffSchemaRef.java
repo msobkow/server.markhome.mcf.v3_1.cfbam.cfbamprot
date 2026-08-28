@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a SchemaRef buffer
+// Description: Java 17 implJustProtementation of a SchemaRef buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -2030,15 +2030,7 @@ public class CFBamProtBuffSchemaRef
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredSchemaId=" + "\"" + getRequiredSchemaId().toString() + "\""
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\""
-			+ " RequiredRefModelName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredRefModelName() ) + "\""
-			+ " RequiredIncludeRoot=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredIncludeRoot() ) + "\""
-			+ " OptionalRefSchemaId=" + ( ( getOptionalRefSchemaId() == null ) ? "null" : "\"" + getOptionalRefSchemaId().toString() + "\"" )
-			+ " OptionalPrevId=" + ( ( getOptionalPrevId() == null ) ? "null" : "\"" + getOptionalPrevId().toString() + "\"" )
-			+ " OptionalNextId=" + ( ( getOptionalNextId() == null ) ? "null" : "\"" + getOptionalNextId().toString() + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + getRequiredSchemaId().toString() + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredRefModelName() ) + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredIncludeRoot() ) + "\"" + ( ( getOptionalRefSchemaId() == null ) ? "null" : "\"" + getOptionalRefSchemaId().toString() + "\"" ) + ( ( getOptionalPrevId() == null ) ? "null" : "\"" + getOptionalPrevId().toString() + "\"" ) + ( ( getOptionalNextId() == null ) ? "null" : "\"" + getOptionalNextId().toString() + "\"" );
 		return( ret );
 	}
 

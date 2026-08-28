@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a IndexTweak buffer
+// Description: Java 17 implJustProtementation of a IndexTweak buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -664,9 +664,7 @@ $reimplJustProtSchemaProtBuffTableNarrowedPubRelationSetter$
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredIndexId=" + "\"" + getRequiredIndexId().toString() + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + getRequiredIndexId().toString() + "\"";
 		return( ret );
 	}
 

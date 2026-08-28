@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a DelTopDep buffer
+// Description: Java 17 implJustProtementation of a DelTopDep buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -1485,12 +1485,7 @@ public class CFBamProtBuffDelTopDep
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\""
-			+ " RequiredTableId=" + "\"" + getRequiredTableId().toString() + "\""
-			+ " OptionalPrevId=" + ( ( getOptionalPrevId() == null ) ? "null" : "\"" + getOptionalPrevId().toString() + "\"" )
-			+ " OptionalNextId=" + ( ( getOptionalNextId() == null ) ? "null" : "\"" + getOptionalNextId().toString() + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"" + "\"" + getRequiredTableId().toString() + "\"" + ( ( getOptionalPrevId() == null ) ? "null" : "\"" + getOptionalPrevId().toString() + "\"" ) + ( ( getOptionalNextId() == null ) ? "null" : "\"" + getOptionalNextId().toString() + "\"" );
 		return( ret );
 	}
 

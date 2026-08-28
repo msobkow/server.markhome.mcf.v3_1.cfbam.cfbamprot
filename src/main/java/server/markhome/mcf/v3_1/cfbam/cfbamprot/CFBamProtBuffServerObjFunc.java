@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a ServerObjFunc buffer
+// Description: Java 17 implJustProtementation of a ServerObjFunc buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -646,9 +646,7 @@ public class CFBamProtBuffServerObjFunc
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " OptionalRetTableId=" + ( ( getOptionalRetTableId() == null ) ? "null" : "\"" + getOptionalRetTableId().toString() + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + ( ( getOptionalRetTableId() == null ) ? "null" : "\"" + getOptionalRetTableId().toString() + "\"" );
 		return( ret );
 	}
 

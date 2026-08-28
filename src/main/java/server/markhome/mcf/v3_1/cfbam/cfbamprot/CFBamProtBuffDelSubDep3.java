@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a DelSubDep3 buffer
+// Description: Java 17 implJustProtementation of a DelSubDep3 buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -915,10 +915,7 @@ public class CFBamProtBuffDelSubDep3
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredDelSubDep2Id=" + "\"" + getRequiredDelSubDep2Id().toString() + "\""
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + getRequiredDelSubDep2Id().toString() + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"";
 		return( ret );
 	}
 

@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a SchemaDef buffer
+// Description: Java 17 implJustProtementation of a SchemaDef buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -3194,21 +3194,7 @@ $reimplJustProtSchemaProtBuffTableNarrowedPubRelationSetter$
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredCTenantId=" + "\"" + getRequiredCTenantId().toString() + "\""
-			+ " RequiredMinorVersionId=" + "\"" + getRequiredMinorVersionId().toString() + "\""
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\""
-			+ " OptionalDbName=" + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" )
-			+ " OptionalShortName=" + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" )
-			+ " OptionalLabel=" + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" )
-			+ " OptionalShortDescription=" + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" )
-			+ " OptionalDescription=" + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" )
-			+ " RequiredCopyrightPeriod=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredCopyrightPeriod() ) + "\""
-			+ " RequiredCopyrightHolder=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredCopyrightHolder() ) + "\""
-			+ " RequiredAuthorEMail=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredAuthorEMail() ) + "\""
-			+ " RequiredProjectURL=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredProjectURL() ) + "\""
-			+ " RequiredPublishURI=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredPublishURI() ) + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + getRequiredCTenantId().toString() + "\"" + "\"" + getRequiredMinorVersionId().toString() + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"" + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" ) + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" ) + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" ) + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" ) + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" ) + "\"" + StringEscapeUtils.escapeXml11( getRequiredCopyrightPeriod() ) + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredCopyrightHolder() ) + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredAuthorEMail() ) + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredProjectURL() ) + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredPublishURI() ) + "\"";
 		return( ret );
 	}
 

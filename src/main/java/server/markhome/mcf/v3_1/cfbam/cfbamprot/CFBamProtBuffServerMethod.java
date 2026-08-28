@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a ServerMethod buffer
+// Description: Java 17 implJustProtementation of a ServerMethod buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -2884,22 +2884,7 @@ public class CFBamProtBuffServerMethod
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredTableId=" + "\"" + getRequiredTableId().toString() + "\""
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " OptionalDefSchemaId=" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" )
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\""
-			+ " OptionalShortName=" + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" )
-			+ " OptionalLabel=" + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" )
-			+ " OptionalShortDescription=" + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" )
-			+ " OptionalDescription=" + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" )
-			+ " OptionalSuffix=" + ( ( getOptionalSuffix() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalSuffix() ) + "\"" )
-			+ " RequiredIsInstanceMethod=" + (( getRequiredIsInstanceMethod() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredIsServerOnly=" + (( getRequiredIsServerOnly() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredCodeVis=" + "\"" + getRequiredCodeVis().toString() + "\""
-			+ " RequiredJMethodBody=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredJMethodBody() ) + "\""
-			+ " RequiredCppMethodBody=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredCppMethodBody() ) + "\""
-			+ " RequiredCsMethodBody=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredCsMethodBody() ) + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredTableId().toString() + "\"" + "\"" + getRequiredId().toString() + "\"" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" ) + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"" + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" ) + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" ) + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" ) + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" ) + ( ( getOptionalSuffix() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalSuffix() ) + "\"" ) + (( getRequiredIsInstanceMethod() ) ? "\"true\"" : "\"false\"" ) + (( getRequiredIsServerOnly() ) ? "\"true\"" : "\"false\"" ) + "\"" + getRequiredCodeVis().toString() + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredJMethodBody() ) + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredCppMethodBody() ) + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredCsMethodBody() ) + "\"";
 		return( ret );
 	}
 

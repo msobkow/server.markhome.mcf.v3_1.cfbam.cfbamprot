@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a Atom buffer
+// Description: Java 17 implJustProtementation of a Atom buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -523,9 +523,7 @@ public class CFBamProtBuffAtom
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " OptionalDbName=" + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" );
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" );
 		return( ret );
 	}
 

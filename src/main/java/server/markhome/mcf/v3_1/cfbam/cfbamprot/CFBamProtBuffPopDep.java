@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a PopDep buffer
+// Description: Java 17 implJustProtementation of a PopDep buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -914,10 +914,7 @@ public class CFBamProtBuffPopDep
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " OptionalDefSchemaId=" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" )
-			+ " RequiredRelationId=" + "\"" + getRequiredRelationId().toString() + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" ) + "\"" + getRequiredRelationId().toString() + "\"";
 		return( ret );
 	}
 

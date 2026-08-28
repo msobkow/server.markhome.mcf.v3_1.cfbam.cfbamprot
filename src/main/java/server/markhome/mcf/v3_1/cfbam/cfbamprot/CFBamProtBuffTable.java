@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a Table buffer
+// Description: Java 17 implJustProtementation of a Table buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -4566,30 +4566,7 @@ public class CFBamProtBuffTable
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredSchemaDefId=" + "\"" + getRequiredSchemaDefId().toString() + "\""
-			+ " OptionalDefSchemaId=" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" )
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\""
-			+ " OptionalDbName=" + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" )
-			+ " OptionalShortName=" + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" )
-			+ " OptionalLabel=" + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" )
-			+ " OptionalShortDescription=" + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" )
-			+ " OptionalDescription=" + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" )
-			+ " RequiredPageData=" + (( getRequiredPageData() ) ? "\"true\"" : "\"false\"" )
-			+ " OptionalPrimaryIndexId=" + ( ( getOptionalPrimaryIndexId() == null ) ? "null" : "\"" + getOptionalPrimaryIndexId().toString() + "\"" )
-			+ " RequiredTableClassCode=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredTableClassCode() ) + "\""
-			+ " OptionalLookupIndexId=" + ( ( getOptionalLookupIndexId() == null ) ? "null" : "\"" + getOptionalLookupIndexId().toString() + "\"" )
-			+ " OptionalAltIndexId=" + ( ( getOptionalAltIndexId() == null ) ? "null" : "\"" + getOptionalAltIndexId().toString() + "\"" )
-			+ " OptionalQualifyingTableId=" + ( ( getOptionalQualifyingTableId() == null ) ? "null" : "\"" + getOptionalQualifyingTableId().toString() + "\"" )
-			+ " RequiredIsInstantiable=" + (( getRequiredIsInstantiable() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredHasHistory=" + (( getRequiredHasHistory() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredHasAuditColumns=" + (( getRequiredHasAuditColumns() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredIsMutable=" + (( getRequiredIsMutable() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredIsServerOnly=" + (( getRequiredIsServerOnly() ) ? "\"true\"" : "\"false\"" )
-			+ " RequiredLoaderBehaviour=" + "\"" + getRequiredLoaderBehaviour().toString() + "\""
-			+ " RequiredSecScope=" + "\"" + getRequiredSecScope().toString() + "\""
-			+ " RequiredCodeVis=" + "\"" + getRequiredCodeVis().toString() + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredSchemaDefId().toString() + "\"" + ( ( getOptionalDefSchemaId() == null ) ? "null" : "\"" + getOptionalDefSchemaId().toString() + "\"" ) + "\"" + getRequiredId().toString() + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"" + ( ( getOptionalDbName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDbName() ) + "\"" ) + ( ( getOptionalShortName() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortName() ) + "\"" ) + ( ( getOptionalLabel() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalLabel() ) + "\"" ) + ( ( getOptionalShortDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalShortDescription() ) + "\"" ) + ( ( getOptionalDescription() == null ) ? "null" : "\"" + StringEscapeUtils.escapeXml11( getOptionalDescription() ) + "\"" ) + (( getRequiredPageData() ) ? "\"true\"" : "\"false\"" ) + ( ( getOptionalPrimaryIndexId() == null ) ? "null" : "\"" + getOptionalPrimaryIndexId().toString() + "\"" ) + "\"" + StringEscapeUtils.escapeXml11( getRequiredTableClassCode() ) + "\"" + ( ( getOptionalLookupIndexId() == null ) ? "null" : "\"" + getOptionalLookupIndexId().toString() + "\"" ) + ( ( getOptionalAltIndexId() == null ) ? "null" : "\"" + getOptionalAltIndexId().toString() + "\"" ) + ( ( getOptionalQualifyingTableId() == null ) ? "null" : "\"" + getOptionalQualifyingTableId().toString() + "\"" ) + (( getRequiredIsInstantiable() ) ? "\"true\"" : "\"false\"" ) + (( getRequiredHasHistory() ) ? "\"true\"" : "\"false\"" ) + (( getRequiredHasAuditColumns() ) ? "\"true\"" : "\"false\"" ) + (( getRequiredIsMutable() ) ? "\"true\"" : "\"false\"" ) + (( getRequiredIsServerOnly() ) ? "\"true\"" : "\"false\"" ) + "\"" + getRequiredLoaderBehaviour().toString() + "\"" + "\"" + getRequiredSecScope().toString() + "\"" + "\"" + getRequiredCodeVis().toString() + "\"";
 		return( ret );
 	}
 

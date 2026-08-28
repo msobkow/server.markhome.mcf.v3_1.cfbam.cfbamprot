@@ -1,4 +1,4 @@
-// Description: Java 25 implJustProtementation of a PopSubDep1 buffer
+// Description: Java 17 implJustProtementation of a PopSubDep1 buffer
 
 /*
  *	server.markhome.mcf.CFBam
@@ -939,10 +939,7 @@ public class CFBamProtBuffPopSubDep1
 
 	@Override
 	public String getXmlAttrFragment() {
-		String ret = super.getXmlAttrFragment() 
-			+ " RequiredId=" + "\"" + getRequiredId().toString() + "\""
-			+ " RequiredPopTopDepId=" + "\"" + getRequiredPopTopDepId().toString() + "\""
-			+ " RequiredName=" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"";
+		String ret = super.getXmlAttrFragment()  + "\"" + getRequiredId().toString() + "\"" + "\"" + getRequiredPopTopDepId().toString() + "\"" + "\"" + StringEscapeUtils.escapeXml11( getRequiredName() ) + "\"";
 		return( ret );
 	}
 
