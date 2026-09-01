@@ -471,7 +471,7 @@ public class CFBamProtBuffDbKeyHash512Def
 					"set",
 					"src",
 					src,
-					"ICFBamProtDbKeyHash512DefH" );
+					"ICFBamPubDbKeyHash512DefH" );
 		}
 	}
 
@@ -511,7 +511,7 @@ public class CFBamProtBuffDbKeyHash512Def
 					"set",
 					"src",
 					src,
-					"ICFBamProtDbKeyHash512DefH" );
+					"ICFBamPubDbKeyHash512DefH" );
 		}
 	}
 

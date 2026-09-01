@@ -537,7 +537,7 @@ public class CFBamProtBuffTokenDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtTokenDefH" );
+					"ICFBamPubTokenDefH" );
 		}
 	}
 
@@ -579,7 +579,7 @@ public class CFBamProtBuffTokenDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtTokenDefH" );
+					"ICFBamPubTokenDefH" );
 		}
 	}
 

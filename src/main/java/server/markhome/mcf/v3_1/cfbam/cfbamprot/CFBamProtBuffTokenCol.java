@@ -609,7 +609,7 @@ $reimplJustProtSchemaProtBuffTableNarrowedPubRelationSetter$
 					"set",
 					"src",
 					src,
-					"ICFBamProtTokenColH" );
+					"ICFBamPubTokenColH" );
 		}
 	}
 
@@ -651,7 +651,7 @@ $reimplJustProtSchemaProtBuffTableNarrowedPubRelationSetter$
 					"set",
 					"src",
 					src,
-					"ICFBamProtTokenColH" );
+					"ICFBamPubTokenColH" );
 		}
 	}
 

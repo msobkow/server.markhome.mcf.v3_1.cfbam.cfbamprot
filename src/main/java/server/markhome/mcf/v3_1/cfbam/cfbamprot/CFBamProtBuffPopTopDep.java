@@ -881,7 +881,7 @@ public class CFBamProtBuffPopTopDep
 					"set",
 					"src",
 					src,
-					"ICFBamProtPopTopDepH" );
+					"ICFBamPubPopTopDepH" );
 		}
 	}
 
@@ -925,7 +925,7 @@ public class CFBamProtBuffPopTopDep
 					"set",
 					"src",
 					src,
-					"ICFBamProtPopTopDepH" );
+					"ICFBamPubPopTopDepH" );
 		}
 	}
 

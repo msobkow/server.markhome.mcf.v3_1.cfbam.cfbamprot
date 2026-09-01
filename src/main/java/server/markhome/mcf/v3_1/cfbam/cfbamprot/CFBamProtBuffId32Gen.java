@@ -456,7 +456,7 @@ public class CFBamProtBuffId32Gen
 					"set",
 					"src",
 					src,
-					"ICFBamProtId32GenH" );
+					"ICFBamPubId32GenH" );
 		}
 	}
 
@@ -498,7 +498,7 @@ public class CFBamProtBuffId32Gen
 					"set",
 					"src",
 					src,
-					"ICFBamProtId32GenH" );
+					"ICFBamPubId32GenH" );
 		}
 	}
 

@@ -1948,7 +1948,7 @@ public class CFBamProtBuffSchemaRef
 					"set",
 					"src",
 					src,
-					"ICFBamProtSchemaRefH" );
+					"ICFBamPubSchemaRefH" );
 		}
 	}
 
@@ -2008,7 +2008,7 @@ public class CFBamProtBuffSchemaRef
 					"set",
 					"src",
 					src,
-					"ICFBamProtSchemaRefH" );
+					"ICFBamPubSchemaRefH" );
 		}
 	}
 

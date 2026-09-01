@@ -456,7 +456,7 @@ public class CFBamProtBuffDbKeyHash384Gen
 					"set",
 					"src",
 					src,
-					"ICFBamProtDbKeyHash384GenH" );
+					"ICFBamPubDbKeyHash384GenH" );
 		}
 	}
 
@@ -498,7 +498,7 @@ public class CFBamProtBuffDbKeyHash384Gen
 					"set",
 					"src",
 					src,
-					"ICFBamProtDbKeyHash384GenH" );
+					"ICFBamPubDbKeyHash384GenH" );
 		}
 	}
 

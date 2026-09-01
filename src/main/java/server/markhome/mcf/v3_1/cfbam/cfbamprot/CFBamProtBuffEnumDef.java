@@ -348,7 +348,7 @@ public class CFBamProtBuffEnumDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtEnumDefH" );
+					"ICFBamPubEnumDefH" );
 		}
 	}
 
@@ -386,7 +386,7 @@ public class CFBamProtBuffEnumDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtEnumDefH" );
+					"ICFBamPubEnumDefH" );
 		}
 	}
 

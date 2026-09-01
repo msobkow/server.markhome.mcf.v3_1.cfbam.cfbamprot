@@ -881,7 +881,7 @@ public class CFBamProtBuffPopSubDep2
 					"set",
 					"src",
 					src,
-					"ICFBamProtPopSubDep2H" );
+					"ICFBamPubPopSubDep2H" );
 		}
 	}
 
@@ -925,7 +925,7 @@ public class CFBamProtBuffPopSubDep2
 					"set",
 					"src",
 					src,
-					"ICFBamProtPopSubDep2H" );
+					"ICFBamPubPopSubDep2H" );
 		}
 	}
 

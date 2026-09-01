@@ -609,7 +609,7 @@ $reimplJustProtSchemaProtBuffTableNarrowedPubRelationSetter$
 					"set",
 					"src",
 					src,
-					"ICFBamProtDbKeyHash256ColH" );
+					"ICFBamPubDbKeyHash256ColH" );
 		}
 	}
 
@@ -651,7 +651,7 @@ $reimplJustProtSchemaProtBuffTableNarrowedPubRelationSetter$
 					"set",
 					"src",
 					src,
-					"ICFBamProtDbKeyHash256ColH" );
+					"ICFBamPubDbKeyHash256ColH" );
 		}
 	}
 

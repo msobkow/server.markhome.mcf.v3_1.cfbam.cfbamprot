@@ -2787,7 +2787,7 @@ public class CFBamProtBuffServerMethod
 					"set",
 					"src",
 					src,
-					"ICFBamProtServerMethodH" );
+					"ICFBamPubServerMethodH" );
 		}
 	}
 
@@ -2857,7 +2857,7 @@ public class CFBamProtBuffServerMethod
 					"set",
 					"src",
 					src,
-					"ICFBamProtServerMethodH" );
+					"ICFBamPubServerMethodH" );
 		}
 	}
 

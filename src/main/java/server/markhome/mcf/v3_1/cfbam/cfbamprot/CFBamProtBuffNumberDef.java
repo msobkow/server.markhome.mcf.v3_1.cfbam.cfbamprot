@@ -876,7 +876,7 @@ public class CFBamProtBuffNumberDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtNumberDefH" );
+					"ICFBamPubNumberDefH" );
 		}
 	}
 
@@ -924,7 +924,7 @@ public class CFBamProtBuffNumberDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtNumberDefH" );
+					"ICFBamPubNumberDefH" );
 		}
 	}
 

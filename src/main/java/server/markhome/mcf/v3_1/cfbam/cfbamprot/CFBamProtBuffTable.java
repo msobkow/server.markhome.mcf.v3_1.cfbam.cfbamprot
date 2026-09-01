@@ -4433,7 +4433,7 @@ public class CFBamProtBuffTable
 					"set",
 					"src",
 					src,
-					"ICFBamProtTableH" );
+					"ICFBamPubTableH" );
 		}
 	}
 
@@ -4527,7 +4527,7 @@ public class CFBamProtBuffTable
 					"set",
 					"src",
 					src,
-					"ICFBamProtTableH" );
+					"ICFBamPubTableH" );
 		}
 	}
 

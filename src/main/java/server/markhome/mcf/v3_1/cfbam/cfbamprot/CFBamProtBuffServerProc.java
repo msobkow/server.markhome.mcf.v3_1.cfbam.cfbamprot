@@ -471,7 +471,7 @@ public class CFBamProtBuffServerProc
 					"set",
 					"src",
 					src,
-					"ICFBamProtServerProcH" );
+					"ICFBamPubServerProcH" );
 		}
 	}
 
@@ -511,7 +511,7 @@ public class CFBamProtBuffServerProc
 					"set",
 					"src",
 					src,
-					"ICFBamProtServerProcH" );
+					"ICFBamPubServerProcH" );
 		}
 	}
 

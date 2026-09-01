@@ -607,7 +607,7 @@ public class CFBamProtBuffStringDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtStringDefH" );
+					"ICFBamPubStringDefH" );
 		}
 	}
 
@@ -651,7 +651,7 @@ public class CFBamProtBuffStringDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtStringDefH" );
+					"ICFBamPubStringDefH" );
 		}
 	}
 

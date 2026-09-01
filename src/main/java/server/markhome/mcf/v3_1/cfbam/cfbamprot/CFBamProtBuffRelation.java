@@ -3851,7 +3851,7 @@ public class CFBamProtBuffRelation
 					"set",
 					"src",
 					src,
-					"ICFBamProtRelationH" );
+					"ICFBamPubRelationH" );
 		}
 	}
 
@@ -3939,7 +3939,7 @@ public class CFBamProtBuffRelation
 					"set",
 					"src",
 					src,
-					"ICFBamProtRelationH" );
+					"ICFBamPubRelationH" );
 		}
 	}
 

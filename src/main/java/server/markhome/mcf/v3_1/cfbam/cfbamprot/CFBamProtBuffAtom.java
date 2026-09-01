@@ -471,7 +471,7 @@ public class CFBamProtBuffAtom
 					"set",
 					"src",
 					src,
-					"ICFBamProtAtomH" );
+					"ICFBamPubAtomH" );
 		}
 	}
 
@@ -511,7 +511,7 @@ public class CFBamProtBuffAtom
 					"set",
 					"src",
 					src,
-					"ICFBamProtAtomH" );
+					"ICFBamPubAtomH" );
 		}
 	}
 

@@ -2523,7 +2523,7 @@ public class CFBamProtBuffIndex
 					"set",
 					"src",
 					src,
-					"ICFBamProtIndexH" );
+					"ICFBamPubIndexH" );
 		}
 	}
 
@@ -2589,7 +2589,7 @@ public class CFBamProtBuffIndex
 					"set",
 					"src",
 					src,
-					"ICFBamProtIndexH" );
+					"ICFBamPubIndexH" );
 		}
 	}
 

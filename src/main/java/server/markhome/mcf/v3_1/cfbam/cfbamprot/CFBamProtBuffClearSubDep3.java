@@ -857,7 +857,7 @@ public class CFBamProtBuffClearSubDep3
 					"set",
 					"src",
 					src,
-					"ICFBamProtClearSubDep3H" );
+					"ICFBamPubClearSubDep3H" );
 		}
 	}
 
@@ -901,7 +901,7 @@ public class CFBamProtBuffClearSubDep3
 					"set",
 					"src",
 					src,
-					"ICFBamProtClearSubDep3H" );
+					"ICFBamPubClearSubDep3H" );
 		}
 	}
 

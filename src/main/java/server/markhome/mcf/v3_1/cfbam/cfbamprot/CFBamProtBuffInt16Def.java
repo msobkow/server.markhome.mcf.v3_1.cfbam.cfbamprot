@@ -825,7 +825,7 @@ public class CFBamProtBuffInt16Def
 					"set",
 					"src",
 					src,
-					"ICFBamProtInt16DefH" );
+					"ICFBamPubInt16DefH" );
 		}
 	}
 
@@ -869,7 +869,7 @@ public class CFBamProtBuffInt16Def
 					"set",
 					"src",
 					src,
-					"ICFBamProtInt16DefH" );
+					"ICFBamPubInt16DefH" );
 		}
 	}
 

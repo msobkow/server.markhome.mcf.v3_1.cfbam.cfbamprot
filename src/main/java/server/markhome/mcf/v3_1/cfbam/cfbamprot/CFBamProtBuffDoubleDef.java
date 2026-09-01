@@ -813,7 +813,7 @@ public class CFBamProtBuffDoubleDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtDoubleDefH" );
+					"ICFBamPubDoubleDefH" );
 		}
 	}
 
@@ -857,7 +857,7 @@ public class CFBamProtBuffDoubleDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtDoubleDefH" );
+					"ICFBamPubDoubleDefH" );
 		}
 	}
 

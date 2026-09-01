@@ -881,7 +881,7 @@ public class CFBamProtBuffDelSubDep1
 					"set",
 					"src",
 					src,
-					"ICFBamProtDelSubDep1H" );
+					"ICFBamPubDelSubDep1H" );
 		}
 	}
 
@@ -925,7 +925,7 @@ public class CFBamProtBuffDelSubDep1
 					"set",
 					"src",
 					src,
-					"ICFBamProtDelSubDep1H" );
+					"ICFBamPubDelSubDep1H" );
 		}
 	}
 

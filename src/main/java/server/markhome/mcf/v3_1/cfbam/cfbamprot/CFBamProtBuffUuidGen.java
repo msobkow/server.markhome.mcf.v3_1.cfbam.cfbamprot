@@ -456,7 +456,7 @@ public class CFBamProtBuffUuidGen
 					"set",
 					"src",
 					src,
-					"ICFBamProtUuidGenH" );
+					"ICFBamPubUuidGenH" );
 		}
 	}
 
@@ -498,7 +498,7 @@ public class CFBamProtBuffUuidGen
 					"set",
 					"src",
 					src,
-					"ICFBamProtUuidGenH" );
+					"ICFBamPubUuidGenH" );
 		}
 	}
 

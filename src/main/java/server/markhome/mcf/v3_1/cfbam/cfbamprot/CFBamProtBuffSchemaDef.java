@@ -3100,7 +3100,7 @@ $reimplJustProtSchemaProtBuffTableNarrowedPubRelationSetter$
 					"set",
 					"src",
 					src,
-					"ICFBamProtSchemaDefH" );
+					"ICFBamPubSchemaDefH" );
 		}
 	}
 
@@ -3168,7 +3168,7 @@ $reimplJustProtSchemaProtBuffTableNarrowedPubRelationSetter$
 					"set",
 					"src",
 					src,
-					"ICFBamProtSchemaDefH" );
+					"ICFBamPubSchemaDefH" );
 		}
 	}
 

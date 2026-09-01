@@ -471,7 +471,7 @@ public class CFBamProtBuffTimestampDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtTimestampDefH" );
+					"ICFBamPubTimestampDefH" );
 		}
 	}
 
@@ -511,7 +511,7 @@ public class CFBamProtBuffTimestampDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtTimestampDefH" );
+					"ICFBamPubTimestampDefH" );
 		}
 	}
 

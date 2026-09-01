@@ -591,7 +591,7 @@ public class CFBamProtBuffServerObjFunc
 					"set",
 					"src",
 					src,
-					"ICFBamProtServerObjFuncH" );
+					"ICFBamPubServerObjFuncH" );
 		}
 	}
 
@@ -633,7 +633,7 @@ public class CFBamProtBuffServerObjFunc
 					"set",
 					"src",
 					src,
-					"ICFBamProtServerObjFuncH" );
+					"ICFBamPubServerObjFuncH" );
 		}
 	}
 

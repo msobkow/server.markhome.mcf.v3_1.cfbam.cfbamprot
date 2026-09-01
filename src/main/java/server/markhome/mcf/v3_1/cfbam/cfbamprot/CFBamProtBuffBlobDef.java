@@ -617,7 +617,7 @@ public class CFBamProtBuffBlobDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtBlobDefH" );
+					"ICFBamPubBlobDefH" );
 		}
 	}
 
@@ -659,7 +659,7 @@ public class CFBamProtBuffBlobDef
 					"set",
 					"src",
 					src,
-					"ICFBamProtBlobDefH" );
+					"ICFBamPubBlobDefH" );
 		}
 	}
 
